@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "overwhelmed:item/snail_shell"
+  }
+}

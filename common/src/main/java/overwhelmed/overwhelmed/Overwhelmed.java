@@ -65,6 +65,8 @@ public class Overwhelmed
 		EntityAttributeRegistry.register(romanSnailEntityType, SnailEntity::createAttributes);
 		EntityRendererRegistry.register(romanSnailEntityType, SnailRenderer::new);
 
+		snailShellItem = items.register(new ResourceLocation(MOD_ID, "snail_shell"), () ->
+				new SnailShellItem(new Item.Properties()));
 		snailSpawnEggItem = items.register(new ResourceLocation(MOD_ID, "snail_spawn_egg"), () ->
 				new SnailSpawnEggItem(new Item.Properties()));
 	}
