@@ -30,27 +30,23 @@ public class Overwhelmed
 	public static void init() {
 		entityTypes = MANAGER.get().get(Registries.ENTITY_TYPE);
 
-		gardenSnailEntityType = entityTypes.register(new ResourceLocation(MOD_ID, "snail"), () ->
-				EntityType.Builder.of((EntityType<SnailEntity> entityType, Level level) ->
-								new SnailEntity(entityType, level, SnailEntity.Variant.GARDEN), MobCategory.CREATURE)
+		gardenSnailEntityType = entityTypes.register(new ResourceLocation(MOD_ID, "garden_snail"), () ->
+				EntityType.Builder.of(SnailEntity::new, MobCategory.CREATURE)
 						.sized(0.6f, 0.4f)
 						.clientTrackingRange(8)
 						.build("garden_snail"));
-		garySnailEntityType = entityTypes.register(new ResourceLocation(MOD_ID, "snail"), () ->
-				EntityType.Builder.of((EntityType<SnailEntity> entityType, Level level) ->
-								new SnailEntity(entityType, level, SnailEntity.Variant.GARY), MobCategory.CREATURE)
+		garySnailEntityType = entityTypes.register(new ResourceLocation(MOD_ID, "gary_snail"), () ->
+				EntityType.Builder.of(SnailEntity::new, MobCategory.CREATURE)
 						.sized(0.6f, 0.4f)
 						.clientTrackingRange(8)
 						.build("gary_snail"));
-		limestoneSnailEntityType = entityTypes.register(new ResourceLocation(MOD_ID, "snail"), () ->
-				EntityType.Builder.of((EntityType<SnailEntity> entityType, Level level) ->
-								new SnailEntity(entityType, level, SnailEntity.Variant.LIMESTONE), MobCategory.CREATURE)
+		limestoneSnailEntityType = entityTypes.register(new ResourceLocation(MOD_ID, "limestone_snail"), () ->
+				EntityType.Builder.of(SnailEntity::new, MobCategory.CREATURE)
 						.sized(0.6f, 0.4f)
 						.clientTrackingRange(8)
 						.build("limestone_snail"));
-		romanSnailEntityType = entityTypes.register(new ResourceLocation(MOD_ID, "snail"), () ->
-				EntityType.Builder.of((EntityType<SnailEntity> entityType, Level level) ->
-								new SnailEntity(entityType, level, SnailEntity.Variant.GARDEN), MobCategory.CREATURE)
+		romanSnailEntityType = entityTypes.register(new ResourceLocation(MOD_ID, "roman_snail"), () ->
+				EntityType.Builder.of(SnailEntity::new, MobCategory.CREATURE)
 						.sized(0.6f, 0.4f)
 						.clientTrackingRange(8)
 						.build("roman_snail"));

@@ -1,6 +1,7 @@
 package overwhelmed.overwhelmed.client.model.entity;
 
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.entity.EntityType;
 import overwhelmed.overwhelmed.Overwhelmed;
 import overwhelmed.overwhelmed.world.entity.animal.SnailEntity;
 import software.bernie.geckolib.model.GeoModel;
@@ -16,34 +17,42 @@ public class SnailModel extends GeoModel<SnailEntity> {
     private static final ResourceLocation ROMAN_MODEL = new ResourceLocation(Overwhelmed.MOD_ID, "geo/entity/snail_roman.geo.json");
     private static final ResourceLocation ANIMATION = new ResourceLocation(Overwhelmed.MOD_ID, "animations/entity/snail.animation.json");
 
-    public static ResourceLocation getVariantTexture(SnailEntity.Variant variant) {
-        return switch (variant) {
-            default -> throw new IncompatibleClassChangeError();
-            case GARDEN -> GARDEN_TEXTURE;
-            case GARY -> GARY_TEXTURE;
-            case LIMESTONE -> LIMESTONE_TEXTURE;
-            case ROMAN -> ROMAN_TEXTURE;
-        };
+    public static ResourceLocation getVariantTexture(SnailEntity animatable) {
+        EntityType<?> type = animatable.getType();
+        if (Overwhelmed.gardenSnailEntityType.get().equals(type)) {
+            return GARDEN_TEXTURE;
+        } else if (Overwhelmed.garySnailEntityType.get().equals(type)) {
+            return GARY_TEXTURE;
+        } else if (Overwhelmed.limestoneSnailEntityType.get().equals(type)) {
+            return LIMESTONE_TEXTURE;
+        } else if (Overwhelmed.romanSnailEntityType.get().equals(type)) {
+            return ROMAN_TEXTURE;
+        }
+        throw new IncompatibleClassChangeError();
     }
 
-    public static ResourceLocation getVariantModel(SnailEntity.Variant variant) {
-        return switch (variant) {
-            default -> throw new IncompatibleClassChangeError();
-            case GARDEN -> GARDEN_MODEL;
-            case GARY -> GARY_MODEL;
-            case LIMESTONE -> LIMESTONE_MODEL;
-            case ROMAN -> ROMAN_MODEL;
-        };
+    public static ResourceLocation getVariantModel(SnailEntity animatable) {
+        EntityType<?> type = animatable.getType();
+        if (Overwhelmed.gardenSnailEntityType.get().equals(type)) {
+            return GARDEN_MODEL;
+        } else if (Overwhelmed.garySnailEntityType.get().equals(type)) {
+            return GARY_MODEL;
+        } else if (Overwhelmed.limestoneSnailEntityType.get().equals(type)) {
+            return LIMESTONE_MODEL;
+        } else if (Overwhelmed.romanSnailEntityType.get().equals(type)) {
+            return ROMAN_MODEL;
+        }
+        throw new IncompatibleClassChangeError();
     }
 
     @Override
     public ResourceLocation getModelResource(SnailEntity animatable) {
-        return getVariantModel(animatable.getVariant());
+        return getVariantModel(animatable);
     }
 
     @Override
     public ResourceLocation getTextureResource(SnailEntity animatable) {
-        return getVariantTexture(animatable.getVariant());
+        return getVariantTexture(animatable);
     }
 
     @Override

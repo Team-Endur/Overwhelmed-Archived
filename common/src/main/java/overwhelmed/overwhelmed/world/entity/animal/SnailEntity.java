@@ -1,13 +1,8 @@
 package overwhelmed.overwhelmed.world.entity.animal;
 
-import com.mojang.serialization.Codec;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.network.syncher.EntityDataAccessor;
-import net.minecraft.network.syncher.EntityDataSerializers;
-import net.minecraft.network.syncher.SynchedEntityData;
+import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.util.ByIdMap;
-import net.minecraft.util.StringRepresentable;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -15,21 +10,18 @@ import net.minecraft.world.entity.ai.goal.*;
 import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
+import overwhelmed.overwhelmed.Overwhelmed;
 import software.bernie.geckolib.animatable.GeoEntity;
 import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.core.animation.AnimatableManager;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
-import java.util.function.IntFunction;
-
 public class SnailEntity extends Animal implements GeoEntity {
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
-    private Variant variant;
 
-    public SnailEntity(EntityType<? extends SnailEntity> entityType, Level level, Variant variant) {
+    public SnailEntity(EntityType<? extends SnailEntity> entityType, Level level) {
         super(entityType, level);
-        this.variant = variant;
     }
 
     @Override
@@ -49,14 +41,6 @@ public class SnailEntity extends Animal implements GeoEntity {
                 .add(Attributes.FOLLOW_RANGE, 16.0D);
     }
 
-    public SnailEntity.Variant getVariant() {
-        return this.variant;
-    }
-
-    public void setVariant(SnailEntity.Variant variant) {
-        this.variant = variant;
-    }
-
     @Nullable
     @Override
     public AgeableMob getBreedOffspring(ServerLevel serverLevel, AgeableMob ageableMob) {
@@ -64,8 +48,35 @@ public class SnailEntity extends Animal implements GeoEntity {
     }
 
     @Override
+    public int getExperienceReward() {
+        return 1;
+    }
+
+    public void setCustomName(@Nullable Component arg) {
+        super.setCustomName(arg);
+        if (!this.getType().equals(Overwhelmed.garySnailEntityType.get()) && arg != null && arg.getString().equals("Gary")) {
+            CompoundTag tag = new CompoundTag();
+            SnailEntity newEntity = new SnailEntity(Overwhelmed.garySnailEntityType.get(), this.level());
+            this.save(tag);
+            newEntity.load(tag);
+            this.remove(RemovalReason.DISCARDED);
+            this.level().addFreshEntity(newEntity);
+        }
+    }
+
+    @Override
     protected float getStandingEyeHeight(Pose pose, EntityDimensions entityDimensions) {
-        return this.getVariant().getStandingEyeHeight();
+        EntityType<?> type = this.getType();
+        if (Overwhelmed.gardenSnailEntityType.get().equals(type)) {
+            return 0.2f;
+        } else if (Overwhelmed.garySnailEntityType.get().equals(type)) {
+            return 0.32f;
+        } else if (Overwhelmed.limestoneSnailEntityType.get().equals(type)) {
+            return 0.15f;
+        } else if (Overwhelmed.romanSnailEntityType.get().equals(type)) {
+            return 0.2f;
+        }
+        throw new IncompatibleClassChangeError();
     }
 
     @Override
@@ -76,28 +87,5 @@ public class SnailEntity extends Animal implements GeoEntity {
     @Override
     public AnimatableInstanceCache getAnimatableInstanceCache() {
         return this.cache;
-    }
-
-    public enum Variant implements StringRepresentable {
-        GARDEN("garden", 0.25f),
-        GARY("gary", 0.45f),
-        LIMESTONE("limestone", 0.2f),
-        ROMAN("roman", 0.3f);
-
-        private final String name;
-        private final float standingEyeHeight;
-
-        private Variant(String name, float standingEyeHeight) {
-            this.name = name;
-            this.standingEyeHeight = standingEyeHeight;
-        }
-
-        public String getSerializedName() {
-            return this.name;
-        }
-
-        public float getStandingEyeHeight() {
-            return standingEyeHeight;
-        }
     }
 }
