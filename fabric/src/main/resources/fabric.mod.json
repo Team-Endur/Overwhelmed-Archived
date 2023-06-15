@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "overwhelmed",
+  "version": "${version}",
+
+  "name": "Overwhelmed",
+  "description": "Overhauling and adding new features to the Overworld's surface!",
+  "authors": [
+    "CheeseNull Butter",
+    "Codetoil"
+  ],
+  "contact": {},
+
+  "license": "All Rights Reserved",
+  "icon": "icon.png",
+
+  "environment": "*",
+  "entrypoints": {},
+  "mixins": [
+    "overwhelmed.mixins.json",
+    "overwhelmed-common.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.21",
+    "minecraft": ">=1.20"
+  }
+}
