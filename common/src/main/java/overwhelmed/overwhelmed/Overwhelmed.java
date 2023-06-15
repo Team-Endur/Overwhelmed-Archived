@@ -10,9 +10,11 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.level.Level;
 import overwhelmed.overwhelmed.client.renderer.entity.SnailRenderer;
 import overwhelmed.overwhelmed.world.entity.animal.SnailEntity;
+import overwhelmed.overwhelmed.world.item.SnailSpawnEggItem;
 
 import java.util.function.Supplier;
 
@@ -22,13 +24,16 @@ public class Overwhelmed
 
 	public static final Supplier<RegistrarManager> MANAGER = Suppliers.memoize(() -> RegistrarManager.get(MOD_ID));
 	public static Registrar<EntityType<?>> entityTypes;
+	public static Registrar<Item> items;
 	public static RegistrySupplier<EntityType<SnailEntity>> gardenSnailEntityType;
 	public static RegistrySupplier<EntityType<SnailEntity>> garySnailEntityType;
 	public static RegistrySupplier<EntityType<SnailEntity>> limestoneSnailEntityType;
 	public static RegistrySupplier<EntityType<SnailEntity>> romanSnailEntityType;
+	public static RegistrySupplier<SnailSpawnEggItem> snailSpawnEggItem;
 
 	public static void init() {
 		entityTypes = MANAGER.get().get(Registries.ENTITY_TYPE);
+		items = MANAGER.get().get(Registries.ITEM);
 
 		gardenSnailEntityType = entityTypes.register(new ResourceLocation(MOD_ID, "garden_snail"), () ->
 				EntityType.Builder.of(SnailEntity::new, MobCategory.CREATURE)
@@ -59,5 +64,8 @@ public class Overwhelmed
 		EntityRendererRegistry.register(limestoneSnailEntityType, SnailRenderer::new);
 		EntityAttributeRegistry.register(romanSnailEntityType, SnailEntity::createAttributes);
 		EntityRendererRegistry.register(romanSnailEntityType, SnailRenderer::new);
+
+		snailSpawnEggItem = items.register(new ResourceLocation(MOD_ID, "snail_spawn_egg"), () ->
+				new SnailSpawnEggItem(new Item.Properties()));
 	}
 }
