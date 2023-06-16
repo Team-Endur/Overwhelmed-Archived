@@ -54,7 +54,8 @@ public class SnailEntity extends Animal implements GeoEntity {
 
     public void setCustomName(@Nullable Component arg) {
         super.setCustomName(arg);
-        if (!this.getType().equals(Overwhelmed.garySnailEntityType.get()) && arg != null && arg.getString().equals("Gary")) {
+        if (!this.getType().equals(Overwhelmed.garySnailEntityType.get()) && arg != null
+                && arg.getString().equals("Gary")) {
             CompoundTag tag = new CompoundTag();
             SnailEntity newEntity = new SnailEntity(Overwhelmed.garySnailEntityType.get(), this.level());
             this.save(tag);

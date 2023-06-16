@@ -7,15 +7,24 @@ import overwhelmed.overwhelmed.world.entity.animal.SnailEntity;
 import software.bernie.geckolib.model.GeoModel;
 
 public class SnailModel extends GeoModel<SnailEntity> {
-    private static final ResourceLocation GARDEN_TEXTURE = new ResourceLocation(Overwhelmed.MOD_ID, "textures/entity/snail_garden.png");
-    private static final ResourceLocation GARY_TEXTURE = new ResourceLocation(Overwhelmed.MOD_ID, "textures/entity/snail_gary.png");
-    private static final ResourceLocation LIMESTONE_TEXTURE = new ResourceLocation(Overwhelmed.MOD_ID, "textures/entity/snail_limestone.png");
-    private static final ResourceLocation ROMAN_TEXTURE = new ResourceLocation(Overwhelmed.MOD_ID, "textures/entity/snail_roman.png");
-    private static final ResourceLocation GARDEN_MODEL = new ResourceLocation(Overwhelmed.MOD_ID, "geo/entity/snail_garden.geo.json");
-    private static final ResourceLocation GARY_MODEL = new ResourceLocation(Overwhelmed.MOD_ID, "geo/entity/snail_gary.geo.json");
-    private static final ResourceLocation LIMESTONE_MODEL = new ResourceLocation(Overwhelmed.MOD_ID, "geo/entity/snail_limestone.geo.json");
-    private static final ResourceLocation ROMAN_MODEL = new ResourceLocation(Overwhelmed.MOD_ID, "geo/entity/snail_roman.geo.json");
-    private static final ResourceLocation ANIMATION = new ResourceLocation(Overwhelmed.MOD_ID, "animations/entity/snail.animation.json");
+    private static final ResourceLocation GARDEN_TEXTURE =
+            new ResourceLocation(Overwhelmed.MOD_ID, "textures/entity/snail_garden.png");
+    private static final ResourceLocation GARY_TEXTURE =
+            new ResourceLocation(Overwhelmed.MOD_ID, "textures/entity/snail_gary.png");
+    private static final ResourceLocation LIMESTONE_TEXTURE =
+            new ResourceLocation(Overwhelmed.MOD_ID, "textures/entity/snail_limestone.png");
+    private static final ResourceLocation ROMAN_TEXTURE =
+            new ResourceLocation(Overwhelmed.MOD_ID, "textures/entity/snail_roman.png");
+    private static final ResourceLocation GARDEN_MODEL =
+            new ResourceLocation(Overwhelmed.MOD_ID, "geo/entity/snail_garden.geo.json");
+    private static final ResourceLocation GARY_MODEL =
+            new ResourceLocation(Overwhelmed.MOD_ID, "geo/entity/snail_gary.geo.json");
+    private static final ResourceLocation LIMESTONE_MODEL =
+            new ResourceLocation(Overwhelmed.MOD_ID, "geo/entity/snail_limestone.geo.json");
+    private static final ResourceLocation ROMAN_MODEL =
+            new ResourceLocation(Overwhelmed.MOD_ID, "geo/entity/snail_roman.geo.json");
+    private static final ResourceLocation ANIMATION =
+            new ResourceLocation(Overwhelmed.MOD_ID, "animations/entity/snail.animation.json");
 
     public static ResourceLocation getVariantTexture(SnailEntity animatable) {
         EntityType<?> type = animatable.getType();

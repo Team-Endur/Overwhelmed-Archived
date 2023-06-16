@@ -2,7 +2,6 @@ package overwhelmed.overwhelmed.world.item;
 
 import java.util.Objects;
 
-import net.minecraft.client.color.item.ItemColor;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
@@ -31,9 +30,7 @@ import net.minecraft.world.phys.HitResult.Type;
 import org.jetbrains.annotations.NotNull;
 import overwhelmed.overwhelmed.Overwhelmed;
 
-public class SnailSpawnEggItem extends Item implements ItemColor {
-    public final int BACKGROUND_COLOR = 0xdab284;
-    public final int HIGHLIGHT_COLOR = 0x745c44;
+public class SnailSpawnEggItem extends Item {
     protected final RandomSource random;
 
     public SnailSpawnEggItem(Item.Properties properties) {
@@ -71,7 +68,9 @@ public class SnailSpawnEggItem extends Item implements ItemColor {
             }
 
             EntityType<?> entityType2 = this.getType();
-            if (entityType2.spawn((ServerLevel)level, itemStack, useOnContext.getPlayer(), blockPos2, MobSpawnType.SPAWN_EGG, true, !Objects.equals(blockPos, blockPos2) && direction == Direction.UP) != null) {
+            if (entityType2.spawn((ServerLevel)level, itemStack, useOnContext.getPlayer(), blockPos2,
+                    MobSpawnType.SPAWN_EGG, true, !Objects.equals(blockPos, blockPos2)
+                            && direction == Direction.UP) != null) {
                 itemStack.shrink(1);
                 level.gameEvent(useOnContext.getPlayer(), GameEvent.ENTITY_PLACE, blockPos);
             }
@@ -80,7 +79,8 @@ public class SnailSpawnEggItem extends Item implements ItemColor {
         }
     }
 
-    public @NotNull InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand interactionHand) {
+    public @NotNull InteractionResultHolder<ItemStack> use(Level level, Player player,
+                                                           InteractionHand interactionHand) {
         ItemStack itemStack = player.getItemInHand(interactionHand);
         BlockHitResult blockHitResult = getPlayerPOVHitResult(level, player, Fluid.SOURCE_ONLY);
         if (blockHitResult.getType() != Type.BLOCK) {
@@ -91,9 +91,11 @@ public class SnailSpawnEggItem extends Item implements ItemColor {
             BlockPos blockPos = blockHitResult.getBlockPos();
             if (!(level.getBlockState(blockPos).getBlock() instanceof LiquidBlock)) {
                 return InteractionResultHolder.pass(itemStack);
-            } else if (level.mayInteract(player, blockPos) && player.mayUseItemAt(blockPos, blockHitResult.getDirection(), itemStack)) {
+            } else if (level.mayInteract(player, blockPos) && player.mayUseItemAt(blockPos,
+                    blockHitResult.getDirection(), itemStack)) {
                 EntityType<?> entityType = this.getType();
-                Entity entity = entityType.spawn((ServerLevel)level, itemStack, player, blockPos, MobSpawnType.SPAWN_EGG, false, false);
+                Entity entity = entityType.spawn((ServerLevel)level, itemStack, player, blockPos,
+                        MobSpawnType.SPAWN_EGG, false, false);
                 if (entity == null) {
                     return InteractionResultHolder.pass(itemStack);
                 } else {
@@ -126,8 +128,5 @@ public class SnailSpawnEggItem extends Item implements ItemColor {
         throw new IncompatibleClassChangeError();
     }
 
-    @Override
-    public int getColor(ItemStack itemStack, int i) {
-        return i == 0 ? this.BACKGROUND_COLOR : this.HIGHLIGHT_COLOR;
-    }
+
 }

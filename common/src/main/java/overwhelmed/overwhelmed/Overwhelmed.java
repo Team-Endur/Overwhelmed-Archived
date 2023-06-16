@@ -14,6 +14,7 @@ import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
+import overwhelmed.overwhelmed.client.color.items.SnailSpawnEggItemColor;
 import overwhelmed.overwhelmed.client.renderer.entity.SnailRenderer;
 import overwhelmed.overwhelmed.world.entity.animal.SnailEntity;
 import overwhelmed.overwhelmed.world.item.SnailSpawnEggItem;
@@ -33,6 +34,7 @@ public class Overwhelmed
 	public static RegistrySupplier<EntityType<SnailEntity>> romanSnailEntityType;
 	public static RegistrySupplier<SnailSpawnEggItem> snailSpawnEggItem;
 	public static RegistrySupplier<Item> snailShellItem;
+	public static SnailSpawnEggItemColor snailSpawnEggItemColor;
 
 	public static void init() {
 		entityTypes = MANAGER.get().get(Registries.ENTITY_TYPE);
@@ -76,6 +78,7 @@ public class Overwhelmed
 		snailSpawnEggItem = items.register(new ResourceLocation(MOD_ID, "snail_spawn_egg"), () ->
 				new SnailSpawnEggItem(new Item.Properties()
 						.arch$tab(CreativeModeTabs.SPAWN_EGGS)));
-		ColorHandlerRegistry.registerItemColors(Overwhelmed.snailSpawnEggItem.get(), Overwhelmed.snailSpawnEggItem);
+		ColorHandlerRegistry.registerItemColors(snailSpawnEggItemColor = new SnailSpawnEggItemColor(),
+				Overwhelmed.snailSpawnEggItem);
 	}
 }
