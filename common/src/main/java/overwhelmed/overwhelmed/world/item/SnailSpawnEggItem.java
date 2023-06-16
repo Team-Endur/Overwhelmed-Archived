@@ -32,8 +32,8 @@ import org.jetbrains.annotations.NotNull;
 import overwhelmed.overwhelmed.Overwhelmed;
 
 public class SnailSpawnEggItem extends Item implements ItemColor {
-    public final int BACKGROUND_COLOR = 0xFFFFFF;
-    public final int HIGHLIGHT_COLOR = 0x000000;
+    public final int BACKGROUND_COLOR = 0xdab284;
+    public final int HIGHLIGHT_COLOR = 0x745c44;
     protected final RandomSource random;
 
     public SnailSpawnEggItem(Item.Properties properties) {
