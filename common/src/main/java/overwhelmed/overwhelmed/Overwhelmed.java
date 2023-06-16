@@ -2,6 +2,7 @@ package overwhelmed.overwhelmed;
 
 import com.google.common.base.Suppliers;
 import dev.architectury.registry.client.level.entity.EntityRendererRegistry;
+import dev.architectury.registry.client.rendering.ColorHandlerRegistry;
 import dev.architectury.registry.level.entity.EntityAttributeRegistry;
 import dev.architectury.registry.registries.Registrar;
 import dev.architectury.registry.registries.RegistrarManager;
@@ -10,8 +11,9 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.Level;
+import net.minecraft.world.item.Rarity;
 import overwhelmed.overwhelmed.client.renderer.entity.SnailRenderer;
 import overwhelmed.overwhelmed.world.entity.animal.SnailEntity;
 import overwhelmed.overwhelmed.world.item.SnailSpawnEggItem;
@@ -30,6 +32,7 @@ public class Overwhelmed
 	public static RegistrySupplier<EntityType<SnailEntity>> limestoneSnailEntityType;
 	public static RegistrySupplier<EntityType<SnailEntity>> romanSnailEntityType;
 	public static RegistrySupplier<SnailSpawnEggItem> snailSpawnEggItem;
+	public static RegistrySupplier<Item> snailShellItem;
 
 	public static void init() {
 		entityTypes = MANAGER.get().get(Registries.ENTITY_TYPE);
@@ -66,8 +69,13 @@ public class Overwhelmed
 		EntityRendererRegistry.register(romanSnailEntityType, SnailRenderer::new);
 
 		snailShellItem = items.register(new ResourceLocation(MOD_ID, "snail_shell"), () ->
-				new SnailShellItem(new Item.Properties()));
+				new Item(new Item.Properties()
+						.stacksTo(64)
+						.rarity(Rarity.COMMON)
+						.arch$tab(CreativeModeTabs.INGREDIENTS)));
 		snailSpawnEggItem = items.register(new ResourceLocation(MOD_ID, "snail_spawn_egg"), () ->
-				new SnailSpawnEggItem(new Item.Properties()));
+				new SnailSpawnEggItem(new Item.Properties()
+						.arch$tab(CreativeModeTabs.SPAWN_EGGS)));
+		ColorHandlerRegistry.registerItemColors(Overwhelmed.snailSpawnEggItem.get(), Overwhelmed.snailSpawnEggItem);
 	}
 }

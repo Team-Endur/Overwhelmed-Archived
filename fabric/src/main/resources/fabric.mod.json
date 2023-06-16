@@ -15,7 +15,11 @@
   "icon": "icon.png",
 
   "environment": "*",
-  "entrypoints": {},
+  "entrypoints": {
+    "main": [
+      "overwhelmed.overwhelmed.fabric.OverwhelmedFabric"
+    ]
+  },
   "mixins": [
     "overwhelmed.mixins.json",
     "overwhelmed-common.mixins.json"

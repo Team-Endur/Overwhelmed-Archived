@@ -1,6 +1,8 @@
 package overwhelmed.overwhelmed.world.item;
 
 import java.util.Objects;
+
+import net.minecraft.client.color.item.ItemColor;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
@@ -29,7 +31,7 @@ import net.minecraft.world.phys.HitResult.Type;
 import org.jetbrains.annotations.NotNull;
 import overwhelmed.overwhelmed.Overwhelmed;
 
-public class SnailSpawnEggItem extends Item {
+public class SnailSpawnEggItem extends Item implements ItemColor {
     public final int BACKGROUND_COLOR = 0xFFFFFF;
     public final int HIGHLIGHT_COLOR = 0x000000;
     protected final RandomSource random;
@@ -124,7 +126,8 @@ public class SnailSpawnEggItem extends Item {
         throw new IncompatibleClassChangeError();
     }
 
-    public int getColor(int i) {
+    @Override
+    public int getColor(ItemStack itemStack, int i) {
         return i == 0 ? this.BACKGROUND_COLOR : this.HIGHLIGHT_COLOR;
     }
 }

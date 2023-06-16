@@ -17,6 +17,7 @@ configurations {
 
 repositories {
     maven { url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' }
+    maven { url 'https://maven.terraformersmc.com/releases/'}
 }
 
 dependencies {
@@ -29,6 +30,7 @@ dependencies {
     shadowCommon(project(path: ":common", configuration: "transformProductionFabric")) { transitive false }
 
     modImplementation "software.bernie.geckolib:geckolib-fabric-${rootProject.geckolib_mc_version}:${rootProject.geckolib_version}"
+    modRuntimeOnly "com.terraformersmc:modmenu:${rootProject.mod_menu_version}"
 }
 
 processResources {

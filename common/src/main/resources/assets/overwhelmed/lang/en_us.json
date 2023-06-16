@@ -3,5 +3,6 @@
   "entity.overwhelmed.gary_snail": "Gary",
   "entity.overwhelmed.limestone_snail": "Snail",
   "entity.overwhelmed.roman_snail": "Snail",
-  "item.overwhelmed.snail_spawn_egg": "Snail Spawn Egg"
+  "item.overwhelmed.snail_spawn_egg": "Snail Spawn Egg",
+  "item.overwhelmed.snail_shell": "Snail Shell"
 }
