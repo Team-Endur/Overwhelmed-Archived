@@ -8,12 +8,15 @@ import dev.architectury.registry.registries.Registrar;
 import dev.architectury.registry.registries.RegistrarManager;
 import dev.architectury.registry.registries.RegistrySupplier;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.data.tags.BiomeTagsProvider;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
+import net.minecraft.world.level.biome.Biome;
 import overwhelmed.overwhelmed.client.color.items.SnailSpawnEggItemColor;
 import overwhelmed.overwhelmed.client.renderer.entity.SnailRenderer;
 import overwhelmed.overwhelmed.world.entity.animal.SnailEntity;
@@ -35,6 +38,12 @@ public class Overwhelmed
 	public static RegistrySupplier<SnailSpawnEggItem> snailSpawnEggItem;
 	public static RegistrySupplier<Item> snailShellItem;
 	public static SnailSpawnEggItemColor snailSpawnEggItemColor;
+	public static final TagKey<Biome> SPAWNS_GARDEN_SNAILS = TagKey.create(Registries.BIOME,
+			new ResourceLocation(MOD_ID, "spawns_garden_snails"));
+	public static final TagKey<Biome> SPAWNS_LIMESTONE_SNAILS = TagKey.create(Registries.BIOME,
+			new ResourceLocation(MOD_ID, "spawns_limestone_snails"));
+	public static final TagKey<Biome> SPAWNS_ROMAN_SNAILS = TagKey.create(Registries.BIOME,
+			new ResourceLocation(MOD_ID, "spawns_roman_snails"));
 
 	public static void init() {
 		entityTypes = MANAGER.get().get(Registries.ENTITY_TYPE);
