@@ -1,0 +1,14 @@
+{
+  "my_sound": {
+    "sounds": [
+      "overwhelmed:snail_death_0",
+      "overwhelmed:snail_death_1",
+      "overwhelmed:snail_death_2",
+      "overwhelmed:snail_death_3",
+      "overwhelmed:snail_hurt_0",
+      "overwhelmed:snail_hurt_1",
+      "overwhelmed:snail_hurt_2",
+      "overwhelmed:snail_hurt_3"
+    ]
+  }
+}
