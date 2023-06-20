@@ -11,13 +11,16 @@
   ],
   "contact": {},
 
-  "license": "All Rights Reserved",
+  "license": "GNU GPLv3",
   "icon": "icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
       "overwhelmed.overwhelmed.fabric.OverwhelmedFabric"
+    ],
+    "client": [
+      "overwhelmed.overwhelmed.fabric.OverwhelmedFabricClient"
     ]
   },
   "mixins": [
@@ -26,6 +29,8 @@
   ],
   "depends": {
     "fabricloader": ">=0.14.21",
-    "minecraft": ">=1.20"
+    "minecraft": ">=1.20",
+    "architectury": ">=9.0.8",
+    "geckolib": ">=4.2"
   }
 }

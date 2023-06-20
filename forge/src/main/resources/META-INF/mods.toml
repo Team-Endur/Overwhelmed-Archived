@@ -9,7 +9,7 @@ modLoader="javafml" #mandatory
 loaderVersion="[46,)" #mandatory This is typically bumped every Minecraft version by Forge. See our download page for lists of versions.
 # The license for you mod. This is mandatory metadata and allows for easier comprehension of your redistributive properties.
 # Review your options at https://choosealicense.com/. All rights reserved is the default copyright stance, and is thus the default here.
-license="All Rights Reserved"
+license="GNU GPLv3"
 # A URL to refer people to when problems occur with this mod
 issueTrackerURL="https://github.com/Codetoil/Overwhelmed/issues"
 # A list of mods - how many allowed here is determined by the individual mod loader
@@ -64,3 +64,15 @@ Overhauling and adding new features to the Overworld's surface!
    versionRange="[1.20,1.21)"
    ordering="NONE"
    side="BOTH"
+[[dependencies.overwhelmed]]
+   modId="architectury"
+   mandatory=true
+   versionRange="[9.0.8,)"
+   ordering="AFTER"
+   side="BOTH"
+[[dependencies.overwhelmed]]
+   modId="geckolib"
+   mandatory=true
+   versionRange="[4.2,)"
+   ordering="AFTER"
+   side="CLIENT"

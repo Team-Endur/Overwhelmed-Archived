@@ -1,14 +1,11 @@
 package overwhelmed.overwhelmed;
 
 import com.google.common.base.Suppliers;
-import dev.architectury.registry.client.level.entity.EntityRendererRegistry;
-import dev.architectury.registry.client.rendering.ColorHandlerRegistry;
 import dev.architectury.registry.level.entity.EntityAttributeRegistry;
 import dev.architectury.registry.registries.Registrar;
 import dev.architectury.registry.registries.RegistrarManager;
 import dev.architectury.registry.registries.RegistrySupplier;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.data.tags.BiomeTagsProvider;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.entity.EntityType;
@@ -17,8 +14,6 @@ import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.level.biome.Biome;
-import overwhelmed.overwhelmed.client.color.items.SnailSpawnEggItemColor;
-import overwhelmed.overwhelmed.client.renderer.entity.SnailRenderer;
 import overwhelmed.overwhelmed.world.entity.animal.SnailEntity;
 import overwhelmed.overwhelmed.world.item.SnailSpawnEggItem;
 
@@ -37,7 +32,6 @@ public class Overwhelmed
 	public static RegistrySupplier<EntityType<SnailEntity>> romanSnailEntityType;
 	public static RegistrySupplier<SnailSpawnEggItem> snailSpawnEggItem;
 	public static RegistrySupplier<Item> snailShellItem;
-	public static SnailSpawnEggItemColor snailSpawnEggItemColor;
 	public static final TagKey<Biome> SPAWNS_GARDEN_SNAILS = TagKey.create(Registries.BIOME,
 			new ResourceLocation(MOD_ID, "spawns_garden_snails"));
 	public static final TagKey<Biome> SPAWNS_LIMESTONE_SNAILS = TagKey.create(Registries.BIOME,
@@ -71,13 +65,9 @@ public class Overwhelmed
 						.build("roman_snail"));
 
 		EntityAttributeRegistry.register(gardenSnailEntityType, SnailEntity::createAttributes);
-		EntityRendererRegistry.register(gardenSnailEntityType, SnailRenderer::new);
 		EntityAttributeRegistry.register(garySnailEntityType, SnailEntity::createAttributes);
-		EntityRendererRegistry.register(garySnailEntityType, SnailRenderer::new);
 		EntityAttributeRegistry.register(limestoneSnailEntityType, SnailEntity::createAttributes);
-		EntityRendererRegistry.register(limestoneSnailEntityType, SnailRenderer::new);
 		EntityAttributeRegistry.register(romanSnailEntityType, SnailEntity::createAttributes);
-		EntityRendererRegistry.register(romanSnailEntityType, SnailRenderer::new);
 
 		snailShellItem = items.register(new ResourceLocation(MOD_ID, "snail_shell"), () ->
 				new Item(new Item.Properties()
@@ -87,7 +77,7 @@ public class Overwhelmed
 		snailSpawnEggItem = items.register(new ResourceLocation(MOD_ID, "snail_spawn_egg"), () ->
 				new SnailSpawnEggItem(new Item.Properties()
 						.arch$tab(CreativeModeTabs.SPAWN_EGGS)));
-		ColorHandlerRegistry.registerItemColors(snailSpawnEggItemColor = new SnailSpawnEggItemColor(),
-				Overwhelmed.snailSpawnEggItem);
 	}
+
+
 }
