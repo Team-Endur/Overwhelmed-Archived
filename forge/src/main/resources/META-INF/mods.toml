@@ -75,4 +75,4 @@ Overhauling and adding new features to the Overworld's surface!
    mandatory=true
    versionRange="[4.2,)"
    ordering="AFTER"
-   side="CLIENT"
+   side="BOTH"
