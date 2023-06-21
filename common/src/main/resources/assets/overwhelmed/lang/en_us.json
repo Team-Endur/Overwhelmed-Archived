@@ -9,5 +9,6 @@
   "item.overwhelmed.gold_bead": "Gold Bead",
   "item.overwhelmed.ice_crystal_shard": "Ice Crystal Shard",
   "item.overwhelmed.ice_cube": "Ice Cube",
-  "item.overwhelmed.pebble": "Pebble"
+  "item.overwhelmed.pebble": "Pebble",
+  "category.overwhelmed": "Overwhelmed"
 }
