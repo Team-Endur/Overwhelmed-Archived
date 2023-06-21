@@ -33,6 +33,10 @@ public class Overwhelmed
 	public static RegistrySupplier<SnailSpawnEggItem> snailSpawnEggItem;
 	public static RegistrySupplier<Item> snailShellItem;
 	public static RegistrySupplier<Item> gooBallItem;
+	public static RegistrySupplier<Item> goldBeadItem;
+	public static RegistrySupplier<Item> iceCrystalShardItem;
+	public static RegistrySupplier<Item> iceCubeItem;
+	public static RegistrySupplier<Item> pebbleItem;
 	public static final TagKey<Biome> SPAWNS_GARDEN_SNAILS = TagKey.create(Registries.BIOME,
 			new ResourceLocation(MOD_ID, "spawns_garden_snails"));
 	public static final TagKey<Biome> SPAWNS_LIMESTONE_SNAILS = TagKey.create(Registries.BIOME,
@@ -86,6 +90,27 @@ public class Overwhelmed
 						.stacksTo(64)
 						.rarity(Rarity.COMMON)
 						.arch$tab(CreativeModeTabs.INGREDIENTS)));
+		goldBeadItem = items.register(new ResourceLocation(MOD_ID, "gold_bead"), () ->
+				new Item(new Item.Properties()
+						.stacksTo(64)
+						.rarity(Rarity.UNCOMMON)
+						.arch$tab(CreativeModeTabs.INGREDIENTS)));
+		iceCrystalShardItem = items.register(new ResourceLocation(MOD_ID, "ice_crystal_shard"), () ->
+				new Item(new Item.Properties()
+						.stacksTo(64)
+						.rarity(Rarity.UNCOMMON)
+						.arch$tab(CreativeModeTabs.INGREDIENTS)));
+		iceCubeItem = items.register(new ResourceLocation(MOD_ID, "ice_cube"), () ->
+				new Item(new Item.Properties()
+						.stacksTo(64)
+						.rarity(Rarity.COMMON)
+						.arch$tab(CreativeModeTabs.INGREDIENTS)));
+		pebbleItem = items.register(new ResourceLocation(MOD_ID, "pebble"), () ->
+				new Item(new Item.Properties()
+						.stacksTo(64)
+						.rarity(Rarity.COMMON)
+						.arch$tab(CreativeModeTabs.INGREDIENTS)));
+
 	}
 
 

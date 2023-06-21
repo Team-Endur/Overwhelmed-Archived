@@ -5,5 +5,9 @@
   "entity.overwhelmed.roman_snail": "Snail",
   "item.overwhelmed.snail_spawn_egg": "Snail Spawn Egg",
   "item.overwhelmed.snail_shell": "Snail Shell",
-  "item.overwhelmed.goo_ball": "Gooball"
+  "item.overwhelmed.goo_ball": "Gooball",
+  "item.overwhelmed.gold_bead": "Gold Bead",
+  "item.overwhelmed.ice_crystal_shard": "Ice Crystal Shard",
+  "item.overwhelmed.ice_cube": "Ice Cube",
+  "item.overwhelmed.pebble": "Pebble"
 }
