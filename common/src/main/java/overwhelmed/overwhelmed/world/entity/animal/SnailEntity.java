@@ -3,13 +3,20 @@ package overwhelmed.overwhelmed.world.entity.animal;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.*;
 import net.minecraft.world.entity.animal.Animal;
+import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
+import org.jetbrains.annotations.NotNull;
 import overwhelmed.overwhelmed.Overwhelmed;
 import software.bernie.geckolib.animatable.GeoEntity;
 import org.jetbrains.annotations.Nullable;
@@ -19,9 +26,11 @@ import software.bernie.geckolib.util.GeckoLibUtil;
 
 public class SnailEntity extends Animal implements GeoEntity {
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
+    private final Level level;
 
     public SnailEntity(EntityType<? extends SnailEntity> entityType, Level level) {
         super(entityType, level);
+        this.level = level;
     }
 
     @Override
@@ -50,6 +59,42 @@ public class SnailEntity extends Animal implements GeoEntity {
     @Override
     public int getExperienceReward() {
         return 1;
+    }
+
+    @Override
+    public void die(DamageSource cause) {
+        super.die(cause);
+        if (!this.level.isClientSide()) {
+            if (cause.getEntity() instanceof Player) {
+                // 10% chance to drop a goo ball
+                if (this.level.random.nextFloat() <= 0.1f) {
+                    ItemEntity itemEntity = new ItemEntity(this.level, this.getX(), this.getY(), this.getZ(), new ItemStack(Overwhelmed.snailShellItem.get()));
+                    this.level.addFreshEntity(itemEntity);
+                }
+            }
+        }
+    }
+
+    @Override
+    public @NotNull InteractionResult mobInteract(Player player, InteractionHand hand) {
+        ItemStack itemStack = player.getItemInHand(hand);
+
+        // Check if the player is holding a slime ball
+        if (itemStack.getItem() == Items.SLIME_BALL) {
+            // Decrease the stack size of the slime ball
+            if (!player.isCreative()) {
+                itemStack.shrink(1);
+            }
+
+            // Drop a goo ball
+            if (!level.isClientSide) {
+                level.addFreshEntity(new ItemEntity(level, getX(), getY(), getZ(), new ItemStack(Overwhelmed.gooBallItem.get())));
+            }
+
+            return InteractionResult.SUCCESS;
+        }
+
+        return super.mobInteract(player, hand);
     }
 
     public void setCustomName(@Nullable Component arg) {
