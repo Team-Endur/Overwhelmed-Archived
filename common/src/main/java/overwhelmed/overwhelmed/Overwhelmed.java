@@ -32,6 +32,7 @@ public class Overwhelmed
 	public static RegistrySupplier<EntityType<SnailEntity>> romanSnailEntityType;
 	public static RegistrySupplier<SnailSpawnEggItem> snailSpawnEggItem;
 	public static RegistrySupplier<Item> snailShellItem;
+	public static RegistrySupplier<Item> gooBallItem;
 	public static final TagKey<Biome> SPAWNS_GARDEN_SNAILS = TagKey.create(Registries.BIOME,
 			new ResourceLocation(MOD_ID, "spawns_garden_snails"));
 	public static final TagKey<Biome> SPAWNS_LIMESTONE_SNAILS = TagKey.create(Registries.BIOME,
@@ -40,6 +41,7 @@ public class Overwhelmed
 			new ResourceLocation(MOD_ID, "spawns_roman_snails"));
 
 	public static void init() {
+
 		entityTypes = MANAGER.get().get(Registries.ENTITY_TYPE);
 		items = MANAGER.get().get(Registries.ITEM);
 
@@ -77,6 +79,13 @@ public class Overwhelmed
 		snailSpawnEggItem = items.register(new ResourceLocation(MOD_ID, "snail_spawn_egg"), () ->
 				new SnailSpawnEggItem(new Item.Properties()
 						.arch$tab(CreativeModeTabs.SPAWN_EGGS)));
+
+
+		gooBallItem = items.register(new ResourceLocation(MOD_ID, "goo_ball"), () ->
+				new Item(new Item.Properties()
+						.stacksTo(64)
+						.rarity(Rarity.COMMON)
+						.arch$tab(CreativeModeTabs.INGREDIENTS)));
 	}
 
 
