@@ -17,7 +17,8 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.NotNull;
-import overwhelmed.overwhelmed.Overwhelmed;
+import overwhelmed.overwhelmed.registry.EntityRegistry;
+import overwhelmed.overwhelmed.registry.ItemRegistry;
 import software.bernie.geckolib.animatable.GeoEntity;
 import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
@@ -68,7 +69,7 @@ public class SnailEntity extends Animal implements GeoEntity {
             if (cause.getEntity() instanceof Player) {
                 // 10% chance to drop a goo ball
                 if (this.level.random.nextFloat() <= 0.1f) {
-                    ItemEntity itemEntity = new ItemEntity(this.level, this.getX(), this.getY(), this.getZ(), new ItemStack(Overwhelmed.snailShellItem.get()));
+                    ItemEntity itemEntity = new ItemEntity(this.level, this.getX(), this.getY(), this.getZ(), new ItemStack(ItemRegistry.snailShellItem.get()));
                     this.level.addFreshEntity(itemEntity);
                 }
             }
@@ -88,7 +89,7 @@ public class SnailEntity extends Animal implements GeoEntity {
 
             // Drop a goo ball
             if (!level.isClientSide) {
-                level.addFreshEntity(new ItemEntity(level, getX(), getY(), getZ(), new ItemStack(Overwhelmed.gooBallItem.get())));
+                level.addFreshEntity(new ItemEntity(level, getX(), getY(), getZ(), new ItemStack(ItemRegistry.gooBallItem.get())));
             }
 
             return InteractionResult.SUCCESS;
@@ -99,10 +100,10 @@ public class SnailEntity extends Animal implements GeoEntity {
 
     public void setCustomName(@Nullable Component arg) {
         super.setCustomName(arg);
-        if (!this.getType().equals(Overwhelmed.garySnailEntityType.get()) && arg != null
+        if (!this.getType().equals(EntityRegistry.garySnailEntityType.get()) && arg != null
                 && arg.getString().equals("Gary")) {
             CompoundTag tag = new CompoundTag();
-            SnailEntity newEntity = new SnailEntity(Overwhelmed.garySnailEntityType.get(), this.level());
+            SnailEntity newEntity = new SnailEntity(EntityRegistry.garySnailEntityType.get(), this.level());
             this.save(tag);
             newEntity.load(tag);
             this.remove(RemovalReason.DISCARDED);
@@ -113,13 +114,13 @@ public class SnailEntity extends Animal implements GeoEntity {
     @Override
     protected float getStandingEyeHeight(Pose pose, EntityDimensions entityDimensions) {
         EntityType<?> type = this.getType();
-        if (Overwhelmed.gardenSnailEntityType.get().equals(type)) {
+        if (EntityRegistry.gardenSnailEntityType.get().equals(type)) {
             return 0.2f;
-        } else if (Overwhelmed.garySnailEntityType.get().equals(type)) {
+        } else if (EntityRegistry.garySnailEntityType.get().equals(type)) {
             return 0.32f;
-        } else if (Overwhelmed.limestoneSnailEntityType.get().equals(type)) {
+        } else if (EntityRegistry.limestoneSnailEntityType.get().equals(type)) {
             return 0.15f;
-        } else if (Overwhelmed.romanSnailEntityType.get().equals(type)) {
+        } else if (EntityRegistry.romanSnailEntityType.get().equals(type)) {
             return 0.2f;
         }
         throw new IncompatibleClassChangeError();

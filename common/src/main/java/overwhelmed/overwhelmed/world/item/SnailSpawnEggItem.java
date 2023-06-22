@@ -29,6 +29,7 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.HitResult.Type;
 import org.jetbrains.annotations.NotNull;
 import overwhelmed.overwhelmed.Overwhelmed;
+import overwhelmed.overwhelmed.registry.EntityRegistry;
 
 public class SnailSpawnEggItem extends Item {
     protected final RandomSource random;
@@ -116,13 +117,13 @@ public class SnailSpawnEggItem extends Item {
     private @NotNull EntityType<?> getType() {
         switch (random.nextIntBetweenInclusive(1, 3)) {
             case 1 -> {
-                return Overwhelmed.gardenSnailEntityType.get();
+                return EntityRegistry.gardenSnailEntityType.get();
             }
             case 2 -> {
-                return Overwhelmed.limestoneSnailEntityType.get();
+                return EntityRegistry.limestoneSnailEntityType.get();
             }
             case 3 -> {
-                return Overwhelmed.romanSnailEntityType.get();
+                return EntityRegistry.romanSnailEntityType.get();
             }
         }
         throw new IncompatibleClassChangeError();
