@@ -3,6 +3,7 @@ package overwhelmed.overwhelmed.client.model.entity;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
 import overwhelmed.overwhelmed.Overwhelmed;
+import overwhelmed.overwhelmed.registry.EntityRegistry;
 import overwhelmed.overwhelmed.world.entity.animal.SnailEntity;
 import software.bernie.geckolib.model.GeoModel;
 
@@ -28,13 +29,13 @@ public class SnailModel extends GeoModel<SnailEntity> {
 
     public static ResourceLocation getVariantTexture(SnailEntity animatable) {
         EntityType<?> type = animatable.getType();
-        if (Overwhelmed.gardenSnailEntityType.get().equals(type)) {
+        if (EntityRegistry.gardenSnailEntityType.get().equals(type)) {
             return GARDEN_TEXTURE;
-        } else if (Overwhelmed.garySnailEntityType.get().equals(type)) {
+        } else if (EntityRegistry.garySnailEntityType.get().equals(type)) {
             return GARY_TEXTURE;
-        } else if (Overwhelmed.limestoneSnailEntityType.get().equals(type)) {
+        } else if (EntityRegistry.limestoneSnailEntityType.get().equals(type)) {
             return LIMESTONE_TEXTURE;
-        } else if (Overwhelmed.romanSnailEntityType.get().equals(type)) {
+        } else if (EntityRegistry.romanSnailEntityType.get().equals(type)) {
             return ROMAN_TEXTURE;
         }
         throw new IncompatibleClassChangeError();
@@ -42,13 +43,13 @@ public class SnailModel extends GeoModel<SnailEntity> {
 
     public static ResourceLocation getVariantModel(SnailEntity animatable) {
         EntityType<?> type = animatable.getType();
-        if (Overwhelmed.gardenSnailEntityType.get().equals(type)) {
+        if (EntityRegistry.gardenSnailEntityType.get().equals(type)) {
             return GARDEN_MODEL;
-        } else if (Overwhelmed.garySnailEntityType.get().equals(type)) {
+        } else if (EntityRegistry.garySnailEntityType.get().equals(type)) {
             return GARY_MODEL;
-        } else if (Overwhelmed.limestoneSnailEntityType.get().equals(type)) {
+        } else if (EntityRegistry.limestoneSnailEntityType.get().equals(type)) {
             return LIMESTONE_MODEL;
-        } else if (Overwhelmed.romanSnailEntityType.get().equals(type)) {
+        } else if (EntityRegistry.romanSnailEntityType.get().equals(type)) {
             return ROMAN_MODEL;
         }
         throw new IncompatibleClassChangeError();
