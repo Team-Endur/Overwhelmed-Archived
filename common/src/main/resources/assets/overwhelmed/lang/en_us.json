@@ -10,5 +10,8 @@
   "item.overwhelmed.ice_crystal_shard": "Ice Crystal Shard",
   "item.overwhelmed.ice_cube": "Ice Cube",
   "item.overwhelmed.pebble": "Pebble",
+
+  "block.overwhelmed.test_block": "Test Block",
+
   "category.overwhelmed": "Overwhelmed"
 }
