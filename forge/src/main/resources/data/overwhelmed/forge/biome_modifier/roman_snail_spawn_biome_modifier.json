@@ -4,8 +4,8 @@
   "spawners":
   {
     "type": "overwhelmed:roman_snail",
-    "weight": 100,
-    "minCount": 2,
-    "maxCount": 4
+    "weight": 80,
+    "minCount": 3,
+    "maxCount": 8
   }
 }

@@ -10,12 +10,12 @@ public class BiomeModifiers {
     {
         BiomeModifications.addSpawn(bsc -> bsc.hasTag(EntityRegistry.SPAWNS_GARDEN_SNAILS),
                 MobCategory.CREATURE, EntityRegistry.gardenSnailEntityType.get(),
-                100, 2, 4);
+                80, 3, 8);
         BiomeModifications.addSpawn(bsc -> bsc.hasTag(EntityRegistry.SPAWNS_LIMESTONE_SNAILS),
                 MobCategory.CREATURE, EntityRegistry.limestoneSnailEntityType.get(),
-                100, 2, 4);
+                20, 2, 4);
         BiomeModifications.addSpawn(bsc -> bsc.hasTag(EntityRegistry.SPAWNS_ROMAN_SNAILS),
                 MobCategory.CREATURE, EntityRegistry.romanSnailEntityType.get(),
-                100, 2, 4);
+                80, 3, 8);
     }
 }
