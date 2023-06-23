@@ -3,14 +3,22 @@ package overwhelmed.overwhelmed.world.entity.animal;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.*;
 import net.minecraft.world.entity.animal.Animal;
+import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
-import overwhelmed.overwhelmed.Overwhelmed;
+import org.jetbrains.annotations.NotNull;
+import overwhelmed.overwhelmed.registry.EntityRegistry;
+import overwhelmed.overwhelmed.registry.ItemRegistry;
 import software.bernie.geckolib.animatable.GeoEntity;
 import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
@@ -19,9 +27,11 @@ import software.bernie.geckolib.util.GeckoLibUtil;
 
 public class SnailEntity extends Animal implements GeoEntity {
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
+    private final Level level;
 
     public SnailEntity(EntityType<? extends SnailEntity> entityType, Level level) {
         super(entityType, level);
+        this.level = level;
     }
 
     @Override
@@ -52,12 +62,48 @@ public class SnailEntity extends Animal implements GeoEntity {
         return 1;
     }
 
+    @Override
+    public void die(DamageSource cause) {
+        super.die(cause);
+        if (!this.level.isClientSide()) {
+            if (cause.getEntity() instanceof Player) {
+                // 10% chance to drop a goo ball
+                if (this.level.random.nextFloat() <= 0.1f) {
+                    ItemEntity itemEntity = new ItemEntity(this.level, this.getX(), this.getY(), this.getZ(), new ItemStack(ItemRegistry.snailShellItem.get()));
+                    this.level.addFreshEntity(itemEntity);
+                }
+            }
+        }
+    }
+
+    @Override
+    public @NotNull InteractionResult mobInteract(Player player, InteractionHand hand) {
+        ItemStack itemStack = player.getItemInHand(hand);
+
+        // Check if the player is holding a slime ball
+        if (itemStack.getItem() == Items.SLIME_BALL) {
+            // Decrease the stack size of the slime ball
+            if (!player.isCreative()) {
+                itemStack.shrink(1);
+            }
+
+            // Drop a goo ball
+            if (!level.isClientSide) {
+                level.addFreshEntity(new ItemEntity(level, getX(), getY(), getZ(), new ItemStack(ItemRegistry.gooBallItem.get())));
+            }
+
+            return InteractionResult.SUCCESS;
+        }
+
+        return super.mobInteract(player, hand);
+    }
+
     public void setCustomName(@Nullable Component arg) {
         super.setCustomName(arg);
-        if (!this.getType().equals(Overwhelmed.garySnailEntityType.get()) && arg != null
+        if (!this.getType().equals(EntityRegistry.garySnailEntityType.get()) && arg != null
                 && arg.getString().equals("Gary")) {
             CompoundTag tag = new CompoundTag();
-            SnailEntity newEntity = new SnailEntity(Overwhelmed.garySnailEntityType.get(), this.level());
+            SnailEntity newEntity = new SnailEntity(EntityRegistry.garySnailEntityType.get(), this.level());
             this.save(tag);
             newEntity.load(tag);
             this.remove(RemovalReason.DISCARDED);
@@ -68,13 +114,13 @@ public class SnailEntity extends Animal implements GeoEntity {
     @Override
     protected float getStandingEyeHeight(Pose pose, EntityDimensions entityDimensions) {
         EntityType<?> type = this.getType();
-        if (Overwhelmed.gardenSnailEntityType.get().equals(type)) {
+        if (EntityRegistry.gardenSnailEntityType.get().equals(type)) {
             return 0.2f;
-        } else if (Overwhelmed.garySnailEntityType.get().equals(type)) {
+        } else if (EntityRegistry.garySnailEntityType.get().equals(type)) {
             return 0.32f;
-        } else if (Overwhelmed.limestoneSnailEntityType.get().equals(type)) {
+        } else if (EntityRegistry.limestoneSnailEntityType.get().equals(type)) {
             return 0.15f;
-        } else if (Overwhelmed.romanSnailEntityType.get().equals(type)) {
+        } else if (EntityRegistry.romanSnailEntityType.get().equals(type)) {
             return 0.2f;
         }
         throw new IncompatibleClassChangeError();
