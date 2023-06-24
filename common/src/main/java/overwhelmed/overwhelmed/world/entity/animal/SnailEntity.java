@@ -22,6 +22,7 @@ import overwhelmed.overwhelmed.registry.EntityRegistry;
 import overwhelmed.overwhelmed.registry.ItemRegistry;
 import software.bernie.geckolib.animatable.GeoEntity;
 import org.jetbrains.annotations.Nullable;
+import software.bernie.geckolib.constant.DefaultAnimations;
 import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.core.animation.AnimatableManager;
 import software.bernie.geckolib.util.GeckoLibUtil;
@@ -61,20 +62,6 @@ public class SnailEntity extends Animal implements GeoEntity {
     @Override
     public int getExperienceReward() {
         return 1;
-    }
-
-    @Override
-    public void die(DamageSource cause) {
-        super.die(cause);
-        if (!this.level.isClientSide()) {
-            if (cause.getEntity() instanceof Player) {
-                // 10% chance to drop a goo ball
-                if (this.level.random.nextFloat() <= 0.1f) {
-                    ItemEntity itemEntity = new ItemEntity(this.level, this.getX(), this.getY(), this.getZ(), new ItemStack(ItemRegistry.snailShellItem.get()));
-                    this.level.addFreshEntity(itemEntity);
-                }
-            }
-        }
     }
 
     @Override
@@ -128,8 +115,10 @@ public class SnailEntity extends Animal implements GeoEntity {
     }
 
     @Override
-    public void registerControllers(AnimatableManager.ControllerRegistrar controllerRegistrar) {
-
+    public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
+        // Temporary until we get animations for the other snail types.
+        if (EntityRegistry.gardenSnailEntityType.get().equals(this.getType()))
+            controllers.add(DefaultAnimations.genericWalkIdleController(this));
     }
 
     @Override

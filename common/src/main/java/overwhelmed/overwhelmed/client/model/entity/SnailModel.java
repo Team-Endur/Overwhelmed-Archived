@@ -24,8 +24,14 @@ public class SnailModel extends GeoModel<SnailEntity> {
             new ResourceLocation(Overwhelmed.MOD_ID, "geo/entity/snail_limestone.geo.json");
     private static final ResourceLocation ROMAN_MODEL =
             new ResourceLocation(Overwhelmed.MOD_ID, "geo/entity/snail_roman.geo.json");
-    private static final ResourceLocation ANIMATION =
-            new ResourceLocation(Overwhelmed.MOD_ID, "animations/entity/snail.animation.json");
+    private static final ResourceLocation GARDEN_ANIMATION =
+            new ResourceLocation(Overwhelmed.MOD_ID, "animations/entity/snail_garden.animation.json");
+    private static final ResourceLocation GARY_ANIMATION =
+            new ResourceLocation(Overwhelmed.MOD_ID, "animations/entity/snail_gary.animation.json");
+    private static final ResourceLocation LIMESTONE_ANIMATION =
+            new ResourceLocation(Overwhelmed.MOD_ID, "animations/entity/snail_limestone.animation.json");
+    private static final ResourceLocation ROMAN_ANIMATION =
+            new ResourceLocation(Overwhelmed.MOD_ID, "animations/entity/snail_roman.animation.json");
 
     public static ResourceLocation getVariantTexture(SnailEntity animatable) {
         EntityType<?> type = animatable.getType();
@@ -55,6 +61,20 @@ public class SnailModel extends GeoModel<SnailEntity> {
         throw new IncompatibleClassChangeError();
     }
 
+    public static ResourceLocation getVariantAnimation(SnailEntity animatable) {
+        EntityType<?> type = animatable.getType();
+        if (EntityRegistry.gardenSnailEntityType.get().equals(type)) {
+            return GARDEN_ANIMATION;
+        } else if (EntityRegistry.garySnailEntityType.get().equals(type)) {
+            return GARY_ANIMATION;
+        } else if (EntityRegistry.limestoneSnailEntityType.get().equals(type)) {
+            return LIMESTONE_ANIMATION;
+        } else if (EntityRegistry.romanSnailEntityType.get().equals(type)) {
+            return ROMAN_ANIMATION;
+        }
+        throw new IncompatibleClassChangeError();
+    }
+
     @Override
     public ResourceLocation getModelResource(SnailEntity animatable) {
         return getVariantModel(animatable);
@@ -67,6 +87,6 @@ public class SnailModel extends GeoModel<SnailEntity> {
 
     @Override
     public ResourceLocation getAnimationResource(SnailEntity animatable) {
-        return ANIMATION;
+        return getVariantAnimation(animatable);
     }
 }

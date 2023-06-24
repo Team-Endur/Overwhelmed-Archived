@@ -19,11 +19,11 @@ public class EntityRegistry {
     public static RegistrySupplier<EntityType<SnailEntity>> limestoneSnailEntityType;
     public static RegistrySupplier<EntityType<SnailEntity>> romanSnailEntityType;
     /*
-    public static RegistrySupplier<EntityType<ButterflyEntity>> cherryButterflyEntityType;
-    public static RegistrySupplier<EntityType<ButterflyEntity>> cabbageButterflyEntityType;
-    public static RegistrySupplier<EntityType<ButterflyEntity>> morphoButterflyEntityType;
-    public static RegistrySupplier<EntityType<ButterflyEntity>> sleepyButterflyEntityType;
-*/
+        public static RegistrySupplier<EntityType<ButterflyEntity>> cherryButterflyEntityType;
+        public static RegistrySupplier<EntityType<ButterflyEntity>> cabbageButterflyEntityType;
+        public static RegistrySupplier<EntityType<ButterflyEntity>> morphoButterflyEntityType;
+        public static RegistrySupplier<EntityType<ButterflyEntity>> sleepyButterflyEntityType;
+    */
     
     public static final TagKey<Biome> SPAWNS_GARDEN_SNAILS = TagKey.create(Registries.BIOME,
             new ResourceLocation(MOD_ID, "spawns_garden_snails"));
@@ -32,15 +32,15 @@ public class EntityRegistry {
     public static final TagKey<Biome> SPAWNS_ROMAN_SNAILS = TagKey.create(Registries.BIOME,
             new ResourceLocation(MOD_ID, "spawns_roman_snails"));
     /*
-    public static final TagKey<Biome> SPAWNS_CHERRY_BUTTERFLY = TagKey.create(Registries.BIOME,
-            new ResourceLocation(MOD_ID, "spawns_chery_butterfly"));
-    public static final TagKey<Biome> SPAWNS_CABAGE_BUTTERFLY = TagKey.create(Registries.BIOME,
-            new ResourceLocation(MOD_ID, "spawns_cabbage_butterfly"));
-    public static final TagKey<Biome> SPAWNS_MORPHO_BUTTERFLY = TagKey.create(Registries.BIOME,
-            new ResourceLocation(MOD_ID, "spawns_morpho_butterfly"));
-    public static final TagKey<Biome> SPAWNS_SLEEPY_BUTTERFLY = TagKey.create(Registries.BIOME,
-            new ResourceLocation(MOD_ID, "spawns_sleepy_butterfly"));
-*/
+        public static final TagKey<Biome> SPAWNS_CHERRY_BUTTERFLY = TagKey.create(Registries.BIOME,
+               new ResourceLocation(MOD_ID, "spawns_chery_butterfly"));
+        public static final TagKey<Biome> SPAWNS_CABAGE_BUTTERFLY = TagKey.create(Registries.BIOME,
+                new ResourceLocation(MOD_ID, "spawns_cabbage_butterfly"));
+        public static final TagKey<Biome> SPAWNS_MORPHO_BUTTERFLY = TagKey.create(Registries.BIOME,
+                new ResourceLocation(MOD_ID, "spawns_morpho_butterfly"));
+        public static final TagKey<Biome> SPAWNS_SLEEPY_BUTTERFLY = TagKey.create(Registries.BIOME,
+                new ResourceLocation(MOD_ID, "spawns_sleepy_butterfly"));
+    */
     
     public static void registerEntities() {
         gardenSnailEntityType = Overwhelmed.entityTypes.register(new ResourceLocation(MOD_ID, "garden_snail"), () ->
@@ -83,18 +83,18 @@ public class EntityRegistry {
                 EntityType.Builder.of(ButterflyEntity::new, MobCategory.CREATURE)
                         .sized(0.6f, 0.4f)
                         .clientTrackingRange(8)
-                        .build("sleepy_butterfly"));
-*/
+                       .build("sleepy_butterfly"));
+        */
         
         EntityAttributeRegistry.register(gardenSnailEntityType, SnailEntity::createAttributes);
         EntityAttributeRegistry.register(garySnailEntityType, SnailEntity::createAttributes);
         EntityAttributeRegistry.register(limestoneSnailEntityType, SnailEntity::createAttributes);
         EntityAttributeRegistry.register(romanSnailEntityType, SnailEntity::createAttributes);
         /*
-        EntityAttributeRegistry.register(cherryButterflyEntityType, ButterflyEntity::createAttributes);
-        EntityAttributeRegistry.register(cabbageButterflyEntityType, ButterflyEntity::createAttributes);
-        EntityAttributeRegistry.register(morphoButterflyEntityType, ButterflyEntity::createAttributes);
-        EntityAttributeRegistry.register(sleepyButterflyEntityType, ButterflyEntity::createAttributes);
+            EntityAttributeRegistry.register(cherryButterflyEntityType, ButterflyEntity::createAttributes);
+            EntityAttributeRegistry.register(cabbageButterflyEntityType, ButterflyEntity::createAttributes);
+            EntityAttributeRegistry.register(morphoButterflyEntityType, ButterflyEntity::createAttributes);
+            EntityAttributeRegistry.register(sleepyButterflyEntityType, ButterflyEntity::createAttributes);
         */
     }
     

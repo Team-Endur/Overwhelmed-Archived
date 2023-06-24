@@ -19,12 +19,14 @@ public class Overwhelmed {
 	public static final String MOD_ID = "overwhelmed";
 
 	public static final Supplier<RegistrarManager> MANAGER = Suppliers.memoize(() -> RegistrarManager.get(MOD_ID));
+	public static Registrar<CreativeModeTab> creativeModeTabs;
 	public static Registrar<EntityType<?>> entityTypes;
 	public static Registrar<Item> items;
 	public static Registrar<Block> blocks;
 
 	public static void init() {
 
+		creativeModeTabs = MANAGER.get().get(Registries.CREATIVE_MODE_TAB);
 		entityTypes = MANAGER.get().get(Registries.ENTITY_TYPE);
 		items = MANAGER.get().get(Registries.ITEM);
 		blocks = MANAGER.get().get(Registries.BLOCK);
