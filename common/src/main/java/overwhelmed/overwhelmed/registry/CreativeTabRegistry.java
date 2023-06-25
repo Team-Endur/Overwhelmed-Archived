@@ -24,7 +24,7 @@ public class CreativeTabRegistry {
     );
 
     public static void registerCreativeTab(){
-                overwhelmedCreativeTabs.register();
+        overwhelmedCreativeTabs.register();
         /*
         overwhelmedTab = Overwhelmed.creativeModeTabs.register(
                 new ResourceLocation(Overwhelmed.MOD_ID, "overwhelmed_tab"),

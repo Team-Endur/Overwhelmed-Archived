@@ -28,18 +28,15 @@ public class ItemRegistry {
                 new Item(new Item.Properties()
                         .stacksTo(64)
                         .rarity(Rarity.COMMON)
-                        .arch$tab(overwhelmedTab)
-                        .arch$tab(CreativeModeTabs.INGREDIENTS)));
+                        .arch$tab(overwhelmedTab)));
         gooBallItem = Overwhelmed.items.register(new ResourceLocation(Overwhelmed.MOD_ID, "goo_ball"), () ->
                 new Item(new Item.Properties()
                         .stacksTo(64)
                         .rarity(Rarity.COMMON)
-                        .arch$tab(overwhelmedTab)
-                        .arch$tab(CreativeModeTabs.INGREDIENTS)));
+                        .arch$tab(overwhelmedTab)));
         snailSpawnEggItem = Overwhelmed.items.register(new ResourceLocation(Overwhelmed.MOD_ID, "snail_spawn_egg"), () ->
                 new SnailSpawnEggItem(new Item.Properties()
-                        .arch$tab(overwhelmedTab)
-                        .arch$tab(CreativeModeTabs.SPAWN_EGGS)));
+                        .arch$tab(overwhelmedTab)));
         /*
             goldBeadItem = Overwhelmed.items.register(new ResourceLocation(Overwhelmed.MOD_ID, "gold_bead"), () ->
                     new Item(new Item.Properties()
