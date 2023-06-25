@@ -1,8 +1,6 @@
 package overwhelmed.overwhelmed;
 
-import com.google.common.base.Suppliers;
-import dev.architectury.registry.registries.Registrar;
-import dev.architectury.registry.registries.RegistrarManager;
+import dev.architectury.registry.registries.DeferredRegister;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.*;
@@ -12,32 +10,21 @@ import overwhelmed.overwhelmed.registry.CreativeTabRegistry;
 import overwhelmed.overwhelmed.registry.EntityRegistry;
 import overwhelmed.overwhelmed.registry.ItemRegistry;
 
-import java.util.function.Supplier;
-
 
 public class Overwhelmed {
 	public static final String MOD_ID = "overwhelmed";
 
-	public static final Supplier<RegistrarManager> MANAGER = Suppliers.memoize(() -> RegistrarManager.get(MOD_ID));
-	/*
-	public static Registrar<CreativeModeTab> creativeModeTabs;
-	 */
-	public static Registrar<EntityType<?>> entityTypes;
-	public static Registrar<Item> items;
-	public static Registrar<Block> blocks;
+	public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS
+			= DeferredRegister.create(MOD_ID, Registries.CREATIVE_MODE_TAB);
+	public static final DeferredRegister<EntityType<?>> ENTITY_TYPES
+			= DeferredRegister.create(MOD_ID, Registries.ENTITY_TYPE);
+	public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(MOD_ID, Registries.ITEM);
+	public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(MOD_ID, Registries.BLOCK);
 
 	public static void init() {
-		/*
-		creativeModeTabs = MANAGER.get().get(Registries.CREATIVE_MODE_TAB);
-		 */
-		entityTypes = MANAGER.get().get(Registries.ENTITY_TYPE);
-		items = MANAGER.get().get(Registries.ITEM);
-		blocks = MANAGER.get().get(Registries.BLOCK);
-
 		CreativeTabRegistry.registerCreativeTab();
 		EntityRegistry.registerEntities();
 		ItemRegistry.registerItems();
 		BlockRegistry.registerBlocks();
-
 	}
 }

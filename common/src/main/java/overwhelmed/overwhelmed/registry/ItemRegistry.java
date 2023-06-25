@@ -2,7 +2,6 @@ package overwhelmed.overwhelmed.registry;
 
 import dev.architectury.registry.registries.RegistrySupplier;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
@@ -24,17 +23,17 @@ public class ItemRegistry {
         public static RegistrySupplier<BlockItem> testBlockItem;
     */
     public static void registerItems() {
-        snailShellItem = Overwhelmed.items.register(new ResourceLocation(Overwhelmed.MOD_ID, "snail_shell"), () ->
+        snailShellItem = Overwhelmed.ITEMS.register(new ResourceLocation(Overwhelmed.MOD_ID, "snail_shell"), () ->
                 new Item(new Item.Properties()
                         .stacksTo(64)
                         .rarity(Rarity.COMMON)
                         .arch$tab(overwhelmedTab)));
-        gooBallItem = Overwhelmed.items.register(new ResourceLocation(Overwhelmed.MOD_ID, "goo_ball"), () ->
+        gooBallItem = Overwhelmed.ITEMS.register(new ResourceLocation(Overwhelmed.MOD_ID, "goo_ball"), () ->
                 new Item(new Item.Properties()
                         .stacksTo(64)
                         .rarity(Rarity.COMMON)
                         .arch$tab(overwhelmedTab)));
-        snailSpawnEggItem = Overwhelmed.items.register(new ResourceLocation(Overwhelmed.MOD_ID, "snail_spawn_egg"), () ->
+        snailSpawnEggItem = Overwhelmed.ITEMS.register(new ResourceLocation(Overwhelmed.MOD_ID, "snail_spawn_egg"), () ->
                 new SnailSpawnEggItem(new Item.Properties()
                         .arch$tab(overwhelmedTab)));
         /*
@@ -61,5 +60,7 @@ public class ItemRegistry {
             testBlockItem = Overwhelmed.items.register(new ResourceLocation(Overwhelmed.MOD_ID, "test_block"),
                     () -> new BlockItem(BlockRegistry.testBlock.get(), new Item.Properties().arch$tab(overwhelmedTab)));
          */
+
+        Overwhelmed.ITEMS.register();
     }
 }

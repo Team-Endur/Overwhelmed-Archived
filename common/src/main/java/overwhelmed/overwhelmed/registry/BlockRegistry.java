@@ -15,5 +15,6 @@ public class BlockRegistry {
             testBlock = Overwhelmed.blocks.register(new ResourceLocation(Overwhelmed.MOD_ID, "test_block"), () ->
                     new Block(Block.Properties.of().mapColor(MapColor.STONE).strength(1.5f, 6.0f).requiresCorrectToolForDrops()));
          */
+        Overwhelmed.BLOCKS.register();
     }
 }

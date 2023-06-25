@@ -41,22 +41,22 @@ public class EntityRegistry {
                 new ResourceLocation(MOD_ID, "spawns_sleepy_butterfly"));
     */
     public static void registerEntities() {
-        gardenSnailEntityType = Overwhelmed.entityTypes.register(new ResourceLocation(MOD_ID, "garden_snail"), () ->
+        gardenSnailEntityType = Overwhelmed.ENTITY_TYPES.register(new ResourceLocation(MOD_ID, "garden_snail"), () ->
                 EntityType.Builder.of(SnailEntity::new, MobCategory.CREATURE)
                         .sized(0.6f, 0.4f)
                         .clientTrackingRange(8)
                         .build("garden_snail"));
-        garySnailEntityType = Overwhelmed.entityTypes.register(new ResourceLocation(MOD_ID, "gary_snail"), () ->
+        garySnailEntityType = Overwhelmed.ENTITY_TYPES.register(new ResourceLocation(MOD_ID, "gary_snail"), () ->
                 EntityType.Builder.of(SnailEntity::new, MobCategory.CREATURE)
                         .sized(0.6f, 0.4f)
                         .clientTrackingRange(8)
                         .build("gary_snail"));
-        limestoneSnailEntityType = Overwhelmed.entityTypes.register(new ResourceLocation(MOD_ID, "limestone_snail"), () ->
+        limestoneSnailEntityType = Overwhelmed.ENTITY_TYPES.register(new ResourceLocation(MOD_ID, "limestone_snail"), () ->
                 EntityType.Builder.of(SnailEntity::new, MobCategory.CREATURE)
                         .sized(0.6f, 0.4f)
                         .clientTrackingRange(8)
                         .build("limestone_snail"));
-        romanSnailEntityType = Overwhelmed.entityTypes.register(new ResourceLocation(MOD_ID, "roman_snail"), () ->
+        romanSnailEntityType = Overwhelmed.ENTITY_TYPES.register(new ResourceLocation(MOD_ID, "roman_snail"), () ->
                 EntityType.Builder.of(SnailEntity::new, MobCategory.CREATURE)
                         .sized(0.6f, 0.4f)
                         .clientTrackingRange(8)
@@ -93,5 +93,6 @@ public class EntityRegistry {
             EntityAttributeRegistry.register(morphoButterflyEntityType, ButterflyEntity::createAttributes);
             EntityAttributeRegistry.register(sleepyButterflyEntityType, ButterflyEntity::createAttributes);
         */
+        Overwhelmed.ENTITY_TYPES.register();
     }
 }
