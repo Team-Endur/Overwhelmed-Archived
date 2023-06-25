@@ -83,6 +83,9 @@ public class EntityRegistry {
                         .clientTrackingRange(8)
                        .build("sleepy_butterfly"));
         */
+
+        Overwhelmed.ENTITY_TYPES.register();
+
         EntityAttributeRegistry.register(gardenSnailEntityType, SnailEntity::createAttributes);
         EntityAttributeRegistry.register(garySnailEntityType, SnailEntity::createAttributes);
         EntityAttributeRegistry.register(limestoneSnailEntityType, SnailEntity::createAttributes);
@@ -93,6 +96,6 @@ public class EntityRegistry {
             EntityAttributeRegistry.register(morphoButterflyEntityType, ButterflyEntity::createAttributes);
             EntityAttributeRegistry.register(sleepyButterflyEntityType, ButterflyEntity::createAttributes);
         */
-        Overwhelmed.ENTITY_TYPES.register();
+
     }
 }
