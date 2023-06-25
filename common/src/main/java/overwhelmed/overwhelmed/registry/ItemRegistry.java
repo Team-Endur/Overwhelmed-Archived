@@ -23,7 +23,6 @@ public class ItemRegistry {
         public static RegistrySupplier<Item> pebbleItem;
         public static RegistrySupplier<BlockItem> testBlockItem;
     */
-
     public static void registerItems() {
         snailShellItem = Overwhelmed.items.register(new ResourceLocation(Overwhelmed.MOD_ID, "snail_shell"), () ->
                 new Item(new Item.Properties()
@@ -37,7 +36,6 @@ public class ItemRegistry {
                         .rarity(Rarity.COMMON)
                         .arch$tab(overwhelmedTab)
                         .arch$tab(CreativeModeTabs.INGREDIENTS)));
-
         snailSpawnEggItem = Overwhelmed.items.register(new ResourceLocation(Overwhelmed.MOD_ID, "snail_spawn_egg"), () ->
                 new SnailSpawnEggItem(new Item.Properties()
                         .arch$tab(overwhelmedTab)
@@ -67,6 +65,4 @@ public class ItemRegistry {
                     () -> new BlockItem(BlockRegistry.testBlock.get(), new Item.Properties().arch$tab(overwhelmedTab)));
          */
     }
-
-
 }

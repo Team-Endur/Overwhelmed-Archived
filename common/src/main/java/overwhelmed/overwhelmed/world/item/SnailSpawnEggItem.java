@@ -128,6 +128,4 @@ public class SnailSpawnEggItem extends Item {
         }
         throw new IncompatibleClassChangeError();
     }
-
-
 }
