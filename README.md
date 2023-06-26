@@ -36,21 +36,6 @@
 5. Copy both the Fabric API and Overwhelmed mod files into the mods folder.
 6. Launch Minecraft with the Fabric profile and enjoy the new features added by Overwhelmed!
 
-## Contributing
-
-Contributions to Overwhelmed are welcome! If you want to contribute to the project, please follow these steps:
-
-1. Fork the repository and clone it to your local machine.
-2. Make your desired changes or additions.
-3. Test your changes to ensure they work as expected.
-4. Create a new pull request, providing a detailed description of your changes and the rationale behind them.
-
-![Banner](https://github.com/Codetoil/Overwhelmed/blob/dev/0.2.x/common/src/main/resources/assets/overwhelmed/grid.png)
-
-## Issues and Feedback
-
-If you encounter any issues while using Overwhelmed or have any suggestions or feedback, please open an issue on the [GitHub Issues](https://github.com/codetoil/overwhelmed/issues) page. Your feedback is highly appreciated, and it helps improve the mod for everyone.
-
 ![Banner](https://github.com/Codetoil/Overwhelmed/blob/dev/0.2.x/common/src/main/resources/assets/overwhelmed/grid.png)
 
 ## License
@@ -68,7 +53,7 @@ Contributions to Overwhelmed are welcome! If you want to contribute to the proje
 
 ## Issues and Feedback
 
-If you encounter any issues while using Overwhelmed or have any suggestions or feedback, please open an issue on the [GitHub Issues](https://github.com/yourusername/overwhelmed/issues) page. Your feedback is highly appreciated, and it helps improve the mod for everyone.
+If you encounter any issues while using Overwhelmed or have any suggestions or feedback, please open an issue on the [GitHub Issues](https://github.com/codetoil/overwhelmed/issues) page. Your feedback is highly appreciated, and it helps improve the mod for everyone.
 
 ## Credits
 
