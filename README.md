@@ -1,4 +1,4 @@
-# Overwhelmed
+![Overwhelmed Picture](https://github.com/Codetoil/Overwhelmed/blob/dev/0.2.x/common/src/main/resources/assets/overwhelmed/minecraft_title.png)
 
 ![Minecraft Version](https://img.shields.io/badge/Minecraft%20Version-1.20.0-brightgreen.svg)
 ![Mod Version](https://img.shields.io/badge/Mod%20Version-0.2.0%20Alpha-blue.svg)
