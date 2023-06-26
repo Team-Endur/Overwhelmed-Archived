@@ -21,7 +21,7 @@
 
 ### Forge
 
-1. Make sure you have Minecraft Forge installed. If not, you can download it [here](https://files.minecraftforge.net/).
+1. Make sure you have Minecraft Forge installed. If not, you can download it [here]([https://files.minecraftforge.net/](https://files.minecraftforge.net/net/minecraftforge/forge/index_1.20.html)).
 2. Download the latest version of Overwhelmed (v0.2.0 Alpha) from the [CurseForge](https://www.curseforge.com/minecraft/mc-mods/overwhelmed) page.
 3. Locate your Minecraft mods folder. This is usually located in `%appdata%/.minecraft/mods` on Windows or `~/Library/Application Support/minecraft/mods` on macOS.
 4. Copy the downloaded mod file into the mods folder.
