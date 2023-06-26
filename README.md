@@ -49,7 +49,7 @@ Contributions to Overwhelmed are welcome! If you want to contribute to the proje
 
 ## Issues and Feedback
 
-If you encounter any issues while using Overwhelmed or have any suggestions or feedback, please open an issue on the [GitHub Issues](https://github.com/yourusername/overwhelmed/issues) page. Your feedback is highly appreciated, and it helps improve the mod for everyone.
+If you encounter any issues while using Overwhelmed or have any suggestions or feedback, please open an issue on the [GitHub Issues](https://github.com/codetoil/overwhelmed/issues) page. Your feedback is highly appreciated, and it helps improve the mod for everyone.
 
 ![Banner](https://github.com/Codetoil/Overwhelmed/blob/dev/0.2.x/common/src/main/resources/assets/overwhelmed/grid.png)
 
