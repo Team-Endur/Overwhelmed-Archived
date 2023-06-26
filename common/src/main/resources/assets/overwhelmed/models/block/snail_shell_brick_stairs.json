@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "overwhelmed:block/snail_shell_bricks",
+    "side": "overwhelmed:block/snail_shell_bricks",
+    "top": "overwhelmed:block/snail_shell_bricks"
+  }
+}

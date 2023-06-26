@@ -10,8 +10,13 @@
   "item.overwhelmed.ice_crystal_shard": "Ice Crystal Shard",
   "item.overwhelmed.ice_cube": "Ice Cube",
   "item.overwhelmed.pebble": "Pebble",
-
-  "block.overwhelmed.test_block": "Test Block",
+  "block.overwhelmed.sediment_block": "Sediment",
+  "block.overwhelmed.sediment_stairs": "Sediment Stairs",
+  "block.overwhelmed.sediment_slab": "Sediment Slab",
+  "block.overwhelmed.snail_shell_bricks": "Snail Shell Bricks",
+  "block.overwhelmed.snail_shell_brick_stairs": "Snail Shell Brick Stairs",
+  "block.overwhelmed.snail_shell_brick_slab": "Snail Shell Brick Slab",
+  "block.overwhelmed.snail_shell_brick_wall": "Snail Shell Brick Wall",
 
   "category.overwhelmed": "Overwhelmed"
 }

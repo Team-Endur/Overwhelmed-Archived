@@ -1,6 +1,9 @@
 {
-  "repalce": false,
+  "replace": false,
   "values": [
-    "overwhelmed:test_block"
+    "overwhelmed:snail_shell_bricks",
+    "overwhelmed:snail_shell_brick_slab",
+    "overwhelmed:snail_shell_brick_stairs",
+    "overwhelmed:snail_shell_brick_wall"
   ]
 }
