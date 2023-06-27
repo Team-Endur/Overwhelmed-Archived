@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "overwhelmed:snail_shell_bricks"
+  },
+  "result": "overwhelmed:chiseled_snail_shell_bricks",
+  "count": 1
+}

@@ -17,6 +17,8 @@
   "block.overwhelmed.snail_shell_brick_stairs": "Snail Shell Brick Stairs",
   "block.overwhelmed.snail_shell_brick_slab": "Snail Shell Brick Slab",
   "block.overwhelmed.snail_shell_brick_wall": "Snail Shell Brick Wall",
+  "block.overwhelmed.chiseled_snail_shell_bricks": "Chiseled Snail Shell Bricks",
+  "block.overwhelmed.goo_block": "Block of Goo",
 
   "category.overwhelmed": "Overwhelmed"
 }

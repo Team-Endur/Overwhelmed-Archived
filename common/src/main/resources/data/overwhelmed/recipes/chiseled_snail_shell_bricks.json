@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#",
+    "#"
+  ],
+  "key": {
+    "#": {
+      "item": "overwhelmed:snail_shell_brick_slab"
+    }
+  },
+  "result": {
+    "item": "overwhelmed:chiseled_snail_shell_bricks"
+  }
+}

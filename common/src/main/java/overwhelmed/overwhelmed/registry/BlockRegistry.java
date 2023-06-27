@@ -4,14 +4,12 @@ import dev.architectury.registry.registries.RegistrySupplier;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.SlabBlock;
-import net.minecraft.world.level.block.StairBlock;
-import net.minecraft.world.level.block.WallBlock;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.MapColor;
 import overwhelmed.overwhelmed.Overwhelmed;
+import overwhelmed.overwhelmed.common.block.GooBlock;
 
 public class BlockRegistry {
     /*
@@ -19,12 +17,12 @@ public class BlockRegistry {
      */
 
     public static RegistrySupplier<Block> sedimentBlock;
-    public static RegistrySupplier<Block> sedimentSlabBlock;
-    public static RegistrySupplier<Block> sedimentStairBlock;
     public static RegistrySupplier<Block> snailShellBricks;
     public static RegistrySupplier<Block> snailShellBrickWall;
     public static RegistrySupplier<Block> snailShellBrickSlab;
     public static RegistrySupplier<Block> snailShellBrickStairs;
+    public static RegistrySupplier<Block> chiseledSnailShellBricks;
+    public static RegistrySupplier<Block> gooBlock;
 
     public static void registerBlocks() {
 
@@ -35,8 +33,14 @@ public class BlockRegistry {
                 .requiresCorrectToolForDrops());
         snailShellBricks = registerBlock("snail_shell_bricks", BlockBehaviour.Properties.of()
                 .mapColor(MapColor.COLOR_BROWN)
-                .strength(1.0f, 1.0f)
+                .strength(3.0f, 12.0f)
                 .requiresCorrectToolForDrops());
+        chiseledSnailShellBricks = registerBlock("chiseled_snail_shell_bricks", BlockBehaviour.Properties.of()
+                .mapColor(MapColor.COLOR_BROWN)
+                .strength(3.0f, 12.0f)
+                .requiresCorrectToolForDrops());
+        gooBlock = Overwhelmed.BLOCKS.register(new ResourceLocation(Overwhelmed.MOD_ID, "goo_block"), () ->
+                new GooBlock(BlockBehaviour.Properties.of().mapColor(MapColor.GRASS).friction(0.8f).sound(SoundType.SLIME_BLOCK), 0.3f));
 
 
         //DO NOT MOVE THIS LINE
@@ -54,6 +58,8 @@ public class BlockRegistry {
         registerBlockItem("snail_shell_brick_stairs", snailShellBrickStairs);
         registerBlockItem("snail_shell_brick_slab", snailShellBrickSlab);
         registerBlockItem("snail_shell_brick_wall", snailShellBrickWall);
+        registerBlockItem("chiseled_snail_shell_bricks", chiseledSnailShellBricks);
+        registerBlockItem("goo_block", gooBlock);
 
 
     }
