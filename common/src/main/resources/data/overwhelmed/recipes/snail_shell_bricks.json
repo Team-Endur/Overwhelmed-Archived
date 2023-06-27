@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "DG",
+    "GD"
+  ],
+  "key": {
+    "D": {
+      "item": "overwhelmed:snail_shell"
+    },
+    "G": {
+      "item": "overwhelmed:sediment_block"
+    }
+  },
+  "result": {
+    "item": "overwhelmed:snail_shell_bricks",
+    "count": 4
+  }
+}
