@@ -24,7 +24,7 @@
 1. Make sure you have Minecraft Forge installed. If not, you can download it [here](https://files.minecraftforge.net/net/minecraftforge/forge/index_1.20.html).
 2. Download the latest version of Architectury Forge from either the [CurseForge](https://www.curseforge.com/minecraft/mc-mods/architectury-api) or [Modrinth](https://modrinth.com/mod/architectury-api) page.
 3. Download the latest version of GeckoLib Forge from either the [CurseForge](https://www.curseforge.com/minecraft/mc-mods/geckolib) or [Modrinth](https://modrinth.com/mod/geckolib/versions) page.
-4. Download the latest version of Overwhelmed (0.2.0) from the [CurseForge](https://www.curseforge.com/minecraft/mc-mods/overwhelmed) page.
+4. Download the latest version of Overwhelmed Forge from the [CurseForge](https://www.curseforge.com/minecraft/mc-mods/overwhelmed) page.
 5. Locate your Minecraft mods folder. This is usually located in `%APPDATA%/.minecraft/mods` on Windows or `~/Library/Application Support/minecraft/mods` on macOS.
 6. Copy the downloaded mod file into the mods folder.
 7. Launch Minecraft with the Forge profile and enjoy the new features added by Overwhelmed!
@@ -35,7 +35,7 @@
 2. Download the latest version of Fabric API from the [CurseForge](https://www.curseforge.com/minecraft/mc-mods/fabric-api) or [Modrinth](https://modrinth.com/mod/fabric-api) page.
 3. Download the latest version of Architectury Fabric from either the [CurseForge](https://www.curseforge.com/minecraft/mc-mods/architectury-api) or [Modrinth](https://modrinth.com/mod/architectury-api) page.
 4. Download the latest version of GeckoLib Fabric from either the [CurseForge](https://www.curseforge.com/minecraft/mc-mods/geckolib) or [Modrinth](https://modrinth.com/mod/geckolib/versions) page.
-5. Download the latest version of Overwhelmed (0.2.0) from the [CurseForge](https://www.curseforge.com/minecraft/mc-mods/overwhelmed) page.
+5. Download the latest version of Overwhelmed Fabric from the [CurseForge](https://www.curseforge.com/minecraft/mc-mods/overwhelmed) page.
 6. Locate your Minecraft mods folder. This is usually located in `%APPDATA%/.minecraft/mods` on Windows or `~/Library/Application Support/minecraft/mods` on macOS.
 7. Copy both the Fabric API and Overwhelmed mod files into the mods folder.
 8. Launch Minecraft with the Fabric profile and enjoy the new features added by Overwhelmed!
