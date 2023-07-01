@@ -24,7 +24,7 @@ public class Overwhelmed {
 	public static void init() {
 		CreativeTabRegistry.registerCreativeTab();
 		EntityRegistry.registerEntities();
-		ItemRegistry.registerItems();
 		BlockRegistry.registerBlocks();
+		ItemRegistry.registerItems();
 	}
 }

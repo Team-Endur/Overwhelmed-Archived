@@ -27,8 +27,8 @@ public class ItemRegistry {
         snailShellItem = registerItem("snail_shell", 64, Rarity.COMMON);
         gooBallItem = registerItem("goo_ball", 64, Rarity.COMMON);
 
-        snailSpawnEggItem = Overwhelmed.ITEMS.register(new ResourceLocation(Overwhelmed.MOD_ID, "snail_spawn_egg"), () ->
-                new SnailSpawnEggItem(new Item.Properties()
+        snailSpawnEggItem = Overwhelmed.ITEMS.register(new ResourceLocation(Overwhelmed.MOD_ID,
+                "snail_spawn_egg"), () -> new SnailSpawnEggItem(new Item.Properties()
                         .arch$tab(overwhelmedTab)));
         /*
         goldBeadItem = registerItem("gold_bead", 64, Rarity.UNCOMMON);

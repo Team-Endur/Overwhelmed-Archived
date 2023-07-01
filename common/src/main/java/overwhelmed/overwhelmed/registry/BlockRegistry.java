@@ -11,11 +11,9 @@ import net.minecraft.world.level.material.MapColor;
 import overwhelmed.overwhelmed.Overwhelmed;
 import overwhelmed.overwhelmed.common.block.GooBlock;
 
-public class BlockRegistry {
-    /*
-    public static RegistrySupplier<Block> testBlock;
-     */
+import java.util.function.Supplier;
 
+public class BlockRegistry {
     public static RegistrySupplier<Block> sedimentBlock;
     public static RegistrySupplier<Block> snailShellBricks;
     public static RegistrySupplier<Block> snailShellBrickWall;
@@ -40,20 +38,17 @@ public class BlockRegistry {
                 .strength(3.0f, 12.0f)
                 .requiresCorrectToolForDrops());
         gooBlock = Overwhelmed.BLOCKS.register(new ResourceLocation(Overwhelmed.MOD_ID, "goo_block"), () ->
-                new GooBlock(BlockBehaviour.Properties.of().mapColor(MapColor.GRASS).friction(0.8f).sound(SoundType.SLIME_BLOCK), 0.3f));
-
-
-        //DO NOT MOVE THIS LINE
-        Overwhelmed.BLOCKS.register();
+                new GooBlock(BlockBehaviour.Properties.of().mapColor(MapColor.GRASS).friction(0.8f)
+                        .sound(SoundType.SLIME_BLOCK), 0.3f));
 
         //These are sub blocks, these must stay down here, or it breaks.
         registerBlockItem("sediment_block", sedimentBlock);
         snailShellBrickWall = registerWallBlock("snail_shell_brick_wall",
-                BlockBehaviour.Properties.copy(snailShellBricks.get()));
+                () -> BlockBehaviour.Properties.copy(snailShellBricks.get()));
         snailShellBrickSlab = registerSlabBlock("snail_shell_brick_slab",
-                BlockBehaviour.Properties.copy(snailShellBricks.get()));
-        snailShellBrickStairs = registerStairBlock(snailShellBricks.get().defaultBlockState(), "snail_shell_brick_stairs",
-                BlockBehaviour.Properties.copy(snailShellBricks.get()));
+                () -> BlockBehaviour.Properties.copy(snailShellBricks.get()));
+        snailShellBrickStairs = registerStairBlock(() -> snailShellBricks.get().defaultBlockState(),
+                "snail_shell_brick_stairs", () -> BlockBehaviour.Properties.copy(snailShellBricks.get()));
         registerBlockItem("snail_shell_bricks", snailShellBricks);
         registerBlockItem("snail_shell_brick_stairs", snailShellBrickStairs);
         registerBlockItem("snail_shell_brick_slab", snailShellBrickSlab);
@@ -61,21 +56,24 @@ public class BlockRegistry {
         registerBlockItem("chiseled_snail_shell_bricks", chiseledSnailShellBricks);
         registerBlockItem("goo_block", gooBlock);
 
-
+        Overwhelmed.BLOCKS.register();
     }
-    private static RegistrySupplier<Block> registerWallBlock(String name, Block.Properties properties) {
+    private static RegistrySupplier<Block> registerWallBlock(String name,
+                                                             Supplier<Block.Properties> propertiesSupplier) {
         return Overwhelmed.BLOCKS.register(new ResourceLocation(Overwhelmed.MOD_ID, name), () ->
-                new WallBlock(properties));
-    }
-
-    private static RegistrySupplier<Block> registerStairBlock(BlockState blockState, String name, Block.Properties properties) {
-        return Overwhelmed.BLOCKS.register(new ResourceLocation(Overwhelmed.MOD_ID, name), () ->
-                new StairBlock(blockState, properties));
+                new WallBlock(propertiesSupplier.get()));
     }
 
-    private static RegistrySupplier<Block> registerSlabBlock(String name, Block.Properties properties) {
+    private static RegistrySupplier<Block> registerStairBlock(Supplier<BlockState> blockStateSupplier, String name,
+                                                              Supplier<Block.Properties> propertiesSupplier) {
         return Overwhelmed.BLOCKS.register(new ResourceLocation(Overwhelmed.MOD_ID, name), () ->
-                new SlabBlock(properties));
+                new StairBlock(blockStateSupplier.get(), propertiesSupplier.get()));
+    }
+
+    private static RegistrySupplier<Block> registerSlabBlock(String name,
+                                                             Supplier<Block.Properties> propertiesSupplier) {
+        return Overwhelmed.BLOCKS.register(new ResourceLocation(Overwhelmed.MOD_ID, name), () ->
+                new SlabBlock(propertiesSupplier.get()));
     }
     private static RegistrySupplier<Block> registerBlock(String name, Block.Properties properties) {
         return Overwhelmed.BLOCKS.register(new ResourceLocation(Overwhelmed.MOD_ID, name), () ->
