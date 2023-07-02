@@ -116,9 +116,7 @@ public class SnailEntity extends Animal implements GeoEntity {
 
     @Override
     public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
-        // Temporary until we get animations for the gary type.
-        if (!EntityRegistry.garySnailEntityType.get().equals(this.getType()))
-            controllers.add(DefaultAnimations.genericWalkIdleController(this));
+        controllers.add(DefaultAnimations.genericWalkIdleController(this));
     }
 
     @Override

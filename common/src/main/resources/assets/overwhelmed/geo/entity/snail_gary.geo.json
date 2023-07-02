@@ -28,7 +28,7 @@
 				},
 				{
 					"name": "left_antennae",
-					"pivot": [1, 1.5, -3.5],
+					"pivot": [1, 1.5, -3],
 					"rotation": [-45, 0, 0],
 					"cubes": [
 						{"origin": [1, 1, -8], "size": [0, 1, 5], "uv": [11, 6]}
@@ -36,7 +36,7 @@
 				},
 				{
 					"name": "right_antennae",
-					"pivot": [-1, 1.5, -3.5],
+					"pivot": [-1, 1.5, -3],
 					"rotation": [-45, 0, 0],
 					"cubes": [
 						{"origin": [-1, 1, -8], "size": [0, 1, 5], "uv": [11, 5]}
