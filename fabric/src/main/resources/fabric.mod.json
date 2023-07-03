@@ -12,7 +12,7 @@
   ],
   "contact": {},
 
-  "license": "GNU GPLv3",
+  "license": "GNU GPLv3 with Minecraft Exception",
   "icon": "icon.png",
 
   "environment": "*",
