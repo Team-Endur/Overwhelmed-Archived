@@ -18,10 +18,10 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "overwhelmed.overwhelmed.fabric.OverwhelmedFabric"
+      "endurteam.overwhelmed.fabric.OverwhelmedFabric"
     ],
     "client": [
-      "overwhelmed.overwhelmed.fabric.OverwhelmedFabricClient"
+      "endurteam.overwhelmed.fabric.OverwhelmedFabricClient"
     ]
   },
   "mixins": [
