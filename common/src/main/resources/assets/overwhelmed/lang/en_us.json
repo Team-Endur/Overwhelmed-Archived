@@ -1,8 +1,13 @@
 {
+  "entity.overwhelmed.sleepy_butterfly": "Butterfly",
+  "entity.overwhelmed.cabbage_butterfly": "Butterfly",
+  "entity.overwhelmed.morpho_butterfly": "Butterfly",
+  "entity.overwhelmed.cherry_butterfly": "Butterfly",
   "entity.overwhelmed.garden_snail": "Snail",
   "entity.overwhelmed.gary_snail": "Gary",
   "entity.overwhelmed.limestone_snail": "Snail",
   "entity.overwhelmed.roman_snail": "Snail",
+  "item.overwhelmed.butterfly_spawn_egg": "Butterfly Spawn Egg",
   "item.overwhelmed.snail_spawn_egg": "Snail Spawn Egg",
   "item.overwhelmed.snail_shell": "Snail Shell",
   "item.overwhelmed.goo_ball": "Gooball",
