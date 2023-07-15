@@ -33,7 +33,8 @@ public class BlockRegistry {
                 .mapColor(MapColor.COLOR_BROWN)
                 .strength(3.0f, 12.0f)
                 .requiresCorrectToolForDrops());
-        chiseledSnailShellBricks = registerGenericBlock("chiseled_snail_shell_bricks", BlockBehaviour.Properties.of()
+        chiseledSnailShellBricks = registerGenericBlock("chiseled_snail_shell_bricks",
+                BlockBehaviour.Properties.of()
                 .mapColor(MapColor.COLOR_BROWN)
                 .strength(3.0f, 12.0f)
                 .requiresCorrectToolForDrops());

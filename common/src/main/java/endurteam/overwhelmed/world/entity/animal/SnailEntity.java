@@ -2,11 +2,14 @@ package endurteam.overwhelmed.world.entity.animal;
 
 import endurteam.overwhelmed.registry.EntityRegistry;
 import endurteam.overwhelmed.registry.ItemRegistry;
+import endurteam.overwhelmed.registry.SoundEventRegistry;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -40,6 +43,16 @@ public class SnailEntity extends Animal implements GeoEntity {
         this.goalSelector.addGoal(1, new WaterAvoidingRandomStrollGoal(this, 1.0));
         this.goalSelector.addGoal(2, new LookAtPlayerGoal(this, Player.class, 6.0F, 0.02F, true));
         this.goalSelector.addGoal(3, new RandomLookAroundGoal(this));
+    }
+
+    @Override
+    protected SoundEvent getHurtSound(DamageSource damageSource) {
+        return SoundEventRegistry.snailHurt.get();
+    }
+
+    @Override
+    protected SoundEvent getDeathSound() {
+        return SoundEventRegistry.snailDeath.get();
     }
 
     public static AttributeSupplier.Builder createAttributes() {
@@ -111,8 +124,6 @@ public class SnailEntity extends Animal implements GeoEntity {
         }
         throw new IncompatibleClassChangeError();
     }
-
-
 
     @Override
     public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {

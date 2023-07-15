@@ -8,5 +8,6 @@ public class OverwhelmedFabric implements ModInitializer {
     public void onInitialize() {
         Overwhelmed.init();
         BiomeModifiers.snailSpawning();
+        BiomeModifiers.butterflySpawning();
     }
 }

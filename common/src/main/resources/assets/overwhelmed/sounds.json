@@ -1,14 +1,20 @@
 {
-  "my_sound": {
+  "entity.snail.hurt": {
+    "subtitle": "subtitles.entity.overwhelmed.snail.hurt",
     "sounds": [
-      "overwhelmed:snail_death_0",
-      "overwhelmed:snail_death_1",
-      "overwhelmed:snail_death_2",
-      "overwhelmed:snail_death_3",
-      "overwhelmed:snail_hurt_0",
-      "overwhelmed:snail_hurt_1",
-      "overwhelmed:snail_hurt_2",
-      "overwhelmed:snail_hurt_3"
+      "overwhelmed:mob/snail/hurt0",
+      "overwhelmed:mob/snail/hurt1",
+      "overwhelmed:mob/snail/hurt2",
+      "overwhelmed:mob/snail/hurt3"
+    ]
+  },
+  "entity.snail.death": {
+    "subtitle": "subtitles.entity.overwhelmed.snail.death",
+    "sounds": [
+      "overwhelmed:mob/snail/death0",
+      "overwhelmed:mob/snail/death1",
+      "overwhelmed:mob/snail/death2",
+      "overwhelmed:mob/snail/death3"
     ]
   }
 }

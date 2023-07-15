@@ -3,6 +3,7 @@ package endurteam.overwhelmed.registry;
 import dev.architectury.registry.registries.RegistrySupplier;
 import endurteam.overwhelmed.world.item.MultiSpawnEggItem;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
 import endurteam.overwhelmed.Overwhelmed;
@@ -29,7 +30,7 @@ public class ItemRegistry {
 
         snailSpawnEggItem = Overwhelmed.ITEMS.register(new ResourceLocation(Overwhelmed.MOD_ID,
                 "snail_spawn_egg"), () -> new MultiSpawnEggItem(new Item.Properties()
-                        .arch$tab(overwhelmedTab), (random) -> {
+                        .arch$tab(overwhelmedTab).arch$tab(CreativeModeTabs.SPAWN_EGGS), (random) -> {
                             switch (random.nextIntBetweenInclusive(1, 3)) {
                                 case 1 -> {
                                     return EntityRegistry.gardenSnailEntityType.get();
@@ -47,7 +48,7 @@ public class ItemRegistry {
         );
         butterflySpawnEggItem = Overwhelmed.ITEMS.register(new ResourceLocation(Overwhelmed.MOD_ID,
                         "butterfly_spawn_egg"), () -> new MultiSpawnEggItem(new Item.Properties()
-                        .arch$tab(overwhelmedTab), (random) -> {
+                        .arch$tab(overwhelmedTab).arch$tab(CreativeModeTabs.SPAWN_EGGS), (random) -> {
                     switch (random.nextIntBetweenInclusive(1, 4)) {
                         case 1 -> {
                             return EntityRegistry.sleepyButterflyEntityType.get();

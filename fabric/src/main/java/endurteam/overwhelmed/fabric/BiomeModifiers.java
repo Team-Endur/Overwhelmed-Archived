@@ -17,4 +17,20 @@ public class BiomeModifiers {
                 MobCategory.CREATURE, EntityRegistry.romanSnailEntityType.get(),
                 80, 3, 8);
     }
+
+    public static void butterflySpawning()
+    {
+        BiomeModifications.addSpawn(bsc -> bsc.hasTag(EntityRegistry.SPAWNS_SLEEPY_BUTTERFLIES),
+                MobCategory.CREATURE, EntityRegistry.sleepyButterflyEntityType.get(),
+                80, 2, 4);
+        BiomeModifications.addSpawn(bsc -> bsc.hasTag(EntityRegistry.SPAWNS_CABBAGE_BUTTERFLIES),
+                MobCategory.CREATURE, EntityRegistry.cabbageButterflyEntityType.get(),
+                80, 2, 4);
+        BiomeModifications.addSpawn(bsc -> bsc.hasTag(EntityRegistry.SPAWNS_MORPHO_BUTTERFLIES),
+                MobCategory.CREATURE, EntityRegistry.morphoButterflyEntityType.get(),
+                80, 2, 4);
+        BiomeModifications.addSpawn(bsc -> bsc.hasTag(EntityRegistry.SPAWNS_CHERRY_BUTTERFLIES),
+                MobCategory.CREATURE, EntityRegistry.cherryButterflyEntityType.get(),
+                80, 2, 4);
+    }
 }
