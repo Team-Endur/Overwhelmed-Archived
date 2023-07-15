@@ -25,21 +25,21 @@ public class BlockRegistry {
     public static void registerBlocks() {
 
         //Must register Blocks first
-        sedimentBlock = registerBlock("sediment_block", BlockBehaviour.Properties.of()
+        sedimentBlock = registerGenericBlock("sediment_block", BlockBehaviour.Properties.of()
                 .mapColor(MapColor.COLOR_BROWN)
                 .strength(0.5f, 0.5f)
                 .requiresCorrectToolForDrops());
-        snailShellBricks = registerBlock("snail_shell_bricks", BlockBehaviour.Properties.of()
+        snailShellBricks = registerGenericBlock("snail_shell_bricks", BlockBehaviour.Properties.of()
                 .mapColor(MapColor.COLOR_BROWN)
                 .strength(3.0f, 12.0f)
                 .requiresCorrectToolForDrops());
-        chiseledSnailShellBricks = registerBlock("chiseled_snail_shell_bricks", BlockBehaviour.Properties.of()
+        chiseledSnailShellBricks = registerGenericBlock("chiseled_snail_shell_bricks", BlockBehaviour.Properties.of()
                 .mapColor(MapColor.COLOR_BROWN)
                 .strength(3.0f, 12.0f)
                 .requiresCorrectToolForDrops());
         gooBlock = Overwhelmed.BLOCKS.register(new ResourceLocation(Overwhelmed.MOD_ID, "goo_block"), () ->
                 new GooBlock(BlockBehaviour.Properties.of().mapColor(MapColor.GRASS).friction(0.8f)
-                        .sound(SoundType.SLIME_BLOCK), 0.3f));
+                        .sound(SoundType.SLIME_BLOCK)));
 
         //These are sub blocks, these must stay down here, or it breaks.
         registerBlockItem("sediment_block", sedimentBlock);
@@ -75,7 +75,7 @@ public class BlockRegistry {
         return Overwhelmed.BLOCKS.register(new ResourceLocation(Overwhelmed.MOD_ID, name), () ->
                 new SlabBlock(propertiesSupplier.get()));
     }
-    private static RegistrySupplier<Block> registerBlock(String name, Block.Properties properties) {
+    private static RegistrySupplier<Block> registerGenericBlock(String name, Block.Properties properties) {
         return Overwhelmed.BLOCKS.register(new ResourceLocation(Overwhelmed.MOD_ID, name), () ->
                 new Block(properties));
     }

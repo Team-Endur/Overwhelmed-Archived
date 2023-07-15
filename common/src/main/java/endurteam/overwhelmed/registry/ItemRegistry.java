@@ -1,7 +1,7 @@
 package endurteam.overwhelmed.registry;
 
 import dev.architectury.registry.registries.RegistrySupplier;
-import endurteam.overwhelmed.world.item.SnailSpawnEggItem;
+import endurteam.overwhelmed.world.item.MultiSpawnEggItem;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
@@ -12,7 +12,8 @@ import static endurteam.overwhelmed.registry.CreativeTabRegistry.overwhelmedTab;
 
 public class ItemRegistry {
     public static RegistrySupplier<Item> snailShellItem;
-    public static RegistrySupplier<SnailSpawnEggItem> snailSpawnEggItem;
+    public static RegistrySupplier<MultiSpawnEggItem> snailSpawnEggItem;
+    public static RegistrySupplier<MultiSpawnEggItem> butterflySpawnEggItem;
     public static RegistrySupplier<Item> gooBallItem;
 
     /*
@@ -23,12 +24,48 @@ public class ItemRegistry {
      */
 
     public static void registerItems() {
-        snailShellItem = registerItem("snail_shell", 64, Rarity.COMMON);
-        gooBallItem = registerItem("goo_ball", 64, Rarity.COMMON);
+        snailShellItem = registerGenericItem("snail_shell", 64, Rarity.COMMON);
+        gooBallItem = registerGenericItem("goo_ball", 64, Rarity.COMMON);
 
         snailSpawnEggItem = Overwhelmed.ITEMS.register(new ResourceLocation(Overwhelmed.MOD_ID,
-                "snail_spawn_egg"), () -> new SnailSpawnEggItem(new Item.Properties()
-                        .arch$tab(overwhelmedTab)));
+                "snail_spawn_egg"), () -> new MultiSpawnEggItem(new Item.Properties()
+                        .arch$tab(overwhelmedTab), (random) -> {
+                            switch (random.nextIntBetweenInclusive(1, 3)) {
+                                case 1 -> {
+                                    return EntityRegistry.gardenSnailEntityType.get();
+                                }
+                                case 2 -> {
+                                    return EntityRegistry.limestoneSnailEntityType.get();
+                                }
+                                case 3 -> {
+                                    return EntityRegistry.romanSnailEntityType.get();
+                                }
+                            }
+                            throw new IncompatibleClassChangeError();
+                        }
+                )
+        );
+        butterflySpawnEggItem = Overwhelmed.ITEMS.register(new ResourceLocation(Overwhelmed.MOD_ID,
+                        "butterfly_spawn_egg"), () -> new MultiSpawnEggItem(new Item.Properties()
+                        .arch$tab(overwhelmedTab), (random) -> {
+                    switch (random.nextIntBetweenInclusive(1, 4)) {
+                        case 1 -> {
+                            return EntityRegistry.sleepyButterflyEntityType.get();
+                        }
+                        case 2 -> {
+                            return EntityRegistry.cabbageButterflyEntityType.get();
+                        }
+                        case 3 -> {
+                            return EntityRegistry.morphoButterflyEntityType.get();
+                        }
+                        case 4 -> {
+                            return EntityRegistry.cherryButterflyEntityType.get();
+                        }
+                    }
+                    throw new IncompatibleClassChangeError();
+                }
+                )
+        );
         /*
         goldBeadItem = registerItem("gold_bead", 64, Rarity.UNCOMMON);
         iceCrystalShardItem = registerItem("ice_crystal_shard", 64, Rarity.UNCOMMON);
@@ -39,7 +76,7 @@ public class ItemRegistry {
 
         Overwhelmed.ITEMS.register();
     }
-    private static RegistrySupplier<Item> registerItem(String name, int stackSize, Rarity rarity) {
+    private static RegistrySupplier<Item> registerGenericItem(String name, int stackSize, Rarity rarity) {
         return Overwhelmed.ITEMS.register(new ResourceLocation(Overwhelmed.MOD_ID, name), () ->
                 new Item(new Item.Properties()
                         .stacksTo(stackSize)
