@@ -112,6 +112,8 @@ public class SnailEntity extends Animal implements GeoEntity {
         throw new IncompatibleClassChangeError();
     }
 
+
+
     @Override
     public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
         controllers.add(DefaultAnimations.genericWalkIdleController(this));

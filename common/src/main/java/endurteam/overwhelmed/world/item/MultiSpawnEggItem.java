@@ -1,6 +1,8 @@
 package endurteam.overwhelmed.world.item;
 
+import java.util.Map;
 import java.util.Objects;
+import java.util.function.Function;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -30,11 +32,14 @@ import net.minecraft.world.phys.HitResult.Type;
 import org.jetbrains.annotations.NotNull;
 import endurteam.overwhelmed.registry.EntityRegistry;
 
-public class SnailSpawnEggItem extends Item {
+public class MultiSpawnEggItem extends Item {
     protected final RandomSource random;
+    protected final Function<RandomSource, EntityType<?>> entityTypeSupplier;
 
-    public SnailSpawnEggItem(Item.Properties properties) {
+    public MultiSpawnEggItem(Properties properties,
+                             Function<RandomSource, EntityType<?>> entityTypeSupplier) {
         super(properties);
+        this.entityTypeSupplier = entityTypeSupplier;
         this.random = RandomSource.create();
     }
 
@@ -50,7 +55,7 @@ public class SnailSpawnEggItem extends Item {
             if (blockState.is(Blocks.SPAWNER)) {
                 BlockEntity blockEntity = level.getBlockEntity(blockPos);
                 if (blockEntity instanceof SpawnerBlockEntity spawnerBlockEntity) {
-                    EntityType<?> entityType = this.getType();
+                    EntityType<?> entityType = this.entityTypeSupplier.apply(this.random);
                     spawnerBlockEntity.setEntityId(entityType, level.getRandom());
                     blockEntity.setChanged();
                     level.sendBlockUpdated(blockPos, blockState, blockState, 3);
@@ -67,7 +72,7 @@ public class SnailSpawnEggItem extends Item {
                 blockPos2 = blockPos.relative(direction);
             }
 
-            EntityType<?> entityType2 = this.getType();
+            EntityType<?> entityType2 = this.entityTypeSupplier.apply(this.random);
             if (entityType2.spawn((ServerLevel)level, itemStack, useOnContext.getPlayer(), blockPos2,
                     MobSpawnType.SPAWN_EGG, true, !Objects.equals(blockPos, blockPos2)
                             && direction == Direction.UP) != null) {
@@ -93,7 +98,7 @@ public class SnailSpawnEggItem extends Item {
                 return InteractionResultHolder.pass(itemStack);
             } else if (level.mayInteract(player, blockPos) && player.mayUseItemAt(blockPos,
                     blockHitResult.getDirection(), itemStack)) {
-                EntityType<?> entityType = this.getType();
+                EntityType<?> entityType = this.entityTypeSupplier.apply(random);
                 Entity entity = entityType.spawn((ServerLevel)level, itemStack, player, blockPos,
                         MobSpawnType.SPAWN_EGG, false, false);
                 if (entity == null) {
@@ -111,20 +116,5 @@ public class SnailSpawnEggItem extends Item {
                 return InteractionResultHolder.fail(itemStack);
             }
         }
-    }
-
-    private @NotNull EntityType<?> getType() {
-        switch (random.nextIntBetweenInclusive(1, 3)) {
-            case 1 -> {
-                return EntityRegistry.gardenSnailEntityType.get();
-            }
-            case 2 -> {
-                return EntityRegistry.limestoneSnailEntityType.get();
-            }
-            case 3 -> {
-                return EntityRegistry.romanSnailEntityType.get();
-            }
-        }
-        throw new IncompatibleClassChangeError();
     }
 }

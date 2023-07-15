@@ -12,11 +12,9 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.NotNull;
 
 public class GooBlock extends Block {
-    private final Float slowFactor;
 
-    public GooBlock(Properties properties, float slowFactor) {
+    public GooBlock(Properties properties) {
         super(properties);
-        this.slowFactor = slowFactor;
     }
 
     @Override
