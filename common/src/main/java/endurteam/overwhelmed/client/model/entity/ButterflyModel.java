@@ -9,13 +9,13 @@ import software.bernie.geckolib.model.GeoModel;
 
 public class ButterflyModel extends GeoModel<ButterflyEntity> {
     private static final ResourceLocation SLEEPY_TEXTURE =
-            new ResourceLocation(Overwhelmed.MOD_ID, "textures/entity/butterfly_sleepy.png");
+            new ResourceLocation(Overwhelmed.MOD_ID, "textures/entity/butterfly/butterfly_sleepy.png");
     private static final ResourceLocation CABBAGE_TEXTURE =
-            new ResourceLocation(Overwhelmed.MOD_ID, "textures/entity/butterfly_cabbage.png");
+            new ResourceLocation(Overwhelmed.MOD_ID, "textures/entity/butterfly/butterfly_cabbage.png");
     private static final ResourceLocation MORPHO_TEXTURE =
-            new ResourceLocation(Overwhelmed.MOD_ID, "textures/entity/butterfly_morpho.png");
+            new ResourceLocation(Overwhelmed.MOD_ID, "textures/entity/butterfly/butterfly_morpho.png");
     private static final ResourceLocation CHERRY_TEXTURE =
-            new ResourceLocation(Overwhelmed.MOD_ID, "textures/entity/butterfly_cherry.png");
+            new ResourceLocation(Overwhelmed.MOD_ID, "textures/entity/butterfly/butterfly_cherry.png");
     private static final ResourceLocation MODEL =
             new ResourceLocation(Overwhelmed.MOD_ID, "geo/entity/butterfly.geo.json");
     private static final ResourceLocation ANIMATION =

@@ -9,13 +9,13 @@ import software.bernie.geckolib.model.GeoModel;
 
 public class SnailModel extends GeoModel<SnailEntity> {
     private static final ResourceLocation GARDEN_TEXTURE =
-            new ResourceLocation(Overwhelmed.MOD_ID, "textures/entity/snail_garden.png");
+            new ResourceLocation(Overwhelmed.MOD_ID, "textures/entity/snail/snail_garden.png");
     private static final ResourceLocation GARY_TEXTURE =
-            new ResourceLocation(Overwhelmed.MOD_ID, "textures/entity/snail_gary.png");
+            new ResourceLocation(Overwhelmed.MOD_ID, "textures/entity/snail/snail_gary.png");
     private static final ResourceLocation LIMESTONE_TEXTURE =
-            new ResourceLocation(Overwhelmed.MOD_ID, "textures/entity/snail_limestone.png");
+            new ResourceLocation(Overwhelmed.MOD_ID, "textures/entity/snail/snail_limestone.png");
     private static final ResourceLocation ROMAN_TEXTURE =
-            new ResourceLocation(Overwhelmed.MOD_ID, "textures/entity/snail_roman.png");
+            new ResourceLocation(Overwhelmed.MOD_ID, "textures/entity/snail/snail_roman.png");
     private static final ResourceLocation GARDEN_MODEL =
             new ResourceLocation(Overwhelmed.MOD_ID, "geo/entity/snail_garden.geo.json");
     private static final ResourceLocation GARY_MODEL =
