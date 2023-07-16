@@ -44,7 +44,7 @@
 
 ## License
 
-Overwhelmed is licensed under the [GPL 3.0 License](https://www.gnu.org/licenses/gpl-3.0.en.html). You are free to use, modify, and distribute this mod in accordance with the terms of the license.
+Overwhelmed is licensed under the [GPL 3.0 License](https://www.gnu.org/licenses/gpl-3.0.en.html) with Minecraft Exception. You are free to use, modify, and distribute this mod in accordance with the terms of the license.
 
 ## Contributing
 
