@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    " 7 "
+  ],
+  "key": {
+    "0": {
+      "item": "overwhelmed:goo_ball"
+    },
+    "1": {
+      "item": "overwhelmed:goo_ball"
+    },
+    "2": {
+      "item": "overwhelmed:goo_ball"
+    },
+    "3": {
+      "item": "overwhelmed:goo_ball"
+    },
+    "4": {
+      "item": "overwhelmed:goo_ball"
+    },
+    "5": {
+      "item": "overwhelmed:goo_ball"
+    },
+    "7": {
+      "item": "minecraft:bowl"
+    }
+  },
+  "result": {
+    "item": "overwhelmed:goo_soup",
+    "count": 1
+  }
+}
