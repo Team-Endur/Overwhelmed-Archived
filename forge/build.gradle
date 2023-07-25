@@ -16,6 +16,8 @@ configurations {
 
 repositories {
     maven { url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' }
+    maven { url "https://maven.ryanliptak.com/" }
+    maven { url "https://maven.shedaniel.me/" }
 }
 
 dependencies {
@@ -27,6 +29,9 @@ dependencies {
     shadowCommon(project(path: ":common", configuration: "transformProductionForge")) { transitive = false }
 
     modImplementation "software.bernie.geckolib:geckolib-forge-${rootProject.minecraft_version}:${rootProject.geckolib_version}"
+    modRuntimeOnly("squeek.appleskin:appleskin-forge:${rootProject.appleskin_version_forge}") {
+        exclude module: 'modmenu'
+    }
 }
 
 processResources {

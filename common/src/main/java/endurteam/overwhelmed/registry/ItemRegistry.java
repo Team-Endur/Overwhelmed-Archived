@@ -1,8 +1,10 @@
 package endurteam.overwhelmed.registry;
 
 import dev.architectury.registry.registries.RegistrySupplier;
+import endurteam.overwhelmed.world.food.OverwhelmedFoods;
 import endurteam.overwhelmed.world.item.MultiSpawnEggItem;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.BowlFoodItem;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
@@ -28,7 +30,12 @@ public class ItemRegistry {
     public static void registerItems() {
         snailShellItem = registerGenericItem("snail_shell", 64, Rarity.COMMON);
         gooBallItem = registerGenericItem("goo_ball", 64, Rarity.COMMON);
-        gooSoupItem = registerGenericItem("goo_soup", 1, Rarity.COMMON);
+        gooSoupItem = Overwhelmed.ITEMS.register(new ResourceLocation(Overwhelmed.MOD_ID, "goo_soup"), () ->
+                new BowlFoodItem(new Item.Properties()
+                        .stacksTo(1)
+                        .rarity(Rarity.COMMON)
+                        .food(OverwhelmedFoods.GOO_SOUP)
+                        .arch$tab(overwhelmedTab)));;
 
         snailSpawnEggItem = Overwhelmed.ITEMS.register(new ResourceLocation(Overwhelmed.MOD_ID,
                 "snail_spawn_egg"), () -> new MultiSpawnEggItem(new Item.Properties()
