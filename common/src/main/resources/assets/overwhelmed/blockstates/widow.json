@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "overwhelmed:block/widow_bottom"
+    },
+    "half=upper": {
+      "model": "overwhelmed:block/widow_top"
+    }
+  }
+}

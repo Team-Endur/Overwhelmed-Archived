@@ -14,6 +14,7 @@ import endurteam.overwhelmed.common.block.GooBlock;
 import java.util.function.Supplier;
 
 public class BlockRegistry {
+    public static RegistrySupplier<Block> widow;
     public static RegistrySupplier<Block> sedimentBlock;
     public static RegistrySupplier<Block> snailShellBricks;
     public static RegistrySupplier<Block> snailShellBrickWall;
@@ -27,8 +28,7 @@ public class BlockRegistry {
         //Must register Blocks first
         sedimentBlock = registerGenericBlock("sediment_block", BlockBehaviour.Properties.of()
                 .mapColor(MapColor.COLOR_BROWN)
-                .strength(0.5f, 0.5f)
-                .requiresCorrectToolForDrops());
+                .strength(0.5f, 0.5f));
         snailShellBricks = registerGenericBlock("snail_shell_bricks", BlockBehaviour.Properties.of()
                 .mapColor(MapColor.COLOR_BROWN)
                 .strength(3.0f, 12.0f)
@@ -40,7 +40,8 @@ public class BlockRegistry {
                 .requiresCorrectToolForDrops());
         gooBlock = Overwhelmed.BLOCKS.register(new ResourceLocation(Overwhelmed.MOD_ID, "goo_block"), () ->
                 new GooBlock(BlockBehaviour.Properties.of().mapColor(MapColor.GRASS).friction(0.8f)
-                        .sound(SoundType.SLIME_BLOCK)));
+                        .sound(SoundType.HONEY_BLOCK)));
+
 
         //These are sub blocks, these must stay down here, or it breaks.
         registerBlockItem("sediment_block", sedimentBlock);
