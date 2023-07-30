@@ -11,7 +11,6 @@ import net.minecraft.world.level.material.MapColor;
 import endurteam.overwhelmed.Overwhelmed;
 import endurteam.overwhelmed.common.block.GooBlock;
 
-import javax.xml.namespace.QName;
 import java.util.function.Supplier;
 
 public class BlockRegistry {
