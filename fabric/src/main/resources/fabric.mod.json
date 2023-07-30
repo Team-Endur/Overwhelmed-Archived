@@ -2,7 +2,6 @@
   "schemaVersion": 1,
   "id": "overwhelmed",
   "version": "${version}",
-
   "name": "Overwhelmed",
   "description": "Overhauling and adding new features to the Overworld's surface!",
   "authors": [
@@ -10,11 +9,11 @@
     "Codetoil",
     "ABlackPikatchu"
   ],
-  "contact": {},
-
+  "contact": {
+    "sources": "https://github.com/Codetoil/Overwhelmed"
+  },
   "license": "GNU GPLv3 with Minecraft Exception",
   "icon": "icon.png",
-
   "environment": "*",
   "entrypoints": {
     "main": [
@@ -29,7 +28,8 @@
     "overwhelmed-common.mixins.json"
   ],
   "depends": {
-    "fabricloader": ">=0.14.21",
+    "fabricloader": "*",
+    "fabric": "*",
     "minecraft": ">=1.20",
     "architectury": ">=9.0.8",
     "geckolib": ">=4.2"

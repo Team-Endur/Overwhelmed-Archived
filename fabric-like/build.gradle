@@ -2,17 +2,31 @@ architectury {
     common(rootProject.enabled_platforms.split(","))
 }
 
+repositories {
+    maven { url "https://maven.quiltmc.org/repository/release/" }
+    maven { url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' }
+    maven { url 'https://maven.terraformersmc.com/releases/'}
+    maven { url "https://maven.ryanliptak.com/" }
+    maven { url "https://maven.shedaniel.me/" }
+}
+
 loom {
     accessWidenerPath = project(":common").loom.accessWidenerPath
+}
+
+configurations {
+    common
+    compileClasspath.extendsFrom common
+    runtimeClasspath.extendsFrom common
 }
 
 dependencies {
     modImplementation "net.fabricmc:fabric-loader:${rootProject.fabric_loader_version}"
     modApi "net.fabricmc.fabric-api:fabric-api:${rootProject.fabric_api_version}"
     // Remove the next line if you don't want to depend on the API
-    modApi "@ARCHITECTURY_GROUP@:architectury-fabric:${rootProject.architectury_version}"
+    modApi "dev.architectury:architectury-fabric:${rootProject.architectury_version}"
 
-    compileClasspath(project(path: ":common", configuration: "namedElements")) { transitive false }
+    common(project(path: ":common", configuration: "namedElements")) { transitive false }
 
     modImplementation "software.bernie.geckolib:geckolib-fabric-${rootProject.minecraft_version}:${rootProject.geckolib_version}"
     modRuntimeOnly "com.terraformersmc:modmenu:${rootProject.mod_menu_version}"

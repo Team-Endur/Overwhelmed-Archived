@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "quilt_loader": {
+    "group": "${group}",
+    "id": "overwhelmed",
+    "version": "${version}",
+    "entrypoints": {
+      "init": [
+        "endurteam.overwhelmed.quilt.OverwhelmedQuilt"
+      ],
+      "client_init": [
+        "endurteam.overwhelmed.quilt.OverwhelmedQuiltClient"
+      ]
+    },
+    "depends": [
+      {
+        "id": "quilt_loader",
+        "version": "*"
+      },
+      {
+        "id": "quilt_base",
+        "version": "*"
+      },
+      {
+        "id": "minecraft",
+        "version": ">=1.20"
+      },
+      {
+        "id": "architectury",
+        "version": ">=9.0.8"
+      },
+      {
+        "id": "geckolib",
+        "version": ">=4.2"
+      }
+    ],
+    "intermediate_mappings": "net.fabricmc:intermediary",
+    "metadata": {
+      "name": "Overwhelmed",
+      "description": "Overhauling and adding new features to the Overworld's surface!",
+      "contributors": {
+        "CheeseNull Butter": "Owner",
+        "Codetoil": "Author",
+        "ABlackPikatchu": "Former Author"
+      },
+      "contact": {
+        "sources": "https://github.com/Codetoil/Overwhelmed"
+      },
+      "license": {
+        "name": "GNU GPLv3 with Minecraft Exception",
+        "id": "GPL-3.0-or-later-WITH-MCLINK",
+        "url": "https://gist.github.com/triphora/588f353802a3b0ea649e4fc85f75e583",
+        "description": "Adds an exception to the GNU GPLv3 allowing the use of Minecraft"
+      },
+      "icon": "icon.png"
+    }
+  },
+  "mixins": [
+    "overwhelmed.mixins.json",
+    "overwhelmed-common.mixins.json"
+  ],
+  "minecraft": {
+    "environment": "*"
+  }
+}

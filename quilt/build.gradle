@@ -29,6 +29,7 @@ configurations {
 
 dependencies {
     modImplementation "org.quiltmc:quilt-loader:${rootProject.quilt_loader_version}"
+    modImplementation "org.quiltmc:quilt-config:${rootProject.quilt_config_version}"
     modApi "org.quiltmc.quilted-fabric-api:quilted-fabric-api:${rootProject.quilt_fabric_api_version}"
     // Remove the next few lines if you don't want to depend on the API
     modApi("dev.architectury:architectury-fabric:${rootProject.architectury_version}") {
@@ -40,12 +41,24 @@ dependencies {
     common(project(path: ":common", configuration: "namedElements")) { transitive false }
     shadowCommon(project(path: ":common", configuration: "transformProductionQuilt")) { transitive false }
     common(project(path: ":fabric-like", configuration: "namedElements")) { transitive false }
-    shadowCommon(project(path: "fabric-like", configuration: "transformProductionQuilt")) { transitive false }
+    shadowCommon(project(path: ":fabric-like", configuration: "transformProductionQuilt")) { transitive false }
 
-    modImplementation "software.bernie.geckolib:geckolib-fabric-${rootProject.minecraft_version}:${rootProject.geckolib_version}"
-    modRuntimeOnly "com.terraformersmc:modmenu:${rootProject.mod_menu_version}"
+    modImplementation("com.github.glitchfiend:TerraBlender-fabric:${rootProject.minecraft_version}-${rootProject.terrablender_version}") {
+        exclude group: "net.fabricmc"
+        exclude group: "net.fabricmc.fabric-api"
+    }
+    modImplementation("software.bernie.geckolib:geckolib-fabric-${rootProject.minecraft_version}:${rootProject.geckolib_version}") {
+        exclude group: "net.fabricmc"
+        exclude group: "net.fabricmc.fabric-api"
+    }
+    modRuntimeOnly("com.terraformersmc:modmenu:${rootProject.mod_menu_version}") {
+        exclude group: "net.fabricmc"
+        exclude group: "net.fabricmc.fabric-api"
+    }
     modRuntimeOnly("squeek.appleskin:appleskin-fabric:${rootProject.appleskin_version_fabric}") {
-        exclude module: 'modmenu'
+        exclude group: "net.fabricmc"
+        exclude group: "net.fabricmc.fabric-api"
+        exclude module: "modmenu"
     }
 }
 
@@ -63,18 +76,18 @@ shadowJar {
     exclude "architectury.common.json"
 
     configurations = [project.configurations.shadowCommon]
-    classifier "dev-shadow"
+    archiveClassifier.set("dev-shadow")
 }
 
 remapJar {
     injectAccessWidener = true
-    input.set shadowJar.archiveFile
+    inputFile.set shadowJar.archiveFile
     dependsOn shadowJar
-    classifier null
+    archiveClassifier.set(null)
 }
 
 jar {
-    classifier "dev"
+    archiveClassifier.set("dev")
 }
 
 sourcesJar {
