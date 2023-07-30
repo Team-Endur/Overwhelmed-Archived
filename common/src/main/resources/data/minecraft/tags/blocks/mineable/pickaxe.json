@@ -1,7 +1,6 @@
 {
   "replace": false,
   "values": [
-    "overwhelmed:sediment_block",
     "overwhelmed:snail_shell_bricks",
     "overwhelmed:snail_shell_brick_slab",
     "overwhelmed:snail_shell_brick_stairs",

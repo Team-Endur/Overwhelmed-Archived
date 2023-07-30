@@ -14,6 +14,8 @@ import endurteam.overwhelmed.common.block.GooBlock;
 import java.util.function.Supplier;
 
 public class BlockRegistry {
+    public static RegistrySupplier<Block> widowBottom;
+    public static RegistrySupplier<Block> widowTop;
     public static RegistrySupplier<Block> sedimentBlock;
     public static RegistrySupplier<Block> snailShellBricks;
     public static RegistrySupplier<Block> snailShellBrickWall;
@@ -27,8 +29,7 @@ public class BlockRegistry {
         //Must register Blocks first
         sedimentBlock = registerGenericBlock("sediment_block", BlockBehaviour.Properties.of()
                 .mapColor(MapColor.COLOR_BROWN)
-                .strength(0.5f, 0.5f)
-                .requiresCorrectToolForDrops());
+                .strength(0.5f, 0.5f));
         snailShellBricks = registerGenericBlock("snail_shell_bricks", BlockBehaviour.Properties.of()
                 .mapColor(MapColor.COLOR_BROWN)
                 .strength(3.0f, 12.0f)
@@ -40,7 +41,13 @@ public class BlockRegistry {
                 .requiresCorrectToolForDrops());
         gooBlock = Overwhelmed.BLOCKS.register(new ResourceLocation(Overwhelmed.MOD_ID, "goo_block"), () ->
                 new GooBlock(BlockBehaviour.Properties.of().mapColor(MapColor.GRASS).friction(0.8f)
-                        .sound(SoundType.SLIME_BLOCK)));
+                        .sound(SoundType.HONEY_BLOCK)));
+        widowBottom = registerTallFlowerBlock("widow", (Supplier<Block.Properties>) BlockBehaviour.Properties.of()
+                        .mapColor(MapColor.COLOR_GREEN)
+                        .strength(0f, 0f));
+        widowTop = registerTallFlowerBlock("widow", (Supplier<Block.Properties>) BlockBehaviour.Properties.of()
+                .mapColor(MapColor.COLOR_GREEN)
+                .strength(0f, 0f));
 
         //These are sub blocks, these must stay down here, or it breaks.
         registerBlockItem("sediment_block", sedimentBlock);
@@ -56,6 +63,8 @@ public class BlockRegistry {
         registerBlockItem("snail_shell_brick_wall", snailShellBrickWall);
         registerBlockItem("chiseled_snail_shell_bricks", chiseledSnailShellBricks);
         registerBlockItem("goo_block", gooBlock);
+        registerBlockItem("widow", widowBottom);
+        registerBlockItem("widow", widowBottom);
 
         Overwhelmed.BLOCKS.register();
     }
@@ -84,5 +93,11 @@ public class BlockRegistry {
     private static void registerBlockItem(String name, RegistrySupplier<Block> blockSupplier) {
         Overwhelmed.ITEMS.register(new ResourceLocation(Overwhelmed.MOD_ID, name), () ->
                 new BlockItem(blockSupplier.get(), new Item.Properties().arch$tab(CreativeTabRegistry.overwhelmedTab)));
+    }
+
+    private static RegistrySupplier<Block> registerTallFlowerBlock(String name,
+                                                             Supplier<Block.Properties> propertiesSupplier) {
+        return Overwhelmed.BLOCKS.register(new ResourceLocation(Overwhelmed.MOD_ID, name), () ->
+                new TallFlowerBlock(propertiesSupplier.get()));
     }
 }
