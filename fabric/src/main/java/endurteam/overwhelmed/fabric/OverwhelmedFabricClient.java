@@ -1,7 +1,7 @@
 package endurteam.overwhelmed.fabric;
 
 import endurteam.overwhelmed.client.OverwhelmedClient;
-import endurteam.overwhelmed.registry.BlockRegistry;
+import endurteam.overwhelmed.world.level.block.OverwhelmedBlocks;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -13,6 +13,6 @@ public class OverwhelmedFabricClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         OverwhelmedClient.initClient();
-        BlockRenderLayerMap.INSTANCE.putBlock(BlockRegistry.widow.get(), RenderType.cutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(OverwhelmedBlocks.widow.get(), RenderType.cutout());
     }
 }

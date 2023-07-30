@@ -1,6 +1,7 @@
-package endurteam.overwhelmed.registry;
+package endurteam.overwhelmed.world.level.block;
 
 import dev.architectury.registry.registries.RegistrySupplier;
+import endurteam.overwhelmed.world.item.OverwhelmedCreativeTabs;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.DoubleHighBlockItem;
@@ -15,7 +16,7 @@ import net.minecraft.world.level.material.PushReaction;
 
 import java.util.function.Supplier;
 
-public class BlockRegistry {
+public class OverwhelmedBlocks {
     public static RegistrySupplier<Block> widow;
     public static RegistrySupplier<Block> sedimentBlock;
     public static RegistrySupplier<Block> snailShellBricks;
@@ -67,7 +68,7 @@ public class BlockRegistry {
         registerBlockItem("chiseled_snail_shell_bricks", chiseledSnailShellBricks);
         registerBlockItem("goo_block", gooBlock);
         registerCustomBlockItem("widow", () -> new DoubleHighBlockItem(widow.get(), new Item.Properties()
-                .arch$tab(CreativeTabRegistry.overwhelmedTab)));
+                .arch$tab(OverwhelmedCreativeTabs.overwhelmedTab)));
 
         Overwhelmed.BLOCKS.register();
     }
@@ -95,7 +96,7 @@ public class BlockRegistry {
 
     private static void registerBlockItem(String name, RegistrySupplier<Block> blockSupplier) {
         Overwhelmed.ITEMS.register(new ResourceLocation(Overwhelmed.MOD_ID, name), () ->
-                new BlockItem(blockSupplier.get(), new Item.Properties().arch$tab(CreativeTabRegistry.overwhelmedTab)));
+                new BlockItem(blockSupplier.get(), new Item.Properties().arch$tab(OverwhelmedCreativeTabs.overwhelmedTab)));
     }
 
     private static void registerCustomBlockItem(String name, Supplier<BlockItem> blockItemSupplier) {

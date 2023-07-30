@@ -1,4 +1,4 @@
-package endurteam.overwhelmed.registry;
+package endurteam.overwhelmed.world.entity;
 
 import dev.architectury.registry.level.entity.EntityAttributeRegistry;
 import dev.architectury.registry.registries.RegistrySupplier;
@@ -14,7 +14,7 @@ import endurteam.overwhelmed.world.entity.animal.SnailEntity;
 
 import static endurteam.overwhelmed.Overwhelmed.MOD_ID;
 
-public class EntityRegistry {
+public class OverwhelmedEntityTypes {
     public static RegistrySupplier<EntityType<SnailEntity>> gardenSnailEntityType;
     public static RegistrySupplier<EntityType<SnailEntity>> garySnailEntityType;
     public static RegistrySupplier<EntityType<SnailEntity>> limestoneSnailEntityType;

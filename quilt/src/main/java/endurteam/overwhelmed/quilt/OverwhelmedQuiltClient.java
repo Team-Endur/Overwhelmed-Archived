@@ -1,7 +1,7 @@
 package endurteam.overwhelmed.quilt;
 
 import endurteam.overwhelmed.client.OverwhelmedClient;
-import endurteam.overwhelmed.registry.BlockRegistry;
+import endurteam.overwhelmed.world.level.block.OverwhelmedBlocks;
 import org.quiltmc.qsl.block.extensions.api.client.BlockRenderLayerMap;
 import net.minecraft.client.renderer.RenderType;
 import org.quiltmc.loader.api.ModContainer;
@@ -11,6 +11,6 @@ public class OverwhelmedQuiltClient implements ClientModInitializer {
     @Override
     public void onInitializeClient(ModContainer mod) {
         OverwhelmedClient.initClient();
-        BlockRenderLayerMap.put(RenderType.cutout(), BlockRegistry.widow.get());
+        BlockRenderLayerMap.put(RenderType.cutout(), OverwhelmedBlocks.widow.get());
     }
 }

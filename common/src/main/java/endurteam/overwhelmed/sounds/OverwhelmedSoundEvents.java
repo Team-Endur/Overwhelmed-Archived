@@ -1,11 +1,11 @@
-package endurteam.overwhelmed.registry;
+package endurteam.overwhelmed.sounds;
 
 import dev.architectury.registry.registries.RegistrySupplier;
 import endurteam.overwhelmed.Overwhelmed;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
 
-public class SoundEventRegistry {
+public class OverwhelmedSoundEvents {
     public static RegistrySupplier<SoundEvent> snailHurt;
     public static RegistrySupplier<SoundEvent> snailDeath;
 

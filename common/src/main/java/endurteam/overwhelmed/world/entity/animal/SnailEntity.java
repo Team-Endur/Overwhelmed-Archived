@@ -1,8 +1,8 @@
 package endurteam.overwhelmed.world.entity.animal;
 
-import endurteam.overwhelmed.registry.EntityRegistry;
-import endurteam.overwhelmed.registry.ItemRegistry;
-import endurteam.overwhelmed.registry.SoundEventRegistry;
+import endurteam.overwhelmed.world.entity.OverwhelmedEntityTypes;
+import endurteam.overwhelmed.world.item.OverwhelmedItems;
+import endurteam.overwhelmed.sounds.OverwhelmedSoundEvents;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
@@ -46,12 +46,12 @@ public class SnailEntity extends Animal implements GeoEntity {
 
     @Override
     protected SoundEvent getHurtSound(DamageSource damageSource) {
-        return SoundEventRegistry.snailHurt.get();
+        return OverwhelmedSoundEvents.snailHurt.get();
     }
 
     @Override
     protected SoundEvent getDeathSound() {
-        return SoundEventRegistry.snailDeath.get();
+        return OverwhelmedSoundEvents.snailDeath.get();
     }
 
     public static AttributeSupplier.Builder createAttributes() {
@@ -87,7 +87,7 @@ public class SnailEntity extends Animal implements GeoEntity {
 
             // Drop a goo ball
             if (!level.isClientSide) {
-                level.addFreshEntity(new ItemEntity(level, getX(), getY(), getZ(), new ItemStack(ItemRegistry.gooBallItem.get())));
+                level.addFreshEntity(new ItemEntity(level, getX(), getY(), getZ(), new ItemStack(OverwhelmedItems.gooBallItem.get())));
             }
 
             return InteractionResult.SUCCESS;
@@ -98,10 +98,10 @@ public class SnailEntity extends Animal implements GeoEntity {
 
     public void setCustomName(@Nullable Component arg) {
         super.setCustomName(arg);
-        if (!this.getType().equals(EntityRegistry.garySnailEntityType.get()) && arg != null
+        if (!this.getType().equals(OverwhelmedEntityTypes.garySnailEntityType.get()) && arg != null
                 && arg.getString().equals("Gary")) {
             CompoundTag tag = new CompoundTag();
-            SnailEntity newEntity = new SnailEntity(EntityRegistry.garySnailEntityType.get(), this.level());
+            SnailEntity newEntity = new SnailEntity(OverwhelmedEntityTypes.garySnailEntityType.get(), this.level());
             this.save(tag);
             newEntity.load(tag);
             this.remove(RemovalReason.DISCARDED);
@@ -112,13 +112,13 @@ public class SnailEntity extends Animal implements GeoEntity {
     @Override
     protected float getStandingEyeHeight(Pose pose, EntityDimensions entityDimensions) {
         EntityType<?> type = this.getType();
-        if (EntityRegistry.gardenSnailEntityType.get().equals(type)) {
+        if (OverwhelmedEntityTypes.gardenSnailEntityType.get().equals(type)) {
             return 0.2f;
-        } else if (EntityRegistry.garySnailEntityType.get().equals(type)) {
+        } else if (OverwhelmedEntityTypes.garySnailEntityType.get().equals(type)) {
             return 0.32f;
-        } else if (EntityRegistry.limestoneSnailEntityType.get().equals(type)) {
+        } else if (OverwhelmedEntityTypes.limestoneSnailEntityType.get().equals(type)) {
             return 0.15f;
-        } else if (EntityRegistry.romanSnailEntityType.get().equals(type)) {
+        } else if (OverwhelmedEntityTypes.romanSnailEntityType.get().equals(type)) {
             return 0.2f;
         }
         throw new IncompatibleClassChangeError();

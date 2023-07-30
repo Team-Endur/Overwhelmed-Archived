@@ -1,18 +1,17 @@
-package endurteam.overwhelmed.registry;
+package endurteam.overwhelmed.world.item;
 
 import dev.architectury.registry.registries.RegistrySupplier;
+import endurteam.overwhelmed.world.entity.OverwhelmedEntityTypes;
 import endurteam.overwhelmed.world.food.OverwhelmedFoods;
-import endurteam.overwhelmed.world.item.MultiSpawnEggItem;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BowlFoodItem;
-import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
 import endurteam.overwhelmed.Overwhelmed;
 
-import static endurteam.overwhelmed.registry.CreativeTabRegistry.overwhelmedTab;
+import static endurteam.overwhelmed.world.item.OverwhelmedCreativeTabs.overwhelmedTab;
 
-public class ItemRegistry {
+public class OverwhelmedItems {
     public static RegistrySupplier<Item> snailShellItem;
     public static RegistrySupplier<MultiSpawnEggItem> snailSpawnEggItem;
     public static RegistrySupplier<MultiSpawnEggItem> butterflySpawnEggItem;
@@ -41,13 +40,13 @@ public class ItemRegistry {
                         .arch$tab(overwhelmedTab), (random) -> {
                             switch (random.nextIntBetweenInclusive(1, 3)) {
                                 case 1 -> {
-                                    return EntityRegistry.gardenSnailEntityType.get();
+                                    return OverwhelmedEntityTypes.gardenSnailEntityType.get();
                                 }
                                 case 2 -> {
-                                    return EntityRegistry.limestoneSnailEntityType.get();
+                                    return OverwhelmedEntityTypes.limestoneSnailEntityType.get();
                                 }
                                 case 3 -> {
-                                    return EntityRegistry.romanSnailEntityType.get();
+                                    return OverwhelmedEntityTypes.romanSnailEntityType.get();
                                 }
                             }
                             throw new IncompatibleClassChangeError();
@@ -59,16 +58,16 @@ public class ItemRegistry {
                         .arch$tab(overwhelmedTab), (random) -> {
                     switch (random.nextIntBetweenInclusive(1, 4)) {
                         case 1 -> {
-                            return EntityRegistry.sleepyButterflyEntityType.get();
+                            return OverwhelmedEntityTypes.sleepyButterflyEntityType.get();
                         }
                         case 2 -> {
-                            return EntityRegistry.cabbageButterflyEntityType.get();
+                            return OverwhelmedEntityTypes.cabbageButterflyEntityType.get();
                         }
                         case 3 -> {
-                            return EntityRegistry.morphoButterflyEntityType.get();
+                            return OverwhelmedEntityTypes.morphoButterflyEntityType.get();
                         }
                         case 4 -> {
-                            return EntityRegistry.cherryButterflyEntityType.get();
+                            return OverwhelmedEntityTypes.cherryButterflyEntityType.get();
                         }
                     }
                     throw new IncompatibleClassChangeError();

@@ -1,6 +1,6 @@
 package endurteam.overwhelmed.mixin;
 
-import endurteam.overwhelmed.registry.BlockRegistry;
+import endurteam.overwhelmed.world.level.block.OverwhelmedBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.entity.Entity;
@@ -29,7 +29,7 @@ public abstract class LivingEntityMixin extends Entity {
         Direction result = Direction.fromYRot(this.getYRot());
         BlockPos blockPos = this.blockPosition().relative(result);
         BlockState state = this.level().getBlockState(blockPos);
-        if (state.is(BlockRegistry.gooBlock.get()))
+        if (state.is(OverwhelmedBlocks.gooBlock.get()))
         {
             this.lastClimbablePos = Optional.of(blockPos);
             cir.setReturnValue(true);

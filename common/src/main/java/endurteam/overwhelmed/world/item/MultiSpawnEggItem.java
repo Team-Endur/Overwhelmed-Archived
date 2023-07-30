@@ -1,6 +1,5 @@
 package endurteam.overwhelmed.world.item;
 
-import java.util.Map;
 import java.util.Objects;
 import java.util.function.Function;
 
@@ -30,7 +29,6 @@ import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.HitResult.Type;
 import org.jetbrains.annotations.NotNull;
-import endurteam.overwhelmed.registry.EntityRegistry;
 
 public class MultiSpawnEggItem extends Item {
     protected final RandomSource random;

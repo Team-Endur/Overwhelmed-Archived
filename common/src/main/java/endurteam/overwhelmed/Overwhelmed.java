@@ -1,7 +1,11 @@
 package endurteam.overwhelmed;
 
 import dev.architectury.registry.registries.DeferredRegister;
-import endurteam.overwhelmed.registry.*;
+import endurteam.overwhelmed.sounds.OverwhelmedSoundEvents;
+import endurteam.overwhelmed.world.entity.OverwhelmedEntityTypes;
+import endurteam.overwhelmed.world.item.OverwhelmedCreativeTabs;
+import endurteam.overwhelmed.world.item.OverwhelmedItems;
+import endurteam.overwhelmed.world.level.block.OverwhelmedBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.entity.EntityType;
@@ -22,10 +26,10 @@ public class Overwhelmed {
 			DeferredRegister.create(MOD_ID, Registries.SOUND_EVENT);
 
 	public static void init() {
-		SoundEventRegistry.registerSoundEvents();
-		CreativeTabRegistry.registerCreativeTab();
-		EntityRegistry.registerEntities();
-		BlockRegistry.registerBlocks();
-		ItemRegistry.registerItems();
+		OverwhelmedSoundEvents.registerSoundEvents();
+		OverwhelmedCreativeTabs.registerCreativeTab();
+		OverwhelmedEntityTypes.registerEntities();
+		OverwhelmedBlocks.registerBlocks();
+		OverwhelmedItems.registerItems();
 	}
 }

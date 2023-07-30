@@ -1,7 +1,7 @@
 package endurteam.overwhelmed.client.model.entity;
 
 import endurteam.overwhelmed.Overwhelmed;
-import endurteam.overwhelmed.registry.EntityRegistry;
+import endurteam.overwhelmed.world.entity.OverwhelmedEntityTypes;
 import endurteam.overwhelmed.world.entity.animal.ButterflyEntity;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
@@ -23,13 +23,13 @@ public class ButterflyModel extends GeoModel<ButterflyEntity> {
 
     public static ResourceLocation getVariantTexture(ButterflyEntity animatable) {
         EntityType<?> type = animatable.getType();
-        if (EntityRegistry.sleepyButterflyEntityType.get().equals(type)) {
+        if (OverwhelmedEntityTypes.sleepyButterflyEntityType.get().equals(type)) {
             return SLEEPY_TEXTURE;
-        } else if (EntityRegistry.cabbageButterflyEntityType.get().equals(type)) {
+        } else if (OverwhelmedEntityTypes.cabbageButterflyEntityType.get().equals(type)) {
             return CABBAGE_TEXTURE;
-        } else if (EntityRegistry.morphoButterflyEntityType.get().equals(type)) {
+        } else if (OverwhelmedEntityTypes.morphoButterflyEntityType.get().equals(type)) {
             return MORPHO_TEXTURE;
-        } else if (EntityRegistry.cherryButterflyEntityType.get().equals(type)) {
+        } else if (OverwhelmedEntityTypes.cherryButterflyEntityType.get().equals(type)) {
             return CHERRY_TEXTURE;
         }
         throw new IncompatibleClassChangeError();
