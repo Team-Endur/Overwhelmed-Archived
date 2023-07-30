@@ -15,7 +15,7 @@ public class CreativeTabRegistry {
             )
     );
 
-    public static void registerCreativeTab(){
+    public static void registerCreativeTab() {
         Overwhelmed.CREATIVE_MODE_TABS.register();
-    };
+    }
 }

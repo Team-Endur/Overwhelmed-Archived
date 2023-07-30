@@ -25,8 +25,42 @@
           "condition": "minecraft:random_chance_with_looting",
           "chance": 0.1,
           "looting_multiplier": 0.05
+        },
+        {
+          "condition": "minecraft:damage_source_properties",
+          "predicate": {
+            "tags": [
+              {
+                "expected": false,
+                "id": "minecraft:is_drowning"
+              }
+            ]
+          }
         }
       ]
+    },
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:damage_source_properties",
+          "predicate": {
+            "tags": [
+              {
+                "expected": true,
+                "id": "minecraft:is_drowning"
+              }
+            ]
+          }
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "overwhelmed:snail_shell"
+        }
+      ],
+      "rolls": 1.0
     }
   ]
 }
