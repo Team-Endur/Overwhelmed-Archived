@@ -5,7 +5,6 @@ import endurteam.overwhelmed.world.food.OverwhelmedFoods;
 import endurteam.overwhelmed.world.item.MultiSpawnEggItem;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BowlFoodItem;
-import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
 import endurteam.overwhelmed.Overwhelmed;
@@ -41,13 +40,13 @@ public class ItemRegistry {
                         .arch$tab(overwhelmedTab), (random) -> {
                             switch (random.nextIntBetweenInclusive(1, 3)) {
                                 case 1 -> {
-                                    return EntityRegistry.gardenSnailEntityType.get();
+                                    return EntityTypeRegistry.gardenSnailEntityType.get();
                                 }
                                 case 2 -> {
-                                    return EntityRegistry.limestoneSnailEntityType.get();
+                                    return EntityTypeRegistry.limestoneSnailEntityType.get();
                                 }
                                 case 3 -> {
-                                    return EntityRegistry.romanSnailEntityType.get();
+                                    return EntityTypeRegistry.romanSnailEntityType.get();
                                 }
                             }
                             throw new IncompatibleClassChangeError();
@@ -59,16 +58,16 @@ public class ItemRegistry {
                         .arch$tab(overwhelmedTab), (random) -> {
                     switch (random.nextIntBetweenInclusive(1, 4)) {
                         case 1 -> {
-                            return EntityRegistry.sleepyButterflyEntityType.get();
+                            return EntityTypeRegistry.sleepyButterflyEntityType.get();
                         }
                         case 2 -> {
-                            return EntityRegistry.cabbageButterflyEntityType.get();
+                            return EntityTypeRegistry.cabbageButterflyEntityType.get();
                         }
                         case 3 -> {
-                            return EntityRegistry.morphoButterflyEntityType.get();
+                            return EntityTypeRegistry.morphoButterflyEntityType.get();
                         }
                         case 4 -> {
-                            return EntityRegistry.cherryButterflyEntityType.get();
+                            return EntityTypeRegistry.cherryButterflyEntityType.get();
                         }
                     }
                     throw new IncompatibleClassChangeError();

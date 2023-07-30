@@ -14,7 +14,7 @@ import endurteam.overwhelmed.world.entity.animal.SnailEntity;
 
 import static endurteam.overwhelmed.Overwhelmed.MOD_ID;
 
-public class EntityRegistry {
+public class EntityTypeRegistry {
     public static RegistrySupplier<EntityType<SnailEntity>> gardenSnailEntityType;
     public static RegistrySupplier<EntityType<SnailEntity>> garySnailEntityType;
     public static RegistrySupplier<EntityType<SnailEntity>> limestoneSnailEntityType;

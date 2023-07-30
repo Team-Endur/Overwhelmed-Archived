@@ -2,6 +2,7 @@ package endurteam.overwhelmed;
 
 import dev.architectury.registry.registries.DeferredRegister;
 import endurteam.overwhelmed.registry.*;
+import net.minecraft.core.particles.ParticleType;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.entity.EntityType;
@@ -20,11 +21,13 @@ public class Overwhelmed {
 	public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(MOD_ID, Registries.BLOCK);
 	public static final DeferredRegister<SoundEvent> SOUND_EVENTS =
 			DeferredRegister.create(MOD_ID, Registries.SOUND_EVENT);
+	public static final DeferredRegister<ParticleType<?>> PARTICLE_TYPES
+			= DeferredRegister.create(MOD_ID, Registries.PARTICLE_TYPE);
 
 	public static void init() {
 		SoundEventRegistry.registerSoundEvents();
 		CreativeTabRegistry.registerCreativeTab();
-		EntityRegistry.registerEntities();
+		EntityTypeRegistry.registerEntities();
 		BlockRegistry.registerBlocks();
 		ItemRegistry.registerItems();
 	}

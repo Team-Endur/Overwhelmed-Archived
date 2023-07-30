@@ -1,6 +1,6 @@
 package endurteam.overwhelmed.world.entity.animal;
 
-import endurteam.overwhelmed.registry.EntityRegistry;
+import endurteam.overwhelmed.registry.EntityTypeRegistry;
 import endurteam.overwhelmed.registry.ItemRegistry;
 import endurteam.overwhelmed.registry.SoundEventRegistry;
 import net.minecraft.nbt.CompoundTag;
@@ -98,10 +98,10 @@ public class SnailEntity extends Animal implements GeoEntity {
 
     public void setCustomName(@Nullable Component arg) {
         super.setCustomName(arg);
-        if (!this.getType().equals(EntityRegistry.garySnailEntityType.get()) && arg != null
+        if (!this.getType().equals(EntityTypeRegistry.garySnailEntityType.get()) && arg != null
                 && arg.getString().equals("Gary")) {
             CompoundTag tag = new CompoundTag();
-            SnailEntity newEntity = new SnailEntity(EntityRegistry.garySnailEntityType.get(), this.level());
+            SnailEntity newEntity = new SnailEntity(EntityTypeRegistry.garySnailEntityType.get(), this.level());
             this.save(tag);
             newEntity.load(tag);
             this.remove(RemovalReason.DISCARDED);
@@ -112,13 +112,13 @@ public class SnailEntity extends Animal implements GeoEntity {
     @Override
     protected float getStandingEyeHeight(Pose pose, EntityDimensions entityDimensions) {
         EntityType<?> type = this.getType();
-        if (EntityRegistry.gardenSnailEntityType.get().equals(type)) {
+        if (EntityTypeRegistry.gardenSnailEntityType.get().equals(type)) {
             return 0.2f;
-        } else if (EntityRegistry.garySnailEntityType.get().equals(type)) {
+        } else if (EntityTypeRegistry.garySnailEntityType.get().equals(type)) {
             return 0.32f;
-        } else if (EntityRegistry.limestoneSnailEntityType.get().equals(type)) {
+        } else if (EntityTypeRegistry.limestoneSnailEntityType.get().equals(type)) {
             return 0.15f;
-        } else if (EntityRegistry.romanSnailEntityType.get().equals(type)) {
+        } else if (EntityTypeRegistry.romanSnailEntityType.get().equals(type)) {
             return 0.2f;
         }
         throw new IncompatibleClassChangeError();
