@@ -25,6 +25,17 @@
           "condition": "minecraft:random_chance_with_looting",
           "chance": 0.1,
           "looting_multiplier": 0.05
+        },
+        {
+          "condition": "minecraft:damage_source_properties",
+          "predicate": {
+            "tags": [
+              {
+                "expected": false,
+                "id": "minecraft:is_drowning"
+              }
+            ]
+          }
         }
       ]
     },

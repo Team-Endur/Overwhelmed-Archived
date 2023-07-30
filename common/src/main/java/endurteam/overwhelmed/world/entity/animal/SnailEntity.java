@@ -39,10 +39,9 @@ public class SnailEntity extends Animal implements GeoEntity {
 
     @Override
     protected void registerGoals() {
-        this.goalSelector.addGoal(0, new FloatGoal(this));
-        this.goalSelector.addGoal(1, new WaterAvoidingRandomStrollGoal(this, 1.0));
-        this.goalSelector.addGoal(2, new LookAtPlayerGoal(this, Player.class, 6.0F, 0.02F, true));
-        this.goalSelector.addGoal(3, new RandomLookAroundGoal(this));
+        this.goalSelector.addGoal(0, new WaterAvoidingRandomStrollGoal(this, 1.0));
+        this.goalSelector.addGoal(1, new LookAtPlayerGoal(this, Player.class, 6.0F, 0.02F, true));
+        this.goalSelector.addGoal(2, new RandomLookAroundGoal(this));
     }
 
     @Override
