@@ -1,6 +1,7 @@
 plugins {
     id "com.github.johnrengelman.shadow" version "7.1.2"
 }
+
 architectury {
     platformSetupLoomIde()
     forge()
@@ -21,14 +22,15 @@ repositories {
 }
 
 dependencies {
-    forge "net.minecraftforge:forge:${rootProject.forge_version}"
+    forge("net.minecraftforge:forge:${rootProject.forge_version}")
     // Remove the next line if you don't want to depend on the API
-    modApi "dev.architectury:architectury-forge:${rootProject.architectury_version}"
+    modApi("dev.architectury:architectury-forge:${rootProject.architectury_version}")
 
     common(project(path: ":common", configuration: "namedElements")) { transitive false }
     shadowCommon(project(path: ":common", configuration: "transformProductionForge")) { transitive = false }
 
-    modImplementation "software.bernie.geckolib:geckolib-forge-${rootProject.minecraft_version}:${rootProject.geckolib_version}"
+    modImplementation("com.github.glitchfiend:TerraBlender-forge:${rootProject.minecraft_version}-${rootProject.terrablender_version}")
+    modImplementation("software.bernie.geckolib:geckolib-forge-${rootProject.minecraft_version}:${rootProject.geckolib_version}")
     modRuntimeOnly("squeek.appleskin:appleskin-forge:${rootProject.appleskin_version_forge}") {
         exclude module: 'modmenu'
     }
