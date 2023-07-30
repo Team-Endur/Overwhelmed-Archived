@@ -1,6 +1,13 @@
 plugins {
     id "com.github.johnrengelman.shadow" version "7.1.2"
 }
+
+repositories {
+    maven { url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' }
+    maven { url "https://maven.ryanliptak.com/" }
+    maven { url "https://maven.shedaniel.me/" }
+}
+
 architectury {
     platformSetupLoomIde()
     forge()
@@ -12,12 +19,6 @@ configurations {
     compileClasspath.extendsFrom common
     runtimeClasspath.extendsFrom common
     developmentForge.extendsFrom common
-}
-
-repositories {
-    maven { url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' }
-    maven { url "https://maven.ryanliptak.com/" }
-    maven { url "https://maven.shedaniel.me/" }
 }
 
 dependencies {
