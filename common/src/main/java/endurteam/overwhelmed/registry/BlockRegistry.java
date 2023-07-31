@@ -24,6 +24,9 @@ public class BlockRegistry {
     public static RegistrySupplier<Block> snailShellBrickStairs;
     public static RegistrySupplier<Block> chiseledSnailShellBricks;
     public static RegistrySupplier<Block> gooBlock;
+    public static RegistrySupplier<Block> pebble;
+    public static RegistrySupplier<Block> ice_cube;
+    public static RegistrySupplier<Block> gold_bead;
 
     public static void registerBlocks() {
 
@@ -51,7 +54,6 @@ public class BlockRegistry {
                 .offsetType(BlockBehaviour.OffsetType.XZ)
                 .ignitedByLava()
                 .pushReaction(PushReaction.DESTROY));
-
         //These are sub blocks, these must stay down here, or it breaks.
         registerBlockItem("sediment_block", sedimentBlock);
         snailShellBrickWall = registerWallBlock("snail_shell_brick_wall",
