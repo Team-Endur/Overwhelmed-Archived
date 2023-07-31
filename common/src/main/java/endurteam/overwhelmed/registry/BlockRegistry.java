@@ -2,6 +2,7 @@ package endurteam.overwhelmed.registry;
 
 import dev.architectury.registry.registries.RegistrySupplier;
 import net.minecraft.resources.ResourceLocation;
+import endurteam.overwhelmed.world.item.CustomBlockItem;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.DoubleHighBlockItem;
 import net.minecraft.world.item.Item;
