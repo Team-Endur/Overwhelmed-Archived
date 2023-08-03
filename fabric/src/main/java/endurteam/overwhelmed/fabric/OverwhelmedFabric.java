@@ -9,5 +9,7 @@ public class OverwhelmedFabric implements ModInitializer {
         Overwhelmed.init();
         BiomeModifiers.snailSpawning();
         BiomeModifiers.butterflySpawning();
+        BiomeModifiers.sedimentGeneration();
+        BiomeModifiers.widowGeneration();
     }
 }

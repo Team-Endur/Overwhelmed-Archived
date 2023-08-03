@@ -2,7 +2,9 @@ package endurteam.overwhelmed.fabric;
 
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.minecraft.world.entity.MobCategory;
+import net.minecraft.world.level.levelgen.GenerationStep.Decoration;
 import endurteam.overwhelmed.registry.EntityTypeRegistry;
+import endurteam.overwhelmed.registry.PlacedFeatureRegistry;
 
 public class BiomeModifiers {
     public static void snailSpawning()
@@ -32,5 +34,17 @@ public class BiomeModifiers {
         BiomeModifications.addSpawn(bsc -> bsc.hasTag(EntityTypeRegistry.SPAWNS_CHERRY_BUTTERFLIES),
                 MobCategory.CREATURE, EntityTypeRegistry.cherryButterflyEntityType.get(),
                 80, 2, 4);
+    }
+
+    public static void sedimentGeneration()
+    {
+        BiomeModifications.addFeature(bsc -> bsc.hasTag(PlacedFeatureRegistry.GENERATES_SEDIMENTS),
+                Decoration.TOP_LAYER_MODIFICATION, PlacedFeatureRegistry.ORE_SEDIMENT);
+    }
+
+    public static void widowGeneration()
+    {
+        BiomeModifications.addFeature(bsc -> bsc.hasTag(PlacedFeatureRegistry.GENERATES_WIDOWS),
+                Decoration.VEGETAL_DECORATION, PlacedFeatureRegistry.PATCH_WIDOW);
     }
 }
