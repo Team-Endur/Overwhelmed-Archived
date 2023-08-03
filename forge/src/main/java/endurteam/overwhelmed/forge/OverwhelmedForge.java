@@ -1,7 +1,7 @@
 package endurteam.overwhelmed.forge;
 
 import dev.architectury.platform.forge.EventBuses;
-import endurteam.overwhelmed.client.OverwhelmedClient;
+import endurteam.overwhelmed.forge.client.OverwhelmedForgeClient;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.fml.DistExecutor;
 import endurteam.overwhelmed.Overwhelmed;
@@ -14,7 +14,8 @@ public class OverwhelmedForge {
         // Submit our event bus to let architectury register our content on the right time
         EventBuses.registerModEventBus(Overwhelmed.MOD_ID, FMLJavaModLoadingContext.get().getModEventBus());
         Overwhelmed.init();
-        DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> OverwhelmedClient::initClient);
+        DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () ->
+                (() -> OverwhelmedForgeClient.initClient(FMLJavaModLoadingContext.get().getModEventBus())));
     }
 
 }

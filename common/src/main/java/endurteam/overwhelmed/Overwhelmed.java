@@ -25,6 +25,7 @@ public class Overwhelmed {
 			= DeferredRegister.create(MOD_ID, Registries.PARTICLE_TYPE);
 
 	public static void init() {
+		ParticleTypeRegistry.registerParticleTypes();
 		SoundEventRegistry.registerSoundEvents();
 		CreativeTabRegistry.registerCreativeTab();
 		EntityTypeRegistry.registerEntities();

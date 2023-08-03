@@ -19,8 +19,12 @@ dependencies {
     modImplementation("software.bernie.geckolib:geckolib-forge-${rootProject.minecraft_version}:${rootProject.geckolib_version}")
 }
 
+loom {
+    accessWidenerPath = file("src/main/resources/overwhelmed.accesswidener")
+}
+
 architectury {
-    common()
+    common("fabric", "forge")
 }
 
 publishing {

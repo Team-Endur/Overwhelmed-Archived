@@ -15,6 +15,18 @@ configurations {
     developmentForge.extendsFrom common
 }
 
+loom {
+    accessWidenerPath = project(":common").loom.accessWidenerPath
+
+    forge {
+        convertAccessWideners = true
+        extraAccessWideners.add loom.accessWidenerPath.get().asFile.name
+
+        mixinConfig "overwhelmed-common.mixins.json"
+        mixinConfig "overwhelmed.mixins.json"
+    }
+}
+
 repositories {
     maven { url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' }
     maven { url 'https://maven.terraformersmc.com/releases/'}
