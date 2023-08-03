@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "overwhelmed:widow"
+    }
+  ],
+  "result": {
+    "item": "minecraft:blue_dye",
+    "count": 2
+  }
+}
