@@ -2,6 +2,7 @@ package endurteam.overwhelmed.registry;
 
 import dev.architectury.registry.registries.RegistrySupplier;
 import net.minecraft.resources.ResourceLocation;
+import endurteam.overwhelmed.world.item.CustomBlockItem;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.DoubleHighBlockItem;
 import net.minecraft.world.item.Item;
@@ -24,6 +25,9 @@ public class BlockRegistry {
     public static RegistrySupplier<Block> snailShellBrickStairs;
     public static RegistrySupplier<Block> chiseledSnailShellBricks;
     public static RegistrySupplier<Block> gooBlock;
+    public static RegistrySupplier<Block> pebble;
+    public static RegistrySupplier<Block> ice_cube;
+    public static RegistrySupplier<Block> gold_bead;
 
     public static void registerBlocks() {
 
@@ -51,7 +55,6 @@ public class BlockRegistry {
                 .offsetType(BlockBehaviour.OffsetType.XZ)
                 .ignitedByLava()
                 .pushReaction(PushReaction.DESTROY));
-
         //These are sub blocks, these must stay down here, or it breaks.
         registerBlockItem("sediment_block", sedimentBlock);
         snailShellBrickWall = registerWallBlock("snail_shell_brick_wall",
