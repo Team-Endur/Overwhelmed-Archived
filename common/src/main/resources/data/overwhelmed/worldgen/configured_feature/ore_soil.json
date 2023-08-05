@@ -10,7 +10,7 @@
                     "block": "minecraft:grass_block"
                 },
                 "state": {
-                    "Name": "overwhelmed:sediment_block"
+                    "Name": "overwhelmed:soil"
                 }
             },
             {
@@ -19,7 +19,7 @@
                     "block": "minecraft:dirt"
                 },
                 "state": {
-                    "Name": "overwhelmed:sediment_block"
+                    "Name": "overwhelmed:soil"
                 }
             }
         ]

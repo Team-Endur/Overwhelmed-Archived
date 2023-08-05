@@ -17,7 +17,7 @@ import java.util.function.Supplier;
 
 public class BlockRegistry {
     public static RegistrySupplier<Block> widow;
-    public static RegistrySupplier<Block> sedimentBlock;
+    public static RegistrySupplier<Block> soil;
     public static RegistrySupplier<Block> snailShellBricks;
     public static RegistrySupplier<Block> snailShellBrickWall;
     public static RegistrySupplier<Block> snailShellBrickSlab;
@@ -31,7 +31,7 @@ public class BlockRegistry {
     public static void registerBlocks() {
 
         //Must register Blocks first
-        sedimentBlock = registerGenericBlock("sediment_block", BlockBehaviour.Properties.of()
+        soil = registerGenericBlock("soil", BlockBehaviour.Properties.of()
                 .mapColor(MapColor.COLOR_BROWN)
                 .strength(0.5f, 0.5f));
         snailShellBricks = registerGenericBlock("snail_shell_bricks", BlockBehaviour.Properties.of()
@@ -55,7 +55,7 @@ public class BlockRegistry {
                 .ignitedByLava()
                 .pushReaction(PushReaction.DESTROY));
         //These are sub blocks, these must stay down here, or it breaks.
-        registerBlockItem("sediment_block", sedimentBlock);
+        registerBlockItem("soil", soil);
         snailShellBrickWall = registerWallBlock("snail_shell_brick_wall",
                 () -> BlockBehaviour.Properties.copy(snailShellBricks.get()));
         snailShellBrickSlab = registerSlabBlock("snail_shell_brick_slab",

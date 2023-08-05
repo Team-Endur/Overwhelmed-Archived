@@ -1,6 +1,0 @@
-{
-  "type": "forge:add_features",
-  "biomes": "#overwhelmed:generates_sediments",
-  "features": "overwhelmed:ore_sediment",
-  "step": "top_layer_modification"
-}
