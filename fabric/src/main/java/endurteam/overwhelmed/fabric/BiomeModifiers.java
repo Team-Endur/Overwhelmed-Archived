@@ -45,6 +45,6 @@ public class BiomeModifiers {
     public static void widowGeneration()
     {
         BiomeModifications.addFeature(bsc -> bsc.hasTag(PlacedFeatureRegistry.GENERATES_WIDOWS),
-                Decoration.VEGETAL_DECORATION, PlacedFeatureRegistry.PATCH_WIDOW);
+                Decoration.VEGETAL_DECORATION, PlacedFeatureRegistry.GENERATE_WIDOW);
     }
 }

@@ -1,11 +1,11 @@
-![Overwhelmed Picture](https://github.com/Codetoil/Overwhelmed/blob/dev/0.3.x/common/src/main/resources/assets/overwhelmed/minecraft_title.png)
+![Overwhelmed Picture](https://github.com/Codetoil/Overwhelmed/blob/dev/0.3.x/common/src/main/resources/assets/overwhelmed/gui/minecraft_title.png)
 
 ![Minecraft Version](https://img.shields.io/badge/Minecraft%20Version-1.20.1-brightgreen.svg)
 ![Mod Version](https://img.shields.io/badge/Mod%20Version-0.2.1-blue.svg)
 
 **Overwhelmed** is a Minecraft mod that focuses on enhancing the atmosphere and gameplay of Minecraft's Overworld surface. It achieves this by introducing new flora and fauna systems for ambience and adding new biomes to explore.
 
-![Banner](https://github.com/Codetoil/Overwhelmed/blob/dev/0.3.x/common/src/main/resources/assets/overwhelmed/grid.png)
+![Banner](https://github.com/Codetoil/Overwhelmed/blob/dev/0.3.x/common/src/main/resources/assets/overwhelmed/gui/grid.png)
 
 ## Features
 
@@ -15,7 +15,7 @@
 - Enhanced atmosphere: Immerse yourself in an enhanced Overworld experience with improved ambiance, realistic sounds, and visual effects.
 - Improved gameplay: Enjoy a more dynamic and engaging gameplay experience with the addition of new features, such as interactive plants and wildlife.
 
-![Banner](https://github.com/Codetoil/Overwhelmed/blob/dev/0.3.x/common/src/main/resources/assets/overwhelmed/grid.png)
+![Banner](https://github.com/Codetoil/Overwhelmed/blob/dev/0.3.x/common/src/main/resources/assets/overwhelmed/gui/grid.png)
 
 ## Installation
 

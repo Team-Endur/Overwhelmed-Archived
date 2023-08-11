@@ -20,6 +20,6 @@ public class PlacedFeatureRegistry {
     public static final ResourceKey<PlacedFeature> ORE_SEDIMENT = ResourceKey.create(Registries.PLACED_FEATURE,
             new ResourceLocation(MOD_ID, "ore_sediment"));
 
-    public static final ResourceKey<PlacedFeature> PATCH_WIDOW = ResourceKey.create(Registries.PLACED_FEATURE,
-            new ResourceLocation(MOD_ID, "patch_widow"));
+    public static final ResourceKey<PlacedFeature> GENERATE_WIDOW = ResourceKey.create(Registries.PLACED_FEATURE,
+            new ResourceLocation(MOD_ID, "generate_widow"));
 }
