@@ -2,8 +2,8 @@
     "feature": "overwhelmed:ore_soil",
     "placement": [
         {
-            "type": "minecraft:count",
-            "count": 0.25
+            "type": "minecraft:rarity_filter",
+            "count": 4
         },
         {
             "type": "minecraft:in_square"
