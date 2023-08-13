@@ -10,9 +10,9 @@ import static endurteam.overwhelmed.Overwhelmed.MOD_ID;
 public class ConfiguredFeatureRegistry {
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> ORE_SOIL =
-            ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(MOD_ID, "ore_sediment"));
+            ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(MOD_ID, "ore_soil"));
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> GENERATE_WIDOW =
-            ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(MOD_ID, "patch_widow"));
+            ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(MOD_ID, "generate_widow"));
     
 }
