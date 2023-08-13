@@ -38,7 +38,7 @@ public class BiomeModifiers {
 
     public static void soilGeneration()
     {
-        BiomeModifications.addFeature(bsc -> bsc.hasTag(PlacedFeatureRegistry.GENERATES_SEDIMENTS),
+        BiomeModifications.addFeature(bsc -> bsc.hasTag(PlacedFeatureRegistry.GENERATES_SOIL),
                 Decoration.TOP_LAYER_MODIFICATION, PlacedFeatureRegistry.ORE_SEDIMENT);
     }
 

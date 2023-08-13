@@ -11,7 +11,7 @@ import static endurteam.overwhelmed.Overwhelmed.MOD_ID;
 
 public class PlacedFeatureRegistry {
     
-    public static final TagKey<Biome> GENERATES_SEDIMENTS = TagKey.create(Registries.BIOME,
+    public static final TagKey<Biome> GENERATES_SOIL = TagKey.create(Registries.BIOME,
             new ResourceLocation(MOD_ID, "generates_soil"));
     
     public static final TagKey<Biome> GENERATES_WIDOWS = TagKey.create(Registries.BIOME,
