@@ -17,7 +17,7 @@ public class PlacedFeatureRegistry {
     public static final TagKey<Biome> GENERATES_WIDOWS = TagKey.create(Registries.BIOME,
             new ResourceLocation(MOD_ID, "generates_widows"));
 
-    public static final ResourceKey<PlacedFeature> ORE_SEDIMENT = ResourceKey.create(Registries.PLACED_FEATURE,
+    public static final ResourceKey<PlacedFeature> ORE_SOIL = ResourceKey.create(Registries.PLACED_FEATURE,
             new ResourceLocation(MOD_ID, "ore_soil"));
 
     public static final ResourceKey<PlacedFeature> GENERATE_WIDOW = ResourceKey.create(Registries.PLACED_FEATURE,
