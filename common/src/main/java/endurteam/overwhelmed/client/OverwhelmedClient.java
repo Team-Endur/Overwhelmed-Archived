@@ -4,9 +4,7 @@ import dev.architectury.registry.client.level.entity.EntityRendererRegistry;
 import dev.architectury.registry.client.rendering.ColorHandlerRegistry;
 import endurteam.overwhelmed.client.color.items.ButterflySpawnEggItemColor;
 import endurteam.overwhelmed.client.color.items.SnailSpawnEggItemColor;
-import endurteam.overwhelmed.client.color.items.MothSpawnEggItemColor;
 import endurteam.overwhelmed.client.renderer.entity.ButterflyRenderer;
-import endurteam.overwhelmed.client.renderer.entity.MothRenderer;
 import endurteam.overwhelmed.client.renderer.entity.SnailRenderer;
 import endurteam.overwhelmed.registry.EntityTypeRegistry;
 import endurteam.overwhelmed.registry.ItemRegistry;
@@ -14,7 +12,6 @@ import endurteam.overwhelmed.registry.ItemRegistry;
 public class OverwhelmedClient {
     public static SnailSpawnEggItemColor snailSpawnEggItemColor;
     public static ButterflySpawnEggItemColor butterflySpawnEggItemColor;
-    public static MothSpawnEggItemColor mothSpawnEggItemColor;
 
     public static void initClient() {
         EntityRendererRegistry.register(EntityTypeRegistry.gardenSnailEntityType, SnailRenderer::new);
@@ -26,12 +23,9 @@ public class OverwhelmedClient {
         EntityRendererRegistry.register(EntityTypeRegistry.morphoButterflyEntityType, ButterflyRenderer::new);
         EntityRendererRegistry.register(EntityTypeRegistry.cherryButterflyEntityType, ButterflyRenderer::new);
         EntityRendererRegistry.register(EntityTypeRegistry.monarchButterflyEntityType, ButterflyRenderer::new);
-        EntityRendererRegistry.register(EntityTypeRegistry.mothEntityType, MothRenderer::new);
         ColorHandlerRegistry.registerItemColors(snailSpawnEggItemColor = new SnailSpawnEggItemColor(),
                 ItemRegistry.snailSpawnEggItem);
         ColorHandlerRegistry.registerItemColors(butterflySpawnEggItemColor = new ButterflySpawnEggItemColor(),
                 ItemRegistry.butterflySpawnEggItem);
-        ColorHandlerRegistry.registerItemColors(mothSpawnEggItemColor = new MothSpawnEggItemColor(),
-                ItemRegistry.mothSpawnEggItem);
     }
 }
