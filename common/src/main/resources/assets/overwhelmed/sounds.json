@@ -17,36 +17,20 @@
       "overwhelmed:mob/snail/death3"
     ]
   },
-  "block.soil.break": {
+  "entity.butterfly.hurt": {
+    "subtitle": "subtitles.entity.overwhelmed.butterfly.hurt",
     "sounds": [
-      "overwhelmed:block/soil/break1",
-      "overwhelmed:block/soil/break2",
-      "overwhelmed:block/soil/break3",
-      "overwhelmed:block/soil/break4"
-    ]
+      "overwhelmed:mob/butterfly/hurt0",
+      "overwhelmed:mob/butterfly/hurt1",
+      "overwhelmed:mob/butterfly/hurt2",
+      "overwhelmed:mob/butterfly/hurt3"
+      ]
   },
-  "block.soil.hit": {
+  "entity.butterfly.death": {
+    "subtitle": "subtitles.entity.overwhelmed.butterfly.death",
     "sounds": [
-      "overwhelmed:block/soil/hit1",
-      "overwhelmed:block/soil/hit2",
-      "overwhelmed:block/soil/hit3",
-      "overwhelmed:block/soil/hit4"
-    ]
-  },
-  "block.soil.place": {
-    "sounds": [
-      "overwhelmed:block/soil/place1",
-      "overwhelmed:block/soil/place2",
-      "overwhelmed:block/soil/place3",
-      "overwhelmed:block/soil/place4"
-    ]
-  },
-  "block.soil.step": {
-    "sounds": [
-      "overwhelmed:block/soil/step1",
-      "overwhelmed:block/soil/step2",
-      "overwhelmed:block/soil/step3",
-      "overwhelmed:block/soil/step4"
-    ]
-  }
+      "overwhelmed:mob/snail/death0",
+      "overwhelmed:mob/snail/death1",
+      "overwhelmed:mob/snail/death2",
+      "overwhelmed:mob/snail/death3",
 }
