@@ -34,6 +34,9 @@ public class BiomeModifiers {
         BiomeModifications.addSpawn(bsc -> bsc.hasTag(EntityTypeRegistry.SPAWNS_CHERRY_BUTTERFLIES),
                 MobCategory.CREATURE, EntityTypeRegistry.cherryButterflyEntityType.get(),
                 80, 2, 4);
+        BiomeModifications.addSpawn(bsc -> bsc.hasTag(EntityTypeRegistry.SPAWNS_MONARCH_BUTTERFLIES),
+                MobCategory.CREATURE, EntityTypeRegistry.monarchButterflyEntityType.get(),
+                80, 2, 4);
     }
 
     public static void soilGeneration()

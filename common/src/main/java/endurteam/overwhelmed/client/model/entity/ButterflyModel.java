@@ -16,6 +16,8 @@ public class ButterflyModel extends GeoModel<ButterflyEntity> {
             new ResourceLocation(Overwhelmed.MOD_ID, "textures/entity/butterfly/butterfly_morpho.png");
     private static final ResourceLocation CHERRY_TEXTURE =
             new ResourceLocation(Overwhelmed.MOD_ID, "textures/entity/butterfly/butterfly_cherry.png");
+    private static final ResourceLocation MONARCH_TEXTURE =
+            new ResourceLocation(Overwhelmed.MOD_ID, "textures/entity/butterfly/butterfly_monarch.png");
     private static final ResourceLocation MODEL =
             new ResourceLocation(Overwhelmed.MOD_ID, "geo/entity/butterfly.geo.json");
     private static final ResourceLocation ANIMATION =
@@ -31,6 +33,8 @@ public class ButterflyModel extends GeoModel<ButterflyEntity> {
             return MORPHO_TEXTURE;
         } else if (EntityTypeRegistry.cherryButterflyEntityType.get().equals(type)) {
             return CHERRY_TEXTURE;
+        } else if (EntityTypeRegistry.monarchButterflyEntityType.get().equals(type)) {
+            return MONARCH_TEXTURE;
         }
         throw new IncompatibleClassChangeError();
     }

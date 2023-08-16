@@ -11,6 +11,7 @@ import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.level.biome.Biome;
 import endurteam.overwhelmed.Overwhelmed;
 import endurteam.overwhelmed.world.entity.animal.SnailEntity;
+import endurteam.overwhelmed.world.entity.animal.MothEntity;
 
 import static endurteam.overwhelmed.Overwhelmed.MOD_ID;
 
@@ -24,6 +25,8 @@ public class EntityTypeRegistry {
     public static RegistrySupplier<EntityType<ButterflyEntity>> cabbageButterflyEntityType;
     public static RegistrySupplier<EntityType<ButterflyEntity>> morphoButterflyEntityType;
     public static RegistrySupplier<EntityType<ButterflyEntity>> sleepyButterflyEntityType;
+    public static RegistrySupplier<EntityType<ButterflyEntity>> monarchButterflyEntityType;
+    public static RegistrySupplier<EntityType<MothEntity>> mothEntityType;
 
     public static final TagKey<Biome> SPAWNS_GARDEN_SNAILS = TagKey.create(Registries.BIOME,
             new ResourceLocation(MOD_ID, "spawns_garden_snails"));
@@ -38,7 +41,12 @@ public class EntityTypeRegistry {
     public static final TagKey<Biome> SPAWNS_MORPHO_BUTTERFLIES = TagKey.create(Registries.BIOME,
             new ResourceLocation(MOD_ID, "spawns_morpho_butterflies"));
     public static final TagKey<Biome> SPAWNS_CHERRY_BUTTERFLIES = TagKey.create(Registries.BIOME,
-            new ResourceLocation(MOD_ID, "spawns_chery_butterflies"));
+            new ResourceLocation(MOD_ID, "spawns_cherry_butterflies"));
+    public static final TagKey<Biome> SPAWNS_MONARCH_BUTTERFLIES = TagKey.create(Registries.BIOME,
+            new ResourceLocation(MOD_ID, "spawns_monarch_butterflies"));
+    public static final TagKey<Biome> SPAWNS_MOTHS = TagKey.create(Registries.BIOME,
+            new ResourceLocation(MOD_ID, "spawns_moths"));
+
     public static void registerEntities() {
         gardenSnailEntityType = Overwhelmed.ENTITY_TYPES.register(
                 new ResourceLocation(MOD_ID, "garden_snail"), () ->
@@ -88,6 +96,18 @@ public class EntityTypeRegistry {
                                 .sized(0.6f, 0.4f)
                                 .clientTrackingRange(8)
                                 .build("cherry_butterfly"));
+        monarchButterflyEntityType = Overwhelmed.ENTITY_TYPES.register(
+                new ResourceLocation(MOD_ID, "monarch_butterfly"), () ->
+                        EntityType.Builder.of(ButterflyEntity::new, MobCategory.CREATURE)
+                                .sized(0.6f, 0.4f)
+                                .clientTrackingRange(8)
+                                .build("monarch_butterfly"));
+        mothEntityType = Overwhelmed.ENTITY_TYPES.register(
+                new ResourceLocation(MOD_ID, "moth"), () ->
+                        EntityType.Builder.of(MothEntity::new, MobCategory.CREATURE)
+                                .sized(0.6f, 0.4f)
+                                .clientTrackingRange(8)
+                                .build("moth"));
 
         Overwhelmed.ENTITY_TYPES.register();
 
@@ -99,6 +119,7 @@ public class EntityTypeRegistry {
         EntityAttributeRegistry.register(cabbageButterflyEntityType, ButterflyEntity::createAttributes);
         EntityAttributeRegistry.register(morphoButterflyEntityType, ButterflyEntity::createAttributes);
         EntityAttributeRegistry.register(cherryButterflyEntityType, ButterflyEntity::createAttributes);
-
+        EntityAttributeRegistry.register(monarchButterflyEntityType, ButterflyEntity::createAttributes);
+        EntityAttributeRegistry.register(mothEntityType, MothEntity::createAttributes);
     }
 }

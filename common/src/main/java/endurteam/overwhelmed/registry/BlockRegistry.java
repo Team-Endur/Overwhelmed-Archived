@@ -12,7 +12,6 @@ import net.minecraft.world.level.material.MapColor;
 import endurteam.overwhelmed.Overwhelmed;
 import endurteam.overwhelmed.common.block.GooBlock;
 import net.minecraft.world.level.material.PushReaction;
-import assets.overwhelmed.sounds.block.soil.*;
 
 import java.util.function.Supplier;
 
@@ -34,8 +33,7 @@ public class BlockRegistry {
         //Must register Blocks first
         soil = registerGenericBlock("soil", BlockBehaviour.Properties.of()
                 .mapColor(MapColor.COLOR_BROWN)
-                .strength(0.5f, 0.5f))
-                .sound()
+                .strength(0.5f, 0.5f));
         snailShellBricks = registerGenericBlock("snail_shell_bricks", BlockBehaviour.Properties.of()
                 .mapColor(MapColor.COLOR_BROWN)
                 .strength(3.0f, 12.0f)
