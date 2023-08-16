@@ -16,7 +16,6 @@ public class ItemRegistry {
     public static RegistrySupplier<Item> snailShellItem;
     public static RegistrySupplier<MultiSpawnEggItem> snailSpawnEggItem;
     public static RegistrySupplier<MultiSpawnEggItem> butterflySpawnEggItem;
-    public static RegistrySupplier<MultiSpawnEggItem> mothSpawnEggItem;
     public static RegistrySupplier<Item> gooBallItem;
     public static RegistrySupplier<Item> gooSoupItem;
 
@@ -73,18 +72,6 @@ public class ItemRegistry {
                         }
                         case 5 -> {
                             return EntityTypeRegistry.monarchButterflyEntityType.get();
-                        }
-                    }
-                    throw new IncompatibleClassChangeError();
-                }
-                )
-        );
-        mothSpawnEggItem = Overwhelmed.ITEMS.register(new ResourceLocation(Overwhelmed.MOD_ID,
-                        "moth_spawn_egg"), () -> new MultiSpawnEggItem(new Item.Properties()
-                        .arch$tab(overwhelmedTab), (random) -> {
-                    switch (random.nextIntBetweenInclusive(1, 1)) {
-                        case 1 -> {
-                            return EntityTypeRegistry.mothEntityType.get();
                         }
                     }
                     throw new IncompatibleClassChangeError();
