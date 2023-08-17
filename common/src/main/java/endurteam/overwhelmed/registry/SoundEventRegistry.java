@@ -8,11 +8,8 @@ import net.minecraft.sounds.SoundEvent;
 public class SoundEventRegistry {
     public static RegistrySupplier<SoundEvent> snailHurt;
     public static RegistrySupplier<SoundEvent> snailDeath;
-    public static RegistrySupplier<SoundEvent> soilBreak;
-    public static RegistrySupplier<SoundEvent> soilHit;
-    public static RegistrySupplier<SoundEvent> soilPlace;
-    public static RegistrySupplier<SoundEvent> soilStep;
-
+    public static RegistrySupplier<SoundEvent> butterflyHurt;
+    public static RegistrySupplier<SoundEvent> butterflyDeath;
     public static void registerSoundEvents() {
         snailHurt = Overwhelmed.SOUND_EVENTS.register(
                 new ResourceLocation(Overwhelmed.MOD_ID, "entity.snail.hurt"), () ->
@@ -22,22 +19,14 @@ public class SoundEventRegistry {
                 new ResourceLocation(Overwhelmed.MOD_ID, "entity.snail.death"), () ->
                         SoundEvent.createVariableRangeEvent(
                                 new ResourceLocation(Overwhelmed.MOD_ID, "entity.snail.death")));
-        soilBreak = Overwhelmed.SOUND_EVENTS.register(
-                new ResourceLocation(Overwhelmed.MOD_ID, "block.soil.break"), () ->
+        butterflyHurt = Overwhelmed.SOUND_EVENTS.register(
+                new ResourceLocation(Overwhelmed.MOD_ID, "entity.butterfly.hurt"), () ->
                         SoundEvent.createVariableRangeEvent(
-                                new ResourceLocation(Overwhelmed.MOD_ID, "block.soil.break")));
-        soilHit = Overwhelmed.SOUND_EVENTS.register(
-                new ResourceLocation(Overwhelmed.MOD_ID, "block.soil.hit"), () ->
+                                new ResourceLocation(Overwhelmed.MOD_ID, "entity.butterfly.hurt")));
+        butterflyDeath = Overwhelmed.SOUND_EVENTS.register(
+                new ResourceLocation(Overwhelmed.MOD_ID, "entity.butterfly.death"), () ->
                         SoundEvent.createVariableRangeEvent(
-                                new ResourceLocation(Overwhelmed.MOD_ID, "block.soil.hit")));
-        soilPlace = Overwhelmed.SOUND_EVENTS.register(
-                new ResourceLocation(Overwhelmed.MOD_ID, "block.soil.place"), () ->
-                        SoundEvent.createVariableRangeEvent(
-                                new ResourceLocation(Overwhelmed.MOD_ID, "block.soil.place")));
-        soilStep = Overwhelmed.SOUND_EVENTS.register(
-                new ResourceLocation(Overwhelmed.MOD_ID, "block.soil.step"), () ->
-                        SoundEvent.createVariableRangeEvent(
-                                new ResourceLocation(Overwhelmed.MOD_ID, "block.soil.step")));
+                                new ResourceLocation(Overwhelmed.MOD_ID, "entity.butterfly.death")));
 
         Overwhelmed.SOUND_EVENTS.register();
     }
