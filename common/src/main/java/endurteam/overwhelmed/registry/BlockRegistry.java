@@ -23,7 +23,7 @@ public class BlockRegistry {
     public static RegistrySupplier<Block> snailShellBrickSlab;
     public static RegistrySupplier<Block> snailShellBrickStairs;
     public static RegistrySupplier<Block> chiseledSnailShellBricks;
-    public static RegistrySupplier<Block> gooBlock;
+    public static RegistrySupplier<HalfTransparentBlock> gooBlock;
     public static RegistrySupplier<Block> pebble;
     public static RegistrySupplier<Block> ice_cube;
     public static RegistrySupplier<Block> gold_bead;
@@ -94,6 +94,11 @@ public class BlockRegistry {
     private static RegistrySupplier<Block> registerGenericBlock(String name, Block.Properties properties) {
         return Overwhelmed.BLOCKS.register(new ResourceLocation(Overwhelmed.MOD_ID, name), () ->
                 new Block(properties));
+    }
+    private static RegistrySupplier<Block> registerHalfTransparentBlock(Supplier<BlockState> blockStateSupplier, String name,
+                                                              Supplier<Block.Properties> propertiesSupplier) {
+        return Overwhelmed.BLOCKS.register(new ResourceLocation(Overwhelmed.MOD_ID, name), () ->
+                new HalfTransparentBlock(blockStateSupplier.get(), propertiesSupplier.get()));
     }
 
     private static void registerBlockItem(String name, RegistrySupplier<Block> blockSupplier) {
