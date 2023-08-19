@@ -10,7 +10,6 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.MapColor;
 import endurteam.overwhelmed.Overwhelmed;
-import endurteam.overwhelmed.common.block.GooBlock;
 import net.minecraft.world.level.material.PushReaction;
 
 import java.util.function.Supplier;
@@ -44,10 +43,13 @@ public class BlockRegistry {
                 .mapColor(MapColor.COLOR_BROWN)
                 .strength(3.0f, 12.0f)
                 .requiresCorrectToolForDrops());
-        gooBlock = Overwhelmed.BLOCKS.register(new ResourceLocation(Overwhelmed.MOD_ID, "goo_block"), () ->
-                new GooBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_YELLOW).friction(0.6f)
+        gooBlock = registerHalfTransparentBlock("goo_block", BlockBehaviour.Properties.of()
+                        .mapColor(MapColor.COLOR_YELLOW)
+                        .friction(0.6f)
                         .sound(SoundType.HONEY_BLOCK)
-                        .noOcclusion()));
+                        .noOcclusion()
+                        .jumpFactor(0.5f)
+                        .speedFactor(0.4f));
         widow = registerTallFlowerBlock("widow", () -> BlockBehaviour.Properties.of()
                 .mapColor(MapColor.PLANT)
                 .noCollission()
@@ -95,6 +97,10 @@ public class BlockRegistry {
     private static RegistrySupplier<Block> registerGenericBlock(String name, Block.Properties properties) {
         return Overwhelmed.BLOCKS.register(new ResourceLocation(Overwhelmed.MOD_ID, name), () ->
                 new Block(properties));
+    }
+    private static RegistrySupplier<Block> registerHalfTransparentBlock(String name, Block.Properties properties) {
+        return Overwhelmed.BLOCKS.register(new ResourceLocation(Overwhelmed.MOD_ID, name), () ->
+                new HalfTransparentBlock(properties));
     }
 
     private static void registerBlockItem(String name, RegistrySupplier<Block> blockSupplier) {
