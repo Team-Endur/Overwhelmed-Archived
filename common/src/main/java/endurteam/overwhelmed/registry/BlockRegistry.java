@@ -45,7 +45,7 @@ public class BlockRegistry {
                 .strength(3.0f, 12.0f)
                 .requiresCorrectToolForDrops());
         gooBlock = Overwhelmed.BLOCKS.register(new ResourceLocation(Overwhelmed.MOD_ID, "goo_block"), () ->
-                new GooBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_YELLOW).friction(0.8f)
+                new GooBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_YELLOW).friction(0.6f)
                         .sound(SoundType.HONEY_BLOCK)
                         .noOcclusion()));
         widow = registerTallFlowerBlock("widow", () -> BlockBehaviour.Properties.of()

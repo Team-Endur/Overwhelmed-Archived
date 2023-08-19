@@ -19,6 +19,7 @@ public class OverwhelmedFabricClient implements ClientModInitializer {
     public void onInitializeClient() {
         OverwhelmedClient.initClient();
         BlockRenderLayerMap.INSTANCE.putBlock(BlockRegistry.widow.get(), RenderType.cutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(BlockRegistry.gooBlock.get(), RenderType.translucent());
         ParticleFactoryRegistry.getInstance()
                 .register((ParticleType<SimpleParticleType>) ParticleTypeRegistry.sleepySparkle.get(),
                 SleepySparkleParticle.Provider::new);

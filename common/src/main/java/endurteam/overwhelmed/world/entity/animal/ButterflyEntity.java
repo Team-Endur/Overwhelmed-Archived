@@ -2,10 +2,13 @@ package endurteam.overwhelmed.world.entity.animal;
 
 import endurteam.overwhelmed.registry.EntityTypeRegistry;
 import endurteam.overwhelmed.registry.ParticleTypeRegistry;
+import endurteam.overwhelmed.registry.SoundEventRegistry;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.network.chat.Component;
+import net.minecraft.sounds.SoundEvent;
 import net.minecraft.util.Mth;
+import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -36,6 +39,16 @@ public class ButterflyEntity extends PathfinderMob implements GeoEntity {
     @Override
     public boolean isPushable() {
         return false;
+    }
+
+    @Override
+    protected SoundEvent getHurtSound(DamageSource damageSource) {
+        return SoundEventRegistry.butterflyHurt.get();
+    }
+
+    @Override
+    protected SoundEvent getDeathSound() {
+        return SoundEventRegistry.butterflyDeath.get();
     }
 
     @Override
