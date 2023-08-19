@@ -33,4 +33,6 @@
       "overwhelmed:mob/snail/death1",
       "overwhelmed:mob/snail/death2",
       "overwhelmed:mob/snail/death3",
+      ]
+  }
 }
