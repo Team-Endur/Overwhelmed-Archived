@@ -23,7 +23,7 @@ public class BlockRegistry {
     public static RegistrySupplier<Block> snailShellBrickSlab;
     public static RegistrySupplier<Block> snailShellBrickStairs;
     public static RegistrySupplier<Block> chiseledSnailShellBricks;
-    public static RegistrySupplier<HalfTransparentBlock> gooBlock;
+    public static RegistrySupplier<Block> gooBlock;
     public static RegistrySupplier<Block> pebble;
     public static RegistrySupplier<Block> ice_cube;
     public static RegistrySupplier<Block> gold_bead;
@@ -33,7 +33,8 @@ public class BlockRegistry {
         //Must register Blocks first
         soil = registerGenericBlock("soil", BlockBehaviour.Properties.of()
                 .mapColor(MapColor.COLOR_BROWN)
-                .strength(0.5f, 0.5f));
+                .strength(0.5f, 0.5f)
+                .sound(SoundType.ROOTED_DIRT));
         snailShellBricks = registerGenericBlock("snail_shell_bricks", BlockBehaviour.Properties.of()
                 .mapColor(MapColor.COLOR_BROWN)
                 .strength(3.0f, 12.0f)
@@ -44,7 +45,7 @@ public class BlockRegistry {
                 .strength(3.0f, 12.0f)
                 .requiresCorrectToolForDrops());
         gooBlock = Overwhelmed.BLOCKS.register(new ResourceLocation(Overwhelmed.MOD_ID, "goo_block"), () ->
-                new GooBlock(BlockBehaviour.Properties.of().mapColor(MapColor.GRASS).friction(0.8f)
+                new GooBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_YELLOW).friction(0.8f)
                         .sound(SoundType.HONEY_BLOCK)
                         .noOcclusion()));
         widow = registerTallFlowerBlock("widow", () -> BlockBehaviour.Properties.of()
@@ -94,11 +95,6 @@ public class BlockRegistry {
     private static RegistrySupplier<Block> registerGenericBlock(String name, Block.Properties properties) {
         return Overwhelmed.BLOCKS.register(new ResourceLocation(Overwhelmed.MOD_ID, name), () ->
                 new Block(properties));
-    }
-    private static RegistrySupplier<Block> registerHalfTransparentBlock(Supplier<BlockState> blockStateSupplier, String name,
-                                                              Supplier<Block.Properties> propertiesSupplier) {
-        return Overwhelmed.BLOCKS.register(new ResourceLocation(Overwhelmed.MOD_ID, name), () ->
-                new HalfTransparentBlock(blockStateSupplier.get(), propertiesSupplier.get()));
     }
 
     private static void registerBlockItem(String name, RegistrySupplier<Block> blockSupplier) {
