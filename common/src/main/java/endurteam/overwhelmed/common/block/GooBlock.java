@@ -3,10 +3,10 @@ package endurteam.overwhelmed.common.block;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.HalfTransparentBlock;
 import net.minecraft.world.level.block.state.BlockState;
 
-public class GooBlock extends Block {
+public class GooBlock extends HalfTransparentBlock {
 
     public GooBlock(Properties properties) {
         super(properties);
