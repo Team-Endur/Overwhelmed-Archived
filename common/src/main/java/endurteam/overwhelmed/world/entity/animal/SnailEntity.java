@@ -45,12 +45,12 @@ public class SnailEntity extends Animal implements GeoEntity {
     }
 
     @Override
-    protected SoundEvent getHurtSound(DamageSource damageSource) {
+    public SoundEvent getHurtSound(DamageSource damageSource) {
         return SoundEventRegistry.snailHurt.get();
     }
 
     @Override
-    protected SoundEvent getDeathSound() {
+    public SoundEvent getDeathSound() {
         return SoundEventRegistry.snailDeath.get();
     }
 
