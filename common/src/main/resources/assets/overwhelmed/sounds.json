@@ -1,6 +1,7 @@
 {
   "entity.snail.hurt": {
     "subtitle": "subtitles.entity.overwhelmed.snail.hurt",
+    "category": "neutral",
     "sounds": [
       "overwhelmed:mob/snail/hurt0",
       "overwhelmed:mob/snail/hurt1",
@@ -10,6 +11,7 @@
   },
   "entity.snail.death": {
     "subtitle": "subtitles.entity.overwhelmed.snail.death",
+    "category": "neutral",
     "sounds": [
       "overwhelmed:mob/snail/death0",
       "overwhelmed:mob/snail/death1",
@@ -19,6 +21,7 @@
   },
   "entity.butterfly.hurt": {
     "subtitle": "subtitles.entity.overwhelmed.butterfly.hurt",
+    "category": "neutral",
     "sounds": [
       "overwhelmed:mob/butterfly/hurt0",
       "overwhelmed:mob/butterfly/hurt1",
@@ -28,6 +31,7 @@
   },
   "entity.butterfly.death": {
     "subtitle": "subtitles.entity.overwhelmed.butterfly.death",
+    "category": "neutral",
     "sounds": [
       "overwhelmed:mob/snail/death0",
       "overwhelmed:mob/snail/death1",
