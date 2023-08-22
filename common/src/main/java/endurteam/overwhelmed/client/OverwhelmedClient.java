@@ -23,6 +23,7 @@ public class OverwhelmedClient {
         EntityRendererRegistry.register(EntityTypeRegistry.morphoButterflyEntityType, ButterflyRenderer::new);
         EntityRendererRegistry.register(EntityTypeRegistry.cherryButterflyEntityType, ButterflyRenderer::new);
         EntityRendererRegistry.register(EntityTypeRegistry.monarchButterflyEntityType, ButterflyRenderer::new);
+        EntityRendererRegistry.register(EntityTypeRegistry.iceButterflyEntityType, ButterflyRenderer::new);
         ColorHandlerRegistry.registerItemColors(snailSpawnEggItemColor = new SnailSpawnEggItemColor(),
                 ItemRegistry.snailSpawnEggItem);
         ColorHandlerRegistry.registerItemColors(butterflySpawnEggItemColor = new ButterflySpawnEggItemColor(),

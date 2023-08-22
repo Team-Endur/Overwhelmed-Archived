@@ -57,7 +57,7 @@ public class ItemRegistry {
         butterflySpawnEggItem = Overwhelmed.ITEMS.register(new ResourceLocation(Overwhelmed.MOD_ID,
                         "butterfly_spawn_egg"), () -> new MultiSpawnEggItem(new Item.Properties()
                         .arch$tab(overwhelmedTab), (random) -> {
-                    switch (random.nextIntBetweenInclusive(1, 5)) {
+                    switch (random.nextIntBetweenInclusive(1, 6)) {
                         case 1 -> {
                             return EntityTypeRegistry.sleepyButterflyEntityType.get();
                         }
@@ -72,6 +72,9 @@ public class ItemRegistry {
                         }
                         case 5 -> {
                             return EntityTypeRegistry.monarchButterflyEntityType.get();
+                        }
+                        case 6 -> {
+                            return EntityTypeRegistry.iceButterflyEntityType.get();
                         }
                     }
                     throw new IncompatibleClassChangeError();
