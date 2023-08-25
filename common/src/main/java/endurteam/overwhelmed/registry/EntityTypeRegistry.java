@@ -73,7 +73,7 @@ public class EntityTypeRegistry {
                         .build("roman_snail"));
         sleepyButterflyEntityType = Overwhelmed.ENTITY_TYPES.register(
                 new ResourceLocation(MOD_ID, "sleepy_butterfly"), () ->
-                        EntityType.Builder.of(ButterflyEntity::new, MobCategory.CREATURE)
+                EntityType.Builder.of(ButterflyEntity::new, MobCategory.CREATURE)
                                 .sized(0.6f, 0.4f)
                                 .clientTrackingRange(8)
                                 .build("sleepy_butterfly"));
