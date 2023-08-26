@@ -39,7 +39,7 @@ public class ItemRegistry {
         snailSpawnEggItem = Overwhelmed.ITEMS.register(new ResourceLocation(Overwhelmed.MOD_ID,
                 "snail_spawn_egg"), () -> new MultiSpawnEggItem(new Item.Properties()
                         .arch$tab(overwhelmedTab), (random) -> {
-                            switch (random.nextIntBetweenInclusive(1, 3)) {
+                            switch (random.nextIntBetweenInclusive(1, 4)) {
                                 case 1 -> {
                                     return EntityTypeRegistry.gardenSnailEntityType.get();
                                 }
@@ -48,6 +48,9 @@ public class ItemRegistry {
                                 }
                                 case 3 -> {
                                     return EntityTypeRegistry.romanSnailEntityType.get();
+                                }
+                                case 4 -> {
+                                    return EntityTypeRegistry.glassSnailEntityType.get();
                                 }
                             }
                             throw new IncompatibleClassChangeError();

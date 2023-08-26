@@ -18,6 +18,9 @@ public class BiomeModifiers {
         BiomeModifications.addSpawn(bsc -> bsc.hasTag(EntityTypeRegistry.SPAWNS_ROMAN_SNAILS),
                 MobCategory.CREATURE, EntityTypeRegistry.romanSnailEntityType.get(),
                 80, 3, 8);
+        BiomeModifications.addSpawn(bsc -> bsc.hasTag(EntityTypeRegistry.SPAWNS_GLASS_SNAILS),
+                MobCategory.CREATURE, EntityTypeRegistry.glassSnailEntityType.get(),
+                20, 1, 1);
     }
 
     public static void butterflySpawning()

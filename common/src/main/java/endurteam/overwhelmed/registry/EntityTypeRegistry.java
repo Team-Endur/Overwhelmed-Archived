@@ -19,6 +19,7 @@ public class EntityTypeRegistry {
     public static RegistrySupplier<EntityType<SnailEntity>> garySnailEntityType;
     public static RegistrySupplier<EntityType<SnailEntity>> limestoneSnailEntityType;
     public static RegistrySupplier<EntityType<SnailEntity>> romanSnailEntityType;
+    public static RegistrySupplier<EntityType<SnailEntity>> glassSnailEntityType;
 
     public static RegistrySupplier<EntityType<ButterflyEntity>> cherryButterflyEntityType;
     public static RegistrySupplier<EntityType<ButterflyEntity>> cabbageButterflyEntityType;
@@ -33,6 +34,8 @@ public class EntityTypeRegistry {
             new ResourceLocation(MOD_ID, "spawns_limestone_snails"));
     public static final TagKey<Biome> SPAWNS_ROMAN_SNAILS = TagKey.create(Registries.BIOME,
             new ResourceLocation(MOD_ID, "spawns_roman_snails"));
+    public static final TagKey<Biome> SPAWNS_GLASS_SNAILS = TagKey.create(Registries.BIOME,
+            new ResourceLocation(MOD_ID, "spawns_glass_snails"));
     public static final TagKey<Biome> SPAWNS_SLEEPY_BUTTERFLIES = TagKey.create(Registries.BIOME,
             new ResourceLocation(MOD_ID, "spawns_sleepy_butterflies"));
     public static final TagKey<Biome> SPAWNS_CABBAGE_BUTTERFLIES = TagKey.create(Registries.BIOME,
@@ -71,6 +74,12 @@ public class EntityTypeRegistry {
                         .sized(0.6f, 0.4f)
                         .clientTrackingRange(8)
                         .build("roman_snail"));
+        glassSnailEntityType = Overwhelmed.ENTITY_TYPES.register(
+                new ResourceLocation(MOD_ID, "roman_snail"), () ->
+                        EntityType.Builder.of(SnailEntity::new, MobCategory.CREATURE)
+                                .sized(0.6f, 0.4f)
+                                .clientTrackingRange(8)
+                                .build("glass_snail"));
         sleepyButterflyEntityType = Overwhelmed.ENTITY_TYPES.register(
                 new ResourceLocation(MOD_ID, "sleepy_butterfly"), () ->
                 EntityType.Builder.of(ButterflyEntity::new, MobCategory.CREATURE)
@@ -113,6 +122,7 @@ public class EntityTypeRegistry {
         EntityAttributeRegistry.register(garySnailEntityType, SnailEntity::createAttributes);
         EntityAttributeRegistry.register(limestoneSnailEntityType, SnailEntity::createAttributes);
         EntityAttributeRegistry.register(romanSnailEntityType, SnailEntity::createAttributes);
+        EntityAttributeRegistry.register(glassSnailEntityType, SnailEntity::createAttributes);
         EntityAttributeRegistry.register(sleepyButterflyEntityType, ButterflyEntity::createAttributes);
         EntityAttributeRegistry.register(cabbageButterflyEntityType, ButterflyEntity::createAttributes);
         EntityAttributeRegistry.register(morphoButterflyEntityType, ButterflyEntity::createAttributes);
