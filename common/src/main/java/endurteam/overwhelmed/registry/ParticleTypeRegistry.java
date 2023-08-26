@@ -16,10 +16,5 @@ public class ParticleTypeRegistry {
                 new SimpleParticleType(false));
 
         Overwhelmed.PARTICLE_TYPES.register();
-        iceSparkle = Overwhelmed.PARTICLE_TYPES.register(
-                new ResourceLocation(Overwhelmed.MOD_ID, "ice_sparkle"), () ->
-                        new SimpleParticleType(false));
-
-        Overwhelmed.PARTICLE_TYPES.register();
     }
 }
