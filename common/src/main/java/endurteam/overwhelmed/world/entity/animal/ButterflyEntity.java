@@ -78,12 +78,6 @@ public class ButterflyEntity extends PathfinderMob implements GeoEntity {
                     this.random.nextGaussian() * 0.02, this.random.nextGaussian() * 0.02,
                     this.random.nextGaussian() * 0.02);
         }
-    }
-
-    @Override
-    public void tick() {
-        super.tick();
-        this.setDeltaMovement(this.getDeltaMovement().multiply(1.0, 0.6, 1.0));
         if (EntityTypeRegistry.iceButterflyEntityType.get().equals(this.getType())
                 && this.random.nextInt(2) < 1) // Only spawn half the time
         {

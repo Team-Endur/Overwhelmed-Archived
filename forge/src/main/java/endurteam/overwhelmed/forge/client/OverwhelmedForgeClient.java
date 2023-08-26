@@ -22,5 +22,7 @@ public class OverwhelmedForgeClient {
     public static void registerParticleEvent(RegisterParticleProvidersEvent event) {
         event.registerSpriteSet((ParticleType<SimpleParticleType>) ParticleTypeRegistry.sleepySparkle.get(),
                 SleepySparkleParticle.Provider::new);
+        event.registerSpriteSet((ParticleType<SimpleParticleType>) ParticleTypeRegistry.iceSparkle.get(),
+                SleepySparkleParticle.Provider::new);
     }
 }
