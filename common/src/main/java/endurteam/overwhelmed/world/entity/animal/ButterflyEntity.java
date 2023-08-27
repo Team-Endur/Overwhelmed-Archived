@@ -78,6 +78,16 @@ public class ButterflyEntity extends PathfinderMob implements GeoEntity {
                     this.random.nextGaussian() * 0.02, this.random.nextGaussian() * 0.02,
                     this.random.nextGaussian() * 0.02);
         }
+        if (OverwhelmedEntityTypes.furButterflyEntityType.get().equals(this.getType())
+                && this.random.nextInt(2) < 1) // Only spawn half the time
+        {
+            this.level().addParticle((ParticleOptions) OverwhelmedParticleTypes.fur.get(),
+                    this.getRandomX(1.0),
+                    this.getRandomY(),
+                    this.getRandomZ(1.0),
+                    this.random.nextGaussian() * 0.02, this.random.nextGaussian() * 0.02,
+                    this.random.nextGaussian() * 0.02);
+        }
     }
 
     @Override

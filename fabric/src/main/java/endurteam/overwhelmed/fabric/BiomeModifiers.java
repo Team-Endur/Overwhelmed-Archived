@@ -40,8 +40,8 @@ public class BiomeModifiers {
         BiomeModifications.addSpawn(bsc -> bsc.hasTag(OverwhelmedEntityTypes.SPAWNS_MONARCH_BUTTERFLIES),
                 MobCategory.CREATURE, OverwhelmedEntityTypes.monarchButterflyEntityType.get(),
                 80, 2, 4);
-        BiomeModifications.addSpawn(bsc -> bsc.hasTag(OverwhelmedEntityTypes.SPAWNS_ICE_BUTTERFLIES),
-                MobCategory.CREATURE, OverwhelmedEntityTypes.iceButterflyEntityType.get(),
+        BiomeModifications.addSpawn(bsc -> bsc.hasTag(OverwhelmedEntityTypes.SPAWNS_FUR_BUTTERFLIES),
+                MobCategory.CREATURE, OverwhelmedEntityTypes.furButterflyEntityType.get(),
                 60, 1, 1);
     }
 

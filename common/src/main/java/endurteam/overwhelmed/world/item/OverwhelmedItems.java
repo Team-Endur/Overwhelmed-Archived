@@ -3,6 +3,7 @@ package endurteam.overwhelmed.world.item;
 import dev.architectury.registry.registries.RegistrySupplier;
 import endurteam.overwhelmed.world.entity.OverwhelmedEntityTypes;
 import endurteam.overwhelmed.world.food.OverwhelmedFoods;
+import endurteam.overwhelmed.world.item.MultiSpawnEggItem;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BowlFoodItem;
 import net.minecraft.world.item.Item;
@@ -70,7 +71,7 @@ public class OverwhelmedItems {
                             return OverwhelmedEntityTypes.monarchButterflyEntityType.get();
                         }
                         case 6 -> {
-                            return OverwhelmedEntityTypes.iceButterflyEntityType.get();
+                            return OverwhelmedEntityTypes.furButterflyEntityType.get();
                         }
                     }
                     throw new IncompatibleClassChangeError();
