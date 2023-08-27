@@ -17,13 +17,7 @@ public class OverwhelmedItems {
     public static RegistrySupplier<MultiSpawnEggItem> butterflySpawnEggItem;
     public static RegistrySupplier<Item> gooBallItem;
     public static RegistrySupplier<Item> gooSoupItem;
-
-    /*
-        public static RegistrySupplier<Item> goldBeadItem;
-        public static RegistrySupplier<Item> iceCrystalShardItem;
-        public static RegistrySupplier<Item> iceCubeItem;
-        public static RegistrySupplier<Item> pebbleItem;
-     */
+    public static RegistrySupplier<Item> iceCrystalShardItem;
 
     public static void registerItems() {
         snailShellItem = registerGenericItem("snail_shell", 64, Rarity.COMMON);
@@ -38,7 +32,7 @@ public class OverwhelmedItems {
         snailSpawnEggItem = Overwhelmed.ITEMS.register(new ResourceLocation(Overwhelmed.MOD_ID,
                 "snail_spawn_egg"), () -> new MultiSpawnEggItem(new Item.Properties()
                         .arch$tab(overwhelmedTab), (random) -> {
-                            switch (random.nextIntBetweenInclusive(1, 3)) {
+                            switch (random.nextIntBetweenInclusive(1, 4)) {
                                 case 1 -> {
                                     return OverwhelmedEntityTypes.gardenSnailEntityType.get();
                                 }
@@ -48,6 +42,9 @@ public class OverwhelmedItems {
                                 case 3 -> {
                                     return OverwhelmedEntityTypes.romanSnailEntityType.get();
                                 }
+                                case 4 -> {
+                                    return OverwhelmedEntityTypes.glassSnailEntityType.get();
+                                }
                             }
                             throw new IncompatibleClassChangeError();
                         }
@@ -56,7 +53,7 @@ public class OverwhelmedItems {
         butterflySpawnEggItem = Overwhelmed.ITEMS.register(new ResourceLocation(Overwhelmed.MOD_ID,
                         "butterfly_spawn_egg"), () -> new MultiSpawnEggItem(new Item.Properties()
                         .arch$tab(overwhelmedTab), (random) -> {
-                    switch (random.nextIntBetweenInclusive(1, 4)) {
+                    switch (random.nextIntBetweenInclusive(1, 6)) {
                         case 1 -> {
                             return OverwhelmedEntityTypes.sleepyButterflyEntityType.get();
                         }
@@ -69,17 +66,18 @@ public class OverwhelmedItems {
                         case 4 -> {
                             return OverwhelmedEntityTypes.cherryButterflyEntityType.get();
                         }
+                        case 5 -> {
+                            return OverwhelmedEntityTypes.monarchButterflyEntityType.get();
+                        }
+                        case 6 -> {
+                            return OverwhelmedEntityTypes.iceButterflyEntityType.get();
+                        }
                     }
                     throw new IncompatibleClassChangeError();
                 }
                 )
         );
-        /*
-        goldBeadItem = registerItem("gold_bead", 64, Rarity.UNCOMMON);
-        iceCrystalShardItem = registerItem("ice_crystal_shard", 64, Rarity.UNCOMMON);
-        iceCubeItem = registerItem("ice_cube", 64, Rarity.COMMON);
-        pebbleItem = registerItem("pebble", 64, Rarity.COMMON);
-         */
+        iceCrystalShardItem = registerGenericItem("ice_crystal_shard", 64, Rarity.UNCOMMON);
 
 
         Overwhelmed.ITEMS.register();

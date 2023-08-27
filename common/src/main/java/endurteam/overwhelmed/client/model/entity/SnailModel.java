@@ -16,6 +16,8 @@ public class SnailModel extends GeoModel<SnailEntity> {
             new ResourceLocation(Overwhelmed.MOD_ID, "textures/entity/snail/snail_limestone.png");
     private static final ResourceLocation ROMAN_TEXTURE =
             new ResourceLocation(Overwhelmed.MOD_ID, "textures/entity/snail/snail_roman.png");
+    private static final ResourceLocation GLASS_TEXTURE =
+            new ResourceLocation(Overwhelmed.MOD_ID, "textures/entity/snail/snail_glass.png");
     private static final ResourceLocation GARDEN_MODEL =
             new ResourceLocation(Overwhelmed.MOD_ID, "geo/entity/snail_garden.geo.json");
     private static final ResourceLocation GARY_MODEL =
@@ -24,6 +26,8 @@ public class SnailModel extends GeoModel<SnailEntity> {
             new ResourceLocation(Overwhelmed.MOD_ID, "geo/entity/snail_limestone.geo.json");
     private static final ResourceLocation ROMAN_MODEL =
             new ResourceLocation(Overwhelmed.MOD_ID, "geo/entity/snail_roman.geo.json");
+    private static final ResourceLocation GLASS_MODEL =
+            new ResourceLocation(Overwhelmed.MOD_ID, "geo/entity/snail_glass.geo.json");
     private static final ResourceLocation GARDEN_ANIMATION =
             new ResourceLocation(Overwhelmed.MOD_ID, "animations/entity/snail_garden.animation.json");
     private static final ResourceLocation GARY_ANIMATION =
@@ -31,6 +35,8 @@ public class SnailModel extends GeoModel<SnailEntity> {
     private static final ResourceLocation LIMESTONE_ANIMATION =
             new ResourceLocation(Overwhelmed.MOD_ID, "animations/entity/snail_limestone.animation.json");
     private static final ResourceLocation ROMAN_ANIMATION =
+            new ResourceLocation(Overwhelmed.MOD_ID, "animations/entity/snail_roman.animation.json");
+    private static final ResourceLocation GLASS_ANIMATION =
             new ResourceLocation(Overwhelmed.MOD_ID, "animations/entity/snail_roman.animation.json");
 
     public static ResourceLocation getVariantTexture(SnailEntity animatable) {
@@ -43,6 +49,8 @@ public class SnailModel extends GeoModel<SnailEntity> {
             return LIMESTONE_TEXTURE;
         } else if (OverwhelmedEntityTypes.romanSnailEntityType.get().equals(type)) {
             return ROMAN_TEXTURE;
+        } else if (OverwhelmedEntityTypes.glassSnailEntityType.get().equals(type)) {
+            return GLASS_TEXTURE;
         }
         throw new IncompatibleClassChangeError();
     }
@@ -57,6 +65,8 @@ public class SnailModel extends GeoModel<SnailEntity> {
             return LIMESTONE_MODEL;
         } else if (OverwhelmedEntityTypes.romanSnailEntityType.get().equals(type)) {
             return ROMAN_MODEL;
+        } else if (OverwhelmedEntityTypes.glassSnailEntityType.get().equals(type)) {
+            return GLASS_MODEL;
         }
         throw new IncompatibleClassChangeError();
     }
@@ -71,6 +81,8 @@ public class SnailModel extends GeoModel<SnailEntity> {
             return LIMESTONE_ANIMATION;
         } else if (OverwhelmedEntityTypes.romanSnailEntityType.get().equals(type)) {
             return ROMAN_ANIMATION;
+        } else if (OverwhelmedEntityTypes.glassSnailEntityType.get().equals(type)) {
+            return GLASS_ANIMATION;
         }
         throw new IncompatibleClassChangeError();
     }

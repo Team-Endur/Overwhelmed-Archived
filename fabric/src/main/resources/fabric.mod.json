@@ -20,7 +20,7 @@
       "endurteam.overwhelmed.fabric.OverwhelmedFabric"
     ],
     "client": [
-      "endurteam.overwhelmed.fabric.OverwhelmedFabricClient"
+      "endurteam.overwhelmed.fabric.client.OverwhelmedFabricClient"
     ]
   },
   "mixins": [

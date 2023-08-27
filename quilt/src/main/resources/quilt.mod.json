@@ -9,7 +9,7 @@
         "endurteam.overwhelmed.quilt.OverwhelmedQuilt"
       ],
       "client_init": [
-        "endurteam.overwhelmed.quilt.OverwhelmedQuiltClient"
+        "endurteam.overwhelmed.quilt.client.OverwhelmedQuiltClient"
       ]
     },
     "depends": [

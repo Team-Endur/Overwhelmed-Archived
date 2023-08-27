@@ -3,7 +3,7 @@ architectury {
 }
 
 loom {
-    // accessWidenerPath = file("src/main/resources/overwhelmed.accesswidener")
+    accessWidenerPath = file("src/main/resources/overwhelmed.accesswidener")
 }
 
 repositories {

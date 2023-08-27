@@ -1,6 +1,5 @@
 package endurteam.overwhelmed.fabric;
 
-import endurteam.overwhelmed.Overwhelmed;
 import endurteam.overwhelmed.fabriclike.OverwhelmedFabricLike;
 import net.fabricmc.api.ModInitializer;
 
@@ -10,5 +9,7 @@ public class OverwhelmedFabric implements ModInitializer {
         OverwhelmedFabricLike.init();
         BiomeModifiers.snailSpawning();
         BiomeModifiers.butterflySpawning();
+        BiomeModifiers.soilGeneration();
+        BiomeModifiers.widowGeneration();
     }
 }

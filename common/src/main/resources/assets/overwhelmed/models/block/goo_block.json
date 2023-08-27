@@ -2,5 +2,6 @@
   "parent": "block/cube_all",
   "textures": {
     "all": "overwhelmed:block/goo_block"
-  }
+  },
+  "render_type": "translucent"
 }

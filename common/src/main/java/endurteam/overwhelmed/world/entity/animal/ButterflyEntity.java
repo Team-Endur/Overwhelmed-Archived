@@ -1,8 +1,14 @@
 package endurteam.overwhelmed.world.entity.animal;
 
+import endurteam.overwhelmed.core.particles.OverwhelmedParticleTypes;
+import endurteam.overwhelmed.sounds.OverwhelmedSoundEvents;
+import endurteam.overwhelmed.world.entity.OverwhelmedEntityTypes;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.network.chat.Component;
+import net.minecraft.sounds.SoundEvent;
 import net.minecraft.util.Mth;
+import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -36,6 +42,16 @@ public class ButterflyEntity extends PathfinderMob implements GeoEntity {
     }
 
     @Override
+    public SoundEvent getHurtSound(DamageSource damageSource) {
+        return OverwhelmedSoundEvents.butterflyHurt.get();
+    }
+
+    @Override
+    public SoundEvent getDeathSound() {
+        return OverwhelmedSoundEvents.butterflyDeath.get();
+    }
+
+    @Override
     protected void doPush(Entity entity) {
     }
 
@@ -52,6 +68,16 @@ public class ButterflyEntity extends PathfinderMob implements GeoEntity {
     public void tick() {
         super.tick();
         this.setDeltaMovement(this.getDeltaMovement().multiply(1.0, 0.6, 1.0));
+        if (OverwhelmedEntityTypes.sleepyButterflyEntityType.get().equals(this.getType())
+                && this.random.nextInt(2) < 1) // Only spawn half the time
+        {
+            this.level().addParticle((ParticleOptions) OverwhelmedParticleTypes.sleepySparkle.get(),
+                    this.getRandomX(1.0),
+                    this.getRandomY(),
+                    this.getRandomZ(1.0),
+                    this.random.nextGaussian() * 0.02, this.random.nextGaussian() * 0.02,
+                    this.random.nextGaussian() * 0.02);
+        }
     }
 
     @Override

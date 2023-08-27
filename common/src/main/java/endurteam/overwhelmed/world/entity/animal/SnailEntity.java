@@ -120,6 +120,8 @@ public class SnailEntity extends Animal implements GeoEntity {
             return 0.15f;
         } else if (OverwhelmedEntityTypes.romanSnailEntityType.get().equals(type)) {
             return 0.2f;
+        } else if (OverwhelmedEntityTypes.glassSnailEntityType.get().equals(type)) {
+            return 0.2f;
         }
         throw new IncompatibleClassChangeError();
     }
