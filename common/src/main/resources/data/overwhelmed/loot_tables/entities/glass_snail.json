@@ -57,7 +57,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "overwhelmed:snail_shell"
+          "name": "minecraft:glass"
         }
       ],
       "rolls": 1.0

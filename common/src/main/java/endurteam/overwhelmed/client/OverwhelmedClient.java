@@ -18,6 +18,7 @@ public class OverwhelmedClient {
         EntityRendererRegistry.register(EntityTypeRegistry.garySnailEntityType, SnailRenderer::new);
         EntityRendererRegistry.register(EntityTypeRegistry.limestoneSnailEntityType, SnailRenderer::new);
         EntityRendererRegistry.register(EntityTypeRegistry.romanSnailEntityType, SnailRenderer::new);
+        EntityRendererRegistry.register(EntityTypeRegistry.glassSnailEntityType, SnailRenderer::new);
         EntityRendererRegistry.register(EntityTypeRegistry.sleepyButterflyEntityType, ButterflyRenderer::new);
         EntityRendererRegistry.register(EntityTypeRegistry.cabbageButterflyEntityType, ButterflyRenderer::new);
         EntityRendererRegistry.register(EntityTypeRegistry.morphoButterflyEntityType, ButterflyRenderer::new);
