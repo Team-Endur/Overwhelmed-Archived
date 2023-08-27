@@ -46,7 +46,7 @@ public class EntityTypeRegistry {
             new ResourceLocation(MOD_ID, "spawns_cherry_butterflies"));
     public static final TagKey<Biome> SPAWNS_MONARCH_BUTTERFLIES = TagKey.create(Registries.BIOME,
             new ResourceLocation(MOD_ID, "spawns_monarch_butterflies"));
-    public static final TagKey<Biome> SPAWNS_ICE_BUTTERFLIES = TagKey.create(Registries.BIOME,
+    public static final TagKey<Biome> SPAWNS_FUR_BUTTERFLIES = TagKey.create(Registries.BIOME,
             new ResourceLocation(MOD_ID, "spawns_fur_butterflies"));
 
     public static void registerEntities() {
