@@ -75,7 +75,7 @@ public class EntityTypeRegistry {
                         .clientTrackingRange(8)
                         .build("roman_snail"));
         glassSnailEntityType = Overwhelmed.ENTITY_TYPES.register(
-                new ResourceLocation(MOD_ID, "roman_snail"), () ->
+                new ResourceLocation(MOD_ID, "glass_snail"), () ->
                         EntityType.Builder.of(SnailEntity::new, MobCategory.CREATURE)
                                 .sized(0.6f, 0.4f)
                                 .clientTrackingRange(8)
