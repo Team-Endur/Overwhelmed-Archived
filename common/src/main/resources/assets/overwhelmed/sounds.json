@@ -22,20 +22,20 @@
     "subtitle": "subtitles.entity.overwhelmed.butterfly.hurt",
     "category": "neutral",
     "sounds": [
-      "overwhelmed:mob/butterfly/hurt0",
       "overwhelmed:mob/butterfly/hurt1",
       "overwhelmed:mob/butterfly/hurt2",
-      "overwhelmed:mob/butterfly/hurt3"
-      ]
+      "overwhelmed:mob/butterfly/hurt3",
+      "overwhelmed:mob/butterfly/hurt4"
+    ]
   },
   "entity.butterfly.death": {
     "subtitle": "subtitles.entity.overwhelmed.butterfly.death",
     "category": "neutral",
     "sounds": [
-      "overwhelmed:mob/butterfly/death0",
       "overwhelmed:mob/butterfly/death1",
       "overwhelmed:mob/butterfly/death2",
-      "overwhelmed:mob/butterfly/death3"
-      ]
+      "overwhelmed:mob/butterfly/death3",
+      "overwhelmed:mob/butterfly/death4"
+    ]
   }
 }

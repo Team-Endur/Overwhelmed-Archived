@@ -1,7 +1,6 @@
 package endurteam.overwhelmed.fabric.client;
 
 import endurteam.overwhelmed.client.OverwhelmedClient;
-import endurteam.overwhelmed.client.particle.SleepySparkleParticle;
 import endurteam.overwhelmed.client.particle.FurParticle;
 import endurteam.overwhelmed.core.particles.OverwhelmedParticleTypes;
 import endurteam.overwhelmed.world.level.block.OverwhelmedBlocks;
@@ -21,8 +20,6 @@ public class OverwhelmedFabricClient implements ClientModInitializer {
         OverwhelmedClient.initClient();
         BlockRenderLayerMap.INSTANCE.putBlock(OverwhelmedBlocks.widow.get(), RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(OverwhelmedBlocks.gooBlock.get(), RenderType.translucent());
-        ParticleFactoryRegistry.getInstance().register((ParticleType<SimpleParticleType>) OverwhelmedParticleTypes
-                .sleepySparkle.get(), SleepySparkleParticle.Provider::new);
         ParticleFactoryRegistry.getInstance().register((ParticleType<SimpleParticleType>) OverwhelmedParticleTypes
                 .fur.get(), FurParticle.Provider::new);
     }

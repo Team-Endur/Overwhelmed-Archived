@@ -1,7 +1,9 @@
 package endurteam.overwhelmed;
 
 import dev.architectury.registry.registries.DeferredRegister;
+import endurteam.overwhelmed.core.particles.OverwhelmedParticleTypes;
 import endurteam.overwhelmed.sounds.OverwhelmedSoundEvents;
+import endurteam.overwhelmed.world.effect.OverwhelmedMobEffects;
 import endurteam.overwhelmed.world.entity.OverwhelmedEntityTypes;
 import endurteam.overwhelmed.world.item.OverwhelmedCreativeTabs;
 import endurteam.overwhelmed.world.item.OverwhelmedItems;
@@ -31,6 +33,8 @@ public class Overwhelmed {
 			= DeferredRegister.create(MOD_ID, Registries.MOB_EFFECT);
 
 	public static void init() {
+		OverwhelmedMobEffects.registerMobEffects();
+		OverwhelmedParticleTypes.registerParticleTypes();
 		OverwhelmedSoundEvents.registerSoundEvents();
 		OverwhelmedCreativeTabs.registerCreativeTab();
 		OverwhelmedEntityTypes.registerEntities();
