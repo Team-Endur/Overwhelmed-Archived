@@ -1,7 +1,7 @@
 package endurteam.overwhelmed.forge.client;
 
 import endurteam.overwhelmed.client.OverwhelmedClient;
-import endurteam.overwhelmed.client.particle.SleepySparkleParticle;
+import endurteam.overwhelmed.client.particle.FurParticle;
 import endurteam.overwhelmed.registry.ParticleTypeRegistry;
 import net.minecraft.core.particles.ParticleType;
 import net.minecraft.core.particles.SimpleParticleType;
@@ -20,7 +20,7 @@ public class OverwhelmedForgeClient {
 
     @SubscribeEvent
     public static void registerParticleEvent(RegisterParticleProvidersEvent event) {
-        event.registerSpriteSet((ParticleType<SimpleParticleType>) ParticleTypeRegistry.sleepySparkle.get(),
-                SleepySparkleParticle.Provider::new);
+        event.registerSpriteSet((ParticleType<SimpleParticleType>) ParticleTypeRegistry.fur.get(),
+                FurParticle.Provider::new);
     }
 }

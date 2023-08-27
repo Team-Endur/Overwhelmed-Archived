@@ -26,7 +26,7 @@ public class EntityTypeRegistry {
     public static RegistrySupplier<EntityType<ButterflyEntity>> morphoButterflyEntityType;
     public static RegistrySupplier<EntityType<ButterflyEntity>> sleepyButterflyEntityType;
     public static RegistrySupplier<EntityType<ButterflyEntity>> monarchButterflyEntityType;
-    public static RegistrySupplier<EntityType<ButterflyEntity>> iceButterflyEntityType;
+    public static RegistrySupplier<EntityType<ButterflyEntity>> furButterflyEntityType;
 
     public static final TagKey<Biome> SPAWNS_GARDEN_SNAILS = TagKey.create(Registries.BIOME,
             new ResourceLocation(MOD_ID, "spawns_garden_snails"));
@@ -47,7 +47,7 @@ public class EntityTypeRegistry {
     public static final TagKey<Biome> SPAWNS_MONARCH_BUTTERFLIES = TagKey.create(Registries.BIOME,
             new ResourceLocation(MOD_ID, "spawns_monarch_butterflies"));
     public static final TagKey<Biome> SPAWNS_ICE_BUTTERFLIES = TagKey.create(Registries.BIOME,
-            new ResourceLocation(MOD_ID, "spawns_ice_butterflies"));
+            new ResourceLocation(MOD_ID, "spawns_fur_butterflies"));
 
     public static void registerEntities() {
         gardenSnailEntityType = Overwhelmed.ENTITY_TYPES.register(
@@ -110,12 +110,12 @@ public class EntityTypeRegistry {
                                 .sized(0.6f, 0.4f)
                                 .clientTrackingRange(8)
                                 .build("monarch_butterfly"));
-        iceButterflyEntityType = Overwhelmed.ENTITY_TYPES.register(
-                new ResourceLocation(MOD_ID, "ice_butterfly"), () ->
+        furButterflyEntityType = Overwhelmed.ENTITY_TYPES.register(
+                new ResourceLocation(MOD_ID, "fur_butterfly"), () ->
                         EntityType.Builder.of(ButterflyEntity::new, MobCategory.CREATURE)
                                 .sized(0.6f, 0.4f)
                                 .clientTrackingRange(8)
-                                .build("ice_butterfly"));
+                                .build("fur_butterfly"));
         Overwhelmed.ENTITY_TYPES.register();
 
         EntityAttributeRegistry.register(gardenSnailEntityType, SnailEntity::createAttributes);
@@ -128,6 +128,6 @@ public class EntityTypeRegistry {
         EntityAttributeRegistry.register(morphoButterflyEntityType, ButterflyEntity::createAttributes);
         EntityAttributeRegistry.register(cherryButterflyEntityType, ButterflyEntity::createAttributes);
         EntityAttributeRegistry.register(monarchButterflyEntityType, ButterflyEntity::createAttributes);
-        EntityAttributeRegistry.register(iceButterflyEntityType, ButterflyEntity::createAttributes);
+        EntityAttributeRegistry.register(furButterflyEntityType, ButterflyEntity::createAttributes);
     }
 }

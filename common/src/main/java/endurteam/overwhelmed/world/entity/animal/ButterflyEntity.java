@@ -68,10 +68,10 @@ public class ButterflyEntity extends PathfinderMob implements GeoEntity {
     public void tick() {
         super.tick();
         this.setDeltaMovement(this.getDeltaMovement().multiply(1.0, 0.6, 1.0));
-        if (EntityTypeRegistry.sleepyButterflyEntityType.get().equals(this.getType())
+        if (EntityTypeRegistry.furButterflyEntityType.get().equals(this.getType())
                 && this.random.nextInt(2) < 1) // Only spawn half the time
         {
-            this.level().addParticle((ParticleOptions) ParticleTypeRegistry.sleepySparkle.get(),
+            this.level().addParticle((ParticleOptions) ParticleTypeRegistry.fur.get(),
                     this.getRandomX(1.0),
                     this.getRandomY(),
                     this.getRandomZ(1.0),

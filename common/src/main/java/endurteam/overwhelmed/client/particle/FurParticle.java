@@ -9,10 +9,10 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 @Environment(value= EnvType.CLIENT)
-public class SleepySparkleParticle extends TextureSheetParticle {
+public class FurParticle extends TextureSheetParticle {
     private final SpriteSet sprites;
-    SleepySparkleParticle(ClientLevel clientLevel, double d, double e, double f, double g, double h, double i,
-                          SpriteSet spriteSet) {
+    FurParticle(ClientLevel clientLevel, double d, double e, double f, double g, double h, double i,
+                SpriteSet spriteSet) {
         super(clientLevel, d, e, f, g, h, i);
         this.sprites = spriteSet;
         this.setSpriteFromAge(spriteSet);
@@ -42,7 +42,7 @@ public class SleepySparkleParticle extends TextureSheetParticle {
         @Override
         public Particle createParticle(SimpleParticleType particleOptions, ClientLevel clientLevel, double d, double e,
                                        double f, double g, double h, double i) {
-            return new SleepySparkleParticle(clientLevel, d, e, f, g, h, i, this.sprite);
+            return new FurParticle(clientLevel, d, e, f, g, h, i, this.sprite);
         }
     }
 }

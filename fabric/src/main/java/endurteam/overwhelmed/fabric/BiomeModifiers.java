@@ -40,8 +40,8 @@ public class BiomeModifiers {
         BiomeModifications.addSpawn(bsc -> bsc.hasTag(EntityTypeRegistry.SPAWNS_MONARCH_BUTTERFLIES),
                 MobCategory.CREATURE, EntityTypeRegistry.monarchButterflyEntityType.get(),
                 80, 2, 4);
-        BiomeModifications.addSpawn(bsc -> bsc.hasTag(EntityTypeRegistry.SPAWNS_ICE_BUTTERFLIES),
-                MobCategory.CREATURE, EntityTypeRegistry.iceButterflyEntityType.get(),
+        BiomeModifications.addSpawn(bsc -> bsc.hasTag(EntityTypeRegistry.SPAWNS_FUR_BUTTERFLIES),
+                MobCategory.CREATURE, EntityTypeRegistry.furButterflyEntityType.get(),
                 60, 1, 1);
     }
 

@@ -77,7 +77,7 @@ public class ItemRegistry {
                             return EntityTypeRegistry.monarchButterflyEntityType.get();
                         }
                         case 6 -> {
-                            return EntityTypeRegistry.iceButterflyEntityType.get();
+                            return EntityTypeRegistry.furButterflyEntityType.get();
                         }
                     }
                     throw new IncompatibleClassChangeError();
