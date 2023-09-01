@@ -24,7 +24,7 @@ public class OverwhelmedBlocks {
     public static RegistrySupplier<Block> snailShellBrickSlab;
     public static RegistrySupplier<Block> snailShellBrickStairs;
     public static RegistrySupplier<Block> chiseledSnailShellBricks;
-    public static RegistrySupplier<GooBlock> gooBlock;
+    public static RegistrySupplier<Block> gooBlock;
     public static RegistrySupplier<Block> goo;
     public static RegistrySupplier<Block> pebble;
     public static RegistrySupplier<Block> ice_cube;
