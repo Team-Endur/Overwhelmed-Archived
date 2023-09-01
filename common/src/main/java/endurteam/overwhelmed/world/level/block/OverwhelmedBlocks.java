@@ -49,11 +49,12 @@ public class OverwhelmedBlocks {
         gooBlock = Overwhelmed.BLOCKS.register(new ResourceLocation(Overwhelmed.MOD_ID, "goo_block"), () ->
                 new GooBlock(BlockBehaviour.Properties.of()
                         .mapColor(MapColor.COLOR_YELLOW)
+                        .friction(0.6f)
                         .friction(0.8f)
                         .sound(SoundType.HONEY_BLOCK)
+                        .noOcclusion()
                         .jumpFactor(0.5f)
-                        .speedFactor(0.4f)
-                        .noOcclusion()));
+                        .speedFactor(0.4f)));
         widow = registerTallFlowerBlock("widow", () -> BlockBehaviour.Properties.of()
                 .mapColor(MapColor.PLANT)
                 .noCollission()
