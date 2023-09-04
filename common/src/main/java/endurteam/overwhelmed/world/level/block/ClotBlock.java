@@ -45,7 +45,7 @@ public class ClotBlock extends HorizontalDirectionalBlock {
 
     @Override
     public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
-        return Shapes.empty();
+        return box(6.0, 0.0, 6.0, 10.0, 2.0, 10.0);
     }
 
 }
