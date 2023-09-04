@@ -61,6 +61,12 @@ public class OverwhelmedBlocks {
                 .offsetType(BlockBehaviour.OffsetType.XZ)
                 .ignitedByLava()
                 .pushReaction(PushReaction.DESTROY));
+        pebble = registerClotBlock("pebble", BlockBehaviour.Properties.of()
+                .mapColor(MapColor.STONE)
+                .strength(0f, 6f)
+                .noCollission()
+                .sound(SoundType.STONE)
+                .noOcclusion());
         //These are sub blocks, these must stay down here, or it breaks.
         registerBlockItem("soil", soil);
         snailShellBrickWall = registerWallBlock("snail_shell_brick_wall",
@@ -77,6 +83,7 @@ public class OverwhelmedBlocks {
         registerBlockItem("goo_block", gooBlock);
         registerCustomBlockItem("widow", () -> new DoubleHighBlockItem(widow.get(), new Item.Properties()
                 .arch$tab(OverwhelmedCreativeTabs.overwhelmedTab)));
+        registerBlockItem("pebble", pebble);
 
         Overwhelmed.BLOCKS.register();
     }
@@ -115,5 +122,9 @@ public class OverwhelmedBlocks {
                                                              Supplier<Block.Properties> propertiesSupplier) {
         return Overwhelmed.BLOCKS.register(new ResourceLocation(Overwhelmed.MOD_ID, name), () ->
                 new TallFlowerBlock(propertiesSupplier.get()));
+    }
+    private static RegistrySupplier<Block> registerClotBlock(String name, Block.Properties properties) {
+        return Overwhelmed.BLOCKS.register(new ResourceLocation(Overwhelmed.MOD_ID, name), () ->
+                new ClotBlock(properties));
     }
 }

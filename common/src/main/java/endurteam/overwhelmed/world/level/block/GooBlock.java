@@ -22,19 +22,4 @@ public class GooBlock extends HalfTransparentBlock {
     public VoxelShape getCollisionShape(BlockState blockState, BlockGetter blockGetter, BlockPos blockPos, CollisionContext collisionContext) {
         return SHAPE;
     }
-
-    public static void showJumpParticles(Entity entity) {
-        showParticles(entity, 10);
-    }
-
-    private static void showParticles(Entity entity, int i) {
-        if (entity.level().isClientSide) {
-            BlockState blockState = Blocks.HONEY_BLOCK.defaultBlockState();
-
-            for(int j = 0; j < i; ++j) {
-                entity.level().addParticle(new BlockParticleOption(ParticleTypes.BLOCK, blockState), entity.getX(), entity.getY(), entity.getZ(), 0.0, 0.0, 0.0);
-            }
-
-        }
-    }
 }
