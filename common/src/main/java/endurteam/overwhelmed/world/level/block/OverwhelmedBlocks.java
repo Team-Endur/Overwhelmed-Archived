@@ -12,7 +12,6 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.MapColor;
 import endurteam.overwhelmed.Overwhelmed;
 import net.minecraft.world.level.material.PushReaction;
-import net.minecraft.world.level.block.SnowLayerBlock;
 
 import java.util.function.Supplier;
 
@@ -25,7 +24,6 @@ public class OverwhelmedBlocks {
     public static RegistrySupplier<Block> snailShellBrickStairs;
     public static RegistrySupplier<Block> chiseledSnailShellBricks;
     public static RegistrySupplier<Block> gooBlock;
-    public static RegistrySupplier<Block> goo;
     public static RegistrySupplier<Block> pebble;
     public static RegistrySupplier<Block> ice_cube;
     public static RegistrySupplier<Block> gold_bead;
@@ -63,14 +61,6 @@ public class OverwhelmedBlocks {
                 .offsetType(BlockBehaviour.OffsetType.XZ)
                 .ignitedByLava()
                 .pushReaction(PushReaction.DESTROY));
-        goo = registerSnowLayerBlock("goo", BlockBehaviour.Properties.of()
-                .mapColor(MapColor.COLOR_YELLOW)
-                .strength(0.1f, 0.1f)
-                .sound(SoundType.HONEY_BLOCK)
-                .pushReaction(PushReaction.DESTROY)
-                .jumpFactor(0.5f)
-                .speedFactor(0.4f)
-                .noOcclusion());
         //These are sub blocks, these must stay down here, or it breaks.
         registerBlockItem("soil", soil);
         snailShellBrickWall = registerWallBlock("snail_shell_brick_wall",
@@ -87,7 +77,6 @@ public class OverwhelmedBlocks {
         registerBlockItem("goo_block", gooBlock);
         registerCustomBlockItem("widow", () -> new DoubleHighBlockItem(widow.get(), new Item.Properties()
                 .arch$tab(OverwhelmedCreativeTabs.overwhelmedTab)));
-        registerBlockItem("goo", goo);
 
         Overwhelmed.BLOCKS.register();
     }
@@ -111,10 +100,6 @@ public class OverwhelmedBlocks {
     private static RegistrySupplier<Block> registerGenericBlock(String name, Block.Properties properties) {
         return Overwhelmed.BLOCKS.register(new ResourceLocation(Overwhelmed.MOD_ID, name), () ->
                 new Block(properties));
-    }
-    private static RegistrySupplier<Block> registerSnowLayerBlock(String name, Block.Properties properties) {
-        return Overwhelmed.BLOCKS.register(new ResourceLocation(Overwhelmed.MOD_ID, name), () ->
-                new SnowLayerBlock(properties));
     }
 
     private static void registerBlockItem(String name, RegistrySupplier<Block> blockSupplier) {
