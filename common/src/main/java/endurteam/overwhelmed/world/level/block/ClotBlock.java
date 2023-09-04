@@ -1,12 +1,11 @@
 package endurteam.overwhelmed.world.level.block;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.HorizontalDirectionalBlock;
-import net.minecraft.world.level.block.Mirror;
-import net.minecraft.world.level.block.Rotation;
+import net.minecraft.world.level.LevelReader;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -14,8 +13,9 @@ import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import org.jetbrains.annotations.NotNull;
 
-public class ClotBlock extends HorizontalDirectionalBlock {
+public class ClotBlock extends FaceAttachedHorizontalDirectionalBlock {
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
 
     protected ClotBlock (Properties properties) {
@@ -28,13 +28,13 @@ public class ClotBlock extends HorizontalDirectionalBlock {
     }
 
     @Override
-    public BlockState rotate(BlockState placeState, Rotation placeRotation) {
-        return placeState.setValue(FACING, placeRotation.rotate(placeState.getValue(FACING)));
+    public BlockState rotate(BlockState pState, Rotation pRotation) {
+        return pState.setValue(FACING, pRotation.rotate(pState.getValue(FACING)));
     }
 
     @Override
-    public BlockState mirror(BlockState placeState, Mirror placeMirror) {
-        return placeState.rotate(placeMirror.getRotation(placeState.getValue(FACING)));
+    public BlockState mirror(BlockState pState, Mirror pMirror) {
+        return pState.rotate(pMirror.getRotation(pState.getValue(FACING)));
     }
 
     @Override
@@ -48,4 +48,8 @@ public class ClotBlock extends HorizontalDirectionalBlock {
         return box(6.0, 0.0, 6.0, 10.0, 2.0, 10.0);
     }
 
+    @SuppressWarnings("deprecation")
+    public boolean canSurvive(@NotNull BlockState pState, @NotNull LevelReader pLevel, @NotNull BlockPos pPos) {
+        return Block.canSupportCenter(pLevel, pPos.below(), Direction.UP);
+    }
 }

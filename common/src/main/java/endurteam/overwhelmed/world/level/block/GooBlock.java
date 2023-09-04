@@ -18,6 +18,7 @@ public class GooBlock extends HalfTransparentBlock {
         super(properties);
     }
     protected static final VoxelShape SHAPE = Block.box(1.0, 0.0, 1.0, 14.0, 14.0, 14.0);
+
     @Override
     public VoxelShape getCollisionShape(BlockState blockState, BlockGetter blockGetter, BlockPos blockPos, CollisionContext collisionContext) {
         return SHAPE;

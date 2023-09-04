@@ -67,6 +67,18 @@ public class OverwhelmedBlocks {
                 .noCollission()
                 .sound(SoundType.STONE)
                 .noOcclusion());
+        ice_cube = registerClotBlock("ice_cube", BlockBehaviour.Properties.of()
+                .mapColor(MapColor.ICE)
+                .strength(0f, 6f)
+                .noCollission()
+                .sound(SoundType.STONE)
+                .noOcclusion());
+        gold_bead = registerClotBlock("gold_bead", BlockBehaviour.Properties.of()
+                .mapColor(MapColor.GOLD)
+                .strength(0f, 6f)
+                .noCollission()
+                .sound(SoundType.STONE)
+                .noOcclusion());
         //These are sub blocks, these must stay down here, or it breaks.
         registerBlockItem("soil", soil);
         snailShellBrickWall = registerWallBlock("snail_shell_brick_wall",
@@ -84,6 +96,8 @@ public class OverwhelmedBlocks {
         registerCustomBlockItem("widow", () -> new DoubleHighBlockItem(widow.get(), new Item.Properties()
                 .arch$tab(OverwhelmedCreativeTabs.overwhelmedTab)));
         registerBlockItem("pebble", pebble);
+        registerBlockItem("ice_cube", ice_cube);
+        registerBlockItem("gold_bead", gold_bead);
 
         Overwhelmed.BLOCKS.register();
     }
