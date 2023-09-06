@@ -15,7 +15,7 @@ import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.NotNull;
 
-public class ClotBlock extends FaceAttachedHorizontalDirectionalBlock {
+public class ClotBlock extends FallingBlock {
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
 
     protected ClotBlock (Properties properties) {

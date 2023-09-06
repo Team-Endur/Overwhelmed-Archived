@@ -14,5 +14,14 @@ public class OverwhelmedConfiguredFeatures {
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> GENERATE_WIDOW =
             ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(MOD_ID, "generate_widow"));
-    
+
+    public static final ResourceKey<ConfiguredFeature<?, ?>> GENERATE_PEBBLE =
+            ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(MOD_ID, "generate_pebble"));
+
+    public static final ResourceKey<ConfiguredFeature<?, ?>> GENERATE_ICE_CUBE =
+            ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(MOD_ID, "generate_ice_cube"));
+
+    public static final ResourceKey<ConfiguredFeature<?, ?>> GENERATE_GOLD_BEAD =
+            ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(MOD_ID, "generate_gold_bead"));
+
 }
