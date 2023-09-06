@@ -9,8 +9,6 @@ import net.minecraft.world.item.*;
 import endurteam.overwhelmed.Overwhelmed;
 import net.minecraft.world.level.block.Block;
 
-import java.util.function.Supplier;
-
 import static endurteam.overwhelmed.world.item.OverwhelmedCreativeTabs.overwhelmedTab;
 
 public class OverwhelmedItems {
@@ -22,9 +20,9 @@ public class OverwhelmedItems {
     public static RegistrySupplier<BlockItem> snailShellBrickStairsBlockItem;
     public static RegistrySupplier<BlockItem> chiseledSnailShellBricksBlockItem;
     public static RegistrySupplier<BlockItem> gooBlockBlockItem;
-    public static RegistrySupplier<ClotBlockItem> pebbleBlockItem;
-    public static RegistrySupplier<ClotBlockItem> iceCubeBlockItem;
-    public static RegistrySupplier<ClotBlockItem> goldBeadBlockItem;
+    public static RegistrySupplier<PebbleBlockItem> pebbleBlockItem;
+    public static RegistrySupplier<BlockItem> iceCubeBlockItem;
+    public static RegistrySupplier<BlockItem> goldBeadBlockItem;
     public static RegistrySupplier<Item> snailShellItem;
     public static RegistrySupplier<MultiSpawnEggItem> snailSpawnEggItem;
     public static RegistrySupplier<MultiSpawnEggItem> butterflySpawnEggItem;
@@ -40,7 +38,7 @@ public class OverwhelmedItems {
                         .stacksTo(1)
                         .rarity(Rarity.COMMON)
                         .food(OverwhelmedFoods.GOO_SOUP)
-                        .arch$tab(overwhelmedTab)));;
+                        .arch$tab(overwhelmedTab)));
 
         snailSpawnEggItem = Overwhelmed.ITEMS.register(new ResourceLocation(Overwhelmed.MOD_ID,
                 "snail_spawn_egg"), () -> new MultiSpawnEggItem(new Item.Properties()
@@ -95,13 +93,17 @@ public class OverwhelmedItems {
         soilBlockItem = registerGenericBlockItem("soil", OverwhelmedBlocks.soil);
         snailShellBricksBlockItem = registerGenericBlockItem("snail_shell_bricks",
                 OverwhelmedBlocks.snailShellBricks);
-        snailShellBrickStairsBlockItem = registerGenericBlockItem("snail_shell_brick_stairs",
+        snailShellBrickStairsBlockItem = registerGenericBlockItem(
+                "snail_shell_brick_stairs",
                 OverwhelmedBlocks.snailShellBrickStairs);
-        snailShellBrickSlabBlockItem = registerGenericBlockItem("snail_shell_brick_slab",
+        snailShellBrickSlabBlockItem = registerGenericBlockItem(
+                "snail_shell_brick_slab",
                 OverwhelmedBlocks.snailShellBrickSlab);
-        snailShellBrickWallBlockItem = registerGenericBlockItem("snail_shell_brick_wall",
+        snailShellBrickWallBlockItem = registerGenericBlockItem(
+                "snail_shell_brick_wall",
                 OverwhelmedBlocks.snailShellBrickWall);
-        chiseledSnailShellBricksBlockItem = registerGenericBlockItem("chiseled_snail_shell_bricks",
+        chiseledSnailShellBricksBlockItem = registerGenericBlockItem(
+                "chiseled_snail_shell_bricks",
                 OverwhelmedBlocks.chiseledSnailShellBricks);
         gooBlockBlockItem = registerGenericBlockItem("goo_block",
                 OverwhelmedBlocks.gooBlock);
@@ -109,14 +111,12 @@ public class OverwhelmedItems {
                 () -> new DoubleHighBlockItem(OverwhelmedBlocks.widow.get(),
                 new Item.Properties().arch$tab(OverwhelmedCreativeTabs.overwhelmedTab)));
         pebbleBlockItem = Overwhelmed.ITEMS.register(new ResourceLocation(Overwhelmed.MOD_ID, "pebble"),
-                () -> new ClotBlockItem(OverwhelmedBlocks.pebble.get(),
+                () -> new PebbleBlockItem(OverwhelmedBlocks.pebble.get(),
                 new Item.Properties().arch$tab(OverwhelmedCreativeTabs.overwhelmedTab)));
-        iceCubeBlockItem = Overwhelmed.ITEMS.register(new ResourceLocation(Overwhelmed.MOD_ID, "ice_cube"),
-                () -> new ClotBlockItem(OverwhelmedBlocks.iceCube.get(),
-                new Item.Properties().arch$tab(OverwhelmedCreativeTabs.overwhelmedTab)));
-        goldBeadBlockItem = Overwhelmed.ITEMS.register(new ResourceLocation(Overwhelmed.MOD_ID, "gold_bead"),
-                () -> new ClotBlockItem(OverwhelmedBlocks.goldBead.get(),
-                new Item.Properties().arch$tab(OverwhelmedCreativeTabs.overwhelmedTab)));
+        iceCubeBlockItem  = registerGenericBlockItem("ice_cube",
+                OverwhelmedBlocks.iceCube);
+        goldBeadBlockItem = registerGenericBlockItem("gold_bead",
+                OverwhelmedBlocks.goldBead);
 
         Overwhelmed.ITEMS.register();
     }

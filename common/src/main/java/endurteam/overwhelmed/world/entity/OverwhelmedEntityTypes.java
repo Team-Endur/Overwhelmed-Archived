@@ -3,7 +3,7 @@ package endurteam.overwhelmed.world.entity;
 import dev.architectury.registry.level.entity.EntityAttributeRegistry;
 import dev.architectury.registry.registries.RegistrySupplier;
 import endurteam.overwhelmed.world.entity.animal.ButterflyEntity;
-import endurteam.overwhelmed.world.entity.projectile.ClotEntity;
+import endurteam.overwhelmed.world.entity.projectile.ThrownPebbleEntity;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
@@ -29,9 +29,7 @@ public class OverwhelmedEntityTypes {
     public static RegistrySupplier<EntityType<ButterflyEntity>> monarchButterflyEntityType;
     public static RegistrySupplier<EntityType<ButterflyEntity>> furButterflyEntityType;
 
-    public static RegistrySupplier<EntityType<ClotEntity>> pebbleEntityType;
-    public static RegistrySupplier<EntityType<ClotEntity>> iceCubeEntityType;
-    public static RegistrySupplier<EntityType<ClotEntity>> goldBeadEntityType;
+    public static RegistrySupplier<EntityType<ThrownPebbleEntity>> thrownPebbleEntityType;
 
     public static final TagKey<Biome> SPAWNS_GARDEN_SNAILS = TagKey.create(Registries.BIOME,
             new ResourceLocation(MOD_ID, "spawns_garden_snails"));
@@ -121,26 +119,12 @@ public class OverwhelmedEntityTypes {
                                 .sized(0.6f, 0.4f)
                                 .clientTrackingRange(8)
                                 .build("fur_butterfly"));
-        pebbleEntityType = Overwhelmed.ENTITY_TYPES.register(
-                new ResourceLocation(MOD_ID, "pebble"), () ->
-                        EntityType.Builder.<ClotEntity>of(ClotEntity::new, MobCategory.MISC)
+        thrownPebbleEntityType = Overwhelmed.ENTITY_TYPES.register(
+                new ResourceLocation(MOD_ID, "thrown_pebble"), () ->
+                        EntityType.Builder.<ThrownPebbleEntity>of(ThrownPebbleEntity::new, MobCategory.MISC)
                                 .sized(4.0f, 2.0f)
                                 .clientTrackingRange(4)
-                                .build("pebble")
-        );
-        iceCubeEntityType = Overwhelmed.ENTITY_TYPES.register(
-                new ResourceLocation(MOD_ID, "ice_cube"), () ->
-                        EntityType.Builder.<ClotEntity>of(ClotEntity::new, MobCategory.MISC)
-                                .sized(4.0f, 2.0f)
-                                .clientTrackingRange(4)
-                                .build("ice_cube")
-        );
-        goldBeadEntityType = Overwhelmed.ENTITY_TYPES.register(
-                new ResourceLocation(MOD_ID, "gold_bead"), () ->
-                        EntityType.Builder.<ClotEntity>of(ClotEntity::new, MobCategory.MISC)
-                                .sized(4.0f, 2.0f)
-                                .clientTrackingRange(4)
-                                .build("gold_bead")
+                                .build("thrown_pebble")
         );
         Overwhelmed.ENTITY_TYPES.register();
 

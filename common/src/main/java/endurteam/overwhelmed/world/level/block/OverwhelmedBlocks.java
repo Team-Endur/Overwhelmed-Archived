@@ -2,7 +2,6 @@ package endurteam.overwhelmed.world.level.block;
 
 import dev.architectury.registry.registries.RegistrySupplier;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
@@ -21,7 +20,7 @@ public class OverwhelmedBlocks {
     public static RegistrySupplier<StairBlock> snailShellBrickStairs;
     public static RegistrySupplier<Block> chiseledSnailShellBricks;
     public static RegistrySupplier<GooBlock> gooBlock;
-    public static RegistrySupplier<ClotBlock> pebble;
+    public static RegistrySupplier<PebbleBlock> pebble;
     public static RegistrySupplier<ClotBlock> iceCube;
     public static RegistrySupplier<ClotBlock> goldBead;
 
@@ -58,12 +57,13 @@ public class OverwhelmedBlocks {
                 .offsetType(BlockBehaviour.OffsetType.XZ)
                 .ignitedByLava()
                 .pushReaction(PushReaction.DESTROY));
-        pebble = registerGenericClotBlock("pebble", () -> BlockBehaviour.Properties.of()
-                .mapColor(MapColor.STONE)
-                .strength(0f, 6f)
-                .noCollission()
-                .sound(SoundType.STONE)
-                .noOcclusion());
+        pebble = Overwhelmed.BLOCKS.register(new ResourceLocation(Overwhelmed.MOD_ID, "pebble"), () ->
+                new PebbleBlock(BlockBehaviour.Properties.of()
+                        .mapColor(MapColor.STONE)
+                        .strength(0f, 6f)
+                        .noCollission()
+                        .sound(SoundType.STONE)
+                        .noOcclusion()));
         iceCube = registerGenericClotBlock("ice_cube", () -> BlockBehaviour.Properties.of()
                 .mapColor(MapColor.ICE)
                 .strength(0f, 6f)

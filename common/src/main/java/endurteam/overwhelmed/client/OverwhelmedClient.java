@@ -6,8 +6,11 @@ import endurteam.overwhelmed.client.color.items.ButterflySpawnEggItemColor;
 import endurteam.overwhelmed.client.color.items.SnailSpawnEggItemColor;
 import endurteam.overwhelmed.client.renderer.entity.ButterflyRenderer;
 import endurteam.overwhelmed.client.renderer.entity.SnailRenderer;
+import endurteam.overwhelmed.client.renderer.entity.ThrownPebbleRenderer;
 import endurteam.overwhelmed.world.entity.OverwhelmedEntityTypes;
 import endurteam.overwhelmed.world.item.OverwhelmedItems;
+import net.minecraft.client.renderer.entity.FallingBlockRenderer;
+import net.minecraft.world.entity.item.FallingBlockEntity;
 
 public class OverwhelmedClient {
     public static SnailSpawnEggItemColor snailSpawnEggItemColor;
@@ -25,6 +28,7 @@ public class OverwhelmedClient {
         EntityRendererRegistry.register(OverwhelmedEntityTypes.cherryButterflyEntityType, ButterflyRenderer::new);
         EntityRendererRegistry.register(OverwhelmedEntityTypes.monarchButterflyEntityType, ButterflyRenderer::new);
         EntityRendererRegistry.register(OverwhelmedEntityTypes.furButterflyEntityType, ButterflyRenderer::new);
+        EntityRendererRegistry.register(OverwhelmedEntityTypes.thrownPebbleEntityType, ThrownPebbleRenderer::new);
         ColorHandlerRegistry.registerItemColors(snailSpawnEggItemColor = new SnailSpawnEggItemColor(),
                 OverwhelmedItems.snailSpawnEggItem);
         ColorHandlerRegistry.registerItemColors(butterflySpawnEggItemColor = new ButterflySpawnEggItemColor(),
