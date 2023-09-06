@@ -3,16 +3,28 @@ package endurteam.overwhelmed.world.item;
 import dev.architectury.registry.registries.RegistrySupplier;
 import endurteam.overwhelmed.world.entity.OverwhelmedEntityTypes;
 import endurteam.overwhelmed.world.food.OverwhelmedFoods;
-import endurteam.overwhelmed.world.item.MultiSpawnEggItem;
+import endurteam.overwhelmed.world.level.block.OverwhelmedBlocks;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.BowlFoodItem;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.*;
 import endurteam.overwhelmed.Overwhelmed;
+import net.minecraft.world.level.block.Block;
+
+import java.util.function.Supplier;
 
 import static endurteam.overwhelmed.world.item.OverwhelmedCreativeTabs.overwhelmedTab;
 
 public class OverwhelmedItems {
+    public static RegistrySupplier<DoubleHighBlockItem> widowBlockItem;
+    public static RegistrySupplier<BlockItem> soilBlockItem;
+    public static RegistrySupplier<BlockItem> snailShellBricksBlockItem;
+    public static RegistrySupplier<BlockItem> snailShellBrickWallBlockItem;
+    public static RegistrySupplier<BlockItem> snailShellBrickSlabBlockItem;
+    public static RegistrySupplier<BlockItem> snailShellBrickStairsBlockItem;
+    public static RegistrySupplier<BlockItem> chiseledSnailShellBricksBlockItem;
+    public static RegistrySupplier<BlockItem> gooBlockBlockItem;
+    public static RegistrySupplier<ClotBlockItem> pebbleBlockItem;
+    public static RegistrySupplier<ClotBlockItem> iceCubeBlockItem;
+    public static RegistrySupplier<ClotBlockItem> goldBeadBlockItem;
     public static RegistrySupplier<Item> snailShellItem;
     public static RegistrySupplier<MultiSpawnEggItem> snailSpawnEggItem;
     public static RegistrySupplier<MultiSpawnEggItem> butterflySpawnEggItem;
@@ -80,6 +92,31 @@ public class OverwhelmedItems {
         );
         iceCrystalShardItem = registerGenericItem("ice_crystal_shard", 64, Rarity.UNCOMMON);
 
+        soilBlockItem = registerGenericBlockItem("soil", OverwhelmedBlocks.soil);
+        snailShellBricksBlockItem = registerGenericBlockItem("snail_shell_bricks",
+                OverwhelmedBlocks.snailShellBricks);
+        snailShellBrickStairsBlockItem = registerGenericBlockItem("snail_shell_brick_stairs",
+                OverwhelmedBlocks.snailShellBrickStairs);
+        snailShellBrickSlabBlockItem = registerGenericBlockItem("snail_shell_brick_slab",
+                OverwhelmedBlocks.snailShellBrickSlab);
+        snailShellBrickWallBlockItem = registerGenericBlockItem("snail_shell_brick_wall",
+                OverwhelmedBlocks.snailShellBrickWall);
+        chiseledSnailShellBricksBlockItem = registerGenericBlockItem("chiseled_snail_shell_bricks",
+                OverwhelmedBlocks.chiseledSnailShellBricks);
+        gooBlockBlockItem = registerGenericBlockItem("goo_block",
+                OverwhelmedBlocks.gooBlock);
+        widowBlockItem = Overwhelmed.ITEMS.register(new ResourceLocation(Overwhelmed.MOD_ID, "widow"),
+                () -> new DoubleHighBlockItem(OverwhelmedBlocks.widow.get(),
+                new Item.Properties().arch$tab(OverwhelmedCreativeTabs.overwhelmedTab)));
+        pebbleBlockItem = Overwhelmed.ITEMS.register(new ResourceLocation(Overwhelmed.MOD_ID, "pebble"),
+                () -> new ClotBlockItem(OverwhelmedBlocks.pebble.get(),
+                new Item.Properties().arch$tab(OverwhelmedCreativeTabs.overwhelmedTab)));
+        iceCubeBlockItem = Overwhelmed.ITEMS.register(new ResourceLocation(Overwhelmed.MOD_ID, "ice_cube"),
+                () -> new ClotBlockItem(OverwhelmedBlocks.iceCube.get(),
+                new Item.Properties().arch$tab(OverwhelmedCreativeTabs.overwhelmedTab)));
+        goldBeadBlockItem = Overwhelmed.ITEMS.register(new ResourceLocation(Overwhelmed.MOD_ID, "gold_bead"),
+                () -> new ClotBlockItem(OverwhelmedBlocks.goldBead.get(),
+                new Item.Properties().arch$tab(OverwhelmedCreativeTabs.overwhelmedTab)));
 
         Overwhelmed.ITEMS.register();
     }
@@ -89,5 +126,13 @@ public class OverwhelmedItems {
                         .stacksTo(stackSize)
                         .rarity(rarity)
                         .arch$tab(overwhelmedTab)));
+    }
+
+    private static RegistrySupplier<BlockItem> registerGenericBlockItem(String name,
+                                                                        RegistrySupplier<? extends Block>
+                                                                                blockSupplier) {
+        return Overwhelmed.ITEMS.register(new ResourceLocation(Overwhelmed.MOD_ID, name), () ->
+                new BlockItem(blockSupplier.get(), new Item.Properties()
+                        .arch$tab(OverwhelmedCreativeTabs.overwhelmedTab)));
     }
 }
