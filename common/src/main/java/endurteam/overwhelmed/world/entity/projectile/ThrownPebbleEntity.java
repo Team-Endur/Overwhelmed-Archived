@@ -2,8 +2,9 @@ package endurteam.overwhelmed.world.entity.projectile;
 
 import endurteam.overwhelmed.world.entity.OverwhelmedEntityTypes;
 import endurteam.overwhelmed.world.item.OverwhelmedItems;
+import endurteam.overwhelmed.world.level.block.OverwhelmedBlocks;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.particles.ItemParticleOption;
+import net.minecraft.core.particles.BlockParticleOption;
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.syncher.EntityDataAccessor;
@@ -12,10 +13,8 @@ import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.item.FallingBlockEntity;
 import net.minecraft.world.entity.projectile.ThrowableItemProjectile;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.HitResult;
@@ -44,7 +43,7 @@ public class ThrownPebbleEntity
     }
 
     private ParticleOptions getParticle() {
-        return new ItemParticleOption(ParticleTypes.ITEM, this.getItemRaw());
+        return new BlockParticleOption(ParticleTypes.BLOCK, OverwhelmedBlocks.pebble.get().defaultBlockState());
     }
 
     @Override
