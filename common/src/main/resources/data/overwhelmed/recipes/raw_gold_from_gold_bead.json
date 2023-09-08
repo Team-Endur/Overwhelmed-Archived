@@ -3,15 +3,15 @@
   "category": "misc",
   "key": {
     "#": {
-      "item": "overwhelmed:goo_block"
+      "item": "overwhelmed:gold_bead"
     }
   },
   "pattern": [
-    "###"
+    "##",
+    "##"
   ],
   "result": {
-    "count": 6,
-    "item": "overwhelmed:goo"
+    "item": "minecraft:raw_gold"
   },
   "show_notification": true
 }

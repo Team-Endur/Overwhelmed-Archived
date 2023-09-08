@@ -1,25 +1,16 @@
 {
   "type": "minecraft:ore",
   "config": {
-    "size": 32,
+    "size": 1,
     "discard_chance_on_air_exposure": 0,
     "targets": [
       {
         "target": {
           "predicate_type": "minecraft:block_match",
-          "block": "minecraft:grass_block"
+          "block": "minecraft:air"
         },
         "state": {
-          "Name": "overwhelmed:soil"
-        }
-      },
-      {
-        "target": {
-          "predicate_type": "minecraft:block_match",
-          "block": "minecraft:dirt"
-        },
-        "state": {
-          "Name": "overwhelmed:soil"
+          "Name": "overwhelmed:pebble"
         }
       }
     ]
