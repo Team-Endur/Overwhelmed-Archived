@@ -1,5 +1,5 @@
 {
-  "feature": "overwhelmed:generate_pebble",
+  "feature": "overwhelmed:pebble",
   "placement": [
     {
       "type": "minecraft:count",

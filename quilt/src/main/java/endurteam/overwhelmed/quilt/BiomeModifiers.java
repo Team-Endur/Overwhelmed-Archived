@@ -56,4 +56,23 @@ public class BiomeModifiers {
         BiomeModifications.addFeature(bsc -> bsc.isIn(OverwhelmedPlacedFeatures.GENERATES_WIDOWS),
                 GenerationStep.Decoration.VEGETAL_DECORATION, OverwhelmedPlacedFeatures.GENERATE_WIDOW);
     }
+
+    public static void pebbleGeneration()
+    {
+        BiomeModifications.addFeature(bsc -> bsc.isIn(OverwhelmedPlacedFeatures.GENERATES_PEBBLES),
+                GenerationStep.Decoration.VEGETAL_DECORATION, OverwhelmedPlacedFeatures.GENERATE_PEBBLE);
+    }
+
+    public static void iceCubeGeneration()
+    {
+        BiomeModifications.addFeature(bsc -> bsc.isIn(OverwhelmedPlacedFeatures.GENERATES_ICE_CUBES),
+                GenerationStep.Decoration.VEGETAL_DECORATION, OverwhelmedPlacedFeatures.GENERATE_ICE_CUBE);
+    }
+
+    public static void goldBeadGeneration()
+    {
+        BiomeModifications.addFeature(bsc -> bsc.isIn(OverwhelmedPlacedFeatures.GENERATES_GOLD_BEADS),
+                GenerationStep.Decoration.VEGETAL_DECORATION, OverwhelmedPlacedFeatures.GENERATE_GOLD_BEAD);
+    }
+
 }

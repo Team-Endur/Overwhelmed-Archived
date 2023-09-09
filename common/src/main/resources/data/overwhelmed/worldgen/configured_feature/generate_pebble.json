@@ -1,5 +1,5 @@
 {
-  "type": "overwhelmed:pebble",
+  "type": "minecraft:flower",
   "config": {
     "feature": {
       "feature": {
@@ -12,7 +12,7 @@
                 "data": {
                   "Name": "overwhelmed:pebble"
                 },
-                "weight": 2
+                "weight": 1
               }
             ]
           }
