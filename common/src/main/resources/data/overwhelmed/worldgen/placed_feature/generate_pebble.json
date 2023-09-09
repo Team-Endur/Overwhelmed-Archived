@@ -1,16 +1,16 @@
 {
-  "feature": "overwhelmed:generate_widow",
+  "feature": "overwhelmed:generate_pebble",
   "placement": [
     {
       "type": "minecraft:count",
-      "count": 8
+      "count": 10
     },
     {
       "type": "minecraft:in_square"
     },
     {
       "type": "minecraft:heightmap",
-      "heightmap": "WORLD_SURFACE"
+      "heightmap": "MOTION_BLOCKING"
     },
     {
       "type": "minecraft:biome"
