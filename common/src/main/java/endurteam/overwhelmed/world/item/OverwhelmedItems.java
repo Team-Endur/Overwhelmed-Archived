@@ -57,7 +57,7 @@ public class OverwhelmedItems {
                                     return OverwhelmedEntityTypes.glassSnailEntityType.get();
                                 }
                                 case 5 -> {
-                                    return OverwhelmedEntityTypes.hillSnailEntityType.get();
+                                    return OverwhelmedEntityTypes.liverwortSnailEntityType.get();
                                 }
                             }
                             throw new IncompatibleClassChangeError();

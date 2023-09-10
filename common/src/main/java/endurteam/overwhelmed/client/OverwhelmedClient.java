@@ -22,6 +22,7 @@ public class OverwhelmedClient {
         EntityRendererRegistry.register(OverwhelmedEntityTypes.limestoneSnailEntityType, SnailRenderer::new);
         EntityRendererRegistry.register(OverwhelmedEntityTypes.romanSnailEntityType, SnailRenderer::new);
         EntityRendererRegistry.register(OverwhelmedEntityTypes.glassSnailEntityType, SnailRenderer::new);
+        EntityRendererRegistry.register(OverwhelmedEntityTypes.liverwortSnailEntityType, SnailRenderer::new);
         EntityRendererRegistry.register(OverwhelmedEntityTypes.sleepyButterflyEntityType, ButterflyRenderer::new);
         EntityRendererRegistry.register(OverwhelmedEntityTypes.cabbageButterflyEntityType, ButterflyRenderer::new);
         EntityRendererRegistry.register(OverwhelmedEntityTypes.morphoButterflyEntityType, ButterflyRenderer::new);

@@ -1,9 +1,9 @@
 {
   "type": "forge:add_spawns",
-  "biomes": "#overwhelmed:spawns_hill_snails",
+  "biomes": "#overwhelmed:spawns_liverwort_snails",
   "spawners":
   {
-    "type": "overwhelmed:hill_snail",
+    "type": "overwhelmed:liverwort_snail",
     "weight": 80,
     "minCount": 3,
     "maxCount": 6

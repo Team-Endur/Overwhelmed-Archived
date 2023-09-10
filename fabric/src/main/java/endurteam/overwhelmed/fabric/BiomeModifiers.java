@@ -21,8 +21,8 @@ public class BiomeModifiers {
         BiomeModifications.addSpawn(bsc -> bsc.hasTag(OverwhelmedEntityTypes.SPAWNS_GLASS_SNAILS),
                 MobCategory.CREATURE, OverwhelmedEntityTypes.glassSnailEntityType.get(),
                 20, 1, 1);
-        BiomeModifications.addSpawn(bsc -> bsc.hasTag(OverwhelmedEntityTypes.SPAWNS_HILL_SNAILS),
-                MobCategory.CREATURE, OverwhelmedEntityTypes.hillSnailEntityType.get(),
+        BiomeModifications.addSpawn(bsc -> bsc.hasTag(OverwhelmedEntityTypes.SPAWNS_LIVERWORT_SNAILS),
+                MobCategory.CREATURE, OverwhelmedEntityTypes.liverwortSnailEntityType.get(),
                 80, 3, 6);
     }
 
