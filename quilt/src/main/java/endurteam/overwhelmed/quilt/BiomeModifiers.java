@@ -21,6 +21,9 @@ public class BiomeModifiers {
         BiomeModifications.addSpawn(bsc -> bsc.isIn(OverwhelmedEntityTypes.SPAWNS_GLASS_SNAILS),
                 MobCategory.CREATURE, OverwhelmedEntityTypes.glassSnailEntityType.get(),
                 20, 1, 1);
+        BiomeModifications.addSpawn(bsc -> bsc.isIn(OverwhelmedEntityTypes.SPAWNS_HILL_SNAILS),
+                MobCategory.CREATURE, OverwhelmedEntityTypes.glassSnailEntityType.get(),
+                80, 3, 6);
     }
 
     public static void butterflySpawning()

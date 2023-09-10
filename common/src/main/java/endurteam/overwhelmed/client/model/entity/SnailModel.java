@@ -18,6 +18,8 @@ public class SnailModel extends GeoModel<SnailEntity> {
             new ResourceLocation(Overwhelmed.MOD_ID, "textures/entity/snail/snail_roman.png");
     private static final ResourceLocation GLASS_TEXTURE =
             new ResourceLocation(Overwhelmed.MOD_ID, "textures/entity/snail/snail_glass.png");
+    private static final ResourceLocation HILL_TEXTURE =
+            new ResourceLocation(Overwhelmed.MOD_ID, "textures/entity/snail/snail_hill.png");
     private static final ResourceLocation GARDEN_MODEL =
             new ResourceLocation(Overwhelmed.MOD_ID, "geo/entity/snail_garden.geo.json");
     private static final ResourceLocation GARY_MODEL =
@@ -28,6 +30,8 @@ public class SnailModel extends GeoModel<SnailEntity> {
             new ResourceLocation(Overwhelmed.MOD_ID, "geo/entity/snail_roman.geo.json");
     private static final ResourceLocation GLASS_MODEL =
             new ResourceLocation(Overwhelmed.MOD_ID, "geo/entity/snail_glass.geo.json");
+    private static final ResourceLocation HILL_MODEL =
+            new ResourceLocation(Overwhelmed.MOD_ID, "geo/entity/snail_hill.geo.json");
     private static final ResourceLocation GARDEN_ANIMATION =
             new ResourceLocation(Overwhelmed.MOD_ID, "animations/entity/snail_garden.animation.json");
     private static final ResourceLocation GARY_ANIMATION =
@@ -38,6 +42,8 @@ public class SnailModel extends GeoModel<SnailEntity> {
             new ResourceLocation(Overwhelmed.MOD_ID, "animations/entity/snail_roman.animation.json");
     private static final ResourceLocation GLASS_ANIMATION =
             new ResourceLocation(Overwhelmed.MOD_ID, "animations/entity/snail_roman.animation.json");
+    private static final ResourceLocation HILL_ANIMATION =
+            new ResourceLocation(Overwhelmed.MOD_ID, "animations/entity/snail_hill.animation.json");
 
     public static ResourceLocation getVariantTexture(SnailEntity animatable) {
         EntityType<?> type = animatable.getType();
@@ -51,6 +57,8 @@ public class SnailModel extends GeoModel<SnailEntity> {
             return ROMAN_TEXTURE;
         } else if (OverwhelmedEntityTypes.glassSnailEntityType.get().equals(type)) {
             return GLASS_TEXTURE;
+        } else if (OverwhelmedEntityTypes.hillSnailEntityType.get().equals(type)) {
+            return HILL_TEXTURE;
         }
         throw new IncompatibleClassChangeError();
     }
@@ -67,6 +75,8 @@ public class SnailModel extends GeoModel<SnailEntity> {
             return ROMAN_MODEL;
         } else if (OverwhelmedEntityTypes.glassSnailEntityType.get().equals(type)) {
             return GLASS_MODEL;
+        } else if (OverwhelmedEntityTypes.hillSnailEntityType.get().equals(type)) {
+            return HILL_MODEL;
         }
         throw new IncompatibleClassChangeError();
     }
@@ -83,6 +93,8 @@ public class SnailModel extends GeoModel<SnailEntity> {
             return ROMAN_ANIMATION;
         } else if (OverwhelmedEntityTypes.glassSnailEntityType.get().equals(type)) {
             return GLASS_ANIMATION;
+        } else if (OverwhelmedEntityTypes.hillSnailEntityType.get().equals(type)) {
+            return HILL_ANIMATION;
         }
         throw new IncompatibleClassChangeError();
     }
