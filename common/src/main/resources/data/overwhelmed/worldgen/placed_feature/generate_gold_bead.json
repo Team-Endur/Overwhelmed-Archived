@@ -1,5 +1,5 @@
 {
-    "feature": "overwhelmed:generate_pebble",
+    "feature": "overwhelmed:generate_gold_bead",
     "placement": [
         {
             "type": "minecraft:in_square"

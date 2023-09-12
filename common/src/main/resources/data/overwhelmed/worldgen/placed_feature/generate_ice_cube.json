@@ -1,5 +1,5 @@
 {
-    "feature": "overwhelmed:generate_pebble",
+    "feature": "overwhelmed:generate_ice_cube",
     "placement": [
         {
             "type": "minecraft:in_square"
