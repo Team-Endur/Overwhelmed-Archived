@@ -5,8 +5,9 @@
     "minecraft:snowy_taiga",
     "minecraft:grove",
     "minecraft:snowy_slopes",
-    "minecraft:jagged_peaks",
     "minecraft:frozen_peaks",
-    "minecraft:snowy_beach"
+    "minecraft:jagged_peaks",
+    "minecraft:snowy_beach",
+    "minecraft:frozen_ocean"
   ]
 }

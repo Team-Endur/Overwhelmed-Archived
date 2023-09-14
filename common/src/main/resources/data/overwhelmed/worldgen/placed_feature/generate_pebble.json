@@ -2,6 +2,10 @@
     "feature": "overwhelmed:generate_pebble",
     "placement": [
         {
+            "type": "minecraft:count",
+            "count": 3
+        },
+        {
             "type": "minecraft:in_square"
         },
         {
