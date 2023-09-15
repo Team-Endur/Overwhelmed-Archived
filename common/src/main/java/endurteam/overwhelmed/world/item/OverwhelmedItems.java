@@ -28,7 +28,6 @@ public class OverwhelmedItems {
     public static RegistrySupplier<MultiSpawnEggItem> butterflySpawnEggItem;
     public static RegistrySupplier<Item> gooBallItem;
     public static RegistrySupplier<Item> gooSoupItem;
-    public static RegistrySupplier<Item> iceCrystalShardItem;
 
     public static void registerItems() {
         snailShellItem = registerGenericItem("snail_shell", 64, Rarity.COMMON);
@@ -91,8 +90,6 @@ public class OverwhelmedItems {
                 }
                 )
         );
-        iceCrystalShardItem = registerGenericItem("ice_crystal_shard", 64, Rarity.UNCOMMON);
-
         soilBlockItem = registerGenericBlockItem("soil", OverwhelmedBlocks.soil);
         snailShellBricksBlockItem = registerGenericBlockItem("snail_shell_bricks",
                 OverwhelmedBlocks.snailShellBricks);
