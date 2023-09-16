@@ -20,7 +20,7 @@
                 {
                     "type": "minecraft:block_predicate_filter",
                     "predicate": {
-                        "type": "minecraft:replaceable"
+                        "type": "overwhelmed:ice_cube_replaceable"
                     }
                 }
             ]
