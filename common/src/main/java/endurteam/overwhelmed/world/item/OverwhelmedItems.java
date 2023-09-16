@@ -28,6 +28,8 @@ public class OverwhelmedItems {
     public static RegistrySupplier<MultiSpawnEggItem> butterflySpawnEggItem;
     public static RegistrySupplier<Item> gooBallItem;
     public static RegistrySupplier<Item> gooSoupItem;
+    public static RegistrySupplier<Item> paperBullet;
+    public static RegistrySupplier<Item> blowgun;
 
     public static void registerItems() {
         snailShellItem = registerGenericItem("snail_shell", 64, Rarity.COMMON);
@@ -117,6 +119,8 @@ public class OverwhelmedItems {
                 OverwhelmedBlocks.iceCube);
         goldBeadBlockItem = registerGenericBlockItem("gold_bead",
                 OverwhelmedBlocks.goldBead);
+        paperBullet = registerGenericItem("paper_bullet", 64, Rarity.COMMON);
+        blowgun = registerGenericItem("blowgun", 1, Rarity.COMMON);
 
         Overwhelmed.ITEMS.register();
     }
