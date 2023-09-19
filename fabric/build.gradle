@@ -38,9 +38,6 @@ dependencies {
     common(project(path: ":fabric-like", configuration: "namedElements")) { transitive false }
     shadowCommon(project(path: ":fabric-like", configuration: "transformProductionFabric")) { transitive false }
 
-    modImplementation("com.github.glitchfiend:TerraBlender-fabric:${rootProject.minecraft_version}-${rootProject.terrablender_version}"){
-        exclude module: 'fabric-api'
-    }
     modImplementation("software.bernie.geckolib:geckolib-fabric-${rootProject.minecraft_version}:${rootProject.geckolib_version}"){
         exclude module: 'fabric-api'
     }

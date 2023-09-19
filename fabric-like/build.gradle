@@ -29,7 +29,6 @@ dependencies {
     common(project(path: ":common", configuration: "namedElements")) { transitive false }
 
     modImplementation "software.bernie.geckolib:geckolib-fabric-${rootProject.minecraft_version}:${rootProject.geckolib_version}"
-    modRuntimeOnly "com.terraformersmc:modmenu:${rootProject.mod_menu_version}"
     modRuntimeOnly("squeek.appleskin:appleskin-fabric:${rootProject.appleskin_version_fabric}") {
         exclude module: 'modmenu'
     }

@@ -21,7 +21,6 @@ dependencies {
     // Remove the next line if you don't want to depend on the API
     modApi("dev.architectury:architectury:${rootProject.architectury_version}")
 
-    modImplementation("com.github.glitchfiend:TerraBlender-common:${rootProject.minecraft_version}-${rootProject.terrablender_version}")
     //This is a horrible way of doing things to be fair, as you don't want Forge References in Common or Fabric / Quilt.
     //That said, GeckoLib does not release Core or a Common jar yet, so we'll have to work with this.
     modImplementation("software.bernie.geckolib:geckolib-forge-${rootProject.minecraft_version}:${rootProject.geckolib_version}")
