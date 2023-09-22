@@ -12,24 +12,24 @@ import net.minecraft.world.level.block.Block;
 import static endurteam.overwhelmed.world.item.OverwhelmedCreativeTabs.overwhelmedTab;
 
 public class OverwhelmedItems {
-    public static RegistrySupplier<DoubleHighBlockItem> widowBlockItem;
+    public static RegistrySupplier<Item> snailShellItem;
+    public static RegistrySupplier<Item> gooBallItem;
+    public static RegistrySupplier<Item> gooSoupItem;
+    public static RegistrySupplier<Item> paperBulletItem;
+    public static RegistrySupplier<Item> blowgunItem;
+    public static RegistrySupplier<MultiSpawnEggItem> snailSpawnEggItem;
+    public static RegistrySupplier<MultiSpawnEggItem> butterflySpawnEggItem;
     public static RegistrySupplier<BlockItem> soilBlockItem;
-    public static RegistrySupplier<BlockItem> snailShellBricksBlockItem;
-    public static RegistrySupplier<BlockItem> snailShellBrickWallBlockItem;
-    public static RegistrySupplier<BlockItem> snailShellBrickSlabBlockItem;
+    public static RegistrySupplier<BlockItem> snailShellBrickBlockItem;
     public static RegistrySupplier<BlockItem> snailShellBrickStairsBlockItem;
+    public static RegistrySupplier<BlockItem> snailShellBrickSlabBlockItem;
+    public static RegistrySupplier<BlockItem> snailShellBrickWallBlockItem;
     public static RegistrySupplier<BlockItem> chiseledSnailShellBricksBlockItem;
     public static RegistrySupplier<BlockItem> gooBlockBlockItem;
+    public static RegistrySupplier<DoubleHighBlockItem> widowBlockItem;
     public static RegistrySupplier<PebbleBlockItem> pebbleBlockItem;
     public static RegistrySupplier<BlockItem> iceCubeBlockItem;
     public static RegistrySupplier<BlockItem> goldBeadBlockItem;
-    public static RegistrySupplier<Item> snailShellItem;
-    public static RegistrySupplier<MultiSpawnEggItem> snailSpawnEggItem;
-    public static RegistrySupplier<MultiSpawnEggItem> butterflySpawnEggItem;
-    public static RegistrySupplier<Item> gooBallItem;
-    public static RegistrySupplier<Item> gooSoupItem;
-    public static RegistrySupplier<Item> paperBullet;
-    public static RegistrySupplier<Item> blowgun;
 
     public static void registerItems() {
         snailShellItem = registerGenericItem("snail_shell", 64, Rarity.COMMON);
@@ -39,6 +39,13 @@ public class OverwhelmedItems {
                         .stacksTo(1)
                         .rarity(Rarity.COMMON)
                         .food(OverwhelmedFoods.GOO_SOUP)
+                        .arch$tab(overwhelmedTab)));
+        paperBulletItem = registerGenericItem("paper_bullet", 64, Rarity.COMMON);
+        blowgunItem = Overwhelmed.ITEMS.register(new ResourceLocation(Overwhelmed.MOD_ID, "blowgun"), () ->
+                new BlowgunItem(new Item.Properties()
+                        .stacksTo(1)
+                        .rarity(Rarity.COMMON)
+                        .durability(10)
                         .arch$tab(overwhelmedTab)));
 
         snailSpawnEggItem = Overwhelmed.ITEMS.register(new ResourceLocation(Overwhelmed.MOD_ID,
@@ -92,35 +99,33 @@ public class OverwhelmedItems {
                 }
                 )
         );
-        soilBlockItem = registerGenericBlockItem("soil", OverwhelmedBlocks.soil);
-        snailShellBricksBlockItem = registerGenericBlockItem("snail_shell_bricks",
-                OverwhelmedBlocks.snailShellBricks);
+        soilBlockItem = registerGenericBlockItem("soil", OverwhelmedBlocks.soilBlock);
+        snailShellBrickBlockItem = registerGenericBlockItem("snail_shell_bricks",
+                OverwhelmedBlocks.snailShellBrickBlock);
         snailShellBrickStairsBlockItem = registerGenericBlockItem(
                 "snail_shell_brick_stairs",
-                OverwhelmedBlocks.snailShellBrickStairs);
+                OverwhelmedBlocks.snailShellBrickStairBlock);
         snailShellBrickSlabBlockItem = registerGenericBlockItem(
                 "snail_shell_brick_slab",
-                OverwhelmedBlocks.snailShellBrickSlab);
+                OverwhelmedBlocks.snailShellBrickSlabBlock);
         snailShellBrickWallBlockItem = registerGenericBlockItem(
                 "snail_shell_brick_wall",
-                OverwhelmedBlocks.snailShellBrickWall);
+                OverwhelmedBlocks.snailShellBrickWallBlock);
         chiseledSnailShellBricksBlockItem = registerGenericBlockItem(
                 "chiseled_snail_shell_bricks",
-                OverwhelmedBlocks.chiseledSnailShellBricks);
+                OverwhelmedBlocks.chiseledSnailShellBrickBlock);
         gooBlockBlockItem = registerGenericBlockItem("goo_block",
                 OverwhelmedBlocks.gooBlock);
         widowBlockItem = Overwhelmed.ITEMS.register(new ResourceLocation(Overwhelmed.MOD_ID, "widow"),
-                () -> new DoubleHighBlockItem(OverwhelmedBlocks.widow.get(),
+                () -> new DoubleHighBlockItem(OverwhelmedBlocks.widowBlock.get(),
                 new Item.Properties().arch$tab(OverwhelmedCreativeTabs.overwhelmedTab)));
         pebbleBlockItem = Overwhelmed.ITEMS.register(new ResourceLocation(Overwhelmed.MOD_ID, "pebble"),
-                () -> new PebbleBlockItem(OverwhelmedBlocks.pebble.get(),
+                () -> new PebbleBlockItem(OverwhelmedBlocks.pebbleBlock.get(),
                 new Item.Properties().arch$tab(OverwhelmedCreativeTabs.overwhelmedTab)));
         iceCubeBlockItem  = registerGenericBlockItem("ice_cube",
-                OverwhelmedBlocks.iceCube);
+                OverwhelmedBlocks.iceCubeBlock);
         goldBeadBlockItem = registerGenericBlockItem("gold_bead",
-                OverwhelmedBlocks.goldBead);
-        paperBullet = registerGenericItem("paper_bullet", 64, Rarity.COMMON);
-        blowgun = registerGenericItem("blowgun", 1, Rarity.COMMON);
+                OverwhelmedBlocks.goldBeadBlock);
 
         Overwhelmed.ITEMS.register();
     }

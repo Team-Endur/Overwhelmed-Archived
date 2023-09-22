@@ -3,7 +3,6 @@ package endurteam.overwhelmed.client.renderer.entity;
 import com.mojang.blaze3d.vertex.PoseStack;
 import endurteam.overwhelmed.world.entity.projectile.ThrownPebbleEntity;
 import endurteam.overwhelmed.world.level.block.OverwhelmedBlocks;
-import endurteam.overwhelmed.world.level.block.PebbleBlock;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
@@ -12,11 +11,9 @@ import net.minecraft.client.renderer.block.BlockRenderDispatcher;
 import net.minecraft.client.renderer.entity.EntityRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.texture.OverlayTexture;
-import net.minecraft.client.renderer.texture.TextureAtlas;
 import net.minecraft.core.BlockPos;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.RandomSource;
-import net.minecraft.world.entity.item.FallingBlockEntity;
 import net.minecraft.world.inventory.InventoryMenu;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.RenderShape;
@@ -37,7 +34,7 @@ public class ThrownPebbleRenderer
     @Override
     public void render(ThrownPebbleEntity thrownPebbleEntity, float f, float g, PoseStack poseStack,
                        MultiBufferSource multiBufferSource, int i) {
-        BlockState blockState = OverwhelmedBlocks.pebble.get().defaultBlockState();
+        BlockState blockState = OverwhelmedBlocks.pebbleBlock.get().defaultBlockState();
         if (blockState.getRenderShape() != RenderShape.MODEL) {
             return;
         }

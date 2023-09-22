@@ -1,11 +1,13 @@
-![Overwhelmed Picture](https://github.com/Codetoil/Overwhelmed/blob/dev/1.0.x/common/src/main/resources/assets/overwhelmed/gui/minecraft_title.png)
+![Overwhelmed Picture](common/src/main/resources/assets/overwhelmed/textures/gui/minecraft_title.png)
 
 ![Minecraft Version](https://img.shields.io/badge/Minecraft%20Version-1.20.1-brightgreen.svg)
 ![Mod Version](https://img.shields.io/badge/Mod%20Version-0.3.0-blue.svg)
 
+![Requires GeckoLib](common/src/main/resources/assets/overwhelmed/textures/requires_geckolib.png)
+
 **Overwhelmed** is a Minecraft mod that focuses on enhancing the atmosphere and gameplay of Minecraft's Overworld surface. It achieves this by introducing new flora and fauna systems for ambience and adding new biomes to explore.
 
-![Banner](https://github.com/Codetoil/Overwhelmed/blob/dev/1.0.x/common/src/main/resources/assets/overwhelmed/gui/grid.png)
+![Banner](common/src/main/resources/assets/overwhelmed/textures/gui/grid.png)
 
 ## Features
 
@@ -15,7 +17,7 @@
 - Enhanced atmosphere: Immerse yourself in an enhanced Overworld experience with improved ambiance, realistic sounds, and visual effects.
 - Improved gameplay: Enjoy a more dynamic and engaging gameplay experience with the addition of new features, such as interactive plants and wildlife.
 
-![Banner](https://github.com/Codetoil/Overwhelmed/blob/dev/1.0.x/common/src/main/resources/assets/overwhelmed/gui/grid.png)
+![Banner](common/src/main/resources/assets/overwhelmed/textures/gui/grid.png)
 
 ## Installation
 
@@ -40,7 +42,7 @@
 7. Copy both the Fabric API and Overwhelmed mod files into the mods folder.
 8. Launch Minecraft with the Fabric profile and enjoy the new features added by Overwhelmed!
 
-![Banner](https://github.com/Codetoil/Overwhelmed/blob/dev/0.3.x/common/src/main/resources/assets/overwhelmed/grid.png)
+![Banner](common/src/main/resources/assets/overwhelmed/textures/gui/grid.png)
 
 ## License
 

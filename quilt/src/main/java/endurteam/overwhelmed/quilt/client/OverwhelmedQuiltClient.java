@@ -16,11 +16,11 @@ public class OverwhelmedQuiltClient implements ClientModInitializer {
     @Override
     public void onInitializeClient(ModContainer mod) {
         OverwhelmedClient.initClient();
-        BlockRenderLayerMap.put(RenderType.cutout(), OverwhelmedBlocks.widow.get());
+        BlockRenderLayerMap.put(RenderType.cutout(), OverwhelmedBlocks.widowBlock.get());
         BlockRenderLayerMap.put(RenderType.translucent(), OverwhelmedBlocks.gooBlock.get());
-        BlockRenderLayerMap.put(RenderType.cutout(), OverwhelmedBlocks.pebble.get());
-        BlockRenderLayerMap.put(RenderType.cutout(), OverwhelmedBlocks.iceCube.get());
-        BlockRenderLayerMap.put(RenderType.cutout(), OverwhelmedBlocks.goldBead.get());
+        BlockRenderLayerMap.put(RenderType.cutout(), OverwhelmedBlocks.pebbleBlock.get());
+        BlockRenderLayerMap.put(RenderType.cutout(), OverwhelmedBlocks.iceCubeBlock.get());
+        BlockRenderLayerMap.put(RenderType.cutout(), OverwhelmedBlocks.goldBeadBlock.get());
         ParticleFactoryRegistry.getInstance().register((ParticleType<SimpleParticleType>) OverwhelmedParticleTypes
                 .fur.get(), FurParticle.Provider::new);
     }

@@ -12,30 +12,36 @@ import net.minecraft.world.level.material.PushReaction;
 import java.util.function.Supplier;
 
 public class OverwhelmedBlocks {
-    public static RegistrySupplier<TallFlowerBlock> widow;
-    public static RegistrySupplier<Block> soil;
-    public static RegistrySupplier<Block> snailShellBricks;
-    public static RegistrySupplier<WallBlock> snailShellBrickWall;
-    public static RegistrySupplier<SlabBlock> snailShellBrickSlab;
-    public static RegistrySupplier<StairBlock> snailShellBrickStairs;
-    public static RegistrySupplier<Block> chiseledSnailShellBricks;
+    public static RegistrySupplier<Block> soilBlock;
+    public static RegistrySupplier<Block> snailShellBrickBlock;
+    public static RegistrySupplier<StairBlock> snailShellBrickStairBlock;
+    public static RegistrySupplier<SlabBlock> snailShellBrickSlabBlock;
+    public static RegistrySupplier<WallBlock> snailShellBrickWallBlock;
+    public static RegistrySupplier<Block> chiseledSnailShellBrickBlock;
     public static RegistrySupplier<GooBlock> gooBlock;
-    public static RegistrySupplier<PebbleBlock> pebble;
-    public static RegistrySupplier<ClotBlock> iceCube;
-    public static RegistrySupplier<ClotBlock> goldBead;
+    public static RegistrySupplier<TallFlowerBlock> widowBlock;
+    public static RegistrySupplier<PebbleBlock> pebbleBlock;
+    public static RegistrySupplier<ClotBlock> iceCubeBlock;
+    public static RegistrySupplier<ClotBlock> goldBeadBlock;
 
     public static void registerBlocks() {
 
         //Must register Blocks first
-        soil = registerGenericBlock("soil", () -> BlockBehaviour.Properties.of()
+        soilBlock = registerGenericBlock("soil", () -> BlockBehaviour.Properties.of()
                 .mapColor(MapColor.COLOR_BROWN)
                 .strength(0.5f, 0.5f)
                 .sound(SoundType.ROOTED_DIRT));
-        snailShellBricks = registerGenericBlock("snail_shell_bricks", () -> BlockBehaviour.Properties.of()
+        snailShellBrickBlock = registerGenericBlock("snail_shell_bricks", () -> BlockBehaviour.Properties.of()
                 .mapColor(MapColor.COLOR_BROWN)
                 .strength(3.0f, 12.0f)
                 .requiresCorrectToolForDrops());
-        chiseledSnailShellBricks = registerGenericBlock("chiseled_snail_shell_bricks",
+        snailShellBrickStairBlock = registerGenericStairBlock(() -> snailShellBrickBlock.get().defaultBlockState(),
+                "snail_shell_brick_stairs", () -> BlockBehaviour.Properties.copy(snailShellBrickBlock.get()));
+        snailShellBrickSlabBlock = registerGenericSlabBlock("snail_shell_brick_slab",
+                () -> BlockBehaviour.Properties.copy(snailShellBrickBlock.get()));
+        snailShellBrickWallBlock = registerGenericWallBlock("snail_shell_brick_wall",
+                () -> BlockBehaviour.Properties.copy(snailShellBrickBlock.get()));
+        chiseledSnailShellBrickBlock = registerGenericBlock("chiseled_snail_shell_bricks",
                 () -> BlockBehaviour.Properties.of()
                 .mapColor(MapColor.COLOR_BROWN)
                 .strength(3.0f, 12.0f)
@@ -49,7 +55,7 @@ public class OverwhelmedBlocks {
                         .noOcclusion()
                         .jumpFactor(0.5f)
                         .speedFactor(0.4f)));
-        widow = registerGenericTallFlowerBlock("widow", () -> BlockBehaviour.Properties.of()
+        widowBlock = registerGenericTallFlowerBlock("widow", () -> BlockBehaviour.Properties.of()
                 .mapColor(MapColor.PLANT)
                 .noCollission()
                 .instabreak()
@@ -57,33 +63,25 @@ public class OverwhelmedBlocks {
                 .offsetType(BlockBehaviour.OffsetType.XZ)
                 .ignitedByLava()
                 .pushReaction(PushReaction.DESTROY));
-        pebble = Overwhelmed.BLOCKS.register(new ResourceLocation(Overwhelmed.MOD_ID, "pebble"), () ->
+        pebbleBlock = Overwhelmed.BLOCKS.register(new ResourceLocation(Overwhelmed.MOD_ID, "pebble"), () ->
                 new PebbleBlock(BlockBehaviour.Properties.of()
                         .mapColor(MapColor.STONE)
                         .strength(0f, 6f)
                         .noCollission()
                         .sound(SoundType.STONE)
                         .noOcclusion()));
-        iceCube = registerGenericClotBlock("ice_cube", () -> BlockBehaviour.Properties.of()
+        iceCubeBlock = registerGenericClotBlock("ice_cube", () -> BlockBehaviour.Properties.of()
                 .mapColor(MapColor.ICE)
                 .strength(0f, 6f)
                 .noCollission()
                 .sound(SoundType.STONE)
                 .noOcclusion());
-        goldBead = registerGenericClotBlock("gold_bead", () -> BlockBehaviour.Properties.of()
+        goldBeadBlock = registerGenericClotBlock("gold_bead", () -> BlockBehaviour.Properties.of()
                 .mapColor(MapColor.GOLD)
                 .strength(0f, 6f)
                 .noCollission()
                 .sound(SoundType.STONE)
                 .noOcclusion());
-        //These are sub blocks, these must stay down here, or it breaks.
-        snailShellBrickWall = registerGenericWallBlock("snail_shell_brick_wall",
-                () -> BlockBehaviour.Properties.copy(snailShellBricks.get()));
-        snailShellBrickSlab = registerGenericSlabBlock("snail_shell_brick_slab",
-                () -> BlockBehaviour.Properties.copy(snailShellBricks.get()));
-        snailShellBrickStairs = registerGenericStairBlock(() -> snailShellBricks.get().defaultBlockState(),
-                "snail_shell_brick_stairs", () -> BlockBehaviour.Properties.copy(snailShellBricks.get()));
-
         Overwhelmed.BLOCKS.register();
     }
     private static RegistrySupplier<Block> registerGenericBlock(String name,

@@ -5,6 +5,7 @@ import dev.architectury.registry.client.rendering.ColorHandlerRegistry;
 import endurteam.overwhelmed.client.color.items.ButterflySpawnEggItemColor;
 import endurteam.overwhelmed.client.color.items.SnailSpawnEggItemColor;
 import endurteam.overwhelmed.client.renderer.entity.ButterflyRenderer;
+import endurteam.overwhelmed.client.renderer.entity.PaperBulletRenderer;
 import endurteam.overwhelmed.client.renderer.entity.SnailRenderer;
 import endurteam.overwhelmed.client.renderer.entity.ThrownPebbleRenderer;
 import endurteam.overwhelmed.world.entity.OverwhelmedEntityTypes;
@@ -30,6 +31,7 @@ public class OverwhelmedClient {
         EntityRendererRegistry.register(OverwhelmedEntityTypes.monarchButterflyEntityType, ButterflyRenderer::new);
         EntityRendererRegistry.register(OverwhelmedEntityTypes.furButterflyEntityType, ButterflyRenderer::new);
         EntityRendererRegistry.register(OverwhelmedEntityTypes.thrownPebbleEntityType, ThrownPebbleRenderer::new);
+        EntityRendererRegistry.register(OverwhelmedEntityTypes.paperBulletEntityType, PaperBulletRenderer::new);
         ColorHandlerRegistry.registerItemColors(snailSpawnEggItemColor = new SnailSpawnEggItemColor(),
                 OverwhelmedItems.snailSpawnEggItem);
         ColorHandlerRegistry.registerItemColors(butterflySpawnEggItemColor = new ButterflySpawnEggItemColor(),

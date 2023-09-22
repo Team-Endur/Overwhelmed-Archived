@@ -3,6 +3,7 @@ package endurteam.overwhelmed.world.entity;
 import dev.architectury.registry.level.entity.EntityAttributeRegistry;
 import dev.architectury.registry.registries.RegistrySupplier;
 import endurteam.overwhelmed.world.entity.animal.ButterflyEntity;
+import endurteam.overwhelmed.world.entity.projectile.PaperBulletEntity;
 import endurteam.overwhelmed.world.entity.projectile.ThrownPebbleEntity;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
@@ -31,6 +32,7 @@ public class OverwhelmedEntityTypes {
     public static RegistrySupplier<EntityType<ButterflyEntity>> furButterflyEntityType;
 
     public static RegistrySupplier<EntityType<ThrownPebbleEntity>> thrownPebbleEntityType;
+    public static RegistrySupplier<EntityType<PaperBulletEntity>> paperBulletEntityType;
 
     public static final TagKey<Biome> SPAWNS_GARDEN_SNAILS = TagKey.create(Registries.BIOME,
             new ResourceLocation(MOD_ID, "spawns_garden_snails"));
@@ -134,6 +136,13 @@ public class OverwhelmedEntityTypes {
                                 .sized(4.0f, 2.0f)
                                 .clientTrackingRange(4)
                                 .build("thrown_pebble")
+        );
+        paperBulletEntityType = Overwhelmed.ENTITY_TYPES.register(
+                new ResourceLocation(MOD_ID, "paper_bullet"), () ->
+                        EntityType.Builder.<PaperBulletEntity>of(PaperBulletEntity::new, MobCategory.MISC)
+                                .sized(4.0f, 2.0f)
+                                .clientTrackingRange(4)
+                                .build("paper_bullet")
         );
         Overwhelmed.ENTITY_TYPES.register();
 

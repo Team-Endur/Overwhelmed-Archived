@@ -5,6 +5,7 @@ import endurteam.overwhelmed.world.item.OverwhelmedItems;
 import endurteam.overwhelmed.world.level.block.OverwhelmedBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.BlockParticleOption;
+import net.minecraft.core.particles.ItemParticleOption;
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.syncher.EntityDataAccessor;
@@ -20,30 +21,30 @@ import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.HitResult;
 import org.jetbrains.annotations.NotNull;
 
-public class ThrownPebbleEntity
+public class PaperBulletEntity
         extends ThrowableItemProjectile {
     protected static final EntityDataAccessor<BlockPos> DATA_START_POS =
-            SynchedEntityData.defineId(ThrownPebbleEntity.class, EntityDataSerializers.BLOCK_POS);
+            SynchedEntityData.defineId(PaperBulletEntity.class, EntityDataSerializers.BLOCK_POS);
 
-    public ThrownPebbleEntity(EntityType<? extends ThrownPebbleEntity> entityType, Level level) {
+    public PaperBulletEntity(EntityType<? extends PaperBulletEntity> entityType, Level level) {
         super(entityType, level);
     }
 
-    public ThrownPebbleEntity(Level level, LivingEntity livingEntity) {
-        super(OverwhelmedEntityTypes.thrownPebbleEntityType.get(), livingEntity, level);
+    public PaperBulletEntity(Level level, LivingEntity livingEntity) {
+        super(OverwhelmedEntityTypes.paperBulletEntityType.get(), livingEntity, level);
     }
 
-    public ThrownPebbleEntity(Level level, double d, double e, double f) {
-        super(OverwhelmedEntityTypes.thrownPebbleEntityType.get(), d, e, f, level);
+    public PaperBulletEntity(Level level, double d, double e, double f) {
+        super(OverwhelmedEntityTypes.paperBulletEntityType.get(), d, e, f, level);
     }
 
     @Override
     protected @NotNull Item getDefaultItem() {
-        return OverwhelmedItems.pebbleBlockItem.get();
+        return OverwhelmedItems.paperBulletItem.get();
     }
 
     private ParticleOptions getParticle() {
-        return new BlockParticleOption(ParticleTypes.BLOCK, OverwhelmedBlocks.pebbleBlock.get().defaultBlockState());
+        return new ItemParticleOption(ParticleTypes.ITEM, OverwhelmedItems.paperBulletItem.get().getDefaultInstance());
     }
 
     @Override
