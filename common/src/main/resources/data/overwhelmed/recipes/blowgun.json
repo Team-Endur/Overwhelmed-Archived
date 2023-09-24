@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#",
+    "G",
+    "X"
+  ],
+  "key": {
+    "X": {
+      "item": "minecraft:bamboo"
+    },
+    "G": {
+      "item": "overwhelmed:goo_ball"
+    },
+    "#": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "overwhelmed:blowgun",
+    "count": 1
+  }
+}
