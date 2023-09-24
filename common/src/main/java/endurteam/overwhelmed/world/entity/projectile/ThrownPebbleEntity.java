@@ -4,6 +4,7 @@ import endurteam.overwhelmed.world.entity.OverwhelmedEntityTypes;
 import endurteam.overwhelmed.world.item.OverwhelmedItems;
 import endurteam.overwhelmed.world.level.block.OverwhelmedBlocks;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Vec3i;
 import net.minecraft.core.particles.BlockParticleOption;
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleTypes;
@@ -18,10 +19,14 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.HitResult;
+import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.NotNull;
 
 public class ThrownPebbleEntity
         extends ThrowableItemProjectile {
+    private final Vec3 UP = new Vec3(0, 1, 0);
+    protected static final EntityDataAccessor<Boolean> DATA_IN_WATER_LAST_TICK =
+            SynchedEntityData.defineId(ThrownPebbleEntity.class, EntityDataSerializers.BOOLEAN);
     protected static final EntityDataAccessor<BlockPos> DATA_START_POS =
             SynchedEntityData.defineId(ThrownPebbleEntity.class, EntityDataSerializers.BLOCK_POS);
 
@@ -91,6 +96,21 @@ public class ThrownPebbleEntity
     protected void defineSynchedData() {
         super.defineSynchedData();
         this.entityData.define(DATA_START_POS, BlockPos.ZERO);
+        this.entityData.define(DATA_IN_WATER_LAST_TICK, this.isInWater());
+    }
+
+    @Override
+    public void tick()
+    {
+        this.entityData.set(DATA_IN_WATER_LAST_TICK, this.isInWater());
+        super.tick();
+        if (!this.entityData.get(DATA_IN_WATER_LAST_TICK) && this.isInWater()
+                && this.getDeltaMovement().length() > 0.2)
+        {
+            // Vector reflection formula
+            this.setDeltaMovement(this.getDeltaMovement().subtract(UP.scale(2 * this.getDeltaMovement().dot(UP)))
+                    .scale(0.6));
+        }
     }
 
 }
