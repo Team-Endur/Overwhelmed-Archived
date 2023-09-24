@@ -10,6 +10,8 @@ public class OverwhelmedSoundEvents {
     public static RegistrySupplier<SoundEvent> snailDeath;
     public static RegistrySupplier<SoundEvent> butterflyHurt;
     public static RegistrySupplier<SoundEvent> butterflyDeath;
+    public static RegistrySupplier<SoundEvent> blowgunShoot;
+
     public static void registerSoundEvents() {
         snailHurt = Overwhelmed.SOUND_EVENTS.register(
                 new ResourceLocation(Overwhelmed.MOD_ID, "entity.snail.hurt"), () ->
@@ -27,6 +29,10 @@ public class OverwhelmedSoundEvents {
                 new ResourceLocation(Overwhelmed.MOD_ID, "entity.butterfly.death"), () ->
                         SoundEvent.createVariableRangeEvent(
                                 new ResourceLocation(Overwhelmed.MOD_ID, "entity.butterfly.death")));
+        blowgunShoot = Overwhelmed.SOUND_EVENTS.register(
+                new ResourceLocation(Overwhelmed.MOD_ID, "item.blowgun.shoot"), () ->
+                        SoundEvent.createVariableRangeEvent(
+                                new ResourceLocation(Overwhelmed.MOD_ID, "item.blowgun.shoot")));
 
         Overwhelmed.SOUND_EVENTS.register();
     }

@@ -37,5 +37,15 @@
       "overwhelmed:mob/butterfly/death3",
       "overwhelmed:mob/butterfly/death4"
     ]
+  },
+  "item.blowgun.shoot": {
+    "subtitle": "subtitles.item.overwhelmed.blowgun.shoot",
+    "category": "neutral",
+    "sounds": [
+      "overwhelmed:item/blowgun/shoot1",
+      "overwhelmed:item/blowgun/shoot2",
+      "overwhelmed:item/blowgun/shoot3",
+      "overwhelmed:item/blowgun/shoot4"
+    ]
   }
 }
