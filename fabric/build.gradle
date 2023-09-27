@@ -41,13 +41,17 @@ dependencies {
     modImplementation("software.bernie.geckolib:geckolib-fabric-${rootProject.minecraft_version}:${rootProject.geckolib_version}"){
         exclude module: 'fabric-api'
     }
+    implementation("com.eliotlash.mclib:mclib:${rootProject.mclib_version}")
     modRuntimeOnly("com.terraformersmc:modmenu:${rootProject.mod_menu_version}"){
         exclude module: 'fabric-api'
     }
-    //modRuntimeOnly("squeek.appleskin:appleskin-fabric:${rootProject.appleskin_version_fabric}") {
-    //    exclude module: 'fabric-api'
-    //    exclude module: 'modmenu'
-    //}
+    modRuntimeOnly("squeek.appleskin:appleskin-fabric:${rootProject.appleskin_version_fabric}") {
+        exclude module: 'fabric-api'
+        exclude module: 'modmenu'
+    }
+    modRuntimeOnly("me.shedaniel.cloth:cloth-config-fabric:${rootProject.cloth_config_version}") {
+        exclude(group: "net.fabricmc.fabric-api")
+    }
 }
 
 processResources {

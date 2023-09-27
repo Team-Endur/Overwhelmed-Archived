@@ -29,4 +29,5 @@ dependencies {
     common(project(path: ":common", configuration: "namedElements")) { transitive false }
 
     modImplementation "software.bernie.geckolib:geckolib-fabric-${rootProject.minecraft_version}:${rootProject.geckolib_version}"
+    implementation("com.eliotlash.mclib:mclib:${rootProject.mclib_version}")
 }

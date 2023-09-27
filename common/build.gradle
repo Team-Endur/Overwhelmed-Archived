@@ -24,6 +24,7 @@ dependencies {
     //This is a horrible way of doing things to be fair, as you don't want Forge References in Common or Fabric / Quilt.
     //That said, GeckoLib does not release Core or a Common jar yet, so we'll have to work with this.
     modImplementation("software.bernie.geckolib:geckolib-forge-${rootProject.minecraft_version}:${rootProject.geckolib_version}")
+    implementation("com.eliotlash.mclib:mclib:${rootProject.mclib_version}")
 }
 
 publishing {

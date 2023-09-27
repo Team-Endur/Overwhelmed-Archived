@@ -35,6 +35,8 @@ dependencies {
     modRuntimeOnly("squeek.appleskin:appleskin-forge:${rootProject.appleskin_version_forge}") {
         exclude module: 'modmenu'
     }
+    compileOnly("com.eliotlash.mclib:mclib:${rootProject.mclib_version}")
+    forgeRuntimeLibrary("com.eliotlash.mclib:mclib:${rootProject.mclib_version}")
 }
 
 processResources {
