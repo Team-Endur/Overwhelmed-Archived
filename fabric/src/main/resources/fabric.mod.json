@@ -28,10 +28,11 @@
     "overwhelmed-common.mixins.json"
   ],
   "depends": {
-    "fabricloader": "*",
-    "fabric": "*",
-    "minecraft": ">=1.20",
-    "architectury": ">=9.0.8",
-    "geckolib": ">=4.2"
+    "fabricloader": ">=0.14.22",
+    "fabric-api": "*",
+    "java": ">=17",
+    "minecraft": ">=1.20.2",
+    "architectury": ">=10.0.8",
+    "geckolib": ">=4.2.3"
   }
 }

@@ -11,7 +11,6 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.phys.shapes.CollisionContext;
-import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.NotNull;
 
@@ -48,7 +47,6 @@ public class ClotBlock extends FallingBlock {
         return box(6.0, 0.0, 6.0, 10.0, 2.0, 10.0);
     }
 
-    @SuppressWarnings("deprecation")
     public boolean canSurvive(@NotNull BlockState pState, @NotNull LevelReader pLevel, @NotNull BlockPos pPos) {
         return Block.canSupportCenter(pLevel, pPos.below(), Direction.UP);
     }

@@ -47,7 +47,6 @@ public class PebbleBlock extends FallingBlock {
         return box(6.0, 0.0, 6.0, 10.0, 2.0, 10.0);
     }
 
-    @SuppressWarnings("deprecation")
     public boolean canSurvive(@NotNull BlockState pState, @NotNull LevelReader pLevel, @NotNull BlockPos pPos) {
         return Block.canSupportCenter(pLevel, pPos.below(), Direction.UP);
     }
