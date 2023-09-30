@@ -3,6 +3,5 @@
   "ingredient": {
     "item": "overwhelmed:snail_shell_bricks"
   },
-  "result": "overwhelmed:snail_shell_brick_stairs",
-  "count": 1
+  "result": "overwhelmed:snail_shell_brick_stairs"
 }
