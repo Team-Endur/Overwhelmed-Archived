@@ -17,6 +17,7 @@ public class OverwhelmedItems {
     public static RegistrySupplier<Item> gooSoupItem;
     public static RegistrySupplier<Item> paperBulletItem;
     public static RegistrySupplier<Item> blowgunItem;
+    public static RegistrySupplier<Item> copperBlowgunItem;
     public static RegistrySupplier<MultiSpawnEggItem> snailSpawnEggItem;
     public static RegistrySupplier<MultiSpawnEggItem> butterflySpawnEggItem;
     public static RegistrySupplier<BlockItem> soilBlockItem;
@@ -45,7 +46,13 @@ public class OverwhelmedItems {
                 new BlowgunItem(new Item.Properties()
                         .stacksTo(1)
                         .rarity(Rarity.COMMON)
-                        .durability(10)
+                        .durability(20)
+                        .arch$tab(overwhelmedTab)));
+        copperBlowgunItem = Overwhelmed.ITEMS.register(new ResourceLocation(Overwhelmed.MOD_ID, "copper_blowgun"), () ->
+                new BlowgunItem(new Item.Properties()
+                        .stacksTo(1)
+                        .rarity(Rarity.COMMON)
+                        .durability(150)
                         .arch$tab(overwhelmedTab)));
 
         snailSpawnEggItem = Overwhelmed.ITEMS.register(new ResourceLocation(Overwhelmed.MOD_ID,
