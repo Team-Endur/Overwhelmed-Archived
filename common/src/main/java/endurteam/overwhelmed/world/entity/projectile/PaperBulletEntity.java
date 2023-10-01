@@ -68,10 +68,10 @@ public class PaperBulletEntity
     protected void onHitEntity(EntityHitResult entityHitResult) {
         super.onHitEntity(entityHitResult);
         Entity entity = entityHitResult.getEntity();
-        boolean bl = entity.hurt(this.damageSources().thrown(this, this.getOwner()), 1);
+        boolean bl = entity.hurt(this.damageSources().thrown(this, this.getOwner()), 0);
         if (bl) {
             if (entity instanceof LivingEntity livingEntity2) {
-                livingEntity2.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 60), this);
+                livingEntity2.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 60, 0), this);
             }
         }
     }

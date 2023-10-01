@@ -133,14 +133,14 @@ public class OverwhelmedEntityTypes {
         thrownPebbleEntityType = Overwhelmed.ENTITY_TYPES.register(
                 new ResourceLocation(MOD_ID, "thrown_pebble"), () ->
                         EntityType.Builder.<ThrownPebbleEntity>of(ThrownPebbleEntity::new, MobCategory.MISC)
-                                .sized(4.0f, 2.0f)
+                                .sized(0.2f, 0.2f)
                                 .clientTrackingRange(4)
                                 .build("thrown_pebble")
         );
         paperBulletEntityType = Overwhelmed.ENTITY_TYPES.register(
                 new ResourceLocation(MOD_ID, "paper_bullet"), () ->
                         EntityType.Builder.<PaperBulletEntity>of(PaperBulletEntity::new, MobCategory.MISC)
-                                .sized(4.0f, 2.0f)
+                                .sized(0.2f, 0.2f)
                                 .clientTrackingRange(4)
                                 .build("paper_bullet")
         );
