@@ -1,3 +1,23 @@
+/**
+ *  Overwhelmed, a Minecraft overhauling and adding new features to the Overworld's surface!<br>
+ *  Copyright (C) 2023  Endurteam<br>
+ *  <br>
+ *  This program is free software: you can redistribute it and/or modify<br>
+ *  it under the terms of the GNU General Public License as published by<br>
+ *  the Free Software Foundation, either version 3 of the License, or<br>
+ *  any later version.<br>
+ *  <br>
+ *  This program is distributed in the hope that it will be useful,<br>
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of<br>
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the<br>
+ *  GNU General Public License for more details.<br>
+ *  <br>
+ *  You should have received a copy of the GNU General Public License with<br>
+ *  the Minecraft Linking Exception<br>
+ *  along with this program.  If not, see <https://www.gnu.org/licenses/> and<br>
+ *  <https://gist.github.com/triphora/588f353802a3b0ea649e4fc85f75e583/>
+ */
+
 package endurteam.overwhelmed.world.entity.animal;
 
 import endurteam.overwhelmed.core.particles.OverwhelmedParticleTypes;
@@ -5,30 +25,20 @@ import endurteam.overwhelmed.sounds.OverwhelmedSoundEvents;
 import endurteam.overwhelmed.world.entity.OverwhelmedEntityTypes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleOptions;
-import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.util.Mth;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import software.bernie.geckolib.animatable.GeoEntity;
-import software.bernie.geckolib.constant.DefaultAnimations;
-import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
-import software.bernie.geckolib.core.animation.AnimatableManager;
-import software.bernie.geckolib.core.animation.AnimationController;
-import software.bernie.geckolib.util.ClientUtils;
-import software.bernie.geckolib.util.GeckoLibUtil;
 
-public class ButterflyEntity extends PathfinderMob implements GeoEntity {
-    private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
-
+public class ButterflyEntity extends PathfinderMob {
+    public AnimationState flyAnimationState = new AnimationState();
     @Nullable
     private BlockPos targetPosition;
 
@@ -67,6 +77,11 @@ public class ButterflyEntity extends PathfinderMob implements GeoEntity {
     @Override
     public void tick() {
         super.tick();
+        if (this.level().isClientSide())
+        {
+            this.flyAnimationState.startIfStopped(this.tickCount);
+        }
+
         this.setDeltaMovement(this.getDeltaMovement().multiply(1.0, 0.6, 1.0));
         if (OverwhelmedEntityTypes.furButterflyEntityType.get().equals(this.getType())
                 && this.random.nextInt(2) < 1) // Only spawn half the time
@@ -134,22 +149,5 @@ public class ButterflyEntity extends PathfinderMob implements GeoEntity {
     @Override
     public @NotNull MobType getMobType() {
         return MobType.ARTHROPOD;
-    }
-
-    @Override
-    public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
-        controllers.add(new AnimationController<>(this, 10,
-                state -> state.setAndContinue(DefaultAnimations.FLY))
-            .setCustomInstructionKeyframeHandler(state -> {
-                Player player = ClientUtils.getClientPlayer();
-
-                if (player != null)
-                    player.displayClientMessage(Component.literal("KeyFraming"), true);
-            }));
-    }
-
-    @Override
-    public AnimatableInstanceCache getAnimatableInstanceCache() {
-        return this.cache;
     }
 }

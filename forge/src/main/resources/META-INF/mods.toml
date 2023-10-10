@@ -70,9 +70,3 @@ Overhauling and adding new features to the Overworld's surface!
    versionRange="[10.0.8,)"
    ordering="AFTER"
    side="BOTH"
-[[dependencies.overwhelmed]]
-   modId="geckolib"
-   mandatory=true
-   versionRange="[4.2.3,)"
-   ordering="AFTER"
-   side="BOTH"

@@ -1,22 +1,73 @@
+/**
+ *  Overwhelmed, a Minecraft overhauling and adding new features to the Overworld's surface!<br>
+ *  Copyright (C) 2023  Endurteam<br>
+ *  <br>
+ *  This program is free software: you can redistribute it and/or modify<br>
+ *  it under the terms of the GNU General Public License as published by<br>
+ *  the Free Software Foundation, either version 3 of the License, or<br>
+ *  any later version.<br>
+ *  <br>
+ *  This program is distributed in the hope that it will be useful,<br>
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of<br>
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the<br>
+ *  GNU General Public License for more details.<br>
+ *  <br>
+ *  You should have received a copy of the GNU General Public License with<br>
+ *  the Minecraft Linking Exception<br>
+ *  along with this program.  If not, see <https://www.gnu.org/licenses/> and<br>
+ *  <https://gist.github.com/triphora/588f353802a3b0ea649e4fc85f75e583/>
+ */
+
 package endurteam.overwhelmed.client.renderer.entity;
 
+import endurteam.overwhelmed.Overwhelmed;
 import endurteam.overwhelmed.client.model.entity.ButterflyModel;
+import endurteam.overwhelmed.client.model.geom.OverwhelmedModelLayers;
+import endurteam.overwhelmed.world.entity.OverwhelmedEntityTypes;
 import endurteam.overwhelmed.world.entity.animal.ButterflyEntity;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
+import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.resources.ResourceLocation;
-import software.bernie.geckolib.renderer.GeoEntityRenderer;
+import net.minecraft.world.entity.EntityType;
+import org.jetbrains.annotations.NotNull;
 
 @Environment(EnvType.CLIENT)
-public class ButterflyRenderer
-extends GeoEntityRenderer<ButterflyEntity> {
-    public ButterflyRenderer(EntityRendererProvider.Context renderManager) {
-        super(renderManager, new ButterflyModel());
+public class ButterflyRenderer extends MobRenderer<ButterflyEntity, ButterflyModel> {
+    private static final ResourceLocation SLEEPY_TEXTURE =
+            new ResourceLocation(Overwhelmed.MOD_ID, "textures/entity/butterfly/butterfly_sleepy.png");
+    private static final ResourceLocation CABBAGE_TEXTURE =
+            new ResourceLocation(Overwhelmed.MOD_ID, "textures/entity/butterfly/butterfly_cabbage.png");
+    private static final ResourceLocation MORPHO_TEXTURE =
+            new ResourceLocation(Overwhelmed.MOD_ID, "textures/entity/butterfly/butterfly_morpho.png");
+    private static final ResourceLocation CHERRY_TEXTURE =
+            new ResourceLocation(Overwhelmed.MOD_ID, "textures/entity/butterfly/butterfly_cherry.png");
+    private static final ResourceLocation MONARCH_TEXTURE =
+            new ResourceLocation(Overwhelmed.MOD_ID, "textures/entity/butterfly/butterfly_monarch.png");
+    private static final ResourceLocation FUR_TEXTURE =
+            new ResourceLocation(Overwhelmed.MOD_ID, "textures/entity/butterfly/butterfly_fur.png");
+
+    public ButterflyRenderer(EntityRendererProvider.Context context) {
+        super(context, new ButterflyModel(context.bakeLayer(OverwhelmedModelLayers.BUTTERFLY_MODEL_LAYER)), 0.2f);
     }
 
     @Override
-    public ResourceLocation getTextureLocation(ButterflyEntity var1) {
-        return this.model.getTextureResource(var1);
+    public @NotNull ResourceLocation getTextureLocation(ButterflyEntity var1) {
+        EntityType<?> type = var1.getType();
+        if (OverwhelmedEntityTypes.sleepyButterflyEntityType.get().equals(type)) {
+            return SLEEPY_TEXTURE;
+        } else if (OverwhelmedEntityTypes.cabbageButterflyEntityType.get().equals(type)) {
+            return CABBAGE_TEXTURE;
+        } else if (OverwhelmedEntityTypes.morphoButterflyEntityType.get().equals(type)) {
+            return MORPHO_TEXTURE;
+        } else if (OverwhelmedEntityTypes.cherryButterflyEntityType.get().equals(type)) {
+            return CHERRY_TEXTURE;
+        } else if (OverwhelmedEntityTypes.monarchButterflyEntityType.get().equals(type)) {
+            return MONARCH_TEXTURE;
+        } else if (OverwhelmedEntityTypes.furButterflyEntityType.get().equals(type)) {
+            return FUR_TEXTURE;
+        }
+        throw new IncompatibleClassChangeError();
     }
 }

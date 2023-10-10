@@ -18,24 +18,16 @@
  *  <https://gist.github.com/triphora/588f353802a3b0ea649e4fc85f75e583/>
  */
 
-package endurteam.overwhelmed.world.item;
+package endurteam.overwhelmed.client.model.entity;
 
-import dev.architectury.registry.registries.RegistrySupplier;
-import net.minecraft.network.chat.Component;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.ItemStack;
 import endurteam.overwhelmed.Overwhelmed;
+import endurteam.overwhelmed.world.entity.projectile.PaperBulletEntity;
+import net.minecraft.resources.ResourceLocation;
+import software.bernie.geckolib.model.DefaultedEntityGeoModel;
+import software.bernie.geckolib.model.GeoModel;
 
-public class OverwhelmedCreativeTabs {
-
-    public static final RegistrySupplier<CreativeModeTab> overwhelmedTab = Overwhelmed.CREATIVE_MODE_TABS.register(
-            "overwhelmed_tab", () ->  dev.architectury.registry.CreativeTabRegistry.create(
-                    Component.translatable("category.overwhelmed"),
-                    () -> new ItemStack(OverwhelmedItems.snailShellItem.get())
-            )
-    );
-
-    public static void registerCreativeTab() {
-        Overwhelmed.CREATIVE_MODE_TABS.register();
+public class PaperBulletModel extends DefaultedEntityGeoModel<PaperBulletEntity> {
+    public PaperBulletModel() {
+        super(new ResourceLocation(Overwhelmed.MOD_ID, "paper_bullet"));
     }
 }

@@ -38,10 +38,6 @@ dependencies {
     common(project(path: ":fabric-like", configuration: "namedElements")) { transitive false }
     shadowCommon(project(path: ":fabric-like", configuration: "transformProductionFabric")) { transitive false }
 
-    modImplementation("software.bernie.geckolib:geckolib-fabric-${rootProject.minecraft_version}:${rootProject.geckolib_version}"){
-        exclude module: 'fabric-api'
-    }
-    implementation("com.eliotlash.mclib:mclib:${rootProject.mclib_version}")
     modRuntimeOnly("com.terraformersmc:modmenu:${rootProject.mod_menu_version}"){
         exclude module: 'fabric-api'
     }

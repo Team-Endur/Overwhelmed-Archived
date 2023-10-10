@@ -1,60 +1,93 @@
+/**
+ *  Overwhelmed, a Minecraft overhauling and adding new features to the Overworld's surface!<br>
+ *  Copyright (C) 2023  Endurteam<br>
+ *  <br>
+ *  This program is free software: you can redistribute it and/or modify<br>
+ *  it under the terms of the GNU General Public License as published by<br>
+ *  the Free Software Foundation, either version 3 of the License, or<br>
+ *  any later version.<br>
+ *  <br>
+ *  This program is distributed in the hope that it will be useful,<br>
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of<br>
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the<br>
+ *  GNU General Public License for more details.<br>
+ *  <br>
+ *  You should have received a copy of the GNU General Public License with<br>
+ *  the Minecraft Linking Exception<br>
+ *  along with this program.  If not, see <https://www.gnu.org/licenses/> and<br>
+ *  <https://gist.github.com/triphora/588f353802a3b0ea649e4fc85f75e583/>
+ */
+
+// Made with Blockbench 4.8.3
+// Exported for Minecraft version 1.17 or later with Mojang mappings
+
 package endurteam.overwhelmed.client.model.entity;
 
-import endurteam.overwhelmed.Overwhelmed;
-import endurteam.overwhelmed.world.entity.OverwhelmedEntityTypes;
+
+import com.mojang.blaze3d.vertex.PoseStack;
+import com.mojang.blaze3d.vertex.VertexConsumer;
+import endurteam.overwhelmed.client.animation.definitions.ButterflyAnimation;
 import endurteam.overwhelmed.world.entity.animal.ButterflyEntity;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.entity.EntityType;
-import software.bernie.geckolib.model.GeoModel;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
+import net.minecraft.client.model.HierarchicalModel;
+import net.minecraft.client.model.geom.ModelPart;
+import net.minecraft.client.model.geom.PartPose;
+import net.minecraft.client.model.geom.builders.*;
+import net.minecraft.client.renderer.RenderType;
 
-public class ButterflyModel extends GeoModel<ButterflyEntity> {
-    private static final ResourceLocation SLEEPY_TEXTURE =
-            new ResourceLocation(Overwhelmed.MOD_ID, "textures/entity/butterfly/butterfly_sleepy.png");
-    private static final ResourceLocation CABBAGE_TEXTURE =
-            new ResourceLocation(Overwhelmed.MOD_ID, "textures/entity/butterfly/butterfly_cabbage.png");
-    private static final ResourceLocation MORPHO_TEXTURE =
-            new ResourceLocation(Overwhelmed.MOD_ID, "textures/entity/butterfly/butterfly_morpho.png");
-    private static final ResourceLocation CHERRY_TEXTURE =
-            new ResourceLocation(Overwhelmed.MOD_ID, "textures/entity/butterfly/butterfly_cherry.png");
-    private static final ResourceLocation MONARCH_TEXTURE =
-            new ResourceLocation(Overwhelmed.MOD_ID, "textures/entity/butterfly/butterfly_monarch.png");
-    private static final ResourceLocation FUR_TEXTURE =
-            new ResourceLocation(Overwhelmed.MOD_ID, "textures/entity/butterfly/butterfly_fur.png");
-    private static final ResourceLocation MODEL =
-            new ResourceLocation(Overwhelmed.MOD_ID, "geo/entity/butterfly.geo.json");
-    private static final ResourceLocation ANIMATION =
-            new ResourceLocation(Overwhelmed.MOD_ID, "animations/entity/butterfly.animation.json");
+@Environment(EnvType.CLIENT)
+public class ButterflyModel extends HierarchicalModel<ButterflyEntity> {
+	private final ModelPart root;
+	private final ModelPart body;
+	private final ModelPart leftWing;
+	private final ModelPart rightWing;
 
-    public static ResourceLocation getVariantTexture(ButterflyEntity animatable) {
-        EntityType<?> type = animatable.getType();
-        if (OverwhelmedEntityTypes.sleepyButterflyEntityType.get().equals(type)) {
-            return SLEEPY_TEXTURE;
-        } else if (OverwhelmedEntityTypes.cabbageButterflyEntityType.get().equals(type)) {
-            return CABBAGE_TEXTURE;
-        } else if (OverwhelmedEntityTypes.morphoButterflyEntityType.get().equals(type)) {
-            return MORPHO_TEXTURE;
-        } else if (OverwhelmedEntityTypes.cherryButterflyEntityType.get().equals(type)) {
-            return CHERRY_TEXTURE;
-        } else if (OverwhelmedEntityTypes.monarchButterflyEntityType.get().equals(type)) {
-            return MONARCH_TEXTURE;
-        } else if (OverwhelmedEntityTypes.furButterflyEntityType.get().equals(type)) {
-            return FUR_TEXTURE;
-        }
-        throw new IncompatibleClassChangeError();
-    }
+	public ButterflyModel(ModelPart root) {
+		super(RenderType::entityCutoutNoCull);
+		this.root = root;
+		this.body = root.getChild("body");
+		this.leftWing = root.getChild("left_wing");
+		this.rightWing = root.getChild("right_wing");
+	}
 
-    @Override
-    public ResourceLocation getModelResource(ButterflyEntity animatable) {
-        return MODEL;
-    }
+	public static LayerDefinition createBodyLayer() {
+		MeshDefinition meshdefinition = new MeshDefinition();
+		PartDefinition partdefinition = meshdefinition.getRoot();
 
-    @Override
-    public ResourceLocation getTextureResource(ButterflyEntity animatable) {
-        return getVariantTexture(animatable);
-    }
+		partdefinition.addOrReplaceChild("body", CubeListBuilder.create().texOffs(8, 5)
+				.addBox(-0.5F, -0.5F, -2.5F, 1.0F, 1.0F, 5.0F, new CubeDeformation(0.0F))
+		.texOffs(6, 8).addBox(-0.5F, -0.5F, -5.5F, 0.0F, 2.0F, 3.0F, new CubeDeformation(0.0F))
+		.texOffs(0, 7).addBox(0.5F, -0.5F, -5.5F, 0.0F, 2.0F, 3.0F, new CubeDeformation(0.0F)),
+				PartPose.offsetAndRotation(0.0F, 16.5F, 0.0F, -0.589F, 0.0F, 0.0F));
 
-    @Override
-    public ResourceLocation getAnimationResource(ButterflyEntity animatable) {
-        return ANIMATION;
-    }
+		partdefinition.addOrReplaceChild("left_wing", CubeListBuilder.create().texOffs(0, 0)
+				.addBox(0.0F, 0.0F, -2.5F, 4.0F, 0.0F, 5.0F, new CubeDeformation(0.0F)),
+				PartPose.offsetAndRotation(0.5F, 16.0F, 0.0F, -0.7854F, 0.0F, 0.0F));
+		partdefinition.addOrReplaceChild("right_wing", CubeListBuilder.create().texOffs(0, 5)
+				.addBox(-4.0F, 0.0F, -2.5F, 4.0F, 0.0F, 5.0F, new CubeDeformation(0.0F)),
+				PartPose.offsetAndRotation(-0.5F, 16.0F, 0.0F, -0.7854F, 0.0F, 0.0F));
+
+		return LayerDefinition.create(meshdefinition, 32, 32);
+	}
+
+	@Override
+	public void setupAnim(ButterflyEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks,
+						  float netHeadYaw, float headPitch) {
+		this.root().getAllParts().forEach(ModelPart::resetPose);
+		this.animate(entity.flyAnimationState, ButterflyAnimation.BUTTERFLY_FLY, ageInTicks);
+	}
+
+	@Override
+	public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay,
+							   float red, float green, float blue, float alpha) {
+		body.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
+		rightWing.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
+		leftWing.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
+	}
+
+	@Override
+	public ModelPart root() {
+		return this.root;
+	}
 }

@@ -18,24 +18,26 @@
  *  <https://gist.github.com/triphora/588f353802a3b0ea649e4fc85f75e583/>
  */
 
-package endurteam.overwhelmed.world.item;
+package endurteam.overwhelmed.client.renderer.entity;
 
-import dev.architectury.registry.registries.RegistrySupplier;
-import net.minecraft.network.chat.Component;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.ItemStack;
-import endurteam.overwhelmed.Overwhelmed;
+import endurteam.overwhelmed.client.model.entity.PaperBulletModel;
+import endurteam.overwhelmed.world.entity.projectile.PaperBulletEntity;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
+import net.minecraft.client.renderer.entity.EntityRendererProvider;
+import net.minecraft.resources.ResourceLocation;
+import org.jetbrains.annotations.NotNull;
+import software.bernie.geckolib.renderer.GeoEntityRenderer;
 
-public class OverwhelmedCreativeTabs {
+@Environment(value= EnvType.CLIENT)
+public class PaperBulletRenderer
+        extends GeoEntityRenderer<PaperBulletEntity> {
+    public PaperBulletRenderer(EntityRendererProvider.Context renderManager) {
+        super(renderManager, new PaperBulletModel());
+    }
 
-    public static final RegistrySupplier<CreativeModeTab> overwhelmedTab = Overwhelmed.CREATIVE_MODE_TABS.register(
-            "overwhelmed_tab", () ->  dev.architectury.registry.CreativeTabRegistry.create(
-                    Component.translatable("category.overwhelmed"),
-                    () -> new ItemStack(OverwhelmedItems.snailShellItem.get())
-            )
-    );
-
-    public static void registerCreativeTab() {
-        Overwhelmed.CREATIVE_MODE_TABS.register();
+    @Override
+    public @NotNull ResourceLocation getTextureLocation(PaperBulletEntity var1) {
+        return this.model.getTextureResource(var1);
     }
 }

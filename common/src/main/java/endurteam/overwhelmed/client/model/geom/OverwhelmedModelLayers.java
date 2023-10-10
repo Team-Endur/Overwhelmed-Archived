@@ -18,24 +18,23 @@
  *  <https://gist.github.com/triphora/588f353802a3b0ea649e4fc85f75e583/>
  */
 
-package endurteam.overwhelmed.world.item;
+package endurteam.overwhelmed.client.model.geom;
 
-import dev.architectury.registry.registries.RegistrySupplier;
-import net.minecraft.network.chat.Component;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.ItemStack;
+import dev.architectury.registry.client.level.entity.EntityModelLayerRegistry;
 import endurteam.overwhelmed.Overwhelmed;
+import endurteam.overwhelmed.client.model.entity.ButterflyModel;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
+import net.minecraft.client.model.geom.ModelLayerLocation;
+import net.minecraft.resources.ResourceLocation;
 
-public class OverwhelmedCreativeTabs {
+@Environment(EnvType.CLIENT)
+public class OverwhelmedModelLayers {
+    public static final ModelLayerLocation BUTTERFLY_MODEL_LAYER = new ModelLayerLocation(
+            new ResourceLocation(Overwhelmed.MOD_ID, "butterfly"), "main");
 
-    public static final RegistrySupplier<CreativeModeTab> overwhelmedTab = Overwhelmed.CREATIVE_MODE_TABS.register(
-            "overwhelmed_tab", () ->  dev.architectury.registry.CreativeTabRegistry.create(
-                    Component.translatable("category.overwhelmed"),
-                    () -> new ItemStack(OverwhelmedItems.snailShellItem.get())
-            )
-    );
-
-    public static void registerCreativeTab() {
-        Overwhelmed.CREATIVE_MODE_TABS.register();
+    public static void registerModelLayers()
+    {
+        EntityModelLayerRegistry.register(BUTTERFLY_MODEL_LAYER, ButterflyModel::createBodyLayer);
     }
 }

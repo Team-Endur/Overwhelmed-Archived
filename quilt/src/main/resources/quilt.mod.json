@@ -23,15 +23,11 @@
       },
       {
         "id": "minecraft",
-        "version": ">=1.20"
+        "version": ">=1.20.2"
       },
       {
         "id": "architectury",
-        "version": ">=9.0.8"
-      },
-      {
-        "id": "geckolib",
-        "version": ">=4.2"
+        "version": ">=10.0.8"
       }
     ],
     "intermediate_mappings": "net.fabricmc:intermediary",
@@ -47,10 +43,10 @@
         "sources": "https://github.com/Codetoil/Overwhelmed"
       },
       "license": {
-        "name": "GNU GPLv3 with Minecraft Exception",
+        "name": "GNU GPLv3 or Later with Minecraft Exception",
         "id": "GPL-3.0-or-later-WITH-MCLINK",
-        "url": "https://gist.github.com/triphora/588f353802a3b0ea649e4fc85f75e583",
-        "description": "Adds an exception to the GNU GPLv3 allowing the use of Minecraft"
+        "url": "https://github.com/Codetoil/Overwhelmed/blob/dev/1.0.x/LICENSE",
+        "description": "GPLv3 along with an exception to the GNU GPLv3 allowing the use of Minecraft"
       },
       "icon": "icon.png"
     }
