@@ -57,15 +57,18 @@ public class SnailRomanModel<T extends Entity> extends HierarchicalModel<T> {
 				PartPose.offset(0.0F, 23.0F, 0.0F));
 
 		PartDefinition shell = partdefinition.addOrReplaceChild("shell", CubeListBuilder.create()
-				.texOffs(0, 10).addBox(-2.0F, -2.5F, -2.5F, 4.0F, 5.0F, 5.0F, new CubeDeformation(0.0F)),
+				.texOffs(0, 10).addBox(-2.0F, -2.5F, -2.5F, 4.0F, 5.0F, 5.0F,
+								new CubeDeformation(0.0F)),
 				PartPose.offsetAndRotation(0.0F, 20.5F, 1.5F, -0.3927F, 0.0F, 0.0F));
 
 		PartDefinition right_antennae = partdefinition.addOrReplaceChild("right_antennae", CubeListBuilder
-				.create().texOffs(0, 1).addBox(0.0F, -0.5F, -4.0F, 0.0F, 1.0F, 4.0F, new CubeDeformation(0.0F)),
+				.create().texOffs(0, 1).addBox(0.0F, -0.5F, -4.0F, 0.0F, 1.0F, 4.0F,
+								new CubeDeformation(0.0F)),
 				PartPose.offsetAndRotation(-1.5F, 22.5F, -3.5F, -0.3927F, 0.0F, 0.0F));
 
 		PartDefinition left_antennae = partdefinition.addOrReplaceChild("left_antennae", CubeListBuilder.create()
-				.texOffs(0, 0).addBox(0.0F, -0.5F, -4.0F, 0.0F, 1.0F, 4.0F, new CubeDeformation(0.0F)),
+				.texOffs(0, 0).addBox(0.0F, -0.5F, -4.0F, 0.0F, 1.0F, 4.0F,
+								new CubeDeformation(0.0F)),
 				PartPose.offsetAndRotation(1.5F, 22.5F, -3.5F, -0.3927F, 0.0F, 0.0F));
 
 		return LayerDefinition.create(meshdefinition, 32, 32);

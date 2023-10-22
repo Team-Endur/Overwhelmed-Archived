@@ -46,11 +46,19 @@ public class PaperBulletModel<T extends Entity> extends HierarchicalModel<T> {
 		MeshDefinition meshdefinition = new MeshDefinition();
 		PartDefinition partdefinition = meshdefinition.getRoot();
 
-		PartDefinition body = partdefinition.addOrReplaceChild("body", CubeListBuilder.create().texOffs(0, 0).addBox(-1.5F, 0.0F, -1.5F, 3.0F, 0.0F, 3.0F, new CubeDeformation(0.0F))
-		.texOffs(6, 7).addBox(-1.5F, -1.5F, 0.0F, 3.0F, 3.0F, 0.0F, new CubeDeformation(0.0F))
-		.texOffs(0, 3).addBox(-1.0F, -1.0F, -1.0F, 2.0F, 2.0F, 2.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 24.0F, 0.0F));
+		PartDefinition body = partdefinition.addOrReplaceChild("body", CubeListBuilder.create()
+						.texOffs(0, 0).addBox(-1.5F, 0.0F, -1.5F, 3.0F, 0.0F, 3.0F,
+								new CubeDeformation(0.0F))
+						.texOffs(6, 7).addBox(-1.5F, -1.5F, 0.0F, 3.0F, 3.0F, 0.0F,
+								new CubeDeformation(0.0F))
+						.texOffs(0, 3).addBox(-1.0F, -1.0F, -1.0F, 2.0F, 2.0F, 2.0F,
+								new CubeDeformation(0.0F)),
+				PartPose.offset(0.0F, 24.0F, 0.0F));
 
-		PartDefinition cube_r1 = body.addOrReplaceChild("cube_r1", CubeListBuilder.create().texOffs(0, 7).addBox(8.3F, -10.5F, 0.0F, 3.0F, 3.0F, 0.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 9.0F, 9.8F, 0.0F, 1.5708F, 0.0F));
+		PartDefinition cube_r1 = body.addOrReplaceChild("cube_r1", CubeListBuilder.create().texOffs(0, 7)
+				.addBox(8.3F, -10.5F, 0.0F, 3.0F, 3.0F, 0.0F,
+						new CubeDeformation(0.0F)),
+				PartPose.offsetAndRotation(0.0F, 9.0F, 9.8F, 0.0F, 1.5708F, 0.0F));
 
 		return LayerDefinition.create(meshdefinition, 16, 16);
 	}

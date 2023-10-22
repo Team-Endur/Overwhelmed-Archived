@@ -52,19 +52,31 @@ public class SnailGlassModel<T extends Entity> extends HierarchicalModel<T> {
 		MeshDefinition meshdefinition = new MeshDefinition();
 		PartDefinition partdefinition = meshdefinition.getRoot();
 
-		PartDefinition body = partdefinition.addOrReplaceChild("body", CubeListBuilder.create().texOffs(0, 0).addBox(-1.5F, -1.0F, -3.0F, 3.0F, 2.0F, 7.0F, new CubeDeformation(-0.1F)), PartPose.offset(0.0F, 23.0F, 0.0F));
+		PartDefinition body = partdefinition.addOrReplaceChild("body", CubeListBuilder.create()
+				.texOffs(0, 0).addBox(-1.5F, -1.0F, -3.0F, 3.0F, 2.0F, 7.0F,
+						new CubeDeformation(-0.1F)), PartPose.offset(0.0F, 23.0F, 0.0F));
 
-		PartDefinition shell = partdefinition.addOrReplaceChild("shell", CubeListBuilder.create().texOffs(0, 9).addBox(-2.0F, -2.5F, -2.5F, 4.0F, 5.0F, 5.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 20.5F, 1.5F, -0.3927F, 0.0F, 0.0F));
+		PartDefinition shell = partdefinition.addOrReplaceChild("shell", CubeListBuilder.create()
+				.texOffs(0, 9).addBox(-2.0F, -2.5F, -2.5F, 4.0F, 5.0F, 5.0F,
+						new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 20.5F, 1.5F,
+				-0.3927F, 0.0F, 0.0F));
 
-		PartDefinition left_antennae = partdefinition.addOrReplaceChild("left_antennae", CubeListBuilder.create().texOffs(0, 1).addBox(0.5F, -0.5F, -2.0F, 0.0F, 1.0F, 2.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(1.0F, 22.5F, -2.5F, -0.3927F, 0.0F, 0.0F));
+		PartDefinition left_antennae = partdefinition.addOrReplaceChild("left_antennae", CubeListBuilder.create()
+				.texOffs(0, 1).addBox(0.5F, -0.5F, -2.0F, 0.0F, 1.0F, 2.0F,
+						new CubeDeformation(0.0F)),
+				PartPose.offsetAndRotation(1.0F, 22.5F, -2.5F, -0.3927F, 0.0F, 0.0F));
 
-		PartDefinition right_antennae = partdefinition.addOrReplaceChild("right_antennae", CubeListBuilder.create().texOffs(0, 0).addBox(-0.5F, -0.5F, -2.0F, 0.0F, 1.0F, 2.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(-1.0F, 22.5F, -2.5F, -0.3927F, 0.0F, 0.0F));
+		PartDefinition right_antennae = partdefinition.addOrReplaceChild("right_antennae", CubeListBuilder
+				.create().texOffs(0, 0).addBox(-0.5F, -0.5F, -2.0F, 0.0F, 1.0F, 2.0F,
+						new CubeDeformation(0.0F)),
+				PartPose.offsetAndRotation(-1.0F, 22.5F, -2.5F, -0.3927F, 0.0F, 0.0F));
 
 		return LayerDefinition.create(meshdefinition, 32, 32);
 	}
 
 	@Override
-	public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+	public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw,
+						  float headPitch) {
 		this.root().getAllParts().forEach(ModelPart::resetPose);
 		this.animateWalk(SnailAnimation.SNAIL_WALK, 0.0f, 0.0f, 0.0f, 0.0f);
 		this.animate(((SnailEntity) entity).walkIdleAnimationState, SnailAnimation.SNAIL_IDLE, ageInTicks);
