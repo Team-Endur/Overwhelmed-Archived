@@ -32,12 +32,12 @@ import net.minecraft.resources.ResourceLocation;
 import org.jetbrains.annotations.NotNull;
 
 @Environment(EnvType.CLIENT)
-public class RomanSnailRenderer extends MobRenderer<SnailEntity, SnailRomanModel> {
+public class RomanSnailRenderer extends MobRenderer<SnailEntity, SnailRomanModel<SnailEntity>> {
     private static final ResourceLocation TEXTURE =
             new ResourceLocation(Overwhelmed.MOD_ID, "textures/entity/snail/snail_roman.png");
 
     public RomanSnailRenderer(EntityRendererProvider.Context context) {
-        super(context, new SnailRomanModel(context.bakeLayer(OverwhelmedModelLayers.SNAIL_ROMAN_MODEL_LAYER)), 0.2f);
+        super(context, new SnailRomanModel<>(context.bakeLayer(OverwhelmedModelLayers.SNAIL_ROMAN_MODEL_LAYER)), 0.2f);
     }
 
     @Override

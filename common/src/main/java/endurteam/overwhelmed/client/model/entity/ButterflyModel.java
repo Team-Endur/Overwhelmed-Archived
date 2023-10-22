@@ -18,69 +18,72 @@
  *  <https://gist.github.com/triphora/588f353802a3b0ea649e4fc85f75e583/>
  */
 
+// Made with Blockbench 4.8.3
+// Exported for Minecraft version 1.17 or later with Mojang mappings
 package endurteam.overwhelmed.client.model.entity;
-
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import endurteam.overwhelmed.client.animation.definitions.ButterflyAnimation;
 import endurteam.overwhelmed.world.entity.animal.ButterflyEntity;
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
 import net.minecraft.client.model.HierarchicalModel;
-import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
+import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.builders.*;
-import net.minecraft.client.renderer.RenderType;
+import net.minecraft.world.entity.Entity;
 
-@Environment(EnvType.CLIENT)
-public class ButterflyModel extends HierarchicalModel<ButterflyEntity> {
+
+public class ButterflyModel<T extends Entity> extends HierarchicalModel<T> {
 	private final ModelPart root;
 	private final ModelPart body;
-	private final ModelPart leftWing;
-	private final ModelPart rightWing;
+	private final ModelPart right_wing;
+	private final ModelPart left_wing;
 
 	public ButterflyModel(ModelPart root) {
-		super(RenderType::entityCutoutNoCull);
 		this.root = root;
 		this.body = root.getChild("body");
-		this.leftWing = root.getChild("left_wing");
-		this.rightWing = root.getChild("right_wing");
+		this.right_wing = root.getChild("right_wing");
+		this.left_wing = root.getChild("left_wing");
 	}
 
 	public static LayerDefinition createBodyLayer() {
-		MeshDefinition meshDefinition = new MeshDefinition();
-		PartDefinition rootPartDefinition = meshDefinition.getRoot();
+		MeshDefinition meshdefinition = new MeshDefinition();
+		PartDefinition partdefinition = meshdefinition.getRoot();
 
-		PartDefinition bodyPartDefinition = rootPartDefinition.addOrReplaceChild("body", CubeListBuilder.create().texOffs(8, 5)
-				.addBox(-0.5F, -0.5F, -2.5F, 1.0F, 1.0F, 5.0F, new CubeDeformation(0.0F))
-		.texOffs(6, 8).addBox(-0.5F, -0.5F, -5.5F, 0.0F, 2.0F, 3.0F, new CubeDeformation(0.0F))
-		.texOffs(0, 7).addBox(0.5F, -0.5F, -5.5F, 0.0F, 2.0F, 3.0F, new CubeDeformation(0.0F)),
+		PartDefinition body = partdefinition.addOrReplaceChild("body", CubeListBuilder.create()
+				.texOffs(8, 5).addBox(-0.5F, -0.5F, -2.5F, 1.0F, 1.0F, 5.0F,
+						new CubeDeformation(0.0F))
+				.texOffs(6, 8).addBox(-0.5F, -0.5F, -5.5F, 0.0F, 2.0F, 3.0F,
+						new CubeDeformation(0.0F))
+				.texOffs(0, 7).addBox(0.5F, -0.5F, -5.5F, 0.0F, 2.0F, 3.0F,
+						new CubeDeformation(0.0F)),
 				PartPose.offsetAndRotation(0.0F, 16.5F, 0.0F, -0.589F, 0.0F, 0.0F));
 
-		PartDefinition leftWingPartDefinition = rootPartDefinition.addOrReplaceChild("left_wing", CubeListBuilder.create().texOffs(0, 0)
-				.addBox(0.0F, 0.0F, -2.5F, 4.0F, 0.0F, 5.0F, new CubeDeformation(0.0F)),
-				PartPose.offsetAndRotation(0.5F, 16.0F, 0.0F, -0.7854F, 0.0F, 0.0F));
-		PartDefinition rightWingPartDefinition = rootPartDefinition.addOrReplaceChild("right_wing", CubeListBuilder.create().texOffs(0, 5)
-				.addBox(-4.0F, 0.0F, -2.5F, 4.0F, 0.0F, 5.0F, new CubeDeformation(0.0F)),
+		PartDefinition right_wing = partdefinition.addOrReplaceChild("right_wing", CubeListBuilder.create()
+				.texOffs(0, 5).addBox(-4.0F, 0.0F, -2.5F, 4.0F, 0.0F, 5.0F,
+						new CubeDeformation(0.0F)),
 				PartPose.offsetAndRotation(-0.5F, 16.0F, 0.0F, -0.7854F, 0.0F, 0.0F));
 
-		return LayerDefinition.create(meshDefinition, 32, 32);
+		PartDefinition left_wing = partdefinition.addOrReplaceChild("left_wing", CubeListBuilder.create()
+				.texOffs(0, 0).addBox(0.0F, 0.0F, -2.5F, 4.0F, 0.0F, 5.0F,
+						new CubeDeformation(0.0F)),
+				PartPose.offsetAndRotation(0.5F, 16.0F, 0.0F, -0.7854F, 0.0F, 0.0F));
+
+		return LayerDefinition.create(meshdefinition, 32, 32);
 	}
 
 	@Override
-	public void setupAnim(ButterflyEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks,
-						  float netHeadYaw, float headPitch) {
+	public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw,
+						  float headPitch) {
 		this.root().getAllParts().forEach(ModelPart::resetPose);
-		this.animate(entity.flyAnimationState, ButterflyAnimation.BUTTERFLY_FLY, ageInTicks);
+		this.animate(((ButterflyEntity) entity).flyAnimationState, ButterflyAnimation.BUTTERFLY_FLY, ageInTicks);
 	}
 
 	@Override
-	public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay,
-							   float red, float green, float blue, float alpha) {
+	public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
 		body.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
-		rightWing.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
-		leftWing.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
+		right_wing.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
+		left_wing.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
 	}
 
 	@Override

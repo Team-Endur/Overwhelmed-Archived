@@ -18,24 +18,22 @@
  *  <https://gist.github.com/triphora/588f353802a3b0ea649e4fc85f75e583/>
  */
 
+// Made with Blockbench 4.8.3
+// Exported for Minecraft version 1.17 or later with Mojang mappings
 package endurteam.overwhelmed.client.model.entity;
-
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
-import endurteam.overwhelmed.client.animation.definitions.ButterflyAnimation;
-import endurteam.overwhelmed.world.entity.animal.ButterflyEntity;
+import endurteam.overwhelmed.client.animation.definitions.SnailAnimation;
 import endurteam.overwhelmed.world.entity.animal.SnailEntity;
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
 import net.minecraft.client.model.HierarchicalModel;
-import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
+import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.builders.*;
-import net.minecraft.client.renderer.RenderType;
+import net.minecraft.world.entity.Entity;
 
-@Environment(EnvType.CLIENT)
-public class SnailGaryModel extends HierarchicalModel<SnailEntity> {
+
+public class SnailGaryModel<T extends Entity> extends HierarchicalModel<T> {
 	private final ModelPart root;
 	private final ModelPart shell;
 	private final ModelPart body;
@@ -66,8 +64,10 @@ public class SnailGaryModel extends HierarchicalModel<SnailEntity> {
 	}
 
 	@Override
-	public void setupAnim(SnailEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+	public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
 		this.root().getAllParts().forEach(ModelPart::resetPose);
+		this.animateWalk(SnailAnimation.SNAIL_WALK, 0.0f, 0.0f, 0.0f, 0.0f);
+		this.animate(((SnailEntity) entity).walkIdleAnimationState, SnailAnimation.SNAIL_IDLE, ageInTicks);
 	}
 
 	@Override

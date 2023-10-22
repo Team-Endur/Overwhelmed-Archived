@@ -18,24 +18,21 @@
  *  <https://gist.github.com/triphora/588f353802a3b0ea649e4fc85f75e583/>
  */
 
+// Made with Blockbench 4.8.3
+// Exported for Minecraft version 1.17 or later with Mojang mappings
 package endurteam.overwhelmed.client.model.entity;
-
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
-import endurteam.overwhelmed.client.animation.definitions.ButterflyAnimation;
-import endurteam.overwhelmed.world.entity.animal.ButterflyEntity;
+import endurteam.overwhelmed.client.animation.definitions.SnailAnimation;
 import endurteam.overwhelmed.world.entity.animal.SnailEntity;
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
 import net.minecraft.client.model.HierarchicalModel;
-import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
+import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.builders.*;
-import net.minecraft.client.renderer.RenderType;
+import net.minecraft.world.entity.Entity;
 
-@Environment(EnvType.CLIENT)
-public class SnailRomanModel extends HierarchicalModel<SnailEntity> {
+public class SnailRomanModel<T extends Entity> extends HierarchicalModel<T> {
 	private final ModelPart root;
 	private final ModelPart body;
 	private final ModelPart shell;
@@ -54,24 +51,37 @@ public class SnailRomanModel extends HierarchicalModel<SnailEntity> {
 		MeshDefinition meshdefinition = new MeshDefinition();
 		PartDefinition partdefinition = meshdefinition.getRoot();
 
-		PartDefinition body = partdefinition.addOrReplaceChild("body", CubeListBuilder.create().texOffs(0, 0).addBox(-1.5F, -1.0F, -4.0F, 3.0F, 2.0F, 8.0F, new CubeDeformation(-0.1F)), PartPose.offset(0.0F, 23.0F, 0.0F));
+		PartDefinition body = partdefinition.addOrReplaceChild("body", CubeListBuilder.create()
+				.texOffs(0, 0).addBox(-1.5F, -1.0F, -4.0F, 3.0F, 2.0F, 8.0F,
+								new CubeDeformation(-0.1F)),
+				PartPose.offset(0.0F, 23.0F, 0.0F));
 
-		PartDefinition shell = partdefinition.addOrReplaceChild("shell", CubeListBuilder.create().texOffs(0, 10).addBox(-2.0F, -2.5F, -2.5F, 4.0F, 5.0F, 5.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 20.5F, 1.5F, -0.3927F, 0.0F, 0.0F));
+		PartDefinition shell = partdefinition.addOrReplaceChild("shell", CubeListBuilder.create()
+				.texOffs(0, 10).addBox(-2.0F, -2.5F, -2.5F, 4.0F, 5.0F, 5.0F, new CubeDeformation(0.0F)),
+				PartPose.offsetAndRotation(0.0F, 20.5F, 1.5F, -0.3927F, 0.0F, 0.0F));
 
-		PartDefinition right_antennae = partdefinition.addOrReplaceChild("right_antennae", CubeListBuilder.create().texOffs(0, 1).addBox(0.0F, -0.5F, -4.0F, 0.0F, 1.0F, 4.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(-1.5F, 22.5F, -3.5F, -0.3927F, 0.0F, 0.0F));
+		PartDefinition right_antennae = partdefinition.addOrReplaceChild("right_antennae", CubeListBuilder
+				.create().texOffs(0, 1).addBox(0.0F, -0.5F, -4.0F, 0.0F, 1.0F, 4.0F, new CubeDeformation(0.0F)),
+				PartPose.offsetAndRotation(-1.5F, 22.5F, -3.5F, -0.3927F, 0.0F, 0.0F));
 
-		PartDefinition left_antennae = partdefinition.addOrReplaceChild("left_antennae", CubeListBuilder.create().texOffs(0, 0).addBox(0.0F, -0.5F, -4.0F, 0.0F, 1.0F, 4.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(1.5F, 22.5F, -3.5F, -0.3927F, 0.0F, 0.0F));
+		PartDefinition left_antennae = partdefinition.addOrReplaceChild("left_antennae", CubeListBuilder.create()
+				.texOffs(0, 0).addBox(0.0F, -0.5F, -4.0F, 0.0F, 1.0F, 4.0F, new CubeDeformation(0.0F)),
+				PartPose.offsetAndRotation(1.5F, 22.5F, -3.5F, -0.3927F, 0.0F, 0.0F));
 
 		return LayerDefinition.create(meshdefinition, 32, 32);
 	}
 
 	@Override
-	public void setupAnim(SnailEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+	public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw,
+						  float headPitch) {
 		this.root().getAllParts().forEach(ModelPart::resetPose);
+		this.animateWalk(SnailAnimation.SNAIL_WALK, 0.0f, 0.0f, 0.0f, 0.0f);
+		this.animate(((SnailEntity) entity).walkIdleAnimationState, SnailAnimation.SNAIL_IDLE, ageInTicks);
 	}
 
 	@Override
-	public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
+	public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay,
+							   float red, float green, float blue, float alpha) {
 		body.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
 		shell.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
 		right_antennae.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);

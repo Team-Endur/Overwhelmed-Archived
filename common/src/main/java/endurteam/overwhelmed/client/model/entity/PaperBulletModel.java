@@ -17,48 +17,48 @@
  *  along with this program.  If not, see <https://www.gnu.org/licenses/> and<br>
  *  <https://gist.github.com/triphora/588f353802a3b0ea649e4fc85f75e583/>
  */
-package endurteam.overwhelmed.client.model.entity;
 
+// Made with Blockbench 4.8.3
+// Exported for Minecraft version 1.17 or later with Mojang mappings
+package endurteam.overwhelmed.client.model.entity;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
+import endurteam.overwhelmed.client.animation.definitions.PaperBulletAnimation;
 import endurteam.overwhelmed.world.entity.projectile.PaperBulletEntity;
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
 import net.minecraft.client.model.HierarchicalModel;
-import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
+import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.builders.*;
-import net.minecraft.client.renderer.RenderType;
+import net.minecraft.world.entity.Entity;
 
-@Environment(EnvType.CLIENT)
-public class PaperBulletModel extends HierarchicalModel<PaperBulletEntity>  {
+
+public class PaperBulletModel<T extends Entity> extends HierarchicalModel<T> {
 	private final ModelPart root;
 	private final ModelPart body;
 
 	public PaperBulletModel(ModelPart root) {
-		super(RenderType::entityCutoutNoCull);
 		this.root = root;
 		this.body = root.getChild("body");
 	}
 
 	public static LayerDefinition createBodyLayer() {
-		MeshDefinition meshDefinition = new MeshDefinition();
-		PartDefinition rootPartDefinition = meshDefinition.getRoot();
+		MeshDefinition meshdefinition = new MeshDefinition();
+		PartDefinition partdefinition = meshdefinition.getRoot();
 
-		PartDefinition bodyPartDefinition = rootPartDefinition.addOrReplaceChild("body", CubeListBuilder.create().texOffs(0, 0).addBox(-1.5F, 0.0F, -1.5F, 3.0F, 0.0F, 3.0F, new CubeDeformation(0.0F))
+		PartDefinition body = partdefinition.addOrReplaceChild("body", CubeListBuilder.create().texOffs(0, 0).addBox(-1.5F, 0.0F, -1.5F, 3.0F, 0.0F, 3.0F, new CubeDeformation(0.0F))
 		.texOffs(6, 7).addBox(-1.5F, -1.5F, 0.0F, 3.0F, 3.0F, 0.0F, new CubeDeformation(0.0F))
 		.texOffs(0, 3).addBox(-1.0F, -1.0F, -1.0F, 2.0F, 2.0F, 2.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 24.0F, 0.0F));
 
-		PartDefinition cubeR1PartDefinition = bodyPartDefinition.addOrReplaceChild("cube_r1", CubeListBuilder.create().texOffs(0, 7).addBox(8.3F, -10.5F, 0.0F, 3.0F, 3.0F, 0.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 9.0F, 9.8F, 0.0F, 1.5708F, 0.0F));
+		PartDefinition cube_r1 = body.addOrReplaceChild("cube_r1", CubeListBuilder.create().texOffs(0, 7).addBox(8.3F, -10.5F, 0.0F, 3.0F, 3.0F, 0.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 9.0F, 9.8F, 0.0F, 1.5708F, 0.0F));
 
-		return LayerDefinition.create(meshDefinition, 16, 16);
+		return LayerDefinition.create(meshdefinition, 16, 16);
 	}
 
 	@Override
-	public void setupAnim(PaperBulletEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+	public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
 		this.root().getAllParts().forEach(ModelPart::resetPose);
-		//this.animate(entity.flyAnimationState, PaperBulletAnimation.PAPER_BULLET_FLY, ageInTicks);
+		this.animate(((PaperBulletEntity) entity).flyAnimationState, PaperBulletAnimation.PAPER_BULLET_FLY, ageInTicks);
 	}
 
 	@Override

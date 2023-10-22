@@ -34,7 +34,7 @@ import net.minecraft.world.entity.EntityType;
 import org.jetbrains.annotations.NotNull;
 
 @Environment(EnvType.CLIENT)
-public class ButterflyRenderer extends MobRenderer<ButterflyEntity, ButterflyModel> {
+public class ButterflyRenderer extends MobRenderer<ButterflyEntity, ButterflyModel<ButterflyEntity>> {
     private static final ResourceLocation SLEEPY_TEXTURE =
             new ResourceLocation(Overwhelmed.MOD_ID, "textures/entity/butterfly/butterfly_sleepy.png");
     private static final ResourceLocation CABBAGE_TEXTURE =
@@ -49,7 +49,7 @@ public class ButterflyRenderer extends MobRenderer<ButterflyEntity, ButterflyMod
             new ResourceLocation(Overwhelmed.MOD_ID, "textures/entity/butterfly/butterfly_fur.png");
 
     public ButterflyRenderer(EntityRendererProvider.Context context) {
-        super(context, new ButterflyModel(context.bakeLayer(OverwhelmedModelLayers.BUTTERFLY_MODEL_LAYER)), 0.2f);
+        super(context, new ButterflyModel<>(context.bakeLayer(OverwhelmedModelLayers.BUTTERFLY_MODEL_LAYER)), 0.2f);
     }
 
     @Override

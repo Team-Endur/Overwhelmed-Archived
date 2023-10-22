@@ -32,12 +32,12 @@ import net.minecraft.resources.ResourceLocation;
 import org.jetbrains.annotations.NotNull;
 
 @Environment(EnvType.CLIENT)
-public class GarySnailRenderer extends MobRenderer<SnailEntity, SnailGaryModel> {
+public class GarySnailRenderer extends MobRenderer<SnailEntity, SnailGaryModel<SnailEntity>> {
     private static final ResourceLocation TEXTURE =
             new ResourceLocation(Overwhelmed.MOD_ID, "textures/entity/snail/snail_gary.png");
 
     public GarySnailRenderer(EntityRendererProvider.Context context) {
-        super(context, new SnailGaryModel(context.bakeLayer(OverwhelmedModelLayers.SNAIL_GARY_MODEL_LAYER)), 0.2f);
+        super(context, new SnailGaryModel<>(context.bakeLayer(OverwhelmedModelLayers.SNAIL_GARY_MODEL_LAYER)), 0.2f);
     }
 
     @Override

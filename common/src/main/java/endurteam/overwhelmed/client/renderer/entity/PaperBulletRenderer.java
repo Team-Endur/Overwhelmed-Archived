@@ -38,11 +38,11 @@ public class PaperBulletRenderer
         extends EntityRenderer<PaperBulletEntity> {
     private static final ResourceLocation TEXTURE =
             new ResourceLocation(Overwhelmed.MOD_ID, "textures/entity/paper_bullet.png");
-    private final PaperBulletModel model;
+    private final PaperBulletModel<PaperBulletEntity> model;
 
     public PaperBulletRenderer(EntityRendererProvider.Context context) {
         super(context);
-        this.model = new PaperBulletModel(context.bakeLayer(OverwhelmedModelLayers.PAPER_BULLET_MODEL_LAYER));
+        this.model = new PaperBulletModel<>(context.bakeLayer(OverwhelmedModelLayers.PAPER_BULLET_MODEL_LAYER));
     }
 
     @Override

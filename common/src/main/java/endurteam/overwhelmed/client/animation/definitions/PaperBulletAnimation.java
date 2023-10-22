@@ -28,28 +28,16 @@ import net.minecraft.client.animation.Keyframe;
 import net.minecraft.client.animation.KeyframeAnimations;
 
 @Environment(EnvType.CLIENT)
-public class ButterflyAnimation {
-    public static final AnimationDefinition BUTTERFLY_FLY = AnimationDefinition.Builder.withLength(0.5f).looping()
-            .addAnimation("right_wing",
+public class PaperBulletAnimation {
+    public static final AnimationDefinition PAPER_BULLET_FLY = AnimationDefinition.Builder.withLength(0.25f).looping()
+            .addAnimation("body",
                     new AnimationChannel(AnimationChannel.Targets.ROTATION,
                             new Keyframe(0f, KeyframeAnimations.degreeVec(0f, 0f, 0f),
                                     AnimationChannel.Interpolations.CATMULLROM),
-                            new Keyframe(0.125f, KeyframeAnimations.degreeVec(4.92f, -31.37f, -23.88f),
+                            new Keyframe(0.125f, KeyframeAnimations.degreeVec(180f, 0f, 180f),
                                     AnimationChannel.Interpolations.CATMULLROM),
-                            new Keyframe(0.375f, KeyframeAnimations.degreeVec(4.92f, 31.37f, 18.88f),
-                                    AnimationChannel.Interpolations.CATMULLROM),
-                            new Keyframe(0.5f, KeyframeAnimations.degreeVec(0f, 0f, 0f),
-                                    AnimationChannel.Interpolations.CATMULLROM)))
-            .addAnimation("left_wing",
-                    new AnimationChannel(AnimationChannel.Targets.ROTATION,
-                            new Keyframe(0f, KeyframeAnimations.degreeVec(0f, 0f, 0f),
-                                    AnimationChannel.Interpolations.CATMULLROM),
-                            new Keyframe(0.125f, KeyframeAnimations.degreeVec(4.92f, 31.37f, 18.88f),
-                                    AnimationChannel.Interpolations.CATMULLROM),
-                            new Keyframe(0.375f, KeyframeAnimations.degreeVec(4.92f, -31.37f, -23.88f),
-                                    AnimationChannel.Interpolations.CATMULLROM),
-                            new Keyframe(0.5f, KeyframeAnimations.degreeVec(0f, 0f, 0f),
+                            new Keyframe(0.25f, KeyframeAnimations.degreeVec(0f, 0f, 0f),
                                     AnimationChannel.Interpolations.CATMULLROM))).build();
 
-    private ButterflyAnimation() {}
+    private PaperBulletAnimation() {}
 }

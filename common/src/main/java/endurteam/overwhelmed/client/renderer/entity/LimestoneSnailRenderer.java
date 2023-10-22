@@ -32,12 +32,12 @@ import net.minecraft.resources.ResourceLocation;
 import org.jetbrains.annotations.NotNull;
 
 @Environment(EnvType.CLIENT)
-public class LimestoneSnailRenderer extends MobRenderer<SnailEntity, SnailLimestoneModel> {
+public class LimestoneSnailRenderer extends MobRenderer<SnailEntity, SnailLimestoneModel<SnailEntity>> {
     private static final ResourceLocation TEXTURE =
             new ResourceLocation(Overwhelmed.MOD_ID, "textures/entity/snail/snail_limestone.png");
 
     public LimestoneSnailRenderer(EntityRendererProvider.Context context) {
-        super(context, new SnailLimestoneModel(context.bakeLayer(OverwhelmedModelLayers.SNAIL_LIMESTONE_MODEL_LAYER)), 0.2f);
+        super(context, new SnailLimestoneModel<>(context.bakeLayer(OverwhelmedModelLayers.SNAIL_LIMESTONE_MODEL_LAYER)), 0.2f);
     }
 
     @Override
