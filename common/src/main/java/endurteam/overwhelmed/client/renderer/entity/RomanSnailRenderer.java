@@ -18,16 +18,30 @@
  *  <https://gist.github.com/triphora/588f353802a3b0ea649e4fc85f75e583/>
  */
 
-package endurteam.overwhelmed.client.model.entity;
+package endurteam.overwhelmed.client.renderer.entity;
 
 import endurteam.overwhelmed.Overwhelmed;
-import endurteam.overwhelmed.world.entity.projectile.PaperBulletEntity;
+import endurteam.overwhelmed.client.model.entity.SnailRomanModel;
+import endurteam.overwhelmed.client.model.geom.OverwhelmedModelLayers;
+import endurteam.overwhelmed.world.entity.animal.SnailEntity;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
+import net.minecraft.client.renderer.entity.EntityRendererProvider;
+import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.resources.ResourceLocation;
-import software.bernie.geckolib.model.DefaultedEntityGeoModel;
-import software.bernie.geckolib.model.GeoModel;
+import org.jetbrains.annotations.NotNull;
 
-public class PaperBulletModel extends DefaultedEntityGeoModel<PaperBulletEntity> {
-    public PaperBulletModel() {
-        super(new ResourceLocation(Overwhelmed.MOD_ID, "paper_bullet"));
+@Environment(EnvType.CLIENT)
+public class RomanSnailRenderer extends MobRenderer<SnailEntity, SnailRomanModel> {
+    private static final ResourceLocation TEXTURE =
+            new ResourceLocation(Overwhelmed.MOD_ID, "textures/entity/snail/snail_roman.png");
+
+    public RomanSnailRenderer(EntityRendererProvider.Context context) {
+        super(context, new SnailRomanModel(context.bakeLayer(OverwhelmedModelLayers.SNAIL_ROMAN_MODEL_LAYER)), 0.2f);
+    }
+
+    @Override
+    public @NotNull ResourceLocation getTextureLocation(SnailEntity var1) {
+        return TEXTURE;
     }
 }

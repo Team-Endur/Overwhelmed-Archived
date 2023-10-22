@@ -31,6 +31,7 @@ import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.AnimationState;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
@@ -43,6 +44,7 @@ import org.jetbrains.annotations.NotNull;
 
 public class PaperBulletEntity
         extends ThrowableItemProjectile {
+    public AnimationState flyAnimationState = new AnimationState();
     protected static final EntityDataAccessor<BlockPos> DATA_START_POS =
             SynchedEntityData.defineId(PaperBulletEntity.class, EntityDataSerializers.BLOCK_POS);
 
@@ -117,5 +119,15 @@ public class PaperBulletEntity
     protected void defineSynchedData() {
         super.defineSynchedData();
         this.entityData.define(DATA_START_POS, BlockPos.ZERO);
+    }
+
+    @Override
+    public void tick() {
+        super.tick();
+
+        if (this.level().isClientSide())
+        {
+            this.flyAnimationState.startIfStopped(this.tickCount);
+        }
     }
 }

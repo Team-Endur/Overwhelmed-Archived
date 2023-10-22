@@ -20,23 +20,28 @@
 
 package endurteam.overwhelmed.client.renderer.entity;
 
-import endurteam.overwhelmed.client.model.entity.SnailModel;
+import endurteam.overwhelmed.Overwhelmed;
+import endurteam.overwhelmed.client.model.entity.SnailLiverwortModel;
+import endurteam.overwhelmed.client.model.geom.OverwhelmedModelLayers;
 import endurteam.overwhelmed.world.entity.animal.SnailEntity;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
+import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.resources.ResourceLocation;
-import software.bernie.geckolib.renderer.GeoEntityRenderer;
+import org.jetbrains.annotations.NotNull;
 
 @Environment(EnvType.CLIENT)
-public class SnailRenderer
-extends GeoEntityRenderer<SnailEntity> {
-    public SnailRenderer(EntityRendererProvider.Context renderManager) {
-        super(renderManager, new SnailModel());
+public class LiverwortSnailRenderer extends MobRenderer<SnailEntity, SnailLiverwortModel> {
+    private static final ResourceLocation TEXTURE =
+            new ResourceLocation(Overwhelmed.MOD_ID, "textures/entity/snail/snail_liverwort.png");
+
+    public LiverwortSnailRenderer(EntityRendererProvider.Context context) {
+        super(context, new SnailLiverwortModel(context.bakeLayer(OverwhelmedModelLayers.SNAIL_LIVERWORT_MODEL_LAYER)), 0.2f);
     }
 
     @Override
-    public ResourceLocation getTextureLocation(SnailEntity var1) {
-        return this.model.getTextureResource(var1);
+    public @NotNull ResourceLocation getTextureLocation(SnailEntity var1) {
+        return TEXTURE;
     }
 }

@@ -44,6 +44,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public class SnailEntity extends Animal {
+    public AnimationState walkIdleAnimationState = new AnimationState();
     private final Level level;
 
     public SnailEntity(EntityType<? extends SnailEntity> entityType, Level level) {
@@ -142,4 +143,12 @@ public class SnailEntity extends Animal {
         throw new IncompatibleClassChangeError();
     }
 
+    @Override
+    public void tick() {
+        super.tick();
+
+        if (this.level().isClientSide()) {
+            this.walkIdleAnimationState.startIfStopped(this.tickCount);
+        }
+    }
 }

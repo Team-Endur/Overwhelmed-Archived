@@ -25,7 +25,7 @@ import dev.architectury.registry.client.rendering.ColorHandlerRegistry;
 import endurteam.overwhelmed.client.color.items.ButterflySpawnEggItemColor;
 import endurteam.overwhelmed.client.color.items.SnailSpawnEggItemColor;
 import endurteam.overwhelmed.client.model.geom.OverwhelmedModelLayers;
-import endurteam.overwhelmed.client.renderer.entity.ButterflyRenderer;
+import endurteam.overwhelmed.client.renderer.entity.*;
 import endurteam.overwhelmed.world.entity.OverwhelmedEntityTypes;
 import endurteam.overwhelmed.world.item.OverwhelmedItems;
 import net.fabricmc.api.EnvType;
@@ -43,6 +43,13 @@ public class OverwhelmedClient {
         EntityRendererRegistry.register(OverwhelmedEntityTypes.cherryButterflyEntityType, ButterflyRenderer::new);
         EntityRendererRegistry.register(OverwhelmedEntityTypes.monarchButterflyEntityType, ButterflyRenderer::new);
         EntityRendererRegistry.register(OverwhelmedEntityTypes.furButterflyEntityType, ButterflyRenderer::new);
+        EntityRendererRegistry.register(OverwhelmedEntityTypes.paperBulletEntityType, PaperBulletRenderer::new);
+        EntityRendererRegistry.register(OverwhelmedEntityTypes.gardenSnailEntityType, GardenSnailRenderer::new);
+        EntityRendererRegistry.register(OverwhelmedEntityTypes.garySnailEntityType, GarySnailRenderer::new);
+        EntityRendererRegistry.register(OverwhelmedEntityTypes.glassSnailEntityType, GlassSnailRenderer::new);
+        EntityRendererRegistry.register(OverwhelmedEntityTypes.limestoneSnailEntityType, LimestoneSnailRenderer::new);
+        EntityRendererRegistry.register(OverwhelmedEntityTypes.liverwortSnailEntityType, LiverwortSnailRenderer::new);
+        EntityRendererRegistry.register(OverwhelmedEntityTypes.romanSnailEntityType, RomanSnailRenderer::new);
         OverwhelmedModelLayers.registerModelLayers();
         ColorHandlerRegistry.registerItemColors(snailSpawnEggItemColor = new SnailSpawnEggItemColor(),
                 OverwhelmedItems.snailSpawnEggItem);

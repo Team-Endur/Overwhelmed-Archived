@@ -25,6 +25,7 @@ import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import endurteam.overwhelmed.client.animation.definitions.ButterflyAnimation;
 import endurteam.overwhelmed.world.entity.animal.ButterflyEntity;
+import endurteam.overwhelmed.world.entity.animal.SnailEntity;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.model.HierarchicalModel;
@@ -34,53 +35,47 @@ import net.minecraft.client.model.geom.builders.*;
 import net.minecraft.client.renderer.RenderType;
 
 @Environment(EnvType.CLIENT)
-public class ButterflyModel extends HierarchicalModel<ButterflyEntity> {
+public class SnailGardenModel extends HierarchicalModel<SnailEntity> {
 	private final ModelPart root;
 	private final ModelPart body;
-	private final ModelPart leftWing;
-	private final ModelPart rightWing;
+	private final ModelPart shell;
+	private final ModelPart left_antennae;
+	private final ModelPart right_antennae;
 
-	public ButterflyModel(ModelPart root) {
-		super(RenderType::entityCutoutNoCull);
+	public SnailGardenModel(ModelPart root) {
 		this.root = root;
 		this.body = root.getChild("body");
-		this.leftWing = root.getChild("left_wing");
-		this.rightWing = root.getChild("right_wing");
+		this.shell = root.getChild("shell");
+		this.left_antennae = root.getChild("left_antennae");
+		this.right_antennae = root.getChild("right_antennae");
 	}
 
 	public static LayerDefinition createBodyLayer() {
 		MeshDefinition meshDefinition = new MeshDefinition();
 		PartDefinition rootPartDefinition = meshDefinition.getRoot();
 
-		PartDefinition bodyPartDefinition = rootPartDefinition.addOrReplaceChild("body", CubeListBuilder.create().texOffs(8, 5)
-				.addBox(-0.5F, -0.5F, -2.5F, 1.0F, 1.0F, 5.0F, new CubeDeformation(0.0F))
-		.texOffs(6, 8).addBox(-0.5F, -0.5F, -5.5F, 0.0F, 2.0F, 3.0F, new CubeDeformation(0.0F))
-		.texOffs(0, 7).addBox(0.5F, -0.5F, -5.5F, 0.0F, 2.0F, 3.0F, new CubeDeformation(0.0F)),
-				PartPose.offsetAndRotation(0.0F, 16.5F, 0.0F, -0.589F, 0.0F, 0.0F));
+		PartDefinition bodyPartDefinition = rootPartDefinition.addOrReplaceChild("body", CubeListBuilder.create().texOffs(0, 0).addBox(-1.0F, -1.0F, -4.0F, 2.0F, 2.0F, 8.0F, new CubeDeformation(-0.1F)), PartPose.offset(0.0F, 23.0F, 0.0F));
 
-		PartDefinition leftWingPartDefinition = rootPartDefinition.addOrReplaceChild("left_wing", CubeListBuilder.create().texOffs(0, 0)
-				.addBox(0.0F, 0.0F, -2.5F, 4.0F, 0.0F, 5.0F, new CubeDeformation(0.0F)),
-				PartPose.offsetAndRotation(0.5F, 16.0F, 0.0F, -0.7854F, 0.0F, 0.0F));
-		PartDefinition rightWingPartDefinition = rootPartDefinition.addOrReplaceChild("right_wing", CubeListBuilder.create().texOffs(0, 5)
-				.addBox(-4.0F, 0.0F, -2.5F, 4.0F, 0.0F, 5.0F, new CubeDeformation(0.0F)),
-				PartPose.offsetAndRotation(-0.5F, 16.0F, 0.0F, -0.7854F, 0.0F, 0.0F));
+		PartDefinition shellPartDefinition = rootPartDefinition.addOrReplaceChild("shell", CubeListBuilder.create().texOffs(0, 10).addBox(-1.5F, -2.5F, -2.5F, 3.0F, 5.0F, 5.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 20.5F, 1.5F, -0.3927F, 0.0F, 0.0F));
+
+		PartDefinition leftAntennaePartDefinition = rootPartDefinition.addOrReplaceChild("left_antennae", CubeListBuilder.create().texOffs(0, 3).addBox(0.0F, -0.5F, -3.0F, 0.0F, 1.0F, 3.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(1.0F, 22.5F, -3.5F, -0.3927F, 0.0F, 0.0F));
+
+		PartDefinition rightAntennaePartDefinition = rootPartDefinition.addOrReplaceChild("right_antennae", CubeListBuilder.create().texOffs(0, 0).addBox(0.0F, -0.5F, -3.0F, 0.0F, 1.0F, 3.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(-1.0F, 22.5F, -3.5F, -0.3927F, 0.0F, 0.0F));
 
 		return LayerDefinition.create(meshDefinition, 32, 32);
 	}
 
 	@Override
-	public void setupAnim(ButterflyEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks,
-						  float netHeadYaw, float headPitch) {
+	public void setupAnim(SnailEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
 		this.root().getAllParts().forEach(ModelPart::resetPose);
-		this.animate(entity.flyAnimationState, ButterflyAnimation.BUTTERFLY_FLY, ageInTicks);
 	}
 
 	@Override
-	public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay,
-							   float red, float green, float blue, float alpha) {
+	public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
 		body.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
-		rightWing.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
-		leftWing.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
+		shell.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
+		left_antennae.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
+		right_antennae.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
 	}
 
 	@Override

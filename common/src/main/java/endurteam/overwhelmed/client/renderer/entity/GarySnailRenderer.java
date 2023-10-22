@@ -20,24 +20,28 @@
 
 package endurteam.overwhelmed.client.renderer.entity;
 
-import endurteam.overwhelmed.client.model.entity.PaperBulletModel;
-import endurteam.overwhelmed.world.entity.projectile.PaperBulletEntity;
+import endurteam.overwhelmed.Overwhelmed;
+import endurteam.overwhelmed.client.model.entity.SnailGaryModel;
+import endurteam.overwhelmed.client.model.geom.OverwhelmedModelLayers;
+import endurteam.overwhelmed.world.entity.animal.SnailEntity;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
+import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.resources.ResourceLocation;
 import org.jetbrains.annotations.NotNull;
-import software.bernie.geckolib.renderer.GeoEntityRenderer;
 
-@Environment(value= EnvType.CLIENT)
-public class PaperBulletRenderer
-        extends GeoEntityRenderer<PaperBulletEntity> {
-    public PaperBulletRenderer(EntityRendererProvider.Context renderManager) {
-        super(renderManager, new PaperBulletModel());
+@Environment(EnvType.CLIENT)
+public class GarySnailRenderer extends MobRenderer<SnailEntity, SnailGaryModel> {
+    private static final ResourceLocation TEXTURE =
+            new ResourceLocation(Overwhelmed.MOD_ID, "textures/entity/snail/snail_gary.png");
+
+    public GarySnailRenderer(EntityRendererProvider.Context context) {
+        super(context, new SnailGaryModel(context.bakeLayer(OverwhelmedModelLayers.SNAIL_GARY_MODEL_LAYER)), 0.2f);
     }
 
     @Override
-    public @NotNull ResourceLocation getTextureLocation(PaperBulletEntity var1) {
-        return this.model.getTextureResource(var1);
+    public @NotNull ResourceLocation getTextureLocation(SnailEntity var1) {
+        return TEXTURE;
     }
 }
