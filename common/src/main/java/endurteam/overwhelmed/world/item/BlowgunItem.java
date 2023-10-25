@@ -41,38 +41,6 @@ public class BlowgunItem extends ProjectileWeaponItem {
         super(properties);
     }
 
-    /*@Override
-    public @NotNull InteractionResultHolder<ItemStack> use(Level level, Player player,
-                                                           InteractionHand interactionHand) {
-        ItemStack itemStack = player.getItemInHand(interactionHand);
-        boolean bl = player.getAbilities().instabuild ||
-                EnchantmentHelper.getItemEnchantmentLevel(Enchantments.INFINITY_ARROWS, itemStack) > 0;
-        ItemStack itemStack2 = player.getProjectile(itemStack);
-        if (itemStack2.isEmpty() && !bl) {
-            return InteractionResultHolder.fail(itemStack);
-        }
-        level.playSound(null, player.getX(), player.getY(), player.getZ(), SoundEvents.SNOWBALL_THROW,
-                SoundSource.NEUTRAL, 0.5f, 0.4f / (level.getRandom().nextFloat() * 0.4f + 0.8f));
-        player.getCooldowns().addCooldown(this, 5);
-        if (itemStack2.isEmpty() || itemStack2.is(Items.ARROW)) {
-            itemStack2 = new ItemStack(OverwhelmedItems.paperBulletItem.get());
-        }
-        if (!level.isClientSide) {
-            PaperBulletEntity pebbleEntity = new PaperBulletEntity(level, player);
-            pebbleEntity.setItem(itemStack);
-            pebbleEntity.shootFromRotation(player, player.getXRot(), player.getYRot(), 0.0f, 1.5f, 1.0f);
-            level.addFreshEntity(pebbleEntity);
-        }
-        if (!player.getAbilities().instabuild) {
-            itemStack2.shrink(1);
-            if (itemStack2.isEmpty()) {
-                player.getInventory().removeItem(itemStack2);
-            }
-        }
-        player.awardStat(Stats.ITEM_USED.get(this));
-        return InteractionResultHolder.sidedSuccess(itemStack, level.isClientSide());
-    }*/
-
     @Override
     public void releaseUsing(ItemStack itemStack, Level level, LivingEntity livingEntity, int i) {
         float f;

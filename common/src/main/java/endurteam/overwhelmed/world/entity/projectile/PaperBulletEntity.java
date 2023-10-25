@@ -22,15 +22,9 @@ package endurteam.overwhelmed.world.entity.projectile;
 
 import endurteam.overwhelmed.world.entity.OverwhelmedEntityTypes;
 import endurteam.overwhelmed.world.item.OverwhelmedItems;
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
-import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ItemParticleOption;
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleTypes;
-import net.minecraft.network.syncher.EntityDataAccessor;
-import net.minecraft.network.syncher.EntityDataSerializers;
-import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.AnimationState;
@@ -47,8 +41,6 @@ import org.jetbrains.annotations.NotNull;
 public class PaperBulletEntity
         extends ThrowableItemProjectile {
     public AnimationState flyAnimationState = new AnimationState();
-    protected static final EntityDataAccessor<BlockPos> DATA_START_POS =
-            SynchedEntityData.defineId(PaperBulletEntity.class, EntityDataSerializers.BLOCK_POS);
 
     public PaperBulletEntity(EntityType<? extends PaperBulletEntity> entityType, Level level) {
         super(entityType, level);
@@ -56,10 +48,6 @@ public class PaperBulletEntity
 
     public PaperBulletEntity(Level level, LivingEntity livingEntity) {
         super(OverwhelmedEntityTypes.paperBulletEntityType.get(), livingEntity, level);
-    }
-
-    public PaperBulletEntity(Level level, double d, double e, double f) {
-        super(OverwhelmedEntityTypes.paperBulletEntityType.get(), d, e, f, level);
     }
 
     @Override
@@ -106,21 +94,6 @@ public class PaperBulletEntity
     @Override
     public void shoot(double d, double e, double f, float g, float h) {
         super.shoot(d, e, f, g, h);
-        this.setStartPos(this.getOnPos());
-    }
-
-    public void setStartPos(BlockPos blockPos) {
-        this.entityData.set(DATA_START_POS, blockPos);
-    }
-
-    public BlockPos getStartPos() {
-        return this.entityData.get(DATA_START_POS);
-    }
-
-    @Override
-    protected void defineSynchedData() {
-        super.defineSynchedData();
-        this.entityData.define(DATA_START_POS, BlockPos.ZERO);
     }
 
     @Override

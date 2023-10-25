@@ -24,8 +24,6 @@ package endurteam.overwhelmed.client.model.entity;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
-import endurteam.overwhelmed.client.animation.definitions.PaperBulletAnimation;
-import endurteam.overwhelmed.world.entity.projectile.PaperBulletEntity;
 import net.minecraft.client.model.HierarchicalModel;
 import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.ModelPart;
@@ -64,10 +62,7 @@ public class PaperBulletModel<T extends Entity> extends HierarchicalModel<T> {
 	}
 
 	@Override
-	public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-		this.root().getAllParts().forEach(ModelPart::resetPose);
-		this.animate(((PaperBulletEntity) entity).flyAnimationState, PaperBulletAnimation.PAPER_BULLET_FLY, ageInTicks);
-	}
+	public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {}
 
 	@Override
 	public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {

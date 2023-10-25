@@ -34,6 +34,8 @@ import net.minecraft.client.renderer.entity.EntityRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.util.Mth;
+import net.minecraft.world.entity.LivingEntity;
 import org.jetbrains.annotations.NotNull;
 
 @Environment(value= EnvType.CLIENT)
@@ -53,11 +55,10 @@ public class PaperBulletRenderer
     public void render(PaperBulletEntity entity, float f, float g, PoseStack poseStack,
                        MultiBufferSource multiBufferSource, int i) {
         poseStack.pushPose();
-        this.model.setupAnim(entity, 0.0f, 0.0f, entity.tickCount, entity.getYRot(),
-                entity.getXRot());
+        poseStack.mulPose(Axis.XP.rotationDegrees(Mth.lerp(g * 4.0f, 0.0f, 360.0f)));
         poseStack.translate(0.0f, -1.45f, 0.0f);
         VertexConsumer vertexConsumer = multiBufferSource.getBuffer(this.model.renderType(TEXTURE));
-        model.renderToBuffer(poseStack, vertexConsumer, i, OverlayTexture.NO_OVERLAY, 1.0f, 1.0f, 1.0f,
+        this.model.renderToBuffer(poseStack, vertexConsumer, i, OverlayTexture.NO_OVERLAY, 1.0f, 1.0f, 1.0f,
                 1.0f);
         poseStack.popPose();
         super.render(entity, f, g, poseStack, multiBufferSource, i);
