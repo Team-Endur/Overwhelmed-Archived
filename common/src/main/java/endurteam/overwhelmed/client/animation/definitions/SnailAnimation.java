@@ -30,21 +30,45 @@ import net.minecraft.client.animation.KeyframeAnimations;
 @Environment(EnvType.CLIENT)
 public class SnailAnimation {
     public static final AnimationDefinition SNAIL_WALK = AnimationDefinition.Builder.withLength(3f).looping()
+            .addAnimation("body",
+                    new AnimationChannel(AnimationChannel.Targets.SCALE,
+                            new Keyframe(0f, KeyframeAnimations.scaleVec(1f, 1f, 1f),
+                                    AnimationChannel.Interpolations.CATMULLROM),
+                            new Keyframe(1f, KeyframeAnimations.scaleVec(0.9f, 1f, 1.2f),
+                                    AnimationChannel.Interpolations.CATMULLROM),
+                            new Keyframe(2f, KeyframeAnimations.scaleVec(1f, 1f, 1f),
+                                    AnimationChannel.Interpolations.CATMULLROM)))
+            .addAnimation("shell",
+                    new AnimationChannel(AnimationChannel.Targets.POSITION,
+                            new Keyframe(0f, KeyframeAnimations.posVec(0f, 0f, 0f),
+                                    AnimationChannel.Interpolations.CATMULLROM),
+                            new Keyframe(1f, KeyframeAnimations.posVec(0f, 0f, 0.1f),
+                                    AnimationChannel.Interpolations.CATMULLROM),
+                            new Keyframe(2f, KeyframeAnimations.posVec(0f, 0f, 0f),
+                                    AnimationChannel.Interpolations.CATMULLROM)))
+            .addAnimation("shell",
+                    new AnimationChannel(AnimationChannel.Targets.ROTATION,
+                            new Keyframe(0f, KeyframeAnimations.degreeVec(0f, 0f, 0f),
+                                    AnimationChannel.Interpolations.CATMULLROM),
+                            new Keyframe(1f, KeyframeAnimations.degreeVec(-5.62f, 0f, 0f),
+                                    AnimationChannel.Interpolations.CATMULLROM),
+                            new Keyframe(2f, KeyframeAnimations.degreeVec(0f, 0f, 0f),
+                                    AnimationChannel.Interpolations.CATMULLROM)))
             .addAnimation("left_antennae",
                     new AnimationChannel(AnimationChannel.Targets.ROTATION,
                             new Keyframe(0f, KeyframeAnimations.degreeVec(0f, 0f, 0f),
                                     AnimationChannel.Interpolations.CATMULLROM),
-                            new Keyframe(1.5f, KeyframeAnimations.degreeVec(11.25f, 0f, 0f),
+                            new Keyframe(1f, KeyframeAnimations.degreeVec(11.25f, 0f, 0f),
                                     AnimationChannel.Interpolations.CATMULLROM),
-                            new Keyframe(3f, KeyframeAnimations.degreeVec(0f, 0f, 0f),
+                            new Keyframe(2f, KeyframeAnimations.degreeVec(0f, 0f, 0f),
                                     AnimationChannel.Interpolations.CATMULLROM)))
             .addAnimation("right_antennae",
                     new AnimationChannel(AnimationChannel.Targets.ROTATION,
                             new Keyframe(0f, KeyframeAnimations.degreeVec(0f, 0f, 0f),
                                     AnimationChannel.Interpolations.CATMULLROM),
-                            new Keyframe(1.5f, KeyframeAnimations.degreeVec(11.25f, 0f, 0f),
+                            new Keyframe(1f, KeyframeAnimations.degreeVec(11.25f, 0f, 0f),
                                     AnimationChannel.Interpolations.CATMULLROM),
-                            new Keyframe(3f, KeyframeAnimations.degreeVec(0f, 0f, 0f),
+                            new Keyframe(2f, KeyframeAnimations.degreeVec(0f, 0f, 0f),
                                     AnimationChannel.Interpolations.CATMULLROM))).build();
     public static final AnimationDefinition SNAIL_IDLE = AnimationDefinition.Builder.withLength(3f).looping()
             .addAnimation("body",

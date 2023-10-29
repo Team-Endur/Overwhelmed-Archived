@@ -78,8 +78,8 @@ public class SnailGlassModel<T extends Entity> extends HierarchicalModel<T> {
 	public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw,
 						  float headPitch) {
 		this.root().getAllParts().forEach(ModelPart::resetPose);
-		this.animateWalk(SnailAnimation.SNAIL_WALK, 0.0f, 0.0f, 0.0f, 0.0f);
-		this.animate(((SnailEntity) entity).walkIdleAnimationState, SnailAnimation.SNAIL_IDLE, ageInTicks);
+		this.animateWalk(SnailAnimation.SNAIL_IDLE, 0.0f, 0.0f, 0.0f, 0.0f);
+		this.animate(((SnailEntity) entity).idleAnimationState, SnailAnimation.SNAIL_IDLE, ageInTicks);
 	}
 
 	@Override

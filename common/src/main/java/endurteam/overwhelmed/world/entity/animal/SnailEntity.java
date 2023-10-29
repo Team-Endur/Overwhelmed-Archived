@@ -44,7 +44,8 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public class SnailEntity extends Animal {
-    public AnimationState walkIdleAnimationState = new AnimationState();
+    public AnimationState idleAnimationState = new AnimationState();
+    private int idleAnimationTimeout = 0;
     private final Level level;
 
     public SnailEntity(EntityType<? extends SnailEntity> entityType, Level level) {
@@ -143,12 +144,33 @@ public class SnailEntity extends Animal {
         throw new IncompatibleClassChangeError();
     }
 
+    private void setupAnimationStates() {
+        if(idleAnimationTimeout <= 0) {
+            this.idleAnimationTimeout = this.random.nextInt(40) + 80;
+            this.idleAnimationState.start(this.tickCount);
+        } else {
+            --this.idleAnimationTimeout;
+        }
+    }
+
     @Override
     public void tick() {
         super.tick();
 
-        if (this.level().isClientSide()) {
-            this.walkIdleAnimationState.startIfStopped(this.tickCount);
+        if(this.level().isClientSide()) {
+            setupAnimationStates();
         }
+    }
+
+    @Override
+    protected void updateWalkAnimation(float pPartialTick) {
+        float f;
+        if(this.getPose() == Pose.STANDING) {
+            f = Math.min(pPartialTick + 6F, 1f);
+        } else {
+            f = 0f;
+        }
+
+        this.walkAnimation.update(f, 0.2f);
     }
 }
