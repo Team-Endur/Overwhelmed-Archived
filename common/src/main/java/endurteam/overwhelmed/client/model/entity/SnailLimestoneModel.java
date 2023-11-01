@@ -79,8 +79,8 @@ public class SnailLimestoneModel<T extends Entity> extends HierarchicalModel<T> 
 	public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw,
 						  float headPitch) {
 		this.root().getAllParts().forEach(ModelPart::resetPose);
-		this.animateWalk(SnailAnimation.SNAIL_IDLE, 0.0f, 0.0f, 0.0f, 0.0f);
-		this.animate(((SnailEntity) entity).idleAnimationState, SnailAnimation.SNAIL_IDLE, ageInTicks);
+		this.animateWalk(SnailAnimation.SNAIL_WALK, limbSwing, limbSwingAmount, 2f, 2.5f);
+		this.animate(((SnailEntity) entity).idleAnimationState, SnailAnimation.SNAIL_IDLE, ageInTicks, 1f);
 	}
 
 	@Override
