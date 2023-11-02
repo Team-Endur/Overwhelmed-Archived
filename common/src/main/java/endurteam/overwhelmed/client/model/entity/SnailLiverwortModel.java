@@ -25,6 +25,7 @@ package endurteam.overwhelmed.client.model.entity;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import endurteam.overwhelmed.client.animation.definitions.SnailAnimation;
+import endurteam.overwhelmed.client.animation.definitions.SnailLiverwortAnimation;
 import endurteam.overwhelmed.world.entity.animal.SnailEntity;
 import net.minecraft.client.model.HierarchicalModel;
 import net.minecraft.client.model.geom.PartPose;
@@ -39,6 +40,8 @@ public class SnailLiverwortModel<T extends Entity> extends HierarchicalModel<T> 
 	private final ModelPart shell;
 	private final ModelPart left_antennae;
 	private final ModelPart right_antennae;
+	private final ModelPart horizontal_liverwort;
+	private final ModelPart vertical_liverwort;
 
 	public SnailLiverwortModel(ModelPart root) {
 		this.root = root;
@@ -46,6 +49,8 @@ public class SnailLiverwortModel<T extends Entity> extends HierarchicalModel<T> 
 		this.shell = root.getChild("shell");
 		this.left_antennae = root.getChild("left_antennae");
 		this.right_antennae = root.getChild("right_antennae");
+		this.horizontal_liverwort = root.getChild("horizontal_liverwort");
+		this.vertical_liverwort = root.getChild("vertical_liverwort");
 	}
 
 	public static LayerDefinition createBodyLayer() {
@@ -77,6 +82,18 @@ public class SnailLiverwortModel<T extends Entity> extends HierarchicalModel<T> 
 						new CubeDeformation(0.0F)), PartPose.offsetAndRotation(-1.0F, 22.5F, -2.5F,
 				-0.3927F, 0.0F, 0.0F));
 
+		PartDefinition horizontal_liverwort = partdefinition.addOrReplaceChild("horizontal_liverwort", CubeListBuilder.create()
+				.texOffs(11, 0).addBox(-2.0F, -4.5F, 0.5F,
+						4.0F, 4.0F, 0.0F,
+						new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 20.5F, 1.5F,
+				-0.3927F, 0.0F, 0.0F));
+
+		PartDefinition vertical_liverwort2 = partdefinition.addOrReplaceChild("vertical_liverwort2", CubeListBuilder.create()
+				.texOffs(11, 2).addBox(0.0F, -4.5F, -3.5F,
+						0.0F, 5.0F, 7.0F,
+						new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 20.5F, 1.5F,
+				-0.3927F, 0.0F, 0.0F));
+
 		return LayerDefinition.create(meshdefinition, 32, 32);
 	}
 
@@ -84,8 +101,11 @@ public class SnailLiverwortModel<T extends Entity> extends HierarchicalModel<T> 
 	public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw,
 						  float headPitch) {
 		this.root().getAllParts().forEach(ModelPart::resetPose);
-		this.animateWalk(SnailAnimation.SNAIL_WALK, limbSwing, limbSwingAmount, 2f, 2.5f);
-		this.animate(((SnailEntity) entity).idleAnimationState, SnailAnimation.SNAIL_IDLE, ageInTicks, 1f);
+		if (entity.walkDist > 0) {
+			this.animateWalk(SnailLiverwortAnimation.SNAIL_LIVERWORT_WALK, limbSwing, limbSwingAmount, 2f, 2.5f);
+		} else if (entity.isAlive()) {
+			this.animate(((SnailEntity) entity).idleAnimationState, SnailLiverwortAnimation.SNAIL_LIVERWORT_IDLE, ageInTicks, 1f);
+		}
 	}
 
 	@Override
@@ -95,6 +115,8 @@ public class SnailLiverwortModel<T extends Entity> extends HierarchicalModel<T> 
 		shell.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
 		left_antennae.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
 		right_antennae.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
+		horizontal_liverwort.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
+		vertical_liverwort.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
 	}
 
 	@Override
