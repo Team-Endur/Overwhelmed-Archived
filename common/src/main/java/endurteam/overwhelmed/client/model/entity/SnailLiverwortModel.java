@@ -24,7 +24,6 @@ package endurteam.overwhelmed.client.model.entity;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
-import endurteam.overwhelmed.client.animation.definitions.SnailAnimation;
 import endurteam.overwhelmed.client.animation.definitions.SnailLiverwortAnimation;
 import endurteam.overwhelmed.world.entity.animal.SnailEntity;
 import net.minecraft.client.model.HierarchicalModel;
