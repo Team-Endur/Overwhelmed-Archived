@@ -46,6 +46,8 @@ public class OverwhelmedModelLayers {
             new ResourceLocation(Overwhelmed.MOD_ID, "snail_liverwort"), "main");
     public static final ModelLayerLocation SNAIL_ROMAN_MODEL_LAYER = new ModelLayerLocation(
             new ResourceLocation(Overwhelmed.MOD_ID, "snail_roman"), "main");
+    public static final ModelLayerLocation SNAIL_FLAT_MODEL_LAYER = new ModelLayerLocation(
+            new ResourceLocation(Overwhelmed.MOD_ID, "snail_flat"), "main");
 
     public static void registerModelLayers()
     {
@@ -57,5 +59,6 @@ public class OverwhelmedModelLayers {
         EntityModelLayerRegistry.register(SNAIL_LIMESTONE_MODEL_LAYER, SnailLimestoneModel::createBodyLayer);
         EntityModelLayerRegistry.register(SNAIL_LIVERWORT_MODEL_LAYER, SnailLiverwortModel::createBodyLayer);
         EntityModelLayerRegistry.register(SNAIL_ROMAN_MODEL_LAYER, SnailRomanModel::createBodyLayer);
+        EntityModelLayerRegistry.register(SNAIL_FLAT_MODEL_LAYER, SnailFlatModel::createBodyLayer);
     }
 }

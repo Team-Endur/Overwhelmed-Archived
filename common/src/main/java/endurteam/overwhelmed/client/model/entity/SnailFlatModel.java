@@ -24,71 +24,56 @@ package endurteam.overwhelmed.client.model.entity;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
-import endurteam.overwhelmed.client.animation.definitions.SnailLiverwortAnimation;
+import endurteam.overwhelmed.client.animation.definitions.SnailAnimation;
 import endurteam.overwhelmed.world.entity.animal.SnailEntity;
 import net.minecraft.client.model.HierarchicalModel;
-import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.ModelPart;
+import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.*;
 import net.minecraft.world.entity.Entity;
 
 
-public class SnailLiverwortModel<T extends Entity> extends HierarchicalModel<T> {
+public class SnailFlatModel<T extends Entity> extends HierarchicalModel<T> {
 	private final ModelPart root;
 	private final ModelPart body;
 	private final ModelPart shell;
 	private final ModelPart left_antennae;
 	private final ModelPart right_antennae;
-	private final ModelPart horizontal_liverwort;
-	private final ModelPart vertical_liverwort;
 
-	public SnailLiverwortModel(ModelPart root) {
+	public SnailFlatModel(ModelPart root) {
 		this.root = root;
 		this.body = root.getChild("body");
 		this.shell = root.getChild("shell");
 		this.left_antennae = root.getChild("left_antennae");
 		this.right_antennae = root.getChild("right_antennae");
-		this.horizontal_liverwort = root.getChild("horizontal_liverwort");
-		this.vertical_liverwort = root.getChild("vertical_liverwort");
 	}
 
 	public static LayerDefinition createBodyLayer() {
 		MeshDefinition meshdefinition = new MeshDefinition();
 		PartDefinition partdefinition = meshdefinition.getRoot();
 
-		PartDefinition body = partdefinition.addOrReplaceChild("body", CubeListBuilder.create()
-				.texOffs(0, 0).addBox(-1.0F, -1.0F, -3.0F, 2.0F, 2.0F, 7.0F,
-						new CubeDeformation(-0.1F)), PartPose.offset(0.0F, 23.0F, 0.0F));
 		PartDefinition shell = partdefinition.addOrReplaceChild("shell", CubeListBuilder.create()
-				.texOffs(11, 14).addBox(-1.5F, -2.5F, -2.5F, 3.0F, 5.0F, 5.0F,
-						new CubeDeformation(0.0F))
-				.texOffs(0, 9).addBox(-1.5F, -2.5F, -2.5F, 3.0F, 5.0F, 5.0F,
-						new CubeDeformation(0.2F)),
-				PartPose.offsetAndRotation(0.0F, 20.5F, 1.5F, -0.3927F, 0.0F, 0.0F));
+				.texOffs(16, 4).addBox(-2.5F, -1.5F, -2.5F, 5.0F, 3.0F, 5.0F,
+						new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 21.5F, 1.5F,
+				-0.1963F, 0.0F, 0.0F));
+
+		PartDefinition body = partdefinition.addOrReplaceChild("body", CubeListBuilder.create()
+				.texOffs(0, 9).addBox(-2.0F, -2.0F, -3.0F, 4.0F, 2.0F, 7.0F,
+						new CubeDeformation(-0.1F))
+				.texOffs(0, 0).addBox(-3.0F, 0.0F, -4.0F, 6.0F, 0.0F, 9.0F,
+						new CubeDeformation(0.0F)), PartPose.offset(0.0F, 24.0F, 0.0F));
 
 		PartDefinition left_antennae = partdefinition.addOrReplaceChild("left_antennae", CubeListBuilder.create()
-				.texOffs(0, 1).addBox(0.0F, -0.5F, -3.0F, 0.0F, 1.0F, 3.0F,
-						new CubeDeformation(0.0F)), PartPose.offsetAndRotation(1.0F, 22.5F, -2.5F,
+				.texOffs(0, 0).addBox(-0.55F, 0.0F, -2.0F, 1.0F, 0.0F, 2.0F,
+						new CubeDeformation(0.0F)), PartPose.offsetAndRotation(1.45F, 22.1F, -2.9F,
 				-0.3927F, 0.0F, 0.0F));
 
-		PartDefinition right_antennae = partdefinition.addOrReplaceChild("right_antennae", CubeListBuilder
-				.create().texOffs(0, 0).addBox(0.0F, -0.5F, -3.0F, 0.0F, 1.0F, 3.0F,
-						new CubeDeformation(0.0F)), PartPose.offsetAndRotation(-1.0F, 22.5F, -2.5F,
+		PartDefinition right_antennae = partdefinition.addOrReplaceChild("right_antennae", CubeListBuilder.create()
+				.texOffs(0, 2).addBox(-0.45F, 0.0F, -2.0F, 1.0F, 0.0F, 2.0F,
+						new CubeDeformation(0.0F)), PartPose.offsetAndRotation(-1.45F, 22.1F, -2.9F,
 				-0.3927F, 0.0F, 0.0F));
 
-		PartDefinition horizontal_liverwort = partdefinition.addOrReplaceChild("horizontal_liverwort",
-				CubeListBuilder.create().texOffs(11, 0).addBox(-2.0F, -4.5F, 0.5F,
-						4.0F, 4.0F, 0.0F,
-						new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 20.5F, 1.5F,
-				-0.3927F, 0.0F, 0.0F));
-
-		PartDefinition vertical_liverwort = partdefinition.addOrReplaceChild("vertical_liverwort",
-				CubeListBuilder.create().texOffs(11, 2).addBox(0.0F, -4.5F, -3.5F,
-						0.0F, 5.0F, 7.0F,
-						new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 20.5F, 1.5F,
-				-0.3927F, 0.0F, 0.0F));
-
-		return LayerDefinition.create(meshdefinition, 32, 32);
+		return LayerDefinition.create(meshdefinition, 64, 64);
 	}
 
 	@Override
@@ -96,22 +81,18 @@ public class SnailLiverwortModel<T extends Entity> extends HierarchicalModel<T> 
 						  float headPitch) {
 		this.root().getAllParts().forEach(ModelPart::resetPose);
 		if (entity.walkDist > 0) {
-			this.animateWalk(SnailLiverwortAnimation.SNAIL_LIVERWORT_WALK, limbSwing, limbSwingAmount, 2f, 2.5f);
+			this.animateWalk(SnailAnimation.SNAIL_WALK, limbSwing, limbSwingAmount, 2f, 2.5f);
 		} else if (entity.isAlive()) {
-			this.animate(((SnailEntity) entity).idleAnimationState, SnailLiverwortAnimation.SNAIL_LIVERWORT_IDLE,
-					ageInTicks, 1f);
+			this.animate(((SnailEntity) entity).idleAnimationState, SnailAnimation.SNAIL_IDLE, ageInTicks, 1f);
 		}
 	}
 
 	@Override
-	public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay,
-							   float red, float green, float blue, float alpha) {
+	public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
 		body.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
 		shell.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
 		left_antennae.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
 		right_antennae.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
-		horizontal_liverwort.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
-		vertical_liverwort.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
 	}
 
 	@Override

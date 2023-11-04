@@ -43,6 +43,7 @@ public class OverwhelmedEntityTypes {
     public static RegistrySupplier<EntityType<SnailEntity>> romanSnailEntityType;
     public static RegistrySupplier<EntityType<SnailEntity>> glassSnailEntityType;
     public static RegistrySupplier<EntityType<SnailEntity>> liverwortSnailEntityType;
+    public static RegistrySupplier<EntityType<SnailEntity>> flatSnailEntityType;
 
     public static RegistrySupplier<EntityType<ButterflyEntity>> cherryButterflyEntityType;
     public static RegistrySupplier<EntityType<ButterflyEntity>> cabbageButterflyEntityType;
@@ -64,6 +65,8 @@ public class OverwhelmedEntityTypes {
             new ResourceLocation(MOD_ID, "spawns_glass_snails"));
     public static final TagKey<Biome> SPAWNS_LIVERWORT_SNAILS = TagKey.create(Registries.BIOME,
             new ResourceLocation(MOD_ID, "spawns_liverwort_snails"));
+    public static final TagKey<Biome> SPAWNS_FLAT_SNAILS = TagKey.create(Registries.BIOME,
+            new ResourceLocation(MOD_ID, "spawns_flat_snails"));
     public static final TagKey<Biome> SPAWNS_SLEEPY_BUTTERFLIES = TagKey.create(Registries.BIOME,
             new ResourceLocation(MOD_ID, "spawns_sleepy_butterflies"));
     public static final TagKey<Biome> SPAWNS_CABBAGE_BUTTERFLIES = TagKey.create(Registries.BIOME,
@@ -105,21 +108,27 @@ public class OverwhelmedEntityTypes {
         glassSnailEntityType = Overwhelmed.ENTITY_TYPES.register(
                 new ResourceLocation(MOD_ID, "glass_snail"), () ->
                         EntityType.Builder.of(SnailEntity::new, MobCategory.CREATURE)
-                                .sized(0.6f, 0.4f)
-                                .clientTrackingRange(8)
-                                .build("glass_snail"));
+                        .sized(0.6f, 0.4f)
+                        .clientTrackingRange(8)
+                        .build("glass_snail"));
         liverwortSnailEntityType = Overwhelmed.ENTITY_TYPES.register(
                 new ResourceLocation(MOD_ID, "liverwort_snail"), () ->
                         EntityType.Builder.of(SnailEntity::new, MobCategory.CREATURE)
-                                .sized(0.6f, 0.4f)
-                                .clientTrackingRange(8)
-                                .build("liverwort_snail"));
+                        .sized(0.6f, 0.4f)
+                        .clientTrackingRange(8)
+                        .build("liverwort_snail"));
+        flatSnailEntityType = Overwhelmed.ENTITY_TYPES.register(
+                new ResourceLocation(MOD_ID, "flat_snail"), () ->
+                        EntityType.Builder.of(SnailEntity::new, MobCategory.CREATURE)
+                        .sized(0.6f, 0.4f)
+                        .clientTrackingRange(8)
+                        .build("flat_snail"));
         sleepyButterflyEntityType = Overwhelmed.ENTITY_TYPES.register(
                 new ResourceLocation(MOD_ID, "sleepy_butterfly"), () ->
                 EntityType.Builder.of(ButterflyEntity::new, MobCategory.CREATURE)
-                                .sized(0.6f, 0.4f)
-                                .clientTrackingRange(8)
-                                .build("sleepy_butterfly"));
+                         .sized(0.6f, 0.4f)
+                         .clientTrackingRange(8)
+                         .build("sleepy_butterfly"));
         cabbageButterflyEntityType = Overwhelmed.ENTITY_TYPES.register(
                 new ResourceLocation(MOD_ID, "cabbage_butterfly"), () ->
                 EntityType.Builder.of(ButterflyEntity::new, MobCategory.CREATURE)
@@ -172,6 +181,7 @@ public class OverwhelmedEntityTypes {
         EntityAttributeRegistry.register(romanSnailEntityType, SnailEntity::createAttributes);
         EntityAttributeRegistry.register(glassSnailEntityType, SnailEntity::createAttributes);
         EntityAttributeRegistry.register(liverwortSnailEntityType, SnailEntity::createAttributes);
+        EntityAttributeRegistry.register(flatSnailEntityType, SnailEntity::createAttributes);
         EntityAttributeRegistry.register(sleepyButterflyEntityType, ButterflyEntity::createAttributes);
         EntityAttributeRegistry.register(cabbageButterflyEntityType, ButterflyEntity::createAttributes);
         EntityAttributeRegistry.register(morphoButterflyEntityType, ButterflyEntity::createAttributes);

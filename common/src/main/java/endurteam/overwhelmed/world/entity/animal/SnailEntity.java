@@ -138,7 +138,9 @@ public class SnailEntity extends Animal {
             return 0.2f;
         } else if (OverwhelmedEntityTypes.glassSnailEntityType.get().equals(type)) {
             return 0.2f;
-        }else if (OverwhelmedEntityTypes.liverwortSnailEntityType.get().equals(type)) {
+        } else if (OverwhelmedEntityTypes.liverwortSnailEntityType.get().equals(type)) {
+            return 0.2f;
+        } else if (OverwhelmedEntityTypes.flatSnailEntityType.get().equals(type)) {
             return 0.2f;
         }
         throw new IncompatibleClassChangeError();
