@@ -44,6 +44,9 @@ public class BiomeModifiers {
         BiomeModifications.addSpawn(bsc -> bsc.hasTag(OverwhelmedEntityTypes.SPAWNS_LIVERWORT_SNAILS),
                 MobCategory.CREATURE, OverwhelmedEntityTypes.liverwortSnailEntityType.get(),
                 80, 3, 6);
+        BiomeModifications.addSpawn(bsc -> bsc.hasTag(OverwhelmedEntityTypes.SPAWNS_FLAT_SNAILS),
+                MobCategory.CREATURE, OverwhelmedEntityTypes.flatSnailEntityType.get(),
+                40, 2, 4);
     }
 
     public static void butterflySpawning()
