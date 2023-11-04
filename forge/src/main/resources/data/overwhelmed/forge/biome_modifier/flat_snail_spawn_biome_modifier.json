@@ -1,0 +1,11 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "#overwhelmed:spawns_flat_snails",
+  "spawners":
+  {
+    "type": "overwhelmed:flat_snail",
+    "weight": 40,
+    "minCount": 2,
+    "maxCount": 4
+  }
+}
