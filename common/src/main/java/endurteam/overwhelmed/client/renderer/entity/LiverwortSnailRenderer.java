@@ -37,7 +37,8 @@ public class LiverwortSnailRenderer extends MobRenderer<SnailEntity, SnailLiverw
             new ResourceLocation(Overwhelmed.MOD_ID, "textures/entity/snail/snail_liverwort.png");
 
     public LiverwortSnailRenderer(EntityRendererProvider.Context context) {
-        super(context, new SnailLiverwortModel<>(context.bakeLayer(OverwhelmedModelLayers.SNAIL_LIVERWORT_MODEL_LAYER)), 0.2f);
+        super(context, new SnailLiverwortModel<>(context.bakeLayer(OverwhelmedModelLayers.SNAIL_LIVERWORT_MODEL_LAYER)),
+                0.2f);
     }
 
     @Override

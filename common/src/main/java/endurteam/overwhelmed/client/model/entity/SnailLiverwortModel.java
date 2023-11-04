@@ -76,19 +76,19 @@ public class SnailLiverwortModel<T extends Entity> extends HierarchicalModel<T> 
 						new CubeDeformation(0.0F)), PartPose.offsetAndRotation(1.0F, 22.5F, -2.5F,
 				-0.3927F, 0.0F, 0.0F));
 
-		PartDefinition right_antennae = partdefinition.addOrReplaceChild("right_antennae", CubeListBuilder.create()
-				.texOffs(0, 0).addBox(0.0F, -0.5F, -3.0F, 0.0F, 1.0F, 3.0F,
+		PartDefinition right_antennae = partdefinition.addOrReplaceChild("right_antennae", CubeListBuilder
+				.create().texOffs(0, 0).addBox(0.0F, -0.5F, -3.0F, 0.0F, 1.0F, 3.0F,
 						new CubeDeformation(0.0F)), PartPose.offsetAndRotation(-1.0F, 22.5F, -2.5F,
 				-0.3927F, 0.0F, 0.0F));
 
-		PartDefinition horizontal_liverwort = partdefinition.addOrReplaceChild("horizontal_liverwort", CubeListBuilder.create()
-				.texOffs(11, 0).addBox(-2.0F, -4.5F, 0.5F,
+		PartDefinition horizontal_liverwort = partdefinition.addOrReplaceChild("horizontal_liverwort",
+				CubeListBuilder.create().texOffs(11, 0).addBox(-2.0F, -4.5F, 0.5F,
 						4.0F, 4.0F, 0.0F,
 						new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 20.5F, 1.5F,
 				-0.3927F, 0.0F, 0.0F));
 
-		PartDefinition vertical_liverwort2 = partdefinition.addOrReplaceChild("vertical_liverwort2", CubeListBuilder.create()
-				.texOffs(11, 2).addBox(0.0F, -4.5F, -3.5F,
+		PartDefinition vertical_liverwort = partdefinition.addOrReplaceChild("vertical_liverwort",
+				CubeListBuilder.create().texOffs(11, 2).addBox(0.0F, -4.5F, -3.5F,
 						0.0F, 5.0F, 7.0F,
 						new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 20.5F, 1.5F,
 				-0.3927F, 0.0F, 0.0F));
@@ -103,7 +103,8 @@ public class SnailLiverwortModel<T extends Entity> extends HierarchicalModel<T> 
 		if (entity.walkDist > 0) {
 			this.animateWalk(SnailLiverwortAnimation.SNAIL_LIVERWORT_WALK, limbSwing, limbSwingAmount, 2f, 2.5f);
 		} else if (entity.isAlive()) {
-			this.animate(((SnailEntity) entity).idleAnimationState, SnailLiverwortAnimation.SNAIL_LIVERWORT_IDLE, ageInTicks, 1f);
+			this.animate(((SnailEntity) entity).idleAnimationState, SnailLiverwortAnimation.SNAIL_LIVERWORT_IDLE,
+					ageInTicks, 1f);
 		}
 	}
 
