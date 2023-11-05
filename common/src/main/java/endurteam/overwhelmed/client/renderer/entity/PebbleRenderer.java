@@ -24,7 +24,7 @@ import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.math.Axis;
 import endurteam.overwhelmed.Overwhelmed;
-import endurteam.overwhelmed.world.entity.projectile.ThrownPebbleEntity;
+import endurteam.overwhelmed.world.entity.projectile.PebbleEntity;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.renderer.MultiBufferSource;
@@ -39,23 +39,23 @@ import org.joml.Matrix3f;
 import org.joml.Matrix4f;
 
 @Environment(value=EnvType.CLIENT)
-public class ThrownPebbleRenderer
-        extends EntityRenderer<ThrownPebbleEntity> {
+public class PebbleRenderer
+        extends EntityRenderer<PebbleEntity> {
     private static final ResourceLocation TEXTURE_LOCATION = new ResourceLocation(
             Overwhelmed.MOD_ID, "textures/item/pebble.png");
     private static final RenderType RENDER_TYPE = RenderType.entityCutoutNoCull(TEXTURE_LOCATION);
 
-    public ThrownPebbleRenderer(EntityRendererProvider.Context context) {
+    public PebbleRenderer(EntityRendererProvider.Context context) {
         super(context);
     }
 
     @Override
-    protected int getBlockLightLevel(ThrownPebbleEntity thrownPebble, BlockPos blockPos) {
+    protected int getBlockLightLevel(PebbleEntity thrownPebble, BlockPos blockPos) {
         return 15;
     }
 
     @Override
-    public void render(ThrownPebbleEntity paperBullet, float f, float g, PoseStack poseStack,
+    public void render(PebbleEntity paperBullet, float f, float g, PoseStack poseStack,
                        MultiBufferSource multiBufferSource, int i) {
         poseStack.pushPose();
         poseStack.scale(1.0f, 1.0f, 1.0f);
@@ -65,10 +65,10 @@ public class ThrownPebbleRenderer
         Matrix4f matrix4f = pose.pose();
         Matrix3f matrix3f = pose.normal();
         VertexConsumer vertexConsumer = multiBufferSource.getBuffer(RENDER_TYPE);
-        ThrownPebbleRenderer.vertex(vertexConsumer, matrix4f, matrix3f, i, 0.0f, 0, 0, 1);
-        ThrownPebbleRenderer.vertex(vertexConsumer, matrix4f, matrix3f, i, 1.0f, 0, 1, 1);
-        ThrownPebbleRenderer.vertex(vertexConsumer, matrix4f, matrix3f, i, 1.0f, 1, 1, 0);
-        ThrownPebbleRenderer.vertex(vertexConsumer, matrix4f, matrix3f, i, 0.0f, 1, 0, 0);
+        PebbleRenderer.vertex(vertexConsumer, matrix4f, matrix3f, i, 0.0f, 0, 0, 1);
+        PebbleRenderer.vertex(vertexConsumer, matrix4f, matrix3f, i, 1.0f, 0, 1, 1);
+        PebbleRenderer.vertex(vertexConsumer, matrix4f, matrix3f, i, 1.0f, 1, 1, 0);
+        PebbleRenderer.vertex(vertexConsumer, matrix4f, matrix3f, i, 0.0f, 1, 0, 0);
         poseStack.popPose();
         super.render(paperBullet, f, g, poseStack, multiBufferSource, i);
     }
@@ -81,7 +81,7 @@ public class ThrownPebbleRenderer
     }
 
     @Override
-    public @NotNull ResourceLocation getTextureLocation(ThrownPebbleEntity paperBullet) {
+    public @NotNull ResourceLocation getTextureLocation(PebbleEntity paperBullet) {
         return TEXTURE_LOCATION;
     }
 }

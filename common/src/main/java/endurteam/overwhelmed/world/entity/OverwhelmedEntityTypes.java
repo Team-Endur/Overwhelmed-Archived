@@ -24,7 +24,7 @@ import dev.architectury.registry.level.entity.EntityAttributeRegistry;
 import dev.architectury.registry.registries.RegistrySupplier;
 import endurteam.overwhelmed.world.entity.animal.ButterflyEntity;
 import endurteam.overwhelmed.world.entity.projectile.PaperBulletEntity;
-import endurteam.overwhelmed.world.entity.projectile.ThrownPebbleEntity;
+import endurteam.overwhelmed.world.entity.projectile.PebbleEntity;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
@@ -53,7 +53,7 @@ public class OverwhelmedEntityTypes {
     public static RegistrySupplier<EntityType<ButterflyEntity>> sleepyButterflyEntityType;
 
     public static RegistrySupplier<EntityType<PaperBulletEntity>> paperBulletEntityType;
-    public static RegistrySupplier<EntityType<ThrownPebbleEntity>> thrownPebbleEntityType;
+    public static RegistrySupplier<EntityType<PebbleEntity>> pebbleEntityType;
 
     public static final TagKey<Biome> SPAWNS_FLAT_SNAILS = TagKey.create(Registries.BIOME,
             new ResourceLocation(MOD_ID, "spawns_flat_snails"));
@@ -169,12 +169,12 @@ public class OverwhelmedEntityTypes {
                                 .clientTrackingRange(4)
                                 .build("paper_bullet")
         );
-        thrownPebbleEntityType = Overwhelmed.ENTITY_TYPES.register(
-                new ResourceLocation(MOD_ID, "thrown_pebble"), () ->
-                        EntityType.Builder.<ThrownPebbleEntity>of(ThrownPebbleEntity::new, MobCategory.MISC)
+        pebbleEntityType = Overwhelmed.ENTITY_TYPES.register(
+                new ResourceLocation(MOD_ID, "pebble"), () ->
+                        EntityType.Builder.<PebbleEntity>of(PebbleEntity::new, MobCategory.MISC)
                                 .sized(0.2f, 0.2f)
                                 .clientTrackingRange(4)
-                                .build("thrown_pebble")
+                                .build("pebble")
         );
         Overwhelmed.ENTITY_TYPES.register();
 

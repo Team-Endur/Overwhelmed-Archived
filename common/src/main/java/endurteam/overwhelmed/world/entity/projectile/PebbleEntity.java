@@ -41,24 +41,24 @@ import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.NotNull;
 
-public class ThrownPebbleEntity
+public class PebbleEntity
         extends ThrowableItemProjectile {
     private final Vec3 UP = new Vec3(0, 1, 0);
     protected static final EntityDataAccessor<Boolean> DATA_IN_WATER_LAST_TICK =
-            SynchedEntityData.defineId(ThrownPebbleEntity.class, EntityDataSerializers.BOOLEAN);
+            SynchedEntityData.defineId(PebbleEntity.class, EntityDataSerializers.BOOLEAN);
     protected static final EntityDataAccessor<BlockPos> DATA_START_POS =
-            SynchedEntityData.defineId(ThrownPebbleEntity.class, EntityDataSerializers.BLOCK_POS);
+            SynchedEntityData.defineId(PebbleEntity.class, EntityDataSerializers.BLOCK_POS);
 
-    public ThrownPebbleEntity(EntityType<? extends ThrownPebbleEntity> entityType, Level level) {
+    public PebbleEntity(EntityType<? extends PebbleEntity> entityType, Level level) {
         super(entityType, level);
     }
 
-    public ThrownPebbleEntity(Level level, LivingEntity livingEntity) {
-        super(OverwhelmedEntityTypes.thrownPebbleEntityType.get(), livingEntity, level);
+    public PebbleEntity(Level level, LivingEntity livingEntity) {
+        super(OverwhelmedEntityTypes.pebbleEntityType.get(), livingEntity, level);
     }
 
-    public ThrownPebbleEntity(Level level, double d, double e, double f) {
-        super(OverwhelmedEntityTypes.thrownPebbleEntityType.get(), d, e, f, level);
+    public PebbleEntity(Level level, double d, double e, double f) {
+        super(OverwhelmedEntityTypes.pebbleEntityType.get(), d, e, f, level);
     }
 
     @Override
