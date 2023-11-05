@@ -1,10 +1,10 @@
 {
   "variants": {
     "powered=false": {
-      "model": "minecraft:block/acacia_pressure_plate"
+      "model": "overwhelmed:block/willow_pressure_plate"
     },
     "powered=true": {
-      "model": "minecraft:block/acacia_pressure_plate_down"
+      "model": "overwhelmed:block/willow_pressure_plate_down"
     }
   }
 }
