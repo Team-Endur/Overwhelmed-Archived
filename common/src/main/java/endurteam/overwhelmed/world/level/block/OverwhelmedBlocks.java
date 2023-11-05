@@ -38,11 +38,11 @@ public class OverwhelmedBlocks {
     public static RegistrySupplier<SlabBlock> snailShellBrickSlabBlock;
     public static RegistrySupplier<WallBlock> snailShellBrickWallBlock;
     public static RegistrySupplier<Block> chiseledSnailShellBrickBlock;
-    public static RegistrySupplier<GooBlock> gooBlock;
-    public static RegistrySupplier<TallFlowerBlock> widowBlock;
-    public static RegistrySupplier<PebbleBlock> pebbleBlock;
-    public static RegistrySupplier<ClotBlock> iceCubeBlock;
     public static RegistrySupplier<ClotBlock> goldBeadBlock;
+    public static RegistrySupplier<ClotBlock> iceCubeBlock;
+    public static RegistrySupplier<PebbleBlock> pebbleBlock;
+    public static RegistrySupplier<TallFlowerBlock> widowBlock;
+    public static RegistrySupplier<GooBlock> gooBlock;
 
     public static void registerBlocks() {
 
@@ -66,6 +66,33 @@ public class OverwhelmedBlocks {
                 .mapColor(MapColor.COLOR_BROWN)
                 .strength(3.0f, 12.0f)
                 .requiresCorrectToolForDrops());
+        goldBeadBlock = registerGenericClotBlock("gold_bead", () -> BlockBehaviour.Properties.of()
+                .mapColor(MapColor.GOLD)
+                .strength(0f, 6f)
+                .noCollission()
+                .sound(SoundType.STONE)
+                .noOcclusion());
+        iceCubeBlock = registerGenericClotBlock("ice_cube", () -> BlockBehaviour.Properties.of()
+                .mapColor(MapColor.ICE)
+                .strength(0f, 6f)
+                .noCollission()
+                .sound(SoundType.STONE)
+                .noOcclusion());
+        pebbleBlock = Overwhelmed.BLOCKS.register(new ResourceLocation(Overwhelmed.MOD_ID, "pebble"), () ->
+                new PebbleBlock(BlockBehaviour.Properties.of()
+                        .mapColor(MapColor.STONE)
+                        .strength(0f, 6f)
+                        .noCollission()
+                        .sound(SoundType.STONE)
+                        .noOcclusion()));
+        widowBlock = registerGenericTallFlowerBlock("widow", () -> BlockBehaviour.Properties.of()
+                .mapColor(MapColor.PLANT)
+                .noCollission()
+                .instabreak()
+                .sound(SoundType.GRASS)
+                .offsetType(BlockBehaviour.OffsetType.XZ)
+                .ignitedByLava()
+                .pushReaction(PushReaction.DESTROY));
         gooBlock = Overwhelmed.BLOCKS.register(new ResourceLocation(Overwhelmed.MOD_ID, "goo_block"), () ->
                 new GooBlock(BlockBehaviour.Properties.of()
                         .mapColor(MapColor.COLOR_YELLOW)
@@ -75,33 +102,7 @@ public class OverwhelmedBlocks {
                         .noOcclusion()
                         .jumpFactor(0.5f)
                         .speedFactor(0.4f)));
-        widowBlock = registerGenericTallFlowerBlock("widow", () -> BlockBehaviour.Properties.of()
-                .mapColor(MapColor.PLANT)
-                .noCollission()
-                .instabreak()
-                .sound(SoundType.GRASS)
-                .offsetType(BlockBehaviour.OffsetType.XZ)
-                .ignitedByLava()
-                .pushReaction(PushReaction.DESTROY));
-        pebbleBlock = Overwhelmed.BLOCKS.register(new ResourceLocation(Overwhelmed.MOD_ID, "pebble"), () ->
-                new PebbleBlock(BlockBehaviour.Properties.of()
-                        .mapColor(MapColor.STONE)
-                        .strength(0f, 6f)
-                        .noCollission()
-                        .sound(SoundType.STONE)
-                        .noOcclusion()));
-        iceCubeBlock = registerGenericClotBlock("ice_cube", () -> BlockBehaviour.Properties.of()
-                .mapColor(MapColor.ICE)
-                .strength(0f, 6f)
-                .noCollission()
-                .sound(SoundType.STONE)
-                .noOcclusion());
-        goldBeadBlock = registerGenericClotBlock("gold_bead", () -> BlockBehaviour.Properties.of()
-                .mapColor(MapColor.GOLD)
-                .strength(0f, 6f)
-                .noCollission()
-                .sound(SoundType.STONE)
-                .noOcclusion());
+
         Overwhelmed.BLOCKS.register();
     }
     private static RegistrySupplier<Block> registerGenericBlock(String name,
