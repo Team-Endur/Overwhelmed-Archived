@@ -34,9 +34,9 @@ public class ButterflyAnimation {
                     new AnimationChannel(AnimationChannel.Targets.ROTATION,
                             new Keyframe(0f, KeyframeAnimations.degreeVec(0f, 0f, 0f),
                                     AnimationChannel.Interpolations.CATMULLROM),
-                            new Keyframe(0.125f, KeyframeAnimations.degreeVec(4.92f, -31.37f, -23.88f),
+                            new Keyframe(0.125f, KeyframeAnimations.degreeVec(0f, -22.5f, -22.5f),
                                     AnimationChannel.Interpolations.CATMULLROM),
-                            new Keyframe(0.375f, KeyframeAnimations.degreeVec(4.92f, 31.37f, 18.88f),
+                            new Keyframe(0.375f, KeyframeAnimations.degreeVec(0f, 22.5f, 22.5f),
                                     AnimationChannel.Interpolations.CATMULLROM),
                             new Keyframe(0.5f, KeyframeAnimations.degreeVec(0f, 0f, 0f),
                                     AnimationChannel.Interpolations.CATMULLROM)))
@@ -44,9 +44,9 @@ public class ButterflyAnimation {
                     new AnimationChannel(AnimationChannel.Targets.ROTATION,
                             new Keyframe(0f, KeyframeAnimations.degreeVec(0f, 0f, 0f),
                                     AnimationChannel.Interpolations.CATMULLROM),
-                            new Keyframe(0.125f, KeyframeAnimations.degreeVec(4.92f, 31.37f, 18.88f),
+                            new Keyframe(0.125f, KeyframeAnimations.degreeVec(0f, 22.5f, 22.5f),
                                     AnimationChannel.Interpolations.CATMULLROM),
-                            new Keyframe(0.375f, KeyframeAnimations.degreeVec(4.92f, -31.37f, -23.88f),
+                            new Keyframe(0.375f, KeyframeAnimations.degreeVec(0f, -22.5f, -22.5f),
                                     AnimationChannel.Interpolations.CATMULLROM),
                             new Keyframe(0.5f, KeyframeAnimations.degreeVec(0f, 0f, 0f),
                                     AnimationChannel.Interpolations.CATMULLROM))).build();
