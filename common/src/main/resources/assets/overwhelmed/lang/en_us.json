@@ -26,7 +26,7 @@
   "category.overwhelmed": "Overwhelmed",
   "entity.overwhelmed.cabbage_butterfly": "Cabbage Butterfly",
   "entity.overwhelmed.cherry_butterfly": "Cherry Butterfly",
-  "entity.overwhelmed.fur_butterfly": "Fur Butterfly",
+  "entity.overwhelmed.liverwort_butterfly": "Liverwort Butterfly",
   "entity.overwhelmed.monarch_butterfly": "Monarch Butterfly",
   "entity.overwhelmed.morpho_butterfly": "Morpho Butterfly",
   "entity.overwhelmed.sleepy_butterfly": "Sleepy Butterfly",
@@ -51,5 +51,5 @@
   "subtitles.entity.overwhelmed.snail.hurt": "Snail hurts",
   "subtitles.entity.overwhelmed.butterfly.death": "Butterfly dies",
   "subtitles.entity.overwhelmed.butterfly.hurt": "Butterfly hurts",
-  "subtitles.entity.overwhelmed.blowgun.shoot":  "Blowgun fires",
+  "subtitles.entity.overwhelmed.blowgun.shoot":  "Blowgun fires"
 }

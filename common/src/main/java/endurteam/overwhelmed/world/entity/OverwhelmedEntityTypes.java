@@ -47,7 +47,7 @@ public class OverwhelmedEntityTypes {
 
     public static RegistrySupplier<EntityType<ButterflyEntity>> cabbageButterflyEntityType;
     public static RegistrySupplier<EntityType<ButterflyEntity>> cherryButterflyEntityType;
-    public static RegistrySupplier<EntityType<ButterflyEntity>> furButterflyEntityType;
+    public static RegistrySupplier<EntityType<ButterflyEntity>> liverwortButterflyEntityType;
     public static RegistrySupplier<EntityType<ButterflyEntity>> monarchButterflyEntityType;
     public static RegistrySupplier<EntityType<ButterflyEntity>> morphoButterflyEntityType;
     public static RegistrySupplier<EntityType<ButterflyEntity>> sleepyButterflyEntityType;
@@ -72,8 +72,8 @@ public class OverwhelmedEntityTypes {
             new ResourceLocation(MOD_ID, "spawns_cabbage_butterflies"));
     public static final TagKey<Biome> SPAWNS_CHERRY_BUTTERFLIES = TagKey.create(Registries.BIOME,
             new ResourceLocation(MOD_ID, "spawns_cherry_butterflies"));
-    public static final TagKey<Biome> SPAWNS_FUR_BUTTERFLIES = TagKey.create(Registries.BIOME,
-            new ResourceLocation(MOD_ID, "spawns_fur_butterflies"));
+    public static final TagKey<Biome> SPAWNS_LIVERWORT_BUTTERFLIES = TagKey.create(Registries.BIOME,
+            new ResourceLocation(MOD_ID, "spawns_liverwort_butterflies"));
     public static final TagKey<Biome> SPAWNS_MONARCH_BUTTERFLIES = TagKey.create(Registries.BIOME,
             new ResourceLocation(MOD_ID, "spawns_monarch_butterflies"));
     public static final TagKey<Biome> SPAWNS_MORPHO_BUTTERFLIES = TagKey.create(Registries.BIOME,
@@ -137,8 +137,8 @@ public class OverwhelmedEntityTypes {
                                 .sized(0.6f, 0.4f)
                                 .clientTrackingRange(8)
                                 .build("cherry_butterfly"));
-        furButterflyEntityType = Overwhelmed.ENTITY_TYPES.register(
-                new ResourceLocation(MOD_ID, "fur_butterfly"), () ->
+        liverwortButterflyEntityType = Overwhelmed.ENTITY_TYPES.register(
+                new ResourceLocation(MOD_ID, "liverwort_butterfly"), () ->
                         EntityType.Builder.of(ButterflyEntity::new, MobCategory.CREATURE)
                                 .sized(0.6f, 0.4f)
                                 .clientTrackingRange(8)
@@ -187,7 +187,7 @@ public class OverwhelmedEntityTypes {
         EntityAttributeRegistry.register(romanSnailEntityType, SnailEntity::createAttributes);
         EntityAttributeRegistry.register(cabbageButterflyEntityType, ButterflyEntity::createAttributes);
         EntityAttributeRegistry.register(cherryButterflyEntityType, ButterflyEntity::createAttributes);
-        EntityAttributeRegistry.register(furButterflyEntityType, ButterflyEntity::createAttributes);
+        EntityAttributeRegistry.register(liverwortButterflyEntityType, ButterflyEntity::createAttributes);
         EntityAttributeRegistry.register(monarchButterflyEntityType, ButterflyEntity::createAttributes);
         EntityAttributeRegistry.register(morphoButterflyEntityType, ButterflyEntity::createAttributes);
         EntityAttributeRegistry.register(sleepyButterflyEntityType, ButterflyEntity::createAttributes);

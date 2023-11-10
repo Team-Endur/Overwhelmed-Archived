@@ -22,16 +22,17 @@ package endurteam.overwhelmed.core.particles;
 
 import dev.architectury.registry.registries.RegistrySupplier;
 import endurteam.overwhelmed.Overwhelmed;
+import net.fabricmc.mapping.reader.v2.MappingGetter;
 import net.minecraft.core.particles.ParticleType;
 import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.resources.ResourceLocation;
 
 public class OverwhelmedParticleTypes {
-    public static RegistrySupplier<ParticleType<?>> fur;
+    public static RegistrySupplier<ParticleType<?>> liverwortSpore;
 
     public static void registerParticleTypes() {
-        fur = Overwhelmed.PARTICLE_TYPES.register(
-                new ResourceLocation(Overwhelmed.MOD_ID, "fur"), () ->
+        liverwortSpore = Overwhelmed.PARTICLE_TYPES.register(
+                new ResourceLocation(Overwhelmed.MOD_ID, "liverwort_spore"), () ->
                         new SimpleParticleType(false));
 
         Overwhelmed.PARTICLE_TYPES.register();

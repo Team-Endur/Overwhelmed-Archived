@@ -29,10 +29,10 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 @Environment(EnvType.CLIENT)
-public class FurParticle extends TextureSheetParticle {
+public class LiverwortSporeParticle extends TextureSheetParticle {
     private final SpriteSet sprites;
-    FurParticle(ClientLevel clientLevel, double d, double e, double f, double g, double h, double i,
-                SpriteSet spriteSet) {
+    LiverwortSporeParticle(ClientLevel clientLevel, double d, double e, double f, double g, double h, double i,
+                           SpriteSet spriteSet) {
         super(clientLevel, d, e, f, g, h, i);
         this.sprites = spriteSet;
         this.setSpriteFromAge(spriteSet);
@@ -62,7 +62,7 @@ public class FurParticle extends TextureSheetParticle {
         @Override
         public Particle createParticle(SimpleParticleType particleOptions, ClientLevel clientLevel, double d, double e,
                                        double f, double g, double h, double i) {
-            return new FurParticle(clientLevel, d, e, f, g, h, i, this.sprite);
+            return new LiverwortSporeParticle(clientLevel, d, e, f, g, h, i, this.sprite);
         }
     }
 }

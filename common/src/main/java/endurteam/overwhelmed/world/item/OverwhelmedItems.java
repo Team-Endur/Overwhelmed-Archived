@@ -114,7 +114,7 @@ public class OverwhelmedItems {
                             return OverwhelmedEntityTypes.monarchButterflyEntityType.get();
                         }
                         case 6 -> {
-                            return OverwhelmedEntityTypes.furButterflyEntityType.get();
+                            return OverwhelmedEntityTypes.liverwortButterflyEntityType.get();
                         }
                     }
                     throw new IncompatibleClassChangeError();
