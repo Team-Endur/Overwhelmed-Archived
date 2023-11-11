@@ -30,7 +30,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 @Environment(EnvType.CLIENT)
-public class LiverwortSporeParticle extends DustParticleBase {
+public class LiverwortSporeParticle extends TextureSheetParticle {
     private final SpriteSet sprites;
     LiverwortSporeParticle(ClientLevel clientLevel, double d, double e, double f, double g, double h, double i,
                            SpriteSet spriteSet) {
