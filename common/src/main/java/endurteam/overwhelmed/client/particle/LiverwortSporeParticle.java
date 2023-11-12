@@ -24,7 +24,6 @@ import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.particle.*;
-import net.minecraft.core.particles.DustParticleOptions;
 import net.minecraft.core.particles.SimpleParticleType;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -32,12 +31,33 @@ import org.jetbrains.annotations.Nullable;
 @Environment(EnvType.CLIENT)
 public class LiverwortSporeParticle extends TextureSheetParticle {
     private final SpriteSet sprites;
+    private float angularVelocity;
+    private float angularAcceleration;
+
     LiverwortSporeParticle(ClientLevel clientLevel, double d, double e, double f, double g, double h, double i,
                            SpriteSet spriteSet) {
         super(clientLevel, d, e, f, g, h, i);
         this.sprites = spriteSet;
+        this.gravity = 0.2f;
+        this.hasPhysics = true;
+        this.xd = 0f;
+        this.yd = 0f;
+        this.zd = 0f;
+        this.angularVelocity = 0.157f;
+        this.angularAcceleration = 0f;
         this.setSpriteFromAge(spriteSet);
     }
+    //this.spriteSet = spriteSet;
+    //		this.setSize(0.2f, 0.2f);
+    //		this.lifetime = 10;
+    //		this.gravity = 0.2f;
+    //		this.hasPhysics = true;
+    //		this.xd = vx * 0;
+    //		this.yd = vy * 0;
+    //		this.zd = vz * 0;
+    //		this.angularVelocity = 0.157f;
+    //		this.angularAcceleration = 0f;
+    //		this.setSpriteFromAge(spriteSet);
 
     @Override
     public @NotNull ParticleRenderType getRenderType() {
@@ -47,8 +67,14 @@ public class LiverwortSporeParticle extends TextureSheetParticle {
     @Override
     public void tick() {
         super.tick();
-        this.setSpriteFromAge(this.sprites);
+        this.oRoll = this.roll;
+        this.roll += this.angularVelocity;
+        this.angularVelocity += this.angularAcceleration;
+        if (!this.removed) {
+            this.setSprite(this.sprites.get((this.age / 6) % 6 + 1, 6));
+        }
     }
+
 
     @Environment(value=EnvType.CLIENT)
     public static class Provider
