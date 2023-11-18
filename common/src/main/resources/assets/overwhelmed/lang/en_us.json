@@ -42,6 +42,8 @@
   "entity.overwhelmed.pebble": "Pebble",
   "item.overwhelmed.blowgun": "Blowgun",
   "item.overwhelmed.paper_bullet": "Paper Bullet",
+  "item.overwhelmed.snail": "Raw Snail",
+  "item.overwhelmed.cooked_snail": "Cooked Snail",
   "item.overwhelmed.goo_soup": "Goo Soup",
   "item.overwhelmed.goo_ball": "Gooball",
   "item.overwhelmed.snail_shell": "Snail Shell",
