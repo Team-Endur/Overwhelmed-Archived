@@ -25,6 +25,7 @@ import endurteam.overwhelmed.world.entity.OverwhelmedEntityTypes;
 import endurteam.overwhelmed.world.food.OverwhelmedFoods;
 import endurteam.overwhelmed.world.level.block.OverwhelmedBlocks;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.food.Foods;
 import net.minecraft.world.item.*;
 import endurteam.overwhelmed.Overwhelmed;
 import net.minecraft.world.level.block.Block;
@@ -46,6 +47,8 @@ public class OverwhelmedItems {
     public static RegistrySupplier<Item> blowgunItem;
     public static RegistrySupplier<Item> paperBulletItem;
     public static RegistrySupplier<Item> gooSoupItem;
+    public static RegistrySupplier<Item> snailItem;
+    public static RegistrySupplier<Item> cookedSnailItem;
     public static RegistrySupplier<Item> gooBallItem;
     public static RegistrySupplier<Item> snailShellItem;
     public static RegistrySupplier<MultiSpawnEggItem> butterflySpawnEggItem;
@@ -92,6 +95,17 @@ public class OverwhelmedItems {
                         .rarity(Rarity.COMMON)
                         .food(OverwhelmedFoods.GOO_SOUP)
                         .arch$tab(overwhelmedTab)));
+        snailItem = Overwhelmed.ITEMS.register(new ResourceLocation(Overwhelmed.MOD_ID, "snail"), () ->
+                new Item(new Item.Properties()
+                        .stacksTo(64)
+                        .rarity(Rarity.COMMON)
+                        .food(OverwhelmedFoods.SNAIL)
+                        .arch$tab(overwhelmedTab)));
+        cookedSnailItem = Overwhelmed.ITEMS.register(new ResourceLocation(Overwhelmed.MOD_ID, "cooked_snail"), () ->
+                new Item(new Item.Properties()
+                        .stacksTo(64)
+                        .rarity(Rarity.COMMON)
+                        .food(OverwhelmedFoods.COOKED_SNAIL)
         gooBallItem = registerGenericItem("goo_ball", 64, Rarity.COMMON);
         snailShellItem = registerGenericItem("snail_shell", 64, Rarity.COMMON);
         butterflySpawnEggItem = Overwhelmed.ITEMS.register(new ResourceLocation(Overwhelmed.MOD_ID,
