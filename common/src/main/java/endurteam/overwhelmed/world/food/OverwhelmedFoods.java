@@ -20,9 +20,17 @@
 
 package endurteam.overwhelmed.world.food;
 
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
 
 public class OverwhelmedFoods {
+    public static final FoodProperties COOKED_SNAIL =
+            new FoodProperties.Builder().nutrition(6).saturationMod(0.8f).meat().build();
+    public static final FoodProperties SNAIL =
+            new FoodProperties.Builder().nutrition(2).saturationMod(0.3f)
+                    .effect(new MobEffectInstance(MobEffects.POISON, 600, 0), 0.6F)
+                    .effect(new MobEffectInstance(MobEffects.CONFUSION, 600, 0), 0.4F).meat().build();
     public static final FoodProperties GOO_SOUP =
             new FoodProperties.Builder().nutrition(4).saturationMod(5.0f).build();
 }
