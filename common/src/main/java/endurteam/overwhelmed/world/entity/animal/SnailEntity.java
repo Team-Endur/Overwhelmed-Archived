@@ -62,12 +62,12 @@ public class SnailEntity extends Animal {
 
     @Override
     protected SoundEvent getHurtSound(DamageSource damageSource) {
-        return OverwhelmedSoundEvents.snailHurt.get();
+        return OverwhelmedSoundEvents.snailHurt;
     }
 
     @Override
     protected SoundEvent getDeathSound() {
-        return OverwhelmedSoundEvents.snailDeath.get();
+        return OverwhelmedSoundEvents.snailDeath;
     }
 
     public static AttributeSupplier.Builder createAttributes() {
@@ -103,7 +103,8 @@ public class SnailEntity extends Animal {
 
             // Drop a goo ball
             if (!level.isClientSide) {
-                level.addFreshEntity(new ItemEntity(level, getX(), getY(), getZ(), new ItemStack(OverwhelmedItems.gooBallItem.get())));
+                level.addFreshEntity(new ItemEntity(level, getX(), getY(), getZ(),
+                        new ItemStack(OverwhelmedItems.gooBallItem)));
             }
 
             return InteractionResult.SUCCESS;
@@ -114,10 +115,10 @@ public class SnailEntity extends Animal {
 
     public void setCustomName(@Nullable Component arg) {
         super.setCustomName(arg);
-        if (!this.getType().equals(OverwhelmedEntityTypes.garySnailEntityType.get()) && arg != null
+        if (!this.getType().equals(OverwhelmedEntityTypes.garySnailEntityType) && arg != null
                 && arg.getString().equals("Gary")) {
             CompoundTag tag = new CompoundTag();
-            SnailEntity newEntity = new SnailEntity(OverwhelmedEntityTypes.garySnailEntityType.get(), this.level());
+            SnailEntity newEntity = new SnailEntity(OverwhelmedEntityTypes.garySnailEntityType, this.level());
             this.save(tag);
             newEntity.load(tag);
             this.remove(RemovalReason.DISCARDED);
@@ -128,19 +129,19 @@ public class SnailEntity extends Animal {
     @Override
     protected float getStandingEyeHeight(Pose pose, EntityDimensions entityDimensions) {
         EntityType<?> type = this.getType();
-        if (OverwhelmedEntityTypes.flatSnailEntityType.get().equals(type)) {
+        if (OverwhelmedEntityTypes.flatSnailEntityType.equals(type)) {
             return 0.2f;
-        } else if (OverwhelmedEntityTypes.gardenSnailEntityType.get().equals(type)) {
+        } else if (OverwhelmedEntityTypes.gardenSnailEntityType.equals(type)) {
             return 0.2f;
-        } else if (OverwhelmedEntityTypes.garySnailEntityType.get().equals(type)) {
+        } else if (OverwhelmedEntityTypes.garySnailEntityType.equals(type)) {
             return 0.32f;
-        } else if (OverwhelmedEntityTypes.glassSnailEntityType.get().equals(type)) {
+        } else if (OverwhelmedEntityTypes.glassSnailEntityType.equals(type)) {
             return 0.2f;
-        } else if (OverwhelmedEntityTypes.limestoneSnailEntityType.get().equals(type)) {
+        } else if (OverwhelmedEntityTypes.limestoneSnailEntityType.equals(type)) {
             return 0.15f;
-        } else if (OverwhelmedEntityTypes.liverwortSnailEntityType.get().equals(type)) {
+        } else if (OverwhelmedEntityTypes.liverwortSnailEntityType.equals(type)) {
             return 0.2f;
-        } else if (OverwhelmedEntityTypes.romanSnailEntityType.get().equals(type)) {
+        } else if (OverwhelmedEntityTypes.romanSnailEntityType.equals(type)) {
             return 0.2f;
         }
         throw new IncompatibleClassChangeError();

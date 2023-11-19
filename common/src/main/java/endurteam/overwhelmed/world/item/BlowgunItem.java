@@ -53,7 +53,7 @@ public class BlowgunItem extends ProjectileWeaponItem {
             return;
         }
         if (itemStack2.isEmpty() || itemStack2.is(Items.ARROW)) {
-            itemStack2 = new ItemStack(OverwhelmedItems.paperBulletItem.get());
+            itemStack2 = new ItemStack(OverwhelmedItems.paperBulletItem);
         }
         if ((f = BlowgunItem.getPowerForTime(this.getUseDuration(itemStack) - i)) < 0.1f) {
             return;
@@ -96,7 +96,7 @@ public class BlowgunItem extends ProjectileWeaponItem {
 
     @Override
     public @NotNull Predicate<ItemStack> getAllSupportedProjectiles() {
-        return (itemStack) -> itemStack.is(OverwhelmedItems.paperBulletItem.get());
+        return (itemStack) -> itemStack.is(OverwhelmedItems.paperBulletItem);
     }
 
     @Override

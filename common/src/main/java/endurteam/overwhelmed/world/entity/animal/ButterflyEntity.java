@@ -53,12 +53,12 @@ public class ButterflyEntity extends PathfinderMob {
 
     @Override
     public SoundEvent getHurtSound(DamageSource damageSource) {
-        return OverwhelmedSoundEvents.butterflyHurt.get();
+        return OverwhelmedSoundEvents.butterflyHurt;
     }
 
     @Override
     public SoundEvent getDeathSound() {
-        return OverwhelmedSoundEvents.butterflyDeath.get();
+        return OverwhelmedSoundEvents.butterflyDeath;
     }
 
     @Override
@@ -83,10 +83,10 @@ public class ButterflyEntity extends PathfinderMob {
         }
 
         this.setDeltaMovement(this.getDeltaMovement().multiply(1.0, 0.6, 1.0));
-        if (OverwhelmedEntityTypes.liverwortButterflyEntityType.get().equals(this.getType())
+        if (OverwhelmedEntityTypes.liverwortButterflyEntityType.equals(this.getType())
                 && this.random.nextInt(4) < 1) // Only spawn half the time
         {
-            this.level().addParticle((ParticleOptions) OverwhelmedParticleTypes.liverwortSpore.get(),
+            this.level().addParticle((ParticleOptions) OverwhelmedParticleTypes.liverwortSpore,
                     this.getRandomX(1.0),
                     this.getRandomY(),
                     this.getRandomZ(1.0),

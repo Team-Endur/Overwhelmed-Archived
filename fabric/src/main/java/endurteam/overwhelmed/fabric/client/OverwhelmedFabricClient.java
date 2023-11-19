@@ -21,29 +21,57 @@
 package endurteam.overwhelmed.fabric.client;
 
 import endurteam.overwhelmed.client.OverwhelmedClient;
+import endurteam.overwhelmed.client.color.items.ButterflySpawnEggItemColor;
+import endurteam.overwhelmed.client.color.items.SnailSpawnEggItemColor;
 import endurteam.overwhelmed.client.particle.LiverwortSporeParticle;
+import endurteam.overwhelmed.client.renderer.entity.*;
 import endurteam.overwhelmed.core.particles.OverwhelmedParticleTypes;
+import endurteam.overwhelmed.fabric.client.model.geom.OverwhelmedFabricModelLayers;
+import endurteam.overwhelmed.world.entity.OverwhelmedEntityTypes;
+import endurteam.overwhelmed.world.item.OverwhelmedItems;
 import endurteam.overwhelmed.world.level.block.OverwhelmedBlocks;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
+import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
+import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.minecraft.client.renderer.RenderType;
-import net.minecraft.core.particles.ParticleType;
-import net.minecraft.core.particles.SimpleParticleType;
+
+import static endurteam.overwhelmed.client.OverwhelmedClient.*;
 
 @Environment(EnvType.CLIENT)
 public class OverwhelmedFabricClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
-        OverwhelmedClient.initClient();
-        BlockRenderLayerMap.INSTANCE.putBlock(OverwhelmedBlocks.widowBlock.get(), RenderType.cutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(OverwhelmedBlocks.gooBlock.get(), RenderType.translucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(OverwhelmedBlocks.pebbleBlock.get(), RenderType.cutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(OverwhelmedBlocks.iceCubeBlock.get(), RenderType.cutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(OverwhelmedBlocks.goldBeadBlock.get(), RenderType.cutout());
-        ParticleFactoryRegistry.getInstance().register((ParticleType<SimpleParticleType>) OverwhelmedParticleTypes
-                .liverwortSpore.get(), LiverwortSporeParticle.Provider::new);
+        EntityRendererRegistry.register(OverwhelmedEntityTypes.sleepyButterflyEntityType, ButterflyRenderer::new);
+        EntityRendererRegistry.register(OverwhelmedEntityTypes.cabbageButterflyEntityType, ButterflyRenderer::new);
+        EntityRendererRegistry.register(OverwhelmedEntityTypes.morphoButterflyEntityType, ButterflyRenderer::new);
+        EntityRendererRegistry.register(OverwhelmedEntityTypes.cherryButterflyEntityType, ButterflyRenderer::new);
+        EntityRendererRegistry.register(OverwhelmedEntityTypes.monarchButterflyEntityType, ButterflyRenderer::new);
+        EntityRendererRegistry.register(OverwhelmedEntityTypes.liverwortButterflyEntityType, ButterflyRenderer::new);
+        EntityRendererRegistry.register(OverwhelmedEntityTypes.pebbleEntityType, PebbleRenderer::new);
+        EntityRendererRegistry.register(OverwhelmedEntityTypes.paperBulletEntityType, PaperBulletRenderer::new);
+        EntityRendererRegistry.register(OverwhelmedEntityTypes.gardenSnailEntityType, GardenSnailRenderer::new);
+        EntityRendererRegistry.register(OverwhelmedEntityTypes.garySnailEntityType, GarySnailRenderer::new);
+        EntityRendererRegistry.register(OverwhelmedEntityTypes.glassSnailEntityType, GlassSnailRenderer::new);
+        EntityRendererRegistry.register(OverwhelmedEntityTypes.limestoneSnailEntityType, LimestoneSnailRenderer::new);
+        EntityRendererRegistry.register(OverwhelmedEntityTypes.liverwortSnailEntityType, LiverwortSnailRenderer::new);
+        EntityRendererRegistry.register(OverwhelmedEntityTypes.romanSnailEntityType, RomanSnailRenderer::new);
+        EntityRendererRegistry.register(OverwhelmedEntityTypes.flatSnailEntityType, FlatSnailRenderer::new);
+        OverwhelmedFabricModelLayers.registerModelLayers();
+        ColorProviderRegistry.ITEM.register(snailSpawnEggItemColor = new SnailSpawnEggItemColor(),
+                OverwhelmedItems.snailSpawnEggItem);
+        ColorProviderRegistry.ITEM.register(butterflySpawnEggItemColor = new ButterflySpawnEggItemColor(),
+                OverwhelmedItems.butterflySpawnEggItem);
+        BlockRenderLayerMap.INSTANCE.putBlock(OverwhelmedBlocks.widowBlock, RenderType.cutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(OverwhelmedBlocks.gooBlock, RenderType.translucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(OverwhelmedBlocks.pebbleBlock, RenderType.cutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(OverwhelmedBlocks.iceCubeBlock, RenderType.cutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(OverwhelmedBlocks.goldBeadBlock, RenderType.cutout());
+        ParticleFactoryRegistry.getInstance().register(
+                OverwhelmedParticleTypes.liverwortSpore,
+                LiverwortSporeParticle.Provider::new);
     }
 }

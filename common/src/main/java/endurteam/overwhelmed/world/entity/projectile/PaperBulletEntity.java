@@ -47,16 +47,16 @@ public class PaperBulletEntity
     }
 
     public PaperBulletEntity(Level level, LivingEntity livingEntity) {
-        super(OverwhelmedEntityTypes.paperBulletEntityType.get(), livingEntity, level);
+        super(OverwhelmedEntityTypes.paperBulletEntityType, livingEntity, level);
     }
 
     @Override
     protected @NotNull Item getDefaultItem() {
-        return OverwhelmedItems.paperBulletItem.get();
+        return OverwhelmedItems.paperBulletItem;
     }
 
     private ParticleOptions getParticle() {
-        return new ItemParticleOption(ParticleTypes.ITEM, OverwhelmedItems.paperBulletItem.get().getDefaultInstance());
+        return new ItemParticleOption(ParticleTypes.ITEM, OverwhelmedItems.paperBulletItem.getDefaultInstance());
     }
 
     @Override

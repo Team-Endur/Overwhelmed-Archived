@@ -20,13 +20,23 @@
 
 package endurteam.overwhelmed.fabric;
 
-import endurteam.overwhelmed.fabriclike.OverwhelmedFabricLike;
+import endurteam.overwhelmed.fabric.core.particles.OverwhelmedFabricParticleTypes;
+import endurteam.overwhelmed.fabric.sounds.OverwhelmedFabricSoundEvents;
+import endurteam.overwhelmed.fabric.world.entity.OverwhelmedFabricEntityTypes;
+import endurteam.overwhelmed.fabric.world.item.OverwhelmedFabricCreativeTabs;
+import endurteam.overwhelmed.fabric.world.item.OverwhelmedFabricItems;
+import endurteam.overwhelmed.fabric.world.level.block.OverwhelmedFabricBlocks;
 import net.fabricmc.api.ModInitializer;
 
 public class OverwhelmedFabric implements ModInitializer {
     @Override
     public void onInitialize() {
-        OverwhelmedFabricLike.init();
+        OverwhelmedFabricParticleTypes.registerParticleTypes();
+        OverwhelmedFabricSoundEvents.registerSoundEvents();
+        OverwhelmedFabricCreativeTabs.registerCreativeTab();
+        OverwhelmedFabricEntityTypes.registerEntities();
+        OverwhelmedFabricBlocks.registerBlocks();
+        OverwhelmedFabricItems.registerItems();
         BiomeModifiers.snailSpawning();
         BiomeModifiers.butterflySpawning();
         BiomeModifiers.soilGeneration();

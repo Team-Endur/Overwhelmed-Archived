@@ -20,9 +20,7 @@
 
 package endurteam.overwhelmed.client.model.geom;
 
-import dev.architectury.registry.client.level.entity.EntityModelLayerRegistry;
 import endurteam.overwhelmed.Overwhelmed;
-import endurteam.overwhelmed.client.model.entity.*;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.model.geom.ModelLayerLocation;
@@ -48,17 +46,4 @@ public class OverwhelmedModelLayers {
             new ResourceLocation(Overwhelmed.MOD_ID, "snail_roman"), "main");
     public static final ModelLayerLocation PAPER_BULLET_MODEL_LAYER = new ModelLayerLocation(
             new ResourceLocation(Overwhelmed.MOD_ID, "paper_bullet"), "main");
-
-    public static void registerModelLayers()
-    {
-        EntityModelLayerRegistry.register(BUTTERFLY_MODEL_LAYER, ButterflyModel::createBodyLayer);
-        EntityModelLayerRegistry.register(SNAIL_FLAT_MODEL_LAYER, SnailFlatModel::createBodyLayer);
-        EntityModelLayerRegistry.register(SNAIL_GARDEN_MODEL_LAYER, SnailGardenModel::createBodyLayer);
-        EntityModelLayerRegistry.register(SNAIL_GARY_MODEL_LAYER, SnailGaryModel::createBodyLayer);
-        EntityModelLayerRegistry.register(SNAIL_GLASS_MODEL_LAYER, SnailGlassModel::createBodyLayer);
-        EntityModelLayerRegistry.register(SNAIL_LIMESTONE_MODEL_LAYER, SnailLimestoneModel::createBodyLayer);
-        EntityModelLayerRegistry.register(SNAIL_LIVERWORT_MODEL_LAYER, SnailLiverwortModel::createBodyLayer);
-        EntityModelLayerRegistry.register(SNAIL_ROMAN_MODEL_LAYER, SnailRomanModel::createBodyLayer);
-        EntityModelLayerRegistry.register(PAPER_BULLET_MODEL_LAYER, PaperBulletModel::createBodyLayer);
-    }
 }

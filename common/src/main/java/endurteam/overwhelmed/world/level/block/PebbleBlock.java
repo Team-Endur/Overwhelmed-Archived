@@ -37,7 +37,7 @@ import org.jetbrains.annotations.NotNull;
 public class PebbleBlock extends FallingBlock {
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
 
-    protected PebbleBlock (Properties properties) {
+    public PebbleBlock (Properties properties) {
         super(properties);
     }
 

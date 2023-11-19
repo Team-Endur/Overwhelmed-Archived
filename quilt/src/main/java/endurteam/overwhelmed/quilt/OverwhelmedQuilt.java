@@ -27,7 +27,7 @@ import org.quiltmc.qsl.base.api.entrypoint.ModInitializer;
 public class OverwhelmedQuilt implements ModInitializer {
     @Override
     public void onInitialize(ModContainer container) {
-        OverwhelmedFabricLike.init();
+        OverwhelmedFabricLike.onInitialize();
         BiomeModifiers.snailSpawning();
         BiomeModifiers.butterflySpawning();
         BiomeModifiers.soilGeneration();

@@ -37,7 +37,7 @@ import org.jetbrains.annotations.NotNull;
 public class ClotBlock extends FallingBlock {
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
 
-    protected ClotBlock (Properties properties) {
+    public ClotBlock (Properties properties) {
         super(properties);
     }
 

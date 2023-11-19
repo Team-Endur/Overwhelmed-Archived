@@ -20,14 +20,8 @@
 
 package endurteam.overwhelmed.client;
 
-import dev.architectury.registry.client.level.entity.EntityRendererRegistry;
-import dev.architectury.registry.client.rendering.ColorHandlerRegistry;
 import endurteam.overwhelmed.client.color.items.ButterflySpawnEggItemColor;
 import endurteam.overwhelmed.client.color.items.SnailSpawnEggItemColor;
-import endurteam.overwhelmed.client.model.geom.OverwhelmedModelLayers;
-import endurteam.overwhelmed.client.renderer.entity.*;
-import endurteam.overwhelmed.world.entity.OverwhelmedEntityTypes;
-import endurteam.overwhelmed.world.item.OverwhelmedItems;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 
@@ -37,24 +31,6 @@ public class OverwhelmedClient {
     public static ButterflySpawnEggItemColor butterflySpawnEggItemColor;
 
     public static void initClient() {
-        EntityRendererRegistry.register(OverwhelmedEntityTypes.sleepyButterflyEntityType, ButterflyRenderer::new);
-        EntityRendererRegistry.register(OverwhelmedEntityTypes.cabbageButterflyEntityType, ButterflyRenderer::new);
-        EntityRendererRegistry.register(OverwhelmedEntityTypes.morphoButterflyEntityType, ButterflyRenderer::new);
-        EntityRendererRegistry.register(OverwhelmedEntityTypes.cherryButterflyEntityType, ButterflyRenderer::new);
-        EntityRendererRegistry.register(OverwhelmedEntityTypes.monarchButterflyEntityType, ButterflyRenderer::new);
-        EntityRendererRegistry.register(OverwhelmedEntityTypes.liverwortButterflyEntityType, ButterflyRenderer::new);
-        EntityRendererRegistry.register(OverwhelmedEntityTypes.paperBulletEntityType, PaperBulletRenderer::new);
-        EntityRendererRegistry.register(OverwhelmedEntityTypes.gardenSnailEntityType, GardenSnailRenderer::new);
-        EntityRendererRegistry.register(OverwhelmedEntityTypes.garySnailEntityType, GarySnailRenderer::new);
-        EntityRendererRegistry.register(OverwhelmedEntityTypes.glassSnailEntityType, GlassSnailRenderer::new);
-        EntityRendererRegistry.register(OverwhelmedEntityTypes.limestoneSnailEntityType, LimestoneSnailRenderer::new);
-        EntityRendererRegistry.register(OverwhelmedEntityTypes.liverwortSnailEntityType, LiverwortSnailRenderer::new);
-        EntityRendererRegistry.register(OverwhelmedEntityTypes.romanSnailEntityType, RomanSnailRenderer::new);
-        EntityRendererRegistry.register(OverwhelmedEntityTypes.flatSnailEntityType, FlatSnailRenderer::new);
-        OverwhelmedModelLayers.registerModelLayers();
-        ColorHandlerRegistry.registerItemColors(snailSpawnEggItemColor = new SnailSpawnEggItemColor(),
-                OverwhelmedItems.snailSpawnEggItem);
-        ColorHandlerRegistry.registerItemColors(butterflySpawnEggItemColor = new ButterflySpawnEggItemColor(),
-                OverwhelmedItems.butterflySpawnEggItem);
+
     }
 }

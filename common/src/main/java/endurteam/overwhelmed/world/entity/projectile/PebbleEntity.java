@@ -54,20 +54,20 @@ public class PebbleEntity
     }
 
     public PebbleEntity(Level level, LivingEntity livingEntity) {
-        super(OverwhelmedEntityTypes.pebbleEntityType.get(), livingEntity, level);
+        super(OverwhelmedEntityTypes.pebbleEntityType, livingEntity, level);
     }
 
     public PebbleEntity(Level level, double d, double e, double f) {
-        super(OverwhelmedEntityTypes.pebbleEntityType.get(), d, e, f, level);
+        super(OverwhelmedEntityTypes.pebbleEntityType, d, e, f, level);
     }
 
     @Override
     protected @NotNull Item getDefaultItem() {
-        return OverwhelmedItems.pebbleBlockItem.get();
+        return OverwhelmedItems.pebbleBlockItem;
     }
 
     private ParticleOptions getParticle() {
-        return new BlockParticleOption(ParticleTypes.BLOCK, OverwhelmedBlocks.pebbleBlock.get().defaultBlockState());
+        return new BlockParticleOption(ParticleTypes.BLOCK, OverwhelmedBlocks.pebbleBlock.defaultBlockState());
     }
 
     @Override
