@@ -30,8 +30,6 @@ repositories {
 dependencies {
     modImplementation("net.fabricmc:fabric-loader:${rootProject.fabric_loader_version}")
     modApi("net.fabricmc.fabric-api:fabric-api:${rootProject.fabric_api_version}")
-    // Remove the next line if you don't want to depend on the API
-    modApi("dev.architectury:architectury-fabric:${rootProject.architectury_version}")
 
     common(project(path: ":common", configuration: "namedElements")) { transitive false }
     shadowCommon(project(path: ":common", configuration: "transformProductionFabric")) { transitive false }
@@ -41,7 +39,7 @@ dependencies {
     modRuntimeOnly("com.terraformersmc:modmenu:${rootProject.mod_menu_version}"){
         exclude module: 'fabric-api'
     }
-    modRuntimeOnly("squeek.appleskin:appleskin-fabric:${rootProject.appleskin_version_fabric}") {
+    modRuntimeOnly("squeek.appleskin:appleskin-fabric:${rootProject.appleskin_version}") {
         exclude module: 'fabric-api'
         exclude module: 'modmenu'
     }

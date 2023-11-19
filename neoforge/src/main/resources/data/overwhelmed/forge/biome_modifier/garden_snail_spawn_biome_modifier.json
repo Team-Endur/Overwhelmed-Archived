@@ -1,0 +1,11 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "#overwhelmed:spawns_garden_snails",
+  "spawners":
+  {
+    "type": "overwhelmed:garden_snail",
+    "weight": 80,
+    "minCount": 3,
+    "maxCount": 8
+  }
+}

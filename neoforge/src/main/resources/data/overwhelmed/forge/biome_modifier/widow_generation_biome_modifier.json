@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#overwhelmed:generates_widows",
+  "features": "overwhelmed:generate_widow",
+  "step": "vegetal_decoration"
+}

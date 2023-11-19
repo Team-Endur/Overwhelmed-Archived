@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#overwhelmed:generates_soil",
+  "features": "overwhelmed:ore_soil",
+  "step": "top_layer_modification"
+}

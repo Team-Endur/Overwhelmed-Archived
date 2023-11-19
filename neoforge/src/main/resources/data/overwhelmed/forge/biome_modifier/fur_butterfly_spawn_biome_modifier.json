@@ -1,0 +1,11 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "#overwhelmed:spawns_fur_butterflies",
+  "spawners":
+  {
+    "type": "overwhelmed:fur_butterfly",
+    "weight": 60,
+    "minCount": 1,
+    "maxCount": 1
+  }
+}

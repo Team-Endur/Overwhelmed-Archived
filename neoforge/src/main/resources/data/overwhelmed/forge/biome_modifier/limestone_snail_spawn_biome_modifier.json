@@ -1,0 +1,11 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "#overwhelmed:spawns_limestone_snails",
+  "spawners":
+  {
+    "type": "overwhelmed:limestone_snail",
+    "weight": 20,
+    "minCount": 2,
+    "maxCount": 4
+  }
+}

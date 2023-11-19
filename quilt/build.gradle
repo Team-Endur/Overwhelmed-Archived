@@ -32,12 +32,6 @@ dependencies {
     modImplementation "org.quiltmc:quilt-loader:${rootProject.quilt_loader_version}"
     modImplementation "org.quiltmc:quilt-config:${rootProject.quilt_config_version}"
     modApi "org.quiltmc:qsl:${rootProject.quilt_standard_library_version}"
-    // Remove the next few lines if you don't want to depend on the API
-    modApi("dev.architectury:architectury-fabric:${rootProject.architectury_version}") {
-        // We must not pull Fabric Loader from Architectury Fabric
-        exclude group: "net.fabricmc"
-        exclude group: "net.fabricmc.fabric-api"
-    }
 
     common(project(path: ":common", configuration: "namedElements")) { transitive false }
     shadowCommon(project(path: ":common", configuration: "transformProductionQuilt")) { transitive false }
@@ -48,7 +42,7 @@ dependencies {
         exclude group: "net.fabricmc"
         exclude group: "net.fabricmc.fabric-api"
     }
-    modRuntimeOnly("squeek.appleskin:appleskin-fabric:${rootProject.appleskin_version_fabric}") {
+    modRuntimeOnly("squeek.appleskin:appleskin-fabric:${rootProject.appleskin_version}") {
         exclude group: "net.fabricmc"
         exclude group: "net.fabricmc.fabric-api"
         exclude module: "modmenu"

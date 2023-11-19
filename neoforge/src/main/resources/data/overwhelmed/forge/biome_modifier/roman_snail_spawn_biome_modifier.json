@@ -1,0 +1,11 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "#overwhelmed:spawns_roman_snails",
+  "spawners":
+  {
+    "type": "overwhelmed:roman_snail",
+    "weight": 80,
+    "minCount": 3,
+    "maxCount": 8
+  }
+}

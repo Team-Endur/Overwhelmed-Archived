@@ -1,0 +1,11 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "#overwhelmed:spawns_cherry_butterflies",
+  "spawners":
+  {
+    "type": "overwhelmed:cherry_butterfly",
+    "weight": 80,
+    "minCount": 2,
+    "maxCount": 4
+  }
+}
