@@ -59,15 +59,10 @@ public class SnailLiverwortModel<T extends Entity> extends HierarchicalModel<T> 
 		PartDefinition body = partdefinition.addOrReplaceChild("body", CubeListBuilder.create()
 				.texOffs(0, 0).addBox(-1.0F, -1.0F, -3.0F, 2.0F, 2.0F, 7.0F,
 						new CubeDeformation(-0.1F)), PartPose.offset(0.0F, 23.0F, 0.0F));
-
 		PartDefinition shell = partdefinition.addOrReplaceChild("shell", CubeListBuilder.create()
 				.texOffs(11, 14).addBox(-1.5F, -2.5F, -2.5F, 3.0F, 5.0F, 5.0F,
 						new CubeDeformation(0.0F))
-		.texOffs(11, 2).addBox(0.0F, -4.5F, -3.5F, 0.0F, 5.0F, 7.0F,
-						new CubeDeformation(0.0F))
-		.texOffs(11, 0).addBox(-2.0F, -4.5F, 0.5F, 4.0F, 4.0F, 0.0F,
-						new CubeDeformation(0.0F))
-		.texOffs(0, 9).addBox(-1.5F, -2.5F, -2.5F, 3.0F, 5.0F, 5.0F,
+				.texOffs(0, 9).addBox(-1.5F, -2.5F, -2.5F, 3.0F, 5.0F, 5.0F,
 						new CubeDeformation(0.2F)),
 				PartPose.offsetAndRotation(0.0F, 20.5F, 1.5F, -0.3927F, 0.0F, 0.0F));
 

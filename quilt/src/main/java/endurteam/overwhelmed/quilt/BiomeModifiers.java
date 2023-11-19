@@ -42,8 +42,11 @@ public class BiomeModifiers {
                 MobCategory.CREATURE, OverwhelmedEntityTypes.glassSnailEntityType.get(),
                 20, 1, 1);
         BiomeModifications.addSpawn(bsc -> bsc.isIn(OverwhelmedEntityTypes.SPAWNS_LIVERWORT_SNAILS),
-                MobCategory.CREATURE, OverwhelmedEntityTypes.glassSnailEntityType.get(),
+                MobCategory.CREATURE, OverwhelmedEntityTypes.liverwortSnailEntityType.get(),
                 80, 3, 6);
+        BiomeModifications.addSpawn(bsc -> bsc.isIn(OverwhelmedEntityTypes.SPAWNS_FLAT_SNAILS),
+                MobCategory.CREATURE, OverwhelmedEntityTypes.flatSnailEntityType.get(),
+                40, 2, 4);
     }
 
     public static void butterflySpawning()
@@ -63,9 +66,9 @@ public class BiomeModifiers {
         BiomeModifications.addSpawn(bsc -> bsc.isIn(OverwhelmedEntityTypes.SPAWNS_MONARCH_BUTTERFLIES),
                 MobCategory.CREATURE, OverwhelmedEntityTypes.monarchButterflyEntityType.get(),
                 80, 2, 4);
-        BiomeModifications.addSpawn(bsc -> bsc.isIn(OverwhelmedEntityTypes.SPAWNS_FUR_BUTTERFLIES),
-                MobCategory.CREATURE, OverwhelmedEntityTypes.furButterflyEntityType.get(),
-                60, 1, 1);
+        BiomeModifications.addSpawn(bsc -> bsc.isIn(OverwhelmedEntityTypes.SPAWNS_LIVERWORT_BUTTERFLIES),
+                MobCategory.CREATURE, OverwhelmedEntityTypes.liverwortButterflyEntityType.get(),
+                80, 3, 6);
     }
 
     public static void soilGeneration()

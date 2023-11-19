@@ -21,7 +21,7 @@
 package endurteam.overwhelmed.fabric.client;
 
 import endurteam.overwhelmed.client.OverwhelmedClient;
-import endurteam.overwhelmed.client.particle.FurParticle;
+import endurteam.overwhelmed.client.particle.LiverwortSporeParticle;
 import endurteam.overwhelmed.core.particles.OverwhelmedParticleTypes;
 import endurteam.overwhelmed.world.level.block.OverwhelmedBlocks;
 import net.fabricmc.api.ClientModInitializer;
@@ -44,6 +44,6 @@ public class OverwhelmedFabricClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(OverwhelmedBlocks.iceCubeBlock.get(), RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(OverwhelmedBlocks.goldBeadBlock.get(), RenderType.cutout());
         ParticleFactoryRegistry.getInstance().register((ParticleType<SimpleParticleType>) OverwhelmedParticleTypes
-                .fur.get(), FurParticle.Provider::new);
+                .liverwortSpore.get(), LiverwortSporeParticle.Provider::new);
     }
 }

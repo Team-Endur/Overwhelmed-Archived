@@ -128,17 +128,19 @@ public class SnailEntity extends Animal {
     @Override
     protected float getStandingEyeHeight(Pose pose, EntityDimensions entityDimensions) {
         EntityType<?> type = this.getType();
-        if (OverwhelmedEntityTypes.gardenSnailEntityType.get().equals(type)) {
+        if (OverwhelmedEntityTypes.flatSnailEntityType.get().equals(type)) {
+            return 0.2f;
+        } else if (OverwhelmedEntityTypes.gardenSnailEntityType.get().equals(type)) {
             return 0.2f;
         } else if (OverwhelmedEntityTypes.garySnailEntityType.get().equals(type)) {
             return 0.32f;
-        } else if (OverwhelmedEntityTypes.limestoneSnailEntityType.get().equals(type)) {
-            return 0.15f;
-        } else if (OverwhelmedEntityTypes.romanSnailEntityType.get().equals(type)) {
-            return 0.2f;
         } else if (OverwhelmedEntityTypes.glassSnailEntityType.get().equals(type)) {
             return 0.2f;
-        }else if (OverwhelmedEntityTypes.liverwortSnailEntityType.get().equals(type)) {
+        } else if (OverwhelmedEntityTypes.limestoneSnailEntityType.get().equals(type)) {
+            return 0.15f;
+        } else if (OverwhelmedEntityTypes.liverwortSnailEntityType.get().equals(type)) {
+            return 0.2f;
+        } else if (OverwhelmedEntityTypes.romanSnailEntityType.get().equals(type)) {
             return 0.2f;
         }
         throw new IncompatibleClassChangeError();

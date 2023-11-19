@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "overwhelmed:block/willow_pressure_plate"
+    },
+    "powered=true": {
+      "model": "overwhelmed:block/willow_pressure_plate_down"
+    }
+  }
+}

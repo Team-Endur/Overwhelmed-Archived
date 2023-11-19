@@ -45,8 +45,8 @@ public class ButterflyRenderer extends MobRenderer<ButterflyEntity, ButterflyMod
             new ResourceLocation(Overwhelmed.MOD_ID, "textures/entity/butterfly/butterfly_cherry.png");
     private static final ResourceLocation MONARCH_TEXTURE =
             new ResourceLocation(Overwhelmed.MOD_ID, "textures/entity/butterfly/butterfly_monarch.png");
-    private static final ResourceLocation FUR_TEXTURE =
-            new ResourceLocation(Overwhelmed.MOD_ID, "textures/entity/butterfly/butterfly_fur.png");
+    private static final ResourceLocation LIVERWORT_TEXTURE =
+            new ResourceLocation(Overwhelmed.MOD_ID, "textures/entity/butterfly/butterfly_liverwort.png");
 
     public ButterflyRenderer(EntityRendererProvider.Context context) {
         super(context, new ButterflyModel<>(context.bakeLayer(OverwhelmedModelLayers.BUTTERFLY_MODEL_LAYER)), 0.2f);
@@ -65,8 +65,8 @@ public class ButterflyRenderer extends MobRenderer<ButterflyEntity, ButterflyMod
             return CHERRY_TEXTURE;
         } else if (OverwhelmedEntityTypes.monarchButterflyEntityType.get().equals(type)) {
             return MONARCH_TEXTURE;
-        } else if (OverwhelmedEntityTypes.furButterflyEntityType.get().equals(type)) {
-            return FUR_TEXTURE;
+        } else if (OverwhelmedEntityTypes.liverwortButterflyEntityType.get().equals(type)) {
+            return LIVERWORT_TEXTURE;
         }
         throw new IncompatibleClassChangeError();
     }
