@@ -31,7 +31,7 @@ public class OverwhelmedFabricCreativeTabs {
                             output.accept(gooBlockBlockItem);
                             output.accept(blowgunItem);
                             output.accept(paperBulletItem);
-                            output.accept(gooSoupItem);
+                            output.accept(snailStewItem);
                             output.accept(snailItem);
                             output.accept(cookedSnailItem);
                             output.accept(gooBallItem);

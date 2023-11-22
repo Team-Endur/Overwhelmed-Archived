@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "overwhelmed:item/goo_soup"
+    "layer0": "overwhelmed:item/snail_stew"
   }
 }

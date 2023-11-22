@@ -52,12 +52,12 @@ public class OverwhelmedFabricItems {
                         .rarity(Rarity.COMMON)
                         .durability(20)));
         paperBulletItem = registerGenericItem("paper_bullet", 64, Rarity.COMMON);
-        gooSoupItem = Registry.register(BuiltInRegistries.ITEM,
-                new ResourceLocation(Overwhelmed.MOD_ID, "goo_soup"),
+        snailStewItem = Registry.register(BuiltInRegistries.ITEM,
+                new ResourceLocation(Overwhelmed.MOD_ID, "snail_stew"),
                 new BowlFoodItem(new Item.Properties()
                         .stacksTo(1)
                         .rarity(Rarity.COMMON)
-                        .food(OverwhelmedFoods.GOO_SOUP)));
+                        .food(OverwhelmedFoods.SNAIL_STEW)));
         snailItem = Registry.register(BuiltInRegistries.ITEM,
                 new ResourceLocation(Overwhelmed.MOD_ID, "snail"),
                 new Item(new Item.Properties()

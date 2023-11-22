@@ -6,25 +6,45 @@
       "entries": [
         {
           "type": "minecraft:item",
+          "name": "overwhelmed:snail",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:random_chance_with_looting",
+          "chance": 0.9,
+          "looting_multiplier": 0.5
+        },
+        {
+          "condition": "minecraft:damage_source_properties",
+          "predicate": {
+            "tags": [
+              {
+                "id": "minecraft:is_drowning",
+                "expected": false
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
           "name": "overwhelmed:snail_shell",
           "functions": [
             {
               "function": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
-                "min": 1,
-                "max": 1
-              }
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
-          "name": "overwhelmed:snail",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
                 "min": 1,
                 "max": 1
               }

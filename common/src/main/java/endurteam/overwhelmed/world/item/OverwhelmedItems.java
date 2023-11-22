@@ -37,7 +37,7 @@ public class OverwhelmedItems {
     public static BlockItem gooBlockBlockItem;
     public static Item blowgunItem;
     public static Item paperBulletItem;
-    public static Item gooSoupItem;
+    public static Item snailStewItem;
     public static Item snailItem;
     public static Item cookedSnailItem;
     public static Item gooBallItem;
