@@ -4,7 +4,7 @@
   "spawners":
   {
     "type": "overwhelmed:flat_snail",
-    "weight": 40,
+    "weight": 5,
     "minCount": 2,
     "maxCount": 4
   }

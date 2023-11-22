@@ -1,9 +1,9 @@
 {
   "type": "forge:add_spawns",
-  "biomes": "#overwhelmed:spawns_glass_snails",
+  "biomes": "#overwhelmed:spawns_liverwort_butterflies",
   "spawners":
   {
-    "type": "overwhelmed:glass_snail",
+    "type": "overwhelmed:liverwort_butterfly",
     "weight": 4,
     "minCount": 1,
     "maxCount": 1
