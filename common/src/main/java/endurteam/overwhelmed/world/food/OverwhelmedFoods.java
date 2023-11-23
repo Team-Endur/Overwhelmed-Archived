@@ -32,5 +32,5 @@ public class OverwhelmedFoods {
                     .effect(new MobEffectInstance(MobEffects.POISON, 600, 0), 0.6F)
                     .effect(new MobEffectInstance(MobEffects.CONFUSION, 600, 0), 0.4F).meat().build();
     public static final FoodProperties SNAIL_STEW =
-            new FoodProperties.Builder().nutrition(4).saturationMod(20.0f).build();
+            new FoodProperties.Builder().nutrition(6).saturationMod(15.0f).build();
 }
