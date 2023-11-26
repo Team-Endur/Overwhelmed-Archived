@@ -1,11 +1,14 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "###",
+    "SSS",
     "###",
     " X "
   ],
   "key": {
+    "S": {
+      "item": "overwhelmed:cooked_snail"
+    },
     "#": {
       "item": "overwhelmed:goo_ball"
     },
@@ -14,6 +17,6 @@
     }
   },
   "result": {
-    "item": "overwhelmed:goo_soup"
+    "item": "overwhelmed:snail_stew"
   }
 }
