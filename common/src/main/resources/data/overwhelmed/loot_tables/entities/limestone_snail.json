@@ -12,6 +12,19 @@
               "function": "minecraft:set_count",
               "count": 1
             }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:damage_source_properties",
+              "predicate": {
+                "tags": [
+                  {
+                    "id": "minecraft:is_fire",
+                    "expected": false
+                  }
+                ]
+              }
+            }
           ]
         }
       ],
@@ -65,6 +78,10 @@
               {
                 "id": "minecraft:is_drowning",
                 "expected": false
+              },
+              {
+                "id": "minecraft:is_fire",
+                "expected": false
               }
             ]
           }
@@ -92,6 +109,10 @@
               {
                 "id": "minecraft:is_drowning",
                 "expected": true
+              },
+              {
+                "id": "minecraft:is_fire",
+                "expected": false
               }
             ]
           }
