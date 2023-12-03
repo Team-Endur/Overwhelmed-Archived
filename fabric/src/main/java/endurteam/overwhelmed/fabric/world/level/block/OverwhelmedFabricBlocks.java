@@ -17,6 +17,8 @@ import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
 
 import static endurteam.overwhelmed.world.level.block.OverwhelmedBlocks.*;
+import static net.minecraft.world.level.block.Blocks.BIRCH_SAPLING;
+import static net.minecraft.world.level.block.Blocks.flowerPot;
 
 public class OverwhelmedFabricBlocks {
     public static void registerBlocks() {
@@ -170,6 +172,14 @@ public class OverwhelmedFabricBlocks {
                                                           BlockBehaviour.Properties properties) {
         return Registry.register(BuiltInRegistries.BLOCK, new ResourceLocation(Overwhelmed.MOD_ID, name),
                 new FlowerBlock(mobEffect, i, properties));
+    }
+
+    @SuppressWarnings("SameParameterValue")
+    private static FlowerPotBlock registerGenericFlowerPotBlock(Block block,
+                                                          String name,
+                                                          BlockBehaviour.Properties properties) {
+        return Registry.register(BuiltInRegistries.BLOCK, new ResourceLocation(Overwhelmed.MOD_ID, name),
+                new FlowerPotBlock(block, properties));
     }
 
     @SuppressWarnings("SameParameterValue")

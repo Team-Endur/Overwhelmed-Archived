@@ -20,7 +20,6 @@
 
 package endurteam.overwhelmed.world.level.block;
 
-import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.block.*;
 
 public class OverwhelmedBlocks {
@@ -41,6 +40,14 @@ public class OverwhelmedBlocks {
     public static FlowerBlock wilttBlock;
     public static FlowerBlock dumbbellBlock;
     public static FlowerBlock ralpBlock;
+    public static FlowerPotBlock pottedFloffBlock;
+    public static FlowerPotBlock pottedPaineBlock;
+    public static FlowerPotBlock pottedStrowBlock;
+    public static FlowerPotBlock pottedSquirlBlock;
+    public static FlowerPotBlock pottedRingotBlock;
+    public static FlowerPotBlock pottedWilttBlock;
+    public static FlowerPotBlock pottedDumbbellBlock;
+    public static FlowerPotBlock pottedRalpBlock;
     public static TallFlowerBlock widowBlock;
     public static GooBlock gooBlock;
 
