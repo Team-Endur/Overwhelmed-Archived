@@ -30,6 +30,14 @@ public class OverwhelmedItems {
     public static BlockItem snailShellBrickSlabBlockItem;
     public static BlockItem snailShellBrickWallBlockItem;
     public static BlockItem chiseledSnailShellBricksBlockItem;
+    public static BlockItem floffBlockItem;
+    public static BlockItem paineBlockItem;
+    public static BlockItem strowBlockItem;
+    public static BlockItem squirlBlockItem;
+    public static BlockItem ringotBlockItem;
+    public static BlockItem wilttBlockItem;
+    public static BlockItem dumbbellBlockItem;
+    public static BlockItem ralpBlockItem;
     public static DoubleHighBlockItem widowBlockItem;
     public static BlockItem goldBeadBlockItem;
     public static BlockItem iceCubeBlockItem;

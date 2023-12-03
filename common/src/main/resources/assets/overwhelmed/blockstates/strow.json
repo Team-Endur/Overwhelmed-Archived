@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "minecraft:block/strow"
+      "model": "overwhelmed:block/strow"
     }
   }
 }

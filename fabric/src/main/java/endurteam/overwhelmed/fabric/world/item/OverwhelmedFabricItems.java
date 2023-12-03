@@ -32,6 +32,30 @@ public class OverwhelmedFabricItems {
         chiseledSnailShellBricksBlockItem = registerGenericBlockItem(
                 "chiseled_snail_shell_bricks",
                 OverwhelmedBlocks.chiseledSnailShellBrickBlock);
+        floffBlockItem = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Overwhelmed.MOD_ID, "floff"),
+                new BlockItem(OverwhelmedBlocks.floffBlock,
+                        new Item.Properties()));
+        paineBlockItem = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Overwhelmed.MOD_ID, "paine"),
+                new BlockItem(OverwhelmedBlocks.paineBlock,
+                        new Item.Properties()));
+        strowBlockItem = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Overwhelmed.MOD_ID, "strow"),
+                new BlockItem(OverwhelmedBlocks.strowBlock,
+                        new Item.Properties()));
+        squirlBlockItem = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Overwhelmed.MOD_ID, "squirl"),
+                new BlockItem(OverwhelmedBlocks.squirlBlock,
+                        new Item.Properties()));
+        ringotBlockItem = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Overwhelmed.MOD_ID, "ringot"),
+                new BlockItem(OverwhelmedBlocks.ringotBlock,
+                        new Item.Properties()));
+        wilttBlockItem = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Overwhelmed.MOD_ID, "wiltt"),
+                new BlockItem(OverwhelmedBlocks.wilttBlock,
+                        new Item.Properties()));
+        dumbbellBlockItem = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Overwhelmed.MOD_ID, "dumbbell"),
+                new BlockItem(OverwhelmedBlocks.dumbbellBlock,
+                        new Item.Properties()));
+        ralpBlockItem = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Overwhelmed.MOD_ID, "ralp"),
+                new BlockItem(OverwhelmedBlocks.ralpBlock,
+                        new Item.Properties()));
         widowBlockItem = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Overwhelmed.MOD_ID, "widow"),
                 new DoubleHighBlockItem(OverwhelmedBlocks.widowBlock,
                         new Item.Properties()));

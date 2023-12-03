@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "minecraft:block/wiltt"
+      "model": "overwhelmed:block/wiltt"
     }
   }
 }

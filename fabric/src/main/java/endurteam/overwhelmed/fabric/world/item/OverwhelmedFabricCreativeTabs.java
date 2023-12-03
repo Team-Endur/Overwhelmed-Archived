@@ -24,6 +24,14 @@ public class OverwhelmedFabricCreativeTabs {
                             output.accept(snailShellBrickSlabBlockItem);
                             output.accept(snailShellBrickWallBlockItem);
                             output.accept(chiseledSnailShellBricksBlockItem);
+                            output.accept(floffBlockItem);
+                            output.accept(paineBlockItem);
+                            output.accept(strowBlockItem);
+                            output.accept(squirlBlockItem);
+                            output.accept(ringotBlockItem);
+                            output.accept(wilttBlockItem);
+                            output.accept(dumbbellBlockItem);
+                            output.accept(ralpBlockItem);
                             output.accept(widowBlockItem);
                             output.accept(goldBeadBlockItem);
                             output.accept(iceCubeBlockItem);

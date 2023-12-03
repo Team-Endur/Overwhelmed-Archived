@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "minecraft:block/dumbbell"
+      "model": "overwhelmed:block/dumbbell"
     }
   }
 }

@@ -8,6 +8,8 @@ import endurteam.overwhelmed.world.level.block.PebbleBlock;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.effect.MobEffect;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
@@ -58,6 +60,62 @@ public class OverwhelmedFabricBlocks {
                         .noCollission()
                         .sound(SoundType.STONE)
                         .noOcclusion()));
+        floffBlock = registerGenericFlowerBlock(MobEffects.REGENERATION, 4, "floff", BlockBehaviour.Properties.of()
+                .mapColor(MapColor.PLANT)
+                .noCollission()
+                .instabreak()
+                .sound(SoundType.GRASS)
+                .offsetType(BlockBehaviour.OffsetType.XZ)
+                .pushReaction(PushReaction.DESTROY));
+        paineBlock = registerGenericFlowerBlock(MobEffects.MOVEMENT_SLOWDOWN, 8, "paine", BlockBehaviour.Properties.of()
+                .mapColor(MapColor.PLANT)
+                .noCollission()
+                .instabreak()
+                .sound(SoundType.GRASS)
+                .offsetType(BlockBehaviour.OffsetType.XZ)
+                .pushReaction(PushReaction.DESTROY));
+        strowBlock = registerGenericFlowerBlock(MobEffects.POISON, 6, "strow", BlockBehaviour.Properties.of()
+                .mapColor(MapColor.PLANT)
+                .noCollission()
+                .instabreak()
+                .sound(SoundType.GRASS)
+                .offsetType(BlockBehaviour.OffsetType.XZ)
+                .pushReaction(PushReaction.DESTROY));
+        squirlBlock = registerGenericFlowerBlock(MobEffects.JUMP, 10, "squirl", BlockBehaviour.Properties.of()
+                .mapColor(MapColor.PLANT)
+                .noCollission()
+                .instabreak()
+                .sound(SoundType.GRASS)
+                .offsetType(BlockBehaviour.OffsetType.XZ)
+                .pushReaction(PushReaction.DESTROY));
+        ringotBlock = registerGenericFlowerBlock(MobEffects.BLINDNESS, 5, "ringot", BlockBehaviour.Properties.of()
+                .mapColor(MapColor.PLANT)
+                .noCollission()
+                .instabreak()
+                .sound(SoundType.GRASS)
+                .offsetType(BlockBehaviour.OffsetType.XZ)
+                .pushReaction(PushReaction.DESTROY));
+        wilttBlock = registerGenericFlowerBlock(MobEffects.WEAKNESS, 7, "wiltt", BlockBehaviour.Properties.of()
+                .mapColor(MapColor.PLANT)
+                .noCollission()
+                .instabreak()
+                .sound(SoundType.GRASS)
+                .offsetType(BlockBehaviour.OffsetType.XZ)
+                .pushReaction(PushReaction.DESTROY));
+        dumbbellBlock = registerGenericFlowerBlock(MobEffects.FIRE_RESISTANCE, 10, "dumbbell", BlockBehaviour.Properties.of()
+                .mapColor(MapColor.PLANT)
+                .noCollission()
+                .instabreak()
+                .sound(SoundType.GRASS)
+                .offsetType(BlockBehaviour.OffsetType.XZ)
+                .pushReaction(PushReaction.DESTROY));
+        ralpBlock = registerGenericFlowerBlock(MobEffects.DAMAGE_BOOST, 5, "ralp", BlockBehaviour.Properties.of()
+                .mapColor(MapColor.PLANT)
+                .noCollission()
+                .instabreak()
+                .sound(SoundType.GRASS)
+                .offsetType(BlockBehaviour.OffsetType.XZ)
+                .pushReaction(PushReaction.DESTROY));
         widowBlock = registerGenericTallFlowerBlock("widow", BlockBehaviour.Properties.of()
                 .mapColor(MapColor.PLANT)
                 .noCollission()
@@ -103,6 +161,15 @@ public class OverwhelmedFabricBlocks {
                                                       Block.Properties properties) {
         return Registry.register(BuiltInRegistries.BLOCK, new ResourceLocation(Overwhelmed.MOD_ID, name),
                 new SlabBlock(properties));
+    }
+
+    @SuppressWarnings("SameParameterValue")
+    private static FlowerBlock registerGenericFlowerBlock(MobEffect mobEffect,
+                                                          int i,
+                                                          String name,
+                                                          BlockBehaviour.Properties properties) {
+        return Registry.register(BuiltInRegistries.BLOCK, new ResourceLocation(Overwhelmed.MOD_ID, name),
+                new FlowerBlock(mobEffect, i, properties));
     }
 
     @SuppressWarnings("SameParameterValue")

@@ -65,6 +65,14 @@ public class OverwhelmedFabricClient implements ClientModInitializer {
                 OverwhelmedItems.snailSpawnEggItem);
         ColorProviderRegistry.ITEM.register(butterflySpawnEggItemColor = new ButterflySpawnEggItemColor(),
                 OverwhelmedItems.butterflySpawnEggItem);
+        BlockRenderLayerMap.INSTANCE.putBlock(OverwhelmedBlocks.floffBlock, RenderType.cutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(OverwhelmedBlocks.paineBlock, RenderType.cutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(OverwhelmedBlocks.strowBlock, RenderType.cutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(OverwhelmedBlocks.squirlBlock, RenderType.cutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(OverwhelmedBlocks.ringotBlock, RenderType.cutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(OverwhelmedBlocks.wilttBlock, RenderType.cutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(OverwhelmedBlocks.dumbbellBlock, RenderType.cutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(OverwhelmedBlocks.ralpBlock, RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(OverwhelmedBlocks.widowBlock, RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(OverwhelmedBlocks.gooBlock, RenderType.translucent());
         BlockRenderLayerMap.INSTANCE.putBlock(OverwhelmedBlocks.pebbleBlock, RenderType.cutout());

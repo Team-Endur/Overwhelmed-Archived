@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "minecraft:block/squirl"
+      "model": "overwhelmed:block/squirl"
     }
   }
 }

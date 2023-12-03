@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "minecraft:block/paine"
+      "model": "overwhelmed:block/paine"
     }
   }
 }
