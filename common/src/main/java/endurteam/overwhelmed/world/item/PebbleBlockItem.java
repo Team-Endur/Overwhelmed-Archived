@@ -20,6 +20,7 @@
 
 package endurteam.overwhelmed.world.item;
 
+import endurteam.overwhelmed.sounds.OverwhelmedSoundEvents;
 import endurteam.overwhelmed.world.entity.projectile.PebbleEntity;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -42,8 +43,9 @@ public class PebbleBlockItem extends BlockItem {
     public @NotNull InteractionResultHolder<ItemStack> use(Level level, Player player,
                                                            InteractionHand interactionHand) {
         ItemStack itemStack = player.getItemInHand(interactionHand);
-        level.playSound(null, player.getX(), player.getY(), player.getZ(), SoundEvents.SNOWBALL_THROW,
-                SoundSource.NEUTRAL, 0.5f, 0.4f / (level.getRandom().nextFloat() * 0.4f + 0.8f));
+        level.playSound(null, player.getX(), player.getY(), player.getZ(),
+                OverwhelmedSoundEvents.pebbleThrow, SoundSource.NEUTRAL, 0.5f,
+                0.4f / (level.getRandom().nextFloat() * 0.4f + 0.8f));
         player.getCooldowns().addCooldown(this, 20);
         if (!level.isClientSide) {
             PebbleEntity pebbleEntity = new PebbleEntity(level, player);

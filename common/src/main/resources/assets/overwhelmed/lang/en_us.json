@@ -60,5 +60,6 @@
   "subtitles.entity.overwhelmed.snail.hurt": "Snail hurts",
   "subtitles.entity.overwhelmed.butterfly.death": "Butterfly dies",
   "subtitles.entity.overwhelmed.butterfly.hurt": "Butterfly hurts",
-  "subtitles.entity.overwhelmed.blowgun.shoot":  "Blowgun fires"
+  "subtitles.entity.paper_bullet.shoot":  "Blowgun fires",
+  "subtitles.entity.pebble.throw": "Pebble flies"
 }
