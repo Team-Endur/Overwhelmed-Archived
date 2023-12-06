@@ -26,9 +26,13 @@ public class OverwhelmedFabricSoundEvents {
                 new ResourceLocation(Overwhelmed.MOD_ID, "entity.butterfly.death"),
                         SoundEvent.createVariableRangeEvent(
                                 new ResourceLocation(Overwhelmed.MOD_ID, "entity.butterfly.death")));
-        blowgunShoot = Registry.register(BuiltInRegistries.SOUND_EVENT,
-                new ResourceLocation(Overwhelmed.MOD_ID, "item.blowgun.shoot"),
+        paperBulletShoot = Registry.register(BuiltInRegistries.SOUND_EVENT,
+                new ResourceLocation(Overwhelmed.MOD_ID, "entity.paper_bullet.shoot"),
                         SoundEvent.createVariableRangeEvent(
-                                new ResourceLocation(Overwhelmed.MOD_ID, "item.blowgun.shoot")));
+                                new ResourceLocation(Overwhelmed.MOD_ID, "entity.paper_bullet.shoot")));
+        pebbleThrow = Registry.register(BuiltInRegistries.SOUND_EVENT,
+                new ResourceLocation(Overwhelmed.MOD_ID, "entity.pebble.throw"),
+                SoundEvent.createVariableRangeEvent(
+                        new ResourceLocation(Overwhelmed.MOD_ID, "entity.pebble.throw")));
     }
 }

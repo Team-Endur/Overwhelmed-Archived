@@ -38,14 +38,21 @@
       "overwhelmed:mob/butterfly/death4"
     ]
   },
-  "item.blowgun.shoot": {
-    "subtitle": "subtitles.item.overwhelmed.blowgun.shoot",
+  "entity.paper_bullet.shoot": {
+    "subtitle": "subtitles.entity.paper_bullet.shoot",
     "category": "neutral",
     "sounds": [
       "overwhelmed:item/blowgun/shoot1",
       "overwhelmed:item/blowgun/shoot2",
       "overwhelmed:item/blowgun/shoot3",
       "overwhelmed:item/blowgun/shoot4"
+    ]
+  },
+  "entity.pebble.throw": {
+    "subtitle": "subtitles.entity.pebble.throw",
+    "category": "neutral",
+    "sounds": [
+      "random/bow"
     ]
   }
 }
