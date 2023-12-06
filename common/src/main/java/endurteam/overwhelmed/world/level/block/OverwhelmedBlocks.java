@@ -23,33 +23,25 @@ package endurteam.overwhelmed.world.level.block;
 import net.minecraft.world.level.block.*;
 
 public class OverwhelmedBlocks {
-    public static Block soilBlock;
-    public static Block snailShellBrickBlock;
-    public static StairBlock snailShellBrickStairBlock;
-    public static SlabBlock snailShellBrickSlabBlock;
-    public static WallBlock snailShellBrickWallBlock;
-    public static Block chiseledSnailShellBrickBlock;
-    public static ClotBlock goldBeadBlock;
-    public static ClotBlock iceCubeBlock;
-    public static PebbleBlock pebbleBlock;
-    public static FlowerBlock floffBlock;
-    public static FlowerBlock paineBlock;
-    public static FlowerBlock strowBlock;
-    public static FlowerBlock squirlBlock;
-    public static FlowerBlock ringotBlock;
-    public static FlowerBlock wilttBlock;
-    public static FlowerBlock dumbbellBlock;
-    public static FlowerBlock ralpBlock;
-    public static FlowerPotBlock pottedFloffBlock;
-    public static FlowerPotBlock pottedPaineBlock;
-    public static FlowerPotBlock pottedStrowBlock;
-    public static FlowerPotBlock pottedSquirlBlock;
-    public static FlowerPotBlock pottedRingotBlock;
-    public static FlowerPotBlock pottedWilttBlock;
-    public static FlowerPotBlock pottedDumbbellBlock;
-    public static FlowerPotBlock pottedRalpBlock;
-    public static TallFlowerBlock widowBlock;
-    public static GooBlock gooBlock;
+    public static Block SOIL;
+    public static Block SNAIL_SHELL_BRICKS;
+    public static StairBlock SNAIL_SHELL_BRICK_STAIRS;
+    public static SlabBlock SNAIL_SHELL_BRICK_SLAB;
+    public static WallBlock SNAIL_SHELL_BRICK_WALL;
+    public static Block CHISELED_SNAIL_SHELL_BRICKS;
+    public static ClotBlock GOLD_BEAD;
+    public static ClotBlock ICE_CUBE;
+    public static PebbleBlock PEBBLE;
+    public static FlowerBlock FLOFF;
+    public static FlowerBlock PAINE;
+    public static FlowerBlock STROW;
+    public static FlowerBlock SQUIRL;
+    public static FlowerBlock RINGOT;
+    public static FlowerBlock WILTT;
+    public static FlowerBlock DUMBBELL;
+    public static FlowerBlock RALP;
+    public static TallFlowerBlock WIDOW;
+    public static GooBlock GOO_BLOCK;
 
 
 }

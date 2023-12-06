@@ -104,7 +104,7 @@ public class SnailEntity extends Animal {
             // Drop a goo ball
             if (!level.isClientSide) {
                 level.addFreshEntity(new ItemEntity(level, getX(), getY(), getZ(),
-                        new ItemStack(OverwhelmedItems.gooBallItem)));
+                        new ItemStack(OverwhelmedItems.GOO_BALL)));
             }
 
             return InteractionResult.SUCCESS;

@@ -17,86 +17,86 @@ import static endurteam.overwhelmed.world.item.OverwhelmedItems.*;
 
 public class OverwhelmedFabricItems {
     public static void registerItems() {
-        soilBlockItem = registerGenericBlockItem("soil", OverwhelmedBlocks.soilBlock);
-        snailShellBrickBlockItem = registerGenericBlockItem("snail_shell_bricks",
-                OverwhelmedBlocks.snailShellBrickBlock);
-        snailShellBrickStairsBlockItem = registerGenericBlockItem(
+        SOIL = registerGenericBlockItem("soil", OverwhelmedBlocks.SOIL);
+        SNAIL_SHELL_BRICKS = registerGenericBlockItem("snail_shell_bricks",
+                OverwhelmedBlocks.SNAIL_SHELL_BRICKS);
+        SNAIL_SHELL_BRICK_STAIRS = registerGenericBlockItem(
                 "snail_shell_brick_stairs",
-                OverwhelmedBlocks.snailShellBrickStairBlock);
-        snailShellBrickSlabBlockItem = registerGenericBlockItem(
+                OverwhelmedBlocks.SNAIL_SHELL_BRICK_STAIRS);
+        SNAIL_SHELL_BRICK_SLAB = registerGenericBlockItem(
                 "snail_shell_brick_slab",
-                OverwhelmedBlocks.snailShellBrickSlabBlock);
-        snailShellBrickWallBlockItem = registerGenericBlockItem(
+                OverwhelmedBlocks.SNAIL_SHELL_BRICK_SLAB);
+        SNAIL_SHELL_BRICK_WALL = registerGenericBlockItem(
                 "snail_shell_brick_wall",
-                OverwhelmedBlocks.snailShellBrickWallBlock);
-        chiseledSnailShellBricksBlockItem = registerGenericBlockItem(
+                OverwhelmedBlocks.SNAIL_SHELL_BRICK_WALL);
+        CHISELED_SNAIL_SHELL_BRICKS = registerGenericBlockItem(
                 "chiseled_snail_shell_bricks",
-                OverwhelmedBlocks.chiseledSnailShellBrickBlock);
-        floffBlockItem = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Overwhelmed.MOD_ID, "floff"),
-                new BlockItem(OverwhelmedBlocks.floffBlock,
+                OverwhelmedBlocks.CHISELED_SNAIL_SHELL_BRICKS);
+        FLOFF = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Overwhelmed.MOD_ID, "floff"),
+                new BlockItem(OverwhelmedBlocks.FLOFF,
                         new Item.Properties()));
-        paineBlockItem = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Overwhelmed.MOD_ID, "paine"),
-                new BlockItem(OverwhelmedBlocks.paineBlock,
+        PAINE = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Overwhelmed.MOD_ID, "paine"),
+                new BlockItem(OverwhelmedBlocks.PAINE,
                         new Item.Properties()));
-        strowBlockItem = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Overwhelmed.MOD_ID, "strow"),
-                new BlockItem(OverwhelmedBlocks.strowBlock,
+        STROW = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Overwhelmed.MOD_ID, "strow"),
+                new BlockItem(OverwhelmedBlocks.STROW,
                         new Item.Properties()));
-        squirlBlockItem = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Overwhelmed.MOD_ID, "squirl"),
-                new BlockItem(OverwhelmedBlocks.squirlBlock,
+        SQUIRL = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Overwhelmed.MOD_ID, "squirl"),
+                new BlockItem(OverwhelmedBlocks.SQUIRL,
                         new Item.Properties()));
-        ringotBlockItem = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Overwhelmed.MOD_ID, "ringot"),
-                new BlockItem(OverwhelmedBlocks.ringotBlock,
+        RINGOT = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Overwhelmed.MOD_ID, "ringot"),
+                new BlockItem(OverwhelmedBlocks.RINGOT,
                         new Item.Properties()));
-        wilttBlockItem = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Overwhelmed.MOD_ID, "wiltt"),
-                new BlockItem(OverwhelmedBlocks.wilttBlock,
+        WILTT = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Overwhelmed.MOD_ID, "wiltt"),
+                new BlockItem(OverwhelmedBlocks.WILTT,
                         new Item.Properties()));
-        dumbbellBlockItem = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Overwhelmed.MOD_ID, "dumbbell"),
-                new BlockItem(OverwhelmedBlocks.dumbbellBlock,
+        DUMBBELL = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Overwhelmed.MOD_ID, "dumbbell"),
+                new BlockItem(OverwhelmedBlocks.DUMBBELL,
                         new Item.Properties()));
-        ralpBlockItem = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Overwhelmed.MOD_ID, "ralp"),
-                new BlockItem(OverwhelmedBlocks.ralpBlock,
+        RALP = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Overwhelmed.MOD_ID, "ralp"),
+                new BlockItem(OverwhelmedBlocks.RALP,
                         new Item.Properties()));
-        widowBlockItem = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Overwhelmed.MOD_ID, "widow"),
-                new DoubleHighBlockItem(OverwhelmedBlocks.widowBlock,
+        WIDOW = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Overwhelmed.MOD_ID, "widow"),
+                new DoubleHighBlockItem(OverwhelmedBlocks.WIDOW,
                         new Item.Properties()));
-        goldBeadBlockItem = registerGenericBlockItem("gold_bead",
-                OverwhelmedBlocks.goldBeadBlock);
-        iceCubeBlockItem  = registerGenericBlockItem("ice_cube",
-                OverwhelmedBlocks.iceCubeBlock);
-        pebbleBlockItem = Registry.register(BuiltInRegistries.ITEM,
+        GOLD_BEAD = registerGenericBlockItem("gold_bead",
+                OverwhelmedBlocks.GOLD_BEAD);
+        ICE_CUBE  = registerGenericBlockItem("ice_cube",
+                OverwhelmedBlocks.ICE_CUBE);
+        PEBBLE = Registry.register(BuiltInRegistries.ITEM,
                 new ResourceLocation(Overwhelmed.MOD_ID, "pebble"),
-                new PebbleBlockItem(OverwhelmedBlocks.pebbleBlock,
+                new PebbleBlockItem(OverwhelmedBlocks.PEBBLE,
                         new Item.Properties()));
-        gooBlockBlockItem = registerGenericBlockItem("goo_block",
-                OverwhelmedBlocks.gooBlock);
-        blowgunItem = Registry.register(BuiltInRegistries.ITEM,
+        GOO_BLOCK = registerGenericBlockItem("goo_block",
+                OverwhelmedBlocks.GOO_BLOCK);
+        BLOWGUN = Registry.register(BuiltInRegistries.ITEM,
                 new ResourceLocation(Overwhelmed.MOD_ID, "blowgun"),
                 new BlowgunItem(new Item.Properties()
                         .stacksTo(1)
                         .rarity(Rarity.COMMON)
                         .durability(20)));
-        paperBulletItem = registerGenericItem("paper_bullet", 64, Rarity.COMMON);
-        snailStewItem = Registry.register(BuiltInRegistries.ITEM,
+        PAPER_BULLET = registerGenericItem("paper_bullet", 64, Rarity.COMMON);
+        SNAIL_STEW = Registry.register(BuiltInRegistries.ITEM,
                 new ResourceLocation(Overwhelmed.MOD_ID, "snail_stew"),
                 new BowlFoodItem(new Item.Properties()
                         .stacksTo(1)
                         .rarity(Rarity.COMMON)
                         .food(OverwhelmedFoods.SNAIL_STEW)));
-        snailItem = Registry.register(BuiltInRegistries.ITEM,
+        SNAIL = Registry.register(BuiltInRegistries.ITEM,
                 new ResourceLocation(Overwhelmed.MOD_ID, "snail"),
                 new Item(new Item.Properties()
                         .stacksTo(64)
                         .rarity(Rarity.COMMON)
                         .food(OverwhelmedFoods.SNAIL)));
-        cookedSnailItem = Registry.register(BuiltInRegistries.ITEM,
+        COOKED_SNAIL = Registry.register(BuiltInRegistries.ITEM,
                 new ResourceLocation(Overwhelmed.MOD_ID, "cooked_snail"),
                 new Item(new Item.Properties()
                         .stacksTo(64)
                         .rarity(Rarity.COMMON)
                         .food(OverwhelmedFoods.COOKED_SNAIL)));
-        gooBallItem = registerGenericItem("goo_ball", 64, Rarity.COMMON);
-        snailShellItem = registerGenericItem("snail_shell", 64, Rarity.COMMON);
-        butterflySpawnEggItem = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Overwhelmed.MOD_ID,
+        GOO_BALL = registerGenericItem("goo_ball", 64, Rarity.COMMON);
+        SNAIL_SHELL = registerGenericItem("snail_shell", 64, Rarity.COMMON);
+        BUTTERFLY_SPAWN_EGG = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Overwhelmed.MOD_ID,
                         "butterfly_spawn_egg"), new MultiSpawnEggItem(new Item.Properties(), (random) -> {
                     switch (random.nextIntBetweenInclusive(1, 6)) {
                         case 1 -> {
@@ -122,7 +122,7 @@ public class OverwhelmedFabricItems {
                 }
                 )
         );
-        snailSpawnEggItem = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Overwhelmed.MOD_ID,
+        SNAIL_SPAWN_EGG = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Overwhelmed.MOD_ID,
                         "snail_spawn_egg"), new MultiSpawnEggItem(new Item.Properties(), (random) -> {
                     switch (random.nextIntBetweenInclusive(1, 6)) {
                         case 1 -> {

@@ -15,37 +15,37 @@ public class OverwhelmedFabricCreativeTabs {
         overwhelmedTab = Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB,
                 "overwhelmed_tab", FabricItemGroup.builder()
                         .icon(() ->
-                                new ItemStack(OverwhelmedItems.snailShellItem))
+                                new ItemStack(SNAIL_SHELL))
                         .title(Component.translatable("category.overwhelmed"))
                         .displayItems((itemDisplayParameters, output) -> {
-                            output.accept(soilBlockItem);
-                            output.accept(snailShellBrickBlockItem);
-                            output.accept(snailShellBrickStairsBlockItem);
-                            output.accept(snailShellBrickSlabBlockItem);
-                            output.accept(snailShellBrickWallBlockItem);
-                            output.accept(chiseledSnailShellBricksBlockItem);
-                            output.accept(floffBlockItem);
-                            output.accept(paineBlockItem);
-                            output.accept(strowBlockItem);
-                            output.accept(squirlBlockItem);
-                            output.accept(ringotBlockItem);
-                            output.accept(wilttBlockItem);
-                            output.accept(dumbbellBlockItem);
-                            output.accept(ralpBlockItem);
-                            output.accept(widowBlockItem);
-                            output.accept(goldBeadBlockItem);
-                            output.accept(iceCubeBlockItem);
-                            output.accept(pebbleBlockItem);
-                            output.accept(gooBlockBlockItem);
-                            output.accept(blowgunItem);
-                            output.accept(paperBulletItem);
-                            output.accept(snailStewItem);
-                            output.accept(snailItem);
-                            output.accept(cookedSnailItem);
-                            output.accept(gooBallItem);
-                            output.accept(snailShellItem);
-                            output.accept(butterflySpawnEggItem);
-                            output.accept(snailSpawnEggItem);
+                            output.accept(SOIL);
+                            output.accept(SNAIL_SHELL_BRICKS);
+                            output.accept(SNAIL_SHELL_BRICK_STAIRS);
+                            output.accept(SNAIL_SHELL_BRICK_SLAB);
+                            output.accept(SNAIL_SHELL_BRICK_WALL);
+                            output.accept(CHISELED_SNAIL_SHELL_BRICKS);
+                            output.accept(FLOFF);
+                            output.accept(PAINE);
+                            output.accept(STROW);
+                            output.accept(SQUIRL);
+                            output.accept(RINGOT);
+                            output.accept(WILTT);
+                            output.accept(DUMBBELL);
+                            output.accept(RALP);
+                            output.accept(WIDOW);
+                            output.accept(GOLD_BEAD);
+                            output.accept(ICE_CUBE);
+                            output.accept(PEBBLE);
+                            output.accept(GOO_BLOCK);
+                            output.accept(BLOWGUN);
+                            output.accept(PAPER_BULLET);
+                            output.accept(SNAIL_STEW);
+                            output.accept(SNAIL);
+                            output.accept(COOKED_SNAIL);
+                            output.accept(GOO_BALL);
+                            output.accept(SNAIL_SHELL);
+                            output.accept(BUTTERFLY_SPAWN_EGG);
+                            output.accept(SNAIL_SPAWN_EGG);
                         }).build());
     }
 }

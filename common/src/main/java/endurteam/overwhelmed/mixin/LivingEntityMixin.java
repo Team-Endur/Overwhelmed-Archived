@@ -49,7 +49,7 @@ public abstract class LivingEntityMixin extends Entity {
         Direction result = Direction.fromYRot(this.getYRot());
         BlockPos blockPos = this.blockPosition().relative(result);
         BlockState state = this.level().getBlockState(blockPos);
-        if (state.is(OverwhelmedBlocks.gooBlock))
+        if (state.is(OverwhelmedBlocks.GOO_BLOCK))
         {
             this.lastClimbablePos = Optional.of(blockPos);
             cir.setReturnValue(true);

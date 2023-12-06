@@ -16,45 +16,44 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
 
-import static endurteam.overwhelmed.world.level.block.OverwhelmedBlocks.*;
-import static net.minecraft.world.level.block.Blocks.BIRCH_SAPLING;
-import static net.minecraft.world.level.block.Blocks.flowerPot;
-
 public class OverwhelmedFabricBlocks {
+
     public static void registerBlocks() {
         //Must register Blocks first
-        soilBlock = registerGenericBlock("soil", BlockBehaviour.Properties.of()
+        OverwhelmedBlocks.SOIL = registerGenericBlock("soil", BlockBehaviour.Properties.of()
                 .mapColor(MapColor.COLOR_BROWN)
                 .strength(0.5f, 0.5f)
                 .sound(SoundType.ROOTED_DIRT));
-        snailShellBrickBlock = registerGenericBlock("snail_shell_bricks", BlockBehaviour.Properties.of()
+        OverwhelmedBlocks.SNAIL_SHELL_BRICKS = registerGenericBlock("snail_shell_bricks",
+                BlockBehaviour.Properties.of()
                 .mapColor(MapColor.COLOR_BROWN)
                 .strength(3.0f, 12.0f)
                 .requiresCorrectToolForDrops());
-        snailShellBrickStairBlock = registerGenericStairBlock(snailShellBrickBlock.defaultBlockState(),
-                "snail_shell_brick_stairs", BlockBehaviour.Properties.copy(snailShellBrickBlock));
-        snailShellBrickSlabBlock = registerGenericSlabBlock("snail_shell_brick_slab",
-                BlockBehaviour.Properties.copy(snailShellBrickBlock));
-        OverwhelmedBlocks.snailShellBrickWallBlock = registerGenericWallBlock("snail_shell_brick_wall",
-                BlockBehaviour.Properties.copy(snailShellBrickBlock));
-        OverwhelmedBlocks.chiseledSnailShellBrickBlock = registerGenericBlock("chiseled_snail_shell_bricks",
+        OverwhelmedBlocks.SNAIL_SHELL_BRICK_STAIRS = registerGenericStairBlock
+                (OverwhelmedBlocks.SNAIL_SHELL_BRICKS.defaultBlockState(),
+                "snail_shell_brick_stairs", BlockBehaviour.Properties.copy(OverwhelmedBlocks.SNAIL_SHELL_BRICKS));
+        OverwhelmedBlocks.SNAIL_SHELL_BRICK_SLAB = registerGenericSlabBlock("snail_shell_brick_slab",
+                BlockBehaviour.Properties.copy(OverwhelmedBlocks.SNAIL_SHELL_BRICKS));
+        OverwhelmedBlocks.SNAIL_SHELL_BRICK_WALL = registerGenericWallBlock("snail_shell_brick_wall",
+                BlockBehaviour.Properties.copy(OverwhelmedBlocks.SNAIL_SHELL_BRICKS));
+        OverwhelmedBlocks.CHISELED_SNAIL_SHELL_BRICKS = registerGenericBlock("chiseled_snail_shell_bricks",
                 BlockBehaviour.Properties.of()
                         .mapColor(MapColor.COLOR_BROWN)
                         .strength(3.0f, 12.0f)
                         .requiresCorrectToolForDrops());
-        goldBeadBlock = registerGenericClotBlock("gold_bead", BlockBehaviour.Properties.of()
+        OverwhelmedBlocks.GOLD_BEAD = registerGenericClotBlock("gold_bead", BlockBehaviour.Properties.of()
                 .mapColor(MapColor.GOLD)
                 .strength(0f, 6f)
                 .noCollission()
                 .sound(SoundType.STONE)
                 .noOcclusion());
-        iceCubeBlock = registerGenericClotBlock("ice_cube", BlockBehaviour.Properties.of()
+        OverwhelmedBlocks.ICE_CUBE = registerGenericClotBlock("ice_cube", BlockBehaviour.Properties.of()
                 .mapColor(MapColor.ICE)
                 .strength(0f, 6f)
                 .noCollission()
                 .sound(SoundType.STONE)
                 .noOcclusion());
-        pebbleBlock = Registry.register(BuiltInRegistries.BLOCK,
+        OverwhelmedBlocks.PEBBLE = Registry.register(BuiltInRegistries.BLOCK,
                 new ResourceLocation(Overwhelmed.MOD_ID, "pebble"),
                 new PebbleBlock(BlockBehaviour.Properties.of()
                         .mapColor(MapColor.STONE)
@@ -62,63 +61,71 @@ public class OverwhelmedFabricBlocks {
                         .noCollission()
                         .sound(SoundType.STONE)
                         .noOcclusion()));
-        floffBlock = registerGenericFlowerBlock(MobEffects.REGENERATION, 4, "floff", BlockBehaviour.Properties.of()
+        OverwhelmedBlocks.FLOFF = registerGenericFlowerBlock(MobEffects.REGENERATION, 4, "floff",
+                BlockBehaviour.Properties.of()
                 .mapColor(MapColor.PLANT)
                 .noCollission()
                 .instabreak()
                 .sound(SoundType.GRASS)
                 .offsetType(BlockBehaviour.OffsetType.XZ)
                 .pushReaction(PushReaction.DESTROY));
-        paineBlock = registerGenericFlowerBlock(MobEffects.MOVEMENT_SLOWDOWN, 8, "paine", BlockBehaviour.Properties.of()
+        OverwhelmedBlocks.PAINE = registerGenericFlowerBlock(MobEffects.MOVEMENT_SLOWDOWN, 8, "paine",
+                BlockBehaviour.Properties.of()
                 .mapColor(MapColor.PLANT)
                 .noCollission()
                 .instabreak()
                 .sound(SoundType.GRASS)
                 .offsetType(BlockBehaviour.OffsetType.XZ)
                 .pushReaction(PushReaction.DESTROY));
-        strowBlock = registerGenericFlowerBlock(MobEffects.POISON, 6, "strow", BlockBehaviour.Properties.of()
+        OverwhelmedBlocks.STROW = registerGenericFlowerBlock(MobEffects.POISON, 6, "strow",
+                BlockBehaviour.Properties.of()
                 .mapColor(MapColor.PLANT)
                 .noCollission()
                 .instabreak()
                 .sound(SoundType.GRASS)
                 .offsetType(BlockBehaviour.OffsetType.XZ)
                 .pushReaction(PushReaction.DESTROY));
-        squirlBlock = registerGenericFlowerBlock(MobEffects.JUMP, 10, "squirl", BlockBehaviour.Properties.of()
+        OverwhelmedBlocks.SQUIRL = registerGenericFlowerBlock(MobEffects.JUMP, 10, "squirl",
+                BlockBehaviour.Properties.of()
                 .mapColor(MapColor.PLANT)
                 .noCollission()
                 .instabreak()
                 .sound(SoundType.GRASS)
                 .offsetType(BlockBehaviour.OffsetType.XZ)
                 .pushReaction(PushReaction.DESTROY));
-        ringotBlock = registerGenericFlowerBlock(MobEffects.BLINDNESS, 5, "ringot", BlockBehaviour.Properties.of()
+        OverwhelmedBlocks.RINGOT = registerGenericFlowerBlock(MobEffects.BLINDNESS, 5, "ringot",
+                BlockBehaviour.Properties.of()
                 .mapColor(MapColor.PLANT)
                 .noCollission()
                 .instabreak()
                 .sound(SoundType.GRASS)
                 .offsetType(BlockBehaviour.OffsetType.XZ)
                 .pushReaction(PushReaction.DESTROY));
-        wilttBlock = registerGenericFlowerBlock(MobEffects.WEAKNESS, 7, "wiltt", BlockBehaviour.Properties.of()
+        OverwhelmedBlocks.WILTT = registerGenericFlowerBlock(MobEffects.WEAKNESS, 7, "wiltt",
+                BlockBehaviour.Properties.of()
                 .mapColor(MapColor.PLANT)
                 .noCollission()
                 .instabreak()
                 .sound(SoundType.GRASS)
                 .offsetType(BlockBehaviour.OffsetType.XZ)
                 .pushReaction(PushReaction.DESTROY));
-        dumbbellBlock = registerGenericFlowerBlock(MobEffects.FIRE_RESISTANCE, 10, "dumbbell", BlockBehaviour.Properties.of()
+        OverwhelmedBlocks.DUMBBELL = registerGenericFlowerBlock(MobEffects.FIRE_RESISTANCE, 10, "dumbbell",
+                BlockBehaviour.Properties.of()
                 .mapColor(MapColor.PLANT)
                 .noCollission()
                 .instabreak()
                 .sound(SoundType.GRASS)
                 .offsetType(BlockBehaviour.OffsetType.XZ)
                 .pushReaction(PushReaction.DESTROY));
-        ralpBlock = registerGenericFlowerBlock(MobEffects.DAMAGE_BOOST, 5, "ralp", BlockBehaviour.Properties.of()
+        OverwhelmedBlocks.RALP = registerGenericFlowerBlock(MobEffects.DAMAGE_BOOST, 5, "ralp",
+                BlockBehaviour.Properties.of()
                 .mapColor(MapColor.PLANT)
                 .noCollission()
                 .instabreak()
                 .sound(SoundType.GRASS)
                 .offsetType(BlockBehaviour.OffsetType.XZ)
                 .pushReaction(PushReaction.DESTROY));
-        widowBlock = registerGenericTallFlowerBlock("widow", BlockBehaviour.Properties.of()
+        OverwhelmedBlocks.WIDOW = registerGenericTallFlowerBlock("widow", BlockBehaviour.Properties.of()
                 .mapColor(MapColor.PLANT)
                 .noCollission()
                 .instabreak()
@@ -126,7 +133,7 @@ public class OverwhelmedFabricBlocks {
                 .offsetType(BlockBehaviour.OffsetType.XZ)
                 .ignitedByLava()
                 .pushReaction(PushReaction.DESTROY));
-        gooBlock = Registry.register(BuiltInRegistries.BLOCK,
+        OverwhelmedBlocks.GOO_BLOCK = Registry.register(BuiltInRegistries.BLOCK,
                 new ResourceLocation(Overwhelmed.MOD_ID, "goo_block"),
                 new GooBlock(BlockBehaviour.Properties.of()
                         .mapColor(MapColor.COLOR_YELLOW)

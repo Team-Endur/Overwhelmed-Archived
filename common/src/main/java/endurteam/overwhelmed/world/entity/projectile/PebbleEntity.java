@@ -63,11 +63,11 @@ public class PebbleEntity
 
     @Override
     protected @NotNull Item getDefaultItem() {
-        return OverwhelmedItems.pebbleBlockItem;
+        return OverwhelmedItems.PEBBLE;
     }
 
     private ParticleOptions getParticle() {
-        return new BlockParticleOption(ParticleTypes.BLOCK, OverwhelmedBlocks.pebbleBlock.defaultBlockState());
+        return new BlockParticleOption(ParticleTypes.BLOCK, OverwhelmedBlocks.PEBBLE.defaultBlockState());
     }
 
     @Override

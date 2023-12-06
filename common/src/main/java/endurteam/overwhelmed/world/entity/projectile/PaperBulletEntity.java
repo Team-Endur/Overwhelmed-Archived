@@ -52,11 +52,11 @@ public class PaperBulletEntity
 
     @Override
     protected @NotNull Item getDefaultItem() {
-        return OverwhelmedItems.paperBulletItem;
+        return OverwhelmedItems.PAPER_BULLET;
     }
 
     private ParticleOptions getParticle() {
-        return new ItemParticleOption(ParticleTypes.ITEM, OverwhelmedItems.paperBulletItem.getDefaultInstance());
+        return new ItemParticleOption(ParticleTypes.ITEM, OverwhelmedItems.PAPER_BULLET.getDefaultInstance());
     }
 
     @Override
