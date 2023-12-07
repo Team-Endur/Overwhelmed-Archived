@@ -20,7 +20,6 @@
 
 package endurteam.overwhelmed.forge;
 
-import dev.architectury.platform.forge.EventBuses;
 import endurteam.overwhelmed.forge.client.OverwhelmedForgeClient;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.fml.DistExecutor;
