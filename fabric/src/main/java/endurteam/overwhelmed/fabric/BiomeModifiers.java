@@ -30,44 +30,44 @@ public class BiomeModifiers {
     public static void snailSpawning()
     {
         BiomeModifications.addSpawn(bsc -> bsc.hasTag(OverwhelmedEntityTypes.SPAWNS_FLAT_SNAILS),
-                MobCategory.CREATURE, OverwhelmedEntityTypes.flatSnailEntityType,
+                MobCategory.CREATURE, OverwhelmedEntityTypes.FLAT_SNAIL,
                 5, 2, 4);
         BiomeModifications.addSpawn(bsc -> bsc.hasTag(OverwhelmedEntityTypes.SPAWNS_GARDEN_SNAILS),
-                MobCategory.CREATURE, OverwhelmedEntityTypes.gardenSnailEntityType,
+                MobCategory.CREATURE, OverwhelmedEntityTypes.GARDEN_SNAIL,
                 5, 3, 8);
         BiomeModifications.addSpawn(bsc -> bsc.hasTag(OverwhelmedEntityTypes.SPAWNS_GLASS_SNAILS),
-                MobCategory.CREATURE, OverwhelmedEntityTypes.glassSnailEntityType,
+                MobCategory.CREATURE, OverwhelmedEntityTypes.GLASS_SNAIL,
                 4, 1, 1);
         BiomeModifications.addSpawn(bsc -> bsc.hasTag(OverwhelmedEntityTypes.SPAWNS_LIMESTONE_SNAILS),
-                MobCategory.CREATURE, OverwhelmedEntityTypes.limestoneSnailEntityType,
+                MobCategory.CREATURE, OverwhelmedEntityTypes.LIMESTONE_SNAIL,
                 4, 2, 4);
         BiomeModifications.addSpawn(bsc -> bsc.hasTag(OverwhelmedEntityTypes.SPAWNS_LIVERWORT_SNAILS),
-                MobCategory.CREATURE, OverwhelmedEntityTypes.liverwortSnailEntityType,
+                MobCategory.CREATURE, OverwhelmedEntityTypes.LIVERWORT_SNAIL,
                 5, 3, 6);
         BiomeModifications.addSpawn(bsc -> bsc.hasTag(OverwhelmedEntityTypes.SPAWNS_ROMAN_SNAILS),
-                MobCategory.CREATURE, OverwhelmedEntityTypes.romanSnailEntityType,
+                MobCategory.CREATURE, OverwhelmedEntityTypes.ROMAN_SNAIL,
                 5, 3, 8);
     }
 
     public static void butterflySpawning()
     {
         BiomeModifications.addSpawn(bsc -> bsc.hasTag(OverwhelmedEntityTypes.SPAWNS_CABBAGE_BUTTERFLIES),
-                MobCategory.CREATURE, OverwhelmedEntityTypes.cabbageButterflyEntityType,
+                MobCategory.CREATURE, OverwhelmedEntityTypes.CABBAGE_BUTTERFLY,
                 4, 2, 4);
         BiomeModifications.addSpawn(bsc -> bsc.hasTag(OverwhelmedEntityTypes.SPAWNS_CHERRY_BUTTERFLIES),
-                MobCategory.CREATURE, OverwhelmedEntityTypes.cherryButterflyEntityType,
+                MobCategory.CREATURE, OverwhelmedEntityTypes.CHERRY_BUTTERFLY,
                 4, 2, 4);
         BiomeModifications.addSpawn(bsc -> bsc.hasTag(OverwhelmedEntityTypes.SPAWNS_LIVERWORT_BUTTERFLIES),
-                MobCategory.CREATURE, OverwhelmedEntityTypes.liverwortButterflyEntityType,
+                MobCategory.CREATURE, OverwhelmedEntityTypes.LIVERWORT_BUTTERFLY,
                 4, 3, 6);
         BiomeModifications.addSpawn(bsc -> bsc.hasTag(OverwhelmedEntityTypes.SPAWNS_MONARCH_BUTTERFLIES),
-                MobCategory.CREATURE, OverwhelmedEntityTypes.monarchButterflyEntityType,
+                MobCategory.CREATURE, OverwhelmedEntityTypes.MONARCH_BUTTERFLY,
                 4, 2, 4);
         BiomeModifications.addSpawn(bsc -> bsc.hasTag(OverwhelmedEntityTypes.SPAWNS_MORPHO_BUTTERFLIES),
-                MobCategory.CREATURE, OverwhelmedEntityTypes.morphoButterflyEntityType,
+                MobCategory.CREATURE, OverwhelmedEntityTypes.MORPHO_BUTTERFLY,
                 4, 2, 4);
         BiomeModifications.addSpawn(bsc -> bsc.hasTag(OverwhelmedEntityTypes.SPAWNS_SLEEPY_BUTTERFLIES),
-                MobCategory.CREATURE, OverwhelmedEntityTypes.sleepyButterflyEntityType,
+                MobCategory.CREATURE, OverwhelmedEntityTypes.SLEEPY_BUTTERFLY,
                 4, 2, 4);
     }
 

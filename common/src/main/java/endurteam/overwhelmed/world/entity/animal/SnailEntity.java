@@ -115,10 +115,10 @@ public class SnailEntity extends Animal {
 
     public void setCustomName(@Nullable Component arg) {
         super.setCustomName(arg);
-        if (!this.getType().equals(OverwhelmedEntityTypes.garySnailEntityType) && arg != null
+        if (!this.getType().equals(OverwhelmedEntityTypes.GARY_SNAIL) && arg != null
                 && arg.getString().equals("Gary")) {
             CompoundTag tag = new CompoundTag();
-            SnailEntity newEntity = new SnailEntity(OverwhelmedEntityTypes.garySnailEntityType, this.level());
+            SnailEntity newEntity = new SnailEntity(OverwhelmedEntityTypes.GARY_SNAIL, this.level());
             this.save(tag);
             newEntity.load(tag);
             this.remove(RemovalReason.DISCARDED);
@@ -129,19 +129,19 @@ public class SnailEntity extends Animal {
     @Override
     protected float getStandingEyeHeight(Pose pose, EntityDimensions entityDimensions) {
         EntityType<?> type = this.getType();
-        if (OverwhelmedEntityTypes.flatSnailEntityType.equals(type)) {
+        if (OverwhelmedEntityTypes.FLAT_SNAIL.equals(type)) {
             return 0.2f;
-        } else if (OverwhelmedEntityTypes.gardenSnailEntityType.equals(type)) {
+        } else if (OverwhelmedEntityTypes.GARDEN_SNAIL.equals(type)) {
             return 0.2f;
-        } else if (OverwhelmedEntityTypes.garySnailEntityType.equals(type)) {
+        } else if (OverwhelmedEntityTypes.GARY_SNAIL.equals(type)) {
             return 0.32f;
-        } else if (OverwhelmedEntityTypes.glassSnailEntityType.equals(type)) {
+        } else if (OverwhelmedEntityTypes.GLASS_SNAIL.equals(type)) {
             return 0.2f;
-        } else if (OverwhelmedEntityTypes.limestoneSnailEntityType.equals(type)) {
+        } else if (OverwhelmedEntityTypes.LIMESTONE_SNAIL.equals(type)) {
             return 0.15f;
-        } else if (OverwhelmedEntityTypes.liverwortSnailEntityType.equals(type)) {
+        } else if (OverwhelmedEntityTypes.LIVERWORT_SNAIL.equals(type)) {
             return 0.2f;
-        } else if (OverwhelmedEntityTypes.romanSnailEntityType.equals(type)) {
+        } else if (OverwhelmedEntityTypes.ROMAN_SNAIL.equals(type)) {
             return 0.2f;
         }
         throw new IncompatibleClassChangeError();

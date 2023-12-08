@@ -45,21 +45,21 @@ import static endurteam.overwhelmed.client.OverwhelmedClient.*;
 public class OverwhelmedFabricClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
-        EntityRendererRegistry.register(OverwhelmedEntityTypes.sleepyButterflyEntityType, ButterflyRenderer::new);
-        EntityRendererRegistry.register(OverwhelmedEntityTypes.cabbageButterflyEntityType, ButterflyRenderer::new);
-        EntityRendererRegistry.register(OverwhelmedEntityTypes.morphoButterflyEntityType, ButterflyRenderer::new);
-        EntityRendererRegistry.register(OverwhelmedEntityTypes.cherryButterflyEntityType, ButterflyRenderer::new);
-        EntityRendererRegistry.register(OverwhelmedEntityTypes.monarchButterflyEntityType, ButterflyRenderer::new);
-        EntityRendererRegistry.register(OverwhelmedEntityTypes.liverwortButterflyEntityType, ButterflyRenderer::new);
-        EntityRendererRegistry.register(OverwhelmedEntityTypes.pebbleEntityType, PebbleRenderer::new);
-        EntityRendererRegistry.register(OverwhelmedEntityTypes.paperBulletEntityType, PaperBulletRenderer::new);
-        EntityRendererRegistry.register(OverwhelmedEntityTypes.gardenSnailEntityType, GardenSnailRenderer::new);
-        EntityRendererRegistry.register(OverwhelmedEntityTypes.garySnailEntityType, GarySnailRenderer::new);
-        EntityRendererRegistry.register(OverwhelmedEntityTypes.glassSnailEntityType, GlassSnailRenderer::new);
-        EntityRendererRegistry.register(OverwhelmedEntityTypes.limestoneSnailEntityType, LimestoneSnailRenderer::new);
-        EntityRendererRegistry.register(OverwhelmedEntityTypes.liverwortSnailEntityType, LiverwortSnailRenderer::new);
-        EntityRendererRegistry.register(OverwhelmedEntityTypes.romanSnailEntityType, RomanSnailRenderer::new);
-        EntityRendererRegistry.register(OverwhelmedEntityTypes.flatSnailEntityType, FlatSnailRenderer::new);
+        EntityRendererRegistry.register(OverwhelmedEntityTypes.SLEEPY_BUTTERFLY, ButterflyRenderer::new);
+        EntityRendererRegistry.register(OverwhelmedEntityTypes.CABBAGE_BUTTERFLY, ButterflyRenderer::new);
+        EntityRendererRegistry.register(OverwhelmedEntityTypes.MORPHO_BUTTERFLY, ButterflyRenderer::new);
+        EntityRendererRegistry.register(OverwhelmedEntityTypes.CHERRY_BUTTERFLY, ButterflyRenderer::new);
+        EntityRendererRegistry.register(OverwhelmedEntityTypes.MONARCH_BUTTERFLY, ButterflyRenderer::new);
+        EntityRendererRegistry.register(OverwhelmedEntityTypes.LIVERWORT_BUTTERFLY, ButterflyRenderer::new);
+        EntityRendererRegistry.register(OverwhelmedEntityTypes.PEBBLE, PebbleRenderer::new);
+        EntityRendererRegistry.register(OverwhelmedEntityTypes.PAPER_BULLET, PaperBulletRenderer::new);
+        EntityRendererRegistry.register(OverwhelmedEntityTypes.FLAT_SNAIL, GardenSnailRenderer::new);
+        EntityRendererRegistry.register(OverwhelmedEntityTypes.GARDEN_SNAIL, GarySnailRenderer::new);
+        EntityRendererRegistry.register(OverwhelmedEntityTypes.GARY_SNAIL, GlassSnailRenderer::new);
+        EntityRendererRegistry.register(OverwhelmedEntityTypes.GLASS_SNAIL, LimestoneSnailRenderer::new);
+        EntityRendererRegistry.register(OverwhelmedEntityTypes.LIMESTONE_SNAIL, LiverwortSnailRenderer::new);
+        EntityRendererRegistry.register(OverwhelmedEntityTypes.LIVERWORT_SNAIL, RomanSnailRenderer::new);
+        EntityRendererRegistry.register(OverwhelmedEntityTypes.ROMAN_SNAIL, FlatSnailRenderer::new);
         OverwhelmedFabricModelLayers.registerModelLayers();
         ColorProviderRegistry.ITEM.register(snailSpawnEggItemColor = new SnailSpawnEggItemColor(),
                 OverwhelmedItems.SNAIL_SPAWN_EGG);

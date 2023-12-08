@@ -100,22 +100,22 @@ public class OverwhelmedFabricItems {
                         "butterfly_spawn_egg"), new MultiSpawnEggItem(new Item.Properties(), (random) -> {
                     switch (random.nextIntBetweenInclusive(1, 6)) {
                         case 1 -> {
-                            return OverwhelmedEntityTypes.sleepyButterflyEntityType;
+                            return OverwhelmedEntityTypes.CABBAGE_BUTTERFLY;
                         }
                         case 2 -> {
-                            return OverwhelmedEntityTypes.cabbageButterflyEntityType;
+                            return OverwhelmedEntityTypes.CHERRY_BUTTERFLY;
                         }
                         case 3 -> {
-                            return OverwhelmedEntityTypes.morphoButterflyEntityType;
+                            return OverwhelmedEntityTypes.LIVERWORT_BUTTERFLY;
                         }
                         case 4 -> {
-                            return OverwhelmedEntityTypes.cherryButterflyEntityType;
+                            return OverwhelmedEntityTypes.MONARCH_BUTTERFLY;
                         }
                         case 5 -> {
-                            return OverwhelmedEntityTypes.monarchButterflyEntityType;
+                            return OverwhelmedEntityTypes.MORPHO_BUTTERFLY;
                         }
                         case 6 -> {
-                            return OverwhelmedEntityTypes.liverwortButterflyEntityType;
+                            return OverwhelmedEntityTypes.SLEEPY_BUTTERFLY;
                         }
                     }
                     throw new IncompatibleClassChangeError();
@@ -126,22 +126,22 @@ public class OverwhelmedFabricItems {
                         "snail_spawn_egg"), new MultiSpawnEggItem(new Item.Properties(), (random) -> {
                     switch (random.nextIntBetweenInclusive(1, 6)) {
                         case 1 -> {
-                            return OverwhelmedEntityTypes.gardenSnailEntityType;
+                            return OverwhelmedEntityTypes.FLAT_SNAIL;
                         }
                         case 2 -> {
-                            return OverwhelmedEntityTypes.limestoneSnailEntityType;
+                            return OverwhelmedEntityTypes.GARDEN_SNAIL;
                         }
                         case 3 -> {
-                            return OverwhelmedEntityTypes.romanSnailEntityType;
+                            return OverwhelmedEntityTypes.GLASS_SNAIL;
                         }
                         case 4 -> {
-                            return OverwhelmedEntityTypes.glassSnailEntityType;
+                            return OverwhelmedEntityTypes.LIMESTONE_SNAIL;
                         }
                         case 5 -> {
-                            return OverwhelmedEntityTypes.liverwortSnailEntityType;
+                            return OverwhelmedEntityTypes.LIVERWORT_SNAIL;
                         }
                         case 6 -> {
-                            return OverwhelmedEntityTypes.flatSnailEntityType;
+                            return OverwhelmedEntityTypes.ROMAN_SNAIL;
                         }
                     }
                     throw new IncompatibleClassChangeError();

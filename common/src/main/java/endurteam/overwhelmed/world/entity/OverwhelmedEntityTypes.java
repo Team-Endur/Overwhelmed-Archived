@@ -33,23 +33,23 @@ import endurteam.overwhelmed.world.entity.animal.SnailEntity;
 import static endurteam.overwhelmed.Overwhelmed.MOD_ID;
 
 public class OverwhelmedEntityTypes {
-    public static EntityType<SnailEntity> flatSnailEntityType;
-    public static EntityType<SnailEntity> gardenSnailEntityType;
-    public static EntityType<SnailEntity> garySnailEntityType;
-    public static EntityType<SnailEntity> glassSnailEntityType;
-    public static EntityType<SnailEntity> limestoneSnailEntityType;
-    public static EntityType<SnailEntity> liverwortSnailEntityType;
-    public static EntityType<SnailEntity> romanSnailEntityType;
+    public static EntityType<SnailEntity> FLAT_SNAIL;
+    public static EntityType<SnailEntity> GARDEN_SNAIL;
+    public static EntityType<SnailEntity> GARY_SNAIL;
+    public static EntityType<SnailEntity> GLASS_SNAIL;
+    public static EntityType<SnailEntity> LIMESTONE_SNAIL;
+    public static EntityType<SnailEntity> LIVERWORT_SNAIL;
+    public static EntityType<SnailEntity> ROMAN_SNAIL;
 
-    public static EntityType<ButterflyEntity> cabbageButterflyEntityType;
-    public static EntityType<ButterflyEntity> cherryButterflyEntityType;
-    public static EntityType<ButterflyEntity> liverwortButterflyEntityType;
-    public static EntityType<ButterflyEntity> monarchButterflyEntityType;
-    public static EntityType<ButterflyEntity> morphoButterflyEntityType;
-    public static EntityType<ButterflyEntity> sleepyButterflyEntityType;
+    public static EntityType<ButterflyEntity> CABBAGE_BUTTERFLY;
+    public static EntityType<ButterflyEntity> CHERRY_BUTTERFLY;
+    public static EntityType<ButterflyEntity> LIVERWORT_BUTTERFLY;
+    public static EntityType<ButterflyEntity> MONARCH_BUTTERFLY;
+    public static EntityType<ButterflyEntity> MORPHO_BUTTERFLY;
+    public static EntityType<ButterflyEntity> SLEEPY_BUTTERFLY;
 
-    public static EntityType<PaperBulletEntity> paperBulletEntityType;
-    public static EntityType<PebbleEntity> pebbleEntityType;
+    public static EntityType<PaperBulletEntity> PAPER_BULLET;
+    public static EntityType<PebbleEntity> PEBBLE;
 
     public static final TagKey<Biome> SPAWNS_FLAT_SNAILS = TagKey.create(Registries.BIOME,
             new ResourceLocation(MOD_ID, "spawns_flat_snails"));

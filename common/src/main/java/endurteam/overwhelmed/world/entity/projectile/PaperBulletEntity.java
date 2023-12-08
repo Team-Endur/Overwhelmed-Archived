@@ -47,7 +47,7 @@ public class PaperBulletEntity
     }
 
     public PaperBulletEntity(Level level, LivingEntity livingEntity) {
-        super(OverwhelmedEntityTypes.paperBulletEntityType, livingEntity, level);
+        super(OverwhelmedEntityTypes.PAPER_BULLET, livingEntity, level);
     }
 
     @Override
