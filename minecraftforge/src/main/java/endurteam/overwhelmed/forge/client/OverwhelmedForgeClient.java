@@ -40,7 +40,7 @@ public class OverwhelmedForgeClient {
 
     @SubscribeEvent
     public static void registerParticleEvent(RegisterParticleProvidersEvent event) {
-        event.registerSpriteSet((ParticleType<SimpleParticleType>) OverwhelmedParticleTypes.liverwortSpore.get(),
+        event.registerSpriteSet((ParticleType<SimpleParticleType>) OverwhelmedParticleTypes.LIVERWORT_SPORE.get(),
                 LiverwortSporeParticle.Provider::new);
     }
 }

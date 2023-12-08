@@ -54,11 +54,11 @@ public class PebbleEntity
     }
 
     public PebbleEntity(Level level, LivingEntity livingEntity) {
-        super(OverwhelmedEntityTypes.pebbleEntityType, livingEntity, level);
+        super(OverwhelmedEntityTypes.PEBBLE, livingEntity, level);
     }
 
     public PebbleEntity(Level level, double d, double e, double f) {
-        super(OverwhelmedEntityTypes.pebbleEntityType, d, e, f, level);
+        super(OverwhelmedEntityTypes.PEBBLE, d, e, f, level);
     }
 
     @Override

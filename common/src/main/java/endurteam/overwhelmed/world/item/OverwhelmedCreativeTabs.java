@@ -24,5 +24,5 @@ import net.minecraft.world.item.CreativeModeTab;
 
 public class OverwhelmedCreativeTabs {
 
-    public static CreativeModeTab overwhelmedTab;
+    public static CreativeModeTab OVERWHELMED_TAB;
 }

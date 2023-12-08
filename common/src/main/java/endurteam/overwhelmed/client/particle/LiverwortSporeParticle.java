@@ -47,17 +47,6 @@ public class LiverwortSporeParticle extends TextureSheetParticle {
         this.angularAcceleration = 0f;
         this.setSpriteFromAge(spriteSet);
     }
-    //this.spriteSet = spriteSet;
-    //		this.setSize(0.2f, 0.2f);
-    //		this.lifetime = 10;
-    //		this.gravity = 0.2f;
-    //		this.hasPhysics = true;
-    //		this.xd = vx * 0;
-    //		this.yd = vy * 0;
-    //		this.zd = vz * 0;
-    //		this.angularVelocity = 0.157f;
-    //		this.angularAcceleration = 0f;
-    //		this.setSpriteFromAge(spriteSet);
 
     @Override
     public @NotNull ParticleRenderType getRenderType() {

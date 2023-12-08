@@ -24,7 +24,7 @@ import net.minecraft.core.particles.ParticleType;
 import net.minecraft.core.particles.SimpleParticleType;
 
 public class OverwhelmedParticleTypes {
-    public static ParticleType<SimpleParticleType> liverwortSpore;
+    public static ParticleType<SimpleParticleType> LIVERWORT_SPORE;
 
 
 }
