@@ -44,7 +44,7 @@ public class PebbleBlockItem extends BlockItem {
                                                            InteractionHand interactionHand) {
         ItemStack itemStack = player.getItemInHand(interactionHand);
         level.playSound(null, player.getX(), player.getY(), player.getZ(),
-                OverwhelmedSoundEvents.pebbleThrow, SoundSource.NEUTRAL, 0.5f,
+                OverwhelmedSoundEvents.PEBBLE_THROW, SoundSource.NEUTRAL, 0.5f,
                 0.4f / (level.getRandom().nextFloat() * 0.4f + 0.8f));
         player.getCooldowns().addCooldown(this, 20);
         if (!level.isClientSide) {

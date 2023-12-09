@@ -22,6 +22,7 @@ package endurteam.overwhelmed.world.item;
 
 import endurteam.overwhelmed.sounds.OverwhelmedSoundEvents;
 import endurteam.overwhelmed.world.entity.projectile.PaperBulletEntity;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
 import net.minecraft.world.InteractionHand;
@@ -66,7 +67,7 @@ public class BlowgunItem extends ProjectileWeaponItem {
             level.addFreshEntity(pebbleEntity);
         }
         level.playSound(null, player.getX(), player.getY(), player.getZ(),
-                OverwhelmedSoundEvents.paperBulletShoot, SoundSource.NEUTRAL, 0.5f,
+                OverwhelmedSoundEvents.PAPER_BULLET_SHOOT, SoundSource.NEUTRAL, 0.5f,
                 0.4f / (level.getRandom().nextFloat() * 0.4f + 0.8f));
         if (!bl2 && !player.getAbilities().instabuild) {
             itemStack2.shrink(1);

@@ -53,12 +53,12 @@ public class ButterflyEntity extends PathfinderMob {
 
     @Override
     public SoundEvent getHurtSound(DamageSource damageSource) {
-        return OverwhelmedSoundEvents.butterflyHurt;
+        return OverwhelmedSoundEvents.BUTTERFLY_HURT;
     }
 
     @Override
     public SoundEvent getDeathSound() {
-        return OverwhelmedSoundEvents.butterflyDeath;
+        return OverwhelmedSoundEvents.BUTTERFLY_DEATH;
     }
 
     @Override

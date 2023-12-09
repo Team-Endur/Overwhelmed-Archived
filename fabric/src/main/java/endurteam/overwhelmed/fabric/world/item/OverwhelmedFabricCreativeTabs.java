@@ -12,7 +12,7 @@ import static endurteam.overwhelmed.world.item.OverwhelmedCreativeTabs.*;
 
 public class OverwhelmedFabricCreativeTabs {
     public static void registerCreativeTab() {
-        OVERWHELMED_TAB = Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB,
+        OVERWHELMED = Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB,
                 "overwhelmed_tab", FabricItemGroup.builder()
                         .icon(() ->
                                 new ItemStack(SNAIL_SHELL))

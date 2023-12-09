@@ -23,10 +23,10 @@ package endurteam.overwhelmed.sounds;
 import net.minecraft.sounds.SoundEvent;
 
 public class OverwhelmedSoundEvents {
-    public static SoundEvent snailHurt;
-    public static SoundEvent snailDeath;
-    public static SoundEvent butterflyHurt;
-    public static SoundEvent butterflyDeath;
-    public static SoundEvent paperBulletShoot;
-    public static SoundEvent pebbleThrow;
+    public static SoundEvent SNAIL_HURT;
+    public static SoundEvent SNAIL_DEATH;
+    public static SoundEvent BUTTERFLY_HURT;
+    public static SoundEvent BUTTERFLY_DEATH;
+    public static SoundEvent PAPER_BULLET_SHOOT;
+    public static SoundEvent PEBBLE_THROW;
 }

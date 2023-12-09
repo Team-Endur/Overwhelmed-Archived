@@ -62,12 +62,12 @@ public class SnailEntity extends Animal {
 
     @Override
     protected SoundEvent getHurtSound(DamageSource damageSource) {
-        return OverwhelmedSoundEvents.snailHurt;
+        return OverwhelmedSoundEvents.SNAIL_HURT;
     }
 
     @Override
     protected SoundEvent getDeathSound() {
-        return OverwhelmedSoundEvents.snailDeath;
+        return OverwhelmedSoundEvents.SNAIL_DEATH;
     }
 
     public static AttributeSupplier.Builder createAttributes() {
