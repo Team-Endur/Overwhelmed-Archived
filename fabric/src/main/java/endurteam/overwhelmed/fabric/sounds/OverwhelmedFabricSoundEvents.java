@@ -10,27 +10,27 @@ import static endurteam.overwhelmed.sounds.OverwhelmedSoundEvents.*;
 
 public class OverwhelmedFabricSoundEvents {
     public static void registerSoundEvents() {
-        snailHurt = Registry.register(BuiltInRegistries.SOUND_EVENT,
+        SNAIL_HURT = Registry.register(BuiltInRegistries.SOUND_EVENT,
                 new ResourceLocation(Overwhelmed.MOD_ID, "entity.snail.hurt"),
                         SoundEvent.createVariableRangeEvent(
                                 new ResourceLocation(Overwhelmed.MOD_ID, "entity.snail.hurt")));
-        snailDeath = Registry.register(BuiltInRegistries.SOUND_EVENT,
+        SNAIL_DEATH = Registry.register(BuiltInRegistries.SOUND_EVENT,
                 new ResourceLocation(Overwhelmed.MOD_ID, "entity.snail.death"),
                         SoundEvent.createVariableRangeEvent(
                                 new ResourceLocation(Overwhelmed.MOD_ID, "entity.snail.death")));
-        butterflyHurt = Registry.register(BuiltInRegistries.SOUND_EVENT,
+        BUTTERFLY_HURT = Registry.register(BuiltInRegistries.SOUND_EVENT,
                 new ResourceLocation(Overwhelmed.MOD_ID, "entity.butterfly.hurt"),
                         SoundEvent.createVariableRangeEvent(
                                 new ResourceLocation(Overwhelmed.MOD_ID, "entity.butterfly.hurt")));
-        butterflyDeath = Registry.register(BuiltInRegistries.SOUND_EVENT,
+        BUTTERFLY_DEATH = Registry.register(BuiltInRegistries.SOUND_EVENT,
                 new ResourceLocation(Overwhelmed.MOD_ID, "entity.butterfly.death"),
                         SoundEvent.createVariableRangeEvent(
                                 new ResourceLocation(Overwhelmed.MOD_ID, "entity.butterfly.death")));
-        paperBulletShoot = Registry.register(BuiltInRegistries.SOUND_EVENT,
+        BLOWGUN_SHOOT = Registry.register(BuiltInRegistries.SOUND_EVENT,
                 new ResourceLocation(Overwhelmed.MOD_ID, "entity.paper_bullet.shoot"),
                         SoundEvent.createVariableRangeEvent(
                                 new ResourceLocation(Overwhelmed.MOD_ID, "entity.paper_bullet.shoot")));
-        pebbleThrow = Registry.register(BuiltInRegistries.SOUND_EVENT,
+        PEBBLE_THROW = Registry.register(BuiltInRegistries.SOUND_EVENT,
                 new ResourceLocation(Overwhelmed.MOD_ID, "entity.pebble.throw"),
                 SoundEvent.createVariableRangeEvent(
                         new ResourceLocation(Overwhelmed.MOD_ID, "entity.pebble.throw")));

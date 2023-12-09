@@ -27,6 +27,6 @@ public class OverwhelmedSoundEvents {
     public static SoundEvent SNAIL_DEATH;
     public static SoundEvent BUTTERFLY_HURT;
     public static SoundEvent BUTTERFLY_DEATH;
-    public static SoundEvent PAPER_BULLET_SHOOT;
+    public static SoundEvent BLOWGUN_SHOOT;
     public static SoundEvent PEBBLE_THROW;
 }

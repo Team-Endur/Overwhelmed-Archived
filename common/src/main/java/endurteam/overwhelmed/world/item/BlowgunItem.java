@@ -67,7 +67,7 @@ public class BlowgunItem extends ProjectileWeaponItem {
             level.addFreshEntity(pebbleEntity);
         }
         level.playSound(null, player.getX(), player.getY(), player.getZ(),
-                OverwhelmedSoundEvents.PAPER_BULLET_SHOOT, SoundSource.NEUTRAL, 0.5f,
+                OverwhelmedSoundEvents.BLOWGUN_SHOOT, SoundSource.NEUTRAL, 0.5f,
                 0.4f / (level.getRandom().nextFloat() * 0.4f + 0.8f));
         if (!bl2 && !player.getAbilities().instabuild) {
             itemStack2.shrink(1);
