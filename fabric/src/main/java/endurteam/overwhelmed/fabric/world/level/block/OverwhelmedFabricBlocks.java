@@ -101,7 +101,7 @@ public class OverwhelmedFabricBlocks {
                 .sound(SoundType.GRASS)
                 .offsetType(BlockBehaviour.OffsetType.XZ)
                 .pushReaction(PushReaction.DESTROY));
-        OverwhelmedBlocks.WILTT = registerGenericFlowerBlock(MobEffects.WEAKNESS, 7, "wiltt",
+        OverwhelmedBlocks.SNOWDROP = registerGenericFlowerBlock(MobEffects.WEAKNESS, 7, "snowdrop",
                 BlockBehaviour.Properties.of()
                 .mapColor(MapColor.PLANT)
                 .noCollission()

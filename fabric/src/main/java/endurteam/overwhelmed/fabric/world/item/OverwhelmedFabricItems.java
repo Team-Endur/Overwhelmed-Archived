@@ -47,8 +47,8 @@ public class OverwhelmedFabricItems {
         RINGOT = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Overwhelmed.MOD_ID, "ringot"),
                 new BlockItem(OverwhelmedBlocks.RINGOT,
                         new Item.Properties()));
-        WILTT = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Overwhelmed.MOD_ID, "wiltt"),
-                new BlockItem(OverwhelmedBlocks.WILTT,
+        SNOWDROP = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Overwhelmed.MOD_ID, "snowdrop"),
+                new BlockItem(OverwhelmedBlocks.SNOWDROP,
                         new Item.Properties()));
         DUMBBELL = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Overwhelmed.MOD_ID, "dumbbell"),
                 new BlockItem(OverwhelmedBlocks.DUMBBELL,

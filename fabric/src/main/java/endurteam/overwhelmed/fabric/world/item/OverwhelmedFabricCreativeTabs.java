@@ -29,7 +29,7 @@ public class OverwhelmedFabricCreativeTabs {
                             output.accept(STROW);
                             output.accept(SQUIRL);
                             output.accept(RINGOT);
-                            output.accept(WILTT);
+                            output.accept(SNOWDROP);
                             output.accept(DUMBBELL);
                             output.accept(RALP);
                             output.accept(WIDOW);
