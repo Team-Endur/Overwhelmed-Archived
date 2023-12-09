@@ -37,7 +37,7 @@ public class OverwhelmedBlocks {
     public static FlowerBlock STROW;
     public static FlowerBlock SQUIRL;
     public static FlowerBlock RINGOT;
-    public static FlowerBlock WILTT;
+    public static FlowerBlock SNOWDROP;
     public static FlowerBlock DUMBBELL;
     public static FlowerBlock RALP;
     public static TallFlowerBlock WIDOW;
