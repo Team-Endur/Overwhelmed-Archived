@@ -85,6 +85,14 @@ public class OverwhelmedFabricBlocks {
                 .sound(SoundType.GRASS)
                 .offsetType(BlockBehaviour.OffsetType.XZ)
                 .pushReaction(PushReaction.DESTROY));
+        OverwhelmedBlocks.WHITE_SALLOW = registerGenericFlowerBlock(MobEffects.WEAKNESS, 5, "white_sallow",
+                BlockBehaviour.Properties.of()
+                        .mapColor(MapColor.PLANT)
+                        .noCollission()
+                        .instabreak()
+                        .sound(SoundType.GRASS)
+                        .offsetType(BlockBehaviour.OffsetType.XZ)
+                        .pushReaction(PushReaction.DESTROY));
         OverwhelmedBlocks.SQUIRL = registerGenericFlowerBlock(MobEffects.JUMP, 10, "squirl",
                 BlockBehaviour.Properties.of()
                 .mapColor(MapColor.PLANT)
@@ -110,14 +118,6 @@ public class OverwhelmedFabricBlocks {
                 .offsetType(BlockBehaviour.OffsetType.XZ)
                 .pushReaction(PushReaction.DESTROY));
         OverwhelmedBlocks.DUMBBELL = registerGenericFlowerBlock(MobEffects.FIRE_RESISTANCE, 10, "dumbbell",
-                BlockBehaviour.Properties.of()
-                .mapColor(MapColor.PLANT)
-                .noCollission()
-                .instabreak()
-                .sound(SoundType.GRASS)
-                .offsetType(BlockBehaviour.OffsetType.XZ)
-                .pushReaction(PushReaction.DESTROY));
-        OverwhelmedBlocks.RALP = registerGenericFlowerBlock(MobEffects.DAMAGE_BOOST, 5, "ralp",
                 BlockBehaviour.Properties.of()
                 .mapColor(MapColor.PLANT)
                 .noCollission()

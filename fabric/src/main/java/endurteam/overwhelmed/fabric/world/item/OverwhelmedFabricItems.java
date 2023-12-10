@@ -41,6 +41,9 @@ public class OverwhelmedFabricItems {
         PINK_SALLOW = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Overwhelmed.MOD_ID, "pink_sallow"),
                 new BlockItem(OverwhelmedBlocks.PINK_SALLOW,
                         new Item.Properties()));
+        WHITE_SALLOW = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Overwhelmed.MOD_ID, "white_sallow"),
+                new BlockItem(OverwhelmedBlocks.WHITE_SALLOW,
+                        new Item.Properties()));
         SQUIRL = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Overwhelmed.MOD_ID, "squirl"),
                 new BlockItem(OverwhelmedBlocks.SQUIRL,
                         new Item.Properties()));
@@ -52,9 +55,6 @@ public class OverwhelmedFabricItems {
                         new Item.Properties()));
         DUMBBELL = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Overwhelmed.MOD_ID, "dumbbell"),
                 new BlockItem(OverwhelmedBlocks.DUMBBELL,
-                        new Item.Properties()));
-        RALP = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Overwhelmed.MOD_ID, "ralp"),
-                new BlockItem(OverwhelmedBlocks.RALP,
                         new Item.Properties()));
         WIDOW = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Overwhelmed.MOD_ID, "widow"),
                 new DoubleHighBlockItem(OverwhelmedBlocks.WIDOW,

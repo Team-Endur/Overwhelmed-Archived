@@ -27,11 +27,11 @@ public class OverwhelmedFabricCreativeTabs {
                             output.accept(FLOFF);
                             output.accept(PAINE);
                             output.accept(PINK_SALLOW);
+                            output.accept(WHITE_SALLOW);
                             output.accept(SQUIRL);
                             output.accept(RINGOT);
                             output.accept(SNOWDROP);
                             output.accept(DUMBBELL);
-                            output.accept(RALP);
                             output.accept(WIDOW);
                             output.accept(GOLD_BEAD);
                             output.accept(ICE_CUBE);

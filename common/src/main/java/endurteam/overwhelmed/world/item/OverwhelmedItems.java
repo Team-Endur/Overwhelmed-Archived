@@ -33,11 +33,11 @@ public class OverwhelmedItems {
     public static BlockItem FLOFF;
     public static BlockItem PAINE;
     public static BlockItem PINK_SALLOW;
+    public static BlockItem WHITE_SALLOW;
     public static BlockItem SQUIRL;
     public static BlockItem RINGOT;
     public static BlockItem SNOWDROP;
     public static BlockItem DUMBBELL;
-    public static BlockItem RALP;
     public static DoubleHighBlockItem WIDOW;
     public static BlockItem GOLD_BEAD;
     public static BlockItem ICE_CUBE;
