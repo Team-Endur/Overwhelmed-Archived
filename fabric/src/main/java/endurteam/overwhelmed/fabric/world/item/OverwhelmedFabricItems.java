@@ -38,8 +38,8 @@ public class OverwhelmedFabricItems {
         PAINE = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Overwhelmed.MOD_ID, "paine"),
                 new BlockItem(OverwhelmedBlocks.PAINE,
                         new Item.Properties()));
-        STROW = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Overwhelmed.MOD_ID, "strow"),
-                new BlockItem(OverwhelmedBlocks.STROW,
+        PINK_SALLOW = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Overwhelmed.MOD_ID, "pink_sallow"),
+                new BlockItem(OverwhelmedBlocks.PINK_SALLOW,
                         new Item.Properties()));
         SQUIRL = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Overwhelmed.MOD_ID, "squirl"),
                 new BlockItem(OverwhelmedBlocks.SQUIRL,

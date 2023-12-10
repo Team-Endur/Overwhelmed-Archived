@@ -32,7 +32,7 @@ public class OverwhelmedItems {
     public static BlockItem CHISELED_SNAIL_SHELL_BRICKS;
     public static BlockItem FLOFF;
     public static BlockItem PAINE;
-    public static BlockItem STROW;
+    public static BlockItem PINK_SALLOW;
     public static BlockItem SQUIRL;
     public static BlockItem RINGOT;
     public static BlockItem SNOWDROP;

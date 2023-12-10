@@ -77,7 +77,7 @@ public class OverwhelmedFabricBlocks {
                 .sound(SoundType.GRASS)
                 .offsetType(BlockBehaviour.OffsetType.XZ)
                 .pushReaction(PushReaction.DESTROY));
-        OverwhelmedBlocks.STROW = registerGenericFlowerBlock(MobEffects.POISON, 6, "strow",
+        OverwhelmedBlocks.PINK_SALLOW = registerGenericFlowerBlock(MobEffects.POISON, 6, "pink_sallow",
                 BlockBehaviour.Properties.of()
                 .mapColor(MapColor.PLANT)
                 .noCollission()

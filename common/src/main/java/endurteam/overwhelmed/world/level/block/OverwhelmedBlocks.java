@@ -34,7 +34,7 @@ public class OverwhelmedBlocks {
     public static PebbleBlock PEBBLE;
     public static FlowerBlock FLOFF;
     public static FlowerBlock PAINE;
-    public static FlowerBlock STROW;
+    public static FlowerBlock PINK_SALLOW;
     public static FlowerBlock SQUIRL;
     public static FlowerBlock RINGOT;
     public static FlowerBlock SNOWDROP;

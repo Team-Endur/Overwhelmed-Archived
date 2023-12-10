@@ -26,7 +26,7 @@ public class OverwhelmedFabricCreativeTabs {
                             output.accept(CHISELED_SNAIL_SHELL_BRICKS);
                             output.accept(FLOFF);
                             output.accept(PAINE);
-                            output.accept(STROW);
+                            output.accept(PINK_SALLOW);
                             output.accept(SQUIRL);
                             output.accept(RINGOT);
                             output.accept(SNOWDROP);
