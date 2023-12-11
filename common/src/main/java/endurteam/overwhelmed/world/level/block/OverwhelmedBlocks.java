@@ -40,6 +40,14 @@ public class OverwhelmedBlocks {
     public static FlowerBlock RINGOT;
     public static FlowerBlock SNOWDROP;
     public static FlowerBlock DUMBBELL;
+    public static FlowerPotBlock POTTED_FLOFF;
+    public static FlowerPotBlock POTTED_PAINE;
+    public static FlowerPotBlock POTTED_PINK_SALLOW;
+    public static FlowerPotBlock POTTED_WHITE_SALLOW;
+    public static FlowerPotBlock POTTED_SQUIRL;
+    public static FlowerPotBlock POTTED_RINGOT;
+    public static FlowerPotBlock POTTED_SNOWDROP;
+    public static FlowerPotBlock POTTED_DUMBBELL;
     public static TallFlowerBlock WIDOW;
     public static GooBlock GOO_BLOCK;
 
