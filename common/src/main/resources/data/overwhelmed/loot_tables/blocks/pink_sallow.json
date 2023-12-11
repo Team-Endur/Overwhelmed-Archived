@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "overwhelmed:strow"
+          "name": "overwhelmed:pink_sallow"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "overwhelmed:blocks/strow"
+  "random_sequence": "overwhelmed:blocks/pink_sallow"
 }
