@@ -30,34 +30,74 @@ import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 import static endurteam.overwhelmed.Overwhelmed.MOD_ID;
 
 public class OverwhelmedPlacedFeatures {
-    
-    public static final TagKey<Biome> GENERATES_SOIL = TagKey.create(Registries.BIOME,
-            new ResourceLocation(MOD_ID, "generates_soil"));
-    
-    public static final TagKey<Biome> GENERATES_WIDOWS = TagKey.create(Registries.BIOME,
-            new ResourceLocation(MOD_ID, "generates_widows"));
+
+    public static final TagKey<Biome> GENERATES_DUMBBELL = TagKey.create(Registries.BIOME,
+            new ResourceLocation(MOD_ID, "generates_dumbbells"));
+
+    public static final TagKey<Biome> GENERATES_FLOFFS = TagKey.create(Registries.BIOME,
+            new ResourceLocation(MOD_ID, "generates_floffs"));
+
+    public static final TagKey<Biome> GENERATES_GOLD_BEADS = TagKey.create(Registries.BIOME,
+            new ResourceLocation(MOD_ID, "generates_gold_beads"));
+    public static final TagKey<Biome> GENERATES_ICE_CUBES = TagKey.create(Registries.BIOME,
+            new ResourceLocation(MOD_ID, "generates_ice_cubes"));
+
+    public static final TagKey<Biome> GENERATES_PAINES = TagKey.create(Registries.BIOME,
+            new ResourceLocation(MOD_ID, "generates_paines"));
 
     public static final TagKey<Biome> GENERATES_PEBBLES = TagKey.create(Registries.BIOME,
             new ResourceLocation(MOD_ID, "generates_pebbles"));
 
-    public static final TagKey<Biome> GENERATES_ICE_CUBES = TagKey.create(Registries.BIOME,
-            new ResourceLocation(MOD_ID, "generates_ice_cubes"));
+    public static final TagKey<Biome> GENERATES_PINK_SALLOWS = TagKey.create(Registries.BIOME,
+            new ResourceLocation(MOD_ID, "generates_sallows"));
+    public static final TagKey<Biome> GENERATES_SNOWDROPS = TagKey.create(Registries.BIOME,
+            new ResourceLocation(MOD_ID, "generates_snowdrops"));
 
-    public static final TagKey<Biome> GENERATES_GOLD_BEADS = TagKey.create(Registries.BIOME,
-            new ResourceLocation(MOD_ID, "generates_gold_beads"));
+    public static final TagKey<Biome> GENERATES_SOIL = TagKey.create(Registries.BIOME,
+            new ResourceLocation(MOD_ID, "generates_soil"));
 
-    public static final ResourceKey<PlacedFeature> ORE_SOIL = ResourceKey.create(Registries.PLACED_FEATURE,
-            new ResourceLocation(MOD_ID, "ore_soil"));
+    public static final TagKey<Biome> GENERATES_SQUIRLS = TagKey.create(Registries.BIOME,
+            new ResourceLocation(MOD_ID, "generates_squirls"));
 
-    public static final ResourceKey<PlacedFeature> GENERATE_WIDOW = ResourceKey.create(Registries.PLACED_FEATURE,
-            new ResourceLocation(MOD_ID, "generate_widow"));
+    public static final TagKey<Biome> GENERATES_WHITE_SALLOWS = TagKey.create(Registries.BIOME,
+            new ResourceLocation(MOD_ID, "generates_white_sallows"));
+    
+    public static final TagKey<Biome> GENERATES_WIDOWS = TagKey.create(Registries.BIOME,
+            new ResourceLocation(MOD_ID, "generates_widows"));
+    public static final ResourceKey<PlacedFeature> GENERATE_DUMBBELL = ResourceKey.create(Registries.PLACED_FEATURE,
+            new ResourceLocation(MOD_ID, "generate_dumbbell"));
 
-    public static final ResourceKey<PlacedFeature> GENERATE_PEBBLE = ResourceKey.create(Registries.PLACED_FEATURE,
-            new ResourceLocation(MOD_ID, "generate_pebble"));
+    public static final ResourceKey<PlacedFeature> GENERATE_FLOFF = ResourceKey.create(Registries.PLACED_FEATURE,
+            new ResourceLocation(MOD_ID, "generate_floff"));
+
+    public static final ResourceKey<PlacedFeature> GENERATE_GOLD_BEAD = ResourceKey.create(Registries.PLACED_FEATURE,
+            new ResourceLocation(MOD_ID, "generate_gold_bead"));
 
     public static final ResourceKey<PlacedFeature> GENERATE_ICE_CUBE = ResourceKey.create(Registries.PLACED_FEATURE,
             new ResourceLocation(MOD_ID, "generate_ice_cube"));
 
-    public static final ResourceKey<PlacedFeature> GENERATE_GOLD_BEAD = ResourceKey.create(Registries.PLACED_FEATURE,
-            new ResourceLocation(MOD_ID, "generate_gold_bead"));
+    public static final ResourceKey<PlacedFeature> GENERATE_PAINE = ResourceKey.create(Registries.PLACED_FEATURE,
+            new ResourceLocation(MOD_ID, "generate_paine"));
+
+    public static final ResourceKey<PlacedFeature> GENERATE_PEBBLE = ResourceKey.create(Registries.PLACED_FEATURE,
+            new ResourceLocation(MOD_ID, "generate_pebble"));
+
+    public static final ResourceKey<PlacedFeature> GENERATE_PINK_SALLOW = ResourceKey.create(Registries.PLACED_FEATURE,
+            new ResourceLocation(MOD_ID, "generate_pink_sallow"));
+
+    public static final ResourceKey<PlacedFeature> GENERATE_SNOWDROP = ResourceKey.create(Registries.PLACED_FEATURE,
+            new ResourceLocation(MOD_ID, "generate_snowdrop"));
+
+    public static final ResourceKey<PlacedFeature> GENERATE_SQUIRL = ResourceKey.create(Registries.PLACED_FEATURE,
+            new ResourceLocation(MOD_ID, "generate_squirl"));
+
+    public static final ResourceKey<PlacedFeature> GENERATE_WHITE_SALLOW= ResourceKey.create(Registries.PLACED_FEATURE,
+            new ResourceLocation(MOD_ID, "generate_white_sallow"));
+
+    public static final ResourceKey<PlacedFeature> GENERATE_WIDOW = ResourceKey.create(Registries.PLACED_FEATURE,
+            new ResourceLocation(MOD_ID, "generate_widow"));
+
+    public static final ResourceKey<PlacedFeature> ORE_SOIL = ResourceKey.create(Registries.PLACED_FEATURE,
+            new ResourceLocation(MOD_ID, "ore_soil"));
+
 }

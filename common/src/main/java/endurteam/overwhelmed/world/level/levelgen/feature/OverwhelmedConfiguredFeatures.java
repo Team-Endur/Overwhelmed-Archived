@@ -29,19 +29,41 @@ import static endurteam.overwhelmed.Overwhelmed.MOD_ID;
 
 public class OverwhelmedConfiguredFeatures {
 
-    public static final ResourceKey<ConfiguredFeature<?, ?>> ORE_SOIL =
-            ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(MOD_ID, "ore_soil"));
 
-    public static final ResourceKey<ConfiguredFeature<?, ?>> GENERATE_WIDOW =
-            ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(MOD_ID, "generate_widow"));
+    public static final ResourceKey<ConfiguredFeature<?, ?>> GENERATE_DUMBBELL =
+            ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(MOD_ID, "generate_dumbbell"));
 
-    public static final ResourceKey<ConfiguredFeature<?, ?>> GENERATE_PEBBLE =
-            ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(MOD_ID, "generate_pebble"));
+    public static final ResourceKey<ConfiguredFeature<?, ?>> GENERATE_FLOFF =
+            ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(MOD_ID, "generate_floff"));
+
+    public static final ResourceKey<ConfiguredFeature<?, ?>> GENERATE_GOLD_BEAD =
+            ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(MOD_ID, "generate_gold_bead"));
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> GENERATE_ICE_CUBE =
             ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(MOD_ID, "generate_ice_cube"));
 
-    public static final ResourceKey<ConfiguredFeature<?, ?>> GENERATE_GOLD_BEAD =
-            ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(MOD_ID, "generate_gold_bead"));
+    public static final ResourceKey<ConfiguredFeature<?, ?>> GENERATE_PAINE =
+            ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(MOD_ID, "generate_paine"));
+
+    public static final ResourceKey<ConfiguredFeature<?, ?>> GENERATE_PEBBLE =
+            ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(MOD_ID, "generate_pebble"));
+
+    public static final ResourceKey<ConfiguredFeature<?, ?>> GENERATE_PINK_SALLOW =
+            ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(MOD_ID, "generate_pink_sallow"));
+
+    public static final ResourceKey<ConfiguredFeature<?, ?>> GENERATE_SNOWDROP =
+            ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(MOD_ID, "generate_snowdrop"));
+
+    public static final ResourceKey<ConfiguredFeature<?, ?>> GENERATE_SQUIRL =
+            ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(MOD_ID, "generate_squirl"));
+
+    public static final ResourceKey<ConfiguredFeature<?, ?>> GENERATE_WHITE_SALLOW =
+            ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(MOD_ID, "generate_white_sallow"));
+
+    public static final ResourceKey<ConfiguredFeature<?, ?>> GENERATE_WIDOW =
+            ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(MOD_ID, "generate_widow"));
+
+    public static final ResourceKey<ConfiguredFeature<?, ?>> ORE_SOIL =
+            ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(MOD_ID, "ore_soil"));
 
 }
