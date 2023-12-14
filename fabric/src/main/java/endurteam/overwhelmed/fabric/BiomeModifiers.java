@@ -71,6 +71,18 @@ public class BiomeModifiers {
                 4, 2, 4);
     }
 
+    public static void dumbbellGeneration()
+    {
+        BiomeModifications.addFeature(bsc -> bsc.hasTag(OverwhelmedPlacedFeatures.GENERATES_DUMBBELLS),
+                Decoration.VEGETAL_DECORATION, OverwhelmedPlacedFeatures.GENERATE_DUMBBELL);
+    }
+
+    public static void floffGeneration()
+    {
+        BiomeModifications.addFeature(bsc -> bsc.hasTag(OverwhelmedPlacedFeatures.GENERATES_FLOFFS),
+                Decoration.VEGETAL_DECORATION, OverwhelmedPlacedFeatures.GENERATE_FLOFF);
+    }
+
     public static void goldBeadGeneration()
     {
         BiomeModifications.addFeature(bsc -> bsc.hasTag(OverwhelmedPlacedFeatures.GENERATES_GOLD_BEADS),
@@ -83,16 +95,46 @@ public class BiomeModifiers {
                 Decoration.VEGETAL_DECORATION, OverwhelmedPlacedFeatures.GENERATE_ICE_CUBE);
     }
 
+    public static void paineGeneration()
+    {
+        BiomeModifications.addFeature(bsc -> bsc.hasTag(OverwhelmedPlacedFeatures.GENERATES_PAINES),
+                Decoration.VEGETAL_DECORATION, OverwhelmedPlacedFeatures.GENERATE_PAINE);
+    }
+
     public static void pebbleGeneration()
     {
         BiomeModifications.addFeature(bsc -> bsc.hasTag(OverwhelmedPlacedFeatures.GENERATES_PEBBLES),
                 Decoration.VEGETAL_DECORATION, OverwhelmedPlacedFeatures.GENERATE_PEBBLE);
     }
 
+    public static void pinkSallowGeneration()
+    {
+        BiomeModifications.addFeature(bsc -> bsc.hasTag(OverwhelmedPlacedFeatures.GENERATES_PINK_SALLOWS),
+                Decoration.VEGETAL_DECORATION, OverwhelmedPlacedFeatures.GENERATE_PINK_SALLOW);
+    }
+
+    public static void snowdropGeneration()
+    {
+        BiomeModifications.addFeature(bsc -> bsc.hasTag(OverwhelmedPlacedFeatures.GENERATES_SNOWDROPS),
+                Decoration.VEGETAL_DECORATION, OverwhelmedPlacedFeatures.GENERATE_SNOWDROP);
+    }
+
     public static void soilGeneration()
     {
         BiomeModifications.addFeature(bsc -> bsc.hasTag(OverwhelmedPlacedFeatures.GENERATES_SOIL),
                 Decoration.TOP_LAYER_MODIFICATION, OverwhelmedPlacedFeatures.ORE_SOIL);
+    }
+
+    public static void squirlGeneration()
+    {
+        BiomeModifications.addFeature(bsc -> bsc.hasTag(OverwhelmedPlacedFeatures.GENERATES_SQUIRLS),
+                Decoration.VEGETAL_DECORATION, OverwhelmedPlacedFeatures.GENERATE_SQUIRL);
+    }
+
+    public static void whiteSallowGeneration()
+    {
+        BiomeModifications.addFeature(bsc -> bsc.hasTag(OverwhelmedPlacedFeatures.GENERATES_WHITE_SALLOWS),
+                Decoration.VEGETAL_DECORATION, OverwhelmedPlacedFeatures.GENERATE_WHITE_SALLOW);
     }
 
     public static void widowGeneration()

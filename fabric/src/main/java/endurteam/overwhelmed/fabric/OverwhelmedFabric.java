@@ -39,10 +39,17 @@ public class OverwhelmedFabric implements ModInitializer {
         OverwhelmedFabricItems.registerItems();
         BiomeModifiers.snailSpawning();
         BiomeModifiers.butterflySpawning();
+        BiomeModifiers.dumbbellGeneration();
+        BiomeModifiers.floffGeneration();
         BiomeModifiers.goldBeadGeneration();
         BiomeModifiers.iceCubeGeneration();
+        BiomeModifiers.paineGeneration();
         BiomeModifiers.pebbleGeneration();
+        BiomeModifiers.pinkSallowGeneration();
+        BiomeModifiers.snowdropGeneration();
         BiomeModifiers.soilGeneration();
+        BiomeModifiers.squirlGeneration();
+        BiomeModifiers.whiteSallowGeneration();
         BiomeModifiers.widowGeneration();
     }
 }
