@@ -56,17 +56,17 @@ public class ButterflyRenderer extends MobRenderer<ButterflyEntity, ButterflyMod
     public @NotNull ResourceLocation getTextureLocation(ButterflyEntity var1) {
         EntityType<?> type = var1.getType();
         if (OverwhelmedEntityTypes.CABBAGE_BUTTERFLY.equals(type)) {
-            return SLEEPY_TEXTURE;
-        } else if (OverwhelmedEntityTypes.CHERRY_BUTTERFLY.equals(type)) {
             return CABBAGE_TEXTURE;
-        } else if (OverwhelmedEntityTypes.LIVERWORT_BUTTERFLY.equals(type)) {
-            return MORPHO_TEXTURE;
-        } else if (OverwhelmedEntityTypes.MONARCH_BUTTERFLY.equals(type)) {
+        } else if (OverwhelmedEntityTypes.CHERRY_BUTTERFLY.equals(type)) {
             return CHERRY_TEXTURE;
-        } else if (OverwhelmedEntityTypes.MORPHO_BUTTERFLY.equals(type)) {
-            return MONARCH_TEXTURE;
-        } else if (OverwhelmedEntityTypes.SLEEPY_BUTTERFLY.equals(type)) {
+        } else if (OverwhelmedEntityTypes.LIVERWORT_BUTTERFLY.equals(type)) {
             return LIVERWORT_TEXTURE;
+        } else if (OverwhelmedEntityTypes.MONARCH_BUTTERFLY.equals(type)) {
+            return MONARCH_TEXTURE;
+        } else if (OverwhelmedEntityTypes.MORPHO_BUTTERFLY.equals(type)) {
+            return MORPHO_TEXTURE;
+        } else if (OverwhelmedEntityTypes.SLEEPY_BUTTERFLY.equals(type)) {
+            return SLEEPY_TEXTURE;
         }
         throw new IncompatibleClassChangeError();
     }
