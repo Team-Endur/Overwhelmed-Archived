@@ -39,7 +39,7 @@ public class OverwhelmedBlocks {
     public static FlowerBlock SQUIRL;
     public static FlowerBlock RINGOT;
     public static FlowerBlock SNOWDROP;
-    public static FlowerBlock DUMBBELL;
+    public static FlowerBlock BELL_SUNFLOWER;
     public static FlowerPotBlock POTTED_FLOFF;
     public static FlowerPotBlock POTTED_PAINE;
     public static FlowerPotBlock POTTED_PINK_SALLOW;
@@ -47,7 +47,7 @@ public class OverwhelmedBlocks {
     public static FlowerPotBlock POTTED_SQUIRL;
     public static FlowerPotBlock POTTED_RINGOT;
     public static FlowerPotBlock POTTED_SNOWDROP;
-    public static FlowerPotBlock POTTED_DUMBBELL;
+    public static FlowerPotBlock POTTED_BELL_SUNFLOWER;
     public static TallFlowerBlock WIDOW;
     public static GooBlock GOO_BLOCK;
 

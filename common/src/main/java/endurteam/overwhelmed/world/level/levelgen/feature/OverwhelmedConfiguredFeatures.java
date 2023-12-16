@@ -30,8 +30,8 @@ import static endurteam.overwhelmed.Overwhelmed.MOD_ID;
 public class OverwhelmedConfiguredFeatures {
 
 
-    public static final ResourceKey<ConfiguredFeature<?, ?>> GENERATE_DUMBBELL =
-            ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(MOD_ID, "generate_dumbbell"));
+    public static final ResourceKey<ConfiguredFeature<?, ?>> GENERATE_BELL_SUNFLOWER =
+            ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(MOD_ID, "generate_bell_sunflower"));
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> GENERATE_FLOFF =
             ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(MOD_ID, "generate_floff"));

@@ -71,10 +71,10 @@ public class BiomeModifiers {
                 4, 2, 4);
     }
 
-    public static void dumbbellGeneration()
+    public static void bellSunflowerGeneration()
     {
-        BiomeModifications.addFeature(bsc -> bsc.hasTag(OverwhelmedPlacedFeatures.GENERATES_DUMBBELLS),
-                Decoration.VEGETAL_DECORATION, OverwhelmedPlacedFeatures.GENERATE_DUMBBELL);
+        BiomeModifications.addFeature(bsc -> bsc.hasTag(OverwhelmedPlacedFeatures.GENERATES_BELL_SUNFLOWERS),
+                Decoration.VEGETAL_DECORATION, OverwhelmedPlacedFeatures.GENERATE_BELL_SUNFLOWER);
     }
 
     public static void floffGeneration()

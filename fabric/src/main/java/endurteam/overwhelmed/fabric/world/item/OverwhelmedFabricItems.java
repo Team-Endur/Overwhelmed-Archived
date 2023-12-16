@@ -53,8 +53,8 @@ public class OverwhelmedFabricItems {
         SNOWDROP = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Overwhelmed.MOD_ID, "snowdrop"),
                 new BlockItem(OverwhelmedBlocks.SNOWDROP,
                         new Item.Properties()));
-        DUMBBELL = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Overwhelmed.MOD_ID, "dumbbell"),
-                new BlockItem(OverwhelmedBlocks.DUMBBELL,
+        BELL_SUNFLOWER = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Overwhelmed.MOD_ID, "bell_sunflower"),
+                new BlockItem(OverwhelmedBlocks.BELL_SUNFLOWER,
                         new Item.Properties()));
         WIDOW = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Overwhelmed.MOD_ID, "widow"),
                 new DoubleHighBlockItem(OverwhelmedBlocks.WIDOW,

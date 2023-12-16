@@ -31,7 +31,7 @@ public class OverwhelmedFabricCreativeTabs {
                             output.accept(SQUIRL);
                             output.accept(RINGOT);
                             output.accept(SNOWDROP);
-                            output.accept(DUMBBELL);
+                            output.accept(BELL_SUNFLOWER);
                             output.accept(WIDOW);
                             output.accept(GOLD_BEAD);
                             output.accept(ICE_CUBE);

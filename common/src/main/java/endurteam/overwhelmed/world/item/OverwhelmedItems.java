@@ -37,7 +37,7 @@ public class OverwhelmedItems {
     public static BlockItem SQUIRL;
     public static BlockItem RINGOT;
     public static BlockItem SNOWDROP;
-    public static BlockItem DUMBBELL;
+    public static BlockItem BELL_SUNFLOWER;
     public static DoubleHighBlockItem WIDOW;
     public static BlockItem GOLD_BEAD;
     public static BlockItem ICE_CUBE;

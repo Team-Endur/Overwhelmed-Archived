@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "overwhelmed:dumbbell"
+          "name": "overwhelmed:bell_sunflower"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "overwhelmed:blocks/dumbbell"
+  "random_sequence": "overwhelmed:blocks/bell_sunflower"
 }

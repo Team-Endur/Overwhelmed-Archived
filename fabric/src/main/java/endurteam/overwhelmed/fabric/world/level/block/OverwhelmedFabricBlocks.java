@@ -117,7 +117,7 @@ public class OverwhelmedFabricBlocks {
                 .sound(SoundType.GRASS)
                 .offsetType(BlockBehaviour.OffsetType.XZ)
                 .pushReaction(PushReaction.DESTROY));
-        OverwhelmedBlocks.DUMBBELL = registerGenericFlowerBlock(MobEffects.FIRE_RESISTANCE, 10, "dumbbell",
+        OverwhelmedBlocks.BELL_SUNFLOWER = registerGenericFlowerBlock(MobEffects.FIRE_RESISTANCE, 10, "bell_sunflower",
                 BlockBehaviour.Properties.of()
                 .mapColor(MapColor.PLANT)
                 .noCollission()
@@ -147,7 +147,7 @@ public class OverwhelmedFabricBlocks {
                 BlockBehaviour.Properties.copy(Blocks.FLOWER_POT));
         OverwhelmedBlocks.POTTED_SNOWDROP = registerGenericFlowerPotBlock(OverwhelmedBlocks.SNOWDROP, "potted_snowdrop",
                 BlockBehaviour.Properties.copy(Blocks.FLOWER_POT));
-        OverwhelmedBlocks.POTTED_DUMBBELL = registerGenericFlowerPotBlock(OverwhelmedBlocks.DUMBBELL, "potted_dumbbell",
+        OverwhelmedBlocks.POTTED_BELL_SUNFLOWER = registerGenericFlowerPotBlock(OverwhelmedBlocks.BELL_SUNFLOWER, "potted_bell_sunflower",
                 BlockBehaviour.Properties.copy(Blocks.FLOWER_POT));
         OverwhelmedBlocks.GOO_BLOCK = Registry.register(BuiltInRegistries.BLOCK,
                 new ResourceLocation(Overwhelmed.MOD_ID, "goo_block"),
