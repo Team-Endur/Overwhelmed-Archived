@@ -80,7 +80,7 @@ public class BiomeModifiers {
     public static void floffGeneration()
     {
         BiomeModifications.addFeature(bsc -> bsc.hasTag(OverwhelmedPlacedFeatures.GENERATES_FLOFFS),
-                Decoration.VEGETAL_DECORATION, OverwhelmedPlacedFeatures.GENERATE_FLOFF);
+                Decoration.VEGETAL_DECORATION, OverwhelmedPlacedFeatures.PATCH_FLOFF);
     }
 
     public static void goldBeadGeneration()
@@ -129,6 +129,12 @@ public class BiomeModifiers {
     {
         BiomeModifications.addFeature(bsc -> bsc.hasTag(OverwhelmedPlacedFeatures.GENERATES_SQUIRLS),
                 Decoration.VEGETAL_DECORATION, OverwhelmedPlacedFeatures.GENERATE_SQUIRL);
+    }
+
+    public static void taigaFlowerGeneration()
+    {
+        BiomeModifications.addFeature(bsc -> bsc.hasTag(OverwhelmedPlacedFeatures.TAIGA_FLOWERS),
+                Decoration.VEGETAL_DECORATION, OverwhelmedPlacedFeatures.TAIGA_FLOWER);
     }
 
     public static void whiteSallowGeneration()

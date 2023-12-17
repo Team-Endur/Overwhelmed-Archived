@@ -31,6 +31,9 @@ import static endurteam.overwhelmed.Overwhelmed.MOD_ID;
 
 public class OverwhelmedPlacedFeatures {
 
+    public static final TagKey<Biome> TAIGA_FLOWERS = TagKey.create(Registries.BIOME,
+            new ResourceLocation(MOD_ID, "taiga_flowers"));
+
     public static final TagKey<Biome> GENERATES_BELL_SUNFLOWERS = TagKey.create(Registries.BIOME,
             new ResourceLocation(MOD_ID, "generates_bell_sunflowers"));
 
@@ -64,11 +67,9 @@ public class OverwhelmedPlacedFeatures {
     
     public static final TagKey<Biome> GENERATES_WIDOWS = TagKey.create(Registries.BIOME,
             new ResourceLocation(MOD_ID, "generates_widows"));
-    public static final ResourceKey<PlacedFeature> PATCH_BELL_SUNFLOWER = ResourceKey.create(Registries.PLACED_FEATURE,
-            new ResourceLocation(MOD_ID, "patch_bell_sunflower"));
 
-    public static final ResourceKey<PlacedFeature> GENERATE_FLOFF = ResourceKey.create(Registries.PLACED_FEATURE,
-            new ResourceLocation(MOD_ID, "generate_floff"));
+    public static final ResourceKey<PlacedFeature> TAIGA_FLOWER = ResourceKey.create(Registries.PLACED_FEATURE,
+            new ResourceLocation(MOD_ID, "taiga_flower"));
 
     public static final ResourceKey<PlacedFeature> GENERATE_GOLD_BEAD = ResourceKey.create(Registries.PLACED_FEATURE,
             new ResourceLocation(MOD_ID, "generate_gold_bead"));
@@ -99,5 +100,11 @@ public class OverwhelmedPlacedFeatures {
 
     public static final ResourceKey<PlacedFeature> ORE_SOIL = ResourceKey.create(Registries.PLACED_FEATURE,
             new ResourceLocation(MOD_ID, "ore_soil"));
+
+    public static final ResourceKey<PlacedFeature> PATCH_BELL_SUNFLOWER = ResourceKey.create(Registries.PLACED_FEATURE,
+            new ResourceLocation(MOD_ID, "patch_bell_sunflower"));
+
+    public static final ResourceKey<PlacedFeature> PATCH_FLOFF = ResourceKey.create(Registries.PLACED_FEATURE,
+            new ResourceLocation(MOD_ID, "patch_floff"));
 
 }
