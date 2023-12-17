@@ -53,13 +53,13 @@ public class OverwhelmedFabricClient implements ClientModInitializer {
         EntityRendererRegistry.register(OverwhelmedEntityTypes.LIVERWORT_BUTTERFLY, ButterflyRenderer::new);
         EntityRendererRegistry.register(OverwhelmedEntityTypes.PEBBLE, PebbleRenderer::new);
         EntityRendererRegistry.register(OverwhelmedEntityTypes.PAPER_BULLET, PaperBulletRenderer::new);
-        EntityRendererRegistry.register(OverwhelmedEntityTypes.FLAT_SNAIL, GardenSnailRenderer::new);
-        EntityRendererRegistry.register(OverwhelmedEntityTypes.GARDEN_SNAIL, GarySnailRenderer::new);
-        EntityRendererRegistry.register(OverwhelmedEntityTypes.GARY_SNAIL, GlassSnailRenderer::new);
-        EntityRendererRegistry.register(OverwhelmedEntityTypes.GLASS_SNAIL, LimestoneSnailRenderer::new);
-        EntityRendererRegistry.register(OverwhelmedEntityTypes.LIMESTONE_SNAIL, LiverwortSnailRenderer::new);
-        EntityRendererRegistry.register(OverwhelmedEntityTypes.LIVERWORT_SNAIL, RomanSnailRenderer::new);
-        EntityRendererRegistry.register(OverwhelmedEntityTypes.ROMAN_SNAIL, FlatSnailRenderer::new);
+        EntityRendererRegistry.register(OverwhelmedEntityTypes.FLAT_SNAIL, FlatSnailRenderer::new);
+        EntityRendererRegistry.register(OverwhelmedEntityTypes.GARDEN_SNAIL, GardenSnailRenderer::new);
+        EntityRendererRegistry.register(OverwhelmedEntityTypes.GARY_SNAIL, GarySnailRenderer::new);
+        EntityRendererRegistry.register(OverwhelmedEntityTypes.GLASS_SNAIL, GlassSnailRenderer::new);
+        EntityRendererRegistry.register(OverwhelmedEntityTypes.LIMESTONE_SNAIL, LimestoneSnailRenderer::new);
+        EntityRendererRegistry.register(OverwhelmedEntityTypes.LIVERWORT_SNAIL, LiverwortSnailRenderer::new);
+        EntityRendererRegistry.register(OverwhelmedEntityTypes.ROMAN_SNAIL, RomanSnailRenderer::new);
         OverwhelmedFabricModelLayers.registerModelLayers();
         ColorProviderRegistry.ITEM.register(snailSpawnEggItemColor = new SnailSpawnEggItemColor(),
                 OverwhelmedItems.SNAIL_SPAWN_EGG);
