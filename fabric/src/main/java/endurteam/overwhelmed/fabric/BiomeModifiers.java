@@ -74,7 +74,7 @@ public class BiomeModifiers {
     public static void bellSunflowerGeneration()
     {
         BiomeModifications.addFeature(bsc -> bsc.hasTag(OverwhelmedPlacedFeatures.GENERATES_BELL_SUNFLOWERS),
-                Decoration.VEGETAL_DECORATION, OverwhelmedPlacedFeatures.GENERATE_BELL_SUNFLOWER);
+                Decoration.VEGETAL_DECORATION, OverwhelmedPlacedFeatures.PATCH_BELL_SUNFLOWER);
     }
 
     public static void floffGeneration()

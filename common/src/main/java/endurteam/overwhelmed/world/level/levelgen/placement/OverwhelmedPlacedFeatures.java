@@ -64,8 +64,8 @@ public class OverwhelmedPlacedFeatures {
     
     public static final TagKey<Biome> GENERATES_WIDOWS = TagKey.create(Registries.BIOME,
             new ResourceLocation(MOD_ID, "generates_widows"));
-    public static final ResourceKey<PlacedFeature> GENERATE_BELL_SUNFLOWER = ResourceKey.create(Registries.PLACED_FEATURE,
-            new ResourceLocation(MOD_ID, "generate_bell_sunflower"));
+    public static final ResourceKey<PlacedFeature> PATCH_BELL_SUNFLOWER = ResourceKey.create(Registries.PLACED_FEATURE,
+            new ResourceLocation(MOD_ID, "patch_bell_sunflower"));
 
     public static final ResourceKey<PlacedFeature> GENERATE_FLOFF = ResourceKey.create(Registries.PLACED_FEATURE,
             new ResourceLocation(MOD_ID, "generate_floff"));
