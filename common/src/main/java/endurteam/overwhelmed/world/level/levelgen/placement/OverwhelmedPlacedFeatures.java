@@ -31,8 +31,8 @@ import static endurteam.overwhelmed.Overwhelmed.MOD_ID;
 
 public class OverwhelmedPlacedFeatures {
 
-    public static final TagKey<Biome> TAIGA_FLOWERS = TagKey.create(Registries.BIOME,
-            new ResourceLocation(MOD_ID, "taiga_flowers"));
+    public static final TagKey<Biome> FLOWERS_TAIGA = TagKey.create(Registries.BIOME,
+            new ResourceLocation(MOD_ID, "flowers_taiga"));
 
     public static final TagKey<Biome> GENERATES_BELL_SUNFLOWERS = TagKey.create(Registries.BIOME,
             new ResourceLocation(MOD_ID, "generates_bell_sunflowers"));
@@ -68,8 +68,8 @@ public class OverwhelmedPlacedFeatures {
     public static final TagKey<Biome> GENERATES_WIDOWS = TagKey.create(Registries.BIOME,
             new ResourceLocation(MOD_ID, "generates_widows"));
 
-    public static final ResourceKey<PlacedFeature> TAIGA_FLOWER = ResourceKey.create(Registries.PLACED_FEATURE,
-            new ResourceLocation(MOD_ID, "taiga_flower"));
+    public static final ResourceKey<PlacedFeature> FLOWER_TAIGA = ResourceKey.create(Registries.PLACED_FEATURE,
+            new ResourceLocation(MOD_ID, "flower_taiga"));
 
     public static final ResourceKey<PlacedFeature> GENERATE_GOLD_BEAD = ResourceKey.create(Registries.PLACED_FEATURE,
             new ResourceLocation(MOD_ID, "generate_gold_bead"));

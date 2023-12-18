@@ -133,8 +133,8 @@ public class BiomeModifiers {
 
     public static void taigaFlowerGeneration()
     {
-        BiomeModifications.addFeature(bsc -> bsc.hasTag(OverwhelmedPlacedFeatures.TAIGA_FLOWERS),
-                Decoration.VEGETAL_DECORATION, OverwhelmedPlacedFeatures.TAIGA_FLOWER);
+        BiomeModifications.addFeature(bsc -> bsc.hasTag(OverwhelmedPlacedFeatures.FLOWERS_TAIGA),
+                Decoration.VEGETAL_DECORATION, OverwhelmedPlacedFeatures.FLOWER_TAIGA);
     }
 
     public static void whiteSallowGeneration()
