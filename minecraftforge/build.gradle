@@ -16,7 +16,6 @@ configurations {
 }
 
 repositories {
-    maven { url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' }
     maven { url 'https://maven.terraformersmc.com/releases/'}
     maven { url "https://maven.ryanliptak.com/" }
     maven { url "https://maven.shedaniel.me/" }
@@ -28,11 +27,6 @@ dependencies {
 
     common(project(path: ":common", configuration: "namedElements")) { transitive false }
     shadowCommon(project(path: ":common", configuration: "transformProductionForge")) { transitive = false }
-
-    modRuntimeOnly("squeek.appleskin:appleskin-forge:${rootProject.appleskin_version}") {
-        exclude module: 'modmenu'
-    }
-    modRuntimeOnly("me.shedaniel.cloth:cloth-config-forge:${rootProject.cloth_config_version}")
 }
 
 processResources {

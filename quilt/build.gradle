@@ -5,7 +5,6 @@ plugins {
 repositories {
     maven { url "https://maven.quiltmc.org/repository/release/" }
     maven { url "https://maven.quiltmc.org/repository/snapshot/" }
-    maven { url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' }
     maven { url 'https://maven.terraformersmc.com/releases/'}
     maven { url "https://maven.ryanliptak.com/" }
     maven { url "https://maven.shedaniel.me/" }
@@ -31,7 +30,7 @@ configurations {
 dependencies {
     modImplementation "org.quiltmc:quilt-loader:${rootProject.quilt_loader_version}"
     modImplementation "org.quiltmc:quilt-config:${rootProject.quilt_config_version}"
-    modApi "org.quiltmc:qsl:${rootProject.quilt_standard_library_version}"
+    // modApi "org.quiltmc:qsl:${rootProject.quilt_standard_library_version}"
 
     common(project(path: ":common", configuration: "namedElements")) { transitive false }
     shadowCommon(project(path: ":common", configuration: "transformProductionQuilt")) { transitive false }
@@ -40,7 +39,7 @@ dependencies {
         exclude group: "net.fabricmc"
         exclude group: "net.fabricmc.fabric-api"
     }
-    modRuntimeOnly("squeek.appleskin:appleskin-fabric:${rootProject.appleskin_version}") {
+    modRuntimeOnly("squeek.appleskin:appleskin-fabric:${rootProject.appleskin_version_fabric}") {
         exclude group: "net.fabricmc"
         exclude group: "net.fabricmc.fabric-api"
         exclude module: "modmenu"
