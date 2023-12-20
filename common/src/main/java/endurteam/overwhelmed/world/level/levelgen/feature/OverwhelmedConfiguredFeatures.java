@@ -29,6 +29,9 @@ import static endurteam.overwhelmed.Overwhelmed.MOD_ID;
 
 public class OverwhelmedConfiguredFeatures {
 
+    public static final ResourceKey<ConfiguredFeature<?, ?>> FLOWER_TAIGA =
+            ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(MOD_ID, "flower_taiga"));
+
     public static final ResourceKey<ConfiguredFeature<?, ?>> GENERATE_GOLD_BEAD =
             ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(MOD_ID, "generate_gold_bead"));
 

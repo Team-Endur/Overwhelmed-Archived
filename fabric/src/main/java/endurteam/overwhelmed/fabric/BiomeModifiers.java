@@ -77,6 +77,12 @@ public class BiomeModifiers {
                 Decoration.VEGETAL_DECORATION, OverwhelmedPlacedFeatures.PATCH_BELL_SUNFLOWER);
     }
 
+    public static void flowerTaigaGeneration()
+    {
+        BiomeModifications.addFeature(bsc -> bsc.hasTag(OverwhelmedPlacedFeatures.FLOWERS_TAIGA),
+                Decoration.VEGETAL_DECORATION, OverwhelmedPlacedFeatures.FLOWER_TAIGA);
+    }
+
     public static void goldBeadGeneration()
     {
         BiomeModifications.addFeature(bsc -> bsc.hasTag(OverwhelmedPlacedFeatures.GENERATES_GOLD_BEADS),
