@@ -31,11 +31,11 @@ public class OverwhelmedFabricBlocks {
                 .requiresCorrectToolForDrops());
         OverwhelmedBlocks.SNAIL_SHELL_BRICK_STAIRS = registerGenericStairBlock
                 (OverwhelmedBlocks.SNAIL_SHELL_BRICKS.defaultBlockState(),
-                "snail_shell_brick_stairs", BlockBehaviour.Properties.copy(OverwhelmedBlocks.SNAIL_SHELL_BRICKS));
+                "snail_shell_brick_stairs", BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.SNAIL_SHELL_BRICKS));
         OverwhelmedBlocks.SNAIL_SHELL_BRICK_SLAB = registerGenericSlabBlock("snail_shell_brick_slab",
-                BlockBehaviour.Properties.copy(OverwhelmedBlocks.SNAIL_SHELL_BRICKS));
+                BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.SNAIL_SHELL_BRICKS));
         OverwhelmedBlocks.SNAIL_SHELL_BRICK_WALL = registerGenericWallBlock("snail_shell_brick_wall",
-                BlockBehaviour.Properties.copy(OverwhelmedBlocks.SNAIL_SHELL_BRICKS));
+                BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.SNAIL_SHELL_BRICKS));
         OverwhelmedBlocks.CHISELED_SNAIL_SHELL_BRICKS = registerGenericBlock("chiseled_snail_shell_bricks",
                 BlockBehaviour.Properties.of()
                         .mapColor(MapColor.COLOR_BROWN)
@@ -134,21 +134,21 @@ public class OverwhelmedFabricBlocks {
                 .ignitedByLava()
                 .pushReaction(PushReaction.DESTROY));
         OverwhelmedBlocks.POTTED_FLOFF = registerGenericFlowerPotBlock(OverwhelmedBlocks.FLOFF, "potted_floff",
-                BlockBehaviour.Properties.copy(Blocks.FLOWER_POT));
+                BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT));
         OverwhelmedBlocks.POTTED_PAINE = registerGenericFlowerPotBlock(OverwhelmedBlocks.PAINE, "potted_paine",
-                BlockBehaviour.Properties.copy(Blocks.FLOWER_POT));
+                BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT));
         OverwhelmedBlocks.POTTED_PINK_SALLOW = registerGenericFlowerPotBlock(OverwhelmedBlocks.PINK_SALLOW, "potted_pink_sallow",
-                BlockBehaviour.Properties.copy(Blocks.FLOWER_POT));
+                BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT));
         OverwhelmedBlocks.POTTED_WHITE_SALLOW = registerGenericFlowerPotBlock(OverwhelmedBlocks.WHITE_SALLOW, "potted_white_sallow",
-                BlockBehaviour.Properties.copy(Blocks.FLOWER_POT));
+                BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT));
         OverwhelmedBlocks.POTTED_SQUIRL = registerGenericFlowerPotBlock(OverwhelmedBlocks.SQUIRL, "potted_squirl",
-                BlockBehaviour.Properties.copy(Blocks.FLOWER_POT));
+                BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT));
         OverwhelmedBlocks.POTTED_RINGOT = registerGenericFlowerPotBlock(OverwhelmedBlocks.RINGOT, "potted_ringot",
-                BlockBehaviour.Properties.copy(Blocks.FLOWER_POT));
+                BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT));
         OverwhelmedBlocks.POTTED_SNOWDROP = registerGenericFlowerPotBlock(OverwhelmedBlocks.SNOWDROP, "potted_snowdrop",
-                BlockBehaviour.Properties.copy(Blocks.FLOWER_POT));
+                BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT));
         OverwhelmedBlocks.POTTED_BELL_SUNFLOWER = registerGenericFlowerPotBlock(OverwhelmedBlocks.BELL_SUNFLOWER, "potted_bell_sunflower",
-                BlockBehaviour.Properties.copy(Blocks.FLOWER_POT));
+                BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT));
         OverwhelmedBlocks.GOO_BLOCK = Registry.register(BuiltInRegistries.BLOCK,
                 new ResourceLocation(Overwhelmed.MOD_ID, "goo_block"),
                 new GooBlock(BlockBehaviour.Properties.of()

@@ -20,6 +20,7 @@
 
 package endurteam.overwhelmed.world.level.block;
 
+import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.context.BlockPlaceContext;
@@ -35,10 +36,16 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.NotNull;
 
 public class ClotBlock extends FallingBlock {
+    public static final MapCodec<PebbleBlock> CODEC = simpleCodec(PebbleBlock::new);
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
 
     public ClotBlock (Properties properties) {
         super(properties);
+    }
+
+    @Override
+    protected MapCodec<? extends FallingBlock> codec() {
+        return CODEC;
     }
 
     @Override
