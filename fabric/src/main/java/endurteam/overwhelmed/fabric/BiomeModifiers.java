@@ -77,12 +77,6 @@ public class BiomeModifiers {
                 Decoration.VEGETAL_DECORATION, OverwhelmedPlacedFeatures.PATCH_BELL_SUNFLOWER);
     }
 
-    public static void floffGeneration()
-    {
-        BiomeModifications.addFeature(bsc -> bsc.hasTag(OverwhelmedPlacedFeatures.GENERATES_FLOFFS),
-                Decoration.VEGETAL_DECORATION, OverwhelmedPlacedFeatures.PATCH_FLOFF);
-    }
-
     public static void goldBeadGeneration()
     {
         BiomeModifications.addFeature(bsc -> bsc.hasTag(OverwhelmedPlacedFeatures.GENERATES_GOLD_BEADS),
@@ -107,12 +101,6 @@ public class BiomeModifiers {
                 Decoration.VEGETAL_DECORATION, OverwhelmedPlacedFeatures.GENERATE_PEBBLE);
     }
 
-    public static void pinkSallowGeneration()
-    {
-        BiomeModifications.addFeature(bsc -> bsc.hasTag(OverwhelmedPlacedFeatures.GENERATES_PINK_SALLOWS),
-                Decoration.VEGETAL_DECORATION, OverwhelmedPlacedFeatures.GENERATE_PINK_SALLOW);
-    }
-
     public static void snowdropGeneration()
     {
         BiomeModifications.addFeature(bsc -> bsc.hasTag(OverwhelmedPlacedFeatures.GENERATES_SNOWDROPS),
@@ -123,24 +111,6 @@ public class BiomeModifiers {
     {
         BiomeModifications.addFeature(bsc -> bsc.hasTag(OverwhelmedPlacedFeatures.GENERATES_SOIL),
                 Decoration.TOP_LAYER_MODIFICATION, OverwhelmedPlacedFeatures.ORE_SOIL);
-    }
-
-    public static void squirlGeneration()
-    {
-        BiomeModifications.addFeature(bsc -> bsc.hasTag(OverwhelmedPlacedFeatures.GENERATES_SQUIRLS),
-                Decoration.VEGETAL_DECORATION, OverwhelmedPlacedFeatures.GENERATE_SQUIRL);
-    }
-
-    public static void taigaFlowerGeneration()
-    {
-        BiomeModifications.addFeature(bsc -> bsc.hasTag(OverwhelmedPlacedFeatures.FLOWERS_TAIGA),
-                Decoration.VEGETAL_DECORATION, OverwhelmedPlacedFeatures.FLOWER_TAIGA);
-    }
-
-    public static void whiteSallowGeneration()
-    {
-        BiomeModifications.addFeature(bsc -> bsc.hasTag(OverwhelmedPlacedFeatures.GENERATES_WHITE_SALLOWS),
-                Decoration.VEGETAL_DECORATION, OverwhelmedPlacedFeatures.GENERATE_WHITE_SALLOW);
     }
 
     public static void widowGeneration()
