@@ -77,6 +77,18 @@ public class BiomeModifiers {
                 Decoration.VEGETAL_DECORATION, OverwhelmedPlacedFeatures.PATCH_BELL_SUNFLOWER);
     }
 
+    public static void flowerOldGrowthPineTaigaGeneration()
+    {
+        BiomeModifications.addFeature(bsc -> bsc.hasTag(OverwhelmedPlacedFeatures.FLOWERS_OLD_GROWTH_PINE_TAIGA),
+                Decoration.VEGETAL_DECORATION, OverwhelmedPlacedFeatures.FLOWER_OLD_GROWTH_PINE_TAIGA);
+    }
+
+    public static void flowerOldGrowthSpruceTaigaGeneration()
+    {
+        BiomeModifications.addFeature(bsc -> bsc.hasTag(OverwhelmedPlacedFeatures.FLOWERS_OLD_GROWTH_SPRUCE_TAIGA),
+                Decoration.VEGETAL_DECORATION, OverwhelmedPlacedFeatures.FLOWER_OLD_GROWTH_SPRUCE_TAIGA);
+    }
+
     public static void flowerTaigaGeneration()
     {
         BiomeModifications.addFeature(bsc -> bsc.hasTag(OverwhelmedPlacedFeatures.FLOWERS_TAIGA),

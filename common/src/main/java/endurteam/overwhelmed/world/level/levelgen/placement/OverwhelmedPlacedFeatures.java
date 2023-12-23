@@ -31,6 +31,12 @@ import static endurteam.overwhelmed.Overwhelmed.MOD_ID;
 
 public class OverwhelmedPlacedFeatures {
 
+    public static final TagKey<Biome> FLOWERS_OLD_GROWTH_PINE_TAIGA = TagKey.create(Registries.BIOME,
+            new ResourceLocation(MOD_ID, "flowers_old_growth_pine_taiga"));
+
+    public static final TagKey<Biome> FLOWERS_OLD_GROWTH_SPRUCE_TAIGA = TagKey.create(Registries.BIOME,
+            new ResourceLocation(MOD_ID, "flowers_old_growth_spruce_taiga"));
+
     public static final TagKey<Biome> FLOWERS_TAIGA = TagKey.create(Registries.BIOME,
             new ResourceLocation(MOD_ID, "flowers_taiga"));
 
@@ -56,6 +62,12 @@ public class OverwhelmedPlacedFeatures {
     
     public static final TagKey<Biome> GENERATES_WIDOWS = TagKey.create(Registries.BIOME,
             new ResourceLocation(MOD_ID, "generates_widows"));
+
+    public static final ResourceKey<PlacedFeature> FLOWER_OLD_GROWTH_PINE_TAIGA = ResourceKey.create(Registries.PLACED_FEATURE,
+            new ResourceLocation(MOD_ID, "flower_old_growth_pine_taiga"));
+
+    public static final ResourceKey<PlacedFeature> FLOWER_OLD_GROWTH_SPRUCE_TAIGA = ResourceKey.create(Registries.PLACED_FEATURE,
+            new ResourceLocation(MOD_ID, "flower_old_growth_spruce_taiga"));
 
     public static final ResourceKey<PlacedFeature> FLOWER_TAIGA = ResourceKey.create(Registries.PLACED_FEATURE,
             new ResourceLocation(MOD_ID, "flower_taiga"));

@@ -27,6 +27,7 @@ import endurteam.overwhelmed.fabric.world.item.OverwhelmedFabricCreativeTabs;
 import endurteam.overwhelmed.fabric.world.item.OverwhelmedFabricItems;
 import endurteam.overwhelmed.fabric.world.level.block.OverwhelmedFabricBlocks;
 import net.fabricmc.api.ModInitializer;
+import net.minecraft.world.level.biome.Biome;
 
 public class OverwhelmedFabric implements ModInitializer {
     @Override
@@ -40,6 +41,8 @@ public class OverwhelmedFabric implements ModInitializer {
         BiomeModifiers.snailSpawning();
         BiomeModifiers.butterflySpawning();
         BiomeModifiers.bellSunflowerGeneration();
+        BiomeModifiers.flowerOldGrowthPineTaigaGeneration();
+        BiomeModifiers.flowerOldGrowthSpruceTaigaGeneration();
         BiomeModifiers.flowerTaigaGeneration();
         BiomeModifiers.goldBeadGeneration();
         BiomeModifiers.iceCubeGeneration();
