@@ -87,9 +87,6 @@ public class OverwhelmedPlacedFeatures {
     public static final ResourceKey<PlacedFeature> GENERATE_PEBBLE = ResourceKey.create(Registries.PLACED_FEATURE,
             new ResourceLocation(MOD_ID, "generate_pebble"));
 
-    public static final ResourceKey<PlacedFeature> GENERATE_SNOWDROP = ResourceKey.create(Registries.PLACED_FEATURE,
-            new ResourceLocation(MOD_ID, "generate_snowdrop"));
-
     public static final ResourceKey<PlacedFeature> GENERATE_WIDOW = ResourceKey.create(Registries.PLACED_FEATURE,
             new ResourceLocation(MOD_ID, "generate_widow"));
 
@@ -101,5 +98,8 @@ public class OverwhelmedPlacedFeatures {
 
     public static final ResourceKey<PlacedFeature> PATCH_LAVATERA = ResourceKey.create(Registries.PLACED_FEATURE,
             new ResourceLocation(MOD_ID, "patch_lavatera"));
+
+    public static final ResourceKey<PlacedFeature> PATCH_SNOWDROP = ResourceKey.create(Registries.PLACED_FEATURE,
+            new ResourceLocation(MOD_ID, "patch_snowdrop"));
 
 }

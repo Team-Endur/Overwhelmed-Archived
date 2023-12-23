@@ -50,8 +50,8 @@ public class OverwhelmedConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> GENERATE_PEBBLE =
             ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(MOD_ID, "generate_pebble"));
 
-    public static final ResourceKey<ConfiguredFeature<?, ?>> GENERATE_SNOWDROP =
-            ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(MOD_ID, "generate_snowdrop"));
+    public static final ResourceKey<ConfiguredFeature<?, ?>> PATCH_SNOWDROP =
+            ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(MOD_ID, "patch_snowdrop"));
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> GENERATE_SQUIRL =
             ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(MOD_ID, "generate_squirl"));

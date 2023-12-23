@@ -128,7 +128,7 @@ public class BiomeModifiers {
     public static void snowdropGeneration()
     {
         BiomeModifications.addFeature(bsc -> bsc.hasTag(OverwhelmedPlacedFeatures.GENERATES_SNOWDROPS),
-                Decoration.VEGETAL_DECORATION, OverwhelmedPlacedFeatures.GENERATE_SNOWDROP);
+                Decoration.VEGETAL_DECORATION, OverwhelmedPlacedFeatures.PATCH_SNOWDROP);
     }
 
     public static void soilGeneration()
