@@ -100,6 +100,6 @@ public class OverwhelmedPlacedFeatures {
             new ResourceLocation(MOD_ID, "patch_bell_sunflower"));
 
     public static final ResourceKey<PlacedFeature> PATCH_LAVATERA = ResourceKey.create(Registries.PLACED_FEATURE,
-            new ResourceLocation(MOD_ID, "patch_LAVATERA"));
+            new ResourceLocation(MOD_ID, "patch_lavatera"));
 
 }

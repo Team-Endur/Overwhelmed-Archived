@@ -149,7 +149,8 @@ public class OverwhelmedFabricBlocks {
                 BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT));
         OverwhelmedBlocks.POTTED_SNOWDROP = registerGenericFlowerPotBlock(OverwhelmedBlocks.SNOWDROP, "potted_snowdrop",
                 BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT));
-        OverwhelmedBlocks.POTTED_BELL_SUNFLOWER = registerGenericFlowerPotBlock(OverwhelmedBlocks.BELL_SUNFLOWER, "potted_bell_sunflower",
+        OverwhelmedBlocks.POTTED_BELL_SUNFLOWER = registerGenericFlowerPotBlock(OverwhelmedBlocks.BELL_SUNFLOWER,
+                "potted_bell_sunflower",
                 BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT));
         OverwhelmedBlocks.GOO_BLOCK = Registry.register(BuiltInRegistries.BLOCK,
                 new ResourceLocation(Overwhelmed.MOD_ID, "goo_block"),
