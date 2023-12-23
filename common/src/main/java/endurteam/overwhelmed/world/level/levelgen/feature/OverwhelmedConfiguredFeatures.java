@@ -50,17 +50,11 @@ public class OverwhelmedConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> GENERATE_PEBBLE =
             ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(MOD_ID, "generate_pebble"));
 
-    public static final ResourceKey<ConfiguredFeature<?, ?>> GENERATE_PINK_SALLOW =
-            ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(MOD_ID, "generate_pink_sallow"));
-
     public static final ResourceKey<ConfiguredFeature<?, ?>> GENERATE_SNOWDROP =
             ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(MOD_ID, "generate_snowdrop"));
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> GENERATE_SQUIRL =
             ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(MOD_ID, "generate_squirl"));
-
-    public static final ResourceKey<ConfiguredFeature<?, ?>> GENERATE_WHITE_SALLOW =
-            ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(MOD_ID, "generate_white_sallow"));
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> GENERATE_WIDOW =
             ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(MOD_ID, "generate_widow"));
@@ -70,5 +64,8 @@ public class OverwhelmedConfiguredFeatures {
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> PATCH_BELL_SUNFLOWER =
             ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(MOD_ID, "patch_bell_sunflower"));
+
+    public static final ResourceKey<ConfiguredFeature<?, ?>> PATCH_LAVATERA =
+            ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(MOD_ID, "patch_lavatera"));
 
 }

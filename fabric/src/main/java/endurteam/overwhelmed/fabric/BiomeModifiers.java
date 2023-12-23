@@ -107,6 +107,12 @@ public class BiomeModifiers {
                 Decoration.VEGETAL_DECORATION, OverwhelmedPlacedFeatures.GENERATE_ICE_CUBE);
     }
 
+    public static void lavateraGeneration()
+    {
+        BiomeModifications.addFeature(bsc -> bsc.hasTag(OverwhelmedPlacedFeatures.GENERATES_LAVATERAS),
+                Decoration.VEGETAL_DECORATION, OverwhelmedPlacedFeatures.PATCH_LAVATERA);
+    }
+
     public static void paineGeneration()
     {
         BiomeModifications.addFeature(bsc -> bsc.hasTag(OverwhelmedPlacedFeatures.GENERATES_PAINES),

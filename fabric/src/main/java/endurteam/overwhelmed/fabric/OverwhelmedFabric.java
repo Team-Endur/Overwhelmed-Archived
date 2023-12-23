@@ -46,6 +46,7 @@ public class OverwhelmedFabric implements ModInitializer {
         BiomeModifiers.flowerTaigaGeneration();
         BiomeModifiers.goldBeadGeneration();
         BiomeModifiers.iceCubeGeneration();
+        BiomeModifiers.lavateraGeneration();
         BiomeModifiers.paineGeneration();
         BiomeModifiers.pebbleGeneration();
         BiomeModifiers.snowdropGeneration();

@@ -77,7 +77,7 @@ public class OverwhelmedFabricBlocks {
                 .sound(SoundType.GRASS)
                 .offsetType(BlockBehaviour.OffsetType.XZ)
                 .pushReaction(PushReaction.DESTROY));
-        OverwhelmedBlocks.PINK_SALLOW = registerGenericFlowerBlock(MobEffects.POISON, 6, "pink_sallow",
+        OverwhelmedBlocks.PINK_LAVATERA = registerGenericFlowerBlock(MobEffects.POISON, 6, "pink_lavatera",
                 BlockBehaviour.Properties.of()
                 .mapColor(MapColor.PLANT)
                 .noCollission()
@@ -85,7 +85,7 @@ public class OverwhelmedFabricBlocks {
                 .sound(SoundType.GRASS)
                 .offsetType(BlockBehaviour.OffsetType.XZ)
                 .pushReaction(PushReaction.DESTROY));
-        OverwhelmedBlocks.WHITE_SALLOW = registerGenericFlowerBlock(MobEffects.WEAKNESS, 5, "white_sallow",
+        OverwhelmedBlocks.WHITE_LAVATERA = registerGenericFlowerBlock(MobEffects.WEAKNESS, 5, "white_lavatera",
                 BlockBehaviour.Properties.of()
                         .mapColor(MapColor.PLANT)
                         .noCollission()
@@ -137,9 +137,11 @@ public class OverwhelmedFabricBlocks {
                 BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT));
         OverwhelmedBlocks.POTTED_PAINE = registerGenericFlowerPotBlock(OverwhelmedBlocks.PAINE, "potted_paine",
                 BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT));
-        OverwhelmedBlocks.POTTED_PINK_SALLOW = registerGenericFlowerPotBlock(OverwhelmedBlocks.PINK_SALLOW, "potted_pink_sallow",
+        OverwhelmedBlocks.POTTED_PINK_LAVATERA = registerGenericFlowerPotBlock(OverwhelmedBlocks.PINK_LAVATERA,
+                "potted_pink_lavatera",
                 BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT));
-        OverwhelmedBlocks.POTTED_WHITE_SALLOW = registerGenericFlowerPotBlock(OverwhelmedBlocks.WHITE_SALLOW, "potted_white_sallow",
+        OverwhelmedBlocks.POTTED_WHITE_LAVATERA = registerGenericFlowerPotBlock(OverwhelmedBlocks.WHITE_LAVATERA,
+                "potted_white_lavatera",
                 BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT));
         OverwhelmedBlocks.POTTED_SQUIRL = registerGenericFlowerPotBlock(OverwhelmedBlocks.SQUIRL, "potted_squirl",
                 BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT));

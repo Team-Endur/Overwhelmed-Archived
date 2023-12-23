@@ -48,6 +48,9 @@ public class OverwhelmedPlacedFeatures {
     public static final TagKey<Biome> GENERATES_ICE_CUBES = TagKey.create(Registries.BIOME,
             new ResourceLocation(MOD_ID, "generates_ice_cubes"));
 
+    public static final TagKey<Biome> GENERATES_LAVATERAS = TagKey.create(Registries.BIOME,
+            new ResourceLocation(MOD_ID, "generates_lavateras"));
+
     public static final TagKey<Biome> GENERATES_PAINES = TagKey.create(Registries.BIOME,
             new ResourceLocation(MOD_ID, "generates_paines"));
 
@@ -95,5 +98,8 @@ public class OverwhelmedPlacedFeatures {
 
     public static final ResourceKey<PlacedFeature> PATCH_BELL_SUNFLOWER = ResourceKey.create(Registries.PLACED_FEATURE,
             new ResourceLocation(MOD_ID, "patch_bell_sunflower"));
+
+    public static final ResourceKey<PlacedFeature> PATCH_LAVATERA = ResourceKey.create(Registries.PLACED_FEATURE,
+            new ResourceLocation(MOD_ID, "patch_LAVATERA"));
 
 }

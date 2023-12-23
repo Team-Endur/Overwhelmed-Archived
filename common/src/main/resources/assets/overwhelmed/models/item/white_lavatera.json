@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "overwhelmed:block/pink_sallow"
+    "layer0": "overwhelmed:block/white_lavatera"
   }
 }
