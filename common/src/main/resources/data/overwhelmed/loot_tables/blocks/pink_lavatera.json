@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "overwhelmed:white_sallow"
+          "name": "overwhelmed:pink_lavatera"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "overwhelmed:blocks/white_sallow"
+  "random_sequence": "overwhelmed:blocks/pink_lavatera"
 }
