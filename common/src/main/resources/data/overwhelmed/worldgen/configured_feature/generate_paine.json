@@ -18,7 +18,7 @@
                     "type": "minecraft:block_predicate_filter",
                     "predicate": {
                         "type": "minecraft:matching_block_tag",
-                        "blocks": "overwhelmed:paine_replaceable"
+                        "tag": "overwhelmed:paine_replaceable"
                     }
                 }
             ]
