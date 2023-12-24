@@ -1,10 +1,7 @@
 package endurteam.overwhelmed.fabric.world.level.block;
 
 import endurteam.overwhelmed.Overwhelmed;
-import endurteam.overwhelmed.world.level.block.ClotBlock;
-import endurteam.overwhelmed.world.level.block.GooBlock;
-import endurteam.overwhelmed.world.level.block.OverwhelmedBlocks;
-import endurteam.overwhelmed.world.level.block.PebbleBlock;
+import endurteam.overwhelmed.world.level.block.*;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
@@ -69,14 +66,15 @@ public class OverwhelmedFabricBlocks {
                 .sound(SoundType.GRASS)
                 .offsetType(BlockBehaviour.OffsetType.XZ)
                 .pushReaction(PushReaction.DESTROY));
-        OverwhelmedBlocks.PAINE = registerGenericFlowerBlock(MobEffects.MOVEMENT_SLOWDOWN, 8, "paine",
-                BlockBehaviour.Properties.of()
-                .mapColor(MapColor.PLANT)
-                .noCollission()
-                .instabreak()
-                .sound(SoundType.GRASS)
-                .offsetType(BlockBehaviour.OffsetType.XZ)
-                .pushReaction(PushReaction.DESTROY));
+        OverwhelmedBlocks.PAINE = Registry.register(BuiltInRegistries.BLOCK,
+                new ResourceLocation(Overwhelmed.MOD_ID, "PAINE"),
+                new PaineBlock(MobEffects.POISON, 8, BlockBehaviour.Properties.of()
+                        .mapColor(MapColor.PLANT)
+                        .noCollission()
+                        .instabreak()
+                        .sound(SoundType.GRASS)
+                        .offsetType(BlockBehaviour.OffsetType.XZ)
+                        .pushReaction(PushReaction.DESTROY)));
         OverwhelmedBlocks.PINK_LAVATERA = registerGenericFlowerBlock(MobEffects.POISON, 6, "pink_lavatera",
                 BlockBehaviour.Properties.of()
                 .mapColor(MapColor.PLANT)
@@ -219,4 +217,5 @@ public class OverwhelmedFabricBlocks {
         return Registry.register(BuiltInRegistries.BLOCK, new ResourceLocation(Overwhelmed.MOD_ID, name),
                 new ClotBlock(properties));
     }
+
 }
