@@ -66,15 +66,14 @@ public class OverwhelmedFabricBlocks {
                 .sound(SoundType.GRASS)
                 .offsetType(BlockBehaviour.OffsetType.XZ)
                 .pushReaction(PushReaction.DESTROY));
-        OverwhelmedBlocks.PAINE = Registry.register(BuiltInRegistries.BLOCK,
-                new ResourceLocation(Overwhelmed.MOD_ID, "PAINE"),
-                new PaineBlock(MobEffects.POISON, 8, BlockBehaviour.Properties.of()
+        OverwhelmedBlocks.PAINE = registerGenericFlowerBlock(MobEffects.POISON, 8, "paine",
+                BlockBehaviour.Properties.of()
                         .mapColor(MapColor.PLANT)
                         .noCollission()
                         .instabreak()
                         .sound(SoundType.GRASS)
                         .offsetType(BlockBehaviour.OffsetType.XZ)
-                        .pushReaction(PushReaction.DESTROY)));
+                        .pushReaction(PushReaction.DESTROY));
         OverwhelmedBlocks.PINK_LAVATERA = registerGenericFlowerBlock(MobEffects.POISON, 6, "pink_lavatera",
                 BlockBehaviour.Properties.of()
                 .mapColor(MapColor.PLANT)

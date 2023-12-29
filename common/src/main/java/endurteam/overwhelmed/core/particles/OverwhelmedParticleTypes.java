@@ -26,7 +26,4 @@ import net.minecraft.core.particles.SimpleParticleType;
 public class OverwhelmedParticleTypes {
     public static ParticleType<SimpleParticleType> LIVERWORT_SPORE;
 
-    public static ParticleType<SimpleParticleType> PAINE_MAGIC;
-
-
 }
