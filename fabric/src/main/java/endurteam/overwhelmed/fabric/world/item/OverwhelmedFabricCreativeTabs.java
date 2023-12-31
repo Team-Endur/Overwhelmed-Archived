@@ -44,6 +44,8 @@ public class OverwhelmedFabricCreativeTabs {
                             output.accept(RAW_SNAIL);
                             output.accept(COOKED_SNAIL);
                             output.accept(SNAIL_STEW);
+                            output.accept(VANILLA_COOKIE);
+                            output.accept(VANILLA_ICE_CREAM);
                             output.accept(GOO_BALL);
                             output.accept(SNAIL_SHELL);
                             output.accept(BUTTERFLY_SPAWN_EGG);
@@ -79,6 +81,8 @@ public class OverwhelmedFabricCreativeTabs {
             output.addAfter(Items.RABBIT_STEW, SNAIL_STEW);
             output.addAfter(Items.PUFFERFISH, RAW_SNAIL);
             output.addAfter(RAW_SNAIL, COOKED_SNAIL);
+            output.addAfter(Items.PUMPKIN_PIE, VANILLA_COOKIE);
+            output.addAfter(VANILLA_COOKIE, VANILLA_ICE_CREAM);
         });
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.INGREDIENTS).register(output -> {
             output.addAfter(Items.NETHERITE_INGOT, GOLD_BEAD);
