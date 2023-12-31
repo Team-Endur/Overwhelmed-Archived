@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "overwhelmed:item/raw_snail"
+    "layer0": "overwhelmed:item/snail"
   }
 }
