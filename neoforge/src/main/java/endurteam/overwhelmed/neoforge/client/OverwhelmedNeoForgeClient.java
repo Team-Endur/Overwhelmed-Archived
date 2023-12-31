@@ -22,6 +22,7 @@ package endurteam.overwhelmed.forge.client;
 
 import endurteam.overwhelmed.client.OverwhelmedClient;
 import endurteam.overwhelmed.client.particle.FurParticle;
+import endurteam.overwhelmed.client.particle.LiverwortSporeParticle;
 import endurteam.overwhelmed.core.particles.OverwhelmedParticleTypes;
 import net.minecraft.core.particles.ParticleType;
 import net.minecraft.core.particles.SimpleParticleType;
@@ -40,7 +41,7 @@ public class OverwhelmedForgeClient {
 
     @SubscribeEvent
     public static void registerParticleEvent(RegisterParticleProvidersEvent event) {
-        event.registerSpriteSet((ParticleType<SimpleParticleType>) OverwhelmedParticleTypes.fur.get(),
-                FurParticle.Provider::new);
+        event.registerSpriteSet((ParticleType<SimpleParticleType>) OverwhelmedParticleTypes.LIVERWORT_SPORE.get(),
+                LiverwortSporeParticle.Provider::new);
     }
 }

@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#overwhelmed:generates_bell_sunflowers",
+  "features": "overwhelmed:patch_bell_sunflower",
+  "step": "vegetal_decoration"
+}

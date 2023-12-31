@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#overwhelmed:generates_snowdrops",
+  "features": "overwhelmed:patch_snowdrop",
+  "step": "vegetal_decoration"
+}

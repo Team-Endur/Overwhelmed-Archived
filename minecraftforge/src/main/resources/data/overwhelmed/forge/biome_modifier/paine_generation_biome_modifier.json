@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#overwhelmed:generates_paines",
+  "features": "overwhelmed:generate_paine",
+  "step": "vegetal_decoration"
+}

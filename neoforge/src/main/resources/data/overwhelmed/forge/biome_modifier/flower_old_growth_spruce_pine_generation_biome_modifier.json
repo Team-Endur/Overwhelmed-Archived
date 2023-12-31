@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#overwhelmed:flowers_old_growth_pine_taiga",
+  "features": "overwhelmed:flower_old_growth_pine_taiga",
+  "step": "vegetal_decoration"
+}
