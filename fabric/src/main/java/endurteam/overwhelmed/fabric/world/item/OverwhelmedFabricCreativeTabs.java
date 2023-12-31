@@ -42,6 +42,8 @@ public class OverwhelmedFabricCreativeTabs {
                             output.accept(SNAIL_STEW);
                             output.accept(SNAIL);
                             output.accept(COOKED_SNAIL);
+                            output.accept(VANILLA_COOKIE);
+                            output.accept(VANILLA_ICE_CREAM);
                             output.accept(GOO_BALL);
                             output.accept(SNAIL_SHELL);
                             output.accept(BUTTERFLY_SPAWN_EGG);
