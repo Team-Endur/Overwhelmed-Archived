@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#overwhelmed:generates_pebbles",
+  "features": "overwhelmed:generate_pebble",
+  "step": "vegetal_decoration"
+}

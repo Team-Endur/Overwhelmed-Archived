@@ -1,6 +1,0 @@
-{
-  "type": "forge:add_features",
-  "biomes": "#overwhelmed:generates_lavateras",
-  "features": "overwhelmed:patch_lavatera",
-  "step": "vegetal_decoration"
-}

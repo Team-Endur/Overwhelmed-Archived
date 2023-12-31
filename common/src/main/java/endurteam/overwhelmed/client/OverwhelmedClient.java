@@ -29,8 +29,4 @@ import net.fabricmc.api.Environment;
 public class OverwhelmedClient {
     public static SnailSpawnEggItemColor snailSpawnEggItemColor;
     public static ButterflySpawnEggItemColor butterflySpawnEggItemColor;
-
-    public static void initClient() {
-
-    }
 }

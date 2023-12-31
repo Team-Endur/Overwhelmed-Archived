@@ -18,24 +18,62 @@
  *  <https://gist.github.com/triphora/588f353802a3b0ea649e4fc85f75e583/>
  */
 
-package endurteam.overwhelmed.forge;
+package endurteam.overwhelmed.neoforge;
 
-import dev.architectury.platform.forge.EventBuses;
-import endurteam.overwhelmed.forge.client.OverwhelmedForgeClient;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.fml.DistExecutor;
 import endurteam.overwhelmed.Overwhelmed;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import endurteam.overwhelmed.neoforge.client.OverwhelmedNeoForgeClient;
+import endurteam.overwhelmed.neoforge.particles.OverwhelmedNeoForgeParticleTypes;
+import endurteam.overwhelmed.neoforge.sounds.OverwhelmedNeoForgeSoundEvents;
+import endurteam.overwhelmed.neoforge.world.entity.OverwhelmedNeoForgeEntityTypes;
+import endurteam.overwhelmed.neoforge.world.item.OverwhelmedNeoForgeCreativeTabs;
+import endurteam.overwhelmed.neoforge.world.item.OverwhelmedNeoForgeItems;
+import endurteam.overwhelmed.neoforge.world.level.block.OverwhelmedNeoForgeBlocks;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.loading.FMLLoader;
+import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
+import net.neoforged.neoforge.event.entity.EntityAttributeCreationEvent;
+import net.neoforged.neoforge.registries.RegisterEvent;
 
 @Mod(Overwhelmed.MOD_ID)
-public class OverwhelmedForge {
-    public OverwhelmedForge() {
-        // Submit our event bus to let architectury register our content on the right time
-        EventBuses.registerModEventBus(Overwhelmed.MOD_ID, FMLJavaModLoadingContext.get().getModEventBus());
-        Overwhelmed.init();
-        DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () ->
-                (() -> OverwhelmedForgeClient.initClient(FMLJavaModLoadingContext.get().getModEventBus())));
+public class OverwhelmedNeoForge {
+    public OverwhelmedNeoForge(IEventBus bus) {
+        bus.addListener(this::register);
+        bus.addListener(this::registerCreativeTabs);
+        bus.addListener(this::entityAttributeCreationEvent);
+        if (FMLLoader.getDist() == Dist.CLIENT)
+        {
+            OverwhelmedNeoForgeClient.initClient(bus);
+        }
+    }
+
+    @SubscribeEvent
+    public void register(RegisterEvent event) {
+        event.register(BuiltInRegistries.PARTICLE_TYPE.key(),
+                OverwhelmedNeoForgeParticleTypes::registerParticleTypes);
+        event.register(BuiltInRegistries.SOUND_EVENT.key(),
+                OverwhelmedNeoForgeSoundEvents::registerSoundEvents);
+        event.register(BuiltInRegistries.CREATIVE_MODE_TAB.key(),
+                OverwhelmedNeoForgeCreativeTabs::registerModCreativeTab);
+        event.register(BuiltInRegistries.ENTITY_TYPE.key(),
+                OverwhelmedNeoForgeEntityTypes::registerEntities);
+        event.register(BuiltInRegistries.BLOCK.key(),
+                OverwhelmedNeoForgeBlocks::registerBlocks);
+        event.register(BuiltInRegistries.ITEM.key(),
+                OverwhelmedNeoForgeItems::registerItems);
+    }
+
+    @SubscribeEvent
+    public void registerCreativeTabs(BuildCreativeModeTabContentsEvent event) {
+        OverwhelmedNeoForgeCreativeTabs.registerCreativeTabs(event);
+    }
+
+    @SubscribeEvent
+    public void entityAttributeCreationEvent(EntityAttributeCreationEvent event) {
+        OverwhelmedNeoForgeEntityTypes.entityAttributeCreationEvent(event);
     }
 
 }
