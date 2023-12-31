@@ -76,14 +76,8 @@ public class OverwhelmedFabricItems {
                         .rarity(Rarity.COMMON)
                         .durability(20)));
         PAPER_BULLET = registerGenericItem("paper_bullet", 64, Rarity.COMMON);
-        SNAIL_STEW = Registry.register(BuiltInRegistries.ITEM,
-                new ResourceLocation(Overwhelmed.MOD_ID, "snail_stew"),
-                new BowlFoodItem(new Item.Properties()
-                        .stacksTo(1)
-                        .rarity(Rarity.COMMON)
-                        .food(OverwhelmedFoods.SNAIL_STEW)));
-        SNAIL = Registry.register(BuiltInRegistries.ITEM,
-                new ResourceLocation(Overwhelmed.MOD_ID, "snail"),
+        RAW_SNAIL = Registry.register(BuiltInRegistries.ITEM,
+                new ResourceLocation(Overwhelmed.MOD_ID, "raw_snail"),
                 new Item(new Item.Properties()
                         .stacksTo(64)
                         .rarity(Rarity.COMMON)
@@ -93,7 +87,13 @@ public class OverwhelmedFabricItems {
                 new Item(new Item.Properties()
                         .stacksTo(64)
                         .rarity(Rarity.COMMON)
-                        .food(OverwhelmedFoods.COOKED_SNAIL)));
+                        .food(OverwhelmedFoods.COOKED_SNAIL)));=
+        SNAIL_STEW = Registry.register(BuiltInRegistries.ITEM,
+                new ResourceLocation(Overwhelmed.MOD_ID, "snail_stew"),
+                new BowlFoodItem(new Item.Properties()
+                        .stacksTo(1)
+                        .rarity(Rarity.COMMON)
+                        .food(OverwhelmedFoods.SNAIL_STEW)));=
         VANILLA_COOKIE = Registry.register(BuiltInRegistries.ITEM,
                 new ResourceLocation(Overwhelmed.MOD_ID, "vanilla_cookie"),
                 new Item(new Item.Properties()

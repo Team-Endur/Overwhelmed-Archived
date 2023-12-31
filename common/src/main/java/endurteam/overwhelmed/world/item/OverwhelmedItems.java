@@ -45,9 +45,9 @@ public class OverwhelmedItems {
     public static BlockItem GOO_BLOCK;
     public static Item BLOWGUN;
     public static Item PAPER_BULLET;
-    public static Item SNAIL_STEW;
-    public static Item SNAIL;
+    public static Item RAW_SNAIL;
     public static Item COOKED_SNAIL;
+    public static Item SNAIL_STEW;
     public static Item VANILLA_COOKIE;
     public static Item VANILLA_ICE_CREAM;
     public static Item GOO_BALL;
