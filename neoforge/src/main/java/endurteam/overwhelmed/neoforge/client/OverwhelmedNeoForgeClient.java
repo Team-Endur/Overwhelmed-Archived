@@ -18,30 +18,77 @@
  *  <https://gist.github.com/triphora/588f353802a3b0ea649e4fc85f75e583/>
  */
 
-package endurteam.overwhelmed.forge.client;
+package endurteam.overwhelmed.neoforge.client;
 
-import endurteam.overwhelmed.client.OverwhelmedClient;
-import endurteam.overwhelmed.client.particle.FurParticle;
+import endurteam.overwhelmed.client.color.items.ButterflySpawnEggItemColor;
+import endurteam.overwhelmed.client.color.items.SnailSpawnEggItemColor;
 import endurteam.overwhelmed.client.particle.LiverwortSporeParticle;
+import endurteam.overwhelmed.client.renderer.entity.*;
 import endurteam.overwhelmed.core.particles.OverwhelmedParticleTypes;
-import net.minecraft.core.particles.ParticleType;
-import net.minecraft.core.particles.SimpleParticleType;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.client.event.RegisterParticleProvidersEvent;
-import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
+import endurteam.overwhelmed.neoforge.client.model.geom.OverwhelmedNeoForgeModelLayers;
+import endurteam.overwhelmed.world.entity.OverwhelmedEntityTypes;
+import endurteam.overwhelmed.world.item.OverwhelmedItems;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.api.distmarker.OnlyIn;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.neoforge.client.event.EntityRenderersEvent;
+import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
+import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
+
+import static endurteam.overwhelmed.client.OverwhelmedClient.butterflySpawnEggItemColor;
+import static endurteam.overwhelmed.client.OverwhelmedClient.snailSpawnEggItemColor;
 
 @OnlyIn(Dist.CLIENT)
-public class OverwhelmedForgeClient {
+public class OverwhelmedNeoForgeClient {
     public static void initClient(IEventBus modEventBus) {
-        OverwhelmedClient.initClient();
-        modEventBus.register(OverwhelmedForgeClient.class);
+        modEventBus.register(OverwhelmedNeoForgeClient.class);
     }
 
     @SubscribeEvent
     public static void registerParticleEvent(RegisterParticleProvidersEvent event) {
-        event.registerSpriteSet((ParticleType<SimpleParticleType>) OverwhelmedParticleTypes.LIVERWORT_SPORE.get(),
+        event.registerSpriteSet(OverwhelmedParticleTypes.LIVERWORT_SPORE, LiverwortSporeParticle.Provider::new);
+    }
+
+    @SubscribeEvent
+    public static void registerEntityRenderersEvent(EntityRenderersEvent.RegisterRenderers event)
+    {
+        event.registerEntityRenderer(OverwhelmedEntityTypes.SLEEPY_BUTTERFLY, ButterflyRenderer::new);
+        event.registerEntityRenderer(OverwhelmedEntityTypes.CABBAGE_BUTTERFLY, ButterflyRenderer::new);
+        event.registerEntityRenderer(OverwhelmedEntityTypes.MORPHO_BUTTERFLY, ButterflyRenderer::new);
+        event.registerEntityRenderer(OverwhelmedEntityTypes.CHERRY_BUTTERFLY, ButterflyRenderer::new);
+        event.registerEntityRenderer(OverwhelmedEntityTypes.MONARCH_BUTTERFLY, ButterflyRenderer::new);
+        event.registerEntityRenderer(OverwhelmedEntityTypes.LIVERWORT_BUTTERFLY, ButterflyRenderer::new);
+        event.registerEntityRenderer(OverwhelmedEntityTypes.PEBBLE, PebbleRenderer::new);
+        event.registerEntityRenderer(OverwhelmedEntityTypes.PAPER_BULLET, PaperBulletRenderer::new);
+        event.registerEntityRenderer(OverwhelmedEntityTypes.FLAT_SNAIL, FlatSnailRenderer::new);
+        event.registerEntityRenderer(OverwhelmedEntityTypes.GARDEN_SNAIL, GardenSnailRenderer::new);
+        event.registerEntityRenderer(OverwhelmedEntityTypes.GARY_SNAIL, GarySnailRenderer::new);
+        event.registerEntityRenderer(OverwhelmedEntityTypes.GLASS_SNAIL, GlassSnailRenderer::new);
+        event.registerEntityRenderer(OverwhelmedEntityTypes.LIMESTONE_SNAIL, LimestoneSnailRenderer::new);
+        event.registerEntityRenderer(OverwhelmedEntityTypes.LIVERWORT_SNAIL, LiverwortSnailRenderer::new);
+        event.registerEntityRenderer(OverwhelmedEntityTypes.ROMAN_SNAIL, RomanSnailRenderer::new);
+    }
+
+    @SubscribeEvent
+    public static void registerColorHandlersEvent(RegisterColorHandlersEvent.Item event)
+    {
+        event.register(snailSpawnEggItemColor = new SnailSpawnEggItemColor(),
+                OverwhelmedItems.SNAIL_SPAWN_EGG);
+        event.register(butterflySpawnEggItemColor = new ButterflySpawnEggItemColor(),
+                OverwhelmedItems.BUTTERFLY_SPAWN_EGG);
+    }
+
+    @SubscribeEvent
+    public static void registerParticleProvidersEvent(RegisterParticleProvidersEvent event)
+    {
+        event.registerSpriteSet(OverwhelmedParticleTypes.LIVERWORT_SPORE,
                 LiverwortSporeParticle.Provider::new);
+    }
+
+    @SubscribeEvent
+    public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event)
+    {
+        OverwhelmedNeoForgeModelLayers.registerModelLayers(event);
     }
 }

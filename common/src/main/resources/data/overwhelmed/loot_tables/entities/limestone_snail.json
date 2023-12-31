@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "overwhelmed:raw_snail",
+          "name": "overwhelmed:snail",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -94,7 +94,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "overwhelmed:raw_snail"
+          "name": "overwhelmed:snail"
         },
         {
           "type": "minecraft:item",
@@ -116,6 +116,42 @@
               }
             ]
           }
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "overwhelmed:snail",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 1
+            },
+            {
+              "function": "minecraft:furnace_smelt",
+              "conditions": [
+                {
+                  "condition": "minecraft:entity_properties",
+                  "entity": "this",
+                  "predicate": {
+                    "flags": {
+                      "is_on_fire": true
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "function": "minecraft:looting_enchant",
+              "count": {
+                "min": 0,
+                "max": 1
+              }
+            }
+          ]
         }
       ]
     }

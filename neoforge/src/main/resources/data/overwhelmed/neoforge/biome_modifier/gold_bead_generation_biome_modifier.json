@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#overwhelmed:generates_gold_beads",
+  "features": "overwhelmed:generate_gold_bead",
+  "step": "vegetal_decoration"
+}

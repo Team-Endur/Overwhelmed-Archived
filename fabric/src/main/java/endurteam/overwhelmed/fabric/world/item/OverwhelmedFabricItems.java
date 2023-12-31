@@ -76,8 +76,8 @@ public class OverwhelmedFabricItems {
                         .rarity(Rarity.COMMON)
                         .durability(20)));
         PAPER_BULLET = registerGenericItem("paper_bullet", 64, Rarity.COMMON);
-        RAW_SNAIL = Registry.register(BuiltInRegistries.ITEM,
-                new ResourceLocation(Overwhelmed.MOD_ID, "raw_snail"),
+        SNAIL = Registry.register(BuiltInRegistries.ITEM,
+                new ResourceLocation(Overwhelmed.MOD_ID, "snail"),
                 new Item(new Item.Properties()
                         .stacksTo(64)
                         .rarity(Rarity.COMMON)
