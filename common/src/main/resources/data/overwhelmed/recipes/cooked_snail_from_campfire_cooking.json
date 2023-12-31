@@ -4,7 +4,7 @@
   "cookingtime": 600,
   "experience": 0.35,
   "ingredient": {
-    "item": "overwhelmed:snail"
+    "item": "overwhelmed:raw_snail"
   },
   "result": "overwhelmed:cooked_snail"
 }
