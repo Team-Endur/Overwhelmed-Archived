@@ -18,31 +18,31 @@
  *  <https://gist.github.com/triphora/588f353802a3b0ea649e4fc85f75e583/>
  */
 
-package endurteam.overwhelmed.neoforge.client;
+package endurteam.overwhelmed.minecraftforge.client;
 
 import endurteam.overwhelmed.client.color.items.ButterflySpawnEggItemColor;
 import endurteam.overwhelmed.client.color.items.SnailSpawnEggItemColor;
 import endurteam.overwhelmed.client.particle.LiverwortSporeParticle;
 import endurteam.overwhelmed.client.renderer.entity.*;
 import endurteam.overwhelmed.core.particles.OverwhelmedParticleTypes;
-import endurteam.overwhelmed.neoforge.client.model.geom.OverwhelmedNeoForgeModelLayers;
+import endurteam.overwhelmed.minecraftforge.client.model.geom.OverwhelmedMinecraftForgeModelLayers;
 import endurteam.overwhelmed.world.entity.OverwhelmedEntityTypes;
 import endurteam.overwhelmed.world.item.OverwhelmedItems;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
-import net.neoforged.bus.api.IEventBus;
-import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.neoforge.client.event.EntityRenderersEvent;
-import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
-import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.client.event.EntityRenderersEvent;
+import net.minecraftforge.client.event.RegisterColorHandlersEvent;
+import net.minecraftforge.client.event.RegisterParticleProvidersEvent;
+import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 
 import static endurteam.overwhelmed.client.OverwhelmedClient.butterflySpawnEggItemColor;
 import static endurteam.overwhelmed.client.OverwhelmedClient.snailSpawnEggItemColor;
 
 @OnlyIn(Dist.CLIENT)
-public class OverwhelmedNeoForgeClient {
+public class OverwhelmedMinecraftForgeClient {
     public static void initClient(IEventBus modEventBus) {
-        modEventBus.register(OverwhelmedNeoForgeClient.class);
+        modEventBus.register(OverwhelmedMinecraftForgeClient.class);
     }
 
     @SubscribeEvent
@@ -89,6 +89,6 @@ public class OverwhelmedNeoForgeClient {
     @SubscribeEvent
     public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event)
     {
-        OverwhelmedNeoForgeModelLayers.registerModelLayers(event);
+        OverwhelmedMinecraftForgeModelLayers.registerModelLayers(event);
     }
 }

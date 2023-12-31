@@ -1,0 +1,11 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": "#overwhelmed:spawns_liverwort_snails",
+  "spawners":
+  {
+    "type": "overwhelmed:liverwort_snail",
+    "weight": 5,
+    "minCount": 3,
+    "maxCount": 6
+  }
+}

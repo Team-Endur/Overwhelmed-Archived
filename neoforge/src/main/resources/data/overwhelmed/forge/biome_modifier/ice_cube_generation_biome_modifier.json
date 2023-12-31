@@ -1,6 +1,0 @@
-{
-  "type": "forge:add_features",
-  "biomes": "#overwhelmed:generates_ice_cubes",
-  "features": "overwhelmed:generate_ice_cube",
-  "step": "vegetal_decoration"
-}
