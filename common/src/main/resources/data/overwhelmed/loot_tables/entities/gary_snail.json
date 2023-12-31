@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "overwhelmed:raw_snail",
+          "name": "overwhelmed:snail",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -94,7 +94,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "overwhelmed:raw_snail"
+          "name": "overwhelmed:snail"
         },
         {
           "type": "minecraft:item",
