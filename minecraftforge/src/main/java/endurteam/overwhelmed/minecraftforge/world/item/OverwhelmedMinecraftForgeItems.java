@@ -70,8 +70,8 @@ public class OverwhelmedMinecraftForgeItems {
                         .rarity(Rarity.COMMON)
                         .durability(20)));
         PAPER_BULLET = registerGenericItem("paper_bullet", 64, Rarity.COMMON, helper);
-        helper.register(new ResourceLocation(Overwhelmed.MOD_ID, "raw_snail"),
-                RAW_SNAIL = new Item(new Item.Properties()
+        helper.register(new ResourceLocation(Overwhelmed.MOD_ID, "snail"),
+                SNAIL = new Item(new Item.Properties()
                         .stacksTo(64)
                         .rarity(Rarity.COMMON)
                         .food(OverwhelmedFoods.SNAIL)));

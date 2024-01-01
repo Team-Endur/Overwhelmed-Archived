@@ -41,7 +41,7 @@ public class OverwhelmedNeoForgeCreativeTabs {
                             output.accept(GOO_BLOCK);
                             output.accept(BLOWGUN);
                             output.accept(PAPER_BULLET);
-                            output.accept(RAW_SNAIL);
+                            output.accept(SNAIL);
                             output.accept(COOKED_SNAIL);
                             output.accept(SNAIL_STEW);
                             output.accept(GOO_BALL);
@@ -82,7 +82,7 @@ public class OverwhelmedNeoForgeCreativeTabs {
         if (event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS)
         {
             event.accept(SNAIL_STEW);
-            event.accept(RAW_SNAIL);
+            event.accept(SNAIL);
             event.accept(COOKED_SNAIL);
         }
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS)
