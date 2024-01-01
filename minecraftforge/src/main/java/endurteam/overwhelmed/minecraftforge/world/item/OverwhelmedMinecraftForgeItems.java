@@ -70,8 +70,8 @@ public class OverwhelmedMinecraftForgeItems {
                         .rarity(Rarity.COMMON)
                         .durability(20)));
         PAPER_BULLET = registerGenericItem("paper_bullet", 64, Rarity.COMMON, helper);
-        helper.register(new ResourceLocation(Overwhelmed.MOD_ID, "raw_snail"),
-                RAW_SNAIL = new Item(new Item.Properties()
+        helper.register(new ResourceLocation(Overwhelmed.MOD_ID, "snail"),
+                SNAIL = new Item(new Item.Properties()
                         .stacksTo(64)
                         .rarity(Rarity.COMMON)
                         .food(OverwhelmedFoods.SNAIL)));
@@ -85,6 +85,17 @@ public class OverwhelmedMinecraftForgeItems {
                         .stacksTo(1)
                         .rarity(Rarity.COMMON)
                         .food(OverwhelmedFoods.SNAIL_STEW)));
+        helper.register(new ResourceLocation(Overwhelmed.MOD_ID, "vanilla_cookie"),
+                VANILLA_COOKIE = new Item(new Item.Properties()
+                        .stacksTo(64)
+                        .rarity(Rarity.COMMON)
+                        .food(OverwhelmedFoods.VANILLA_COOKIE)));
+        VANILLA_CAKE = registerGenericBlockItem("vanilla_cake", OverwhelmedBlocks.VANILLA_CAKE, helper);
+        helper.register(new ResourceLocation(Overwhelmed.MOD_ID, "vanilla_ice_cream"),
+                VANILLA_ICE_CREAM = new BowlFoodItem(new Item.Properties()
+                        .stacksTo(1)
+                        .rarity(Rarity.COMMON)
+                        .food(OverwhelmedFoods.VANILLA_ICE_CREAM)));
         GOO_BALL = registerGenericItem("goo_ball", 64, Rarity.COMMON, helper);
         SNAIL_SHELL = registerGenericItem("snail_shell", 64, Rarity.COMMON, helper);
         helper.register(new ResourceLocation(Overwhelmed.MOD_ID,

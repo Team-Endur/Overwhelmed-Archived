@@ -41,9 +41,12 @@ public class OverwhelmedNeoForgeCreativeTabs {
                             output.accept(GOO_BLOCK);
                             output.accept(BLOWGUN);
                             output.accept(PAPER_BULLET);
-                            output.accept(RAW_SNAIL);
+                            output.accept(SNAIL);
                             output.accept(COOKED_SNAIL);
                             output.accept(SNAIL_STEW);
+                            output.accept(VANILLA_COOKIE);
+                            output.accept(VANILLA_CAKE);
+                            output.accept(VANILLA_ICE_CREAM);
                             output.accept(GOO_BALL);
                             output.accept(SNAIL_SHELL);
                             output.accept(BUTTERFLY_SPAWN_EGG);
@@ -82,8 +85,11 @@ public class OverwhelmedNeoForgeCreativeTabs {
         if (event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS)
         {
             event.accept(SNAIL_STEW);
-            event.accept(RAW_SNAIL);
+            event.accept(SNAIL);
             event.accept(COOKED_SNAIL);
+            event.accept(VANILLA_COOKIE);
+            event.accept(VANILLA_CAKE);
+            event.accept(VANILLA_ICE_CREAM);
         }
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS)
         {
