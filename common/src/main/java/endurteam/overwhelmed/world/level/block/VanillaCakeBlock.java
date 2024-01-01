@@ -54,7 +54,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 public class VanillaCakeBlock extends Block {
     public static final MapCodec<endurteam.overwhelmed.world.level.block.VanillaCakeBlock> CODEC = simpleCodec(endurteam.overwhelmed.world.level.block.VanillaCakeBlock::new);
-    public static final int MAX_BITES = 5;
+    public static final int MAX_BITES = 6;
     public static final IntegerProperty BITES;
     public static final int FULL_CAKE_SIGNAL;
     protected static final float AABB_OFFSET = 1.0F;
@@ -156,12 +156,13 @@ public class VanillaCakeBlock extends Block {
         BITES = BlockStateProperties.BITES;
         FULL_CAKE_SIGNAL = getOutputSignal(0);
         SHAPE_BY_BITE = new VoxelShape[]{
-                Block.box(2.0, 0.0, 1.0, 15.0, 8.0, 15.0),
-                Block.box(4.0, 0.0, 1.0, 14.0, 12.0, 14.0),
-                Block.box(6.0, 0.0, 1.0, 14.0, 12.0, 14.0),
-                Block.box(8.0, 0.0, 1.0, 14.0, 12.0, 14.0),
-                Block.box(10.0, 0.0, 1.0, 14.0, 12.0, 14.0),
-                Block.box(12.0, 0.0, 1.0, 14.0, 12.0, 14.0)
+                Block.box(2.0, 0.0, 2.0, 14.0, 12.0, 14.0),
+                Block.box(4.0, 0.0, 2.0, 14.0, 12.0, 14.0),
+                Block.box(6.0, 0.0, 2.0, 14.0, 12.0, 14.0),
+                Block.box(8.0, 0.0, 2.0, 14.0, 12.0, 14.0),
+                Block.box(10.0, 0.0, 2.0, 14.0, 12.0, 14.0),
+                Block.box(12.0, 0.0, 2.0, 14.0, 12.0, 14.0),
+                Block.box(14.0, 0.0, 2.0, 14.0, 12.0, 14.0)
         };
 
     }
