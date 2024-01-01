@@ -78,7 +78,7 @@ public class OverwhelmedFabricCreativeTabs {
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.FOOD_AND_DRINKS).register(output -> {
             output.addAfter(Items.RABBIT_STEW, SNAIL_STEW);
             output.addAfter(Items.PUFFERFISH, SNAIL);
-            output.addAfter(RAW_SNAIL, COOKED_SNAIL);
+            output.addAfter(SNAIL, COOKED_SNAIL);
         });
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.INGREDIENTS).register(output -> {
             output.addAfter(Items.NETHERITE_INGOT, GOLD_BEAD);
