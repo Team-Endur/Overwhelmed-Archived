@@ -61,6 +61,9 @@ public class OverwhelmedMinecraftForgeCreativeTabs {
         }
         if (event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS)
         {
+            event.accept(GOLD_BEAD);
+            event.accept(ICE_CUBE);
+            event.accept(PEBBLE);
             event.accept(FLOFF);
             event.accept(PAINE);
             event.accept(PINK_LAVATERA);
@@ -87,9 +90,6 @@ public class OverwhelmedMinecraftForgeCreativeTabs {
         }
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS)
         {
-            event.accept(GOLD_BEAD);
-            event.accept(ICE_CUBE);
-            event.accept(PEBBLE);
             event.accept(GOO_BALL);
             event.accept(SNAIL_SHELL);
         };
