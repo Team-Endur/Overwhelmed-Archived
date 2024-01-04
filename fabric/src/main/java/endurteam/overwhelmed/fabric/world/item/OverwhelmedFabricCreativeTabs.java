@@ -60,6 +60,9 @@ public class OverwhelmedFabricCreativeTabs {
             output.accept(CHISELED_SNAIL_SHELL_BRICKS);
         });
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.NATURAL_BLOCKS).register(output -> {
+            output.addAfter(Items.DEAD_BUSH, GOLD_BEAD);
+            output.addAfter(GOLD_BEAD, ICE_CUBE);
+            output.addAfter(ICE_CUBE, PEBBLE);
             output.addAfter(Items.KELP, FLOFF);
             output.addAfter(FLOFF, PAINE);
             output.addAfter(PAINE, PINK_LAVATERA);
@@ -87,9 +90,6 @@ public class OverwhelmedFabricCreativeTabs {
             output.addAfter(VANILLA_CAKE, VANILLA_ICE_CREAM);
         });
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.INGREDIENTS).register(output -> {
-            output.addAfter(Items.NETHERITE_INGOT, GOLD_BEAD);
-            output.addAfter(Items.BLAZE_POWDER, ICE_CUBE);
-            output.addAfter(Items.HEART_OF_THE_SEA, PEBBLE);
             output.addAfter(Items.SLIME_BALL, GOO_BALL);
             output.addAfter(Items.NAUTILUS_SHELL, SNAIL_SHELL);
         });

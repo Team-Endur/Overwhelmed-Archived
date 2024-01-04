@@ -10,6 +10,6 @@ pluginManagement {
 
 include("common")
 include("fabric")
-include("quilt")
+// include("quilt")
 include("minecraftforge")
 include("neoforge")
