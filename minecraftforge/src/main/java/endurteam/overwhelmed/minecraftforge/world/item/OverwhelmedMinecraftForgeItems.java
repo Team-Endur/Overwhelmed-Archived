@@ -90,6 +90,7 @@ public class OverwhelmedMinecraftForgeItems {
                         .stacksTo(64)
                         .rarity(Rarity.COMMON)
                         .food(OverwhelmedFoods.VANILLA_COOKIE)));
+        MINT_CAKE = registerGenericBlockItem("mint_cake", OverwhelmedBlocks.MINT_CAKE, helper);
         VANILLA_CAKE = registerGenericBlockItem("vanilla_cake", OverwhelmedBlocks.VANILLA_CAKE, helper);
         helper.register(new ResourceLocation(Overwhelmed.MOD_ID, "vanilla_ice_cream"),
                 VANILLA_ICE_CREAM = new BowlFoodItem(new Item.Properties()

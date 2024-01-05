@@ -1,0 +1,23 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"particle": "overwhelmed:block/mint_cake_side",
+		"bottom": "overwhelmed:block/mint_cake_bottom",
+		"top": "overwhelmed:block/mint_cake_top",
+		"side": "overwhelmed:block/mint_cake_side",
+		"inside": "overwhelmed:block/mint_cake_inner"
+	},
+	"elements": [
+		{	"from": [5, 0, 1],
+			"to": [15, 5, 15],
+			"faces": {
+				"down":  { "texture": "#bottom", "cullface": "down" },
+				"up":    { "texture": "#top" },
+				"north": { "texture": "#side" },
+				"south": { "texture": "#side" },
+				"west":  { "texture": "#inside" },
+				"east":  { "texture": "#side" }
+			}
+		}
+	]
+}

@@ -97,6 +97,7 @@ public class OverwhelmedFabricItems {
                         .stacksTo(64)
                         .rarity(Rarity.COMMON)
                         .food(OverwhelmedFoods.VANILLA_COOKIE)));
+        MINT_CAKE = registerGenericBlockItem("mint_cake", OverwhelmedBlocks.MINT_CAKE);
         VANILLA_CAKE = registerGenericBlockItem("vanilla_cake", OverwhelmedBlocks.VANILLA_CAKE);
         VANILLA_ICE_CREAM = Registry.register(BuiltInRegistries.ITEM,
                 new ResourceLocation(Overwhelmed.MOD_ID, "vanilla_ice_cream"),

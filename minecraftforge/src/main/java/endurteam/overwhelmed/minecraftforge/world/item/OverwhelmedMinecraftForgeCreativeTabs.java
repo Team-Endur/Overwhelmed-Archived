@@ -45,6 +45,7 @@ public class OverwhelmedMinecraftForgeCreativeTabs {
                             output.accept(COOKED_SNAIL);
                             output.accept(SNAIL_STEW);
                             output.accept(VANILLA_COOKIE);
+                            output.accept(MINT_CAKE);
                             output.accept(VANILLA_CAKE);
                             output.accept(VANILLA_ICE_CREAM);
                             output.accept(GOO_BALL);
@@ -91,6 +92,7 @@ public class OverwhelmedMinecraftForgeCreativeTabs {
             event.accept(SNAIL);
             event.accept(COOKED_SNAIL);
             event.accept(VANILLA_COOKIE);
+            event.accept(MITN_CAKE);
             event.accept(VANILLA_CAKE);
             event.accept(VANILLA_ICE_CREAM);
         }

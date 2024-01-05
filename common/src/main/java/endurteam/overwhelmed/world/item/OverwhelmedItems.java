@@ -49,6 +49,7 @@ public class OverwhelmedItems {
     public static Item COOKED_SNAIL;
     public static Item SNAIL_STEW;
     public static Item VANILLA_COOKIE;
+    public static Item MINT_CAKE;
     public static Item VANILLA_CAKE;
     public static Item VANILLA_ICE_CREAM;
     public static Item GOO_BALL;
