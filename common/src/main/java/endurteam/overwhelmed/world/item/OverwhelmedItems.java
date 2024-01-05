@@ -53,6 +53,7 @@ public class OverwhelmedItems {
     public static Item VANILLA_ICE_CREAM;
     public static Item GOO_BALL;
     public static Item SNAIL_SHELL;
+    public static Item VANILLA_BEANS;
     public static MultiSpawnEggItem BUTTERFLY_SPAWN_EGG;
     public static MultiSpawnEggItem SNAIL_SPAWN_EGG;
 }
