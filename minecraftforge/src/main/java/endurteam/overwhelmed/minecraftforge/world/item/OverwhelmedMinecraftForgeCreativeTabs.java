@@ -50,6 +50,7 @@ public class OverwhelmedMinecraftForgeCreativeTabs {
                             output.accept(VANILLA_ICE_CREAM);
                             output.accept(GOO_BALL);
                             output.accept(SNAIL_SHELL);
+                            output.accept(VANILLA_BEANS);
                             output.accept(BUTTERFLY_SPAWN_EGG);
                             output.accept(SNAIL_SPAWN_EGG);
                         }).build());
@@ -92,7 +93,7 @@ public class OverwhelmedMinecraftForgeCreativeTabs {
             event.accept(SNAIL);
             event.accept(COOKED_SNAIL);
             event.accept(VANILLA_COOKIE);
-            event.accept(MITN_CAKE);
+            event.accept(MINT_CAKE);
             event.accept(VANILLA_CAKE);
             event.accept(VANILLA_ICE_CREAM);
         }
@@ -100,6 +101,7 @@ public class OverwhelmedMinecraftForgeCreativeTabs {
         {
             event.accept(GOO_BALL);
             event.accept(SNAIL_SHELL);
+            event.accept(VANILLA_BEANS);
         };
         if (event.getTabKey() == CreativeModeTabs.SPAWN_EGGS)
         {

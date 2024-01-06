@@ -99,6 +99,7 @@ public class OverwhelmedMinecraftForgeItems {
                         .food(OverwhelmedFoods.VANILLA_ICE_CREAM)));
         GOO_BALL = registerGenericItem("goo_ball", 64, Rarity.COMMON, helper);
         SNAIL_SHELL = registerGenericItem("snail_shell", 64, Rarity.COMMON, helper);
+        VANILLA_BEANS = registerGenericItem("vanilla_beans", 64, Rarity.COMMON, helper);
         helper.register(new ResourceLocation(Overwhelmed.MOD_ID,
                         "butterfly_spawn_egg"), BUTTERFLY_SPAWN_EGG =
                 new MultiSpawnEggItem(new Item.Properties(), (random) -> {

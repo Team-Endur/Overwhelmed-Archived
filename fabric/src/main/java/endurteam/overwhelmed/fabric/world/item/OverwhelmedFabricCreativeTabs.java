@@ -50,6 +50,7 @@ public class OverwhelmedFabricCreativeTabs {
                             output.accept(VANILLA_ICE_CREAM);
                             output.accept(GOO_BALL);
                             output.accept(SNAIL_SHELL);
+                            output.accept(VANILLA_BEANS);
                             output.accept(BUTTERFLY_SPAWN_EGG);
                             output.accept(SNAIL_SPAWN_EGG);
                         }).build());
@@ -94,6 +95,7 @@ public class OverwhelmedFabricCreativeTabs {
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.INGREDIENTS).register(output -> {
             output.addAfter(Items.SLIME_BALL, GOO_BALL);
             output.addAfter(Items.NAUTILUS_SHELL, SNAIL_SHELL);
+            output.addAfter(Items.COCOA_BEANS, VANILLA_BEANS);
         });
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.SPAWN_EGGS).register(output -> {
             output.addAfter(Items.SLIME_SPAWN_EGG, SNAIL_SPAWN_EGG);

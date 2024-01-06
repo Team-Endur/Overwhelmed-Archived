@@ -53,7 +53,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 public class MintCakeBlock extends Block {
     public static final MapCodec<MintCakeBlock> CODEC = simpleCodec(MintCakeBlock::new);
-    public static final int MAX_BITES = 6;
+    public static final int MAX_BITES = 7;
     public static final IntegerProperty BITES;
     public static final int FULL_CAKE_SIGNAL;
     protected static final float AABB_OFFSET = 1.0F;
@@ -112,7 +112,7 @@ public class MintCakeBlock extends Block {
             player.getFoodData().eat(2, 0.1F);
             int i = (Integer)blockState.getValue(BITES);
             levelAccessor.gameEvent(player, GameEvent.EAT, blockPos);
-            if (i < 5) {
+            if (i < 6) {
                 levelAccessor.setBlock(blockPos, (BlockState)blockState.setValue(BITES, i + 1), 3);
             } else {
                 levelAccessor.removeBlock(blockPos, false);
@@ -155,14 +155,13 @@ public class MintCakeBlock extends Block {
         BITES = BlockStateProperties.BITES;
         FULL_CAKE_SIGNAL = getOutputSignal(0);
         SHAPE_BY_BITE = new VoxelShape[]{
+                Block.box(1.0, 0.0, 1.0, 15.0, 5.0, 15.0),
                 Block.box(3.0, 0.0, 1.0, 15.0, 5.0, 15.0),
                 Block.box(5.0, 0.0, 1.0, 15.0, 5.0, 15.0),
                 Block.box(7.0, 0.0, 1.0, 15.0, 5.0, 15.0),
                 Block.box(9.0, 0.0, 1.0, 15.0, 5.0, 15.0),
                 Block.box(11.0, 0.0, 1.0, 15.0, 5.0, 15.0),
-                Block.box(13.0, 0.0, 1.0, 15.0, 5.0, 15.0),
-                Block.box(15.0, 0.0, 1.0, 15.0, 5.0, 15.0)
+                Block.box(13.0, 0.0, 1.0, 15.0, 5.0, 15.0)
         };
-
     }
 }

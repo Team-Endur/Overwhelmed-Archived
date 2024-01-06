@@ -107,6 +107,7 @@ public class OverwhelmedFabricItems {
                         .food(OverwhelmedFoods.VANILLA_ICE_CREAM)));
         GOO_BALL = registerGenericItem("goo_ball", 64, Rarity.COMMON);
         SNAIL_SHELL = registerGenericItem("snail_shell", 64, Rarity.COMMON);
+        VANILLA_BEANS = registerGenericItem("vanilla_beans", 64, Rarity.COMMON);
         BUTTERFLY_SPAWN_EGG = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Overwhelmed.MOD_ID,
                         "butterfly_spawn_egg"), new MultiSpawnEggItem(new Item.Properties(), (random) -> {
                     switch (random.nextIntBetweenInclusive(1, 6)) {

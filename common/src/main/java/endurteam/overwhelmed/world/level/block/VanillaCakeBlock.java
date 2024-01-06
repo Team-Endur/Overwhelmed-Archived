@@ -164,6 +164,5 @@ public class VanillaCakeBlock extends Block {
                 Block.box(12.0, 0.0, 2.0, 14.0, 12.0, 14.0),
                 Block.box(14.0, 0.0, 2.0, 14.0, 12.0, 14.0)
         };
-
     }
 }
