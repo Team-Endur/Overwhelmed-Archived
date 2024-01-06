@@ -1,6 +1,6 @@
 /**
  *  Overwhelmed, a Minecraft overhauling and adding new features to the Overworld's surface!<br>
- *  Copyright (C) 2023  Endurteam<br>
+ *  Copyright (C) 2023-2024 Endurteam<br>
  *  <br>
  *  This program is free software: you can redistribute it and/or modify<br>
  *  it under the terms of the GNU General Public License as published by<br>
@@ -27,6 +27,9 @@ public class OverwhelmedSoundEvents {
     public static SoundEvent SNAIL_DEATH;
     public static SoundEvent BUTTERFLY_HURT;
     public static SoundEvent BUTTERFLY_DEATH;
+    public static SoundEvent HORNET_STING;
+    public static SoundEvent HORNET_HURT;
+    public static SoundEvent HORNET_DEATH;
     public static SoundEvent BLOWGUN_SHOOT;
     public static SoundEvent PEBBLE_THROW;
 }

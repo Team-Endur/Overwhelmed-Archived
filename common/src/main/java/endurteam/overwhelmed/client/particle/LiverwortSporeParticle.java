@@ -1,6 +1,6 @@
 /**
  *  Overwhelmed, a Minecraft overhauling and adding new features to the Overworld's surface!<br>
- *  Copyright (C) 2023  Endurteam<br>
+ *  Copyright (C) 2023-2024 Endurteam<br>
  *  <br>
  *  This program is free software: you can redistribute it and/or modify<br>
  *  it under the terms of the GNU General Public License as published by<br>
@@ -32,7 +32,7 @@ import org.jetbrains.annotations.Nullable;
 public class LiverwortSporeParticle extends TextureSheetParticle {
     private final SpriteSet sprites;
     private float angularVelocity;
-    private float angularAcceleration;
+    private final float angularAcceleration;
 
     LiverwortSporeParticle(ClientLevel clientLevel, double d, double e, double f, double g, double h, double i,
                            SpriteSet spriteSet) {

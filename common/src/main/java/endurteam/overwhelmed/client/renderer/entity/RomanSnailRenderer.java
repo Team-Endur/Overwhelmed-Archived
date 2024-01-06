@@ -1,6 +1,6 @@
 /**
  *  Overwhelmed, a Minecraft overhauling and adding new features to the Overworld's surface!<br>
- *  Copyright (C) 2023  Endurteam<br>
+ *  Copyright (C) 2023-2024 Endurteam<br>
  *  <br>
  *  This program is free software: you can redistribute it and/or modify<br>
  *  it under the terms of the GNU General Public License as published by<br>
@@ -23,7 +23,7 @@ package endurteam.overwhelmed.client.renderer.entity;
 import endurteam.overwhelmed.Overwhelmed;
 import endurteam.overwhelmed.client.model.entity.SnailRomanModel;
 import endurteam.overwhelmed.client.model.geom.OverwhelmedModelLayers;
-import endurteam.overwhelmed.world.entity.animal.SnailEntity;
+import endurteam.overwhelmed.world.entity.animal.Snail;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
@@ -32,7 +32,7 @@ import net.minecraft.resources.ResourceLocation;
 import org.jetbrains.annotations.NotNull;
 
 @Environment(EnvType.CLIENT)
-public class RomanSnailRenderer extends MobRenderer<SnailEntity, SnailRomanModel<SnailEntity>> {
+public class RomanSnailRenderer extends MobRenderer<Snail, SnailRomanModel<Snail>> {
     private static final ResourceLocation TEXTURE =
             new ResourceLocation(Overwhelmed.MOD_ID, "textures/entity/snail/snail_roman.png");
 
@@ -41,7 +41,7 @@ public class RomanSnailRenderer extends MobRenderer<SnailEntity, SnailRomanModel
     }
 
     @Override
-    public @NotNull ResourceLocation getTextureLocation(SnailEntity var1) {
+    public @NotNull ResourceLocation getTextureLocation(Snail var1) {
         return TEXTURE;
     }
 }

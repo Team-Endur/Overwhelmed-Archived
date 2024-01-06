@@ -100,11 +100,11 @@ public class OverwhelmedMinecraftForgeCreativeTabs {
         {
             event.accept(GOO_BALL);
             event.accept(SNAIL_SHELL);
-        };
+        }
         if (event.getTabKey() == CreativeModeTabs.SPAWN_EGGS)
         {
             event.accept(SNAIL_SPAWN_EGG);
             event.accept(BUTTERFLY_SPAWN_EGG);
-        };
+        }
     }
 }
