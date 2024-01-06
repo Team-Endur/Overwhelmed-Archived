@@ -1,6 +1,6 @@
 /**
  *  Overwhelmed, a Minecraft overhauling and adding new features to the Overworld's surface!<br>
- *  Copyright (C) 2023  Endurteam<br>
+ *  Copyright (C) 2023-2024 Endurteam<br>
  *  <br>
  *  This program is free software: you can redistribute it and/or modify<br>
  *  it under the terms of the GNU General Public License as published by<br>
@@ -24,16 +24,12 @@ package endurteam.overwhelmed.client.model.entity;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
-import endurteam.overwhelmed.client.animation.definitions.ButterflyAnimation;
-import endurteam.overwhelmed.client.animation.definitions.MothAnimation;
-import endurteam.overwhelmed.world.entity.animal.ButterflyEntity;
-import endurteam.overwhelmed.world.entity.animal.MothEntity;
 import net.minecraft.client.model.HierarchicalModel;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.*;
 import net.minecraft.world.entity.Entity;
-
+import org.jetbrains.annotations.NotNull;
 
 public class MothModel<T extends Entity> extends HierarchicalModel<T> {
 	private final ModelPart root;
@@ -134,7 +130,7 @@ public class MothModel<T extends Entity> extends HierarchicalModel<T> {
 	}
 
 	@Override
-	public ModelPart root() {
+	public @NotNull ModelPart root() {
 		return this.root;
 	}
 }

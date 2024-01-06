@@ -1,6 +1,6 @@
 /**
  *  Overwhelmed, a Minecraft overhauling and adding new features to the Overworld's surface!<br>
- *  Copyright (C) 2023  Endurteam<br>
+ *  Copyright (C) 2023-2024 Endurteam<br>
  *  <br>
  *  This program is free software: you can redistribute it and/or modify<br>
  *  it under the terms of the GNU General Public License as published by<br>
@@ -59,6 +59,7 @@ public class OverwhelmedFabricClient implements ClientModInitializer {
         EntityRendererRegistry.register(OverwhelmedEntityTypes.LIMESTONE_SNAIL, LimestoneSnailRenderer::new);
         EntityRendererRegistry.register(OverwhelmedEntityTypes.LIVERWORT_SNAIL, LiverwortSnailRenderer::new);
         EntityRendererRegistry.register(OverwhelmedEntityTypes.ROMAN_SNAIL, RomanSnailRenderer::new);
+        EntityRendererRegistry.register(OverwhelmedEntityTypes.MOTH, MothRenderer::new);
         OverwhelmedFabricModelLayers.registerModelLayers();
         ColorProviderRegistry.ITEM.register(snailSpawnEggItemColor = new SnailSpawnEggItemColor(),
                 OverwhelmedItems.SNAIL_SPAWN_EGG);

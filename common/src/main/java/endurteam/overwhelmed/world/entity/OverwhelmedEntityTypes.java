@@ -1,6 +1,6 @@
 /**
  *  Overwhelmed, a Minecraft overhauling and adding new features to the Overworld's surface!<br>
- *  Copyright (C) 2023  Endurteam<br>
+ *  Copyright (C) 2023-2024 Endurteam<br>
  *  <br>
  *  This program is free software: you can redistribute it and/or modify<br>
  *  it under the terms of the GNU General Public License as published by<br>
@@ -20,7 +20,7 @@
 
 package endurteam.overwhelmed.world.entity;
 
-import endurteam.overwhelmed.world.entity.animal.ButterflyEntity;
+import endurteam.overwhelmed.world.entity.animal.*;
 import endurteam.overwhelmed.world.entity.projectile.PaperBulletEntity;
 import endurteam.overwhelmed.world.entity.projectile.PebbleEntity;
 import net.minecraft.core.registries.Registries;
@@ -28,25 +28,29 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.level.biome.Biome;
-import endurteam.overwhelmed.world.entity.animal.SnailEntity;
 
 import static endurteam.overwhelmed.Overwhelmed.MOD_ID;
 
 public class OverwhelmedEntityTypes {
-    public static EntityType<SnailEntity> FLAT_SNAIL;
-    public static EntityType<SnailEntity> GARDEN_SNAIL;
-    public static EntityType<SnailEntity> GARY_SNAIL;
-    public static EntityType<SnailEntity> GLASS_SNAIL;
-    public static EntityType<SnailEntity> LIMESTONE_SNAIL;
-    public static EntityType<SnailEntity> LIVERWORT_SNAIL;
-    public static EntityType<SnailEntity> ROMAN_SNAIL;
+    public static EntityType<Snail> FLAT_SNAIL;
+    public static EntityType<Snail> GARDEN_SNAIL;
+    public static EntityType<Snail> GARY_SNAIL;
+    public static EntityType<Snail> GLASS_SNAIL;
+    public static EntityType<Snail> LIMESTONE_SNAIL;
+    public static EntityType<Snail> LIVERWORT_SNAIL;
+    public static EntityType<Snail> ROMAN_SNAIL;
 
-    public static EntityType<ButterflyEntity> CABBAGE_BUTTERFLY;
-    public static EntityType<ButterflyEntity> CHERRY_BUTTERFLY;
-    public static EntityType<ButterflyEntity> LIVERWORT_BUTTERFLY;
-    public static EntityType<ButterflyEntity> MONARCH_BUTTERFLY;
-    public static EntityType<ButterflyEntity> MORPHO_BUTTERFLY;
-    public static EntityType<ButterflyEntity> SLEEPY_BUTTERFLY;
+    public static EntityType<Butterfly> CABBAGE_BUTTERFLY;
+    public static EntityType<Butterfly> CHERRY_BUTTERFLY;
+    public static EntityType<Butterfly> LIVERWORT_BUTTERFLY;
+    public static EntityType<Butterfly> MONARCH_BUTTERFLY;
+    public static EntityType<Butterfly> MORPHO_BUTTERFLY;
+    public static EntityType<Butterfly> SLEEPY_BUTTERFLY;
+
+    public static EntityType<Moth> MOTH;
+
+    public static EntityType<Hornet> HORNET;
+    public static EntityType<HornetLarva> HORNET_LARVA;
 
     public static EntityType<PaperBulletEntity> PAPER_BULLET;
     public static EntityType<PebbleEntity> PEBBLE;
@@ -76,4 +80,7 @@ public class OverwhelmedEntityTypes {
             new ResourceLocation(MOD_ID, "spawns_morpho_butterflies"));
     public static final TagKey<Biome> SPAWNS_SLEEPY_BUTTERFLIES = TagKey.create(Registries.BIOME,
             new ResourceLocation(MOD_ID, "spawns_sleepy_butterflies"));
+
+    public static final TagKey<Biome> SPAWNS_MOTHS = TagKey.create(Registries.BIOME,
+            new ResourceLocation(MOD_ID, "spawns_moths"));
 }

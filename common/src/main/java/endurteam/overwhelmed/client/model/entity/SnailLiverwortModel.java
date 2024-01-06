@@ -1,6 +1,6 @@
 /**
  *  Overwhelmed, a Minecraft overhauling and adding new features to the Overworld's surface!<br>
- *  Copyright (C) 2023  Endurteam<br>
+ *  Copyright (C) 2023-2024 Endurteam<br>
  *  <br>
  *  This program is free software: you can redistribute it and/or modify<br>
  *  it under the terms of the GNU General Public License as published by<br>
@@ -25,7 +25,7 @@ package endurteam.overwhelmed.client.model.entity;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import endurteam.overwhelmed.client.animation.definitions.SnailLiverwortAnimation;
-import endurteam.overwhelmed.world.entity.animal.SnailEntity;
+import endurteam.overwhelmed.world.entity.animal.Snail;
 import net.minecraft.client.model.HierarchicalModel;
 import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.ModelPart;
@@ -98,7 +98,7 @@ public class SnailLiverwortModel<T extends Entity> extends HierarchicalModel<T> 
 		if (entity.walkDist > 0) {
 			this.animateWalk(SnailLiverwortAnimation.SNAIL_LIVERWORT_WALK, limbSwing, limbSwingAmount, 2f, 2.5f);
 		} else if (entity.isAlive()) {
-			this.animate(((SnailEntity) entity).idleAnimationState, SnailLiverwortAnimation.SNAIL_LIVERWORT_IDLE,
+			this.animate(((Snail) entity).idleAnimationState, SnailLiverwortAnimation.SNAIL_LIVERWORT_IDLE,
 					ageInTicks, 1f);
 		}
 	}

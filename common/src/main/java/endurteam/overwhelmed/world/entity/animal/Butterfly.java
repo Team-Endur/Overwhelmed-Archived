@@ -1,6 +1,6 @@
 /**
  *  Overwhelmed, a Minecraft overhauling and adding new features to the Overworld's surface!<br>
- *  Copyright (C) 2023  Endurteam<br>
+ *  Copyright (C) 2023-2024 Endurteam<br>
  *  <br>
  *  This program is free software: you can redistribute it and/or modify<br>
  *  it under the terms of the GNU General Public License as published by<br>
@@ -37,12 +37,12 @@ import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public class ButterflyEntity extends PathfinderMob {
+public class Butterfly extends PathfinderMob {
     public AnimationState flyAnimationState = new AnimationState();
     @Nullable
     private BlockPos targetPosition;
 
-    public ButterflyEntity(EntityType<? extends PathfinderMob> type, Level worldIn) {
+    public Butterfly(EntityType<? extends PathfinderMob> type, Level worldIn) {
         super(type, worldIn);
     }
 
