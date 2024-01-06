@@ -2,8 +2,8 @@ package endurteam.overwhelmed.neoforge.world.entity;
 
 import endurteam.overwhelmed.world.entity.animal.Butterfly;
 import endurteam.overwhelmed.world.entity.animal.Snail;
-import endurteam.overwhelmed.world.entity.projectile.PaperBulletEntity;
-import endurteam.overwhelmed.world.entity.projectile.PebbleEntity;
+import endurteam.overwhelmed.world.entity.projectile.PaperBullet;
+import endurteam.overwhelmed.world.entity.projectile.Pebble;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
@@ -83,13 +83,13 @@ public class OverwhelmedNeoForgeEntityTypes {
                                 .build("sleepy_butterfly"));
 
         helper.register(new ResourceLocation(MOD_ID, "paper_bullet"),
-                PAPER_BULLET = EntityType.Builder.<PaperBulletEntity>of(PaperBulletEntity::new, MobCategory.MISC)
+                PAPER_BULLET = EntityType.Builder.<PaperBullet>of(PaperBullet::new, MobCategory.MISC)
                                 .sized(0.2f, 0.2f)
                                 .clientTrackingRange(4)
                                 .build("paper_bullet")
         );
         helper.register(new ResourceLocation(MOD_ID, "pebble"),
-                PEBBLE = EntityType.Builder.<PebbleEntity>of(PebbleEntity::new, MobCategory.MISC)
+                PEBBLE = EntityType.Builder.<Pebble>of(Pebble::new, MobCategory.MISC)
                                 .sized(0.2f, 0.2f)
                                 .clientTrackingRange(4)
                                 .build("pebble")

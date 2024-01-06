@@ -3,8 +3,8 @@ package endurteam.overwhelmed.fabric.world.entity;
 import endurteam.overwhelmed.world.entity.animal.Butterfly;
 import endurteam.overwhelmed.world.entity.animal.Moth;
 import endurteam.overwhelmed.world.entity.animal.Snail;
-import endurteam.overwhelmed.world.entity.projectile.PaperBulletEntity;
-import endurteam.overwhelmed.world.entity.projectile.PebbleEntity;
+import endurteam.overwhelmed.world.entity.projectile.PaperBullet;
+import endurteam.overwhelmed.world.entity.projectile.Pebble;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -105,14 +105,14 @@ public class OverwhelmedFabricEntityTypes {
 
         PAPER_BULLET = Registry.register(BuiltInRegistries.ENTITY_TYPE,
                 new ResourceLocation(MOD_ID, "paper_bullet"),
-                        EntityType.Builder.<PaperBulletEntity>of(PaperBulletEntity::new, MobCategory.MISC)
+                        EntityType.Builder.<PaperBullet>of(PaperBullet::new, MobCategory.MISC)
                                 .sized(0.2f, 0.2f)
                                 .clientTrackingRange(4)
                                 .build("paper_bullet")
         );
         PEBBLE = Registry.register(BuiltInRegistries.ENTITY_TYPE,
                 new ResourceLocation(MOD_ID, "pebble"),
-                        EntityType.Builder.<PebbleEntity>of(PebbleEntity::new, MobCategory.MISC)
+                        EntityType.Builder.<Pebble>of(Pebble::new, MobCategory.MISC)
                                 .sized(0.2f, 0.2f)
                                 .clientTrackingRange(4)
                                 .build("pebble")

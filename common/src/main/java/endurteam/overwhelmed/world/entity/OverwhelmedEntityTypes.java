@@ -21,8 +21,8 @@
 package endurteam.overwhelmed.world.entity;
 
 import endurteam.overwhelmed.world.entity.animal.*;
-import endurteam.overwhelmed.world.entity.projectile.PaperBulletEntity;
-import endurteam.overwhelmed.world.entity.projectile.PebbleEntity;
+import endurteam.overwhelmed.world.entity.projectile.PaperBullet;
+import endurteam.overwhelmed.world.entity.projectile.Pebble;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
@@ -52,8 +52,8 @@ public class OverwhelmedEntityTypes {
     public static EntityType<Hornet> HORNET;
     public static EntityType<HornetLarva> HORNET_LARVA;
 
-    public static EntityType<PaperBulletEntity> PAPER_BULLET;
-    public static EntityType<PebbleEntity> PEBBLE;
+    public static EntityType<PaperBullet> PAPER_BULLET;
+    public static EntityType<Pebble> PEBBLE;
 
     public static final TagKey<Biome> SPAWNS_FLAT_SNAILS = TagKey.create(Registries.BIOME,
             new ResourceLocation(MOD_ID, "spawns_flat_snails"));

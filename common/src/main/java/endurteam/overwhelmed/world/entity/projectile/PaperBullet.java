@@ -22,14 +22,12 @@ package endurteam.overwhelmed.world.entity.projectile;
 
 import endurteam.overwhelmed.world.entity.OverwhelmedEntityTypes;
 import endurteam.overwhelmed.world.item.OverwhelmedItems;
-import endurteam.overwhelmed.world.level.block.OverwhelmedBlocks;
-import net.minecraft.core.BlockPos;
-import net.minecraft.core.particles.BlockParticleOption;
+import net.minecraft.core.particles.ItemParticleOption;
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleTypes;
-import net.minecraft.network.syncher.EntityDataAccessor;
-import net.minecraft.network.syncher.EntityDataSerializers;
-import net.minecraft.network.syncher.SynchedEntityData;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.AnimationState;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
@@ -38,36 +36,27 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.HitResult;
-import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.NotNull;
 
-public class PebbleEntity
+public class PaperBullet
         extends ThrowableItemProjectile {
-    private final Vec3 UP = new Vec3(0, 1, 0);
-    protected static final EntityDataAccessor<Boolean> DATA_IN_WATER_LAST_TICK =
-            SynchedEntityData.defineId(PebbleEntity.class, EntityDataSerializers.BOOLEAN);
-    protected static final EntityDataAccessor<BlockPos> DATA_START_POS =
-            SynchedEntityData.defineId(PebbleEntity.class, EntityDataSerializers.BLOCK_POS);
+    public AnimationState flyAnimationState = new AnimationState();
 
-    public PebbleEntity(EntityType<? extends PebbleEntity> entityType, Level level) {
+    public PaperBullet(EntityType<? extends PaperBullet> entityType, Level level) {
         super(entityType, level);
     }
 
-    public PebbleEntity(Level level, LivingEntity livingEntity) {
-        super(OverwhelmedEntityTypes.PEBBLE, livingEntity, level);
-    }
-
-    public PebbleEntity(Level level, double d, double e, double f) {
-        super(OverwhelmedEntityTypes.PEBBLE, d, e, f, level);
+    public PaperBullet(Level level, LivingEntity livingEntity) {
+        super(OverwhelmedEntityTypes.PAPER_BULLET, livingEntity, level);
     }
 
     @Override
     protected @NotNull Item getDefaultItem() {
-        return OverwhelmedItems.PEBBLE;
+        return OverwhelmedItems.PAPER_BULLET;
     }
 
     private ParticleOptions getParticle() {
-        return new BlockParticleOption(ParticleTypes.BLOCK, OverwhelmedBlocks.PEBBLE.defaultBlockState());
+        return new ItemParticleOption(ParticleTypes.ITEM, OverwhelmedItems.PAPER_BULLET.getDefaultInstance());
     }
 
     @Override
@@ -85,7 +74,12 @@ public class PebbleEntity
     protected void onHitEntity(EntityHitResult entityHitResult) {
         super.onHitEntity(entityHitResult);
         Entity entity = entityHitResult.getEntity();
-        entity.hurt(this.damageSources().thrown(this, this.getOwner()), 1);
+        boolean bl = entity.hurt(this.damageSources().thrown(this, this.getOwner()), 0);
+        if (bl) {
+            if (entity instanceof LivingEntity livingEntity2) {
+                livingEntity2.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 60, 0), this);
+            }
+        }
     }
 
     @Override
@@ -100,36 +94,15 @@ public class PebbleEntity
     @Override
     public void shoot(double d, double e, double f, float g, float h) {
         super.shoot(d, e, f, g, h);
-        this.setStartPos(this.getOnPos());
-    }
-
-    public void setStartPos(BlockPos blockPos) {
-        this.entityData.set(DATA_START_POS, blockPos);
-    }
-
-    public BlockPos getStartPos() {
-        return this.entityData.get(DATA_START_POS);
     }
 
     @Override
-    protected void defineSynchedData() {
-        super.defineSynchedData();
-        this.entityData.define(DATA_START_POS, BlockPos.ZERO);
-        this.entityData.define(DATA_IN_WATER_LAST_TICK, this.isInWater());
-    }
-
-    @Override
-    public void tick()
-    {
-        this.entityData.set(DATA_IN_WATER_LAST_TICK, this.isInWater());
+    public void tick() {
         super.tick();
-        if (!this.entityData.get(DATA_IN_WATER_LAST_TICK) && this.isInWater()
-                && this.getDeltaMovement().length() > 0.2)
+
+        if (this.level().isClientSide())
         {
-            // Vector reflection formula
-            this.setDeltaMovement(this.getDeltaMovement().subtract(UP.scale(2 * this.getDeltaMovement().dot(UP)))
-                    .scale(0.6));
+            this.flyAnimationState.startIfStopped(this.tickCount);
         }
     }
-
 }

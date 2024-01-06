@@ -21,8 +21,7 @@
 package endurteam.overwhelmed.world.item;
 
 import endurteam.overwhelmed.sounds.OverwhelmedSoundEvents;
-import endurteam.overwhelmed.world.entity.projectile.PaperBulletEntity;
-import net.minecraft.sounds.SoundEvents;
+import endurteam.overwhelmed.world.entity.projectile.PaperBullet;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
 import net.minecraft.world.InteractionHand;
@@ -61,7 +60,7 @@ public class BlowgunItem extends ProjectileWeaponItem {
         }
         boolean bl2 = bl && itemStack2.is(Items.ARROW);
         if (!level.isClientSide) {
-            PaperBulletEntity pebbleEntity = new PaperBulletEntity(level, player);
+            PaperBullet pebbleEntity = new PaperBullet(level, player);
             pebbleEntity.shootFromRotation(player, player.getXRot(), player.getYRot(), 0.0f, f * 3.0f, 1.0f);
             itemStack.hurtAndBreak(1, player, player2 -> player2.broadcastBreakEvent(player.getUsedItemHand()));
             level.addFreshEntity(pebbleEntity);

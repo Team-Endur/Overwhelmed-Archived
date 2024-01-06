@@ -1,22 +1,19 @@
 {
   "variants": {
-    "bites=0": {
+    "vanilla_cake_bites=0": {
       "model": "overwhelmed:block/vanilla_cake"
     },
-    "bites=1": {
+    "vanilla_cake_bites=1": {
       "model": "overwhelmed:block/vanilla_cake_slice1"
     },
-    "bites=2": {
+    "vanilla_cake_bites=2": {
       "model": "overwhelmed:block/vanilla_cake_slice2"
     },
-    "bites=3": {
+    "vanilla_cake_bites=3": {
       "model": "overwhelmed:block/vanilla_cake_slice3"
     },
-    "bites=4": {
+    "vanilla_cake_bites=4": {
       "model": "overwhelmed:block/vanilla_cake_slice4"
-    },
-    "bites=5": {
-      "model": "overwhelmed:block/vanilla_cake_slice5"
     }
   }
 }
