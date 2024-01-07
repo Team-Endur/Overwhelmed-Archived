@@ -50,10 +50,12 @@
 
 ![Banner](common/src/main/resources/assets/overwhelmed/textures/gui/grid.png)
 
-## License
+## License and Modpack Usage Terms
 
 Overwhelmed is licensed under the [GPL 3.0 or Later License with the Minecraft Linking Exception](LICENSE).
 You are free to use, modify, and distribute this mod in accordance with the terms of the license.
+This also means you are free to use this mod in any modpack, as long as the modpack is licensed under the same license. In addition, all mods must be licensed under a
+GPL-compatible license.
 
 ## Contributing
 
