@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "overwhelmed:block/white_candle_vanilla_cake"
+    },
+    "lit=true": {
+      "model": "overwhelmed:block/white_candle_vanilla_cake_lit"
+    }
+  }
+}

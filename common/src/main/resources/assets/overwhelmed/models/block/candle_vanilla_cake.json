@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:block/template_cake_with_candle",
+  "textures": {
+    "bottom": "overwhelmed:block/vanilla_cake_bottom",
+    "candle": "minecraft:block/candle",
+    "particle": "overwhelmed:block/vanilla_cake_side",
+    "side": "overwhelmed:block/vanilla_cake_side",
+    "top": "overwhelmed:block/vanilla_cake_top"
+  }
+}
