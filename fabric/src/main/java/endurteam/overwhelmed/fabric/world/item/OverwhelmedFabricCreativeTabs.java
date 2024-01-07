@@ -44,8 +44,13 @@ public class OverwhelmedFabricCreativeTabs {
                             output.accept(SNAIL);
                             output.accept(COOKED_SNAIL);
                             output.accept(SNAIL_STEW);
+                            output.accept(VANILLA_COOKIE);
+                            output.accept(MINT_CAKE);
+                            output.accept(VANILLA_CAKE);
+                            output.accept(VANILLA_ICE_CREAM);
                             output.accept(GOO_BALL);
                             output.accept(SNAIL_SHELL);
+                            output.accept(VANILLA_BEANS);
                             output.accept(BUTTERFLY_SPAWN_EGG);
                             output.accept(SNAIL_SPAWN_EGG);
                         }).build());
@@ -82,10 +87,15 @@ public class OverwhelmedFabricCreativeTabs {
             output.addAfter(Items.RABBIT_STEW, SNAIL_STEW);
             output.addAfter(Items.PUFFERFISH, SNAIL);
             output.addAfter(SNAIL, COOKED_SNAIL);
+            output.addAfter(Items.PUMPKIN_PIE, VANILLA_COOKIE);
+            output.addAfter(VANILLA_COOKIE, VANILLA_CAKE);
+            output.addAfter(VANILLA_CAKE, MINT_CAKE);
+            output.addAfter(MINT_CAKE, VANILLA_ICE_CREAM);
         });
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.INGREDIENTS).register(output -> {
             output.addAfter(Items.SLIME_BALL, GOO_BALL);
             output.addAfter(Items.NAUTILUS_SHELL, SNAIL_SHELL);
+            output.addAfter(Items.COCOA_BEANS, VANILLA_BEANS);
         });
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.SPAWN_EGGS).register(output -> {
             output.addAfter(Items.SLIME_SPAWN_EGG, SNAIL_SPAWN_EGG);

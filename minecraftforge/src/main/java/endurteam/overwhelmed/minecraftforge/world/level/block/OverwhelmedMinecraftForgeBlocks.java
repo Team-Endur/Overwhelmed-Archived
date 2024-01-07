@@ -1,10 +1,7 @@
 package endurteam.overwhelmed.minecraftforge.world.level.block;
 
 import endurteam.overwhelmed.Overwhelmed;
-import endurteam.overwhelmed.world.level.block.ClotBlock;
-import endurteam.overwhelmed.world.level.block.GooBlock;
-import endurteam.overwhelmed.world.level.block.OverwhelmedBlocks;
-import endurteam.overwhelmed.world.level.block.PebbleBlock;
+import endurteam.overwhelmed.world.level.block.*;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffects;
@@ -161,6 +158,19 @@ public class OverwhelmedMinecraftForgeBlocks {
                         .noOcclusion()
                         .jumpFactor(0.5f)
                         .speedFactor(0.4f)));
+        helper.register(new ResourceLocation(Overwhelmed.MOD_ID, "mint_cake"),
+                OverwhelmedBlocks.MINT_CAKE = new MintCakeBlock(BlockBehaviour.Properties.of()
+                        .forceSolidOn()
+                        .strength(0.5f)
+                        .sound(SoundType.WOOL)
+                        .pushReaction(PushReaction.DESTROY)));
+        helper.register(new ResourceLocation(Overwhelmed.MOD_ID, "vanilla_cake"),
+                OverwhelmedBlocks.VANILLA_CAKE = new VanillaCakeBlock(BlockBehaviour.Properties.of()
+                        .forceSolidOn()
+                        .strength(0.5f)
+                        .sound(SoundType.WOOL)
+                        .pushReaction(PushReaction.DESTROY)));
+
     }
     private static Block registerGenericBlock(String name,
                                               Block.Properties properties,

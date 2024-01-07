@@ -1,6 +1,6 @@
 /**
  *  Overwhelmed, a Minecraft overhauling and adding new features to the Overworld's surface!<br>
- *  Copyright (C) 2023  Endurteam<br>
+ *  Copyright (C) 2023-2024 Endurteam<br>
  *  <br>
  *  This program is free software: you can redistribute it and/or modify<br>
  *  it under the terms of the GNU General Public License as published by<br>
@@ -33,4 +33,11 @@ public class OverwhelmedFoods {
                     .effect(new MobEffectInstance(MobEffects.CONFUSION, 600, 0), 0.4F).meat().build();
     public static final FoodProperties SNAIL_STEW =
             new FoodProperties.Builder().nutrition(6).saturationMod(15.0f).build();
+
+    public static final FoodProperties VANILLA_COOKIE =
+            new FoodProperties.Builder().nutrition(4).saturationMod(0.4f).build();
+
+    public static final FoodProperties VANILLA_ICE_CREAM =
+            new FoodProperties.Builder().nutrition(6).saturationMod(1.2f).build();
+
 }

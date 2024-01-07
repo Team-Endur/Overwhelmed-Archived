@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "vanilla_cake_bites=0": {
+      "model": "overwhelmed:block/vanilla_cake"
+    },
+    "vanilla_cake_bites=1": {
+      "model": "overwhelmed:block/vanilla_cake_slice1"
+    },
+    "vanilla_cake_bites=2": {
+      "model": "overwhelmed:block/vanilla_cake_slice2"
+    },
+    "vanilla_cake_bites=3": {
+      "model": "overwhelmed:block/vanilla_cake_slice3"
+    },
+    "vanilla_cake_bites=4": {
+      "model": "overwhelmed:block/vanilla_cake_slice4"
+    }
+  }
+}

@@ -28,6 +28,10 @@ dependencies {
     common(project(path: ":common", configuration: "namedElements")) { transitive false }
     shadowCommon(project(path: ":common", configuration: "transformProductionForge")) { transitive = false }
 
+    modCompileOnly("me.shedaniel:RoughlyEnoughItems-api-neoforge:${rootProject.roughly_enough_items_version}")
+    modCompileOnly("me.shedaniel:RoughlyEnoughItems-default-plugin-neoforge:${rootProject.roughly_enough_items_version}")
+
+    modRuntimeOnly("me.shedaniel:RoughlyEnoughItems-neoforge:${rootProject.roughly_enough_items_version}")
     modRuntimeOnly("squeek.appleskin:appleskin-neoforge:${rootProject.appleskin_version_neoforge}") {
         exclude module: 'modmenu'
     }

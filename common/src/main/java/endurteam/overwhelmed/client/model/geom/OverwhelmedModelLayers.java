@@ -1,6 +1,6 @@
 /**
  *  Overwhelmed, a Minecraft overhauling and adding new features to the Overworld's surface!<br>
- *  Copyright (C) 2023  Endurteam<br>
+ *  Copyright (C) 2023-2024 Endurteam<br>
  *  <br>
  *  This program is free software: you can redistribute it and/or modify<br>
  *  it under the terms of the GNU General Public License as published by<br>
@@ -44,6 +44,8 @@ public class OverwhelmedModelLayers {
             new ResourceLocation(Overwhelmed.MOD_ID, "snail_liverwort"), "main");
     public static final ModelLayerLocation SNAIL_ROMAN_MODEL_LAYER = new ModelLayerLocation(
             new ResourceLocation(Overwhelmed.MOD_ID, "snail_roman"), "main");
+    public static final ModelLayerLocation MOTH_MODEL_LAYER = new ModelLayerLocation(
+            new ResourceLocation(Overwhelmed.MOD_ID, "moth"), "main");
     public static final ModelLayerLocation PAPER_BULLET_MODEL_LAYER = new ModelLayerLocation(
             new ResourceLocation(Overwhelmed.MOD_ID, "paper_bullet"), "main");
 }

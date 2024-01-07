@@ -27,6 +27,11 @@ dependencies {
 
     common(project(path: ":common", configuration: "namedElements")) { transitive false }
     shadowCommon(project(path: ":common", configuration: "transformProductionForge")) { transitive = false }
+
+    modCompileOnly("me.shedaniel:RoughlyEnoughItems-api-forge:${rootProject.roughly_enough_items_version}")
+    modCompileOnly("me.shedaniel:RoughlyEnoughItems-default-plugin-forge:${rootProject.roughly_enough_items_version}")
+
+    modRuntimeOnly("me.shedaniel:RoughlyEnoughItems-forge:${rootProject.roughly_enough_items_version}")
 }
 
 processResources {

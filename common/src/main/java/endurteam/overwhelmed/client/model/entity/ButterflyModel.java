@@ -1,6 +1,6 @@
 /**
  *  Overwhelmed, a Minecraft overhauling and adding new features to the Overworld's surface!<br>
- *  Copyright (C) 2023  Endurteam<br>
+ *  Copyright (C) 2023-2024 Endurteam<br>
  *  <br>
  *  This program is free software: you can redistribute it and/or modify<br>
  *  it under the terms of the GNU General Public License as published by<br>
@@ -25,7 +25,7 @@ package endurteam.overwhelmed.client.model.entity;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import endurteam.overwhelmed.client.animation.definitions.ButterflyAnimation;
-import endurteam.overwhelmed.world.entity.animal.ButterflyEntity;
+import endurteam.overwhelmed.world.entity.animal.Butterfly;
 import net.minecraft.client.model.HierarchicalModel;
 import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.ModelPart;
@@ -76,7 +76,7 @@ public class ButterflyModel<T extends Entity> extends HierarchicalModel<T> {
 	public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw,
 						  float headPitch) {
 		this.root().getAllParts().forEach(ModelPart::resetPose);
-		this.animate(((ButterflyEntity) entity).flyAnimationState, ButterflyAnimation.BUTTERFLY_FLY, ageInTicks);
+		this.animate(((Butterfly) entity).flyAnimationState, ButterflyAnimation.BUTTERFLY_FLY, ageInTicks);
 	}
 
 	@Override

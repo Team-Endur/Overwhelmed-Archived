@@ -1,0 +1,25 @@
+{
+  "variants": {
+    "mint_cake_bites=0": {
+      "model": "overwhelmed:block/mint_cake"
+    },
+    "mint_cake_bites=1": {
+      "model": "overwhelmed:block/mint_cake_slice1"
+    },
+    "mint_cake_bites=2": {
+      "model": "overwhelmed:block/mint_cake_slice2"
+    },
+    "mint_cake_bites=3": {
+      "model": "overwhelmed:block/mint_cake_slice3"
+    },
+    "mint_cake_bites=4": {
+      "model": "overwhelmed:block/mint_cake_slice4"
+    },
+    "mint_cake_bites=5": {
+      "model": "overwhelmed:block/mint_cake_slice5"
+    },
+    "mint_cake_bites=6": {
+      "model": "overwhelmed:block/mint_cake_slice6"
+    }
+  }
+}

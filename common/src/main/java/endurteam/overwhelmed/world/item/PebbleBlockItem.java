@@ -1,6 +1,6 @@
 /**
  *  Overwhelmed, a Minecraft overhauling and adding new features to the Overworld's surface!<br>
- *  Copyright (C) 2023  Endurteam<br>
+ *  Copyright (C) 2023-2024 Endurteam<br>
  *  <br>
  *  This program is free software: you can redistribute it and/or modify<br>
  *  it under the terms of the GNU General Public License as published by<br>
@@ -21,8 +21,7 @@
 package endurteam.overwhelmed.world.item;
 
 import endurteam.overwhelmed.sounds.OverwhelmedSoundEvents;
-import endurteam.overwhelmed.world.entity.projectile.PebbleEntity;
-import net.minecraft.sounds.SoundEvents;
+import endurteam.overwhelmed.world.entity.projectile.Pebble;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
 import net.minecraft.world.InteractionHand;
@@ -48,10 +47,10 @@ public class PebbleBlockItem extends BlockItem {
                 0.4f / (level.getRandom().nextFloat() * 0.4f + 0.8f));
         player.getCooldowns().addCooldown(this, 20);
         if (!level.isClientSide) {
-            PebbleEntity pebbleEntity = new PebbleEntity(level, player);
-            pebbleEntity.setItem(itemStack);
-            pebbleEntity.shootFromRotation(player, player.getXRot(), player.getYRot(), 0.0f, 1.5f, 1.0f);
-            level.addFreshEntity(pebbleEntity);
+            Pebble pebble = new Pebble(level, player);
+            pebble.setItem(itemStack);
+            pebble.shootFromRotation(player, player.getXRot(), player.getYRot(), 0.0f, 1.5f, 1.0f);
+            level.addFreshEntity(pebble);
         }
         player.awardStat(Stats.ITEM_USED.get(this));
         if (!player.getAbilities().instabuild) {

@@ -85,8 +85,21 @@ public class OverwhelmedNeoForgeItems {
                         .stacksTo(1)
                         .rarity(Rarity.COMMON)
                         .food(OverwhelmedFoods.SNAIL_STEW)));
+        helper.register(new ResourceLocation(Overwhelmed.MOD_ID, "vanilla_cookie"),
+                VANILLA_COOKIE = new Item(new Item.Properties()
+                        .stacksTo(64)
+                        .rarity(Rarity.COMMON)
+                        .food(OverwhelmedFoods.VANILLA_COOKIE)));
+        MINT_CAKE = registerGenericBlockItem("mint_cake", OverwhelmedBlocks.MINT_CAKE, helper);
+        VANILLA_CAKE = registerGenericBlockItem("vanilla_cake", OverwhelmedBlocks.VANILLA_CAKE, helper);
+        helper.register(new ResourceLocation(Overwhelmed.MOD_ID, "vanilla_ice_cream"),
+                VANILLA_ICE_CREAM = new BowlFoodItem(new Item.Properties()
+                        .stacksTo(1)
+                        .rarity(Rarity.COMMON)
+                        .food(OverwhelmedFoods.VANILLA_ICE_CREAM)));
         GOO_BALL = registerGenericItem("goo_ball", 64, Rarity.COMMON, helper);
         SNAIL_SHELL = registerGenericItem("snail_shell", 64, Rarity.COMMON, helper);
+        VANILLA_BEANS = registerGenericItem("vanilla_beans", 64, Rarity.COMMON, helper);
         helper.register(new ResourceLocation(Overwhelmed.MOD_ID,
                         "butterfly_spawn_egg"), BUTTERFLY_SPAWN_EGG =
                 new MultiSpawnEggItem(new Item.Properties(), (random) -> {

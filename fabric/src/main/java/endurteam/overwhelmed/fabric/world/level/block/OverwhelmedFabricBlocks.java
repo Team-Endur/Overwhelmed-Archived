@@ -159,6 +159,21 @@ public class OverwhelmedFabricBlocks {
                         .noOcclusion()
                         .jumpFactor(0.5f)
                         .speedFactor(0.4f)));
+        OverwhelmedBlocks.MINT_CAKE = Registry.register(BuiltInRegistries.BLOCK,
+                new ResourceLocation(Overwhelmed.MOD_ID, "mint_cake"),
+                new MintCakeBlock(BlockBehaviour.Properties.of()
+                        .forceSolidOn()
+                        .strength(0.5f)
+                        .sound(SoundType.WOOL)
+                        .pushReaction(PushReaction.DESTROY)));
+        OverwhelmedBlocks.VANILLA_CAKE = Registry.register(BuiltInRegistries.BLOCK,
+                new ResourceLocation(Overwhelmed.MOD_ID, "vanilla_cake"),
+                new VanillaCakeBlock(BlockBehaviour.Properties.of()
+                        .forceSolidOn()
+                        .strength(0.5f)
+                        .sound(SoundType.WOOL)
+                        .pushReaction(PushReaction.DESTROY)));
+
     }
     private static Block registerGenericBlock(String name,
                                               Block.Properties properties) {

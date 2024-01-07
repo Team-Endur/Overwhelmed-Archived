@@ -59,16 +59,13 @@ public class OverwhelmedFabricItems {
         WIDOW = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Overwhelmed.MOD_ID, "widow"),
                 new DoubleHighBlockItem(OverwhelmedBlocks.WIDOW,
                         new Item.Properties()));
-        GOLD_BEAD = registerGenericBlockItem("gold_bead",
-                OverwhelmedBlocks.GOLD_BEAD);
-        ICE_CUBE  = registerGenericBlockItem("ice_cube",
-                OverwhelmedBlocks.ICE_CUBE);
+        GOLD_BEAD = registerGenericBlockItem("gold_bead", OverwhelmedBlocks.GOLD_BEAD);
+        ICE_CUBE  = registerGenericBlockItem("ice_cube", OverwhelmedBlocks.ICE_CUBE);
         PEBBLE = Registry.register(BuiltInRegistries.ITEM,
                 new ResourceLocation(Overwhelmed.MOD_ID, "pebble"),
                 new PebbleBlockItem(OverwhelmedBlocks.PEBBLE,
                         new Item.Properties()));
-        GOO_BLOCK = registerGenericBlockItem("goo_block",
-                OverwhelmedBlocks.GOO_BLOCK);
+        GOO_BLOCK = registerGenericBlockItem("goo_block", OverwhelmedBlocks.GOO_BLOCK);
         BLOWGUN = Registry.register(BuiltInRegistries.ITEM,
                 new ResourceLocation(Overwhelmed.MOD_ID, "blowgun"),
                 new BlowgunItem(new Item.Properties()
@@ -94,8 +91,23 @@ public class OverwhelmedFabricItems {
                         .stacksTo(1)
                         .rarity(Rarity.COMMON)
                         .food(OverwhelmedFoods.SNAIL_STEW)));
+        VANILLA_COOKIE = Registry.register(BuiltInRegistries.ITEM,
+                new ResourceLocation(Overwhelmed.MOD_ID, "vanilla_cookie"),
+                new Item(new Item.Properties()
+                        .stacksTo(64)
+                        .rarity(Rarity.COMMON)
+                        .food(OverwhelmedFoods.VANILLA_COOKIE)));
+        MINT_CAKE = registerGenericBlockItem("mint_cake", OverwhelmedBlocks.MINT_CAKE);
+        VANILLA_CAKE = registerGenericBlockItem("vanilla_cake", OverwhelmedBlocks.VANILLA_CAKE);
+        VANILLA_ICE_CREAM = Registry.register(BuiltInRegistries.ITEM,
+                new ResourceLocation(Overwhelmed.MOD_ID, "vanilla_ice_cream"),
+                new BowlFoodItem(new Item.Properties()
+                        .stacksTo(1)
+                        .rarity(Rarity.COMMON)
+                        .food(OverwhelmedFoods.VANILLA_ICE_CREAM)));
         GOO_BALL = registerGenericItem("goo_ball", 64, Rarity.COMMON);
         SNAIL_SHELL = registerGenericItem("snail_shell", 64, Rarity.COMMON);
+        VANILLA_BEANS = registerGenericItem("vanilla_beans", 64, Rarity.COMMON);
         BUTTERFLY_SPAWN_EGG = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Overwhelmed.MOD_ID,
                         "butterfly_spawn_egg"), new MultiSpawnEggItem(new Item.Properties(), (random) -> {
                     switch (random.nextIntBetweenInclusive(1, 6)) {

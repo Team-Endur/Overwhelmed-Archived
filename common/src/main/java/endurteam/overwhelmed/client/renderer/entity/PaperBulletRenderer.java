@@ -1,6 +1,6 @@
 /**
  *  Overwhelmed, a Minecraft overhauling and adding new features to the Overworld's surface!<br>
- *  Copyright (C) 2023  Endurteam<br>
+ *  Copyright (C) 2023-2024 Endurteam<br>
  *  <br>
  *  This program is free software: you can redistribute it and/or modify<br>
  *  it under the terms of the GNU General Public License as published by<br>
@@ -26,7 +26,7 @@ import com.mojang.math.Axis;
 import endurteam.overwhelmed.Overwhelmed;
 import endurteam.overwhelmed.client.model.entity.PaperBulletModel;
 import endurteam.overwhelmed.client.model.geom.OverwhelmedModelLayers;
-import endurteam.overwhelmed.world.entity.projectile.PaperBulletEntity;
+import endurteam.overwhelmed.world.entity.projectile.PaperBullet;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.renderer.MultiBufferSource;
@@ -35,15 +35,14 @@ import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
-import net.minecraft.world.entity.LivingEntity;
 import org.jetbrains.annotations.NotNull;
 
 @Environment(value= EnvType.CLIENT)
 public class PaperBulletRenderer
-        extends EntityRenderer<PaperBulletEntity> {
+        extends EntityRenderer<PaperBullet> {
     private static final ResourceLocation TEXTURE =
             new ResourceLocation(Overwhelmed.MOD_ID, "textures/entity/paper_bullet.png");
-    private final PaperBulletModel<PaperBulletEntity> model;
+    private final PaperBulletModel<PaperBullet> model;
     private final float SCALE = 1.0f;
 
     public PaperBulletRenderer(EntityRendererProvider.Context context) {
@@ -52,7 +51,7 @@ public class PaperBulletRenderer
     }
 
     @Override
-    public void render(PaperBulletEntity entity, float f, float g, PoseStack poseStack,
+    public void render(PaperBullet entity, float f, float g, PoseStack poseStack,
                        MultiBufferSource multiBufferSource, int i) {
         poseStack.pushPose();
         poseStack.mulPose(Axis.XP.rotationDegrees(Mth.lerp(g * 4.0f, 0.0f, 360.0f)));
@@ -65,7 +64,7 @@ public class PaperBulletRenderer
     }
 
     @Override
-    public @NotNull ResourceLocation getTextureLocation(PaperBulletEntity var1) {
+    public @NotNull ResourceLocation getTextureLocation(PaperBullet var1) {
         return TEXTURE;
     }
 }

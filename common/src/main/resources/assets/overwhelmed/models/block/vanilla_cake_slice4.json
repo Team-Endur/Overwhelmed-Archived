@@ -1,0 +1,23 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"particle": "overwhelmed:block/vanilla_cake_side",
+		"bottom": "overwhelmed:block/vanilla_cake_bottom",
+		"top": "overwhelmed:block/vanilla_cake_top",
+		"side": "overwhelmed:block/vanilla_cake_side",
+		"inside": "overwhelmed:block/vanilla_cake_inner"
+	},
+	"elements": [
+		{	"from": [11.6, 0, 2],
+			"to": [14, 12, 14],
+			"faces": {
+				"down":  { "texture": "#bottom", "cullface": "down" },
+				"up":    { "texture": "#top" },
+				"north": { "texture": "#side" },
+				"south": { "texture": "#side" },
+				"west":  { "texture": "#inside" },
+				"east":  { "texture": "#side" }
+			}
+		}
+	]
+}

@@ -1,6 +1,6 @@
 /**
  *  Overwhelmed, a Minecraft overhauling and adding new features to the Overworld's surface!<br>
- *  Copyright (C) 2023  Endurteam<br>
+ *  Copyright (C) 2023-2024 Endurteam<br>
  *  <br>
  *  This program is free software: you can redistribute it and/or modify<br>
  *  it under the terms of the GNU General Public License as published by<br>
@@ -24,7 +24,7 @@ import endurteam.overwhelmed.Overwhelmed;
 import endurteam.overwhelmed.client.model.entity.ButterflyModel;
 import endurteam.overwhelmed.client.model.geom.OverwhelmedModelLayers;
 import endurteam.overwhelmed.world.entity.OverwhelmedEntityTypes;
-import endurteam.overwhelmed.world.entity.animal.ButterflyEntity;
+import endurteam.overwhelmed.world.entity.animal.Butterfly;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
@@ -34,7 +34,7 @@ import net.minecraft.world.entity.EntityType;
 import org.jetbrains.annotations.NotNull;
 
 @Environment(EnvType.CLIENT)
-public class ButterflyRenderer extends MobRenderer<ButterflyEntity, ButterflyModel<ButterflyEntity>> {
+public class ButterflyRenderer extends MobRenderer<Butterfly, ButterflyModel<Butterfly>> {
     private static final ResourceLocation SLEEPY_TEXTURE =
             new ResourceLocation(Overwhelmed.MOD_ID, "textures/entity/butterfly/butterfly_sleepy.png");
     private static final ResourceLocation CABBAGE_TEXTURE =
@@ -53,7 +53,7 @@ public class ButterflyRenderer extends MobRenderer<ButterflyEntity, ButterflyMod
     }
 
     @Override
-    public @NotNull ResourceLocation getTextureLocation(ButterflyEntity var1) {
+    public @NotNull ResourceLocation getTextureLocation(Butterfly var1) {
         EntityType<?> type = var1.getType();
         if (OverwhelmedEntityTypes.CABBAGE_BUTTERFLY.equals(type)) {
             return CABBAGE_TEXTURE;

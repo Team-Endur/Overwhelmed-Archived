@@ -1,6 +1,6 @@
 /**
  *  Overwhelmed, a Minecraft overhauling and adding new features to the Overworld's surface!<br>
- *  Copyright (C) 2023  Endurteam<br>
+ *  Copyright (C) 2023-2024 Endurteam<br>
  *  <br>
  *  This program is free software: you can redistribute it and/or modify<br>
  *  it under the terms of the GNU General Public License as published by<br>
@@ -24,7 +24,7 @@ import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.math.Axis;
 import endurteam.overwhelmed.Overwhelmed;
-import endurteam.overwhelmed.world.entity.projectile.PebbleEntity;
+import endurteam.overwhelmed.world.entity.projectile.Pebble;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.renderer.MultiBufferSource;
@@ -40,7 +40,7 @@ import org.joml.Matrix4f;
 
 @Environment(value=EnvType.CLIENT)
 public class PebbleRenderer
-        extends EntityRenderer<PebbleEntity> {
+        extends EntityRenderer<Pebble> {
     private static final ResourceLocation TEXTURE_LOCATION = new ResourceLocation(
             Overwhelmed.MOD_ID, "textures/item/pebble.png");
     private static final RenderType RENDER_TYPE = RenderType.entityCutoutNoCull(TEXTURE_LOCATION);
@@ -50,12 +50,12 @@ public class PebbleRenderer
     }
 
     @Override
-    protected int getBlockLightLevel(PebbleEntity thrownPebble, BlockPos blockPos) {
+    protected int getBlockLightLevel(Pebble thrownPebble, BlockPos blockPos) {
         return 15;
     }
 
     @Override
-    public void render(PebbleEntity paperBullet, float f, float g, PoseStack poseStack,
+    public void render(Pebble paperBullet, float f, float g, PoseStack poseStack,
                        MultiBufferSource multiBufferSource, int i) {
         poseStack.pushPose();
         poseStack.scale(1.0f, 1.0f, 1.0f);
@@ -81,7 +81,7 @@ public class PebbleRenderer
     }
 
     @Override
-    public @NotNull ResourceLocation getTextureLocation(PebbleEntity paperBullet) {
+    public @NotNull ResourceLocation getTextureLocation(Pebble paperBullet) {
         return TEXTURE_LOCATION;
     }
 }

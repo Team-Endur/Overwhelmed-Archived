@@ -33,14 +33,20 @@ dependencies {
     common(project(path: ":common", configuration: "namedElements")) { transitive false }
     shadowCommon(project(path: ":common", configuration: "transformProductionFabric")) { transitive false }
 
+    modCompileOnly("me.shedaniel:RoughlyEnoughItems-api-fabric:${rootProject.roughly_enough_items_version}")
+    modCompileOnly("me.shedaniel:RoughlyEnoughItems-default-plugin-fabric:${rootProject.roughly_enough_items_version}")
+
     modRuntimeOnly("com.terraformersmc:modmenu:${rootProject.mod_menu_version}"){
-        exclude module: 'fabric-api'
+        exclude(module: 'fabric-api')
     }
     modRuntimeOnly("squeek.appleskin:appleskin-fabric:${rootProject.appleskin_version_fabric}") {
-        exclude module: 'fabric-api'
-        exclude module: 'modmenu'
+        exclude(module: 'fabric-api')
+        exclude(module: 'modmenu')
     }
     modRuntimeOnly("me.shedaniel.cloth:cloth-config-fabric:${rootProject.cloth_config_version}") {
+        exclude(group: "net.fabricmc.fabric-api")
+    }
+    modRuntimeOnly("me.shedaniel:RoughlyEnoughItems-fabric:${rootProject.roughly_enough_items_version}") {
         exclude(group: "net.fabricmc.fabric-api")
     }
 }

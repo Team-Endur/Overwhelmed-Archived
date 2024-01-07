@@ -1,6 +1,6 @@
 /**
  *  Overwhelmed, a Minecraft overhauling and adding new features to the Overworld's surface!<br>
- *  Copyright (C) 2023  Endurteam<br>
+ *  Copyright (C) 2023-2024 Endurteam<br>
  *  <br>
  *  This program is free software: you can redistribute it and/or modify<br>
  *  it under the terms of the GNU General Public License as published by<br>
@@ -48,8 +48,31 @@ public class OverwhelmedItems {
     public static Item SNAIL;
     public static Item COOKED_SNAIL;
     public static Item SNAIL_STEW;
+    public static Item VANILLA_COOKIE;
+    public static Item MINT_CAKE;
+    public static Item VANILLA_CAKE;
+    public static Item VANILLA_ICE_CREAM;
     public static Item GOO_BALL;
     public static Item SNAIL_SHELL;
+    public static Item VANILLA_BEANS;
+    public static BlockItem WILLOW_PLANKS;
+    public static BlockItem WILLOW_LOG;
+    public static BlockItem STRIPPED_WILLOW_LOG;
+    public static BlockItem STRIPPED_WILLOW_WOOD;
+    public static BlockItem WILLOW_WOOD;
+    public static BlockItem WILLOW_SLAB;
+    public static BlockItem WILLOW_FENCE;
+    public static BlockItem WILLOW_STAIRS;
+    public static BlockItem WILLOW_BUTTON;
+    public static BlockItem WILLOW_PRESSURE_PLATE;
+    public static DoubleHighBlockItem WILLOW_DOOR;
+    public static BlockItem WILLOW_TRAPDOOR;
+    public static BlockItem WILLOW_FENCE_GATE;
+    public static BoatItem WILLOW_BOAT;
+    public static BoatItem WILLOW_CHEST_BOAT;
+    public static SignItem WILLOW_SIGN;
+    public static HangingSignItem WILLOW_HANGING_SIGN;
+
     public static MultiSpawnEggItem BUTTERFLY_SPAWN_EGG;
     public static MultiSpawnEggItem SNAIL_SPAWN_EGG;
 }

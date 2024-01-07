@@ -1,6 +1,6 @@
 /**
  *  Overwhelmed, a Minecraft overhauling and adding new features to the Overworld's surface!<br>
- *  Copyright (C) 2023  Endurteam<br>
+ *  Copyright (C) 2023-2024 Endurteam<br>
  *  <br>
  *  This program is free software: you can redistribute it and/or modify<br>
  *  it under the terms of the GNU General Public License as published by<br>
@@ -50,6 +50,25 @@ public class OverwhelmedBlocks {
     public static FlowerPotBlock POTTED_BELL_SUNFLOWER;
     public static TallFlowerBlock WIDOW;
     public static GooBlock GOO_BLOCK;
+    public static MintCakeBlock MINT_CAKE;
+    public static VanillaCakeBlock VANILLA_CAKE;
+    public static Block WILLOW_PLANK;
+    public static RotatedPillarBlock WILLOW_LOG;
+    public static RotatedPillarBlock STRIPPED_WILLOW_LOG;
+    public static RotatedPillarBlock WILLOW_WOOD;
+    public static RotatedPillarBlock STRIPPED_WILLOW_WOOD;
+    public static StandingSignBlock WILLOW_SIGN;
+    public static WallSignBlock WILLOW_WALL_SIGN;
+    public static CeilingHangingSignBlock WILLOW_HANGING_SIGN;
+    public static WallHangingSignBlock WILLOW_WALL_HANGING_SIGN;
+    public static PressurePlateBlock WILLOW_PRESSURE_PLATE;
+    public static TrapDoorBlock WILLOW_TRAPDOOR;
+    public static StairBlock WILLOW_STAIRS;
+    public static ButtonBlock WILLOW_BUTTON;
+    public static SlabBlock WILLOW_SLAB;
+    public static FenceGateBlock WILLOW_FENCE_GATE;
+    public static FenceBlock WILLOW_FENCE;
+    public static DoorBlock WILLOW_DOOR;
 
 
 }
