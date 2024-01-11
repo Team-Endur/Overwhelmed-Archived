@@ -5,6 +5,13 @@
     "overwhelmed:snail_shell_brick_slab",
     "overwhelmed:snail_shell_brick_stairs",
     "overwhelmed:snail_shell_brick_wall",
-    "overwhelmed:chiseled_snail_shell_bricks"
+    "overwhelmed:chiseled_snail_shell_bricks",
+    "overwhelmed:black_granite",
+    "overwhelmed:black_granite_stairs",
+    "overwhelmed:black_granite_slab",
+    "overwhelmed:black_granite_wall",
+    "overwhelmed:polished_black_granite",
+    "overwhelmed:polished_black_granite_stairs",
+    "overwhelmed:polished_black_granite_slab"
   ]
 }

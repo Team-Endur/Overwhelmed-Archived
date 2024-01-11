@@ -32,6 +32,27 @@ public class OverwhelmedFabricItems {
         CHISELED_SNAIL_SHELL_BRICKS = registerGenericBlockItem(
                 "chiseled_snail_shell_bricks",
                 OverwhelmedBlocks.CHISELED_SNAIL_SHELL_BRICKS);
+        BLACK_GRANITE = registerGenericBlockItem(
+                "black_granite",
+                OverwhelmedBlocks.BLACK_GRANITE);
+        BLACK_GRANITE_STAIRS = registerGenericBlockItem(
+                "black_granite_stairs",
+                OverwhelmedBlocks.BLACK_GRANITE_STAIRS);
+        BLACK_GRANITE_SLAB = registerGenericBlockItem(
+                "black_granite_slab",
+                OverwhelmedBlocks.BLACK_GRANITE_SLAB);
+        BLACK_GRANITE_WALL = registerGenericBlockItem(
+                "black_granite_wall",
+                OverwhelmedBlocks.BLACK_GRANITE_WALL);
+        POLISHED_BLACK_GRANITE = registerGenericBlockItem(
+                "polished_black_granite",
+                OverwhelmedBlocks.POLISHED_BLACK_GRANITE);
+        POLISHED_BLACK_GRANITE_STAIRS = registerGenericBlockItem(
+                "polished_black_granite_stairs",
+                OverwhelmedBlocks.POLISHED_BLACK_GRANITE_STAIRS);
+        POLISHED_BLACK_GRANITE_SLAB = registerGenericBlockItem(
+                "polished_black_granite_slab",
+                OverwhelmedBlocks.POLISHED_BLACK_GRANITE_SLAB);
         FLOFF = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Overwhelmed.MOD_ID, "floff"),
                 new BlockItem(OverwhelmedBlocks.FLOFF,
                         new Item.Properties()));

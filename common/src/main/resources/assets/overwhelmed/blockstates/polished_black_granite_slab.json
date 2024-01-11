@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "overwhelmed:block/polished_black_granite_slab"
+    },
+    "type=double": {
+      "model": "overwhelmed:block/polished_black_granite"
+    },
+    "type=top": {
+      "model": "overwhelmed:block/polished_black_granite_slab_top"
+    }
+  }
+}

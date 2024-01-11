@@ -26,6 +26,13 @@ public class OverwhelmedMinecraftForgeCreativeTabs {
                             output.accept(SNAIL_SHELL_BRICK_SLAB);
                             output.accept(SNAIL_SHELL_BRICK_WALL);
                             output.accept(CHISELED_SNAIL_SHELL_BRICKS);
+                            output.accept(BLACK_GRANITE);
+                            output.accept(BLACK_GRANITE_STAIRS);
+                            output.accept(BLACK_GRANITE_SLAB);
+                            output.accept(BLACK_GRANITE_WALL);
+                            output.accept(POLISHED_BLACK_GRANITE);
+                            output.accept(POLISHED_BLACK_GRANITE_STAIRS);
+                            output.accept(POLISHED_BLACK_GRANITE_SLAB);
                             output.accept(FLOFF);
                             output.accept(PAINE);
                             output.accept(PINK_LAVATERA);
@@ -63,6 +70,13 @@ public class OverwhelmedMinecraftForgeCreativeTabs {
             event.accept(SNAIL_SHELL_BRICK_SLAB);
             event.accept(SNAIL_SHELL_BRICK_WALL);
             event.accept(CHISELED_SNAIL_SHELL_BRICKS);
+            event.accept(BLACK_GRANITE);
+            event.accept(BLACK_GRANITE_STAIRS);
+            event.accept(BLACK_GRANITE_SLAB);
+            event.accept(BLACK_GRANITE_WALL);
+            event.accept(POLISHED_BLACK_GRANITE);
+            event.accept(POLISHED_BLACK_GRANITE_STAIRS);
+            event.accept(POLISHED_BLACK_GRANITE_SLAB);
         }
         if (event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS)
         {

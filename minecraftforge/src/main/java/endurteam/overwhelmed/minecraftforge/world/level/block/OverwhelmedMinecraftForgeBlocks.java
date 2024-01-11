@@ -8,6 +8,7 @@ import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -39,6 +40,30 @@ public class OverwhelmedMinecraftForgeBlocks {
                         .mapColor(MapColor.COLOR_BROWN)
                         .strength(3.0f, 12.0f)
                         .requiresCorrectToolForDrops(), helper);
+        OverwhelmedBlocks.BLACK_GRANITE = registerGenericBlock("black_granite",
+                BlockBehaviour.Properties.of()
+                        .mapColor(MapColor.COLOR_BLACK)
+                        .instrument(NoteBlockInstrument.BASEDRUM)
+                        .requiresCorrectToolForDrops()
+                        .strength(1.5F, 6.0F), helper);
+        OverwhelmedBlocks.BLACK_GRANITE_STAIRS = registerGenericStairBlock
+                (OverwhelmedBlocks.BLACK_GRANITE.defaultBlockState(),
+                        "black_granite_stairs", BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.BLACK_GRANITE), helper);
+        OverwhelmedBlocks.BLACK_GRANITE_SLAB = registerGenericSlabBlock("black_granite_slab",
+                BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.BLACK_GRANITE), helper);
+        OverwhelmedBlocks.BLACK_GRANITE_WALL = registerGenericWallBlock("black_granite_wall",
+                BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.BLACK_GRANITE), helper);
+        OverwhelmedBlocks.POLISHED_BLACK_GRANITE = registerGenericBlock("polished_black_granite",
+                BlockBehaviour.Properties.of()
+                        .mapColor(MapColor.COLOR_BLACK)
+                        .instrument(NoteBlockInstrument.BASEDRUM)
+                        .requiresCorrectToolForDrops().strength(1.5F, 6.0F), helper);
+        OverwhelmedBlocks.POLISHED_BLACK_GRANITE_STAIRS = registerGenericStairBlock
+                (OverwhelmedBlocks.POLISHED_BLACK_GRANITE.defaultBlockState(),
+                        "polished_black_granite_stairs",
+                        BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.POLISHED_BLACK_GRANITE), helper);
+        OverwhelmedBlocks.POLISHED_BLACK_GRANITE_SLAB = registerGenericSlabBlock("polished_black_granite_slab",
+                BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.POLISHED_BLACK_GRANITE), helper);
         OverwhelmedBlocks.GOLD_BEAD = registerGenericClotBlock("gold_bead", BlockBehaviour.Properties.of()
                 .mapColor(MapColor.GOLD)
                 .strength(0f, 6f)

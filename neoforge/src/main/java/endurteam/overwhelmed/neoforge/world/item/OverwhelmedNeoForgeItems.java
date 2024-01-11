@@ -31,6 +31,27 @@ public class OverwhelmedNeoForgeItems {
         CHISELED_SNAIL_SHELL_BRICKS = registerGenericBlockItem(
                 "chiseled_snail_shell_bricks",
                 OverwhelmedBlocks.CHISELED_SNAIL_SHELL_BRICKS, helper);
+        BLACK_GRANITE = registerGenericBlockItem(
+                "black_granite",
+                OverwhelmedBlocks.BLACK_GRANITE, helper);
+        BLACK_GRANITE_STAIRS = registerGenericBlockItem(
+                "black_granite_stairs",
+                OverwhelmedBlocks.BLACK_GRANITE_STAIRS, helper);
+        BLACK_GRANITE_SLAB = registerGenericBlockItem(
+                "black_granite_slab",
+                OverwhelmedBlocks.BLACK_GRANITE_SLAB, helper);
+        BLACK_GRANITE_WALL = registerGenericBlockItem(
+                "black_granite_wall",
+                OverwhelmedBlocks.BLACK_GRANITE_WALL, helper);
+        POLISHED_BLACK_GRANITE = registerGenericBlockItem(
+                "polished_black_granite",
+                OverwhelmedBlocks.POLISHED_BLACK_GRANITE, helper);
+        POLISHED_BLACK_GRANITE_STAIRS = registerGenericBlockItem(
+                "polished_black_granite_stairs",
+                OverwhelmedBlocks.POLISHED_BLACK_GRANITE_STAIRS, helper);
+        POLISHED_BLACK_GRANITE_SLAB = registerGenericBlockItem(
+                "polished_black_granite_slab",
+                OverwhelmedBlocks.POLISHED_BLACK_GRANITE_SLAB, helper);
         helper.register(new ResourceLocation(Overwhelmed.MOD_ID, "floff"),
                 FLOFF = new BlockItem(OverwhelmedBlocks.FLOFF,
                         new Item.Properties()));

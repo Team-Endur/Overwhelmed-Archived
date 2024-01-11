@@ -30,6 +30,13 @@ public class OverwhelmedItems {
     public static BlockItem SNAIL_SHELL_BRICK_SLAB;
     public static BlockItem SNAIL_SHELL_BRICK_WALL;
     public static BlockItem CHISELED_SNAIL_SHELL_BRICKS;
+    public static BlockItem BLACK_GRANITE;
+    public static BlockItem BLACK_GRANITE_STAIRS;
+    public static BlockItem BLACK_GRANITE_SLAB;
+    public static BlockItem BLACK_GRANITE_WALL;
+    public static BlockItem POLISHED_BLACK_GRANITE;
+    public static BlockItem POLISHED_BLACK_GRANITE_STAIRS;
+    public static BlockItem POLISHED_BLACK_GRANITE_SLAB;
     public static BlockItem FLOFF;
     public static BlockItem PAINE;
     public static BlockItem PINK_LAVATERA;

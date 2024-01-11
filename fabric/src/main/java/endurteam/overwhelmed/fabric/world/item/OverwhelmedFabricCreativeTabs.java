@@ -26,6 +26,13 @@ public class OverwhelmedFabricCreativeTabs {
                             output.accept(SNAIL_SHELL_BRICK_SLAB);
                             output.accept(SNAIL_SHELL_BRICK_WALL);
                             output.accept(CHISELED_SNAIL_SHELL_BRICKS);
+                            output.accept(BLACK_GRANITE);
+                            output.accept(BLACK_GRANITE_STAIRS);
+                            output.accept(BLACK_GRANITE_SLAB);
+                            output.accept(BLACK_GRANITE_WALL);
+                            output.accept(POLISHED_BLACK_GRANITE);
+                            output.accept(POLISHED_BLACK_GRANITE_STAIRS);
+                            output.accept(POLISHED_BLACK_GRANITE_SLAB);
                             output.accept(FLOFF);
                             output.accept(PAINE);
                             output.accept(PINK_LAVATERA);
@@ -60,6 +67,13 @@ public class OverwhelmedFabricCreativeTabs {
             output.accept(SNAIL_SHELL_BRICK_SLAB);
             output.accept(SNAIL_SHELL_BRICK_WALL);
             output.accept(CHISELED_SNAIL_SHELL_BRICKS);
+            output.addAfter(Items.GRANITE, BLACK_GRANITE);
+            output.addAfter(BLACK_GRANITE, BLACK_GRANITE_STAIRS);
+            output.addAfter(BLACK_GRANITE_STAIRS, BLACK_GRANITE_SLAB);
+            output.addAfter(BLACK_GRANITE_SLAB, BLACK_GRANITE_WALL);
+            output.addAfter(BLACK_GRANITE_WALL, POLISHED_BLACK_GRANITE);
+            output.addAfter(POLISHED_BLACK_GRANITE, POLISHED_BLACK_GRANITE_STAIRS);
+            output.addAfter(POLISHED_BLACK_GRANITE_STAIRS, POLISHED_BLACK_GRANITE_SLAB);
         });
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.NATURAL_BLOCKS).register(output -> {
             output.addAfter(Items.DEAD_BUSH, GOLD_BEAD);
