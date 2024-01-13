@@ -23,48 +23,11 @@ package endurteam.overwhelmed.world.level.levelgen.placement;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.tags.TagKey;
-import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 
 import static endurteam.overwhelmed.Overwhelmed.MOD_ID;
 
 public class OverwhelmedPlacedFeatures {
-
-    public static final TagKey<Biome> FLOWERS_OLD_GROWTH_PINE_TAIGA = TagKey.create(Registries.BIOME,
-            new ResourceLocation(MOD_ID, "flowers_old_growth_pine_taiga"));
-
-    public static final TagKey<Biome> FLOWERS_OLD_GROWTH_SPRUCE_TAIGA = TagKey.create(Registries.BIOME,
-            new ResourceLocation(MOD_ID, "flowers_old_growth_spruce_taiga"));
-
-    public static final TagKey<Biome> FLOWERS_TAIGA = TagKey.create(Registries.BIOME,
-            new ResourceLocation(MOD_ID, "flowers_taiga"));
-
-    public static final TagKey<Biome> GENERATES_BELL_SUNFLOWERS = TagKey.create(Registries.BIOME,
-            new ResourceLocation(MOD_ID, "generates_bell_sunflowers"));
-
-    public static final TagKey<Biome> GENERATES_GOLD_BEADS = TagKey.create(Registries.BIOME,
-            new ResourceLocation(MOD_ID, "generates_gold_beads"));
-    public static final TagKey<Biome> GENERATES_ICE_CUBES = TagKey.create(Registries.BIOME,
-            new ResourceLocation(MOD_ID, "generates_ice_cubes"));
-
-    public static final TagKey<Biome> GENERATES_LAVATERAS = TagKey.create(Registries.BIOME,
-            new ResourceLocation(MOD_ID, "generates_lavateras"));
-
-    public static final TagKey<Biome> GENERATES_PAINES = TagKey.create(Registries.BIOME,
-            new ResourceLocation(MOD_ID, "generates_paines"));
-
-    public static final TagKey<Biome> GENERATES_PEBBLES = TagKey.create(Registries.BIOME,
-            new ResourceLocation(MOD_ID, "generates_pebbles"));
-
-    public static final TagKey<Biome> GENERATES_SNOWDROPS = TagKey.create(Registries.BIOME,
-            new ResourceLocation(MOD_ID, "generates_snowdrops"));
-
-    public static final TagKey<Biome> GENERATES_SOIL = TagKey.create(Registries.BIOME,
-            new ResourceLocation(MOD_ID, "generates_soil"));
-    
-    public static final TagKey<Biome> GENERATES_WIDOWS = TagKey.create(Registries.BIOME,
-            new ResourceLocation(MOD_ID, "generates_widows"));
 
     public static final ResourceKey<PlacedFeature> FLOWER_OLD_GROWTH_PINE_TAIGA = ResourceKey.create(Registries.PLACED_FEATURE,
             new ResourceLocation(MOD_ID, "flower_old_growth_pine_taiga"));

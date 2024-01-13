@@ -59,6 +59,36 @@ public class OverwhelmedBlocks {
     public static GooBlock GOO_BLOCK;
     public static MintCakeBlock MINT_CAKE;
     public static VanillaCakeBlock VANILLA_CAKE;
+    public static CandleMintCakeBlock BLACK_CANDLE_MINT_CAKE;
+    public static CandleVanillaCakeBlock BLACK_CANDLE_VANILLA_CAKE;
+    public static CandleMintCakeBlock BLUE_CANDLE_MINT_CAKE;
+    public static CandleVanillaCakeBlock BLUE_CANDLE_VANILLA_CAKE;
+    public static CandleMintCakeBlock BROWN_CANDLE_MINT_CAKE;
+    public static CandleVanillaCakeBlock BROWN_CANDLE_VANILLA_CAKE;
+    public static CandleMintCakeBlock CANDLE_MINT_CAKE;
+    public static CandleVanillaCakeBlock CANDLE_VANILLA_CAKE;
+    public static CandleMintCakeBlock GRAY_CANDLE_MINT_CAKE;
+    public static CandleVanillaCakeBlock GRAY_CANDLE_VANILLA_CAKE;
+    public static CandleMintCakeBlock GREEN_CANDLE_MINT_CAKE;
+    public static CandleVanillaCakeBlock GREEN_CANDLE_VANILLA_CAKE;
+    public static CandleMintCakeBlock LIGHT_BLUE_CANDLE_MINT_CAKE;
+    public static CandleVanillaCakeBlock LIGHT_BLUE_CANDLE_VANILLA_CAKE;
+    public static CandleMintCakeBlock LIGHT_GRAY_CANDLE_MINT_CAKE;
+    public static CandleVanillaCakeBlock LIGHT_GRAY_CANDLE_VANILLA_CAKE;
+    public static CandleMintCakeBlock LIME_CANDLE_MINT_CAKE;
+    public static CandleVanillaCakeBlock LIME_CANDLE_VANILLA_CAKE;
+    public static CandleMintCakeBlock MAGENTA_CANDLE_MINT_CAKE;
+    public static CandleVanillaCakeBlock MAGENTA_CANDLE_VANILLA_CAKE;
+    public static CandleMintCakeBlock ORANGE_CANDLE_MINT_CAKE;
+    public static CandleVanillaCakeBlock ORANGE_CANDLE_VANILLA_CAKE;
+    public static CandleMintCakeBlock PURPLE_CANDLE_MINT_CAKE;
+    public static CandleVanillaCakeBlock PURPLE_CANDLE_VANILLA_CAKE;
+    public static CandleMintCakeBlock RED_CANDLE_MINT_CAKE;
+    public static CandleVanillaCakeBlock RED_CANDLE_VANILLA_CAKE;
+    public static CandleMintCakeBlock WHITE_CANDLE_MINT_CAKE;
+    public static CandleVanillaCakeBlock WHITE_CANDLE_VANILLA_CAKE;
+    public static CandleMintCakeBlock YELLOW_CANDLE_MINT_CAKE;
+    public static CandleVanillaCakeBlock YELLOW_CANDLE_VANILLA_CAKE;
     public static Block WILLOW_PLANK;
     public static RotatedPillarBlock WILLOW_LOG;
     public static RotatedPillarBlock STRIPPED_WILLOW_LOG;
@@ -76,6 +106,5 @@ public class OverwhelmedBlocks {
     public static FenceGateBlock WILLOW_FENCE_GATE;
     public static FenceBlock WILLOW_FENCE;
     public static DoorBlock WILLOW_DOOR;
-
 
 }

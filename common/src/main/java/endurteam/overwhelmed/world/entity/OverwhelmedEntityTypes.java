@@ -54,33 +54,4 @@ public class OverwhelmedEntityTypes {
 
     public static EntityType<PaperBullet> PAPER_BULLET;
     public static EntityType<Pebble> PEBBLE;
-
-    public static final TagKey<Biome> SPAWNS_FLAT_SNAILS = TagKey.create(Registries.BIOME,
-            new ResourceLocation(MOD_ID, "spawns_flat_snails"));
-    public static final TagKey<Biome> SPAWNS_GARDEN_SNAILS = TagKey.create(Registries.BIOME,
-            new ResourceLocation(MOD_ID, "spawns_garden_snails"));
-    public static final TagKey<Biome> SPAWNS_GLASS_SNAILS = TagKey.create(Registries.BIOME,
-            new ResourceLocation(MOD_ID, "spawns_glass_snails"));
-    public static final TagKey<Biome> SPAWNS_LIMESTONE_SNAILS = TagKey.create(Registries.BIOME,
-            new ResourceLocation(MOD_ID, "spawns_limestone_snails"));
-    public static final TagKey<Biome> SPAWNS_LIVERWORT_SNAILS = TagKey.create(Registries.BIOME,
-            new ResourceLocation(MOD_ID, "spawns_liverwort_snails"));
-    public static final TagKey<Biome> SPAWNS_ROMAN_SNAILS = TagKey.create(Registries.BIOME,
-            new ResourceLocation(MOD_ID, "spawns_roman_snails"));
-
-    public static final TagKey<Biome> SPAWNS_CABBAGE_BUTTERFLIES = TagKey.create(Registries.BIOME,
-            new ResourceLocation(MOD_ID, "spawns_cabbage_butterflies"));
-    public static final TagKey<Biome> SPAWNS_CHERRY_BUTTERFLIES = TagKey.create(Registries.BIOME,
-            new ResourceLocation(MOD_ID, "spawns_cherry_butterflies"));
-    public static final TagKey<Biome> SPAWNS_LIVERWORT_BUTTERFLIES = TagKey.create(Registries.BIOME,
-            new ResourceLocation(MOD_ID, "spawns_liverwort_butterflies"));
-    public static final TagKey<Biome> SPAWNS_MONARCH_BUTTERFLIES = TagKey.create(Registries.BIOME,
-            new ResourceLocation(MOD_ID, "spawns_monarch_butterflies"));
-    public static final TagKey<Biome> SPAWNS_MORPHO_BUTTERFLIES = TagKey.create(Registries.BIOME,
-            new ResourceLocation(MOD_ID, "spawns_morpho_butterflies"));
-    public static final TagKey<Biome> SPAWNS_SLEEPY_BUTTERFLIES = TagKey.create(Registries.BIOME,
-            new ResourceLocation(MOD_ID, "spawns_sleepy_butterflies"));
-
-    public static final TagKey<Biome> SPAWNS_MOTHS = TagKey.create(Registries.BIOME,
-            new ResourceLocation(MOD_ID, "spawns_moths"));
 }
