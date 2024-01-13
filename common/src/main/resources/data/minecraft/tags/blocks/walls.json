@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "overwhelmed:snail_shell_brick_wall"
+    "overwhelmed:snail_shell_brick_wall",
+    "overwhelmed:black_granite_wall"
   ]
 }
