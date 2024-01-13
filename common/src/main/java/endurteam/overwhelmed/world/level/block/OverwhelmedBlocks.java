@@ -30,12 +30,12 @@ public class OverwhelmedBlocks {
     public static WallBlock SNAIL_SHELL_BRICK_WALL;
     public static Block CHISELED_SNAIL_SHELL_BRICKS;
     public static Block BLACK_GRANITE;
-    public static Block BLACK_GRANITE_STAIRS;
-    public static Block BLACK_GRANITE_SLAB;
-    public static Block BLACK_GRANITE_WALL;
+    public static StairBlock BLACK_GRANITE_STAIRS;
+    public static SlabBlock BLACK_GRANITE_SLAB;
+    public static WallBlock BLACK_GRANITE_WALL;
     public static Block POLISHED_BLACK_GRANITE;
-    public static Block POLISHED_BLACK_GRANITE_STAIRS;
-    public static Block POLISHED_BLACK_GRANITE_SLAB;
+    public static StairBlock POLISHED_BLACK_GRANITE_STAIRS;
+    public static SlabBlock POLISHED_BLACK_GRANITE_SLAB;
     public static ClotBlock GOLD_BEAD;
     public static ClotBlock ICE_CUBE;
     public static PebbleBlock PEBBLE;
