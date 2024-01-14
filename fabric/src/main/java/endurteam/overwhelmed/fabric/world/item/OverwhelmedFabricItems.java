@@ -126,8 +126,15 @@ public class OverwhelmedFabricItems {
                         .stacksTo(1)
                         .rarity(Rarity.COMMON)
                         .food(OverwhelmedFoods.VANILLA_ICE_CREAM)));
+        PEPPERMINT = Registry.register(BuiltInRegistries.ITEM,
+                new ResourceLocation(Overwhelmed.MOD_ID, "peppermint"),
+                new Item(new Item.Properties()
+                        .stacksTo(64)
+                        .rarity(Rarity.COMMON)
+                        .food(OverwhelmedFoods.PEPPERMINT)));
         GOO_BALL = registerGenericItem("goo_ball", 64, Rarity.COMMON);
         SNAIL_SHELL = registerGenericItem("snail_shell", 64, Rarity.COMMON);
+        MINT_LEAF = registerGenericItem("mint_leaf", 64, Rarity.COMMON);
         VANILLA_BEANS = registerGenericItem("vanilla_beans", 64, Rarity.COMMON);
         BUTTERFLY_SPAWN_EGG = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Overwhelmed.MOD_ID,
                         "butterfly_spawn_egg"), new MultiSpawnEggItem(new Item.Properties(), (random) -> {

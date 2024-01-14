@@ -37,7 +37,13 @@ public class OverwhelmedFoods {
     public static final FoodProperties VANILLA_COOKIE =
             new FoodProperties.Builder().nutrition(4).saturationMod(0.4f).build();
 
+    public static final FoodProperties MINT_ICE_CREAM =
+            new FoodProperties.Builder().nutrition(6).saturationMod(1.2f).build();
+
     public static final FoodProperties VANILLA_ICE_CREAM =
             new FoodProperties.Builder().nutrition(6).saturationMod(1.2f).build();
+
+    public static final FoodProperties PEPPERMINT =
+            new FoodProperties.Builder().nutrition(2).saturationMod(0.6f).build();
 
 }

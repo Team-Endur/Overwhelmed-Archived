@@ -55,8 +55,10 @@ public class OverwhelmedNeoForgeCreativeTabs {
                             output.accept(MINT_CAKE);
                             output.accept(VANILLA_CAKE);
                             output.accept(VANILLA_ICE_CREAM);
+                            output.accept(PEPPERMINT);
                             output.accept(GOO_BALL);
                             output.accept(SNAIL_SHELL);
+                            output.accept(MINT_LEAF);
                             output.accept(VANILLA_BEANS);
                             output.accept(BUTTERFLY_SPAWN_EGG);
                             output.accept(SNAIL_SPAWN_EGG);
@@ -110,11 +112,13 @@ public class OverwhelmedNeoForgeCreativeTabs {
             event.accept(MINT_CAKE);
             event.accept(VANILLA_CAKE);
             event.accept(VANILLA_ICE_CREAM);
+            event.accept(PEPPERMINT);
         }
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS)
         {
             event.accept(GOO_BALL);
             event.accept(SNAIL_SHELL);
+            event.accept(MINT_LEAF);
             event.accept(VANILLA_BEANS);
         };
         if (event.getTabKey() == CreativeModeTabs.SPAWN_EGGS)

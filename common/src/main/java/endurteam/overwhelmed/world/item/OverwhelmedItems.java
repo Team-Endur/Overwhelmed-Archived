@@ -59,8 +59,10 @@ public class OverwhelmedItems {
     public static Item MINT_CAKE;
     public static Item VANILLA_CAKE;
     public static Item VANILLA_ICE_CREAM;
+    public static Item PEPPERMINT;
     public static Item GOO_BALL;
     public static Item SNAIL_SHELL;
+    public static Item MINT_LEAF;
     public static Item VANILLA_BEANS;
     public static BlockItem WILLOW_PLANKS;
     public static BlockItem WILLOW_LOG;

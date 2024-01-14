@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "overwhelmed:block/mint_stage1"
+  }
+}

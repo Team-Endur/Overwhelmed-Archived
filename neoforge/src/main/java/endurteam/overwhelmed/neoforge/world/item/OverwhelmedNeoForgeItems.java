@@ -118,8 +118,14 @@ public class OverwhelmedNeoForgeItems {
                         .stacksTo(1)
                         .rarity(Rarity.COMMON)
                         .food(OverwhelmedFoods.VANILLA_ICE_CREAM)));
+        helper.register(new ResourceLocation(Overwhelmed.MOD_ID, "vanilla_ice_cream"),
+                PEPPERMINT = new Item(new Item.Properties()
+                        .stacksTo(64)
+                        .rarity(Rarity.COMMON)
+                        .food(OverwhelmedFoods.PEPPERMINT)));
         GOO_BALL = registerGenericItem("goo_ball", 64, Rarity.COMMON, helper);
         SNAIL_SHELL = registerGenericItem("snail_shell", 64, Rarity.COMMON, helper);
+        MINT_LEAF = registerGenericItem("mint_leaf", 64, Rarity.COMMON, helper);
         VANILLA_BEANS = registerGenericItem("vanilla_beans", 64, Rarity.COMMON, helper);
         helper.register(new ResourceLocation(Overwhelmed.MOD_ID,
                         "butterfly_spawn_egg"), BUTTERFLY_SPAWN_EGG =
