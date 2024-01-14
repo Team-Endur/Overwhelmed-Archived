@@ -45,6 +45,7 @@ public class OverwhelmedNeoForgeCreativeTabs {
                             output.accept(GOLD_BEAD);
                             output.accept(ICE_CUBE);
                             output.accept(PEBBLE);
+                            output.accept(MINT_SEEDS);
                             output.accept(GOO_BLOCK);
                             output.accept(BLOWGUN);
                             output.accept(PAPER_BULLET);
@@ -95,6 +96,7 @@ public class OverwhelmedNeoForgeCreativeTabs {
             event.accept(BELL_SUNFLOWER);
             event.accept(WIDOW);
             event.accept(SOIL);
+            event.accept(MINT_SEEDS);
             event.accept(GOO_BLOCK);
         }
         if (event.getTabKey() == CreativeModeTabs.COMBAT)

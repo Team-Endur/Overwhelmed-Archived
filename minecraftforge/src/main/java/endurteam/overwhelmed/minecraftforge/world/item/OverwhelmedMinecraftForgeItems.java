@@ -84,6 +84,7 @@ public class OverwhelmedMinecraftForgeItems {
         helper.register(new ResourceLocation(Overwhelmed.MOD_ID, "pebble"),
                 PEBBLE = new PebbleBlockItem(OverwhelmedBlocks.PEBBLE,
                         new Item.Properties()));
+        MINT_SEEDS = registerGenericBlockItem("mint_seeds", OverwhelmedBlocks.MINT, helper);
         GOO_BLOCK = registerGenericBlockItem("goo_block", OverwhelmedBlocks.GOO_BLOCK, helper);
         helper.register(new ResourceLocation(Overwhelmed.MOD_ID, "blowgun"),
                 BLOWGUN = new BlowgunItem(new Item.Properties()

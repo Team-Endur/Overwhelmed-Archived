@@ -45,6 +45,7 @@ public class OverwhelmedFabricCreativeTabs {
                             output.accept(GOLD_BEAD);
                             output.accept(ICE_CUBE);
                             output.accept(PEBBLE);
+                            output.accept(MINT_SEEDS);
                             output.accept(GOO_BLOCK);
                             output.accept(BLOWGUN);
                             output.accept(PAPER_BULLET);
@@ -91,6 +92,7 @@ public class OverwhelmedFabricCreativeTabs {
             output.addAfter(SNOWDROP, BELL_SUNFLOWER);
             output.addAfter(BELL_SUNFLOWER, WIDOW);
             output.accept(SOIL);
+            output.accept(MINT_SEEDS);
             output.accept(GOO_BLOCK);
 
         });

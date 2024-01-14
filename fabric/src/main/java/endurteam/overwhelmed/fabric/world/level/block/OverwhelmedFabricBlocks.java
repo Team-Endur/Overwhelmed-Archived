@@ -173,6 +173,7 @@ public class OverwhelmedFabricBlocks {
         OverwhelmedBlocks.POTTED_BELL_SUNFLOWER = registerGenericFlowerPotBlock(OverwhelmedBlocks.BELL_SUNFLOWER,
                 "potted_bell_sunflower",
                 BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT));
+        OverwhelmedBlocks.MINT = registerGenericCropBlock("mint", BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT));
         OverwhelmedBlocks.GOO_BLOCK = Registry.register(BuiltInRegistries.BLOCK,
                 new ResourceLocation(Overwhelmed.MOD_ID, "goo_block"),
                 new GooBlock(BlockBehaviour.Properties.of()
@@ -250,6 +251,14 @@ public class OverwhelmedFabricBlocks {
         return Registry.register(BuiltInRegistries.BLOCK, new ResourceLocation(Overwhelmed.MOD_ID, name),
                 new TallFlowerBlock(properties));
     }
+
+    @SuppressWarnings("SameParameterValue")
+    private static CropBlock registerGenericCropBlock(String name,
+                                                                  Block.Properties properties) {
+        return Registry.register(BuiltInRegistries.BLOCK, new ResourceLocation(Overwhelmed.MOD_ID, name),
+                new CropBlock(properties));
+    }
+
     private static ClotBlock registerGenericClotBlock(String name,
                                                       Block.Properties properties) {
         return Registry.register(BuiltInRegistries.BLOCK, new ResourceLocation(Overwhelmed.MOD_ID, name),

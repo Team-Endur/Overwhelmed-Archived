@@ -174,6 +174,8 @@ public class OverwhelmedMinecraftForgeBlocks {
         OverwhelmedBlocks.POTTED_BELL_SUNFLOWER = registerGenericFlowerPotBlock(OverwhelmedBlocks.BELL_SUNFLOWER,
                 "potted_bell_sunflower",
                 BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT), helper);
+        helper.register(new ResourceLocation(Overwhelmed.MOD_ID, "mint"),
+                OverwhelmedBlocks.MINT = new CropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT)));
         helper.register(new ResourceLocation(Overwhelmed.MOD_ID, "goo_block"),
                 OverwhelmedBlocks.GOO_BLOCK = new GooBlock(BlockBehaviour.Properties.of()
                         .mapColor(MapColor.COLOR_YELLOW)
@@ -272,6 +274,17 @@ public class OverwhelmedMinecraftForgeBlocks {
                 result = new TallFlowerBlock(properties));
         return result;
     }
+
+    @SuppressWarnings("SameParameterValue")
+    private static CropBlock registerGenericCropBlock(String name,
+                                                                  Block.Properties properties,
+                                                                  RegisterEvent.RegisterHelper<Block> helper) {
+        CropBlock result;
+        helper.register(new ResourceLocation(Overwhelmed.MOD_ID, name),
+                result = new CropBlock(properties));
+        return result;
+    }
+
     private static ClotBlock registerGenericClotBlock(String name,
                                                       Block.Properties properties,
                                                       RegisterEvent.RegisterHelper<Block> helper) {
