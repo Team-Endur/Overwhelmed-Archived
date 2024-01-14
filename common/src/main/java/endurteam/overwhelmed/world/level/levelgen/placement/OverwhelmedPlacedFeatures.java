@@ -56,6 +56,9 @@ public class OverwhelmedPlacedFeatures {
     public static final ResourceKey<PlacedFeature> ORE_SOIL = ResourceKey.create(Registries.PLACED_FEATURE,
             new ResourceLocation(MOD_ID, "ore_soil"));
 
+    public static final ResourceKey<PlacedFeature> ORE_BLACK_GRANITE = ResourceKey.create(Registries.PLACED_FEATURE,
+            new ResourceLocation(MOD_ID, "ore_black_granite"));
+
     public static final ResourceKey<PlacedFeature> PATCH_BELL_SUNFLOWER = ResourceKey.create(Registries.PLACED_FEATURE,
             new ResourceLocation(MOD_ID, "patch_bell_sunflower"));
 

@@ -59,6 +59,9 @@ public class OverwhelmedConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> GENERATE_WIDOW =
             ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(MOD_ID, "generate_widow"));
 
+    public static final ResourceKey<ConfiguredFeature<?, ?>> ORE_BLACK_GRANITE =
+            ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(MOD_ID, "ore_black_granite"));
+
     public static final ResourceKey<ConfiguredFeature<?, ?>> ORE_SOIL =
             ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(MOD_ID, "ore_soil"));
 

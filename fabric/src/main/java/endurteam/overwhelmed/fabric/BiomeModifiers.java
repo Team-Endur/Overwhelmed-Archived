@@ -81,6 +81,11 @@ public class BiomeModifiers {
                 Decoration.VEGETAL_DECORATION, OverwhelmedPlacedFeatures.PATCH_BELL_SUNFLOWER);
     }
 
+    public static void blackGenerationGeneration() {
+        BiomeModifications.addFeature(bsc -> bsc.hasTag(OverwhelmedBiomeTags.GENERATES_BLACK_GRANITE),
+                Decoration.TOP_LAYER_MODIFICATION, OverwhelmedPlacedFeatures.ORE_BLACK_GRANITE);
+    }
+
     public static void flowerOldGrowthPineTaigaGeneration() {
         BiomeModifications.addFeature(bsc -> bsc.hasTag(OverwhelmedBiomeTags.FLOWERS_OLD_GROWTH_PINE_TAIGA),
                 Decoration.VEGETAL_DECORATION, OverwhelmedPlacedFeatures.FLOWER_OLD_GROWTH_PINE_TAIGA);

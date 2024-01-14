@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "ingredient": {
+    "item": "overwhelmed:polished_black_granit"
+  },
+  "result": "overwhelmed:polished_black_granit_slab"
+}

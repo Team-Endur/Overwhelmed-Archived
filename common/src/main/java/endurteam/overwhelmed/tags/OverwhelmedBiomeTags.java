@@ -17,6 +17,9 @@ public class OverwhelmedBiomeTags {
     public static final TagKey<Biome> GENERATES_BELL_SUNFLOWERS = TagKey.create(Registries.BIOME,
             new ResourceLocation(MOD_ID, "generates_bell_sunflowers"));
 
+    public static final TagKey<Biome> GENERATES_BLACK_GRANITE = TagKey.create(Registries.BIOME,
+            new ResourceLocation(MOD_ID, "generates_black_granite"));
+
     public static final TagKey<Biome> GENERATES_GOLD_BEADS = TagKey.create(Registries.BIOME,
             new ResourceLocation(MOD_ID, "generates_gold_beads"));
 

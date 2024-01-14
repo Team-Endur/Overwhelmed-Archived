@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#overwhelmed:generates_black_granite",
+  "features": "overwhelmed:ore_black_granite",
+  "step": "top_layer_modification"
+}

@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "overwhelmed:black_granite"
+  },
+  "result": "overwhelmed:black_granite_wall"
+}
