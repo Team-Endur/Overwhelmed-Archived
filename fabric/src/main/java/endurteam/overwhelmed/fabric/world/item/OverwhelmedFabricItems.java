@@ -121,6 +121,12 @@ public class OverwhelmedFabricItems {
                         .food(OverwhelmedFoods.VANILLA_COOKIE)));
         MINT_CAKE = registerGenericBlockItem("mint_cake", OverwhelmedBlocks.MINT_CAKE);
         VANILLA_CAKE = registerGenericBlockItem("vanilla_cake", OverwhelmedBlocks.VANILLA_CAKE);
+        MINT_ICE_CREAM = Registry.register(BuiltInRegistries.ITEM,
+                new ResourceLocation(Overwhelmed.MOD_ID, "mint_ice_cream"),
+                new BowlFoodItem(new Item.Properties()
+                        .stacksTo(1)
+                        .rarity(Rarity.COMMON)
+                        .food(OverwhelmedFoods.MINT_ICE_CREAM)));
         VANILLA_ICE_CREAM = Registry.register(BuiltInRegistries.ITEM,
                 new ResourceLocation(Overwhelmed.MOD_ID, "vanilla_ice_cream"),
                 new BowlFoodItem(new Item.Properties()

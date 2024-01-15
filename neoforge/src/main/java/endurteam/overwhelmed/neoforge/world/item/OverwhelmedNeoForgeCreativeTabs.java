@@ -55,6 +55,7 @@ public class OverwhelmedNeoForgeCreativeTabs {
                             output.accept(VANILLA_COOKIE);
                             output.accept(MINT_CAKE);
                             output.accept(VANILLA_CAKE);
+                            output.accept(MINT_ICE_CREAM);
                             output.accept(VANILLA_ICE_CREAM);
                             output.accept(PEPPERMINT);
                             output.accept(GOO_BALL);
@@ -113,6 +114,7 @@ public class OverwhelmedNeoForgeCreativeTabs {
             event.accept(VANILLA_COOKIE);
             event.accept(MINT_CAKE);
             event.accept(VANILLA_CAKE);
+            event.accept(MINT_ICE_CREAM);
             event.accept(VANILLA_ICE_CREAM);
             event.accept(PEPPERMINT);
         }

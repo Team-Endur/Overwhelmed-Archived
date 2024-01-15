@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:milk_bucket"
+    },
+    "B": {
+      "item": "minecraft:sugar"
+    },
+    "C": {
+      "item": "minecraft:wheat"
+    },
+    "M": {
+      "item": "overwhelmed:mint_leaf"
+    }
+  },
+  "pattern": [
+    "AAA",
+    "BMB",
+    "CCC"
+  ],
+  "result": {
+    "item": "overwhelmed:mint_cake"
+  }
+}
