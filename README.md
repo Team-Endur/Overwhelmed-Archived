@@ -15,6 +15,58 @@
 - Enhanced atmosphere: Immerse yourself in an enhanced Overworld experience with improved ambiance, realistic sounds, and visual effects.
 - Improved gameplay: Enjoy a more dynamic and engaging gameplay experience with the addition of new features, such as interactive plants and wildlife.
 
+### Details:
+
+#### Natural Blocks:
+- Soil
+- Floff (Flower)
+- Paine (Flower)
+- Pink Lavatera (Flower)
+- White Lavatera (Flower)
+- Squirl (Flower)
+- Ringot (Flower)
+- Snowdrop (Flower)
+- Bell Sunflower (Flower)
+- Widow (Flower)
+- Gold Bead
+- Ice Cube
+- Pebble
+- Goo Block
+#### Building Blocks:
+- Snail Shell Brick
+- Snail Shell Brick Stairs
+- Snail Shell Brick Slab
+- Snail Shell Brick Wall
+- Chiseled Snail Shell Bricks
+#### Combat:
+- Blowgun
+- Paper Bullet
+#### Food & Drinks:
+- Raw Snail
+- Cooked Snail
+- Snail Stew
+#### Ingredients:
+- Gooball
+#### Spawn Eggs:
+- Butterfly Spawn Egg
+- Snail Spawn Egg
+#### Mobs:
+##### Butterflies:
+- Cabbage Butterfly
+- Cherry Butterfly
+- Liverwort Butterfly
+- Monarch Butterfly
+- Morpho Butterfly
+- Sleepy Butterfly
+##### Snails:
+- Flat Snail
+- Garden Snail
+- Gary
+- Glass Snail
+- Limestone Snail
+- Liverwort Snail
+- Roman Snail
+
 ![Banner](common/src/main/resources/assets/overwhelmed/textures/gui/grid.png)
 
 ## Installation
