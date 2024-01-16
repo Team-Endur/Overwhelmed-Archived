@@ -67,7 +67,7 @@
 - Liverwort Snail
 - Roman Snail
 
-![Banner](1.0.x/common/src/main/resources/assets/overwhelmed/textures/gui/grid.png)
+![Banner](common/src/main/resources/assets/overwhelmed/textures/gui/grid.png)
 
 ## Installation
 
