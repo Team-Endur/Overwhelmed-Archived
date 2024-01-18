@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "overwhelmed:block/cyan_candle_mint_cake"
+    },
+    "lit=true": {
+      "model": "overwhelmed:block/cyan_candle_mint_cake_lit"
+    }
+  }
+}
