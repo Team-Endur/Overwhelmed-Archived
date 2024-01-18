@@ -50,7 +50,7 @@ public class OverwhelmedItems {
     public static BlockItem ICE_CUBE;
     public static PebbleBlockItem PEBBLE;
     public static BlockItem GOO_BLOCK;
-    public static BlockItem MINT_SEEDS;
+    public static ItemNameBlockItem MINT_SEEDS;
     public static Item BLOWGUN;
     public static Item PAPER_BULLET;
     public static Item SNAIL;

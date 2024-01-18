@@ -86,7 +86,7 @@ public class OverwhelmedFabricItems {
                 new ResourceLocation(Overwhelmed.MOD_ID, "pebble"),
                 new PebbleBlockItem(OverwhelmedBlocks.PEBBLE,
                         new Item.Properties()));
-        MINT_SEEDS = registerGenericBlockItem("mint_seeds", OverwhelmedBlocks.MINT);
+        MINT_SEEDS = registerGenericItemNameBlockItem("mint_seeds", OverwhelmedBlocks.MINT);
         GOO_BLOCK = registerGenericBlockItem("goo_block", OverwhelmedBlocks.GOO_BLOCK);
         BLOWGUN = Registry.register(BuiltInRegistries.ITEM,
                 new ResourceLocation(Overwhelmed.MOD_ID, "blowgun"),
@@ -209,4 +209,10 @@ public class OverwhelmedFabricItems {
         return Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Overwhelmed.MOD_ID, name),
                 new BlockItem(block, new Item.Properties()));
     }
+
+    private static ItemNameBlockItem registerGenericItemNameBlockItem(String name, Block block) {
+        return Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Overwhelmed.MOD_ID, name),
+                new ItemNameBlockItem(block, new Item.Properties()));
+    }
+
 }

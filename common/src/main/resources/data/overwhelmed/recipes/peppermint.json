@@ -1,9 +1,6 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "pattern": [
-    "X",
-    "##"
-  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
   "key": {
     "X": {
       "item": "overwhelmed:mint_leaf"
@@ -12,6 +9,10 @@
       "item": "minecraft:sugar"
     }
   },
+  "pattern": [
+    "XX",
+    "##"
+  ],
   "result": {
     "item": "overwhelmed:peppermint"
   }
