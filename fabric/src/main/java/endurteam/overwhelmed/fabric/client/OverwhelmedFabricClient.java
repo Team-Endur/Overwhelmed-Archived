@@ -73,6 +73,9 @@ public class OverwhelmedFabricClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(OverwhelmedBlocks.RINGOT, RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(OverwhelmedBlocks.SNOWDROP, RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(OverwhelmedBlocks.BELL_SUNFLOWER, RenderType.cutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(OverwhelmedBlocks.VANILLA_VINES_SPROUT, RenderType.cutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(OverwhelmedBlocks.VANILLA_VINES, RenderType.cutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(OverwhelmedBlocks.FLOWERING_VANILLA_VINES, RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(OverwhelmedBlocks.POTTED_FLOFF, RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(OverwhelmedBlocks.POTTED_PAINE, RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(OverwhelmedBlocks.POTTED_PINK_LAVATERA, RenderType.cutout());

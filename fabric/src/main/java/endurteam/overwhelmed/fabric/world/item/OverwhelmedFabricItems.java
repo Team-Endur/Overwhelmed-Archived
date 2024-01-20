@@ -87,6 +87,9 @@ public class OverwhelmedFabricItems {
                 new PebbleBlockItem(OverwhelmedBlocks.PEBBLE,
                         new Item.Properties()));
         MINT_SEEDS = registerGenericItemNameBlockItem("mint_seeds", OverwhelmedBlocks.MINT);
+        VANILLA_BEANS = registerGenericItemNameBlockItem("vanilla_beans", OverwhelmedBlocks.VANILLA_VINES_SPROUT);
+        VANILLA_VINES = registerGenericBlockItem("vanilla_vines", OverwhelmedBlocks.VANILLA_VINES);
+        FLOWERING_VANILLA_VINES = registerGenericBlockItem("flowering_vanilla_vines", OverwhelmedBlocks.FLOWERING_VANILLA_VINES);
         GOO_BLOCK = registerGenericBlockItem("goo_block", OverwhelmedBlocks.GOO_BLOCK);
         BLOWGUN = Registry.register(BuiltInRegistries.ITEM,
                 new ResourceLocation(Overwhelmed.MOD_ID, "blowgun"),
@@ -142,7 +145,6 @@ public class OverwhelmedFabricItems {
         GOO_BALL = registerGenericItem("goo_ball", 64, Rarity.COMMON);
         SNAIL_SHELL = registerGenericItem("snail_shell", 64, Rarity.COMMON);
         MINT_LEAF = registerGenericItem("mint_leaf", 64, Rarity.COMMON);
-        VANILLA_BEANS = registerGenericItem("vanilla_beans", 64, Rarity.COMMON);
         BUTTERFLY_SPAWN_EGG = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Overwhelmed.MOD_ID,
                         "butterfly_spawn_egg"), new MultiSpawnEggItem(new Item.Properties(), (random) -> {
                     switch (random.nextIntBetweenInclusive(1, 6)) {

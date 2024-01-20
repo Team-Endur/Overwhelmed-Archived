@@ -41,11 +41,14 @@ public class OverwhelmedFabricCreativeTabs {
                             output.accept(RINGOT);
                             output.accept(SNOWDROP);
                             output.accept(BELL_SUNFLOWER);
+                            output.accept(VANILLA_VINES);
+                            output.accept(FLOWERING_VANILLA_VINES);
                             output.accept(WIDOW);
                             output.accept(GOLD_BEAD);
                             output.accept(ICE_CUBE);
                             output.accept(PEBBLE);
                             output.accept(MINT_SEEDS);
+                            output.accept(VANILLA_BEANS);
                             output.accept(GOO_BLOCK);
                             output.accept(BLOWGUN);
                             output.accept(PAPER_BULLET);
@@ -61,7 +64,6 @@ public class OverwhelmedFabricCreativeTabs {
                             output.accept(GOO_BALL);
                             output.accept(SNAIL_SHELL);
                             output.accept(MINT_LEAF);
-                            output.accept(VANILLA_BEANS);
                             output.accept(BUTTERFLY_SPAWN_EGG);
                             output.accept(SNAIL_SPAWN_EGG);
                         }).build());
@@ -91,9 +93,12 @@ public class OverwhelmedFabricCreativeTabs {
             output.addAfter(SQUIRL, RINGOT);
             output.addAfter(RINGOT, SNOWDROP);
             output.addAfter(SNOWDROP, BELL_SUNFLOWER);
-            output.addAfter(BELL_SUNFLOWER, WIDOW);
+            output.addAfter(BELL_SUNFLOWER, VANILLA_VINES);
+            output.addAfter(VANILLA_VINES, FLOWERING_VANILLA_VINES);
+            output.addAfter(FLOWERING_VANILLA_VINES, WIDOW);
             output.accept(SOIL);
-            output.accept(MINT_SEEDS);
+            output.addAfter(Items.BEETROOT_SEEDS, MINT_SEEDS);
+            output.addAfter(MINT_LEAF, VANILLA_BEANS);
             output.accept(GOO_BLOCK);
 
         });
@@ -117,7 +122,6 @@ public class OverwhelmedFabricCreativeTabs {
             output.addAfter(Items.SLIME_BALL, GOO_BALL);
             output.addAfter(Items.NAUTILUS_SHELL, SNAIL_SHELL);
             output.addAfter(Items.GOLDEN_CARROT, MINT_LEAF);
-            output.addAfter(MINT_LEAF, VANILLA_BEANS);
         });
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.SPAWN_EGGS).register(output -> {
             output.addAfter(Items.SLIME_SPAWN_EGG, SNAIL_SPAWN_EGG);

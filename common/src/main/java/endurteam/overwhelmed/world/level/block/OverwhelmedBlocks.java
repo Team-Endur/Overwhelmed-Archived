@@ -47,6 +47,9 @@ public class OverwhelmedBlocks {
     public static FlowerBlock RINGOT;
     public static FlowerBlock SNOWDROP;
     public static FlowerBlock BELL_SUNFLOWER;
+    public static Block VANILLA_VINES_SPROUT;
+    public static Block VANILLA_VINES;
+    public static Block FLOWERING_VANILLA_VINES;
     public static FlowerPotBlock POTTED_FLOFF;
     public static FlowerPotBlock POTTED_PAINE;
     public static FlowerPotBlock POTTED_PINK_LAVATERA;

@@ -45,12 +45,15 @@ public class OverwhelmedItems {
     public static BlockItem RINGOT;
     public static BlockItem SNOWDROP;
     public static BlockItem BELL_SUNFLOWER;
+    public static BlockItem VANILLA_VINES;
+    public static BlockItem FLOWERING_VANILLA_VINES;
     public static DoubleHighBlockItem WIDOW;
     public static BlockItem GOLD_BEAD;
     public static BlockItem ICE_CUBE;
     public static PebbleBlockItem PEBBLE;
     public static BlockItem GOO_BLOCK;
     public static ItemNameBlockItem MINT_SEEDS;
+    public static ItemNameBlockItem VANILLA_BEANS;
     public static Item BLOWGUN;
     public static Item PAPER_BULLET;
     public static Item SNAIL;
@@ -65,7 +68,6 @@ public class OverwhelmedItems {
     public static Item GOO_BALL;
     public static Item SNAIL_SHELL;
     public static Item MINT_LEAF;
-    public static Item VANILLA_BEANS;
     public static BlockItem WILLOW_PLANKS;
     public static BlockItem WILLOW_LOG;
     public static BlockItem STRIPPED_WILLOW_LOG;
