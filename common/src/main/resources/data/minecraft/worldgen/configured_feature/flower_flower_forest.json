@@ -17,6 +17,12 @@
             "seed": 2345,
             "states": [
               {
+                "Name": "overwhelmed:white_allium",
+                "Properties": {
+                  "half": "lower"
+                }
+              },
+              {
                 "Name": "overwhelmed:pink_lavatera"
               },
               {

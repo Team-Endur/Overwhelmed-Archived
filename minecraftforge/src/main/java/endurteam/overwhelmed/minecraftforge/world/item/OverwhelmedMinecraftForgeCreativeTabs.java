@@ -42,6 +42,7 @@ public class OverwhelmedMinecraftForgeCreativeTabs {
                             output.accept(SNOWDROP);
                             output.accept(BELL_SUNFLOWER);
                             output.accept(WIDOW);
+                            output.accept(WHITE_ALLIUM);
                             output.accept(GOLD_BEAD);
                             output.accept(ICE_CUBE);
                             output.accept(PEBBLE);
@@ -96,6 +97,7 @@ public class OverwhelmedMinecraftForgeCreativeTabs {
             event.accept(SNOWDROP);
             event.accept(BELL_SUNFLOWER);
             event.accept(WIDOW);
+            event.accept(WHITE_ALLIUM);
             event.accept(SOIL);
             event.accept(MINT_SEEDS);
             event.accept(GOO_BLOCK);

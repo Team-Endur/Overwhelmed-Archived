@@ -82,6 +82,9 @@ public class OverwhelmedFabricItems {
         WIDOW = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Overwhelmed.MOD_ID, "widow"),
                 new DoubleHighBlockItem(OverwhelmedBlocks.WIDOW,
                         new Item.Properties()));
+        WHITE_ALLIUM = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Overwhelmed.MOD_ID, "white_allium"),
+                new DoubleHighBlockItem(OverwhelmedBlocks.WHITE_ALLIUM,
+                        new Item.Properties()));
         GOLD_BEAD = registerGenericBlockItem("gold_bead", OverwhelmedBlocks.GOLD_BEAD);
         ICE_CUBE  = registerGenericBlockItem("ice_cube", OverwhelmedBlocks.ICE_CUBE);
         PEBBLE = Registry.register(BuiltInRegistries.ITEM,

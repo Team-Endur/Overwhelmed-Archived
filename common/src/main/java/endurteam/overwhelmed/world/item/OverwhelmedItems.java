@@ -47,6 +47,7 @@ public class OverwhelmedItems {
     public static BlockItem BELL_SUNFLOWER;
     public static BlockItem VANILLA_VINES;
     public static BlockItem FLOWERING_VANILLA_VINES;
+    public static DoubleHighBlockItem WHITE_ALLIUM;
     public static DoubleHighBlockItem WIDOW;
     public static BlockItem GOLD_BEAD;
     public static BlockItem ICE_CUBE;

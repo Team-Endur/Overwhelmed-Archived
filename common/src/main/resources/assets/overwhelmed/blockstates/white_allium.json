@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "overwhelmed:block/white_allium_bottom"
+    },
+    "half=upper": {
+      "model": "overwhelmed:block/white_allium_top"
+    }
+  }
+}

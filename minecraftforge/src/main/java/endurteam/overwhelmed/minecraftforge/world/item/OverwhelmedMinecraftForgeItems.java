@@ -79,12 +79,15 @@ public class OverwhelmedMinecraftForgeItems {
         helper.register(new ResourceLocation(Overwhelmed.MOD_ID, "widow"),
                 WIDOW = new DoubleHighBlockItem(OverwhelmedBlocks.WIDOW,
                         new Item.Properties()));
+        helper.register(new ResourceLocation(Overwhelmed.MOD_ID, "white_allium"),
+                WHITE_ALLIUM = new DoubleHighBlockItem(OverwhelmedBlocks.WHITE_ALLIUM,
+                        new Item.Properties()));
         GOLD_BEAD = registerGenericBlockItem("gold_bead", OverwhelmedBlocks.GOLD_BEAD, helper);
         ICE_CUBE  = registerGenericBlockItem("ice_cube", OverwhelmedBlocks.ICE_CUBE, helper);
         helper.register(new ResourceLocation(Overwhelmed.MOD_ID, "pebble"),
                 PEBBLE = new PebbleBlockItem(OverwhelmedBlocks.PEBBLE,
                         new Item.Properties()));
-        MINT_SEEDS = registerGenericBlockItem("mint_seeds", OverwhelmedBlocks.MINT, helper);
+        MINT_SEEDS = registerGenericItemNameBlockItem("mint_seeds", OverwhelmedBlocks.MINT, helper);
         GOO_BLOCK = registerGenericBlockItem("goo_block", OverwhelmedBlocks.GOO_BLOCK, helper);
         helper.register(new ResourceLocation(Overwhelmed.MOD_ID, "blowgun"),
                 BLOWGUN = new BlowgunItem(new Item.Properties()
@@ -206,5 +209,13 @@ public class OverwhelmedMinecraftForgeItems {
         helper.register(new ResourceLocation(Overwhelmed.MOD_ID, name),
                 result = new BlockItem(block, new Item.Properties()));
         return result;
+    }
+
+    private static ItemNameBlockItem registerGenericItemNameBlockItem(String name, Block block,
+                                                      RegisterEvent.RegisterHelper<Item> helper) {
+        BlockItem result;
+        helper.register(new ResourceLocation(Overwhelmed.MOD_ID, name),
+                result = new ItemNameBlockItem(block, new Item.Properties()));
+        return (ItemNameBlockItem) result;
     }
 }

@@ -44,6 +44,7 @@ public class OverwhelmedFabricCreativeTabs {
                             output.accept(VANILLA_VINES);
                             output.accept(FLOWERING_VANILLA_VINES);
                             output.accept(WIDOW);
+                            output.accept(WHITE_ALLIUM);
                             output.accept(GOLD_BEAD);
                             output.accept(ICE_CUBE);
                             output.accept(PEBBLE);
@@ -97,6 +98,7 @@ public class OverwhelmedFabricCreativeTabs {
             output.addAfter(BELL_SUNFLOWER, VANILLA_VINES);
             output.addAfter(VANILLA_VINES, FLOWERING_VANILLA_VINES);
             output.addAfter(FLOWERING_VANILLA_VINES, WIDOW);
+            output.addAfter(WIDOW, WHITE_ALLIUM);
             output.accept(SOIL);
             output.addAfter(Items.BEETROOT_SEEDS, MINT_SEEDS);
             output.addAfter(MINT_LEAF, VANILLA_BEANS);

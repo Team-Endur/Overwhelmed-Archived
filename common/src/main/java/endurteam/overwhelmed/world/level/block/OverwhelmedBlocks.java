@@ -59,6 +59,7 @@ public class OverwhelmedBlocks {
     public static FlowerPotBlock POTTED_SNOWDROP;
     public static FlowerPotBlock POTTED_BELL_SUNFLOWER;
     public static TallFlowerBlock WIDOW;
+    public static TallFlowerBlock WHITE_ALLIUM;
     public static CropBlock MINT;
     public static GooBlock GOO_BLOCK;
     public static MintCakeBlock MINT_CAKE;

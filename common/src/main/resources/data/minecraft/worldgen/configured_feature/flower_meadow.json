@@ -24,6 +24,12 @@
             "slow_scale": 1.0,
             "states": [
               {
+                "Name": "overwhelmed:white_allium",
+                "Properties": {
+                  "half": "lower"
+                }
+              },
+              {
                 "Name": "minecraft:tall_grass",
                 "Properties": {
                   "half": "lower"
