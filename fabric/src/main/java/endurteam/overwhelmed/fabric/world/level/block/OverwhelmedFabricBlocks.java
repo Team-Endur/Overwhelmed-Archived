@@ -175,8 +175,8 @@ public class OverwhelmedFabricBlocks {
                 BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT));
         OverwhelmedBlocks.MINT = registerGenericCropBlock("mint", BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT));
         OverwhelmedBlocks.VANILLA_VINES_SPROUT = registerGenericGrassBlock("vanilla_vines_sprout", BlockBehaviour.Properties.ofFullCopy(Blocks.SHORT_GRASS));
-        OverwhelmedBlocks.VANILLA_VINES = registerGenericTallGrassBlock("vanilla_vines", BlockBehaviour.Properties.ofFullCopy(Blocks.TALL_GRASS));
-        OverwhelmedBlocks.FLOWERING_VANILLA_VINES = registerGenericTallGrassBlock("flowering_vanilla_vines", BlockBehaviour.Properties.ofFullCopy(Blocks.TALL_GRASS));
+        OverwhelmedBlocks.VANILLA_VINES = registerGenericTallFlowerBlock("vanilla_vines", BlockBehaviour.Properties.ofFullCopy(Blocks.TALL_GRASS));
+        OverwhelmedBlocks.FLOWERING_VANILLA_VINES = registerGenericTallFlowerBlock("flowering_vanilla_vines", BlockBehaviour.Properties.ofFullCopy(Blocks.TALL_GRASS));
         OverwhelmedBlocks.GOO_BLOCK = Registry.register(BuiltInRegistries.BLOCK,
                 new ResourceLocation(Overwhelmed.MOD_ID, "goo_block"),
                 new GooBlock(BlockBehaviour.Properties.of()
@@ -260,13 +260,6 @@ public class OverwhelmedFabricBlocks {
                                                                   Block.Properties properties) {
         return Registry.register(BuiltInRegistries.BLOCK, new ResourceLocation(Overwhelmed.MOD_ID, name),
                 new TallFlowerBlock(properties));
-    }
-
-    @SuppressWarnings("SameParameterValue")
-    private static TallGrassBlock registerGenericTallGrassBlock(String name,
-                                                                  Block.Properties properties) {
-        return Registry.register(BuiltInRegistries.BLOCK, new ResourceLocation(Overwhelmed.MOD_ID, name),
-                new TallGrassBlock(properties));
     }
 
     @SuppressWarnings("SameParameterValue")
