@@ -65,6 +65,7 @@ public class OverwhelmedFabricCreativeTabs {
                             output.accept(SNAIL_SHELL);
                             output.accept(MINT_LEAF);
                             output.accept(BUTTERFLY_SPAWN_EGG);
+                            output.accept(MOTH_SPAWN_EGG);
                             output.accept(SNAIL_SPAWN_EGG);
                         }).build());
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.BUILDING_BLOCKS).register(output -> {
@@ -126,6 +127,7 @@ public class OverwhelmedFabricCreativeTabs {
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.SPAWN_EGGS).register(output -> {
             output.addAfter(Items.SLIME_SPAWN_EGG, SNAIL_SPAWN_EGG);
             output.addAfter(Items.BLAZE_SPAWN_EGG, BUTTERFLY_SPAWN_EGG);
+            output.addAfter(Items.MAGMA_CUBE_SPAWN_EGG, MOTH_SPAWN_EGG);
         });
 
     }
