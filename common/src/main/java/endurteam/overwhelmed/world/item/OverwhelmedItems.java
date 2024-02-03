@@ -88,6 +88,7 @@ public class OverwhelmedItems {
     public static HangingSignItem WILLOW_HANGING_SIGN;
 
     public static MultiSpawnEggItem BUTTERFLY_SPAWN_EGG;
+    public static SpawnEggItem HORNET_SPAWN_EGG;
     public static SpawnEggItem MOTH_SPAWN_EGG;
     public static MultiSpawnEggItem SNAIL_SPAWN_EGG;
 }

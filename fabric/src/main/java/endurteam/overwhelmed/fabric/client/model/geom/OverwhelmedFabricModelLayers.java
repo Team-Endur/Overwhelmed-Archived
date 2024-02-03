@@ -17,6 +17,7 @@ public class OverwhelmedFabricModelLayers {
         EntityModelLayerRegistry.registerModelLayer(SNAIL_LIVERWORT_MODEL_LAYER, SnailLiverwortModel::createBodyLayer);
         EntityModelLayerRegistry.registerModelLayer(SNAIL_ROMAN_MODEL_LAYER, SnailRomanModel::createBodyLayer);
         EntityModelLayerRegistry.registerModelLayer(MOTH_MODEL_LAYER, MothModel::createBodyLayer);
+        EntityModelLayerRegistry.registerModelLayer(HORNET_MODEL_LAYER, HornetModel::createBodyLayer);
         EntityModelLayerRegistry.registerModelLayer(PAPER_BULLET_MODEL_LAYER, PaperBulletModel::createBodyLayer);
     }
 }

@@ -177,6 +177,7 @@ public class OverwhelmedFabricItems {
                 )
         );
         MOTH_SPAWN_EGG = registerGenericSpawnEggItem("moth_spawn_egg", OverwhelmedEntityTypes.MOTH, 0x84504e, 0xddd5c3);
+        HORNET_SPAWN_EGG = registerGenericSpawnEggItem("hornet_spawn_egg", OverwhelmedEntityTypes.MOTH, 0xf79553, 0x3d221b);
         SNAIL_SPAWN_EGG = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Overwhelmed.MOD_ID,
                         "snail_spawn_egg"), new MultiSpawnEggItem(new Item.Properties(), (random) -> {
                     switch (random.nextIntBetweenInclusive(1, 6)) {

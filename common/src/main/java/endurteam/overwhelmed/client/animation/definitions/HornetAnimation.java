@@ -27,8 +27,6 @@ import net.minecraft.client.animation.AnimationDefinition;
 import net.minecraft.client.animation.Keyframe;
 import net.minecraft.client.animation.KeyframeAnimations;
 
-import javax.naming.NameNotFoundException;
-
 @Environment(EnvType.CLIENT)
 public class HornetAnimation {
     public static final AnimationDefinition HORNET_FLY = AnimationDefinition.Builder.withLength(4f).looping()
@@ -52,11 +50,11 @@ public class HornetAnimation {
                                     AnimationChannel.Interpolations.CATMULLROM)))
             .addAnimation("left_wing",
                     new AnimationChannel(AnimationChannel.Targets.ROTATION,
-                            new Keyframe(1.2916767f, KeyframeAnimations.degreeVec(0f, 0f, NaNf),
+                            new Keyframe(1.2916767f, KeyframeAnimations.degreeVec(0f, 0f, 0f),
                                     AnimationChannel.Interpolations.CATMULLROM)))
             .addAnimation("right_wing",
                     new AnimationChannel(AnimationChannel.Targets.ROTATION,
-                            new Keyframe(0f, KeyframeAnimations.degreeVec(0f, 0f, NaNf),
+                            new Keyframe(0f, KeyframeAnimations.degreeVec(0f, 0f, 0f),
                                     AnimationChannel.Interpolations.CATMULLROM))).build();
 
     private HornetAnimation() {}

@@ -29,7 +29,7 @@ public class Hornet extends Animal implements NeutralMob, FlyingAnimal {
     public static final int PLAYER_LEAVE_DISTANCE = 25; // Distance for which a hornet will leave a player alone.
 
 
-    protected Hornet(EntityType<? extends Animal> entityType, Level level) {
+    public Hornet(EntityType<? extends Animal> entityType, Level level) {
         super(entityType, level);
     }
 

@@ -1,6 +1,7 @@
 package endurteam.overwhelmed.fabric.world.entity;
 
 import endurteam.overwhelmed.world.entity.animal.Butterfly;
+import endurteam.overwhelmed.world.entity.animal.Hornet;
 import endurteam.overwhelmed.world.entity.animal.Moth;
 import endurteam.overwhelmed.world.entity.animal.Snail;
 import endurteam.overwhelmed.world.entity.projectile.PaperBullet;
@@ -102,6 +103,12 @@ public class OverwhelmedFabricEntityTypes {
                             .sized(0.6f, 0.4f)
                             .clientTrackingRange(8)
                             .build("moth"));
+        HORNET = Registry.register(BuiltInRegistries.ENTITY_TYPE,
+                new ResourceLocation(MOD_ID, "hornet"),
+                EntityType.Builder.of(Hornet::new, MobCategory.CREATURE)
+                        .sized(0.6f, 0.4f)
+                        .clientTrackingRange(12)
+                        .build("hornet"));
 
         PAPER_BULLET = Registry.register(BuiltInRegistries.ENTITY_TYPE,
                 new ResourceLocation(MOD_ID, "paper_bullet"),

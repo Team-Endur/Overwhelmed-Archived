@@ -46,6 +46,8 @@ public class OverwhelmedModelLayers {
             new ResourceLocation(Overwhelmed.MOD_ID, "snail_roman"), "main");
     public static final ModelLayerLocation MOTH_MODEL_LAYER = new ModelLayerLocation(
             new ResourceLocation(Overwhelmed.MOD_ID, "moth"), "main");
+    public static final ModelLayerLocation HORNET_MODEL_LAYER = new ModelLayerLocation(
+            new ResourceLocation(Overwhelmed.MOD_ID, "hornet"), "main");
     public static final ModelLayerLocation PAPER_BULLET_MODEL_LAYER = new ModelLayerLocation(
             new ResourceLocation(Overwhelmed.MOD_ID, "paper_bullet"), "main");
 }
