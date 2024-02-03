@@ -122,6 +122,7 @@ public class Snail extends Animal {
             this.save(tag);
             newEntity.load(tag);
             this.remove(RemovalReason.DISCARDED);
+            //noinspection resource
             this.level().addFreshEntity(newEntity);
         }
     }
@@ -160,6 +161,7 @@ public class Snail extends Animal {
     public void tick() {
         super.tick();
 
+        //noinspection resource
         if(this.level().isClientSide()) {
             setupAnimationStates();
         }

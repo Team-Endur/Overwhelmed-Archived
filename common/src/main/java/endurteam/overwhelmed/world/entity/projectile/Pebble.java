@@ -70,6 +70,7 @@ public class Pebble
         return new BlockParticleOption(ParticleTypes.BLOCK, OverwhelmedBlocks.PEBBLE.defaultBlockState());
     }
 
+    @SuppressWarnings("resource")
     @Override
     public void handleEntityEvent(byte b) {
         if (b == 3) {
@@ -88,6 +89,7 @@ public class Pebble
         entity.hurt(this.damageSources().thrown(this, this.getOwner()), 1);
     }
 
+    @SuppressWarnings("resource")
     @Override
     protected void onHit(HitResult hitResult) {
         super.onHit(hitResult);

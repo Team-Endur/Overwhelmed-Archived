@@ -24,6 +24,10 @@ package endurteam.overwhelmed.client.model.entity;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
+import endurteam.overwhelmed.client.animation.definitions.HornetAnimation;
+import endurteam.overwhelmed.client.animation.definitions.MothAnimation;
+import endurteam.overwhelmed.world.entity.animal.Hornet;
+import endurteam.overwhelmed.world.entity.animal.Moth;
 import net.minecraft.client.model.HierarchicalModel;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
@@ -114,7 +118,10 @@ public class MothModel<T extends Entity> extends HierarchicalModel<T> {
 
 	@Override
 	public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw,
-						  float headPitch) {}
+						  float headPitch)
+	{
+		this.animate(((Moth) entity).flyAnimationState, MothAnimation.MOTH_FLY, ageInTicks);
+	}
 
 	@Override
 	public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {

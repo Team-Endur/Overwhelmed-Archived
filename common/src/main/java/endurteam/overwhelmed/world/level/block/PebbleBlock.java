@@ -44,7 +44,7 @@ public class PebbleBlock extends FallingBlock {
     }
 
     @Override
-    protected MapCodec<? extends FallingBlock> codec() {
+    protected @NotNull MapCodec<? extends FallingBlock> codec() {
         return CODEC;
     }
 
@@ -54,12 +54,12 @@ public class PebbleBlock extends FallingBlock {
     }
 
     @Override
-    public BlockState rotate(BlockState pState, Rotation pRotation) {
+    public @NotNull BlockState rotate(BlockState pState, Rotation pRotation) {
         return pState.setValue(FACING, pRotation.rotate(pState.getValue(FACING)));
     }
 
     @Override
-    public BlockState mirror(BlockState pState, Mirror pMirror) {
+    public @NotNull BlockState mirror(BlockState pState, Mirror pMirror) {
         return pState.rotate(pMirror.getRotation(pState.getValue(FACING)));
     }
 
@@ -70,7 +70,7 @@ public class PebbleBlock extends FallingBlock {
 
 
     @Override
-    public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
+    public @NotNull VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
         return box(6.0, 0.0, 6.0, 10.0, 2.0, 10.0);
     }
 

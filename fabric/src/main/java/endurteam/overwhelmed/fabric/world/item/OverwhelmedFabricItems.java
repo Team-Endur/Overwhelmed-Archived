@@ -10,8 +10,8 @@ import endurteam.overwhelmed.world.level.block.OverwhelmedBlocks;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.Mob;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.Block;
 
@@ -176,8 +176,10 @@ public class OverwhelmedFabricItems {
                 }
                 )
         );
-        MOTH_SPAWN_EGG = registerGenericSpawnEggItem("moth_spawn_egg", OverwhelmedEntityTypes.MOTH, 0x84504e, 0xddd5c3);
-        HORNET_SPAWN_EGG = registerGenericSpawnEggItem("hornet_spawn_egg", OverwhelmedEntityTypes.MOTH, 0xf79553, 0x3d221b);
+        MOTH_SPAWN_EGG = registerGenericSpawnEggItem("moth_spawn_egg", OverwhelmedEntityTypes.MOTH,
+                0x84504e, 0xddd5c3);
+        HORNET_SPAWN_EGG = registerGenericSpawnEggItem("hornet_spawn_egg", OverwhelmedEntityTypes.HORNET,
+                0xf79553, 0x3d221b);
         SNAIL_SPAWN_EGG = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Overwhelmed.MOD_ID,
                         "snail_spawn_egg"), new MultiSpawnEggItem(new Item.Properties(), (random) -> {
                     switch (random.nextIntBetweenInclusive(1, 6)) {
@@ -224,7 +226,7 @@ public class OverwhelmedFabricItems {
                 new ItemNameBlockItem(block, new Item.Properties()));
     }
 
-    private static SpawnEggItem registerGenericSpawnEggItem(String name, EntityType entityType, int i, int j) {
+    private static SpawnEggItem registerGenericSpawnEggItem(String name, EntityType<? extends Mob> entityType, int i, int j) {
         return Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Overwhelmed.MOD_ID, name),
                 new SpawnEggItem(entityType, i, j, new Item.Properties()));
     }

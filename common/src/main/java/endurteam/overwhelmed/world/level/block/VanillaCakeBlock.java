@@ -50,6 +50,7 @@ import net.minecraft.world.level.pathfinder.PathComputationType;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import org.jetbrains.annotations.NotNull;
 
 public class VanillaCakeBlock extends Block {
     public static final MapCodec<VanillaCakeBlock> CODEC = simpleCodec(VanillaCakeBlock::new);
@@ -63,7 +64,7 @@ public class VanillaCakeBlock extends Block {
             Block.box(11.6, 0.0, 2.0, 14.0, 12.0, 14.0)
     };
 
-    public MapCodec<VanillaCakeBlock> codec() {
+    public @NotNull MapCodec<VanillaCakeBlock> codec() {
         return CODEC;
     }
 
@@ -72,13 +73,13 @@ public class VanillaCakeBlock extends Block {
         this.registerDefaultState(this.stateDefinition.any().setValue(BITES, 0));
     }
 
-    public VoxelShape getShape(BlockState blockState, BlockGetter blockGetter, BlockPos blockPos,
-                               CollisionContext collisionContext) {
+    public @NotNull VoxelShape getShape(BlockState blockState, BlockGetter blockGetter, BlockPos blockPos,
+                                        CollisionContext collisionContext) {
         return SHAPE_BY_BITE[blockState.getValue(BITES)];
     }
 
-    public InteractionResult use(BlockState blockState, Level level, BlockPos blockPos, Player player,
-                                 InteractionHand interactionHand, BlockHitResult blockHitResult) {
+    public @NotNull InteractionResult use(BlockState blockState, Level level, BlockPos blockPos, Player player,
+                                          InteractionHand interactionHand, BlockHitResult blockHitResult) {
         ItemStack itemStack = player.getItemInHand(interactionHand);
         Item item = itemStack.getItem();
         if (itemStack.is(ItemTags.CANDLES) && blockState.getValue(BITES) == 0) {
@@ -130,8 +131,8 @@ public class VanillaCakeBlock extends Block {
         }
     }
 
-    public BlockState updateShape(BlockState blockState, Direction direction, BlockState blockState2,
-                                  LevelAccessor levelAccessor, BlockPos blockPos, BlockPos blockPos2) {
+    public @NotNull BlockState updateShape(BlockState blockState, Direction direction, BlockState blockState2,
+                                           LevelAccessor levelAccessor, BlockPos blockPos, BlockPos blockPos2) {
         return direction == Direction.DOWN && !blockState.canSurvive(levelAccessor, blockPos)
                 ? Blocks.AIR.defaultBlockState()
                 : super.updateShape(blockState, direction, blockState2, levelAccessor, blockPos, blockPos2);

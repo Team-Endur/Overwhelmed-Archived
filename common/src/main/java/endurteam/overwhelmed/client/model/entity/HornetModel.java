@@ -26,11 +26,13 @@ import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import endurteam.overwhelmed.client.animation.definitions.HornetAnimation;
 import endurteam.overwhelmed.world.entity.animal.Butterfly;
+import endurteam.overwhelmed.world.entity.animal.Hornet;
 import net.minecraft.client.model.HierarchicalModel;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.*;
 import net.minecraft.world.entity.Entity;
+import org.jetbrains.annotations.NotNull;
 
 
 public class HornetModel<T extends Entity> extends HierarchicalModel<T> {
@@ -95,7 +97,7 @@ public class HornetModel<T extends Entity> extends HierarchicalModel<T> {
 	public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw,
 						  float headPitch) {
 		this.root().getAllParts().forEach(ModelPart::resetPose);
-		this.animate(((Butterfly) entity).flyAnimationState, HornetAnimation.HORNET_FLY, ageInTicks);
+		this.animate(((Hornet) entity).flyAnimationState, HornetAnimation.HORNET_FLY, ageInTicks);
 	}
 
 	@Override
@@ -107,7 +109,7 @@ public class HornetModel<T extends Entity> extends HierarchicalModel<T> {
 	}
 
 	@Override
-	public ModelPart root() {
+	public @NotNull ModelPart root() {
 		return this.root;
 	}
 }

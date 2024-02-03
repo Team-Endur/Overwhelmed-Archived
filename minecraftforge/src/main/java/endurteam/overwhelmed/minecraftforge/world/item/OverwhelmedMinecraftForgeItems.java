@@ -213,9 +213,9 @@ public class OverwhelmedMinecraftForgeItems {
 
     private static ItemNameBlockItem registerGenericItemNameBlockItem(String name, Block block,
                                                       RegisterEvent.RegisterHelper<Item> helper) {
-        BlockItem result;
+        ItemNameBlockItem result;
         helper.register(new ResourceLocation(Overwhelmed.MOD_ID, name),
                 result = new ItemNameBlockItem(block, new Item.Properties()));
-        return (ItemNameBlockItem) result;
+        return result;
     }
 }

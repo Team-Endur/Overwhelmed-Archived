@@ -1,9 +1,6 @@
 package endurteam.overwhelmed.fabric.world.entity;
 
-import endurteam.overwhelmed.world.entity.animal.Butterfly;
-import endurteam.overwhelmed.world.entity.animal.Hornet;
-import endurteam.overwhelmed.world.entity.animal.Moth;
-import endurteam.overwhelmed.world.entity.animal.Snail;
+import endurteam.overwhelmed.world.entity.animal.*;
 import endurteam.overwhelmed.world.entity.projectile.PaperBullet;
 import endurteam.overwhelmed.world.entity.projectile.Pebble;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
@@ -106,7 +103,7 @@ public class OverwhelmedFabricEntityTypes {
         HORNET = Registry.register(BuiltInRegistries.ENTITY_TYPE,
                 new ResourceLocation(MOD_ID, "hornet"),
                 EntityType.Builder.of(Hornet::new, MobCategory.CREATURE)
-                        .sized(0.6f, 0.4f)
+                        .sized(0.8f, 0.8f)
                         .clientTrackingRange(12)
                         .build("hornet"));
 
@@ -138,5 +135,7 @@ public class OverwhelmedFabricEntityTypes {
         FabricDefaultAttributeRegistry.register(MONARCH_BUTTERFLY, Butterfly.createAttributes());
         FabricDefaultAttributeRegistry.register(MORPHO_BUTTERFLY, Butterfly.createAttributes());
         FabricDefaultAttributeRegistry.register(SLEEPY_BUTTERFLY, Butterfly.createAttributes());
+        FabricDefaultAttributeRegistry.register(MOTH, Moth.createAttributes());
+        FabricDefaultAttributeRegistry.register(HORNET, Hornet.createAttributes());
     }
 }

@@ -11,17 +11,21 @@ import net.minecraft.sounds.SoundEvent;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.*;
+import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
+import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.navigation.PathNavigation;
 import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.animal.FlyingAnimal;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Fluid;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.UUID;
 
 public class Hornet extends Animal implements NeutralMob, FlyingAnimal {
+    public AnimationState flyAnimationState = new AnimationState();
     private static final EntityDataAccessor<Byte> DATA_FLAGS_ID =
             SynchedEntityData.defineId(Hornet.class, EntityDataSerializers.BYTE);
     public static final int FLAG_HAS_ANIMAL = 2;
@@ -61,6 +65,10 @@ public class Hornet extends Animal implements NeutralMob, FlyingAnimal {
     @Override
     public void tick() {
         super.tick();
+        if (this.level().isClientSide())
+        {
+            this.flyAnimationState.startIfStopped(this.tickCount);
+        }
     }
 
     @Override
@@ -79,7 +87,7 @@ public class Hornet extends Animal implements NeutralMob, FlyingAnimal {
     }
 
     @Override
-    protected PathNavigation createNavigation(Level level) {
+    protected @NotNull PathNavigation createNavigation(Level level) {
         return super.createNavigation(level);
     }
 
@@ -127,7 +135,7 @@ public class Hornet extends Animal implements NeutralMob, FlyingAnimal {
     }
 
     @Override
-    public MobType getMobType() {
+    public @NotNull MobType getMobType() {
         return MobType.ARTHROPOD;
     }
 
@@ -136,7 +144,10 @@ public class Hornet extends Animal implements NeutralMob, FlyingAnimal {
         super.jumpInLiquid(tagKey);
     }
 
-
+    public static AttributeSupplier.Builder createAttributes() {
+        return Mob.createMobAttributes()
+                .add(Attributes.MAX_HEALTH, 6);
+    }
 
     @Nullable
     @Override

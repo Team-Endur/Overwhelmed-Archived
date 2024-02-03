@@ -27,6 +27,7 @@ import net.minecraft.world.level.block.HalfTransparentBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import org.jetbrains.annotations.NotNull;
 
 public class GooBlock extends HalfTransparentBlock {
     public GooBlock(Properties properties) {
@@ -35,7 +36,7 @@ public class GooBlock extends HalfTransparentBlock {
     protected static final VoxelShape SHAPE = Block.box(1.0, 0.0, 1.0, 14.0, 14.0, 14.0);
 
     @Override
-    public VoxelShape getCollisionShape(BlockState blockState, BlockGetter blockGetter, BlockPos blockPos, CollisionContext collisionContext) {
+    public @NotNull VoxelShape getCollisionShape(BlockState blockState, BlockGetter blockGetter, BlockPos blockPos, CollisionContext collisionContext) {
         return SHAPE;
     }
 }

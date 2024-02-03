@@ -106,7 +106,7 @@ public class BlowgunItem extends ProjectileWeaponItem {
     }
 
     @Override
-    public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand interactionHand) {
+    public @NotNull InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand interactionHand) {
         boolean bl;
         ItemStack itemStack = player.getItemInHand(interactionHand);
         bl = !player.getProjectile(itemStack).isEmpty();

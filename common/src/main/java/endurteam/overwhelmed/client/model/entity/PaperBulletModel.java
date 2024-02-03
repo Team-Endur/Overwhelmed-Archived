@@ -29,6 +29,7 @@ import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.builders.*;
 import net.minecraft.world.entity.Entity;
+import org.jetbrains.annotations.NotNull;
 
 
 public class PaperBulletModel<T extends Entity> extends HierarchicalModel<T> {
@@ -70,7 +71,7 @@ public class PaperBulletModel<T extends Entity> extends HierarchicalModel<T> {
 	}
 
 	@Override
-	public ModelPart root() {
+	public @NotNull ModelPart root() {
 		return this.root;
 	}
 }
