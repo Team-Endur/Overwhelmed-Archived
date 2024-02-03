@@ -54,20 +54,24 @@ public class HornetModel<T extends Entity> extends HierarchicalModel<T> {
 		MeshDefinition meshdefinition = new MeshDefinition();
 		PartDefinition partdefinition = meshdefinition.getRoot();
 
-		PartDefinition head = partdefinition.addOrReplaceChild("head", CubeListBuilder.create().texOffs(0, 24)
-				.addBox(-4.0F, -4.0F, -9.0F, 8.0F, 8.0F, 9.0F, new CubeDeformation(0.0F)),
+		PartDefinition head = partdefinition.addOrReplaceChild("head", CubeListBuilder.create()
+						.texOffs(0, 24).addBox(-4.0F, -4.0F, -9.0F, 8.0F, 8.0F, 9.0F,
+								new CubeDeformation(0.0F)),
 				PartPose.offset(0.0F, 12.0F, 0.0F));
 
-		PartDefinition antenna = partdefinition.addOrReplaceChild("antenna", CubeListBuilder.create().texOffs(26, 33)
-				.addBox(0.0F, -3.0F, -8.0F, 8.0F, 4.0F, 8.0F, new CubeDeformation(0.0F)),
+		PartDefinition antenna = partdefinition.addOrReplaceChild("antenna", CubeListBuilder.create()
+						.texOffs(26, 33).addBox(0.0F, -3.0F, -8.0F, 8.0F, 4.0F, 8.0F,
+								new CubeDeformation(0.0F)),
 				PartPose.offsetAndRotation(0.0F, 11.0F, -9.0F, 0.0F, 0.7854F, 0.0F));
 
-		PartDefinition legs1 = partdefinition.addOrReplaceChild("legs1", CubeListBuilder.create().texOffs(0, 0)
-				.addBox(-2.0F, 0.0F, 0.0F, 4.0F, 3.0F, 0.0F, new CubeDeformation(0.0F)),
+		PartDefinition legs1 = partdefinition.addOrReplaceChild("legs1", CubeListBuilder.create()
+						.texOffs(0, 0).addBox(-2.0F, 0.0F, 0.0F, 4.0F, 3.0F, 0.0F,
+								new CubeDeformation(0.0F)),
 				PartPose.offset(0.0F, 16.0F, -5.0F));
 
-		PartDefinition body = partdefinition.addOrReplaceChild("body", CubeListBuilder.create().texOffs(0, 0)
-				.addBox(-5.0F, -5.0F, 0.0F, 10.0F, 10.0F, 14.0F, new CubeDeformation(0.0F)),
+		PartDefinition body = partdefinition.addOrReplaceChild("body", CubeListBuilder.create()
+						.texOffs(0, 0).addBox(-5.0F, -5.0F, 0.0F, 10.0F, 10.0F, 14.0F,
+								new CubeDeformation(0.0F)),
 				PartPose.offsetAndRotation(0.0F, 12.0F, 0.0F, -0.6545F, 0.0F, 0.0F));
 
 		PartDefinition legs2 = body.addOrReplaceChild("legs2", CubeListBuilder.create().texOffs(0, 3)
@@ -82,12 +86,14 @@ public class HornetModel<T extends Entity> extends HierarchicalModel<T> {
 				.addBox(0.0F, 0.0F, -2.0F, 0.0F, 8.0F, 2.0F, new CubeDeformation(0.0F)),
 				PartPose.offset(0.0F, 3.0F, 14.0F));
 
-		PartDefinition left_wing = body.addOrReplaceChild("left_wing", CubeListBuilder.create().texOffs(28, 0)
-				.addBox(0.0F, 0.0F, 0.0F, 14.0F, 0.0F, 8.0F, new CubeDeformation(0.0F)),
+		PartDefinition left_wing = body.addOrReplaceChild("left_wing", CubeListBuilder.create()
+						.texOffs(28, 0).addBox(0.0F, 0.0F, 0.0F, 14.0F, 0.0F, 8.0F,
+								new CubeDeformation(0.0F)),
 				PartPose.offsetAndRotation(3.0F, -5.0F, 0.0F, 0.6545F, 0.0F, 0.0F));
 
-		PartDefinition right_wing = body.addOrReplaceChild("right_wing", CubeListBuilder.create().texOffs(28, 0)
-				.mirror().addBox(-14.0F, 0.0F, 0.0F, 14.0F, 0.0F, 8.0F, new CubeDeformation(0.0F)).mirror(false),
+		PartDefinition right_wing = body.addOrReplaceChild("right_wing", CubeListBuilder.create()
+						.texOffs(28, 0).mirror().addBox(-14.0F, 0.0F, 0.0F, 14.0F, 0.0F, 8.0F,
+								new CubeDeformation(0.0F)).mirror(false),
 				PartPose.offsetAndRotation(-3.0F, -5.0F, 0.0F, 0.6545F, 0.0F, 0.0F));
 
 		return LayerDefinition.create(meshdefinition, 64, 64);
@@ -101,7 +107,8 @@ public class HornetModel<T extends Entity> extends HierarchicalModel<T> {
 	}
 
 	@Override
-	public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
+	public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay,
+							   float red, float green, float blue, float alpha) {
 		head.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
 		antenna.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
 		legs1.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);

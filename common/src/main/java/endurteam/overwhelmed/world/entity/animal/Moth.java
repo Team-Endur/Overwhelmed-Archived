@@ -53,7 +53,7 @@ public class Moth extends PathfinderMob {
     @Override
     protected void registerGoals() {
         this.goalSelector.addGoal(8, new LookAtPlayerGoal(this, Player.class, 8.0f));
-        this.targetSelector.addGoal(2, new NearestAttackableTargetGoal(this, Player.class, true));
+        this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, Player.class, true));
         this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.0, true));
         this.goalSelector.addGoal(2, new WaterAvoidingRandomFlyingGoal(this, 1.0));
         this.goalSelector.addGoal(3, new LookAtPlayerGoal(this, Player.class, 8.0f));

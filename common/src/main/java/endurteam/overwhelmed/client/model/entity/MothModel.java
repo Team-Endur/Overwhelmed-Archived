@@ -124,7 +124,8 @@ public class MothModel<T extends Entity> extends HierarchicalModel<T> {
 	}
 
 	@Override
-	public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
+	public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay,
+							   float red, float green, float blue, float alpha) {
 		body.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
 		right_wing.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
 		left_wing.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
