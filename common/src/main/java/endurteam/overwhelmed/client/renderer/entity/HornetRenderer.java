@@ -34,7 +34,7 @@ import org.jetbrains.annotations.NotNull;
 @Environment(EnvType.CLIENT)
 public class HornetRenderer extends MobRenderer<Hornet, HornetModel<Hornet>> {
     private static final ResourceLocation TEXTURE =
-            new ResourceLocation(Overwhelmed.MOD_ID, "textures/entity/moth.png");
+            new ResourceLocation(Overwhelmed.MOD_ID, "textures/entity/hornet.png");
 
     public HornetRenderer(EntityRendererProvider.Context context) {
         super(context, new HornetModel<>(context.bakeLayer(OverwhelmedModelLayers.HORNET_MODEL_LAYER)), 0.2f);
