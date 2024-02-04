@@ -23,7 +23,6 @@ package endurteam.overwhelmed.client.renderer.entity;
 import endurteam.overwhelmed.Overwhelmed;
 import endurteam.overwhelmed.client.model.entity.HornetLarvaModel;
 import endurteam.overwhelmed.client.model.geom.OverwhelmedModelLayers;
-import endurteam.overwhelmed.world.entity.animal.Hornet;
 import endurteam.overwhelmed.world.entity.animal.HornetLarva;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;

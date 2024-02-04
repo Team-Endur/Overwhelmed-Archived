@@ -24,11 +24,6 @@ package endurteam.overwhelmed.client.model.entity;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
-import endurteam.overwhelmed.client.animation.definitions.HornetAnimation;
-import endurteam.overwhelmed.client.animation.definitions.HornetLarvaAnimation;
-import endurteam.overwhelmed.client.animation.definitions.SnailAnimation;
-import endurteam.overwhelmed.world.entity.animal.Hornet;
-import endurteam.overwhelmed.world.entity.animal.Snail;
 import net.minecraft.client.model.HierarchicalModel;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
@@ -63,8 +58,8 @@ public class HornetLarvaModel<T extends Entity> extends HierarchicalModel<T> {
 				PartPose.offsetAndRotation(1.0F, 20.0F, -2.0F, 0.0F, 0.0F, -0.2618F));
 
 		PartDefinition right_wing = partdefinition.addOrReplaceChild("right_wing", CubeListBuilder.create().texOffs(-2, 0)
-				.addBox(-2.0F, 0.0F, 0.0F, 2.0F, 0.0F, 2.0F, new CubeDeformation(0.0F))
-				, PartPose.offsetAndRotation(-1.0F, 20.0F, -2.0F, 0.0F, 0.0F, 0.2618F));
+				.addBox(-2.0F, 0.0F, 0.0F, 2.0F, 0.0F, 2.0F, new CubeDeformation(0.0F)),
+				PartPose.offsetAndRotation(-1.0F, 20.0F, -2.0F, 0.0F, 0.0F, 0.2618F));
 
 		PartDefinition stinger = partdefinition.addOrReplaceChild("stinger", CubeListBuilder.create().texOffs(0, 3)
 				.addBox(0.0F, -0.5F, 0.0F, 0.0F, 1.0F, 2.0F, new CubeDeformation(0.0F)),
@@ -84,14 +79,7 @@ public class HornetLarvaModel<T extends Entity> extends HierarchicalModel<T> {
 
 	@Override
 	public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw,
-						  float headPitch) {
-		this.root().getAllParts().forEach(ModelPart::resetPose);
-		if (entity.walkDist > 0) {
-			this.animateWalk(HornetLarvaAnimation.HORNET_LARVA_WALK, limbSwing, limbSwingAmount, 2f, 2.5f);
-		} else if (entity.isAlive()) {
-			this.animate(((Snail) entity).idleAnimationState, HornetLarvaAnimation.HORNET_LARVA_IDLE, ageInTicks, 1f);
-		}
-	}
+						  float headPitch) {}
 
 	@Override
 	public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay,
