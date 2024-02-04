@@ -32,6 +32,8 @@ public class OverwhelmedSoundEvents {
     public static SoundEvent HORNET_STING;
     public static SoundEvent HORNET_HURT;
     public static SoundEvent HORNET_DEATH;
+    public static SoundEvent HORNET_LARVA_HURT;
+    public static SoundEvent HORNET_LARVA_DEATH;
     public static SoundEvent BLOWGUN_SHOOT;
     public static SoundEvent PEBBLE_THROW;
 }

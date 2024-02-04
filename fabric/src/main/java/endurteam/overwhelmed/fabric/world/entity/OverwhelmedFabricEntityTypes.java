@@ -106,6 +106,12 @@ public class OverwhelmedFabricEntityTypes {
                         .sized(0.8f, 0.8f)
                         .clientTrackingRange(12)
                         .build("hornet"));
+        HORNET_LARVA = Registry.register(BuiltInRegistries.ENTITY_TYPE,
+                new ResourceLocation(MOD_ID, "hornet_larva"),
+                EntityType.Builder.of(HornetLarva::new, MobCategory.CREATURE)
+                        .sized(0.8f, 0.8f)
+                        .clientTrackingRange(4)
+                        .build("hornet_larva"));
 
         PAPER_BULLET = Registry.register(BuiltInRegistries.ENTITY_TYPE,
                 new ResourceLocation(MOD_ID, "paper_bullet"),

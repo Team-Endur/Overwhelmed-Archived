@@ -47,6 +47,7 @@ public class OverwhelmedMinecraftForgeCreativeTabs {
                             output.accept(ICE_CUBE);
                             output.accept(PEBBLE);
                             output.accept(MINT_SEEDS);
+                            output.accept(VANILLA_BEANS);
                             output.accept(GOO_BLOCK);
                             output.accept(BLOWGUN);
                             output.accept(PAPER_BULLET);
@@ -62,7 +63,6 @@ public class OverwhelmedMinecraftForgeCreativeTabs {
                             output.accept(GOO_BALL);
                             output.accept(SNAIL_SHELL);
                             output.accept(MINT_LEAF);
-                            output.accept(VANILLA_BEANS);
                             output.accept(BUTTERFLY_SPAWN_EGG);
                             output.accept(SNAIL_SPAWN_EGG);
                         }).build());
@@ -100,6 +100,7 @@ public class OverwhelmedMinecraftForgeCreativeTabs {
             event.accept(WHITE_ALLIUM);
             event.accept(SOIL);
             event.accept(MINT_SEEDS);
+            event.accept(VANILLA_BEANS);
             event.accept(GOO_BLOCK);
         }
         if (event.getTabKey() == CreativeModeTabs.COMBAT)
@@ -125,7 +126,6 @@ public class OverwhelmedMinecraftForgeCreativeTabs {
             event.accept(GOO_BALL);
             event.accept(SNAIL_SHELL);
             event.accept(MINT_LEAF);
-            event.accept(VANILLA_BEANS);
         };
         if (event.getTabKey() == CreativeModeTabs.SPAWN_EGGS)
         {

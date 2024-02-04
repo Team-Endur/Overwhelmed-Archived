@@ -88,6 +88,7 @@ public class OverwhelmedMinecraftForgeItems {
                 PEBBLE = new PebbleBlockItem(OverwhelmedBlocks.PEBBLE,
                         new Item.Properties()));
         MINT_SEEDS = registerGenericItemNameBlockItem("mint_seeds", OverwhelmedBlocks.MINT, helper);
+        VANILLA_BEANS = registerGenericItem("vanilla_beans", 64, Rarity.COMMON, helper);
         GOO_BLOCK = registerGenericBlockItem("goo_block", OverwhelmedBlocks.GOO_BLOCK, helper);
         helper.register(new ResourceLocation(Overwhelmed.MOD_ID, "blowgun"),
                 BLOWGUN = new BlowgunItem(new Item.Properties()
@@ -135,7 +136,6 @@ public class OverwhelmedMinecraftForgeItems {
         GOO_BALL = registerGenericItem("goo_ball", 64, Rarity.COMMON, helper);
         SNAIL_SHELL = registerGenericItem("snail_shell", 64, Rarity.COMMON, helper);
         MINT_LEAF = registerGenericItem("mint_leaf", 64, Rarity.COMMON, helper);
-        VANILLA_BEANS = registerGenericItem("vanilla_beans", 64, Rarity.COMMON, helper);
         helper.register(new ResourceLocation(Overwhelmed.MOD_ID,
                         "butterfly_spawn_egg"), BUTTERFLY_SPAWN_EGG =
                 new MultiSpawnEggItem(new Item.Properties(), (random) -> {

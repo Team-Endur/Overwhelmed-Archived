@@ -51,16 +51,7 @@ public class Moth extends PathfinderMob {
     }
 
     @Override
-    protected void registerGoals() {
-        this.goalSelector.addGoal(8, new LookAtPlayerGoal(this, Player.class, 8.0f));
-        this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, Player.class, true));
-        this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.0, true));
-        this.goalSelector.addGoal(2, new WaterAvoidingRandomFlyingGoal(this, 1.0));
-        this.goalSelector.addGoal(3, new LookAtPlayerGoal(this, Player.class, 8.0f));
-        this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
-        this.goalSelector.addGoal(4, new FloatGoal(this));
-
-    }
+    protected void registerGoals() {}
 
     @Override
     public boolean isPushable() {
@@ -102,33 +93,6 @@ public class Moth extends PathfinderMob {
     @Override
     protected void customServerAiStep() {
         super.customServerAiStep();
-        if (!(this.targetPosition == null || this.level().isEmptyBlock(this.targetPosition)
-                && this.targetPosition.getY() > this.level().getMinBuildHeight())) {
-            this.targetPosition = null;
-        }
-        if (this.targetPosition == null || this.random.nextInt(30) == 0
-                || this.targetPosition.closerToCenterThan(this.position(), 2.0)) {
-            this.targetPosition =
-                    BlockPos.containing(
-                            this.getX() + (double)this.random.nextInt(7)
-                                    - (double)this.random.nextInt(7),
-                            this.getY() + (double)this.random.nextInt(6) - 2.0,
-                            this.getZ() + (double)this.random.nextInt(7)
-                                    - (double)this.random.nextInt(7));
-        }
-        double d = (double)this.targetPosition.getX() + 0.5 - this.getX();
-        double e = (double)this.targetPosition.getY() + 0.1 - this.getY();
-        double f = (double)this.targetPosition.getZ() + 0.5 - this.getZ();
-        Vec3 vec3 = this.getDeltaMovement();
-        Vec3 vec32 = vec3.add(
-                (Math.signum(d) * 0.5 - vec3.x) * (double)0.1f,
-                (Math.signum(e) * (double)0.7f - vec3.y) * (double)0.1f,
-                (Math.signum(f) * 0.5 - vec3.z) * (double)0.1f);
-        this.setDeltaMovement(vec32);
-        float g = (float)(Mth.atan2(vec32.z, vec32.x) * 57.2957763671875) - 90.0f;
-        float h = Mth.wrapDegrees(g - this.getYRot());
-        this.zza = 0.5f;
-        this.setYRot(this.getYRot() + h);
         List<Player> players = this.level().getEntitiesOfClass(Player.class, this.getBoundingBox().inflate(2.0));
         for (Player player : players) {
             player.addEffect(new MobEffectInstance(MobEffects.UNLUCK, 300, 1));

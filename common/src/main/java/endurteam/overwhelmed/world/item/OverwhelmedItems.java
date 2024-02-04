@@ -54,7 +54,7 @@ public class OverwhelmedItems {
     public static PebbleBlockItem PEBBLE;
     public static BlockItem GOO_BLOCK;
     public static ItemNameBlockItem MINT_SEEDS;
-    public static ItemNameBlockItem VANILLA_BEANS;
+    public static Item VANILLA_BEANS;
     public static Item BLOWGUN;
     public static Item PAPER_BULLET;
     public static Item SNAIL;
@@ -89,6 +89,7 @@ public class OverwhelmedItems {
 
     public static MultiSpawnEggItem BUTTERFLY_SPAWN_EGG;
     public static SpawnEggItem HORNET_SPAWN_EGG;
+    public static SpawnEggItem HORNET_LARVA_SPAWN_EGG;
     public static SpawnEggItem MOTH_SPAWN_EGG;
     public static MultiSpawnEggItem SNAIL_SPAWN_EGG;
 }

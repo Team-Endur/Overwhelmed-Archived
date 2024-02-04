@@ -43,9 +43,7 @@ public class Hornet extends Animal implements NeutralMob, FlyingAnimal {
     }
 
     @Override
-    protected void registerGoals() {
-
-    }
+    protected void registerGoals() {}
 
     @Override
     public void addAdditionalSaveData(CompoundTag compoundTag) {

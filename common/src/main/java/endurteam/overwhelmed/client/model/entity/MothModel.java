@@ -24,9 +24,7 @@ package endurteam.overwhelmed.client.model.entity;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
-import endurteam.overwhelmed.client.animation.definitions.HornetAnimation;
 import endurteam.overwhelmed.client.animation.definitions.MothAnimation;
-import endurteam.overwhelmed.world.entity.animal.Hornet;
 import endurteam.overwhelmed.world.entity.animal.Moth;
 import net.minecraft.client.model.HierarchicalModel;
 import net.minecraft.client.model.geom.ModelPart;
@@ -38,80 +36,39 @@ import org.jetbrains.annotations.NotNull;
 public class MothModel<T extends Entity> extends HierarchicalModel<T> {
 	private final ModelPart root;
 	private final ModelPart body;
-	private final ModelPart right_wing;
-	private final ModelPart left_wing;
-	private final ModelPart right_leg1;
-	private final ModelPart right_leg2;
-	private final ModelPart right_leg3;
-	private final ModelPart left_leg1;
-	private final ModelPart left_leg2;
-	private final ModelPart left_leg3;
 
 	public MothModel(ModelPart root) {
 		this.root = root;
 		this.body = root.getChild("body");
-		this.right_wing = root.getChild("right_wing");
-		this.left_wing = root.getChild("left_wing");
-		this.right_leg1 = root.getChild("right_leg1");
-		this.right_leg2 = root.getChild("right_leg2");
-		this.right_leg3 = root.getChild("right_leg3");
-		this.left_leg1 = root.getChild("left_leg1");
-		this.left_leg2 = root.getChild("left_leg2");
-		this.left_leg3 = root.getChild("left_leg3");
 	}
 
 	public static LayerDefinition createBodyLayer() {
 		MeshDefinition meshdefinition = new MeshDefinition();
 		PartDefinition partdefinition = meshdefinition.getRoot();
 
-		PartDefinition body = partdefinition.addOrReplaceChild("body", CubeListBuilder.create()
-				.texOffs(18, 17).addBox(-1.5F, -1.5F, -4.5F, 3.0F, 3.0F, 9.0F,
-						new CubeDeformation(0.0F))
-				.texOffs(0, 2).addBox(1.5F, -1.5F, -9.5F, 0.0F, 2.0F, 5.0F,
-						new CubeDeformation(0.0F))
-				.texOffs(0, 0).addBox(-1.5F, -1.5F, -9.5F, 0.0F, 2.0F, 5.0F,
-						new CubeDeformation(0.0F)),
-				PartPose.offsetAndRotation(0.0F, 16.0F, 0.0F, -0.589F, 0.0F, 0.0F));
+		PartDefinition body = partdefinition.addOrReplaceChild("body", CubeListBuilder.create().texOffs(18, 17).addBox(-1.5F, -1.5F, -4.5F, 3.0F, 3.0F, 9.0F, new CubeDeformation(0.0F))
+				.texOffs(0, 2).addBox(1.5F, -1.5F, -9.5F, 0.0F, 2.0F, 5.0F, new CubeDeformation(0.0F))
+				.texOffs(0, 0).addBox(-1.5F, -1.5F, -9.5F, 0.0F, 2.0F, 5.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 16.0F, 0.0F, -0.589F, 0.0F, 0.0F));
 
-		PartDefinition right_wing = partdefinition.addOrReplaceChild("right_wing", CubeListBuilder.create()
-				.texOffs(0, 13).addBox(-7.0F, 0.0F, -6.5F, 7.0F, 0.0F, 13.0F,
-						new CubeDeformation(0.0F)),
-				PartPose.offsetAndRotation(-1.5F, 15.0F, 0.0F, -0.7854F, 0.0F, 0.0F));
+		PartDefinition right_wing = body.addOrReplaceChild("right_wing", CubeListBuilder.create().texOffs(0, 13)
+				.addBox(-7.0F, 0.0F, -6.5F, 7.0F, 0.0F, 13.0F, new CubeDeformation(0.0F)),
+				PartPose.offsetAndRotation(-1.5F, -1.0F, 0.0F, -0.2182F, 0.0F, 0.0F));
 
-		PartDefinition left_wing = partdefinition.addOrReplaceChild("left_wing", CubeListBuilder.create()
-				.texOffs(0, 0).addBox(0.0F, 0.0F, -6.5F, 7.0F, 0.0F, 13.0F,
-						new CubeDeformation(0.0F)),
-				PartPose.offsetAndRotation(1.5F, 15.0F, 0.0F, -0.7854F, 0.0F, 0.0F));
+		PartDefinition left_wing = body.addOrReplaceChild("left_wing", CubeListBuilder.create().texOffs(0, 0)
+				.addBox(0.0F, 0.0F, -6.5F, 7.0F, 0.0F, 13.0F, new CubeDeformation(0.0F)),
+				PartPose.offsetAndRotation(1.5F, -1.0F, 0.0F, -0.2182F, 0.0F, 0.0F));
 
-		PartDefinition right_leg1 = partdefinition.addOrReplaceChild("right_leg1", CubeListBuilder.create()
-				.texOffs(4, 2).addBox(-0.5F, 0.0F, 0.0F, 1.0F, 2.0F, 0.0F,
-						new CubeDeformation(0.0F)),
-				PartPose.offset(-1.0F, 16.0F, -2.5F));
+		PartDefinition legs1 = body.addOrReplaceChild("legs1", CubeListBuilder.create().texOffs(0, 0)
+				.addBox(-0.5F, 0.0F, 0.0F, 3.0F, 2.0F, 0.0F, new CubeDeformation(0.0F)),
+				PartPose.offsetAndRotation(-1.0F, 1.5F, -2.5F, 0.6545F, 0.0F, 0.0F));
 
-		PartDefinition right_leg2 = partdefinition.addOrReplaceChild("right_leg2", CubeListBuilder.create()
-				.texOffs(2, 0).addBox(-0.5F, 0.0F, 0.0F, 1.0F, 2.0F, 0.0F,
-						new CubeDeformation(0.0F)),
-				PartPose.offset(-1.0F, 17.0F, -1.0F));
+		PartDefinition legs2 = body.addOrReplaceChild("legs2", CubeListBuilder.create().texOffs(0, 0)
+				.addBox(-0.5F, 0.0F, 0.0F, 3.0F, 2.0F, 0.0F, new CubeDeformation(0.0F)),
+				PartPose.offsetAndRotation(-1.0F, 1.5F, -1.0F, 0.6545F, 0.0F, 0.0F));
 
-		PartDefinition right_leg3 = partdefinition.addOrReplaceChild("right_leg3", CubeListBuilder.create()
-				.texOffs(0, 2).addBox(-0.5F, 0.0F, 0.0F, 1.0F, 2.0F, 0.0F,
-						new CubeDeformation(0.0F)),
-				PartPose.offset(-1.0F, 18.0F, 0.5F));
-
-		PartDefinition left_leg1 = partdefinition.addOrReplaceChild("left_leg1", CubeListBuilder.create()
-				.texOffs(4, 0).addBox(-0.5F, 0.0F, 0.0F, 1.0F, 2.0F, 0.0F,
-						new CubeDeformation(0.0F)),
-				PartPose.offset(1.0F, 16.0F, -2.5F));
-
-		PartDefinition left_leg2 = partdefinition.addOrReplaceChild("left_leg2", CubeListBuilder.create()
-				.texOffs(2, 2).addBox(-0.5F, 0.0F, 0.0F, 1.0F, 2.0F, 0.0F,
-						new CubeDeformation(0.0F)),
-				PartPose.offset(1.0F, 17.0F, -1.0F));
-
-		PartDefinition left_leg3 = partdefinition.addOrReplaceChild("left_leg3", CubeListBuilder.create()
-				.texOffs(0, 0).addBox(-0.5F, 0.0F, 0.0F, 1.0F, 2.0F, 0.0F,
-						new CubeDeformation(0.0F)),
-				PartPose.offset(1.0F, 18.0F, 0.5F));
+		PartDefinition legs3 = body.addOrReplaceChild("legs3", CubeListBuilder.create().texOffs(0, 0)
+				.addBox(-0.5F, 0.0F, 0.0F, 3.0F, 2.0F, 0.0F, new CubeDeformation(0.0F)),
+				PartPose.offsetAndRotation(-1.0F, 1.5F, 0.5F, 0.6545F, 0.0F, 0.0F));
 
 		return LayerDefinition.create(meshdefinition, 64, 64);
 	}
@@ -124,17 +81,8 @@ public class MothModel<T extends Entity> extends HierarchicalModel<T> {
 	}
 
 	@Override
-	public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay,
-							   float red, float green, float blue, float alpha) {
+	public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
 		body.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
-		right_wing.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
-		left_wing.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
-		right_leg1.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
-		right_leg2.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
-		right_leg3.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
-		left_leg1.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
-		left_leg2.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
-		left_leg3.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
 	}
 
 	@Override

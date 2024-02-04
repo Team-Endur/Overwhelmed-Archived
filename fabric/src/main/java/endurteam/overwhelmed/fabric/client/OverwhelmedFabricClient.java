@@ -61,6 +61,7 @@ public class OverwhelmedFabricClient implements ClientModInitializer {
         EntityRendererRegistry.register(OverwhelmedEntityTypes.ROMAN_SNAIL, RomanSnailRenderer::new);
         EntityRendererRegistry.register(OverwhelmedEntityTypes.MOTH, MothRenderer::new);
         EntityRendererRegistry.register(OverwhelmedEntityTypes.HORNET, HornetRenderer::new);
+        EntityRendererRegistry.register(OverwhelmedEntityTypes.HORNET_LARVA, HornetLarvaRenderer::new);
         OverwhelmedFabricModelLayers.registerModelLayers();
         ColorProviderRegistry.ITEM.register(snailSpawnEggItemColor = new SnailSpawnEggItemColor(),
                 OverwhelmedItems.SNAIL_SPAWN_EGG);
@@ -74,9 +75,6 @@ public class OverwhelmedFabricClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(OverwhelmedBlocks.RINGOT, RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(OverwhelmedBlocks.SNOWDROP, RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(OverwhelmedBlocks.BELL_SUNFLOWER, RenderType.cutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(OverwhelmedBlocks.VANILLA_VINES_SPROUT, RenderType.cutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(OverwhelmedBlocks.VANILLA_VINES, RenderType.cutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(OverwhelmedBlocks.FLOWERING_VANILLA_VINES, RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(OverwhelmedBlocks.POTTED_FLOFF, RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(OverwhelmedBlocks.POTTED_PAINE, RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(OverwhelmedBlocks.POTTED_PINK_LAVATERA, RenderType.cutout());

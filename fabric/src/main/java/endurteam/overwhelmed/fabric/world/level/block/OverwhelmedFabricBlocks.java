@@ -182,9 +182,6 @@ public class OverwhelmedFabricBlocks {
                 "potted_bell_sunflower",
                 BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT));
         OverwhelmedBlocks.MINT = registerGenericCropBlock("mint", BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT));
-        OverwhelmedBlocks.VANILLA_VINES_SPROUT = registerGenericGrassBlock("vanilla_vines_sprout", BlockBehaviour.Properties.ofFullCopy(Blocks.SHORT_GRASS));
-        OverwhelmedBlocks.VANILLA_VINES = registerGenericTallFlowerBlock("vanilla_vines", BlockBehaviour.Properties.ofFullCopy(Blocks.TALL_GRASS));
-        OverwhelmedBlocks.FLOWERING_VANILLA_VINES = registerGenericTallFlowerBlock("flowering_vanilla_vines", BlockBehaviour.Properties.ofFullCopy(Blocks.TALL_GRASS));
         OverwhelmedBlocks.GOO_BLOCK = Registry.register(BuiltInRegistries.BLOCK,
                 new ResourceLocation(Overwhelmed.MOD_ID, "goo_block"),
                 new GooBlock(BlockBehaviour.Properties.of()
