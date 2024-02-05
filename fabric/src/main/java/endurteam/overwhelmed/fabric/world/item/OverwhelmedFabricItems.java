@@ -19,7 +19,6 @@ import static endurteam.overwhelmed.world.item.OverwhelmedItems.*;
 
 public class OverwhelmedFabricItems {
     public static void registerItems() {
-        SOIL = registerGenericBlockItem("soil", OverwhelmedBlocks.SOIL);
         SNAIL_SHELL_BRICKS = registerGenericBlockItem("snail_shell_bricks",
                 OverwhelmedBlocks.SNAIL_SHELL_BRICKS);
         SNAIL_SHELL_BRICK_STAIRS = registerGenericBlockItem(
@@ -55,6 +54,8 @@ public class OverwhelmedFabricItems {
         POLISHED_BLACK_GRANITE_SLAB = registerGenericBlockItem(
                 "polished_black_granite_slab",
                 OverwhelmedBlocks.POLISHED_BLACK_GRANITE_SLAB);
+        SOIL = registerGenericBlockItem("soil", OverwhelmedBlocks.SOIL);
+        CHARCOAL_ORE = registerGenericBlockItem("charcoal_ore", OverwhelmedBlocks.CHARCOAL_ORE);
         FLOFF = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Overwhelmed.MOD_ID, "floff"),
                 new BlockItem(OverwhelmedBlocks.FLOFF,
                         new Item.Properties()));
@@ -178,8 +179,6 @@ public class OverwhelmedFabricItems {
                 0x84504e, 0xddd5c3);
         HORNET_SPAWN_EGG = registerGenericSpawnEggItem("hornet_spawn_egg", OverwhelmedEntityTypes.HORNET,
                 0xf79553, 0x3d221b);
-        HORNET_LARVA_SPAWN_EGG = registerGenericSpawnEggItem("hornet_larva_spawn_egg", OverwhelmedEntityTypes.HORNET_LARVA,
-                0xe5e7c8, 0xe98152);
         SNAIL_SPAWN_EGG = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Overwhelmed.MOD_ID,
                         "snail_spawn_egg"), new MultiSpawnEggItem(new Item.Properties(), (random) -> {
                     switch (random.nextIntBetweenInclusive(1, 6)) {

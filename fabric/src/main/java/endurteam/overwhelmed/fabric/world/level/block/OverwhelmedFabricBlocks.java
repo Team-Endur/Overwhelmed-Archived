@@ -18,10 +18,6 @@ public class OverwhelmedFabricBlocks {
 
     public static void registerBlocks() {
         //Must register Blocks first
-        OverwhelmedBlocks.SOIL = registerGenericBlock("soil", BlockBehaviour.Properties.of()
-                .mapColor(MapColor.COLOR_BROWN)
-                .strength(0.5f, 0.5f)
-                .sound(SoundType.ROOTED_DIRT));
         OverwhelmedBlocks.SNAIL_SHELL_BRICKS = registerGenericBlock("snail_shell_bricks",
                 BlockBehaviour.Properties.of()
                 .mapColor(MapColor.COLOR_BROWN)
@@ -62,6 +58,14 @@ public class OverwhelmedFabricBlocks {
                         "polished_black_granite_stairs", BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.POLISHED_BLACK_GRANITE));
         OverwhelmedBlocks.POLISHED_BLACK_GRANITE_SLAB = registerGenericSlabBlock("polished_black_granite_slab",
                 BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.POLISHED_BLACK_GRANITE));
+        OverwhelmedBlocks.SOIL = registerGenericBlock("soil", BlockBehaviour.Properties.of()
+                .mapColor(MapColor.COLOR_BROWN)
+                .strength(0.5f, 0.5f)
+                .sound(SoundType.ROOTED_DIRT));
+        OverwhelmedBlocks.CHARCOAL_ORE = registerGenericBlock("charcoal_ore", BlockBehaviour.Properties.of()
+                .mapColor(MapColor.COLOR_BROWN)
+                .strength(0.7f, 0.7f)
+                .sound(SoundType.ROOTED_DIRT));
         OverwhelmedBlocks.GOLD_BEAD = registerGenericClotBlock("gold_bead", BlockBehaviour.Properties.of()
                 .mapColor(MapColor.GOLD)
                 .strength(0f, 6f)

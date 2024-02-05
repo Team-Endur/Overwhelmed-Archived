@@ -23,7 +23,6 @@ package endurteam.overwhelmed.world.level.block;
 import net.minecraft.world.level.block.*;
 
 public class OverwhelmedBlocks {
-    public static Block SOIL;
     public static Block SNAIL_SHELL_BRICKS;
     public static StairBlock SNAIL_SHELL_BRICK_STAIRS;
     public static SlabBlock SNAIL_SHELL_BRICK_SLAB;
@@ -36,6 +35,8 @@ public class OverwhelmedBlocks {
     public static Block POLISHED_BLACK_GRANITE;
     public static StairBlock POLISHED_BLACK_GRANITE_STAIRS;
     public static SlabBlock POLISHED_BLACK_GRANITE_SLAB;
+    public static Block SOIL;
+    public static Block CHARCOAL_ORE;
     public static ClotBlock GOLD_BEAD;
     public static ClotBlock ICE_CUBE;
     public static PebbleBlock PEBBLE;

@@ -61,7 +61,6 @@ public class OverwhelmedFabricClient implements ClientModInitializer {
         EntityRendererRegistry.register(OverwhelmedEntityTypes.ROMAN_SNAIL, RomanSnailRenderer::new);
         EntityRendererRegistry.register(OverwhelmedEntityTypes.MOTH, MothRenderer::new);
         EntityRendererRegistry.register(OverwhelmedEntityTypes.HORNET, HornetRenderer::new);
-        EntityRendererRegistry.register(OverwhelmedEntityTypes.HORNET_LARVA, HornetLarvaRenderer::new);
         OverwhelmedFabricModelLayers.registerModelLayers();
         ColorProviderRegistry.ITEM.register(snailSpawnEggItemColor = new SnailSpawnEggItemColor(),
                 OverwhelmedItems.SNAIL_SPAWN_EGG);

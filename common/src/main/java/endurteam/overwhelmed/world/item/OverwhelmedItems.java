@@ -24,7 +24,6 @@ package endurteam.overwhelmed.world.item;
 import net.minecraft.world.item.*;
 
 public class OverwhelmedItems {
-    public static BlockItem SOIL;
     public static BlockItem SNAIL_SHELL_BRICKS;
     public static BlockItem SNAIL_SHELL_BRICK_STAIRS;
     public static BlockItem SNAIL_SHELL_BRICK_SLAB;
@@ -37,6 +36,8 @@ public class OverwhelmedItems {
     public static BlockItem POLISHED_BLACK_GRANITE;
     public static BlockItem POLISHED_BLACK_GRANITE_STAIRS;
     public static BlockItem POLISHED_BLACK_GRANITE_SLAB;
+    public static BlockItem SOIL;
+    public static BlockItem CHARCOAL_ORE;
     public static BlockItem FLOFF;
     public static BlockItem PAINE;
     public static BlockItem PINK_LAVATERA;

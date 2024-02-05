@@ -20,7 +20,6 @@ public class OverwhelmedFabricCreativeTabs {
                                 new ItemStack(SNAIL_SHELL))
                         .title(Component.translatable("category.overwhelmed"))
                         .displayItems((itemDisplayParameters, output) -> {
-                            output.accept(SOIL);
                             output.accept(SNAIL_SHELL_BRICKS);
                             output.accept(SNAIL_SHELL_BRICK_STAIRS);
                             output.accept(SNAIL_SHELL_BRICK_SLAB);
@@ -33,6 +32,8 @@ public class OverwhelmedFabricCreativeTabs {
                             output.accept(POLISHED_BLACK_GRANITE);
                             output.accept(POLISHED_BLACK_GRANITE_STAIRS);
                             output.accept(POLISHED_BLACK_GRANITE_SLAB);
+                            output.accept(SOIL);
+                            output.accept(CHARCOAL_ORE);
                             output.accept(FLOFF);
                             output.accept(PAINE);
                             output.accept(PINK_LAVATERA);
@@ -41,8 +42,6 @@ public class OverwhelmedFabricCreativeTabs {
                             output.accept(RINGOT);
                             output.accept(SNOWDROP);
                             output.accept(BELL_SUNFLOWER);
-                            output.accept(VANILLA_VINES);
-                            output.accept(FLOWERING_VANILLA_VINES);
                             output.accept(WIDOW);
                             output.accept(WHITE_ALLIUM);
                             output.accept(GOLD_BEAD);
@@ -67,7 +66,6 @@ public class OverwhelmedFabricCreativeTabs {
                             output.accept(MINT_LEAF);
                             output.accept(BUTTERFLY_SPAWN_EGG);
                             output.accept(HORNET_SPAWN_EGG);
-                            output.accept(HORNET_LARVA_SPAWN_EGG);
                             output.accept(MOTH_SPAWN_EGG);
                             output.accept(SNAIL_SPAWN_EGG);
                         }).build());
@@ -86,6 +84,8 @@ public class OverwhelmedFabricCreativeTabs {
             output.addAfter(POLISHED_BLACK_GRANITE_STAIRS, POLISHED_BLACK_GRANITE_SLAB);
         });
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.NATURAL_BLOCKS).register(output -> {
+            output.addAfter(Items.ROOTED_DIRT, SOIL);
+            output.addAfter(Items.DEEPSLATE_DIAMOND_ORE, CHARCOAL_ORE);
             output.addAfter(Items.DEAD_BUSH, GOLD_BEAD);
             output.addAfter(GOLD_BEAD, ICE_CUBE);
             output.addAfter(ICE_CUBE, PEBBLE);
@@ -97,13 +97,10 @@ public class OverwhelmedFabricCreativeTabs {
             output.addAfter(SQUIRL, RINGOT);
             output.addAfter(RINGOT, SNOWDROP);
             output.addAfter(SNOWDROP, BELL_SUNFLOWER);
-            output.addAfter(BELL_SUNFLOWER, VANILLA_VINES);
-            output.addAfter(VANILLA_VINES, FLOWERING_VANILLA_VINES);
-            output.addAfter(FLOWERING_VANILLA_VINES, WIDOW);
+            output.addAfter(BELL_SUNFLOWER, WIDOW);
             output.addAfter(WIDOW, WHITE_ALLIUM);
-            output.accept(SOIL);
             output.addAfter(Items.BEETROOT_SEEDS, MINT_SEEDS);
-            output.addAfter(MINT_LEAF, VANILLA_BEANS);
+            output.addAfter(MINT_SEEDS, VANILLA_BEANS);
             output.accept(GOO_BLOCK);
 
         });
@@ -132,7 +129,6 @@ public class OverwhelmedFabricCreativeTabs {
             output.addAfter(Items.SLIME_SPAWN_EGG, SNAIL_SPAWN_EGG);
             output.addAfter(Items.BLAZE_SPAWN_EGG, BUTTERFLY_SPAWN_EGG);
             output.addAfter(Items.HORSE_SPAWN_EGG, HORNET_SPAWN_EGG);
-            output.addAfter(HORNET_SPAWN_EGG, HORNET_LARVA_SPAWN_EGG);
             output.addAfter(Items.MAGMA_CUBE_SPAWN_EGG, MOTH_SPAWN_EGG);
         });
 

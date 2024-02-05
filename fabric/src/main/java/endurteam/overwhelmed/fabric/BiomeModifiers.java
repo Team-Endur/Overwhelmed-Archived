@@ -86,6 +86,11 @@ public class BiomeModifiers {
                 Decoration.TOP_LAYER_MODIFICATION, OverwhelmedPlacedFeatures.ORE_BLACK_GRANITE);
     }
 
+    public static void charcoalOreGeneration() {
+        BiomeModifications.addFeature(bsc -> bsc.hasTag(OverwhelmedBiomeTags.GENERATES_CHARCOAL_ORE),
+                Decoration.TOP_LAYER_MODIFICATION, OverwhelmedPlacedFeatures.ORE_CHARCOAL);
+    }
+
     public static void flowerOldGrowthPineTaigaGeneration() {
         BiomeModifications.addFeature(bsc -> bsc.hasTag(OverwhelmedBiomeTags.FLOWERS_OLD_GROWTH_PINE_TAIGA),
                 Decoration.VEGETAL_DECORATION, OverwhelmedPlacedFeatures.FLOWER_OLD_GROWTH_PINE_TAIGA);

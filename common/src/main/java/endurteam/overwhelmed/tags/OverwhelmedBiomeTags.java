@@ -38,6 +38,9 @@ public class OverwhelmedBiomeTags {
     public static final TagKey<Biome> GENERATES_SNOWDROPS = TagKey.create(Registries.BIOME,
             new ResourceLocation(MOD_ID, "generates_snowdrops"));
 
+    public static final TagKey<Biome> GENERATES_CHARCOAL_ORE = TagKey.create(Registries.BIOME,
+            new ResourceLocation(MOD_ID, "generates_charcoal_ore"));
+
     public static final TagKey<Biome> GENERATES_SOIL = TagKey.create(Registries.BIOME,
             new ResourceLocation(MOD_ID, "generates_soil"));
 
