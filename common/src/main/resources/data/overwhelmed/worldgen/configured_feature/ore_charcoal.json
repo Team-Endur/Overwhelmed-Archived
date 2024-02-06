@@ -1,22 +1,13 @@
 {
     "type": "minecraft:ore",
     "config": {
-        "size": 32,
+        "size": 6,
         "discard_chance_on_air_exposure": 0,
         "targets": [
             {
                 "target": {
                     "predicate_type": "minecraft:block_match",
-                    "block": "minecraft:grass_block"
-                },
-                "state": {
-                    "Name": "overwhelmed:charcoal_ore"
-                }
-            },
-            {
-                "target": {
-                    "predicate_type": "minecraft:block_match",
-                    "block": "minecraft:dirt"
+                    "block": "overwhelmed:soil"
                 },
                 "state": {
                     "Name": "overwhelmed:charcoal_ore"
