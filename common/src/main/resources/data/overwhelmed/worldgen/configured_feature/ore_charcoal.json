@@ -12,6 +12,15 @@
                 "state": {
                     "Name": "overwhelmed:charcoal_ore"
                 }
+            },
+            {
+                "target": {
+                    "predicate_type": "minecraft:block_match",
+                    "block": "minecraft:grass_block"
+                },
+                "state": {
+                    "Name": "overwhelmed:charcoal_ore"
+                }
             }
         ]
     }
