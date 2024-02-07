@@ -16,7 +16,6 @@ import static endurteam.overwhelmed.world.item.OverwhelmedItems.*;
 
 public class OverwhelmedMinecraftForgeItems {
     public static void registerItems(RegisterEvent.RegisterHelper<Item> helper) {
-        SOIL = registerGenericBlockItem("soil", OverwhelmedBlocks.SOIL, helper);
         SNAIL_SHELL_BRICKS = registerGenericBlockItem("snail_shell_bricks",
                 OverwhelmedBlocks.SNAIL_SHELL_BRICKS, helper);
         SNAIL_SHELL_BRICK_STAIRS = registerGenericBlockItem(
@@ -52,6 +51,8 @@ public class OverwhelmedMinecraftForgeItems {
         POLISHED_BLACK_GRANITE_SLAB = registerGenericBlockItem(
                 "polished_black_granite_slab",
                 OverwhelmedBlocks.POLISHED_BLACK_GRANITE_SLAB, helper);
+        SOIL = registerGenericBlockItem("soil", OverwhelmedBlocks.SOIL, helper);
+        SOIL = registerGenericBlockItem("charcoal_ore", OverwhelmedBlocks.CHARCOAL_ORE, helper);
         helper.register(new ResourceLocation(Overwhelmed.MOD_ID, "floff"),
                 FLOFF = new BlockItem(OverwhelmedBlocks.FLOFF,
                         new Item.Properties()));

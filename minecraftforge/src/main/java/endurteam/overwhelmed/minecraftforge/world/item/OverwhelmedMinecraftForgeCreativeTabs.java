@@ -20,7 +20,6 @@ public class OverwhelmedMinecraftForgeCreativeTabs {
                                 new ItemStack(SNAIL_SHELL))
                         .title(Component.translatable("category.overwhelmed"))
                         .displayItems((itemDisplayParameters, output) -> {
-                            output.accept(SOIL);
                             output.accept(SNAIL_SHELL_BRICKS);
                             output.accept(SNAIL_SHELL_BRICK_STAIRS);
                             output.accept(SNAIL_SHELL_BRICK_SLAB);
@@ -33,6 +32,8 @@ public class OverwhelmedMinecraftForgeCreativeTabs {
                             output.accept(POLISHED_BLACK_GRANITE);
                             output.accept(POLISHED_BLACK_GRANITE_STAIRS);
                             output.accept(POLISHED_BLACK_GRANITE_SLAB);
+                            output.accept(SOIL);
+                            output.accept(CHARCOAL_ORE);
                             output.accept(FLOFF);
                             output.accept(PAINE);
                             output.accept(PINK_LAVATERA);
@@ -85,6 +86,8 @@ public class OverwhelmedMinecraftForgeCreativeTabs {
         }
         if (event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS)
         {
+            event.accept(SOIL);
+            event.accept(CHARCOAL_ORE);
             event.accept(GOLD_BEAD);
             event.accept(ICE_CUBE);
             event.accept(PEBBLE);
@@ -98,7 +101,6 @@ public class OverwhelmedMinecraftForgeCreativeTabs {
             event.accept(BELL_SUNFLOWER);
             event.accept(WIDOW);
             event.accept(WHITE_ALLIUM);
-            event.accept(SOIL);
             event.accept(MINT_SEEDS);
             event.accept(VANILLA_BEANS);
             event.accept(GOO_BLOCK);

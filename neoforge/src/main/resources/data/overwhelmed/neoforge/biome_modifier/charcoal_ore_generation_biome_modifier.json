@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#overwhelmed:generates_charcoal_ore",
+  "features": "overwhelmed:ore_charcoal",
+  "step": "top_layer_modification"
+}

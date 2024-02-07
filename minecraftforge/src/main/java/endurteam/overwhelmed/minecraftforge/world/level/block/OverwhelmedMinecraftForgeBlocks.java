@@ -18,10 +18,6 @@ public class OverwhelmedMinecraftForgeBlocks {
 
     public static void registerBlocks(RegisterEvent.RegisterHelper<Block> helper) {
         //Must register Blocks first
-        OverwhelmedBlocks.SOIL = registerGenericBlock("soil", BlockBehaviour.Properties.of()
-                .mapColor(MapColor.COLOR_BROWN)
-                .strength(0.5f, 0.5f)
-                .sound(SoundType.ROOTED_DIRT), helper);
         OverwhelmedBlocks.SNAIL_SHELL_BRICKS = registerGenericBlock("snail_shell_bricks",
                 BlockBehaviour.Properties.of()
                 .mapColor(MapColor.COLOR_BROWN)
@@ -64,6 +60,14 @@ public class OverwhelmedMinecraftForgeBlocks {
                         BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.POLISHED_BLACK_GRANITE), helper);
         OverwhelmedBlocks.POLISHED_BLACK_GRANITE_SLAB = registerGenericSlabBlock("polished_black_granite_slab",
                 BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.POLISHED_BLACK_GRANITE), helper);
+        OverwhelmedBlocks.SOIL = registerGenericBlock("soil", BlockBehaviour.Properties.of()
+                .mapColor(MapColor.COLOR_BROWN)
+                .strength(0.5f, 0.5f)
+                .sound(SoundType.ROOTED_DIRT), helper);
+        OverwhelmedBlocks.CHARCOAL_ORE = registerGenericBlock("charcoal_ore", BlockBehaviour.Properties.of()
+                .mapColor(MapColor.COLOR_BROWN)
+                .strength(0.6f, 0.6f)
+                .sound(SoundType.ROOTED_DIRT), helper);
         OverwhelmedBlocks.GOLD_BEAD = registerGenericClotBlock("gold_bead", BlockBehaviour.Properties.of()
                 .mapColor(MapColor.GOLD)
                 .strength(0f, 6f)
