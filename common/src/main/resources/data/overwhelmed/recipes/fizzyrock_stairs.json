@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "overwhelmed:fizzyrock"
+    }
+  },
+  "result": {
+    "item": "overwhelmed:fizzyrock_stairs",
+    "count": 4
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "overwhelmed:block/fizzyrock",
+    "side": "overwhelmed:block/fizzyrock",
+    "top": "overwhelmed:block/fizzyrock"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "overwhelmed:block/fizzyrock_slab"
+    },
+    "type=double": {
+      "model": "overwhelmed:block/fizzyrock"
+    },
+    "type=top": {
+      "model": "overwhelmed:block/fizzyrock_slab_top"
+    }
+  }
+}

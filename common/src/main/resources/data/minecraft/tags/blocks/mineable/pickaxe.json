@@ -2,8 +2,8 @@
   "replace": false,
   "values": [
     "overwhelmed:snail_shell_bricks",
-    "overwhelmed:snail_shell_brick_slab",
     "overwhelmed:snail_shell_brick_stairs",
+    "overwhelmed:snail_shell_brick_slab",
     "overwhelmed:snail_shell_brick_wall",
     "overwhelmed:chiseled_snail_shell_bricks",
     "overwhelmed:black_granite",
@@ -12,6 +12,19 @@
     "overwhelmed:black_granite_wall",
     "overwhelmed:polished_black_granite",
     "overwhelmed:polished_black_granite_stairs",
-    "overwhelmed:polished_black_granite_slab"
+    "overwhelmed:polished_black_granite_slab",
+    "overwhelmed:fizzyrock",
+    "overwhelmed:fizzyrock_stairs",
+    "overwhelmed:fizzyrock_slab",
+    "overwhelmed:fizzyrock_wall",
+    "overwhelmed:chiseled_fizzyrock",
+    "overwhelmed:polished_fizzyrock",
+    "overwhelmed:polished_fizzyrock_stairs",
+    "overwhelmed:polished_fizzyrock_slab",
+    "overwhelmed:fizzyrock_bricks",
+    "overwhelmed:fizzyrock_brick_stairs",
+    "overwhelmed:fizzyrock_brick_slab",
+    "overwhelmed:fizzyrock_brick_wall",
+    "overwhelmed:chiseled_fizzyrock_bricks"
   ]
 }

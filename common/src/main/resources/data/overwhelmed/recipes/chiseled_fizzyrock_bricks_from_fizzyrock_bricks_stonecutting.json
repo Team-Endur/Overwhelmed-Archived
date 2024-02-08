@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "overwhelmed:fizzyrock_bricks"
+  },
+  "result": "overwhelmed:chiseled_fizzyrock_bricks"
+}

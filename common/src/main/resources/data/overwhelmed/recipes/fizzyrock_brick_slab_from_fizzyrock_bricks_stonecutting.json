@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "ingredient": {
+    "item": "overwhelmed:fizzyrock_bricks"
+  },
+  "result": "overwhelmed:fizzyrock_brick_slab"
+}

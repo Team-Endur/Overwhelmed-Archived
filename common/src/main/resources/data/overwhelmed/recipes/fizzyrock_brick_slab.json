@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "overwhelmed:fizzyrock_bricks"
+    }
+  },
+  "result": {
+    "item": "overwhelmed:fizzyrock_brick_slab",
+    "count": 6
+  }
+}

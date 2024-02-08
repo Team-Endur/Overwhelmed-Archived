@@ -19,41 +19,36 @@ import static endurteam.overwhelmed.world.item.OverwhelmedItems.*;
 
 public class OverwhelmedFabricItems {
     public static void registerItems() {
-        SNAIL_SHELL_BRICKS = registerGenericBlockItem("snail_shell_bricks",
-                OverwhelmedBlocks.SNAIL_SHELL_BRICKS);
-        SNAIL_SHELL_BRICK_STAIRS = registerGenericBlockItem(
-                "snail_shell_brick_stairs",
-                OverwhelmedBlocks.SNAIL_SHELL_BRICK_STAIRS);
-        SNAIL_SHELL_BRICK_SLAB = registerGenericBlockItem(
-                "snail_shell_brick_slab",
-                OverwhelmedBlocks.SNAIL_SHELL_BRICK_SLAB);
-        SNAIL_SHELL_BRICK_WALL = registerGenericBlockItem(
-                "snail_shell_brick_wall",
-                OverwhelmedBlocks.SNAIL_SHELL_BRICK_WALL);
-        CHISELED_SNAIL_SHELL_BRICKS = registerGenericBlockItem(
-                "chiseled_snail_shell_bricks",
+        SNAIL_SHELL_BRICKS = registerGenericBlockItem("snail_shell_bricks", OverwhelmedBlocks.SNAIL_SHELL_BRICKS);
+        SNAIL_SHELL_BRICK_STAIRS = registerGenericBlockItem("snail_shell_brick_stairs", OverwhelmedBlocks.SNAIL_SHELL_BRICK_STAIRS);
+        SNAIL_SHELL_BRICK_SLAB = registerGenericBlockItem("snail_shell_brick_slab", OverwhelmedBlocks.SNAIL_SHELL_BRICK_SLAB);
+        SNAIL_SHELL_BRICK_WALL = registerGenericBlockItem("snail_shell_brick_wall", OverwhelmedBlocks.SNAIL_SHELL_BRICK_WALL);
+        CHISELED_SNAIL_SHELL_BRICKS = registerGenericBlockItem("chiseled_snail_shell_bricks",
                 OverwhelmedBlocks.CHISELED_SNAIL_SHELL_BRICKS);
-        BLACK_GRANITE = registerGenericBlockItem(
-                "black_granite",
-                OverwhelmedBlocks.BLACK_GRANITE);
-        BLACK_GRANITE_STAIRS = registerGenericBlockItem(
-                "black_granite_stairs",
-                OverwhelmedBlocks.BLACK_GRANITE_STAIRS);
-        BLACK_GRANITE_SLAB = registerGenericBlockItem(
-                "black_granite_slab",
-                OverwhelmedBlocks.BLACK_GRANITE_SLAB);
-        BLACK_GRANITE_WALL = registerGenericBlockItem(
-                "black_granite_wall",
-                OverwhelmedBlocks.BLACK_GRANITE_WALL);
-        POLISHED_BLACK_GRANITE = registerGenericBlockItem(
-                "polished_black_granite",
-                OverwhelmedBlocks.POLISHED_BLACK_GRANITE);
-        POLISHED_BLACK_GRANITE_STAIRS = registerGenericBlockItem(
-                "polished_black_granite_stairs",
+        BLACK_GRANITE = registerGenericBlockItem("black_granite", OverwhelmedBlocks.BLACK_GRANITE);
+        BLACK_GRANITE_STAIRS = registerGenericBlockItem("black_granite_stairs", OverwhelmedBlocks.BLACK_GRANITE_STAIRS);
+        BLACK_GRANITE_SLAB = registerGenericBlockItem("black_granite_slab", OverwhelmedBlocks.BLACK_GRANITE_SLAB);
+        BLACK_GRANITE_WALL = registerGenericBlockItem("black_granite_wall", OverwhelmedBlocks.BLACK_GRANITE_WALL);
+        POLISHED_BLACK_GRANITE = registerGenericBlockItem("polished_black_granite", OverwhelmedBlocks.POLISHED_BLACK_GRANITE);
+        POLISHED_BLACK_GRANITE_STAIRS = registerGenericBlockItem("polished_black_granite_stairs",
                 OverwhelmedBlocks.POLISHED_BLACK_GRANITE_STAIRS);
-        POLISHED_BLACK_GRANITE_SLAB = registerGenericBlockItem(
-                "polished_black_granite_slab",
+        POLISHED_BLACK_GRANITE_SLAB = registerGenericBlockItem("polished_black_granite_slab",
                 OverwhelmedBlocks.POLISHED_BLACK_GRANITE_SLAB);
+        FIZZYROCK = registerGenericBlockItem("fizzyrock", OverwhelmedBlocks.FIZZYROCK);
+        FIZZYROCK_STAIRS = registerGenericBlockItem("fizzyrock_stairs", OverwhelmedBlocks.FIZZYROCK_STAIRS);
+        FIZZYROCK_SLAB = registerGenericBlockItem("fizzyrock_slab", OverwhelmedBlocks.FIZZYROCK_SLAB);
+        FIZZYROCK_WALL = registerGenericBlockItem("fizzyrock_wall", OverwhelmedBlocks.FIZZYROCK_WALL);
+        CHISELED_FIZZYROCK = registerGenericBlockItem("chiseled_fizzyrock", OverwhelmedBlocks.CHISELED_FIZZYROCK);
+        POLISHED_FIZZYROCK = registerGenericBlockItem("polished_fizzyrock", OverwhelmedBlocks.POLISHED_FIZZYROCK);
+        POLISHED_FIZZYROCK_STAIRS = registerGenericBlockItem("polished_fizzyrock_stairs",
+                OverwhelmedBlocks.POLISHED_FIZZYROCK_STAIRS);
+        POLISHED_FIZZYROCK_SLAB = registerGenericBlockItem("polished_fizzyrock_slab", OverwhelmedBlocks.POLISHED_FIZZYROCK_SLAB);
+        FIZZYROCK_BRICKS = registerGenericBlockItem("fizzyrock_bricks", OverwhelmedBlocks.FIZZYROCK_BRICKS);
+        FIZZYROCK_BRICK_STAIRS = registerGenericBlockItem("fizzyrock_brick_stairs", OverwhelmedBlocks.FIZZYROCK_BRICK_STAIRS);
+        FIZZYROCK_BRICK_SLAB = registerGenericBlockItem("fizzyrock_brick_slab", OverwhelmedBlocks.FIZZYROCK_BRICK_SLAB);
+        FIZZYROCK_BRICK_WALL = registerGenericBlockItem("fizzyrock_brick_wall", OverwhelmedBlocks.FIZZYROCK_BRICK_WALL);
+        CHISELED_FIZZYROCK_BRICKS = registerGenericBlockItem("chiseled_fizzyrock_bricks", OverwhelmedBlocks.CHISELED_FIZZYROCK_BRICKS);
+        FIZZYROCK_GEYSER = registerGenericBlockItem("fizzyrock_geyser", OverwhelmedBlocks.FIZZYROCK_GEYSER);
         SOIL = registerGenericBlockItem("soil", OverwhelmedBlocks.SOIL);
         CHARCOAL_ORE = registerGenericBlockItem("charcoal_ore", OverwhelmedBlocks.CHARCOAL_ORE);
         FLOFF = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Overwhelmed.MOD_ID, "floff"),

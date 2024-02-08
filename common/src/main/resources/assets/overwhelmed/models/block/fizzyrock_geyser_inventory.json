@@ -1,0 +1,31 @@
+{   "parent": "block/block",
+  "display": {
+    "gui": {
+      "rotation": [ 30, 135, 0 ],
+      "translation": [ 0, 0, 0],
+      "scale":[ 0.625, 0.625, 0.625 ]
+    },
+    "fixed": {
+      "rotation": [ 0, 90, 0 ],
+      "translation": [ 0, 0, 0 ],
+      "scale": [ 0.5, 0.5, 0.5 ]
+    }
+  },
+  "textures": {
+    "particle": "overwhelmed:block/fizzyrock"
+  },
+  "elements": [
+    {   "from": [ 4, 0, 4 ],
+      "to": [ 12, 16, 12 ],
+      "faces": {
+        "down":  { "uv": [ 5, 0, 11, 16 ], "texture": "overwhelmed:block/fizzyrock_geyser", "cullface": "down" },
+        "up":    { "uv": [ 5, 0, 11, 16 ], "texture": "overwhelmed:block/fizzyrock_geyser" },
+        "north": { "uv": [ 5, 3, 11, 16 ], "texture": "#overwhelmed:block/fizzyrock", "cullface": "north" },
+        "south": { "uv": [ 5, 3, 11, 16 ], "texture": "overwhelmed:block/fizzyrock", "cullface": "south" },
+        "west":  { "uv": [ 0, 3, 16, 16 ], "texture": "overwhelmed:block/fizzyrock" },
+        "east":  { "uv": [ 0, 3, 16, 16 ], "texture": "overwhelmed:block/fizzyrock" }
+      },
+      "__comment": "Center post"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "overwhelmed:block/fizzyrock_bricks",
+    "side": "overwhelmed:block/fizzyrock_bricks",
+    "top": "overwhelmed:block/fizzyrock_bricks"
+  }
+}
