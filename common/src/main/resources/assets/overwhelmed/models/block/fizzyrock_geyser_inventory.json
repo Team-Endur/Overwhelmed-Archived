@@ -12,20 +12,21 @@
     }
   },
   "textures": {
+    "1": "overwhelmed:block/fizzyrock",
+    "2": "overwhelmed:block/fizzyrock_geyser",
     "particle": "overwhelmed:block/fizzyrock"
   },
   "elements": [
     {   "from": [ 4, 0, 4 ],
       "to": [ 12, 16, 12 ],
       "faces": {
-        "down":  { "uv": [ 5, 0, 11, 16 ], "texture": "overwhelmed:block/fizzyrock_geyser", "cullface": "down" },
-        "up":    { "uv": [ 5, 0, 11, 16 ], "texture": "overwhelmed:block/fizzyrock_geyser" },
-        "north": { "uv": [ 5, 3, 11, 16 ], "texture": "#overwhelmed:block/fizzyrock", "cullface": "north" },
-        "south": { "uv": [ 5, 3, 11, 16 ], "texture": "overwhelmed:block/fizzyrock", "cullface": "south" },
-        "west":  { "uv": [ 0, 3, 16, 16 ], "texture": "overwhelmed:block/fizzyrock" },
-        "east":  { "uv": [ 0, 3, 16, 16 ], "texture": "overwhelmed:block/fizzyrock" }
-      },
-      "__comment": "Center post"
+        "down":  { "uv": [ 5, 0, 11, 16 ], "texture": "#2", "cullface": "down" },
+        "up":    { "uv": [ 5, 0, 11, 16 ], "texture": "#2" },
+        "north": { "uv": [ 5, 3, 11, 16 ], "texture": "#1", "cullface": "north" },
+        "south": { "uv": [ 5, 3, 11, 16 ], "texture": "#1", "cullface": "south" },
+        "west":  { "uv": [ 0, 3, 16, 16 ], "texture": "#1" },
+        "east":  { "uv": [ 0, 3, 16, 16 ], "texture": "#1" }
+      }
     }
   ]
 }
