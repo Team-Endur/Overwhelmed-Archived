@@ -89,6 +89,7 @@ public class OverwhelmedFabricClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(OverwhelmedBlocks.PEBBLE, RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(OverwhelmedBlocks.ICE_CUBE, RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(OverwhelmedBlocks.GOLD_BEAD, RenderType.cutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(OverwhelmedBlocks.FIZZYROCK_GEYSER, RenderType.cutout());
         ParticleFactoryRegistry.getInstance().register(
                 OverwhelmedParticleTypes.LIVERWORT_SPORE,
                 LiverwortSporeParticle.Provider::new);
