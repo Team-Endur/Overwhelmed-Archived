@@ -12,13 +12,12 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.NotNull;
 
-public class FizzyrockGeyserBlock extends Block implements FizzyrockGeyserBlockTick {
+public class FizzyrockGeyserBlock extends Block {
 
     public FizzyrockGeyserBlock(BlockBehaviour.Properties properties) {
         super(properties);
     }
 
-    @Override
     public void tick(BlockState state, Level level, BlockPos pos, RandomSource random) {
         super.animateTick(state, level, pos, random);
 
@@ -37,7 +36,7 @@ public class FizzyrockGeyserBlock extends Block implements FizzyrockGeyserBlockT
 
     @Override
     public @NotNull VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
-        return box(4.0f, 3.0f, 16.0f, 0.0f, 14.0f, 16.0f);
+        return box(4.0f, 0.0f, 4.0f, 4.0f, 0.0f, 4.0f);
     }
 
 }

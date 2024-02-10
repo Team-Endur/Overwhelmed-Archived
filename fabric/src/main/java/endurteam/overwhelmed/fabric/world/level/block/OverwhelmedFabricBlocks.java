@@ -101,12 +101,13 @@ public class OverwhelmedFabricBlocks {
                 BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.FIZZYROCK_BRICKS));
         OverwhelmedBlocks.CHISELED_FIZZYROCK_BRICKS = registerGenericBlock("chiseled_fizzyrock_bricks",
                 BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.FIZZYROCK_BRICKS));
-        OverwhelmedBlocks.FIZZYROCK_GEYSER = registerGenericBlock("fizzyrock_geyser",
-                BlockBehaviour.Properties.of()
+        OverwhelmedBlocks.FIZZYROCK_GEYSER = Registry.register(BuiltInRegistries.BLOCK,
+                new ResourceLocation(Overwhelmed.MOD_ID, "fizzyrock_geyser"),
+                new FizzyrockGeyserBlock(BlockBehaviour.Properties.of()
                         .mapColor(MapColor.STONE)
                         .requiresCorrectToolForDrops()
                         .strength(1.3f, 5.0f)
-                        .sound(SoundType.DEEPSLATE));
+                        .sound(SoundType.DEEPSLATE)));
         OverwhelmedBlocks.SOIL = registerGenericBlock("soil", BlockBehaviour.Properties.of()
                 .mapColor(MapColor.COLOR_BROWN)
                 .strength(0.5f, 0.5f)

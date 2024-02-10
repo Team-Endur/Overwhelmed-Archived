@@ -48,7 +48,7 @@ public class OverwhelmedBlocks {
     public static SlabBlock FIZZYROCK_BRICK_SLAB;
     public static WallBlock FIZZYROCK_BRICK_WALL;
     public static Block CHISELED_FIZZYROCK_BRICKS;
-    public static Block FIZZYROCK_GEYSER;
+    public static FizzyrockGeyserBlock FIZZYROCK_GEYSER;
     public static Block SOIL;
     public static Block CHARCOAL_ORE;
     public static ClotBlock GOLD_BEAD;
