@@ -32,6 +32,20 @@ public class OverwhelmedMinecraftForgeCreativeTabs {
                             output.accept(POLISHED_BLACK_GRANITE);
                             output.accept(POLISHED_BLACK_GRANITE_STAIRS);
                             output.accept(POLISHED_BLACK_GRANITE_SLAB);
+                            output.accept(FIZZYROCK);
+                            output.accept(FIZZYROCK_STAIRS);
+                            output.accept(FIZZYROCK_SLAB);
+                            output.accept(FIZZYROCK_WALL);
+                            output.accept(CHISELED_FIZZYROCK);
+                            output.accept(POLISHED_FIZZYROCK);
+                            output.accept(POLISHED_FIZZYROCK_STAIRS);
+                            output.accept(POLISHED_FIZZYROCK_SLAB);
+                            output.accept(FIZZYROCK_BRICKS);
+                            output.accept(FIZZYROCK_BRICK_STAIRS);
+                            output.accept(FIZZYROCK_BRICK_SLAB);
+                            output.accept(FIZZYROCK_BRICK_WALL);
+                            output.accept(CHISELED_FIZZYROCK_BRICKS);
+                            output.accept(FIZZYROCK_GEYSER);
                             output.accept(SOIL);
                             output.accept(CHARCOAL_ORE);
                             output.accept(FLOFF);
@@ -83,6 +97,19 @@ public class OverwhelmedMinecraftForgeCreativeTabs {
             event.accept(POLISHED_BLACK_GRANITE);
             event.accept(POLISHED_BLACK_GRANITE_STAIRS);
             event.accept(POLISHED_BLACK_GRANITE_SLAB);
+            event.accept(FIZZYROCK);
+            event.accept(FIZZYROCK_STAIRS);
+            event.accept(FIZZYROCK_SLAB);
+            event.accept(FIZZYROCK_WALL);
+            event.accept(CHISELED_FIZZYROCK);
+            event.accept(POLISHED_FIZZYROCK);
+            event.accept(POLISHED_FIZZYROCK_STAIRS);
+            event.accept(POLISHED_FIZZYROCK_SLAB);
+            event.accept(FIZZYROCK_BRICKS);
+            event.accept(FIZZYROCK_BRICK_STAIRS);
+            event.accept(FIZZYROCK_BRICK_SLAB);
+            event.accept(FIZZYROCK_BRICK_WALL);
+            event.accept(CHISELED_FIZZYROCK_BRICKS);
         }
         if (event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS)
         {
@@ -104,6 +131,7 @@ public class OverwhelmedMinecraftForgeCreativeTabs {
             event.accept(MINT_SEEDS);
             event.accept(VANILLA_BEANS);
             event.accept(GOO_BLOCK);
+            event.accept(FIZZYROCK_GEYSER);
         }
         if (event.getTabKey() == CreativeModeTabs.COMBAT)
         {

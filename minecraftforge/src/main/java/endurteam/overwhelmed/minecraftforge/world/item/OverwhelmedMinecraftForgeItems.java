@@ -51,8 +51,25 @@ public class OverwhelmedMinecraftForgeItems {
         POLISHED_BLACK_GRANITE_SLAB = registerGenericBlockItem(
                 "polished_black_granite_slab",
                 OverwhelmedBlocks.POLISHED_BLACK_GRANITE_SLAB, helper);
+        FIZZYROCK = registerGenericBlockItem("fizzyrock", OverwhelmedBlocks.FIZZYROCK, helper);
+        FIZZYROCK_STAIRS = registerGenericBlockItem("fizzyrock_stairs", OverwhelmedBlocks.FIZZYROCK_STAIRS, helper);
+        FIZZYROCK_SLAB = registerGenericBlockItem("fizzyrock_slab", OverwhelmedBlocks.FIZZYROCK_SLAB, helper);
+        FIZZYROCK_WALL = registerGenericBlockItem("fizzyrock_wall", OverwhelmedBlocks.FIZZYROCK_WALL, helper);
+        CHISELED_FIZZYROCK = registerGenericBlockItem("chiseled_fizzyrock", OverwhelmedBlocks.CHISELED_FIZZYROCK, helper);
+        POLISHED_FIZZYROCK = registerGenericBlockItem("polished_fizzyrock", OverwhelmedBlocks.POLISHED_FIZZYROCK, helper);
+        POLISHED_FIZZYROCK_STAIRS = registerGenericBlockItem("polished_fizzyrock_stairs",
+                OverwhelmedBlocks.POLISHED_FIZZYROCK_STAIRS, helper);
+        POLISHED_FIZZYROCK_SLAB = registerGenericBlockItem("polished_fizzyrock_slab",
+                OverwhelmedBlocks.POLISHED_FIZZYROCK_SLAB, helper);
+        FIZZYROCK_BRICKS = registerGenericBlockItem("fizzyrock_bricks", OverwhelmedBlocks.FIZZYROCK_BRICKS, helper);
+        FIZZYROCK_BRICK_STAIRS = registerGenericBlockItem("fizzyrock_brick_stairs", OverwhelmedBlocks.FIZZYROCK_BRICK_STAIRS, helper);
+        FIZZYROCK_BRICK_SLAB = registerGenericBlockItem("fizzyrock_brick_slab", OverwhelmedBlocks.FIZZYROCK_BRICK_SLAB, helper);
+        FIZZYROCK_BRICK_WALL = registerGenericBlockItem("fizzyrock_brick_wall", OverwhelmedBlocks.FIZZYROCK_BRICK_WALL, helper);
+        CHISELED_FIZZYROCK_BRICKS = registerGenericBlockItem("chiseled_fizzyrock_bricks",
+                OverwhelmedBlocks.CHISELED_FIZZYROCK_BRICKS, helper);
+        FIZZYROCK_GEYSER = registerGenericBlockItem("fizzyrock_geyser", OverwhelmedBlocks.FIZZYROCK_GEYSER, helper);
         SOIL = registerGenericBlockItem("soil", OverwhelmedBlocks.SOIL, helper);
-        SOIL = registerGenericBlockItem("charcoal_ore", OverwhelmedBlocks.CHARCOAL_ORE, helper);
+        CHARCOAL_ORE = registerGenericBlockItem("charcoal_ore", OverwhelmedBlocks.CHARCOAL_ORE, helper);
         helper.register(new ResourceLocation(Overwhelmed.MOD_ID, "floff"),
                 FLOFF = new BlockItem(OverwhelmedBlocks.FLOFF,
                         new Item.Properties()));

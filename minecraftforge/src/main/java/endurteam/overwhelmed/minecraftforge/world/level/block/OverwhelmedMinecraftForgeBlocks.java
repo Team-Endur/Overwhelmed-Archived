@@ -2,6 +2,8 @@ package endurteam.overwhelmed.minecraftforge.world.level.block;
 
 import endurteam.overwhelmed.Overwhelmed;
 import endurteam.overwhelmed.world.level.block.*;
+import net.minecraft.core.Registry;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffects;
@@ -60,6 +62,58 @@ public class OverwhelmedMinecraftForgeBlocks {
                         BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.POLISHED_BLACK_GRANITE), helper);
         OverwhelmedBlocks.POLISHED_BLACK_GRANITE_SLAB = registerGenericSlabBlock("polished_black_granite_slab",
                 BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.POLISHED_BLACK_GRANITE), helper);
+        OverwhelmedBlocks.FIZZYROCK = registerGenericBlock("fizzyrock",
+                BlockBehaviour.Properties.of()
+                        .mapColor(MapColor.STONE)
+                        .instrument(NoteBlockInstrument.BASEDRUM)
+                        .requiresCorrectToolForDrops()
+                        .strength(1.5f, 6.0f)
+                        .sound(SoundType.DEEPSLATE), helper);
+        OverwhelmedBlocks.FIZZYROCK_STAIRS = registerGenericStairBlock
+                (OverwhelmedBlocks.FIZZYROCK.defaultBlockState(),
+                        "fizzyrock_stairs", BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.FIZZYROCK), helper);
+        OverwhelmedBlocks.FIZZYROCK_SLAB = registerGenericSlabBlock("fizzyrock_slab",
+                BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.FIZZYROCK), helper);
+        OverwhelmedBlocks.FIZZYROCK_WALL = registerGenericWallBlock("fizzyrock_wall",
+                BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.FIZZYROCK), helper);
+        OverwhelmedBlocks.CHISELED_FIZZYROCK = registerGenericBlock("chiseled_fizzyrock",
+                BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.FIZZYROCK), helper);
+        OverwhelmedBlocks.POLISHED_FIZZYROCK = registerGenericBlock("polished_fizzyrock",
+                BlockBehaviour.Properties.of()
+                        .mapColor(MapColor.STONE)
+                        .instrument(NoteBlockInstrument.BASEDRUM)
+                        .requiresCorrectToolForDrops().strength(1.5f, 6.0f)
+                        .sound(SoundType.POLISHED_DEEPSLATE), helper);
+        OverwhelmedBlocks.POLISHED_FIZZYROCK_STAIRS = registerGenericStairBlock
+                (OverwhelmedBlocks.POLISHED_FIZZYROCK.defaultBlockState(),
+                        "polished_fizzyrock_stairs",
+                        BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.POLISHED_FIZZYROCK), helper);
+        OverwhelmedBlocks.POLISHED_FIZZYROCK_SLAB = registerGenericSlabBlock("polished_fizzyrock_slab",
+                BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.POLISHED_FIZZYROCK), helper);
+        OverwhelmedBlocks.FIZZYROCK_BRICKS = registerGenericBlock("fizzyrock_bricks",
+                BlockBehaviour.Properties.of()
+                        .mapColor(MapColor.STONE)
+                        .instrument(NoteBlockInstrument.BASEDRUM)
+                        .requiresCorrectToolForDrops()
+                        .strength(1.5f, 6.0f)
+                        .sound(SoundType.DEEPSLATE_BRICKS), helper);
+        OverwhelmedBlocks.FIZZYROCK_BRICK_STAIRS = registerGenericStairBlock
+                (OverwhelmedBlocks.FIZZYROCK_BRICKS.defaultBlockState(),
+                        "fizzyrock_brick_stairs",
+                        BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.FIZZYROCK_BRICKS), helper);
+        OverwhelmedBlocks.FIZZYROCK_BRICK_SLAB = registerGenericSlabBlock("fizzyrock_brick_slab",
+                BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.FIZZYROCK_BRICKS), helper);
+        OverwhelmedBlocks.FIZZYROCK_BRICK_WALL = registerGenericWallBlock("fizzyrock_brick_wall",
+                BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.FIZZYROCK_BRICKS), helper);
+        OverwhelmedBlocks.CHISELED_FIZZYROCK_BRICKS = registerGenericBlock("chiseled_fizzyrock_bricks",
+                BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.FIZZYROCK_BRICKS), helper);
+        OverwhelmedBlocks.FIZZYROCK_GEYSER = Registry.register(BuiltInRegistries.BLOCK,
+                new ResourceLocation(Overwhelmed.MOD_ID, "fizzyrock_geyser"),
+                new FizzyrockGeyserBlock(BlockBehaviour.Properties.of()
+                        .mapColor(MapColor.STONE)
+                        .requiresCorrectToolForDrops()
+                        .strength(1.3f, 5.0f)
+                        .sound(SoundType.DEEPSLATE)));
         OverwhelmedBlocks.SOIL = registerGenericBlock("soil", BlockBehaviour.Properties.of()
                 .mapColor(MapColor.COLOR_BROWN)
                 .strength(0.5f, 0.5f)

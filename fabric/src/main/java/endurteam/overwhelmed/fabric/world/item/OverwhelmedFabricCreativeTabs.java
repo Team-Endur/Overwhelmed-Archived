@@ -129,6 +129,7 @@ public class OverwhelmedFabricCreativeTabs {
             output.addAfter(Items.BEETROOT_SEEDS, MINT_SEEDS);
             output.addAfter(MINT_SEEDS, VANILLA_BEANS);
             output.accept(GOO_BLOCK);
+            output.accept(FIZZYROCK_GEYSER);
 
         });
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.COMBAT).register(output -> {
