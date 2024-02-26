@@ -22,8 +22,22 @@ package endurteam.overwhelmed.world.item;
 
 
 import net.minecraft.world.item.*;
+import net.minecraft.world.level.block.Block;
 
 public class OverwhelmedItems {
+    public static BlockItem SEREIBA_LOG;
+    public static BlockItem SEREIBA_WOOD;
+    public static BlockItem STRIPPED_SEREIBA_LOG;
+    public static BlockItem STRIPPED_SEREIBA_WOOD;
+    public static BlockItem SEREIBA_PLANKS;
+    public static BlockItem SEREIBA_STAIRS;
+    public static BlockItem SEREIBA_SLAB;
+    public static BlockItem SEREIBA_FENCE;
+    public static BlockItem SEREIBA_FENCE_GATE;
+    public static BlockItem SEREIBA_DOOR;
+    public static BlockItem SEREIBA_TRAPDOOR;
+    public static BlockItem SEREIBA_PRESSURE_PLATE;
+    public static BlockItem SEREIBA_BUTTON;
     public static BlockItem SNAIL_SHELL_BRICKS;
     public static BlockItem SNAIL_SHELL_BRICK_STAIRS;
     public static BlockItem SNAIL_SHELL_BRICK_SLAB;
