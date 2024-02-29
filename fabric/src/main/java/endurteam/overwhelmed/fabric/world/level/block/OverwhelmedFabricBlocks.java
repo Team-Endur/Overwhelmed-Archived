@@ -1,30 +1,70 @@
 package endurteam.overwhelmed.fabric.world.level.block;
 
+import com.mojang.serialization.MapCodec;
 import endurteam.overwhelmed.Overwhelmed;
 import endurteam.overwhelmed.world.level.block.*;
+import endurteam.overwhelmed.world.level.block.state.properties.OverwhelmedBlockSetTypes;
+import endurteam.overwhelmed.world.level.block.state.properties.OverwhelmedWoodType;
+import it.unimi.dsi.fastutil.doubles.Double2ObjectAVLTreeMap;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
+import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
+
+import java.awt.*;
 
 public class OverwhelmedFabricBlocks {
 
     public static void registerBlocks() {
         //Must register Blocks first
-        OverwhelmedBlocks.SNAIL_SHELL_BRICKS = registerGenericBlock("snail_shell_bricks",
-                BlockBehaviour.Properties.of()
+        OverwhelmedBlocks.SEREIBA_LOG = registerGenericBlock("sereiba_log", BlockBehaviour.Properties.of()
+                .mapColor(MapColor.TERRACOTTA_LIGHT_GREEN)
+                .strength(2.0f, 2.0f));
+        OverwhelmedBlocks.SEREIBA_WOOD= registerGenericBlock("sereiba_wood",
+                BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.SEREIBA_LOG));
+        OverwhelmedBlocks.STRIPPED_SEREIBA_LOG= registerGenericBlock("stripped_sereiba_log",
+                BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.SEREIBA_LOG));
+        OverwhelmedBlocks.STRIPPED_SEREIBA_WOOD= registerGenericBlock("stripped_sereiba_wood",
+                BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.SEREIBA_LOG));
+        OverwhelmedBlocks.SEREIBA_PLANKS = registerGenericBlock("sereiba_planks", BlockBehaviour.Properties.of()
+                .mapColor(MapColor.TERRACOTTA_LIGHT_GREEN)
+                .strength(2.0f, 3.0f));
+        OverwhelmedBlocks.SEREIBA_STAIRS = registerGenericStairBlock(OverwhelmedBlocks.SEREIBA_PLANKS.defaultBlockState(),
+                "snail_shell_brick_stairs", BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.SNAIL_SHELL_BRICKS));
+        OverwhelmedBlocks.SEREIBA_SLAB = registerGenericSlabBlock("sereiba_slab",
+                BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.SEREIBA_PLANKS));
+        OverwhelmedBlocks.SEREIBA_FENCE = registerGenericFenceBlock("sereiba_fence",
+                BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.SEREIBA_PLANKS));
+        OverwhelmedBlocks.SEREIBA_FENCE_GATE = registerGenericFenceGateBlock("sereiba_fence_gate", OverwhelmedWoodType.SEREIBA,
+                BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.SEREIBA_PLANKS));
+        OverwhelmedBlocks.SEREIBA_DOOR = registerGenericDoorBlock("sereiba_door",
+                OverwhelmedBlockSetTypes.SEREIBA, BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.SEREIBA_PLANKS));
+        OverwhelmedBlocks.SEREIBA_TRAPDOOR = registerGenericTrapDoorBlock("sereiba_door",
+                OverwhelmedBlockSetTypes.SEREIBA, BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.SEREIBA_PLANKS));
+        OverwhelmedBlocks.SEREIBA_PRESSURE_PLATE = registerGenericPressurePlateBlock("sereiba_pressure_plate",
+                OverwhelmedBlockSetTypes.SEREIBA, BlockBehaviour.Properties.of()
+                        .mapColor(MapColor.TERRACOTTA_LIGHT_GREEN)
+                        .strength(0.5f, 0.5f));
+        OverwhelmedBlocks.SEREIBA_BUTTON = registerGenericButtonBlock("sereiba_button",
+                OverwhelmedBlockSetTypes.SEREIBA, 3, BlockBehaviour.Properties.of()
+                        .strength(0.5f, 0.5f));
+        OverwhelmedBlocks.SNAIL_SHELL_BRICKS = registerGenericBlock("snail_shell_bricks", BlockBehaviour.Properties.of()
                 .mapColor(MapColor.COLOR_BROWN)
                 .strength(3.0f, 12.0f)
                 .requiresCorrectToolForDrops());
-        OverwhelmedBlocks.SNAIL_SHELL_BRICK_STAIRS = registerGenericStairBlock
-                (OverwhelmedBlocks.SNAIL_SHELL_BRICKS.defaultBlockState(),
+        OverwhelmedBlocks.SNAIL_SHELL_BRICK_STAIRS = registerGenericStairBlock(OverwhelmedBlocks.SNAIL_SHELL_BRICKS.defaultBlockState(),
                 "snail_shell_brick_stairs", BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.SNAIL_SHELL_BRICKS));
         OverwhelmedBlocks.SNAIL_SHELL_BRICK_SLAB = registerGenericSlabBlock("snail_shell_brick_slab",
                 BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.SNAIL_SHELL_BRICKS));
@@ -55,7 +95,8 @@ public class OverwhelmedFabricBlocks {
                         .requiresCorrectToolForDrops().strength(1.5f, 6.0f));
         OverwhelmedBlocks.POLISHED_BLACK_GRANITE_STAIRS = registerGenericStairBlock
                 (OverwhelmedBlocks.POLISHED_BLACK_GRANITE.defaultBlockState(),
-                        "polished_black_granite_stairs", BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.POLISHED_BLACK_GRANITE));
+                        "polished_black_granite_stairs",
+                        BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.POLISHED_BLACK_GRANITE));
         OverwhelmedBlocks.POLISHED_BLACK_GRANITE_SLAB = registerGenericSlabBlock("polished_black_granite_slab",
                 BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.POLISHED_BLACK_GRANITE));
         OverwhelmedBlocks.FIZZYROCK = registerGenericBlock("fizzyrock",
@@ -246,6 +287,11 @@ public class OverwhelmedFabricBlocks {
                         .noOcclusion()
                         .jumpFactor(0.5f)
                         .speedFactor(0.4f)));
+        OverwhelmedBlocks.SEREIBA_SIGN = registerGenericSignBlock("sereiba_sign", OverwhelmedWoodType.SEREIBA,
+                BlockBehaviour.Properties.of()
+                        .strength(1.0f, 1.0f)
+                        .noOcclusion()
+                        .noCollission());
         OverwhelmedBlocks.MINT_CAKE = Registry.register(BuiltInRegistries.BLOCK,
                 new ResourceLocation(Overwhelmed.MOD_ID, "mint_cake"),
                 new MintCakeBlock(BlockBehaviour.Properties.of()
@@ -291,10 +337,51 @@ public class OverwhelmedFabricBlocks {
     }
 
     @SuppressWarnings("SameParameterValue")
-    private static GrassBlock registerGenericGrassBlock(String name,
+    private static FenceBlock registerGenericFenceBlock(String name,
                                                                 Block.Properties properties) {
         return Registry.register(BuiltInRegistries.BLOCK, new ResourceLocation(Overwhelmed.MOD_ID, name),
-                new GrassBlock(properties));
+                new FenceBlock(properties));
+    }
+
+    @SuppressWarnings("SameParameterValue")
+    private static FenceGateBlock registerGenericFenceGateBlock(String name,
+                                                        WoodType woodType,
+                                                        Block.Properties properties) {
+        return Registry.register(BuiltInRegistries.BLOCK, new ResourceLocation(Overwhelmed.MOD_ID, name),
+                new FenceGateBlock(woodType, properties));
+    }
+
+    @SuppressWarnings("SameParameterValue")
+    private static DoorBlock registerGenericDoorBlock(String name,
+                                                                     BlockSetType blockSetType,
+                                                                     Block.Properties properties) {
+        return Registry.register(BuiltInRegistries.BLOCK, new ResourceLocation(Overwhelmed.MOD_ID, name),
+                new DoorBlock(blockSetType, properties));
+    }
+
+    @SuppressWarnings("SameParameterValue")
+    private static TrapDoorBlock registerGenericTrapDoorBlock(String name,
+                                                      BlockSetType blockSetType,
+                                                      Block.Properties properties) {
+        return Registry.register(BuiltInRegistries.BLOCK, new ResourceLocation(Overwhelmed.MOD_ID, name),
+                new TrapDoorBlock(blockSetType, properties));
+    }
+
+    @SuppressWarnings("SameParameterValue")
+    private static PressurePlateBlock registerGenericPressurePlateBlock(String name,
+                                                              BlockSetType blockSetType,
+                                                              Block.Properties properties) {
+        return Registry.register(BuiltInRegistries.BLOCK, new ResourceLocation(Overwhelmed.MOD_ID, name),
+                new PressurePlateBlock(blockSetType, properties));
+    }
+
+    @SuppressWarnings("SameParameterValue")
+    private static ButtonBlock registerGenericButtonBlock(String name,
+                                                            BlockSetType blockSetType,
+                                                            int i,
+                                                            Block.Properties properties) {
+        return Registry.register(BuiltInRegistries.BLOCK, new ResourceLocation(Overwhelmed.MOD_ID, name),
+                new ButtonBlock(blockSetType, i, properties));
     }
 
     @SuppressWarnings("SameParameterValue")
@@ -332,6 +419,24 @@ public class OverwhelmedFabricBlocks {
                                                       Block.Properties properties) {
         return Registry.register(BuiltInRegistries.BLOCK, new ResourceLocation(Overwhelmed.MOD_ID, name),
                 new ClotBlock(properties));
+    }
+
+    @SuppressWarnings("SameParameterValue")
+    private static SignBlock registerGenericSignBlock(String name,
+                                                      WoodType woodType,
+                                                      BlockBehaviour.Properties properties) {
+        return Registry.register(BuiltInRegistries.BLOCK, new ResourceLocation(Overwhelmed.MOD_ID, name),
+                new SignBlock(woodType, properties) {
+                    @Override
+                    protected MapCodec<? extends SignBlock> codec() {
+                        return null;
+                    }
+
+                    @Override
+                    public float getYRotationDegrees(BlockState blockState) {
+                        return 0;
+                    }
+                });
     }
 
 }

@@ -21,6 +21,7 @@
 package endurteam.overwhelmed.world.level.block;
 
 import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.entity.HangingSignBlockEntity;
 
 public class OverwhelmedBlocks {
     public static Block SEREIBA_LOG;
@@ -28,11 +29,11 @@ public class OverwhelmedBlocks {
     public static Block STRIPPED_SEREIBA_LOG;
     public static Block STRIPPED_SEREIBA_WOOD;
     public static Block SEREIBA_PLANKS;
-    public static Block SEREIBA_STAIRS;
-    public static Block SEREIBA_SLAB;
-    public static Block SEREIBA_FENCE;
-    public static Block SEREIBA_FENCE_GATE;
-    public static Block SEREIBA_DOOR;
+    public static StairBlock SEREIBA_STAIRS;
+    public static SlabBlock SEREIBA_SLAB;
+    public static FenceBlock SEREIBA_FENCE;
+    public static FenceGateBlock SEREIBA_FENCE_GATE;
+    public static DoorBlock SEREIBA_DOOR;
     public static Block SEREIBA_TRAPDOOR;
     public static Block SEREIBA_PRESSURE_PLATE;
     public static Block SEREIBA_BUTTON;
@@ -87,6 +88,8 @@ public class OverwhelmedBlocks {
     public static TallFlowerBlock WHITE_ALLIUM;
     public static CropBlock MINT;
     public static GooBlock GOO_BLOCK;
+    public static SignBlock SEREIBA_SIGN;
+/*    public static HangingSignBlockEntity SEREIBA_HANGING_SIGN;*/
     public static MintCakeBlock MINT_CAKE;
     public static VanillaCakeBlock VANILLA_CAKE;
     public static CandleMintCakeBlock BLACK_CANDLE_MINT_CAKE;

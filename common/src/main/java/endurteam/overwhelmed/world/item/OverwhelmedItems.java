@@ -74,14 +74,13 @@ public class OverwhelmedItems {
     public static BlockItem RINGOT;
     public static BlockItem SNOWDROP;
     public static BlockItem BELL_SUNFLOWER;
-    public static BlockItem VANILLA_VINES;
-    public static BlockItem FLOWERING_VANILLA_VINES;
     public static DoubleHighBlockItem WHITE_ALLIUM;
     public static DoubleHighBlockItem WIDOW;
     public static BlockItem GOLD_BEAD;
     public static BlockItem ICE_CUBE;
     public static PebbleBlockItem PEBBLE;
     public static BlockItem GOO_BLOCK;
+    public static SignItem SEREIBA_SIGN;
     public static ItemNameBlockItem MINT_SEEDS;
     public static Item VANILLA_BEANS;
     public static Item BLOWGUN;
