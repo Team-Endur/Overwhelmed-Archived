@@ -19,6 +19,21 @@ import static endurteam.overwhelmed.world.item.OverwhelmedItems.*;
 
 public class OverwhelmedFabricItems {
     public static void registerItems() {
+        SEREIBA_LOG = registerGenericBlockItem("sereiba_log", OverwhelmedBlocks.SEREIBA_LOG);
+        SEREIBA_WOOD = registerGenericBlockItem("sereiba_wood", OverwhelmedBlocks.SEREIBA_WOOD);
+        STRIPPED_SEREIBA_LOG = registerGenericBlockItem("stripped_sereiba_log", OverwhelmedBlocks.STRIPPED_SEREIBA_LOG);
+        STRIPPED_SEREIBA_WOOD = registerGenericBlockItem("stripped_sereiba_wood", OverwhelmedBlocks.STRIPPED_SEREIBA_WOOD);
+        SEREIBA_PLANKS = registerGenericBlockItem("sereiba_planks", OverwhelmedBlocks.SEREIBA_PLANKS);
+        SEREIBA_STAIRS = registerGenericBlockItem("sereiba_stairs", OverwhelmedBlocks.SEREIBA_STAIRS);
+        SEREIBA_SLAB = registerGenericBlockItem("sereiba_slab", OverwhelmedBlocks.SEREIBA_SLAB);
+        SEREIBA_FENCE = registerGenericBlockItem("sereiba_fence", OverwhelmedBlocks.SEREIBA_FENCE);
+        SEREIBA_FENCE_GATE = registerGenericBlockItem("sereiba_fence_gate", OverwhelmedBlocks.SEREIBA_FENCE_GATE);
+        SEREIBA_DOOR = registerGenericBlockItem("sereiba_door", OverwhelmedBlocks.SEREIBA_DOOR);
+        STRING_SEREIBA_DOOR = registerGenericBlockItem("string_sereiba_door", OverwhelmedBlocks.STRING_SEREIBA_DOOR);
+        SEREIBA_TRAPDOOR = registerGenericBlockItem("sereiba_trapdoor", OverwhelmedBlocks.SEREIBA_TRAPDOOR);
+        STRING_SEREIBA_TRAPDOOR = registerGenericBlockItem("string_sereiba_trapdoor", OverwhelmedBlocks.STRING_SEREIBA_TRAPDOOR);
+        SEREIBA_PRESSURE_PLATE = registerGenericBlockItem("sereiba_pressure_plate", OverwhelmedBlocks.SEREIBA_PRESSURE_PLATE);
+        SEREIBA_BUTTON = registerGenericBlockItem("sereiba_button", OverwhelmedBlocks.SEREIBA_BUTTON);
         SNAIL_SHELL_BRICKS = registerGenericBlockItem("snail_shell_bricks", OverwhelmedBlocks.SNAIL_SHELL_BRICKS);
         SNAIL_SHELL_BRICK_STAIRS = registerGenericBlockItem("snail_shell_brick_stairs", OverwhelmedBlocks.SNAIL_SHELL_BRICK_STAIRS);
         SNAIL_SHELL_BRICK_SLAB = registerGenericBlockItem("snail_shell_brick_slab", OverwhelmedBlocks.SNAIL_SHELL_BRICK_SLAB);
@@ -213,6 +228,11 @@ public class OverwhelmedFabricItems {
     private static BlockItem registerGenericBlockItem(String name, Block block) {
         return Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Overwhelmed.MOD_ID, name),
                 new BlockItem(block, new Item.Properties()));
+    }
+
+    private static SignItem registerGenericSignBlockItem(String name, Block block, Block block2) {
+        return Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Overwhelmed.MOD_ID, name),
+                new SignItem(new Item.Properties(), block, block2));
     }
 
     private static ItemNameBlockItem registerGenericItemNameBlockItem(String name, Block block) {

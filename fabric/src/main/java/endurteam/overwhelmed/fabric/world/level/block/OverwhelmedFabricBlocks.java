@@ -42,23 +42,27 @@ public class OverwhelmedFabricBlocks {
                 .mapColor(MapColor.TERRACOTTA_LIGHT_GREEN)
                 .strength(2.0f, 3.0f));
         OverwhelmedBlocks.SEREIBA_STAIRS = registerGenericStairBlock(OverwhelmedBlocks.SEREIBA_PLANKS.defaultBlockState(),
-                "snail_shell_brick_stairs", BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.SNAIL_SHELL_BRICKS));
+                "sereiba_stairs", BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.SEREIBA_PLANKS));
         OverwhelmedBlocks.SEREIBA_SLAB = registerGenericSlabBlock("sereiba_slab",
                 BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.SEREIBA_PLANKS));
         OverwhelmedBlocks.SEREIBA_FENCE = registerGenericFenceBlock("sereiba_fence",
                 BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.SEREIBA_PLANKS));
-        OverwhelmedBlocks.SEREIBA_FENCE_GATE = registerGenericFenceGateBlock("sereiba_fence_gate", OverwhelmedWoodType.SEREIBA,
+        OverwhelmedBlocks.SEREIBA_FENCE_GATE = registerGenericFenceGateBlock("sereiba_fence_gate", WoodType.OAK,
                 BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.SEREIBA_PLANKS));
         OverwhelmedBlocks.SEREIBA_DOOR = registerGenericDoorBlock("sereiba_door",
-                OverwhelmedBlockSetTypes.SEREIBA, BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.SEREIBA_PLANKS));
-        OverwhelmedBlocks.SEREIBA_TRAPDOOR = registerGenericTrapDoorBlock("sereiba_door",
-                OverwhelmedBlockSetTypes.SEREIBA, BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.SEREIBA_PLANKS));
+                BlockSetType.OAK, BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.SEREIBA_PLANKS));
+        OverwhelmedBlocks.STRING_SEREIBA_DOOR = registerGenericDoorBlock("string_sereiba_trapdoor",
+                BlockSetType.OAK, BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.SEREIBA_PLANKS));
+        OverwhelmedBlocks.SEREIBA_TRAPDOOR = registerGenericTrapDoorBlock("sereiba_trapdoor",
+                BlockSetType.OAK, BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.SEREIBA_PLANKS));
+        OverwhelmedBlocks.STRING_SEREIBA_TRAPDOOR = registerGenericTrapDoorBlock("string_sereiba_door",
+                BlockSetType.OAK, BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.SEREIBA_PLANKS));
         OverwhelmedBlocks.SEREIBA_PRESSURE_PLATE = registerGenericPressurePlateBlock("sereiba_pressure_plate",
-                OverwhelmedBlockSetTypes.SEREIBA, BlockBehaviour.Properties.of()
+                BlockSetType.OAK, BlockBehaviour.Properties.of()
                         .mapColor(MapColor.TERRACOTTA_LIGHT_GREEN)
                         .strength(0.5f, 0.5f));
         OverwhelmedBlocks.SEREIBA_BUTTON = registerGenericButtonBlock("sereiba_button",
-                OverwhelmedBlockSetTypes.SEREIBA, 3, BlockBehaviour.Properties.of()
+                BlockSetType.OAK, 3, BlockBehaviour.Properties.of()
                         .strength(0.5f, 0.5f));
         OverwhelmedBlocks.SNAIL_SHELL_BRICKS = registerGenericBlock("snail_shell_bricks", BlockBehaviour.Properties.of()
                 .mapColor(MapColor.COLOR_BROWN)
@@ -287,11 +291,6 @@ public class OverwhelmedFabricBlocks {
                         .noOcclusion()
                         .jumpFactor(0.5f)
                         .speedFactor(0.4f)));
-        OverwhelmedBlocks.SEREIBA_SIGN = registerGenericSignBlock("sereiba_sign", OverwhelmedWoodType.SEREIBA,
-                BlockBehaviour.Properties.of()
-                        .strength(1.0f, 1.0f)
-                        .noOcclusion()
-                        .noCollission());
         OverwhelmedBlocks.MINT_CAKE = Registry.register(BuiltInRegistries.BLOCK,
                 new ResourceLocation(Overwhelmed.MOD_ID, "mint_cake"),
                 new MintCakeBlock(BlockBehaviour.Properties.of()

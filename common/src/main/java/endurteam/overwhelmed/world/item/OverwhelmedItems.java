@@ -35,7 +35,11 @@ public class OverwhelmedItems {
     public static BlockItem SEREIBA_FENCE;
     public static BlockItem SEREIBA_FENCE_GATE;
     public static BlockItem SEREIBA_DOOR;
+    public static BlockItem STRING_SEREIBA_DOOR;
     public static BlockItem SEREIBA_TRAPDOOR;
+
+    public static BlockItem STRING_SEREIBA_TRAPDOOR;
+
     public static BlockItem SEREIBA_PRESSURE_PLATE;
     public static BlockItem SEREIBA_BUTTON;
     public static BlockItem SNAIL_SHELL_BRICKS;

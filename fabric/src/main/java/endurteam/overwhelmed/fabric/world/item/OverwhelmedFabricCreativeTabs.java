@@ -20,6 +20,21 @@ public class OverwhelmedFabricCreativeTabs {
                                 new ItemStack(SNAIL_SHELL))
                         .title(Component.translatable("category.overwhelmed"))
                         .displayItems((itemDisplayParameters, output) -> {
+                            output.accept(SEREIBA_LOG);
+                            output.accept(SEREIBA_WOOD);
+                            output.accept(STRIPPED_SEREIBA_LOG);
+                            output.accept(STRIPPED_SEREIBA_WOOD);
+                            output.accept(SEREIBA_PLANKS);
+                            output.accept(SEREIBA_STAIRS);
+                            output.accept(SEREIBA_SLAB);
+                            output.accept(SEREIBA_FENCE);
+                            output.accept(SEREIBA_FENCE_GATE);
+                            output.accept(SEREIBA_DOOR);
+                            output.accept(STRING_SEREIBA_DOOR);
+                            output.accept(SEREIBA_TRAPDOOR);
+                            output.accept(STRING_SEREIBA_TRAPDOOR);
+                            output.accept(SEREIBA_PRESSURE_PLATE);
+                            output.accept(SEREIBA_BUTTON);
                             output.accept(SNAIL_SHELL_BRICKS);
                             output.accept(SNAIL_SHELL_BRICK_STAIRS);
                             output.accept(SNAIL_SHELL_BRICK_SLAB);
