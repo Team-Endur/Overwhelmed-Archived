@@ -29,8 +29,11 @@ public class OverwhelmedBlocks {
     public static Block STRIPPED_SEREIBA_LOG;
     public static Block STRIPPED_SEREIBA_WOOD;
     public static Block SEREIBA_PLANKS;
+    public static Block SEREIBA_PARQUET;
     public static StairBlock SEREIBA_STAIRS;
+    public static Block SEREIBA_PARQUET_STAIRS;
     public static SlabBlock SEREIBA_SLAB;
+    public static Block SEREIBA_PARQUET_SLAB;
     public static FenceBlock SEREIBA_FENCE;
     public static FenceGateBlock SEREIBA_FENCE_GATE;
     public static DoorBlock SEREIBA_DOOR;

@@ -41,9 +41,15 @@ public class OverwhelmedFabricBlocks {
         OverwhelmedBlocks.SEREIBA_PLANKS = registerGenericBlock("sereiba_planks", BlockBehaviour.Properties.of()
                 .mapColor(MapColor.TERRACOTTA_LIGHT_GREEN)
                 .strength(2.0f, 3.0f));
+        OverwhelmedBlocks.SEREIBA_PARQUET = registerGenericBlock("sereiba_parquet",
+                BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.SEREIBA_PLANKS));
         OverwhelmedBlocks.SEREIBA_STAIRS = registerGenericStairBlock(OverwhelmedBlocks.SEREIBA_PLANKS.defaultBlockState(),
                 "sereiba_stairs", BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.SEREIBA_PLANKS));
+        OverwhelmedBlocks.SEREIBA_PARQUET_STAIRS = registerGenericStairBlock(OverwhelmedBlocks.SEREIBA_PLANKS.defaultBlockState(),
+                "sereiba_parquet_stairs", BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.SEREIBA_PLANKS));
         OverwhelmedBlocks.SEREIBA_SLAB = registerGenericSlabBlock("sereiba_slab",
+                BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.SEREIBA_PLANKS));
+        OverwhelmedBlocks.SEREIBA_PARQUET_SLAB = registerGenericSlabBlock("sereiba_parquet_slab",
                 BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.SEREIBA_PLANKS));
         OverwhelmedBlocks.SEREIBA_FENCE = registerGenericFenceBlock("sereiba_fence",
                 BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.SEREIBA_PLANKS));

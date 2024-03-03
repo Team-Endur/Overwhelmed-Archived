@@ -24,8 +24,11 @@ public class OverwhelmedFabricItems {
         STRIPPED_SEREIBA_LOG = registerGenericBlockItem("stripped_sereiba_log", OverwhelmedBlocks.STRIPPED_SEREIBA_LOG);
         STRIPPED_SEREIBA_WOOD = registerGenericBlockItem("stripped_sereiba_wood", OverwhelmedBlocks.STRIPPED_SEREIBA_WOOD);
         SEREIBA_PLANKS = registerGenericBlockItem("sereiba_planks", OverwhelmedBlocks.SEREIBA_PLANKS);
+        SEREIBA_PARQUET = registerGenericBlockItem("sereiba_parquet", OverwhelmedBlocks.SEREIBA_PARQUET);
         SEREIBA_STAIRS = registerGenericBlockItem("sereiba_stairs", OverwhelmedBlocks.SEREIBA_STAIRS);
+        SEREIBA_PARQUET_STAIRS = registerGenericBlockItem("sereiba_parquet_stairs", OverwhelmedBlocks.SEREIBA_PARQUET_STAIRS);
         SEREIBA_SLAB = registerGenericBlockItem("sereiba_slab", OverwhelmedBlocks.SEREIBA_SLAB);
+        SEREIBA_PARQUET_SLAB = registerGenericBlockItem("sereiba_parquet_slab", OverwhelmedBlocks.SEREIBA_PARQUET_SLAB);
         SEREIBA_FENCE = registerGenericBlockItem("sereiba_fence", OverwhelmedBlocks.SEREIBA_FENCE);
         SEREIBA_FENCE_GATE = registerGenericBlockItem("sereiba_fence_gate", OverwhelmedBlocks.SEREIBA_FENCE_GATE);
         SEREIBA_DOOR = registerGenericBlockItem("sereiba_door", OverwhelmedBlocks.SEREIBA_DOOR);
