@@ -25,8 +25,11 @@ public class OverwhelmedFabricCreativeTabs {
                             output.accept(STRIPPED_SEREIBA_LOG);
                             output.accept(STRIPPED_SEREIBA_WOOD);
                             output.accept(SEREIBA_PLANKS);
+                            output.accept(SEREIBA_PARQUET);
                             output.accept(SEREIBA_STAIRS);
+                            output.accept(SEREIBA_PARQUET_STAIRS);
                             output.accept(SEREIBA_SLAB);
+                            output.accept(SEREIBA_PARQUET_SLAB);
                             output.accept(SEREIBA_FENCE);
                             output.accept(SEREIBA_FENCE_GATE);
                             output.accept(SEREIBA_DOOR);

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/fence_side",
+  "textures": {
+    "texture": "overwhelmed:block/sereiba_planks
+_planks"
+  }
+}

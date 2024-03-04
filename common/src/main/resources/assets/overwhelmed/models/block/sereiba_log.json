@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "overwhelmed:block/sereiba_log_top",
+    "side": "overwhelmed:block/sereiba_log"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "overwhelmed:block/sereiba_slab"
+    },
+    "type=double": {
+      "model": "overwhelmed:block/sereiba_planks"
+    },
+    "type=top": {
+      "model": "overwhelmed:block/sereiba_slab_top"
+    }
+  }
+}
