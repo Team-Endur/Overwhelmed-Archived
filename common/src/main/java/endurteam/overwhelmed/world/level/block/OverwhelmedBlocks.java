@@ -24,9 +24,9 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.entity.HangingSignBlockEntity;
 
 public class OverwhelmedBlocks {
-    public static Block SEREIBA_LOG;
+    public static RotatedPillarBlock SEREIBA_LOG;
     public static Block SEREIBA_WOOD;
-    public static Block STRIPPED_SEREIBA_LOG;
+    public static RotatedPillarBlock STRIPPED_SEREIBA_LOG;
     public static Block STRIPPED_SEREIBA_WOOD;
     public static Block SEREIBA_PLANKS;
     public static Block SEREIBA_PARQUET;

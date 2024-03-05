@@ -29,12 +29,12 @@ public class OverwhelmedFabricBlocks {
 
     public static void registerBlocks() {
         //Must register Blocks first
-        OverwhelmedBlocks.SEREIBA_LOG = registerGenericBlock("sereiba_log", BlockBehaviour.Properties.of()
+        OverwhelmedBlocks.SEREIBA_LOG = registerGenericRotatedPillarBlock("sereiba_log", BlockBehaviour.Properties.of()
                 .mapColor(MapColor.TERRACOTTA_LIGHT_GREEN)
                 .strength(2.0f, 2.0f));
         OverwhelmedBlocks.SEREIBA_WOOD= registerGenericBlock("sereiba_wood",
                 BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.SEREIBA_LOG));
-        OverwhelmedBlocks.STRIPPED_SEREIBA_LOG= registerGenericBlock("stripped_sereiba_log",
+        OverwhelmedBlocks.STRIPPED_SEREIBA_LOG= registerGenericRotatedPillarBlock("stripped_sereiba_log",
                 BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.SEREIBA_LOG));
         OverwhelmedBlocks.STRIPPED_SEREIBA_WOOD= registerGenericBlock("stripped_sereiba_wood",
                 BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.SEREIBA_LOG));
@@ -317,6 +317,13 @@ public class OverwhelmedFabricBlocks {
                                               Block.Properties properties) {
         return Registry.register(BuiltInRegistries.BLOCK, new ResourceLocation(Overwhelmed.MOD_ID, name),
                 new Block(properties));
+    }
+
+    @SuppressWarnings("SameParameterValue")
+    private static RotatedPillarBlock registerGenericRotatedPillarBlock(String name,
+                                              Block.Properties properties) {
+        return Registry.register(BuiltInRegistries.BLOCK, new ResourceLocation(Overwhelmed.MOD_ID, name),
+                new RotatedPillarBlock(properties));
     }
 
     @SuppressWarnings("SameParameterValue")
