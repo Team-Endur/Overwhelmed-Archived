@@ -31,12 +31,13 @@ public class OverwhelmedFabricBlocks {
         //Must register Blocks first
         OverwhelmedBlocks.SEREIBA_LOG = registerGenericRotatedPillarBlock("sereiba_log", BlockBehaviour.Properties.of()
                 .mapColor(MapColor.TERRACOTTA_LIGHT_GREEN)
+                .sound(SoundType.WOOD)
                 .strength(2.0f, 2.0f));
-        OverwhelmedBlocks.SEREIBA_WOOD= registerGenericBlock("sereiba_wood",
+        OverwhelmedBlocks.SEREIBA_WOOD= registerGenericRotatedPillarBlock("sereiba_wood",
                 BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.SEREIBA_LOG));
         OverwhelmedBlocks.STRIPPED_SEREIBA_LOG= registerGenericRotatedPillarBlock("stripped_sereiba_log",
                 BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.SEREIBA_LOG));
-        OverwhelmedBlocks.STRIPPED_SEREIBA_WOOD= registerGenericBlock("stripped_sereiba_wood",
+        OverwhelmedBlocks.STRIPPED_SEREIBA_WOOD= registerGenericRotatedPillarBlock("stripped_sereiba_wood",
                 BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.SEREIBA_LOG));
         OverwhelmedBlocks.SEREIBA_PLANKS = registerGenericBlock("sereiba_planks", BlockBehaviour.Properties.of()
                 .mapColor(MapColor.TERRACOTTA_LIGHT_GREEN)
