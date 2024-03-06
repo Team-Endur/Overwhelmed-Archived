@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "overwhelmed:block/sereiba_planks",
+    "side": "overwhelmed:block/sereiba_parquet",
+    "top": "overwhelmed:block/sereiba_planks"
+  }
+}

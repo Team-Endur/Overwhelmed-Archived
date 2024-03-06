@@ -66,6 +66,8 @@ public class OverwhelmedFabricClient implements ClientModInitializer {
                 OverwhelmedItems.SNAIL_SPAWN_EGG);
         ColorProviderRegistry.ITEM.register(butterflySpawnEggItemColor = new ButterflySpawnEggItemColor(),
                 OverwhelmedItems.BUTTERFLY_SPAWN_EGG);
+        BlockRenderLayerMap.INSTANCE.putBlock(OverwhelmedBlocks.STRING_SEREIBA_DOOR, RenderType.cutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(OverwhelmedBlocks.STRING_SEREIBA_TRAPDOOR, RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(OverwhelmedBlocks.FLOFF, RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(OverwhelmedBlocks.PAINE, RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(OverwhelmedBlocks.PINK_LAVATERA, RenderType.cutout());
@@ -89,7 +91,6 @@ public class OverwhelmedFabricClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(OverwhelmedBlocks.PEBBLE, RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(OverwhelmedBlocks.ICE_CUBE, RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(OverwhelmedBlocks.GOLD_BEAD, RenderType.cutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(OverwhelmedBlocks.FIZZYROCK_GEYSER, RenderType.cutout());
         ParticleFactoryRegistry.getInstance().register(
                 OverwhelmedParticleTypes.LIVERWORT_SPORE,
                 LiverwortSporeParticle.Provider::new);

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "overwhelmed:block/sereiba_planks",
+    "side": "overwhelmed:block/sereiba_parquet"
+  }
+}
