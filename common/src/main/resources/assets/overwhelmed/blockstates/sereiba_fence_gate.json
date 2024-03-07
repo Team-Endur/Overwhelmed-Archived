@@ -11,7 +11,7 @@
       "y": 270
     },
     "facing=east,in_wall=true,open=false": {
-      "model": "overwhelmed,:block/sereiba_fence_gate_wall",
+      "model": "overwhelmed:block/sereiba_fence_gate_wall",
       "uvlock": true,
       "y": 270
     },

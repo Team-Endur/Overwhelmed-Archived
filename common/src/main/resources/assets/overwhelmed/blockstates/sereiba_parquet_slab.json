@@ -7,7 +7,7 @@
       "model": "overwhelmed:block/sereiba_planks"
     },
     "type=top": {
-      "model": "overwhelmed:block/sereiba_parquet_top"
+      "model": "overwhelmed:block/sereiba_parquet_slab_top"
     }
   }
 }
