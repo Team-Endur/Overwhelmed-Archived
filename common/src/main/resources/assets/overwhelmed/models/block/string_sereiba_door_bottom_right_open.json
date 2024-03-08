@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_bottom_right_open",
+  "textures": {
+    "bottom": "overwhelmed:block/string_sereiba_door_bottom",
+    "top": "overwhelmed:block/string_sereiba_door_top"
+  }
+}
