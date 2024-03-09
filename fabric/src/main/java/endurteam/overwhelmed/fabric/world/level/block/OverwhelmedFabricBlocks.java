@@ -41,6 +41,7 @@ public class OverwhelmedFabricBlocks {
                 BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.SEREIBA_LOG));
         OverwhelmedBlocks.SEREIBA_PLANKS = registerGenericBlock("sereiba_planks", BlockBehaviour.Properties.of()
                 .mapColor(MapColor.TERRACOTTA_LIGHT_GREEN)
+                .sound(SoundType.WOOD)
                 .strength(2.0f, 3.0f));
         OverwhelmedBlocks.SEREIBA_PARQUET = registerGenericBlock("sereiba_parquet",
                 BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.SEREIBA_PLANKS));
@@ -58,18 +59,21 @@ public class OverwhelmedFabricBlocks {
                 BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.SEREIBA_PLANKS));
         OverwhelmedBlocks.SEREIBA_DOOR = registerGenericDoorBlock("sereiba_door",
                 BlockSetType.OAK, BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.SEREIBA_PLANKS));
-        OverwhelmedBlocks.STRING_SEREIBA_DOOR = registerGenericDoorBlock("string_sereiba_door",
-                BlockSetType.OAK, BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.SEREIBA_PLANKS));
         OverwhelmedBlocks.SEREIBA_TRAPDOOR = registerGenericTrapDoorBlock("sereiba_trapdoor",
                 BlockSetType.OAK, BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.SEREIBA_PLANKS));
-        OverwhelmedBlocks.STRING_SEREIBA_TRAPDOOR = registerGenericTrapDoorBlock("string_sereiba_trapdoor",
-                BlockSetType.OAK, BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.SEREIBA_PLANKS));
+        OverwhelmedBlocks.WOODED_SEREIBA_TRAPDOOR = registerGenericTrapDoorBlock("wooded_sereiba_trapdoor",
+                BlockSetType.OAK, BlockBehaviour.Properties.of()
+                        .mapColor(MapColor.TERRACOTTA_LIGHT_GREEN)
+                        .sound(SoundType.WOOD)
+                        .noOcclusion()
+                        .strength(2.0f, 3.0f));
         OverwhelmedBlocks.SEREIBA_PRESSURE_PLATE = registerGenericPressurePlateBlock("sereiba_pressure_plate",
                 BlockSetType.OAK, BlockBehaviour.Properties.of()
                         .mapColor(MapColor.TERRACOTTA_LIGHT_GREEN)
                         .strength(0.5f, 0.5f));
         OverwhelmedBlocks.SEREIBA_BUTTON = registerGenericButtonBlock("sereiba_button",
                 BlockSetType.OAK, 60, BlockBehaviour.Properties.of()
+                        .noCollission()
                         .strength(0.5f, 0.5f));
         OverwhelmedBlocks.SNAIL_SHELL_BRICKS = registerGenericBlock("snail_shell_bricks", BlockBehaviour.Properties.of()
                 .mapColor(MapColor.COLOR_BROWN)

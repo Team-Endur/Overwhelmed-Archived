@@ -37,9 +37,8 @@ public class OverwhelmedBlocks {
     public static FenceBlock SEREIBA_FENCE;
     public static FenceGateBlock SEREIBA_FENCE_GATE;
     public static DoorBlock SEREIBA_DOOR;
-    public static DoorBlock STRING_SEREIBA_DOOR;
     public static TrapDoorBlock SEREIBA_TRAPDOOR;
-    public static TrapDoorBlock STRING_SEREIBA_TRAPDOOR;
+    public static TrapDoorBlock WOODED_SEREIBA_TRAPDOOR;
     public static PressurePlateBlock SEREIBA_PRESSURE_PLATE;
     public static ButtonBlock SEREIBA_BUTTON;
     public static Block SNAIL_SHELL_BRICKS;

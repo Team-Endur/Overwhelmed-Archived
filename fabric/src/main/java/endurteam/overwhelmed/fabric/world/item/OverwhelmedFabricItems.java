@@ -32,9 +32,8 @@ public class OverwhelmedFabricItems {
         SEREIBA_FENCE = registerGenericBlockItem("sereiba_fence", OverwhelmedBlocks.SEREIBA_FENCE);
         SEREIBA_FENCE_GATE = registerGenericBlockItem("sereiba_fence_gate", OverwhelmedBlocks.SEREIBA_FENCE_GATE);
         SEREIBA_DOOR = registerGenericBlockItem("sereiba_door", OverwhelmedBlocks.SEREIBA_DOOR);
-        STRING_SEREIBA_DOOR = registerGenericBlockItem("string_sereiba_door", OverwhelmedBlocks.STRING_SEREIBA_DOOR);
         SEREIBA_TRAPDOOR = registerGenericBlockItem("sereiba_trapdoor", OverwhelmedBlocks.SEREIBA_TRAPDOOR);
-        STRING_SEREIBA_TRAPDOOR = registerGenericBlockItem("string_sereiba_trapdoor", OverwhelmedBlocks.STRING_SEREIBA_TRAPDOOR);
+        WOODED_SEREIBA_TRAPDOOR = registerGenericBlockItem("wooded_sereiba_trapdoor", OverwhelmedBlocks.WOODED_SEREIBA_TRAPDOOR);
         SEREIBA_PRESSURE_PLATE = registerGenericBlockItem("sereiba_pressure_plate", OverwhelmedBlocks.SEREIBA_PRESSURE_PLATE);
         SEREIBA_BUTTON = registerGenericBlockItem("sereiba_button", OverwhelmedBlocks.SEREIBA_BUTTON);
         SNAIL_SHELL_BRICKS = registerGenericBlockItem("snail_shell_bricks", OverwhelmedBlocks.SNAIL_SHELL_BRICKS);

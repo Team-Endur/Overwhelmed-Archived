@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/template_orientable_trapdoor_open",
   "textures": {
-    "texture": "overwhelmed:block/string_sereiba_trapdoor"
+    "texture": "overwhelmed:block/wooded_sereiba_trapdoor"
   }
 }

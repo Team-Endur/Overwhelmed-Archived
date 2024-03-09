@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "overwhelmed:item/string_sereiba_door"
-  }
-}
