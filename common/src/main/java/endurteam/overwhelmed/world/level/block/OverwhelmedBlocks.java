@@ -93,7 +93,9 @@ public class OverwhelmedBlocks {
     public static CropBlock MINT;
     public static GooBlock GOO_BLOCK;
     public static SignBlock SEREIBA_SIGN;
-/*    public static HangingSignBlockEntity SEREIBA_HANGING_SIGN;*/
+    public static WallSignBlock SEREIBA_WALL_SIGN;
+    public static CeilingHangingSignBlock SEREIBA_HANGING_SIGN;
+    public static WallHangingSignBlock SEREIBA_WALL_HANGING_SIGN;
     public static MintCakeBlock MINT_CAKE;
     public static VanillaCakeBlock VANILLA_CAKE;
     public static CandleMintCakeBlock BLACK_CANDLE_MINT_CAKE;

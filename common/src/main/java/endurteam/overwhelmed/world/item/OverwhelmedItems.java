@@ -87,6 +87,7 @@ public class OverwhelmedItems {
     public static PebbleBlockItem PEBBLE;
     public static BlockItem GOO_BLOCK;
     public static SignItem SEREIBA_SIGN;
+    public static HangingSignItem SEREIBA_HANGING_SIGN;
     public static ItemNameBlockItem MINT_SEEDS;
     public static Item VANILLA_BEANS;
     public static Item BLOWGUN;

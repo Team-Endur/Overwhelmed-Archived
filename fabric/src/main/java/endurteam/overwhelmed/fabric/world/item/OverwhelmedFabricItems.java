@@ -107,6 +107,10 @@ public class OverwhelmedFabricItems {
         MINT_SEEDS = registerGenericItemNameBlockItem("mint_seeds", OverwhelmedBlocks.MINT);
         VANILLA_BEANS = registerGenericItem("vanilla_beans", 64, Rarity.COMMON);
         GOO_BLOCK = registerGenericBlockItem("goo_block", OverwhelmedBlocks.GOO_BLOCK);
+        SEREIBA_SIGN = registerGenericSignBlockItem("sereiba_sign", OverwhelmedBlocks.SEREIBA_SIGN,
+                OverwhelmedBlocks.SEREIBA_WALL_SIGN);
+        SEREIBA_HANGING_SIGN = registerGenericHangingSignBlockItem("sereiba_hanging_sign",
+                OverwhelmedBlocks.SEREIBA_HANGING_SIGN, OverwhelmedBlocks.SEREIBA_WALL_HANGING_SIGN);
         BLOWGUN = Registry.register(BuiltInRegistries.ITEM,
                 new ResourceLocation(Overwhelmed.MOD_ID, "blowgun"),
                 new BlowgunItem(new Item.Properties()
@@ -235,6 +239,11 @@ public class OverwhelmedFabricItems {
     private static SignItem registerGenericSignBlockItem(String name, Block block, Block block2) {
         return Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Overwhelmed.MOD_ID, name),
                 new SignItem(new Item.Properties(), block, block2));
+    }
+
+    private static HangingSignItem registerGenericHangingSignBlockItem(String name, Block block, Block block2) {
+        return Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Overwhelmed.MOD_ID, name),
+                new HangingSignItem(block, block2, new Item.Properties()));
     }
 
     private static ItemNameBlockItem registerGenericItemNameBlockItem(String name, Block block) {

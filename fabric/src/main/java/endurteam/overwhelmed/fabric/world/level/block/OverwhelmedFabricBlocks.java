@@ -55,24 +55,24 @@ public class OverwhelmedFabricBlocks {
                 BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.SEREIBA_PLANKS));
         OverwhelmedBlocks.SEREIBA_FENCE = registerGenericFenceBlock("sereiba_fence",
                 BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.SEREIBA_PLANKS));
-        OverwhelmedBlocks.SEREIBA_FENCE_GATE = registerGenericFenceGateBlock("sereiba_fence_gate", WoodType.OAK,
+        OverwhelmedBlocks.SEREIBA_FENCE_GATE = registerGenericFenceGateBlock("sereiba_fence_gate", WoodType.MANGROVE,
                 BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.SEREIBA_PLANKS));
         OverwhelmedBlocks.SEREIBA_DOOR = registerGenericDoorBlock("sereiba_door",
-                BlockSetType.OAK, BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.SEREIBA_PLANKS));
+                BlockSetType.MANGROVE, BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.SEREIBA_PLANKS));
         OverwhelmedBlocks.SEREIBA_TRAPDOOR = registerGenericTrapDoorBlock("sereiba_trapdoor",
-                BlockSetType.OAK, BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.SEREIBA_PLANKS));
+                BlockSetType.MANGROVE, BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.SEREIBA_PLANKS));
         OverwhelmedBlocks.WOODED_SEREIBA_TRAPDOOR = registerGenericTrapDoorBlock("wooded_sereiba_trapdoor",
-                BlockSetType.OAK, BlockBehaviour.Properties.of()
+                BlockSetType.MANGROVE, BlockBehaviour.Properties.of()
                         .mapColor(MapColor.TERRACOTTA_LIGHT_GREEN)
                         .sound(SoundType.WOOD)
                         .noOcclusion()
                         .strength(2.0f, 3.0f));
         OverwhelmedBlocks.SEREIBA_PRESSURE_PLATE = registerGenericPressurePlateBlock("sereiba_pressure_plate",
-                BlockSetType.OAK, BlockBehaviour.Properties.of()
+                BlockSetType.MANGROVE, BlockBehaviour.Properties.of()
                         .mapColor(MapColor.TERRACOTTA_LIGHT_GREEN)
                         .strength(0.5f, 0.5f));
         OverwhelmedBlocks.SEREIBA_BUTTON = registerGenericButtonBlock("sereiba_button",
-                BlockSetType.OAK, 60, BlockBehaviour.Properties.of()
+                BlockSetType.MANGROVE, 60, BlockBehaviour.Properties.of()
                         .noCollission()
                         .strength(0.5f, 0.5f));
         OverwhelmedBlocks.SNAIL_SHELL_BRICKS = registerGenericBlock("snail_shell_bricks", BlockBehaviour.Properties.of()
@@ -302,6 +302,38 @@ public class OverwhelmedFabricBlocks {
                         .noOcclusion()
                         .jumpFactor(0.5f)
                         .speedFactor(0.4f)));
+        OverwhelmedBlocks.SEREIBA_SIGN = registerGenericSignBlock("sereiba_sign", WoodType.MANGROVE,
+                BlockBehaviour.Properties.of()
+                        .mapColor(MapColor.TERRACOTTA_LIGHT_GREEN)
+                        .forceSolidOn()
+                        .instrument(NoteBlockInstrument.BASS)
+                        .noCollission()
+                        .strength(1.0F, 1.0f)
+                        .ignitedByLava());
+        OverwhelmedBlocks.SEREIBA_WALL_SIGN = registerGenericWallSignBlock("sereiba_wall_sign", WoodType.MANGROVE,
+                BlockBehaviour.Properties.of()
+                        .mapColor(MapColor.TERRACOTTA_LIGHT_GREEN)
+                        .forceSolidOn()
+                        .instrument(NoteBlockInstrument.BASS)
+                        .noCollission()
+                        .strength(1.0F, 1.0f)
+                        .ignitedByLava());
+        OverwhelmedBlocks.SEREIBA_HANGING_SIGN = registerGenericCeilingHangingSignBlock("sereiba_hanging_sign",
+                WoodType.MANGROVE, BlockBehaviour.Properties.of()
+                        .mapColor(MapColor.TERRACOTTA_LIGHT_GREEN)
+                        .forceSolidOn()
+                        .instrument(NoteBlockInstrument.BASS)
+                        .noCollission()
+                        .strength(1.0F, 1.0f)
+                        .ignitedByLava());
+        OverwhelmedBlocks.SEREIBA_WALL_HANGING_SIGN = registerGenericWallHangingSignBlock("sereiba_wall_hanging_sign",
+                WoodType.MANGROVE, BlockBehaviour.Properties.of()
+                        .mapColor(MapColor.TERRACOTTA_LIGHT_GREEN)
+                        .forceSolidOn()
+                        .instrument(NoteBlockInstrument.BASS)
+                        .noCollission()
+                        .strength(1.0F, 1.0f)
+                        .ignitedByLava());
         OverwhelmedBlocks.MINT_CAKE = Registry.register(BuiltInRegistries.BLOCK,
                 new ResourceLocation(Overwhelmed.MOD_ID, "mint_cake"),
                 new MintCakeBlock(BlockBehaviour.Properties.of()
@@ -454,6 +486,30 @@ public class OverwhelmedFabricBlocks {
                         return 0;
                     }
                 });
+    }
+
+    @SuppressWarnings("SameParameterValue")
+    private static WallSignBlock registerGenericWallSignBlock(String name,
+                                                      WoodType woodType,
+                                                      BlockBehaviour.Properties properties) {
+        return Registry.register(BuiltInRegistries.BLOCK, new ResourceLocation(Overwhelmed.MOD_ID, name),
+                new WallSignBlock(woodType, properties));
+    }
+
+    @SuppressWarnings("SameParameterValue")
+    private static CeilingHangingSignBlock registerGenericCeilingHangingSignBlock(String name,
+                                                              WoodType woodType,
+                                                              BlockBehaviour.Properties properties) {
+        return Registry.register(BuiltInRegistries.BLOCK, new ResourceLocation(Overwhelmed.MOD_ID, name),
+                new CeilingHangingSignBlock(woodType, properties));
+    }
+
+    @SuppressWarnings("SameParameterValue")
+    private static WallHangingSignBlock registerGenericWallHangingSignBlock(String name,
+                                                              WoodType woodType,
+                                                              BlockBehaviour.Properties properties) {
+        return Registry.register(BuiltInRegistries.BLOCK, new ResourceLocation(Overwhelmed.MOD_ID, name),
+                new WallHangingSignBlock(woodType, properties));
     }
 
 }
