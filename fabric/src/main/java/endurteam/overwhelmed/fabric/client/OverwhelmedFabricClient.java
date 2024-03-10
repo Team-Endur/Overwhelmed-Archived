@@ -22,6 +22,8 @@ package endurteam.overwhelmed.fabric.client;
 
 import endurteam.overwhelmed.client.color.items.ButterflySpawnEggItemColor;
 import endurteam.overwhelmed.client.color.items.SnailSpawnEggItemColor;
+import endurteam.overwhelmed.client.particle.FizzyBubbleParticle;
+import endurteam.overwhelmed.client.particle.FizzyBubblePopParticle;
 import endurteam.overwhelmed.client.particle.LiverwortSporeParticle;
 import endurteam.overwhelmed.client.renderer.entity.*;
 import endurteam.overwhelmed.core.particles.OverwhelmedParticleTypes;
@@ -93,5 +95,11 @@ public class OverwhelmedFabricClient implements ClientModInitializer {
         ParticleFactoryRegistry.getInstance().register(
                 OverwhelmedParticleTypes.LIVERWORT_SPORE,
                 LiverwortSporeParticle.Provider::new);
+        ParticleFactoryRegistry.getInstance().register(
+                OverwhelmedParticleTypes.FIZZY_BUBBLE,
+                FizzyBubbleParticle.Provider::new);
+        ParticleFactoryRegistry.getInstance().register(
+                OverwhelmedParticleTypes.FIZZY_BUBBLE_POP,
+                FizzyBubblePopParticle.Provider::new);
     }
 }

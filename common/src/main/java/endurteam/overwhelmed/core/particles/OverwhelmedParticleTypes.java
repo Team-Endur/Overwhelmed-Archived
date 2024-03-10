@@ -25,5 +25,7 @@ import net.minecraft.core.particles.SimpleParticleType;
 
 public class OverwhelmedParticleTypes {
     public static ParticleType<SimpleParticleType> LIVERWORT_SPORE;
+    public static ParticleType<SimpleParticleType> FIZZY_BUBBLE;
+    public static ParticleType<SimpleParticleType> FIZZY_BUBBLE_POP;
 
 }

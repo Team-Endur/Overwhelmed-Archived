@@ -15,6 +15,12 @@ public class OverwhelmedFabricParticleTypes {
         LIVERWORT_SPORE = Registry.register(BuiltInRegistries.PARTICLE_TYPE,
                 new ResourceLocation(Overwhelmed.MOD_ID, "liverwort_spore"),
                         new SimpleParticleType(false));
+        FIZZY_BUBBLE = Registry.register(BuiltInRegistries.PARTICLE_TYPE,
+                new ResourceLocation(Overwhelmed.MOD_ID, "fizzy_bubble"),
+                    new SimpleParticleType(false));
+        FIZZY_BUBBLE_POP = Registry.register(BuiltInRegistries.PARTICLE_TYPE,
+                new ResourceLocation(Overwhelmed.MOD_ID, "fizzy_bubble_pop"),
+                    new SimpleParticleType(false));
 
     }
 }

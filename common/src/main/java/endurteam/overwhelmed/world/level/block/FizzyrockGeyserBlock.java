@@ -1,7 +1,8 @@
 package endurteam.overwhelmed.world.level.block;
 
+import endurteam.overwhelmed.core.particles.OverwhelmedParticleTypes;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
@@ -28,7 +29,7 @@ public class FizzyrockGeyserBlock extends Block {
         for(int i = 0; i < 2; ++i) {
             if (randomSource.nextBoolean()) {
                 double yOffset = 18.0 / 18.0;
-                level.addParticle(ParticleTypes.BUBBLE_POP, d + randomSource.nextDouble() / 5.0, (double)blockPos.getY() + yOffset + (0.5 - randomSource.nextDouble()), e + randomSource.nextDouble() / 5.0, 0.0, 0.0, 0.0);
+                level.addParticle((ParticleOptions) OverwhelmedParticleTypes.FIZZY_BUBBLE, d + randomSource.nextDouble() / 5.0, (double)blockPos.getY() + yOffset + (0.5 - randomSource.nextDouble()), e + randomSource.nextDouble() / 5.0, 0.0, 0.0, 0.0);
             }
         }
     }
