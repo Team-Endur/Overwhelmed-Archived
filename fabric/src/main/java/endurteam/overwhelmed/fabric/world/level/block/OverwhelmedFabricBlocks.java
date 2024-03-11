@@ -282,7 +282,7 @@ public class OverwhelmedFabricBlocks {
                 .replaceable()
                 .noCollission()
                 .randomTicks()
-                .strength(0.2F)
+                .strength(0.2f)
                 .sound(SoundType.VINE)
                 .ignitedByLava()
                 .pushReaction(PushReaction.DESTROY));

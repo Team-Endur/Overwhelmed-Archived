@@ -39,8 +39,9 @@ public class FizzyBubbleParticle extends TextureSheetParticle {
         super(clientLevel, d, e, f, g, h, i);
         this.sprites = spriteSet;
         this.hasPhysics = true;
-        this.xd = 0f;
-        this.yd = 0f;
+        this.gravity = -0.3f;
+        this.xd = g;
+        this.yd = h + (double)(this.random.nextFloat() / 500.0F);
         this.zd = 0f;
         this.setSpriteFromAge(spriteSet);
     }
@@ -48,10 +49,11 @@ public class FizzyBubbleParticle extends TextureSheetParticle {
     @Override
     public void tick() {
         super.tick();
-        if (!this.removed) {
-            this.setSprite(this.sprites.get((this.age / 6) % 6 + 1, 6));
-        } else {
+        if (this.age > 8 * 20) {
+            this.remove();
             this.spawnPopParticle();
+        } if (this.age >= 5 * 20 && this.age <= 8 * 20) {
+            this.setSprite(this.sprites.get((this.age / 6) % 6 + 1, 6));
         }
     }
 

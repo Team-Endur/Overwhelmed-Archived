@@ -36,7 +36,7 @@ public class FizzyBubblePopParticle extends TextureSheetParticle {
                            SpriteSet spriteSet) {
         super(clientLevel, d, e, f, g, h, i);
         this.sprites = spriteSet;
-        this.gravity = -0.2f;
+        this.gravity = 0.0f;
         this.hasPhysics = true;
         this.xd = 0f;
         this.yd = 0f;

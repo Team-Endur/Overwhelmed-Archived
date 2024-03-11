@@ -26,10 +26,14 @@ public class FizzyrockGeyserBlock extends Block {
         double d = (double)blockPos.getX() + vec3.x;
         double e = (double)blockPos.getZ() + vec3.z;
 
-        for(int i = 0; i < 2; ++i) {
+        for (int i = 0; i < 2; ++i) {
             if (randomSource.nextBoolean()) {
-                double yOffset = 18.0 / 18.0;
-                level.addParticle((ParticleOptions) OverwhelmedParticleTypes.FIZZY_BUBBLE, d + randomSource.nextDouble() / 5.0, (double)blockPos.getY() + yOffset + (0.5 - randomSource.nextDouble()), e + randomSource.nextDouble() / 5.0, 0.0, 0.0, 0.0);
+                double yOffset = (double) blockPos.getY() + 0.1 + (0.5 - randomSource.nextDouble());
+                level.addParticle((ParticleOptions) OverwhelmedParticleTypes.FIZZY_BUBBLE,
+                        d + randomSource.nextDouble() / 5.0,
+                        yOffset,
+                        e + randomSource.nextDouble() / 5.0,
+                        0.0, 0.0, 0.0);
             }
         }
     }
