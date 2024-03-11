@@ -72,6 +72,7 @@ public class OverwhelmedItems {
     public static BlockItem FIZZYROCK_GEYSER;
     public static BlockItem SOIL;
     public static BlockItem CHARCOAL_ORE;
+    public static BlockItem SEREIBA_LEAVES;
     public static BlockItem FLOFF;
     public static BlockItem PAINE;
     public static BlockItem PINK_LAVATERA;
@@ -80,6 +81,9 @@ public class OverwhelmedItems {
     public static BlockItem RINGOT;
     public static BlockItem SNOWDROP;
     public static BlockItem BELL_SUNFLOWER;
+
+    public static BlockItem SEREIBA_VINES;
+
     public static DoubleHighBlockItem WHITE_ALLIUM;
     public static DoubleHighBlockItem WIDOW;
     public static BlockItem GOLD_BEAD;

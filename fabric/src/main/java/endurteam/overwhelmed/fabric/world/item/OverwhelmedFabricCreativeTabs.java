@@ -65,6 +65,7 @@ public class OverwhelmedFabricCreativeTabs {
                             output.accept(FIZZYROCK_GEYSER);
                             output.accept(SOIL);
                             output.accept(CHARCOAL_ORE);
+                            output.accept(SEREIBA_LEAVES);
                             output.accept(FLOFF);
                             output.accept(PAINE);
                             output.accept(PINK_LAVATERA);
@@ -73,6 +74,7 @@ public class OverwhelmedFabricCreativeTabs {
                             output.accept(RINGOT);
                             output.accept(SNOWDROP);
                             output.accept(BELL_SUNFLOWER);
+                            output.accept(SEREIBA_VINES);
                             output.accept(WIDOW);
                             output.accept(WHITE_ALLIUM);
                             output.accept(GOLD_BEAD);

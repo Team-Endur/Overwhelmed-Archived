@@ -69,6 +69,7 @@ public class OverwhelmedBlocks {
     public static FizzyrockGeyserBlock FIZZYROCK_GEYSER;
     public static Block SOIL;
     public static Block CHARCOAL_ORE;
+    public static LeavesBlock SEREIBA_LEAVES;
     public static ClotBlock GOLD_BEAD;
     public static ClotBlock ICE_CUBE;
     public static PebbleBlock PEBBLE;
@@ -88,6 +89,7 @@ public class OverwhelmedBlocks {
     public static FlowerPotBlock POTTED_RINGOT;
     public static FlowerPotBlock POTTED_SNOWDROP;
     public static FlowerPotBlock POTTED_BELL_SUNFLOWER;
+    public static VineBlock SEREIBA_VINES;
     public static TallFlowerBlock WIDOW;
     public static TallFlowerBlock WHITE_ALLIUM;
     public static CropBlock MINT;

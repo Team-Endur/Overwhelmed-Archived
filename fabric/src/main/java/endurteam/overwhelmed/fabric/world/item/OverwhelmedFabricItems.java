@@ -68,6 +68,7 @@ public class OverwhelmedFabricItems {
         FIZZYROCK_GEYSER = registerGenericBlockItem("fizzyrock_geyser", OverwhelmedBlocks.FIZZYROCK_GEYSER);
         SOIL = registerGenericBlockItem("soil", OverwhelmedBlocks.SOIL);
         CHARCOAL_ORE = registerGenericBlockItem("charcoal_ore", OverwhelmedBlocks.CHARCOAL_ORE);
+        SEREIBA_LEAVES = registerGenericBlockItem("sereiba_leaves", OverwhelmedBlocks.SEREIBA_LEAVES);
         FLOFF = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Overwhelmed.MOD_ID, "floff"),
                 new BlockItem(OverwhelmedBlocks.FLOFF,
                         new Item.Properties()));
@@ -91,6 +92,9 @@ public class OverwhelmedFabricItems {
                         new Item.Properties()));
         BELL_SUNFLOWER = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Overwhelmed.MOD_ID, "bell_sunflower"),
                 new BlockItem(OverwhelmedBlocks.BELL_SUNFLOWER,
+                        new Item.Properties()));
+        SEREIBA_VINES = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Overwhelmed.MOD_ID, "sereiba_vines"),
+                new BlockItem(OverwhelmedBlocks.SEREIBA_VINES,
                         new Item.Properties()));
         WIDOW = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Overwhelmed.MOD_ID, "widow"),
                 new DoubleHighBlockItem(OverwhelmedBlocks.WIDOW,

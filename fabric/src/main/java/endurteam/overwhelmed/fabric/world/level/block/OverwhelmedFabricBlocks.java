@@ -33,11 +33,11 @@ public class OverwhelmedFabricBlocks {
                 .mapColor(MapColor.TERRACOTTA_LIGHT_GREEN)
                 .sound(SoundType.WOOD)
                 .strength(2.0f, 2.0f));
-        OverwhelmedBlocks.SEREIBA_WOOD= registerGenericRotatedPillarBlock("sereiba_wood",
+        OverwhelmedBlocks.SEREIBA_WOOD = registerGenericRotatedPillarBlock("sereiba_wood",
                 BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.SEREIBA_LOG));
-        OverwhelmedBlocks.STRIPPED_SEREIBA_LOG= registerGenericRotatedPillarBlock("stripped_sereiba_log",
+        OverwhelmedBlocks.STRIPPED_SEREIBA_LOG = registerGenericRotatedPillarBlock("stripped_sereiba_log",
                 BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.SEREIBA_LOG));
-        OverwhelmedBlocks.STRIPPED_SEREIBA_WOOD= registerGenericRotatedPillarBlock("stripped_sereiba_wood",
+        OverwhelmedBlocks.STRIPPED_SEREIBA_WOOD = registerGenericRotatedPillarBlock("stripped_sereiba_wood",
                 BlockBehaviour.Properties.ofFullCopy(OverwhelmedBlocks.SEREIBA_LOG));
         OverwhelmedBlocks.SEREIBA_PLANKS = registerGenericBlock("sereiba_planks", BlockBehaviour.Properties.of()
                 .mapColor(MapColor.TERRACOTTA_LIGHT_GREEN)
@@ -172,6 +172,8 @@ public class OverwhelmedFabricBlocks {
                 .mapColor(MapColor.COLOR_BROWN)
                 .strength(0.7f, 0.7f)
                 .sound(SoundType.ROOTED_DIRT));
+        OverwhelmedBlocks.SEREIBA_LEAVES = registerGenericLeavesBlock("sereiba_leaves", BlockBehaviour.Properties.of()
+                .sound(SoundType.GRASS));
         OverwhelmedBlocks.GOLD_BEAD = registerGenericClotBlock("gold_bead", BlockBehaviour.Properties.of()
                 .mapColor(MapColor.GOLD)
                 .strength(0f, 6f)
@@ -256,22 +258,6 @@ public class OverwhelmedFabricBlocks {
                 .sound(SoundType.GRASS)
                 .offsetType(BlockBehaviour.OffsetType.XZ)
                 .pushReaction(PushReaction.DESTROY));
-        OverwhelmedBlocks.WIDOW = registerGenericTallFlowerBlock("widow", BlockBehaviour.Properties.of()
-                .mapColor(MapColor.PLANT)
-                .noCollission()
-                .instabreak()
-                .sound(SoundType.GRASS)
-                .offsetType(BlockBehaviour.OffsetType.XZ)
-                .ignitedByLava()
-                .pushReaction(PushReaction.DESTROY));
-        OverwhelmedBlocks.WHITE_ALLIUM = registerGenericTallFlowerBlock("white_allium", BlockBehaviour.Properties.of()
-                .mapColor(MapColor.PLANT)
-                .noCollission()
-                .instabreak()
-                .sound(SoundType.GRASS)
-                .offsetType(BlockBehaviour.OffsetType.XZ)
-                .ignitedByLava()
-                .pushReaction(PushReaction.DESTROY));
         OverwhelmedBlocks.POTTED_FLOFF = registerGenericFlowerPotBlock(OverwhelmedBlocks.FLOFF, "potted_floff",
                 BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT));
         OverwhelmedBlocks.POTTED_PAINE = registerGenericFlowerPotBlock(OverwhelmedBlocks.PAINE, "potted_paine",
@@ -291,6 +277,31 @@ public class OverwhelmedFabricBlocks {
         OverwhelmedBlocks.POTTED_BELL_SUNFLOWER = registerGenericFlowerPotBlock(OverwhelmedBlocks.BELL_SUNFLOWER,
                 "potted_bell_sunflower",
                 BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT));
+        OverwhelmedBlocks.SEREIBA_VINES = registerGenericVineBlock("sereiba_vines", BlockBehaviour.Properties.of()
+                .mapColor(MapColor.PLANT)
+                .replaceable()
+                .noCollission()
+                .randomTicks()
+                .strength(0.2F)
+                .sound(SoundType.VINE)
+                .ignitedByLava()
+                .pushReaction(PushReaction.DESTROY));
+        OverwhelmedBlocks.WIDOW = registerGenericTallFlowerBlock("widow", BlockBehaviour.Properties.of()
+                .mapColor(MapColor.PLANT)
+                .noCollission()
+                .instabreak()
+                .sound(SoundType.GRASS)
+                .offsetType(BlockBehaviour.OffsetType.XZ)
+                .ignitedByLava()
+                .pushReaction(PushReaction.DESTROY));
+        OverwhelmedBlocks.WHITE_ALLIUM = registerGenericTallFlowerBlock("white_allium", BlockBehaviour.Properties.of()
+                .mapColor(MapColor.PLANT)
+                .noCollission()
+                .instabreak()
+                .sound(SoundType.GRASS)
+                .offsetType(BlockBehaviour.OffsetType.XZ)
+                .ignitedByLava()
+                .pushReaction(PushReaction.DESTROY));
         OverwhelmedBlocks.MINT = registerGenericCropBlock("mint", BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT));
         OverwhelmedBlocks.GOO_BLOCK = Registry.register(BuiltInRegistries.BLOCK,
                 new ResourceLocation(Overwhelmed.MOD_ID, "goo_block"),
@@ -302,22 +313,22 @@ public class OverwhelmedFabricBlocks {
                         .noOcclusion()
                         .jumpFactor(0.5f)
                         .speedFactor(0.4f)));
-        OverwhelmedBlocks.SEREIBA_SIGN = registerGenericSignBlock("sereiba_sign", WoodType.MANGROVE,
-                BlockBehaviour.Properties.of()
-                        .mapColor(MapColor.TERRACOTTA_LIGHT_GREEN)
-                        .forceSolidOn()
-                        .instrument(NoteBlockInstrument.BASS)
-                        .noCollission()
-                        .strength(1.0F, 1.0f)
-                        .ignitedByLava());
-        OverwhelmedBlocks.SEREIBA_WALL_SIGN = registerGenericWallSignBlock("sereiba_wall_sign", WoodType.MANGROVE,
-                BlockBehaviour.Properties.of()
-                        .mapColor(MapColor.TERRACOTTA_LIGHT_GREEN)
-                        .forceSolidOn()
-                        .instrument(NoteBlockInstrument.BASS)
-                        .noCollission()
-                        .strength(1.0F, 1.0f)
-                        .ignitedByLava());
+//        OverwhelmedBlocks.SEREIBA_SIGN = registerGenericSignBlock("sereiba_sign", WoodType.MANGROVE,
+//                BlockBehaviour.Properties.of()
+//                        .mapColor(MapColor.TERRACOTTA_LIGHT_GREEN)
+//                        .forceSolidOn()
+//                        .instrument(NoteBlockInstrument.BASS)
+//                        .noCollission()
+//                        .strength(1.0F, 1.0f)
+//                        .ignitedByLava());
+//        OverwhelmedBlocks.SEREIBA_WALL_SIGN = registerGenericWallSignBlock("sereiba_wall_sign", WoodType.MANGROVE,
+//                BlockBehaviour.Properties.of()
+//                        .mapColor(MapColor.TERRACOTTA_LIGHT_GREEN)
+//                        .forceSolidOn()
+//                        .instrument(NoteBlockInstrument.BASS)
+//                        .noCollission()
+//                        .strength(1.0F, 1.0f)
+//                        .ignitedByLava());
         OverwhelmedBlocks.SEREIBA_HANGING_SIGN = registerGenericCeilingHangingSignBlock("sereiba_hanging_sign",
                 WoodType.MANGROVE, BlockBehaviour.Properties.of()
                         .mapColor(MapColor.TERRACOTTA_LIGHT_GREEN)
@@ -434,6 +445,13 @@ public class OverwhelmedFabricBlocks {
     }
 
     @SuppressWarnings("SameParameterValue")
+    private static LeavesBlock registerGenericLeavesBlock(String name,
+                                                          Block.Properties properties) {
+        return Registry.register(BuiltInRegistries.BLOCK, new ResourceLocation(Overwhelmed.MOD_ID, name),
+                new LeavesBlock(properties));
+    }
+
+    @SuppressWarnings("SameParameterValue")
     private static FlowerBlock registerGenericFlowerBlock(MobEffect mobEffect,
                                                           int i,
                                                           String name,
@@ -448,6 +466,13 @@ public class OverwhelmedFabricBlocks {
                                                           BlockBehaviour.Properties properties) {
         return Registry.register(BuiltInRegistries.BLOCK, new ResourceLocation(Overwhelmed.MOD_ID, name),
                 new FlowerPotBlock(block, properties));
+    }
+
+    @SuppressWarnings("SameParameterValue")
+    private static VineBlock registerGenericVineBlock(String name,
+                                                                BlockBehaviour.Properties properties) {
+        return Registry.register(BuiltInRegistries.BLOCK, new ResourceLocation(Overwhelmed.MOD_ID, name),
+                new VineBlock(properties));
     }
 
     @SuppressWarnings("SameParameterValue")
