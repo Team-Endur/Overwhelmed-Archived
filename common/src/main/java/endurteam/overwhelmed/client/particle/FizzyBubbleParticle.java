@@ -30,18 +30,23 @@ import net.minecraft.core.particles.SimpleParticleType;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.Random;
+
 @Environment(EnvType.CLIENT)
 public class FizzyBubbleParticle extends TextureSheetParticle {
     private final SpriteSet sprites;
+    int lifetimeSet = new Random().nextInt(4) + 5;
+
 
     FizzyBubbleParticle(ClientLevel clientLevel, double d, double e, double f, double g, double h, double i,
                         SpriteSet spriteSet) {
         super(clientLevel, d, e, f, g, h, i);
         this.sprites = spriteSet;
+        this.lifetime = lifetimeSet;
         this.hasPhysics = true;
         this.gravity = -0.3f;
-        this.xd = g;
-        this.yd = h + (double)(this.random.nextFloat() / 500.0F);
+        this.xd = 0f;
+        this.yd = 0f;
         this.zd = 0f;
         this.setSpriteFromAge(spriteSet);
     }
@@ -49,19 +54,21 @@ public class FizzyBubbleParticle extends TextureSheetParticle {
     @Override
     public void tick() {
         super.tick();
-        if (this.age > 8 * 20) {
+        if (!this.removed) {
+            int frameDuration = 1;
+            int frameIndex = (this.age / frameDuration) % 6 + 1;
+            this.setSprite(this.sprites.get(frameIndex, 6));
+        }
+        if (this.age > this.lifetime) {
             this.remove();
-            this.spawnPopParticle();
-        } if (this.age >= 5 * 20 && this.age <= 8 * 20) {
-            this.setSprite(this.sprites.get((this.age / 6) % 6 + 1, 6));
+            spawnPopParticle();
         }
     }
 
     private void spawnPopParticle() {
         ClientLevel world = this.level;
         if (world != null) {
-            world.addParticle((ParticleOptions) OverwhelmedParticleTypes.FIZZY_BUBBLE_POP,
-                    this.x, this.y, this.z, 0.0d, 0.0d, 0.0d);
+            world.addParticle((ParticleOptions) OverwhelmedParticleTypes.FIZZY_BUBBLE_POP, this.x, this.y, this.z, 0.0d, 0.0d, 0.0d);
         }
     }
 

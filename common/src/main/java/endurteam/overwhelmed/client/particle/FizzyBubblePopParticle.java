@@ -48,10 +48,11 @@ public class FizzyBubblePopParticle extends TextureSheetParticle {
     public void tick() {
         super.tick();
         if (!this.removed) {
-            this.setSprite(this.sprites.get((this.age / 6) % 6 + 1, 6));
+            int frameDuration = 1;
+            int frameIndex = (this.age / frameDuration) % 6 + 1;
+            this.setSprite(this.sprites.get(frameIndex, 6));
         }
     }
-
 
     @Override
     public @NotNull ParticleRenderType getRenderType() {
