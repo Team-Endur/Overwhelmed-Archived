@@ -1,22 +1,4 @@
 {
-  "structures": [
-    {
-      "structure": "overwhelmed:fizzyrock_pile/fizzyrock_pile_1",
-      "weight": 1
-    },
-    {
-      "structure": "overwhelmed:fizzyrock_pile/fizzyrock_pile_2",
-      "weight": 1
-    },
-    {
-      "structure": "overwhelmed:fizzyrock_pile/fizzyrock_pile_3",
-      "weight": 1
-    },
-    {
-      "structure": "overwhelmed:fizzyrock_pile/fizzyrock_pile_4",
-      "weight": 1
-    }
-  ],
   "placement": {
     "type": "minecraft:random_spread",
     "salt": 1224466880,

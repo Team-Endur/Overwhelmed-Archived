@@ -1,6 +1,5 @@
 {
-  "type": "overwhelmed:fizzyrock_piles",
-  "start_pool": "overwhelmed:fizzyrock_piles",
+  "type": "minecraft:structure",
   "biomes": "#overwhelmed:has_structure/fizzyrock_piles",
   "step": "surface_structures",
   "start_height": {

@@ -1,0 +1,46 @@
+{
+  "elements": [
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "minecraft:ancient_city/city/entrance/entrance_connector",
+        "processors": "minecraft:ancient_city_generic_degradation",
+        "projection": "rigid"
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "overwhelmed:ancient_city/city/entrance/fizzyrock_pile_1",
+        "projection": "rigid"
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "overwhelmed:fizzyrock_pile/fizzyrock_pile_2",
+        "projection": "rigid"
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "overwhelmed:ancient_city/city/entrance/fizzyrock_pile_3",
+        "projection": "rigid"
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "overwhelmed:ancient_city/city/entrance/fizzyrock_pile_4",
+        "projection": "rigid"
+      },
+      "weight": 1
+    }
+  ],
+  "fallback": "minecraft:empty"
+}
