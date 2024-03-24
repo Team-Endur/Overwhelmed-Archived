@@ -4,6 +4,7 @@
       "element": {
         "element_type": "minecraft:single_pool_element",
         "location": "overwhelmed:fizzyrock_pile/fizzyrock_pile_1",
+        "processors": "minecraft:empty",
         "projection": "rigid"
       },
       "weight": 1
@@ -12,6 +13,7 @@
       "element": {
         "element_type": "minecraft:single_pool_element",
         "location": "overwhelmed:fizzyrock_pile/fizzyrock_pile_2",
+        "processors": "minecraft:empty",
         "projection": "rigid"
       },
       "weight": 1
@@ -20,6 +22,7 @@
       "element": {
         "element_type": "minecraft:single_pool_element",
         "location": "overwhelmed:fizzyrock_pile/fizzyrock_pile_3",
+        "processors": "minecraft:empty",
         "projection": "rigid"
       },
       "weight": 1
@@ -28,6 +31,7 @@
       "element": {
         "element_type": "minecraft:single_pool_element",
         "location": "overwhelmed:fizzyrock_pile/fizzyrock_pile_4",
+        "processors": "minecraft:empty",
         "projection": "rigid"
       },
       "weight": 1
