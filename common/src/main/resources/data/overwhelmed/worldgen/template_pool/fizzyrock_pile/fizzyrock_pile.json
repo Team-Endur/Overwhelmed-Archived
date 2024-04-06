@@ -5,8 +5,8 @@
       "weight": 1,
       "element": {
         "element_type": "minecraft:single_pool_element",
+        "location": "overwhelmed:fizzyrock_pile_1",
         "projection": "rigid",
-        "location": "overwhelmed:fizzyrock_pile/fizzyrocl_pile_1",
         "processors": "minecraft:empty"
       }
     }

@@ -20,12 +20,7 @@
   "placement": {
     "type": "minecraft:random_spread",
     "salt": 1459376097,
-    "locate_offset": [
-      0,
-      0,
-      0
-    ],
-    "spacing": 1,
-    "separation": 0
+    "spacing": 2,
+    "separation": 1
   }
 }
